@@ -1,0 +1,29 @@
+<!-- shop app css -->
+<link href="{$wa_theme_url}assets/main/reviews.css?v{$wa_theme_version}" rel="stylesheet" />
+<link href="{$wa_active_theme_url}assets/sb/jquery.mCustomScrollbar.min.css?v{$wa_theme_version}" rel="stylesheet" />
+<script type="text/javascript" src="{$wa_app_static_url}js/lazy.load.js?v{$wa->version()}"></script>
+<script type="text/javascript" src="{$wa_active_theme_url}assets/sb/jquery.mCustomScrollbar.concat.min.js?v{$wa->version()}"></script>
+
+{if $wa->shop->config('enable_2x')}
+<script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery-plugins/jquery.retina.min.js?v{$wa->version(true)}"></script>
+<script type="text/javascript">$(window).load(function() {
+    /*
+    if($('.promo img').length > 0) $('.promo img').retina({ force_original_dimensions: false });
+    if($('.product-list img').length > 0) $('.product-list img').retina();
+    if($('.product-info img').length > 0) $('.product-info img').retina();
+    if($('.cart img').length > 0) $('.cart img').retina();
+    if($('.bestsellers img').length > 0) $('.bestsellers img').retina();
+    */
+});
+</script>
+{/if}
+
+
+{if !empty($nofollow)}
+    <!-- "nofollow" for pages not to be indexed, e.g. customer account -->
+    <meta name="robots" content="noindex,nofollow" />
+{/if}
+
+<!-- plugin hook: 'frontend_head' -->
+{* @event frontend_head.%plugin_id% *}
+{foreach $frontend_head as $_}{$_}{/foreach}

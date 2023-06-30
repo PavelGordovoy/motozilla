@@ -1,0 +1,92 @@
+{* Switcher *}
+<link rel="stylesheet" href="{$wa_url}wa-content/js/jquery-plugins/ibutton/jquery.ibutton.min.css?v={$wa->version()}">
+<script src="{$wa_url}wa-content/js/jquery-plugins/ibutton/jquery.ibutton.min.js"></script>
+
+<link rel="stylesheet" href="{$wa_url}wa-content/js/redactor/2/redactor.css">
+<script src="{$wa_url}wa-content/js/redactor/2/redactor.min.js?v={$wa->version()}"></script>
+{if $lang != 'en'}
+<script src="{$wa_url}wa-content/js/redactor/2/{$lang}.js"></script>
+{/if}
+
+{* Chosen *}
+<link rel="stylesheet" href="{$wa_app_static_url}js/chosen/chosen.min.css">
+<script src="{$wa_app_static_url}js/chosen/chosen.jquery.min.js"></script>
+
+<script src="{$wa_app_static_url}js/jquery.sortable.js"></script>
+
+{if $wa->get('addJs')}
+<script src="{$wa_app_static_url}js/form/actions.js?v={$wa->version()}"></script>
+<script src="{$wa_app_static_url}js/jquery-fileupload/js/vendor/jquery.ui.widget.js"></script>
+<script src="{$wa_app_static_url}js/jquery-fileupload/js/jquery.iframe-transport.js"></script>
+<script src="{$wa_app_static_url}js/jquery-fileupload/js/jquery.fileupload.js"></script>
+<script src="{$wa_app_static_url}js/jquery-fileupload/js/jquery.fileupload-process.js"></script>
+<script src="{$wa_app_static_url}js/jquery-fileupload/js/jquery.fileupload-validate.js"></script>
+<script src="{$wa_app_static_url}js/jquery.simple-color.js"></script>
+{/if}
+
+<div class="actions-tab">
+    <div class="content">
+        <div class="sidebar left250px" style="padding: 20px 0 0 0;">
+            <div class="s-inner-sidebar main">
+                <ul class="menu-v stack with-icons">
+                    {$group_open = 0}
+                    {foreach $form_actions as $fa}
+                        {if $group_open && (isset($fa.collapsed) || (!isset($fa.collapsed) && $fa.group_id !== $group_open))}</ul></li>{$group_open = 0}{/if}
+                        <li data-id="{if isset($fa.collapsed)}-{/if}{$fa.id}"{if !$fa.status && !isset($fa.collapsed)} class="not-visible"{/if}>
+                            {if !isset($fa.collapsed)}
+                                {if !empty($fa.autoexecute) && ($fa.autoexecute == '1' || !empty($fa.fields.auto_execute))}{$autoexecute = 1}{else}{$autoexecute = 0}{/if}
+                                <i class="icon-custom s-action-status lightbulb{if !$fa.status}-off{/if}" title="[`Change status`]" data-value="{$fa.status}" onclick="$.form_actions.changeActionStatus($(this));"></i>
+                                <a href="#/page/actions/edit/{$fa.id}/"{if $autoexecute} class='s-autoexecute-badge'{/if}>
+                                    <i class="icon16 action-icon" style="background:{if !empty($fa.fields.custom_color)}{$fa.fields.custom_color|escape}{else}#ff0000{/if}"></i> {if !empty($fa.fields.custom_name)}{$fa.fields.custom_name|escape}{else}{$fa.name|escape}{/if}
+                                </a>
+                            </li>
+                            {else}
+                                {$group_open = $fa.id}
+                                <a href="#/edit/actionGroup/" title="[`Edit group`]" class="js-action top-right" data-group-id="{$fa.id}" data-group-name="{$fa.name|escape}">
+                                    <i class="icon16 settings"></i>
+                                </a>
+                                <h5 class="heading collapse-handler"><i class="icon16 {if $fa.collapsed}r{else}d{/if}arr"></i> <span>{$fa.name|escape}</span></h5>
+                                <ul class="menu-v with-icons s-action-group stack{if $fa.collapsed} collapsed{/if}">
+                            {/if}
+                    {foreachelse}
+                    <li class="grey skip-sort" style="line-height: 1.5;">[`No any actions. Create it, make your form alive!`]</li>
+                    {/foreach}
+                    {if $group_open}</ul></li>{/if}
+                    {if $groups}
+                        {foreach $groups as $g}
+                            <li data-id="-{$g.id}">
+                               <a href="#/edit/actionGroup/" title="[`Edit group`]" class="js-action top-right" data-group-id="{$g.id}" data-group-name="{$g.name|escape}">
+                                    <i class="icon16 settings"></i>
+                                </a>
+                                <h5 class="heading collapse-handler"><i class="icon16 {if $g.collapsed}r{else}d{/if}arr"></i> <span>{$g.name|escape}</span></h5>
+                                <ul class="menu-v with-icons s-action-group stack{if $g.collapsed} collapsed{/if}"></ul>
+                            </li>
+                        {/foreach}
+                    {/if}
+                    <li class="skip-sort bordered-bottom"></li>
+                    <li class="skip-sort">
+                        <a href="#/show/action/" title="[`add action`]" class="js-action"><i class="icon16 add"></i> [`add action`]</a>
+                        <select class="actions-select" data-placeholder="* * * [`Select action`] * * *" style="width: 250px;">
+                            <option value=""></option>
+                            {foreach $actions as $act_id => $act}
+                                <option value="{$act_id|escape}">{$act.name|escape}</option>
+                            {/foreach}
+                        </select>
+                    </li>
+                    <li class="skip-sort">
+                        <a href="#/edit/actionGroup/" title="[`add group`]" data-group-id="new" data-group-name="" class="js-action"><i class="icon16 folder"></i> [`add group`]</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content left250px blank bordered-left s-actions-block block double-padded">
+            <h1>Новый</h1>
+        </div>
+        <div class="clear-both"></div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $.form_actions.initPageActions();
+    });
+</script>

@@ -1,0 +1,88 @@
+{strip}
+{$is_mobile = $wa->isMobile()}
+{$is_schema_org = $theme_settings.schema_org_active}
+{if isset($is_category_subcategories) && !empty($is_category_subcategories) && !$wa->isMobile() && isset($breadcrumbs) && count($breadcrumbs) > 0}
+    {if !isset($shop_categories)}
+        {if $wa->globals('shopCategories')}
+            {$shop_categories = $wa->globals('shopCategories')}
+        {else}
+            {$shop_categories = $wa->shop->categories(0, null, true, true)}
+            {$wa->globals('shopCategories', $shop_categories)}
+        {/if}
+    {/if}
+    {if !empty($shop_categories)}
+        {$categoriesCurrent = $shop_categories}
+        {foreach $breadcrumbs as $key=>$bread}
+            {if isset($bread.url) && !empty($bread.url)}
+                {if empty($categoriesCurrent)}{break}{/if}
+                {foreach $categoriesCurrent as $item}
+                    {if $item.url == $bread.url}
+                        {if !empty($item.childs) && $item.childs|count > 1}
+                            {foreach $item.childs as $child}
+                                {$breadcrumbs[$key].subs[] = ['url' => $child.url, 'name' => $child.name]}
+                            {/foreach}
+                            {$categoriesCurrent = $item.childs}
+                        {else}
+                            {$categoriesCurrent = []}
+                        {/if}
+                        {break}
+                    {/if}
+                {/foreach}
+            {/if}
+        {/foreach}
+    {/if}
+{/if}
+
+{if !empty($last) && is_array($last)}
+    {$last['is_current'] = true}
+    {$breadcrumbs[] = $last}
+{else if !empty($last)}
+    {$breadcrumbs[] = ['name' => $last, 'is_current' => true]}
+{/if}
+
+{$position = 1}
+<ul class="breadcrumbs{if $is_mobile} breadcrumbs--scroll js-breadcrumbs-scroll{/if}"{if $is_schema_org} itemscope itemtype="http://schema.org/BreadcrumbList"{/if}>
+    <li{if $is_schema_org} itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem"{/if}>
+        <a{if $is_schema_org} itemprop="item"{/if} href="{$wa_url}">
+            <span{if $is_schema_org} itemprop="name"{/if}>[`Home`]</span>
+            {if $is_schema_org}<meta itemprop="position" content="{$position}" />{/if}
+        </a>
+        {if !empty($breadcrumbs)}<span class="rarr"><i class="fal fa-long-arrow-right"></i></span>{/if}
+    </li>
+    {if !empty($breadcrumbs)}
+        {foreach $breadcrumbs as $breadcrumb}
+            {if $breadcrumb}
+                {if !empty($breadcrumb.url)}
+                    {$position = $position + 1}
+                    <li{if $is_schema_org} itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem"{/if}>
+                        {if !empty($breadcrumb.is_current)}
+                            {$breadcrumb.name}
+                        {else}
+                            <a href="{$breadcrumb.url}">{$breadcrumb.name|escape}</a>
+                        {/if}
+
+                        {if $is_schema_org}
+                            <link itemprop="item" href="{$breadcrumb.url|escape}">
+                            <meta itemprop="name" content="{$breadcrumb.name|escape}" />
+                            <meta itemprop="position" content="{$position}" />
+                        {/if}
+
+                        {if !$breadcrumb@last}<span class="rarr"><i class="fal fa-long-arrow-right"></i></span>{/if}
+                        {if !$wa->isMobile() && isset($breadcrumb.subs) && !empty($breadcrumb.subs)}
+                            <div class="breadcrumbs__subs">
+                                <div class="breadcrumbs__subs-wrap">
+                                    {foreach $breadcrumb.subs as $sub}
+                                    <a class="breadcrumbs__subs-link" href="{$sub.url}">{$sub.name}</a>
+                                    {/foreach}
+                                </div>
+                            </div>
+                        {/if}
+                    </li>
+                {else}
+                    <li>{$breadcrumb.name}</li>
+                {/if}
+            {/if}
+        {/foreach}
+    {/if}
+</ul>
+{/strip}

@@ -1,0 +1,237 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst Courier plugin 1.4.9.62 UA Translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-07-01T14:09:29+03:00\n"
+"PO-Revision-Date: 2020-11-07 10:53+0300\n"
+"Language: uk_UA\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Preferred delivery time"
+msgstr "Бажаний час доставки"
+
+msgid "Estimated delivery time"
+msgstr "Розрахунковий час доставки"
+
+msgid "Average order transit time. Estimated delivery date will be calculated automatically and shown to customer.<br><br>"
+msgstr "Середній час обробки замовлення. Розрахункову дату доставки буде обраховано автоматично та показано клієнтові.<br><br>"
+
+msgid "Same day"
+msgstr "Той же день"
+
+msgid "Next day"
+msgstr "Наступний день"
+
+msgid "1-2 days"
+msgstr "1-2 дні"
+
+msgid "2-3 days"
+msgstr "2-3 дні"
+
+msgid "1 week"
+msgstr "1 тиждень"
+
+msgid "Undefined"
+msgstr "Не визначено"
+
+msgid "Courier"
+msgstr "Кур&#39;єр"
+
+msgid "Shipping is restricted to the specific country and region only. Shipping rate is calculated based on either total amount or weight of the shipment."
+msgstr "Доставку обмежено тільки конкретною країною та регіоном. Вартість доставки розраховується на основі загальної кількості або ваги вантажу."
+
+msgid "Paid"
+msgstr "Платна"
+
+msgid "Payment"
+msgstr "Оплата"
+
+msgid "Shipping cost"
+msgstr "Вартість доставки"
+
+msgid "Print"
+msgstr "Друк"
+
+msgid "Shipping address"
+msgstr "Адреса доставки"
+
+msgid "Comment"
+msgstr "Коментар"
+
+msgid "Shipping will be restricted to the selected country. Rates defined below will be applied to the entire country."
+msgstr "Доставку буде обмежено обраною країною. Визначені нижче тарифи буде застосовано до усієї країни."
+
+msgid "Shipping region"
+msgstr "Область доставки"
+
+msgid "Shipping will be restricted to the selected region."
+msgstr "Доставку буде обмежено обраним регіоном."
+
+msgid "City name"
+msgstr "Назва міста"
+
+msgid "If courier shipping is provided only within specific cities, enter the city names separated by comma so that customer is not be prompted to enter city name when this shipping option is selected; a city name will be automatically fetched as you specify it here. If this field is left blank, a customer will be prompted to enter a city name."
+msgstr "Якщо кур&#39;єрська доставка здійснюється лише в межах конкретних міст, введіть назви міст через кому, таким чином клієнт не буде вводити назву міста, коли обрано цей варіант доставки; назву міста буде автоматично заповнено, як ви вкажете його тут. Якщо це поле порожнє, то клієнту буде запропоновано вказати назву міста."
+
+msgid "Address fields management"
+msgstr "Управління полями адреси"
+
+msgid "Use plugin‘s default fields only"
+msgstr "Використовувати тільки поля плагіна за замовчуванням"
+
+msgid "Enable this option for the plugin to require from a client <em>mandatory</em> completion of the fields only, which are selected below in setting “Default address fields”.<br>Disable it to make the plugin <em>optionally</em> request only address fields defined by app settings (the app must request all address fields required for selected shipping method)."
+msgstr "Увімкніть цю опцію, аби запитати у клієнта лише <em>обов&#39;язкові</em> поля, які відмічено у налаштуванні «Стандартні поля адреси».<br> Вимкніть її, аби запропонувати <em>необов&#39;язково</em> заповнити тільки поля адреси з налаштувань додатку (додаток має запитувати усі поля адреси, необхідні для обраного варіанту доставки)."
+
+msgid "Default address fields"
+msgstr "Поля адреси за замовчуванням"
+
+msgid "Enable shipping address fields which must always be filled by a client during checkout."
+msgstr "Увімкнути поля адреси доставки, які завжди повинні бути заповнені клієнтом при оформленні замовлення."
+
+msgid "Should some of the enabled fields be filled on the contact info step, then they will not be displayed on courier shipping selection."
+msgstr "Якщо деякі поля було заповнено на кроці контактної інформації, то їх не буде показано при виборі доставки кур&#39;єром."
+
+msgid "Disabled can be only fields that are not completed in the above setting “Shipping region”."
+msgstr "Вимкнути можна тільки ті поля, які не заповнено у параметрі «Регіон доставки» вище."
+
+msgid "Online map settings are available in <a href=\"%s\">Installer</a> app."
+msgstr "Налаштування сервісу онлайн-карт доступне у додатку <a href=\"%s\">Налаштування</a>."
+
+msgid "Shipping rate calculation"
+msgstr "Розрахунок вартості доставки"
+
+msgid "By weight"
+msgstr "За вагою"
+
+msgid "By price"
+msgstr "За ціною"
+
+msgid "Shipment weight"
+msgstr "Вага відправлення"
+
+msgid "Shipment amount"
+msgstr "Сума відвантаження"
+
+msgid "Shipping rate"
+msgstr "Тариф доставки"
+
+msgid "Add rate"
+msgstr "Додати тариф"
+
+msgid "Enter shipping rate as a flat rate, as a percent of cart total, or as a sum of both. Example: <b>20+10%%</b> will calculate shipping rate as 20 %s + 10%% of cart total."
+msgstr "Вкажіть вартість доставки у вигляді фіксованої ставки, або у відсотках від загальної суми кошику, або як суму обох. Приклад: <b>20+10%%</b> буде розрахувати вартість доставки у розмірі 20 %s + 10%% від загальної суми кошика."
+
+msgid "kg"
+msgstr "кг"
+
+msgid "lbs"
+msgstr "фунтів"
+
+msgid "Weight dimension unit"
+msgstr "Одиниця виміру ваги"
+
+msgid "KG"
+msgstr "КГ"
+
+msgid "LBS"
+msgstr "ФУНТІВ"
+
+msgid "Enter shipping rate as a flat rate, as a percent of cart total, or as a sum of both. Example: <b>20+10%%</b> will calculate shipping rate as 20 %s + 10%% of cart total"
+msgstr "Вкажіть вартість доставки у вигляді фіксованої ставки, або у відсотках від загальної суми кошику, або як суму обох. Приклад: <b>20+10%%</b> буде розрахувати вартість доставки у розмірі 20 %s + 10%% від загальної суми кошика"
+
+msgid "Delivery time"
+msgstr "Час доставки"
+
+msgid "Specified time in hours"
+msgstr "Вказаний у годинах час"
+
+msgid "Average delivery time in hours"
+msgstr "Середній час доставки у годинах"
+
+msgid "Average time in hours required for a courier to deliver an order. It will be added to the order ready time with the account of values in “Delivery intervals” table with extra days off and workdays."
+msgstr "Час (у годинах), який у середньому необхідний кур&#39;єру, аби доставити замовлення. Його буде додано до часу готовності замовлення з урахуванням даних з таблиці «Інтервали доставки», додаткових вихідних та робочих днів."
+
+msgid "Preferred delivery time &amp; working schedule"
+msgstr "Бажаний час доставки та робочий розклад"
+
+msgid "Extra days off"
+msgstr "Додаткові вихідні"
+
+msgid "Select dates of extra days off and enable at least one checkbox in “Extra days off” column of the “Delivery intervals” table. Delivery intervals are valid for all extra days off."
+msgstr "Оберіть дати додаткових вихідних та увімкніть принаймні  один прапорець у колонці «Додаткові вихідні» таблиці «Інтервали доставки». Для усіх додаткових вихідних інтервали доставки залишаються дійсними."
+
+msgid "Extra workdays"
+msgstr "Додаткові робочі дні"
+
+msgid "Select dates of extra workdays and enable at least one checkbox in “Extra workdays” column of the “Delivery intervals” table. Delivery intervals are valid for all extra workdays."
+msgstr "Оберіть дати додаткових робочих днів та увімкніть принаймні один прапорець у колонці «Додаткові робочі дні» таблиці «Інтервали доставки». Для усіх додаткових робочих днів інтервали доставки залишаються дійсними."
+
+msgid "Locality name"
+msgstr "Назва місцевості"
+
+msgid "If courier shipping is provided only within specific localities, enter the locality names separated by comma so that customer is not be prompted to enter a locality name when this shipping option is selected; a locality name will be automatically fetched as you specify it here. If this field is left blank, a customer will be prompted to enter a locality name."
+msgstr "Якщо кур&#39;єрська доставка здійснюється тільки в межах певних місцевостей, введіть назви таких місцевостей, розділені комами, аби при виборі цього варіанту доставки клієнтові не було потрібно вводити назву населеного пункту. Назву місцевості буде автоматично отримано зі вказаного вамим переліку. Якщо залишити це поле порожнім, клієнту буде запропоновано вказати назву місцевості."
+
+msgid "You have disabled address field, selected for additional field %s, in system settings. Please either enable again the selected address field or select another field."
+msgstr "Ви відключили поле адреси, обране для додаткового поля %s, у налаштуваннях системи. Будь ласка, увімкніть знову вибране поле адреси або оберіть інше поле."
+
+msgid "“%s”"
+msgstr "“%s”"
+
+msgid "Please select different address fields for additional fields %s."
+msgstr "Оберіть, будь ласка, інші поля адреси для додаткових полів %s."
+
+msgid "Entrance"
+msgstr "Вхід"
+
+msgid "Intercom number"
+msgstr "Номер на домофоні"
+
+msgid "Floor"
+msgstr "Поверх"
+
+msgid "Additional address fields"
+msgstr "Додаткові поля адреси"
+
+msgid "Add extra subfields of “<em>Text (input)</em>” type for the “Address” field via <a href=\"%s\">Settings</a> app to enable these additional address fields."
+msgstr "Додайте додаткові підполя типу “<em>Text (input)</em>” для поля «Адреса» через додаток <a href=\"%s\">Налаштування</a>, аби увімкнути ці додаткові поля адреси."
+
+msgid "Enable extra address fields which you want to be offered for completion to customers during checkout."
+msgstr "Увімкніть додаткові поля адреси, які ви бажаєте пропонувати клієнтам під час оформлення замовлення."
+
+msgid "Please select different address fields for each additional field."
+msgstr "Оберіть додаткові поля адреси для кожного додаткового поля."
+
+msgid "Online map settings are available in <a href=\"%s\">Settings</a> app."
+msgstr "Налаштування сервісу онлайн-карт доступне у додатку <a href=\"%s\">Налаштування</a>."
+
+msgid "Select an online maps service to display a map with the customer address on the printable packing list form."
+msgstr "Оберіть сервіс онлайн-карт для відображення адреси покупця на друкованій формі для упаковки."
+
+msgid "Same workday, with the order ready time taken into account"
+msgstr "Той же робочий день з урахуванням часу готовності замовлення"
+
+msgid "Add one day to the order ready time"
+msgstr "Додати один день до часу готовності замовлення"
+
+msgid "Add 2–3 days to the order ready time"
+msgstr "Додати два-три дні до часу готовності замовлення"
+
+msgid "Add 1–2 days to the order ready time"
+msgstr "Додати один-два дні до часу готовності замовлення"
+
+msgid "Add 7 days to the order ready time"
+msgstr "Додати сім днів до часу готовності замовлення"
+
+msgid "Invalid date"
+msgstr "Неприпустима дата"

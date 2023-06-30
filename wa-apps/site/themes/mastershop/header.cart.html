@@ -1,0 +1,39 @@
+{strip}
+{if $wa->shop}
+    {if method_exists($wa->shop, 'checkout')}
+        {$cartUrl = $wa->shop->checkout()->cartUrl()}
+    {else}
+        {$cartUrl = $wa->getUrl('shop/frontend/cart')}
+    {/if}
+
+    {$cart_total = $wa->shop->cart->total()}
+    {$cart_count = $wa->shop->cart->count()}
+
+    {$cartPopupUrl = $wa->getUrl('shop/frontend/cart')}
+
+    {$isCartonestepCartWithOrder = class_exists('shopCartonestepPlugin') && !$theme_settings.cartonestep_type_cart_without_order}
+    <div data-type="header" class="header-cart js-cart-preview{if empty($cart_count)} empty{/if}" data-url="{$cartPopupUrl}">
+        <a href="{$cartUrl}" class="float-r">
+            <div class="header-cart__icon ">
+                <i class="fas fa-shopping-basket bs-color"></i>
+                <span class="js-cart-preview-count header-cart__count ac-bg">{$cart_count}</span>
+            </div>
+            <div class="header-cart__content">
+                <div class="header-cart__head">[`Cart`]</div>
+                <div class="js-cart-preview-total header-cart__total">{wa_currency_html($cart_total, $wa->shop->currency())}</div>
+                <div class="js-cart-preview-empty header-cart__empty">([`empty`])</div>
+            </div>
+        </a>
+
+        <span class="header-cart-message bs-bg">
+            <i class="header-cart-message__check fal fa-check"></i>
+            [`Product in cart`]
+            <i class="header-cart-message__caret"></i>
+        </span>
+
+        {if !$isCartonestepCartWithOrder && (!isset($action) || (isset($action) && $action != 'cart' && $action != 'checkout' && $action != 'checkoutone'))}
+            {if $is_popup && !$wa->isMobile()}<div class="js-cart-popup cart-popup"></div>{/if}
+        {/if}
+    </div>
+{/if}
+{/strip}

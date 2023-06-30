@@ -1,0 +1,55 @@
+{if !empty($promos) && count($promos) > 0}
+    <div class="promos-list">
+        {function countdown promo=[]}
+            {if !empty($promo.countdown_datetime) && time() <= strtotime($promo.countdown_datetime)}
+                <div class="promocard__countdown">
+                    <div data-wrap="1" data-day-text="[`d.`]" class="slider-banner__time js-promo-countdown" data-end="{$promo.countdown_datetime}">
+                        <div class="countdown-item">
+                            <span class="countdown-item-count js-countdown-days"></span>
+                            <span class="countdown-item-text">[`d`]</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-item-count js-countdown-hours"></span>
+                            <span class="countdown-item-text">[`h`]</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-item-count js-countdown-minutes"></span>
+                            <span class="countdown-item-text">[`min`]</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-item-count js-countdown-seconds"></span>
+                            <span class="countdown-item-text">[`sec`]</span>
+                        </div>
+                    </div>
+                </div>
+            {/if}
+        {/function}
+
+        {foreach $promos as $promo}
+            {if isset($promo.background_color) && !empty($promo.background_color)}{$bg = $promo.background_color}{/if}
+            {if isset($promo.color) && !empty($promo.color)}{$color = $promo.color}{/if}
+            <div class="promo-list__outer">
+                <a class="promo-list" href="{$promo.link|escape}" style="{if isset($color)}color: {$color};{/if} {if isset($bg)}background: {$bg};{/if}">
+                    <div class="promo-list__image">
+                        {if $theme_settings.promos_images_lazy}
+                            <img alt="{$promo.title|escape}" class="js-image-lazy" src="{$wa_theme_url}img/lazy-image.png" data-src="{$promo.image}" />
+                        {else}
+                            <img alt="{$promo.title|escape}" src="{$promo.image}" />
+                        {/if}
+                    </div>
+                    <div class="promo-list__content">
+                        <div class="promo-list__name">
+                            {$promo.title|escape}
+                        </div>
+                        {$body = $promo.body|escape|nl2br}
+                        {if !empty($body)}
+                            <div class="promo-list__desc">{$body}</div>
+                        {/if}
+                        {countdown promo=$promo}
+                    </div>
+                    <i class="promo-list__more fal fa-long-arrow-right"></i>
+                </a>
+            </div>
+        {/foreach}
+    </div>
+{/if}

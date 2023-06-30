@@ -1,0 +1,682 @@
+{$viewed = waRequest::cookie('shop_viewed')}
+{$viewed_products = $wa->shop->products("id/$viewed")}
+{$video = $product->video}
+
+{$has_divider = false}
+{foreach from=$product.features key=f_code item=f_value name=pro_fea}
+{if $features[$f_code].type == 'divider'} {$has_divider = true} {/if}
+{/foreach}
+
+<link href="{$wa_theme_url}swipebox/css/swipebox.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{$wa_theme_url}swipebox/js/jquery.swipebox.js"></script>
+<script type="text/javascript">
+	var productID = {$product.id};
+</script>
+
+
+<div class="e-space">
+    <!-- internal navigation breadcrumbs -->
+    {include file='breadcrumbs.html' page_type='product'}
+</div>
+
+<div class="row">
+    <div class="e-space">
+        <div class="product-info">
+            <!-- image container -->
+            <div class="image-container">
+                <figure class="product-gallery">
+                    {if count($product.images) > 1}
+                        <div class="more-images" id="product-gallery">
+                            <div class="scroller">
+                                {foreach $product.images as $image}
+                                    {if $image.description|strpos:"youtube"}
+                                        <div class="image video{if $image.id == $product.image_id && !$video} selected{/if}">
+                                            <a id="product-image-{$image.id}" href="{$image.description}" class="{if !$wa->get('quickview')}swipebox{/if}">
+                                                {$wa->shop->productImgHtml(['id'=> $product.id, 'image_id' => $image.id, 'ext' => $image.ext ], '56')}
+                                            </a>
+                                        </div>
+                                    {else}
+                                        <div class="thumb image{if $image.id == $product.image_id} selected{/if}">
+                                            <a id="product-image-{$image.id}" href="{$wa->shop->productImgUrl(['id'=> $product.id, 'image_id' => $image.id, 'ext' => $image.ext], '970')}" class="{if !$wa->get('quickview')}swipebox{/if}">
+                                                {$wa->shop->productImgHtml(['id'=> $product.id, 'image_id' => $image.id, 'ext' => $image.ext, 'image_desc' => $image.description], '56', ['alt' => $image.description|escape])}
+                                            </a>
+                                        </div>
+                                    {/if}
+                                {/foreach}
+
+                                {if $video}
+                                    <div class="thumb image video">
+                                        <a id="product-image-video" href="{$video.url}" class="{if !$wa->get('quickview')}swipebox swipebox-video{/if}">
+                                            <img alt="видео" src="{$wa_active_theme_url}/img/youtube.png">
+                                        </a>
+                                    </div>
+                                {/if}
+                            </div>
+                        </div>
+                    {/if}
+
+                    {if count($product.images) > 0}
+                        <!-- main image -->
+                        <div class="image lg-image" id="product-core-image">
+                            <div class="badge-md">
+                                {$wa->shop->badgeHtml($product.badge)}
+                            </div>
+                            {if empty($theme_settings.disable_image_gallery)}
+                                <div class="englare-main">
+                                    <i class="icon-zoom-in"></i>
+                                </div>
+                            {/if}
+                            <a class="large-image-src" href="{$wa->shop->productImgUrl($product, '970')}">
+                                {$wa->shop->productImgHtml($product, '700', [ 'itemprop' => 'image', 'id' => 'product-image', 'alt' => $product.name|escape ])}
+                            </a>
+                            <div id="switching-image" style="display: none;"></div>
+                        </div>
+                    {else}
+                        <div class="image lg-image" id="product-core-image">
+                            <div class="badge-md">
+                                {$wa->shop->badgeHtml($product.badge)}
+                            </div>
+                            <img style="width: auto" src="{$wa_theme_url}assets/img/nophoto.png" alt="Нет фото">
+                        </div>
+                    {/if}
+
+                    {if $video}
+                        <div id="video-container" class="video-container" itemprop="video" itemscope itemtype="http://schema.org/VideoObject" style="display: none">
+                            <div itemprop="embedHTML">
+                                <iframe src="{$video.url}" width="{$video.width}" height="{$video.height}" allowfullscreen></iframe>
+                            </div>
+                            <meta itemprop="width" content="{$video.width}">
+                            <meta itemprop="height" content="{$video.height}">
+                        </div>
+                    {/if}
+                </figure>
+
+                <a class="go-to-product" href="{$wa->getUrl('/frontend/product/', ['product_url' => $product.url])}"><i class="icon-link"></i> На страницу продукта</a>
+            </div>
+
+            {$p_available = false}
+            {if $product.sku_type}
+                {if $product.count > 1 || $product.count === null}
+                    {$p_available = true}
+                {/if}
+            {else}
+                {$p_available = false}
+                {if count($product.skus) > 1}
+                    {$sku_available = false}
+                    {foreach $product.skus as $sku}
+                        {$sku_available =  $product.status && $sku.available && ($sku.count === null || $sku.count > 0)}
+                        {$p_available = $p_available or $sku_available}
+                    {/foreach}
+                    {if $product.count > 1 || $product.count === null}
+                        {$p_available = true}
+                    {/if}
+                {else}
+                    {$sku = $product.skus[$product.sku_id]}
+                    {$p_available = $product.status && $sku.available && ($sku.count === null || $sku.count > 0)}
+                {/if}
+            {/if}
+
+            <div class="cart-container ">
+                <div class="take-me-away {if $p_available}instock{else}{if $wa->shop->settings('ignore_stock_count')}preorder{else}outofstock{/if}{/if}">
+                    <img itemprop="image" class="product-thumb-96-img" alt="{$product.name}" src="{$wa->shop->productImgUrl($product, '96x96')}" style="display: none;">
+                    {if $product.categories}
+                        <p class="product-categories">
+                            {foreach from=$product.categories name=cat item=c}
+                                {if $smarty.foreach.cat.index == 0}
+                                    {if $c.status}
+                                        <span class="cat"><a href="{$wa->getUrl('/frontend/category', ['category_url' => $c.full_url])}">{$c.name|escape}</a></span>
+                                    {/if}
+                                {/if}
+                            {/foreach}
+                            {*
+                            {foreach $product.categories as $c}{if $c.status}
+                                <span class="cat"><a href="{$wa->getUrl('/frontend/category', ['category_url' => $c.full_url])}">{$c.name|escape}</a></span>
+                            {/if}{/foreach}
+                            *}
+                        </p>
+                    {/if}
+
+                    <h1 class="title">{$product.name|escape}</h1>
+
+                    {if !empty($product.rating) && $product.rating > 0}
+                        <div class="rating nowrap" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" title="{sprintf('[`Average user rating: %s / 5`]', $product.rating)}">
+                            <span class="stars">{$wa->shop->ratingHtml($product.rating, 16)}</span>
+                            <span itemprop="ratingValue" style="display: none;">{$product.rating}</span>
+                            <span itemprop="reviewCount" style="display: none;">{$reviews_total_count}</span>
+                            <div class="line"></div>
+                        </div>
+                    {else}
+                        <div class="line"></div>
+                    {/if}
+
+                    {if $product.summary && empty($theme_settings.disable_product_short_descr)}
+                            <p class="summary">{$product.summary|truncate:512}</p>
+                    {/if}
+
+                    {if $product.tags}
+                        <p class="tags" id="product-tags">
+                            {foreach $product.tags as $t}
+                                <span class="tag">
+                                    <a href="{$wa->getUrl('/frontend/tag', ['tag' => urlencode($t)])}">{$t}</a>
+                                </span>
+                            {/foreach}
+                        </p>
+                    {/if}
+
+                    {include file="product.cart.html" inline}
+
+                    <div class="product-sidebar leadbox">
+                        <div class="cart" id="cart-flyer">
+                            {*include file="product.cart.html" inline*}
+                        </div>
+                        <!-- plugin hook: 'frontend_product.block_aux' -->
+                        {* @event frontend_product.%plugin_id%.block_aux *}
+                        {if !empty($frontend_product)}
+                            <div class="aux">
+                                {foreach $frontend_product as $_}{$_.block_aux}{/foreach}
+                            </div>
+                        {/if}
+                    </div>
+
+                    {if isset($theme_settings.features_in_product_card) && $theme_settings.features_in_product_card}
+                        {if !$has_divider}
+                            {$two_columns = false}
+                            {if ($product.features|@count) > 10}
+                                {$two_columns = true}
+                                {$next_table_row = ($product.features|@count / 2)|intval}
+                                {if $next_table_row % 2 == 1}
+                                    {$next_table_row = $next_table_row-1}
+                                {/if}
+                            {/if}
+                            {foreach from=$product.features key=f_code item=f_value name=pro_fea}
+                                {if ($smarty.foreach.pro_fea.index == 0 || ($two_columns && $smarty.foreach.pro_fea.index == $next_table_row))}
+                                    <table class="features" >
+                                        {/if}
+                                        <tr{if $features[$f_code].type == 'divider'} class="divider"{/if}>
+                                        <td class="name">
+                                            <span><strong>{$features[$f_code].name|escape}</strong></span>
+                                        </td>
+                                        <td class="value" itemprop="{$f_code|escape}">
+                                            {if is_array($f_value)}
+                                            {if $features[$f_code].type == 'color'}
+                                            {foreach $f_value as $v}
+                                            {assign var="bar_at" value=$v|mb_strpos:"</i>"}
+                                            {assign var="bar_to" value=$v|mb_strpos:"</span>"}
+                                            {assign var="col" value=$v|mb_substr:($bar_at+4):($bar_to-$bar_at-4)}
+                                            {assign var="va" value=$v|replace:$col:''}
+                                            {$va = $va|replace:'<span style="white-space: nowrap;">':'<span style="white-space: nowrap;" data-toggle="tooltip" data-placement="top" title="[col_col]">'}
+                                                                {$va|replace:'[col_col]':$col}
+                                                        {/foreach}
+                                                    {else}
+                                                        {implode(', ', $f_value)}
+                                                    {/if}
+                                                    {else}
+                                                        {$f_value}
+                                                {/if}
+                                        </td>
+                                        </tr>
+                                        {if ($smarty.foreach.pro_fea.index == ($product.features|@count - 1) || ($two_columns && $smarty.foreach.pro_fea.index == $next_table_row-1))}
+                                    </table>
+                                    {if ($two_columns && $smarty.foreach.pro_fea.index == $next_table_row-1)}{/if}
+                                {/if}
+                            {/foreach}
+
+                        {else}
+
+                            {foreach from=$product.features key=f_code item=f_value name=pro_fea}
+                                {if $smarty.foreach.pro_fea.index == 0}
+                                    <table class="features" >
+                                {/if}
+
+                                {if $features[$f_code].type == 'divider' && $smarty.foreach.pro_fea.index > 0}
+                                    </table>
+                                    {break}
+                                {/if}
+
+                                    <tr{if $features[$f_code].type == 'divider'} class="divider"{/if}>
+                                    <td class="name">
+                                        <span><strong>{$features[$f_code].name|escape}</strong></span>
+                                    </td>
+                                    <td class="value" itemprop="{$f_code|escape}">
+                                        {if is_array($f_value)}
+                                            {if $features[$f_code].type == 'color'}
+                                                {foreach $f_value as $v}
+                                                    {assign var="bar_at" value=$v|mb_strpos:"</i>"}
+                                                    {assign var="bar_to" value=$v|mb_strpos:"</span>"}
+                                                    {assign var="col" value=$v|mb_substr:($bar_at+4):($bar_to-$bar_at-4)}
+                                                    {assign var="va" value=$v|replace:$col:''}
+                                                    {$va = $va|replace:'<span style="white-space: nowrap;">':'<span style="white-space: nowrap;" data-toggle="tooltip" data-placement="top" title="[col_col]">'}
+                                                    {$va|replace:'[col_col]':$col}
+                                                {/foreach}
+                                            {else}
+                                                {implode(', ', $f_value)}
+                                            {/if}
+                                        {else}
+                                            {$f_value}
+                                        {/if}
+                                    </td>
+                                </tr>
+                                {if $smarty.foreach.pro_fea.index == ($product.features|@count - 1)}
+                                    </table>
+                                {/if}
+                            {/foreach}
+                        {/if}
+                    {/if}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<section class="row e-space product-content">
+    <h2 style="display: none">Информация о продукте</h2>
+    <aside>
+        {if $viewed_products}
+            <div class="sidebar">
+                <h3><span>Просмотренные</span></h3>
+                {include file="list-thumbs-mini-vertical-zeus.html" products=$viewed_products}
+            </div>
+        {/if}
+
+        {$tagcloud = $wa->shop->tags()}
+        {if $tagcloud && $wa->app() == 'shop'}
+            <div class="sidebar">
+                <h3><span>Теги</span></h3>
+                <div class="tags">
+                    {foreach name=sidetags from=$tagcloud item=tag}
+                        {if $tag.name}
+                            {if isset($tags_limit) && $tags_limit != 0 && $tags_limit <= $smarty.foreach.sidetags.index}
+                                {$style = 'style="display:none;"'}
+                            {else}
+                                {$style = ''}
+                            {/if}
+                            <a class="tag" href="{$wa_app_url}tag/{$tag.uri_name}/" {$style}>{$tag.name|escape}</a>
+                        {/if}
+                    {/foreach}
+                </div>
+                {if isset($tags_limit) && count($tagcloud) > $tags_limit && $tags_limit != 0}
+                    <a class="dotted show_more">[`show all`]</a>
+                {/if}
+            </div>
+        {/if}
+
+        {if !empty($theme_settings.facebook_likebox_code)}
+            <div class="likebox">
+                {$theme_settings.facebook_likebox_code}
+            </div>
+        {/if}
+
+        {if !empty($theme_settings.vk_widget_code)}
+        <div class="likebox">
+            {$theme_settings.vk_widget_code}
+        </div>
+        {/if}
+
+        {if !empty($theme_settings.twitter_timeline_code)}
+            <div class="likebox">
+                {$theme_settings.twitter_timeline_code}
+            </div>
+        {/if}
+
+    </aside>
+
+    <div class="prd-data {if $theme_settings.prpage_tabs}nopad{else}{/if}">
+        <div class="e-plane product-information {if !$theme_settings.prpage_tabs}notab{/if}">
+            {if $theme_settings.prpage_tabs}
+                {$active_prpage_tab = ''}
+                {$active_tab = 'class="active"'}
+                {$active_tab_cont = 'active'}
+                {if isset($theme_settings.active_prpage_tab) && $theme_settings.active_prpage_tab != ''}
+                    {$active_prpage_tab = $theme_settings.active_prpage_tab}
+                    {if $product.description && $active_prpage_tab == 'description' && empty($theme_settings.disable_description)} {$active_tab = ''} {$active_tab_cont = ''} {/if}
+                    {if $product.features && $active_prpage_tab == 'features' && empty($theme_settings.disable_features)} {$active_tab = ''} {$active_tab_cont = ''} {/if}
+                    {if $active_prpage_tab == 'reviews' && empty($theme_settings.disable_reviews)} {$active_tab = ''} {$active_tab_cont = ''} {/if}
+                {/if}
+
+                <div class="tabpanel pp_tabpanel" role="tabpanel">
+                    <ul class="nav nav-tabs" role="tablist">
+                        {if $product.description && empty($theme_settings.disable_description)}
+                            {if $active_prpage_tab == 'description'} {$active_tab = 'class="active"'} {/if}
+                                <li role="presentation" {$active_tab}><a href="#pp_home" role="tab" data-toggle="tab"><i class="fa fa-info-circle"></i> [`Overview`]</a></li>
+                            {$active_tab = ''}
+                        {/if}
+
+                        {if $product.features && empty($theme_settings.disable_features)}
+                            {if $active_prpage_tab == 'features'} {$active_tab = 'class="active"'} {/if}
+                                <li role="presentation" {$active_tab}><a href="#pp_specs" role="tab" data-toggle="tab"><i class="fa fa-list"></i> [`Specifications`]</a></li>
+                            {$active_tab = ''}
+                        {/if}
+
+                        {if empty($theme_settings.disable_reviews)}
+                            {if $active_prpage_tab == 'reviews'} {$active_tab = 'class="active"'} {/if}
+                                <li role="presentation" {$active_tab}><a class="pp_reviews_tab" href="#pp_reviews" role="tab" data-toggle="tab"><i class="fa fa-comments"></i> [`Reviews`]<span></span></a></li>
+                            {$active_tab = ''}
+                        {/if}
+
+                        {foreach $product.pages as $page}
+                            <li role="presentation" {$active_tab}><a href="#pp_tab_{$page.url}" role="tab" data-toggle="tab">{$page.name|escape}</a></li>
+                            {$active_tab = ''}
+                        {/foreach}
+                    </ul>
+                </div>
+            {/if}
+
+        {if $theme_settings.prpage_tabs}<div class="tab-content clearfix">{/if}
+
+        {if $product.description && empty($theme_settings.disable_description)}
+            {if $theme_settings.prpage_tabs}
+                {if $active_prpage_tab == 'description'} {$active_tab_cont = 'active'} {/if}
+                    <div role="tabpanel" class="tab-pane {$active_tab_cont}" id="pp_home">
+                {$active_tab_cont = ''}
+            {else}
+                <section class="description">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2><span>Описание</span></h2>
+            {/if}
+            <div class="description" id="product-description" itemprop="description">{$product.description}</div>
+            {if $theme_settings.prpage_tabs}
+                </div>
+            {else}
+                    </div>
+                </div>
+            </section>
+            {/if}
+        {/if}
+
+
+        {if $product.features && empty($theme_settings.disable_features)}
+            {if $theme_settings.prpage_tabs}
+                {if $active_prpage_tab == 'features'} {$active_tab_cont = 'active'} {/if}
+                <div role="tabpanel" class="tab-pane {$active_tab_cont}" id="pp_specs">
+                {$active_tab_cont = ''}
+            {else}
+                <section class="features">
+                    <h2><span>Характеристики</span></h2>
+            {/if}
+
+
+
+            {if !$has_divider}
+                {$two_columns = false}
+                {if ($product.features|@count) > 10}
+                    {$two_columns = true}
+                    {$next_table_row = ($product.features|@count / 2)|intval}
+                    {if $next_table_row % 2 == 1}
+                        {$next_table_row = $next_table_row-1}
+                    {/if}
+                {/if}
+                {foreach from=$product.features key=f_code item=f_value name=pro_fea}
+                    {if ($smarty.foreach.pro_fea.index == 0 || ($two_columns && $smarty.foreach.pro_fea.index == $next_table_row))}
+                        <table class="features" >
+                    {/if}
+                        <tr{if $features[$f_code].type == 'divider'} class="divider"{/if}>
+                            <td class="name">
+                                <span><strong>{$features[$f_code].name|escape}</strong></span>
+                            </td>
+                            <td class="value" itemprop="{$f_code|escape}">
+                                {if is_array($f_value)}
+                                    {if $features[$f_code].type == 'color'}
+                                        {foreach $f_value as $v}
+                                            {assign var="bar_at" value=$v|mb_strpos:"</i>"}
+                                            {assign var="bar_to" value=$v|mb_strpos:"</span>"}
+                                            {assign var="col" value=$v|mb_substr:($bar_at+4):($bar_to-$bar_at-4)}
+                                            {assign var="va" value=$v|replace:$col:''}
+                                                {$va = $va|replace:'<span style="white-space: nowrap;">':'<span style="white-space: nowrap;" data-toggle="tooltip" data-placement="top" title="[col_col]">'}
+                                                {$va|replace:'[col_col]':$col}
+                                        {/foreach}
+                                    {else}
+                                        {implode(', ', $f_value)}
+                                    {/if}
+                                    {else}
+                                        {$f_value}
+                                {/if}
+                            </td>
+                        </tr>
+                        {if ($smarty.foreach.pro_fea.index == ($product.features|@count - 1) || ($two_columns && $smarty.foreach.pro_fea.index == $next_table_row-1))}
+                        </table>
+                        {if ($two_columns && $smarty.foreach.pro_fea.index == $next_table_row-1)}{/if}
+                        {/if}
+                {/foreach}
+
+            {else}
+
+                {foreach from=$product.features key=f_code item=f_value name=pro_fea}
+                    {if $smarty.foreach.pro_fea.index == 0}
+                        <table class="features" >
+                    {/if}
+
+                    {if $features[$f_code].type == 'divider' && $smarty.foreach.pro_fea.index > 0}
+                        </table>
+                        <table class="features">
+                    {/if}
+
+                        <tr{if $features[$f_code].type == 'divider'} class="divider"{/if}>
+                        <td class="name">
+                            <span><strong>{$features[$f_code].name|escape}</strong></span>
+                        </td>
+                        <td class="value" itemprop="{$f_code|escape}">
+                            {if is_array($f_value)}
+                            {if $features[$f_code].type == 'color'}
+                            {foreach $f_value as $v}
+                            {assign var="bar_at" value=$v|mb_strpos:"</i>"}
+                            {assign var="bar_to" value=$v|mb_strpos:"</span>"}
+                            {assign var="col" value=$v|mb_substr:($bar_at+4):($bar_to-$bar_at-4)}
+                            {assign var="va" value=$v|replace:$col:''}
+                            {$va = $va|replace:'<span style="white-space: nowrap;">':'<span style="white-space: nowrap;" data-toggle="tooltip" data-placement="top" title="[col_col]">'}
+                                                {$va|replace:'[col_col]':$col}
+                                        {/foreach}
+                                    {else}
+                                        {implode(', ', $f_value)}
+                                    {/if}
+                                    {else}
+                                        {$f_value}
+                                {/if}
+                        </td>
+                        </tr>
+                    {if $smarty.foreach.pro_fea.index == ($product.features|@count - 1)}
+                        </table>
+                    {/if}
+                {/foreach}
+            {/if}
+
+            {if $theme_settings.prpage_tabs}
+                </div>
+            {else}
+                </section>
+            {/if}
+        {/if}
+
+        {if empty($theme_settings.disable_reviews)}
+            {if $theme_settings.prpage_tabs}
+                {if $active_prpage_tab == 'reviews'} {$active_tab_cont = 'active'} {/if}
+                <div role="tabpanel" class="tab-pane product-rewievs {$active_tab_cont}" id="pp_reviews">
+                {$active_tab_cont = ''}
+            {else}
+                <section class="product-rewievs">
+            {/if}
+                <div class="reviw-tab-content">
+                    {if !empty($rates)}
+                       <div class="rate-section">
+                           <h2>Рейтинг {($product.name|escape)}</h2>
+                           <p class="rating">
+                              [`Average customer rating:`]
+                              {$wa->shop->ratingHtml($product.rating, 16)} (<a href="reviews/">{$reviews_total_count}</a>)
+                              {if $product.rating > 0}<span class="hint">{sprintf('[`%s out of 5 stars`]', $product.rating)}</span>{/if}
+                           </p>
+
+                           <table class="rating-distribution">
+                                {$_total_count = 0}
+                                {foreach $rates as $_rate => $_count}
+                                    {$_total_count = $_total_count + $_count}
+                                {/foreach}
+                                {* foreach $rates as $_rate => $_count *}
+                                {for $i = 5 to 0 step -1}
+                                    {if empty($rates[$i]) || !$rates[$i]}{$_count = 0}{else}{$_count = $rates[$i]}{/if}
+                                        {if $i || $_count}
+                                            <tr>
+                                                <td class="min-width hint">{$_count}</td>
+                                                <td>
+                                                    <div class="bar">
+                                                        <div class="filling" style="width: {if $_total_count > 0}{str_replace(',','.', 100*$_count/$_total_count)}{else}0{/if}%;{if !$i} background: #ddd;{/if}"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="rating">{for $j=1 to $i}<i class="icon10 star"></i>{forelse}<span class="hint">[`no rate`]</span>{/for}</span>
+                                                </td>
+                                            </tr>
+                                    {/if}
+                                {/for}
+                           </table>
+                       </div>
+                    {/if}
+
+                    <div class="reviews-section">
+                        <div id="ppReviews">
+                            <script type="text/javascript">
+                                $(function() {
+                                    var from_c = 0;
+                                    var count_c = 5;
+                                    var commentsLoaded = false;
+                                    checkComments();
+        //                            $(window).scroll(function() {
+        //                                chekcComments();
+        //                            });
+                                    $(window).bind('scroll', checkComments);
+                                    function checkComments() {
+                                        var top_of_element = $(".product-rewievs").offset().top;
+        //                                var top_of_screen = $(window).scrollTop();
+                                        var bottom_of_screen = $(window).scrollTop() + $(window).height();
+
+                                        if(bottom_of_screen > top_of_element) {
+                                            if(!commentsLoaded) {
+                                                $(window).unbind('scroll', checkComments);
+                                                commentsLoaded = true;
+                                                loadComments(from_c, count_c);
+                                            }
+                                        }
+                                    }
+
+                                    $('.product-rewievs').on('click', '#comments_load_more', function () {
+                                        from_c = from_c + count_c;
+
+                                        console.log("from_c: " + from_c);
+                                        loadComments(from_c, count_c);
+                                    });
+
+                                    function loadComments(from, count) {
+                                        var loading = $('<div class="loading">Загрузка...</div>');
+
+                                        $('#ppReviews').append(loading);
+
+                                        $.get('{$wa->currentUrl()}reviews/', { random: "1", comments_from: from, comments_count: count }, function (res) {
+                                            if(from == 0) {
+                                                $('#ppReviews').html('');
+                                                $('#ppReviews').append($(res).find(".reviews"));
+
+                                                $('#ppReviews')
+                                                    .prepend('<script type="text/javascript" src="{$wa_app_static_url}js/rate.widget.js"><\/script>')
+                                                    .prepend('<script type="text/javascript" src="{$wa_theme_url}js/reviews.js"><\/script>');
+
+                                                $('div.wa-captcha .wa-captcha-refresh, div.wa-captcha .wa-captcha-img').unbind('click').click(function(){
+                                                    var div = $(this).parents('div.wa-captcha');
+                                                    var captcha = div.find('.wa-captcha-img');
+                                                    if(captcha.length) {
+                                                        captcha.attr('src', captcha.attr('src').replace(/\?.*$/,'?rid='+Math.random()));
+                                                        captcha.one('load', function() {
+                                                            //div.find('.wa-captcha-input').focus();
+                                                        });
+                                                    };
+                                                    div.find('input').val('');
+                                                    return false;
+                                                });
+
+                                            } else {
+                                                $('#ppReviews').find('.main-reviews-branch').append($(res).find(".main-reviews-branch").html());
+                                            }
+
+                                            $('#ppReviews').find('.loading').remove();
+
+                                            var totalComments = $(res).find('input[name="count"]').val();
+
+                                            if(totalComments > (from+count)) {
+                                                $('#comments_load_more').show();
+                                            } else {
+                                                $('#comments_load_more').hide();
+                                            }
+                                        });
+                                    }
+                                });
+                            </script>
+                        </div>
+                        <button id="comments_load_more" class="button">Загрузить еще отзывы...</button>
+                    </div>
+                </div>
+
+            {if $theme_settings.prpage_tabs}
+                </div>
+            {else}
+                </section>
+            {/if}
+        {/if}
+
+
+                {if $theme_settings.prpage_tabs}
+                    {foreach $product.pages as $page}
+                        <div role="tabpanel" class="tab-pane {$active_tab_cont}" id="pp_tab_{$page.url}">{$page.content}</div>
+                        {$active_tab_cont = ''}
+                    {/foreach}
+                {else}
+                    {foreach $product.pages as $page}
+                        <section class="aux-page" id="product-aux-{$page.url}">
+                            <h2>{$page.name|escape}</h2>
+                            {$page.content}
+                        </section>
+                    {/foreach}
+                {/if}
+
+        {if $theme_settings.prpage_tabs}
+            </div>
+        {/if}
+
+        </div>
+
+
+        <!--- Upselles, Crossselers -->
+        {$upselling = $product->upSelling(12)}
+        {$crossselling = $product->crossSelling(12)}
+
+        {if $upselling || $crossselling}
+            {if $upselling}
+                <div class="e-plane product-information">
+                    <section class="related">
+                        <h2>
+                            <span>
+                                <i class="icon-star"></i> [`See also`] {$compare_ids = array_merge(array($product.id), array_keys($upselling))}
+                                <input style="display: none" type="button" onClick="javascript:window.location='{$wa->getUrl('/frontend/compare', ['id' => implode(',', $compare_ids)])}';" value="[`Compare all`]" class="gray" />
+                            </span>
+                        </h2>
+                        <div class="e-space">
+                            {include file="list-thumbs-zeus.html" products=$upselling ulclass="related-bxslider" hide_second_product_image=true}
+                        </div>
+                    </section>
+                </div>
+            {/if}
+            {if $crossselling}
+                <div class="e-plane product-information">
+                    <section class="related">
+                        <h2><span><i class="icon-basket"></i> Покупатели, купившие <strong>{($product.name|escape)}</strong>, так же купили</span></h2>
+                        <div class="e-space">
+                            {include file="list-thumbs-zeus.html" products=$crossselling ulclass="related-bxslider" hide_second_product_image=true}
+                        </div>
+                    </section>
+                </div>
+            {/if}
+        {/if}
+
+
+        </div>
+
+</section>

@@ -1,0 +1,6400 @@
+
+
+msgid ""
+msgstr "Project-Id-Version: Webasyst 1.14.9.567 UA translation v 1.0\nReport-Msgid-Bugs-To: \nLast-Translator: Igor Kononov <contact@skeeter-studio.ru>\nLanguage-Team: skeeter.studio\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPOT-Creation-Date: \nPO-Revision-Date: 2020-12-12 09:18+0300\nLanguage: uk_UA\nPlural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\nX-Generator: Poedit 2.4.2\nX-Poedit-SourceCharset: UTF-8\nX-Poedit-Basepath: .\nX-Poedit-SearchPath-0: .\nX-Poedit-SearchPath-1: .\n"
+
+msgid "Request from website"
+msgstr "Запит з сайту"
+
+msgid "Authorize either by entering your contact information, or through one of the websites listed above."
+msgstr "Авторизуйтесь, вказавши свою контактну інформацію або за допомогою одного з вищевказаних сайтів."
+
+msgid "Syntax error at block"
+msgstr "Синтаксична помилка у блоці"
+
+msgid "Recipient (administrator) email is not valid"
+msgstr "Email отримувача (адміністратора) вказано невірно"
+
+msgid "Invalid captcha"
+msgstr "Невірний код CAPTCHA"
+
+msgid "Please confirm your agreement"
+msgstr "Будь ласка, підтвердіть свою згоду"
+
+msgid "Email is required"
+msgstr "Необхідно вказати email"
+
+msgid "Please define your request"
+msgstr "Визначте свій запит, будь ласка"
+
+msgid "Name"
+msgstr "Ім`я"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "An error occurred while attempting to send your request. Please try again in a minute."
+msgstr "При спробі надіслати ваш запит сталася помилка. Спробуйте знову за хвилину, будь ласка."
+
+msgid "Login"
+msgstr "Логін"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Remember me"
+msgstr "Запам`ятати мене"
+
+msgid "Sign In"
+msgstr "Увійти"
+
+msgid "Forgot password?"
+msgstr "Забули пароль?"
+
+msgid "Sign up"
+msgstr "Реєстрація"
+
+msgid "Reset password"
+msgstr "Скинути пароль"
+
+msgid "I remember it now!"
+msgstr "Я згадав пароль!"
+
+msgid "Enter a new password"
+msgstr "Введіть новий пароль"
+
+msgid "Re-enter password"
+msgstr "Введіть пароль повторно"
+
+msgid "Save and log in"
+msgstr "Зберегти і увійти"
+
+msgid "Confirm password"
+msgstr "Підвердіть пароль"
+
+msgid "Sign Up"
+msgstr "Реєстрація"
+
+msgid "or <a href=\"%s\">login</a> if you already have an account"
+msgstr "або <a href=\"%s\">увійдіть</a>, якщо у вас вже є акаунт"
+
+msgid "Access denied."
+msgstr "Доступ заборонено."
+
+msgid "Login is required"
+msgstr "Необхідно увійти"
+
+msgid "A confirmation link has been sent to your email address provided during the signup. Please click this link to confirm your email and to sign in. <a class=\"send-email-confirmation\" href=\"%s\">Resend the link</a>"
+msgstr "Під час реєстрації вам на email було надіслане посилання. Будь ласка, перейдіть за посиланням, аби підтвердити свій email та увійти. <a class=\"send-email-confirmation\" href=\"%s\">Надіслати посилання повторно</a>"
+
+msgid "Invalid email or password"
+msgstr "Невірний email або пароль"
+
+msgid "Invalid login or password"
+msgstr "Невірний логін або пароль"
+
+msgid "Yandex app ID"
+msgstr "ID додатку Яндекса"
+
+msgid "Yandex app secret"
+msgstr "Secret додатку Яндекса"
+
+msgid "VK app ID"
+msgstr "ID додатку ВКонтакті"
+
+msgid "VK app secret"
+msgstr "Secret додатку ВКонтакті"
+
+msgid "Facebook app ID"
+msgstr "ID додатку Фейсбук"
+
+msgid "Facebook app secret"
+msgstr "Secret додатку Фейсбук"
+
+msgid "Google app ID"
+msgstr "ID додатку Google"
+
+msgid "Google app secret"
+msgstr "Secret додатку Google"
+
+msgid "edited contact"
+msgstr "відредагував контакт"
+
+msgid "Widget not found"
+msgstr "Віджет не знайдено"
+
+msgid "Incorrect size"
+msgstr "Невірний розмір"
+
+msgid "Yesterday"
+msgstr "Учора"
+
+msgid "Earlier"
+msgstr "Раніше"
+
+msgid "7 Days"
+msgstr "7 днів"
+
+msgid "30 Days"
+msgstr "30 днів"
+
+msgid "90 Days"
+msgstr "90 днів"
+
+msgid "365 Days"
+msgstr "365 днів"
+
+msgid "Hello world"
+msgstr "Привіт, світ"
+
+msgid "Navigation"
+msgstr "Навігація"
+
+msgid "Menu item 1"
+msgstr "Пункт меню 1"
+
+msgid "Menu item 2"
+msgstr "Пункт меню 2"
+
+msgid "Menu item 3"
+msgstr "Пункт меню 3"
+
+msgid "Woohoo, Webasyst app is ready!"
+msgstr "Чудово, додаток Webasyst готовий!"
+
+msgid "Thank you for registering on %s!"
+msgstr "Дякуємо за реєстрацію у %s!"
+
+msgid "Login to your account"
+msgstr "Увійдіть до свого акаунту"
+
+msgid "Confirm your email by clicking this link"
+msgstr "Підтвердіть свій email, натиснувши на посилання"
+
+msgid "To recover your password please follow this link:"
+msgstr "Аби відновити свій пароль, перейдіть за посиланням:"
+
+msgid "IMPORTANT NOTE: If you did not request your password recovery, someone else might be trying to log in using your email address. For security purposes we recommend you to log in to your account and to change your password."
+msgstr "ВАЖЛИВО: Якщо ви не запитували відновлення пароля, до вашого акаунту міг намагатися увійти хтось інший, використовуючи вашу адресу email."
+
+msgid "<strong>%s</strong> requests access to your apps data:"
+msgstr "<strong>%s</strong> запитує доступ до даних ваших додатків:"
+
+msgid "Allow"
+msgstr "Дозволити"
+
+msgid "Deny"
+msgstr "Заборонити"
+
+msgid "Log out"
+msgstr "Вийти"
+
+msgid "Error"
+msgstr "Помилка"
+
+msgid "or"
+msgstr "або"
+
+msgid "deny"
+msgstr "заборонити"
+
+msgid "Live Stream"
+msgstr "Стрічка подій"
+
+msgid "All apps"
+msgstr "Усі додатки"
+
+msgid "Selected apps"
+msgstr "Обрані додатки"
+
+msgid "No events in the live stream yet."
+msgstr "У стрічці ще немає подій."
+
+msgid "Live stream collects all events from installed apps and presents them in a chronological order."
+msgstr "Стрічка збирає всі події зі встановленних додатків та відображує їх у хронологічному порядку."
+
+msgid "Welcome to your personal dashboard!"
+msgstr "Ласкаво просимо на вашу власну панель управління!"
+
+msgid "Customize widgets and dashboard layout using the link above. Dashboards are personal, so only you will see your custom layout. Other Webasyst users have their own personal dashboards too."
+msgstr "Налаштуйте віджети і компонування панелі за допомогою посилання зверху. Панелі керування персональні, тому тільки ви будете бачити свій варіант. У інших користувачів Webasyst також є власні панелі."
+
+msgid "Ok, thanks"
+msgstr "Добре, дякую"
+
+msgid "Loading"
+msgstr "Завантаження"
+
+msgid "My dashboard"
+msgstr "Моя панель управління"
+
+msgid "Webasyst TV"
+msgstr "Webasyst TV"
+
+msgid "New Webasyst TV dashboard..."
+msgstr "Нова панель Webasyst TV..."
+
+msgid "New dashboard"
+msgstr "Нова панель управління"
+
+msgid "Dashboard title"
+msgstr "Назва панелі управління"
+
+msgid "Webasyst TV dashboards can be opened in any modern web browser and streamed to 4K or Full HD TVs."
+msgstr "Панелі Webasyst TV можна відкрити у любому сучасному браузері та передати на 4К- або FullHD-телевізори."
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "cancel"
+msgstr "відміна"
+
+msgid "Logout"
+msgstr "Вийти"
+
+msgid "Apps"
+msgstr "Додатки"
+
+msgid "Widgets"
+msgstr "Віджети"
+
+msgid "Your dashboard is empty. Add some widgets by clicking Customize dashboard on the top."
+msgstr "Ваша панель управління пуста. Додайте декілька віджетів, натиснувши «Налаштувати панель» вище."
+
+msgid "Cancel"
+msgstr "Відміна"
+
+msgid "Login Webasyst"
+msgstr "Логін Вебасиста"
+
+msgid "Create the first user in your Webasyst installation."
+msgstr "Створіть першого користувача у вашій установці Вебасиста."
+
+msgid "The information provided in this form will be stored in your local Webasyst installation only, and will not be sent anywhere outside your server."
+msgstr "Уведену через цю форму інформацію буде збережено тільки у вашій локальній установці Вебасиста. Її не буде надіслано за межі серверу."
+
+msgid "Login name"
+msgstr "Логін"
+
+msgid "First name"
+msgstr "Ім`я"
+
+msgid "Last name"
+msgstr "Прізвище"
+
+msgid "Company name"
+msgstr "Назва компанії"
+
+msgid "Enter"
+msgstr "Ввести"
+
+msgid "Webasyst"
+msgstr "Вебасист"
+
+msgid "MySQL database"
+msgstr "База даних MySQL"
+
+msgid "Enter connection credentials for the MySQL database which will be used by Webasyst to store system and application data."
+msgstr "Уведіть дані доступу до бази даних MySQL. Вебасист буде використовувати їх для збереження даних системи та додатків."
+
+msgid "Host"
+msgstr "Хост"
+
+msgid "User"
+msgstr "Користувач"
+
+msgid "Database Name"
+msgstr "Назва бази даних"
+
+msgid "If you do not know what should be entered here, please contact your hosting provider technical support."
+msgstr "Якщо ви не знаєте, що тут потрібно вказати, зв`яжіться з вашим провайдером хостингу."
+
+msgid "Continue"
+msgstr "Продовжити"
+
+msgid "Email or login name"
+msgstr "Email або логін"
+
+msgid "Recover password for"
+msgstr "Відновити пароль для"
+
+msgid "Password recovery"
+msgstr "Відновлення паролю"
+
+msgid "Password recovery instructions have been sent to your email address."
+msgstr "Інструкції з відновлення паролю відправлено на вашу адресу email."
+
+msgid "Back to login page"
+msgstr "Назад до сторінки входу"
+
+msgid "Please enter your email:"
+msgstr "Будь ласка, введіть свій email:"
+
+msgid "Please enter your login name or email:"
+msgstr "Будь ласка, введіть свій логін або email:"
+
+msgid "Send"
+msgstr "Відправити"
+
+msgid "Change photo"
+msgstr "Змінити фото"
+
+msgid "@"
+msgstr "@"
+
+msgid "Drop photo here"
+msgstr "Перетягніть фото сюди"
+
+msgid "To change drop another photo or upload file (JPG, GIF или PNG):"
+msgstr "Для заміни перетягніть інше фото або завантажте файл (JPG, GIF або PNG):"
+
+msgid "Or upload file (JPG, GIF or PNG):"
+msgstr "Або завантажте файл (JPG, GIF або PNG):"
+
+msgid "Delete photo"
+msgstr "Видалити фото"
+
+msgid "Are you sure you want to delete this photo?"
+msgstr "Ви дійсно хочете видалити це фото?"
+
+msgid "Not an image or invalid image:"
+msgstr "Це не зображення, або некоректне зображення:"
+
+msgid "Load more"
+msgstr "Завантажити ще"
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "Drag new widgets onto your dashboard and customize the layout any way you like it. Dashboards are personal, so only you will see your custom layout. Other Webasyst users have their own personal dashboards too."
+msgstr "Перетягніть віджети і налаштуйте компонування панелі за своїми вподобаннями. Панелі керування персональні, тому тільки ви будете бачити свій варіант. У інших користувачів Webasyst також є власні панелі."
+
+msgid "Install new widgets"
+msgstr "Встановити нові віджети"
+
+msgid "Add widgets"
+msgstr "Додати віджети"
+
+msgid "Click or drag this widget to install it on your dashboard"
+msgstr "Перетягніть або клікніть по віджетові, аби встановити його на панель управління"
+
+msgid "Delete Widget"
+msgstr "Видалити віджет"
+
+msgid "Set small size"
+msgstr "Встановити малий розмір"
+
+msgid "Set medium size"
+msgstr "Встановити середній розмір"
+
+msgid "Set big size"
+msgstr "Встановити великий розмір"
+
+msgid "Show settings"
+msgstr "Показати налаштування"
+
+msgid "Settings"
+msgstr "Налаштування"
+
+msgid "Dashboard public link"
+msgstr "Публічне посилання на панель управління"
+
+msgid "You are about to permanently delete this dashboard. Are you sure?"
+msgstr "Панель управління буде видалено назавжди. Ви впевнені?"
+
+msgid "Delete dashboard"
+msgstr "Видалити панель управління"
+
+msgid "Refresh CAPTCHA"
+msgstr "Оновити CAPTCHA"
+
+msgid "The secret parameter is missing."
+msgstr "Параметр \"secret\" не знайдено."
+
+msgid "The secret parameter is invalid or malformed."
+msgstr "Параметр \"secret\" невірний або сформований некоректно."
+
+msgid "The response parameter is missing."
+msgstr "Параметр відповіді не знайдено."
+
+msgid "The response parameter is invalid or malformed."
+msgstr "Параметр відповіді невірний або сформований некоректно."
+
+msgid "At least one of these fields must be filled"
+msgstr "Хоча б одне з цих полів має бути заповненим"
+
+msgid "This field is required"
+msgstr "Це поле є обов’язковим"
+
+msgid "User with the same %s is already registered"
+msgstr "Користувач, який вказав той же %s, вже існує"
+
+msgid "Data must be an array."
+msgstr "Дані мають бути масивом."
+
+msgid "Duplicates are not allowed for this field."
+msgstr "Дублікати для цього поля неприпустимі."
+
+msgid "This field must be unique. The value entered is already set for %NAME_LINK%."
+msgstr "Це поле має бути унікальним. Уведене значення вже задане для %NAME_LINK%."
+
+msgid "This field must be unique. The value entered is already set for another contact."
+msgstr "Це поле має бути унікальним. Уведене значення вже задане для іншого контакту."
+
+msgid "show on map"
+msgstr "показати на мапі"
+
+msgid "select region"
+msgstr "оберіть регіон"
+
+msgid "Select value"
+msgstr "Оберіть значення"
+
+msgid "January"
+msgid_plural "January"
+msgstr[0] "Січень"
+msgstr[1] "Січня"
+msgstr[2] "Січень"
+
+msgid "February"
+msgid_plural "February"
+msgstr[0] "Лютий"
+msgstr[1] "Лютого"
+msgstr[2] "Лютий"
+
+msgid "March"
+msgid_plural "March"
+msgstr[0] "Березень"
+msgstr[1] "Березня"
+msgstr[2] "Березень"
+
+msgid "April"
+msgid_plural "April"
+msgstr[0] "Квітень"
+msgstr[1] "Квітня"
+msgstr[2] "Квітень"
+
+msgid "May"
+msgid_plural "May"
+msgstr[0] "Травень"
+msgstr[1] "Травня"
+msgstr[2] "Травень"
+
+msgid "June"
+msgid_plural "June"
+msgstr[0] "Червень"
+msgstr[1] "Червня"
+msgstr[2] "Червень"
+
+msgid "July"
+msgid_plural "July"
+msgstr[0] "Липень"
+msgstr[1] "Липня"
+msgstr[2] "Липень"
+
+msgid "August"
+msgid_plural "August"
+msgstr[0] "Серпень"
+msgstr[1] "Серпня"
+msgstr[2] "Серпень"
+
+msgid "September"
+msgid_plural "September"
+msgstr[0] "Вересень"
+msgstr[1] "Вересня"
+msgstr[2] "Вересень"
+
+msgid "October"
+msgid_plural "October"
+msgstr[0] "Жовтень"
+msgstr[1] "Жовтня"
+msgstr[2] "Жовтень"
+
+msgid "November"
+msgid_plural "November"
+msgstr[0] "Листопад"
+msgstr[1] "Листопада"
+msgstr[2] "Листопад"
+
+msgid "December"
+msgid_plural "December"
+msgstr[0] "Грудень"
+msgstr[1] "Грудня"
+msgstr[2] "Грудень"
+
+msgid "Yes"
+msgstr "Так"
+
+msgid "No"
+msgstr "Ні"
+
+msgid "All contacts"
+msgstr "Усі контакти"
+
+msgid "Category"
+msgstr "Категорія"
+
+msgid "All users"
+msgstr "Усі користувачі"
+
+msgid "Company"
+msgstr "Компанія"
+
+msgid "New password"
+msgstr "Новий пароль"
+
+msgid "Photo"
+msgstr "Фото"
+
+msgid "%s subfield is required."
+msgstr "Підполе %s є обов`язковим."
+
+msgid "Unknown field %s"
+msgstr "Невідоме поле %s"
+
+msgid "Google Maps API key"
+msgstr "Ключ API мап Google"
+
+msgid "<a href=\"https://developers.google.com/maps/documentation/javascript/get-api-key\">Obtain a Google Maps API key</a> only if the free limit of 25,000 map loads per 24 hours is not sufficient."
+msgstr "<a href=\"https://developers.google.com/maps/documentation/javascript/get-api-key\">Отримайте ключ API мап Google Maps</a> тільки якщо безкоштовний ліміт у 25000 завантажень мап за 24 години є недостатнім."
+
+msgid "To be able to use an API key, <a href=\"https://console.developers.google.com/apis/api/static_maps_backend/\">enable Static Maps API</a> in your Google account."
+msgstr "Аби мати змогу використовувати ключ API, <a href=\"https://console.developers.google.com/apis/api/static_maps_backend/\">підключіть Static Maps API</a> у своєму акаунті Google."
+
+msgid "This setting must be supported by the app; e.g., Shop-Script ver. 7.2.4.114 or higher."
+msgstr "Це налаштування має підтримуватись додатком; наприклад, Shop-Script версії 7.2.4.114 або вище."
+
+msgid "Request preferred delivery time"
+msgstr "Запросити бажаний час доставки"
+
+msgid "Request preferred delivery date"
+msgstr "Запросити бажану дату доставки"
+
+msgid "from"
+msgstr "з"
+
+msgid "till"
+msgstr "по"
+
+msgid "Delivery intervals"
+msgstr "Інтервали доставки"
+
+msgid "Add interval"
+msgstr "Додати інтервал"
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "Time"
+msgstr "Час"
+
+msgid "Password can not be empty."
+msgstr "Пароль не може бути порожнім."
+
+msgid "Passwords do not match"
+msgstr "Паролі не співпадають"
+
+msgid "Required"
+msgstr "Обов’язково"
+
+msgid "Password recovery for this email has been banned."
+msgstr "Відновлення паролю для цього email заблоковане."
+
+msgid "Sorry, we can not recover password for this login name or email. Please refer to your system administrator."
+msgstr "Вибачте, але ми не можемо відновити пароль для цього логіну або email. Зверніться, будь ласка, до свого системного адміністратора."
+
+msgid "No user with this email has been found."
+msgstr "Користувача з таким email не знайдено."
+
+msgid "No user with this login name or email has been found."
+msgstr "Користувача з таким логіном або паролем не знайдено."
+
+msgid "%s is required"
+msgstr "%s є обов`язковим"
+
+msgid "Thank you for signing up!"
+msgstr "Дякуємо за реєстрацію!"
+
+msgid "Page not found"
+msgstr "Сторінку не знайдено"
+
+msgid "Access denied"
+msgstr "Доступ заборонено"
+
+msgid "You don’t have permissions to view this widget"
+msgstr "У вас відсутні дозволи на перегляд цього віджету"
+
+msgid "Plugin not found"
+msgstr "Плагін не знайдено"
+
+msgid "Log in"
+msgstr "Увійти"
+
+msgid "Confirmation link has been resent"
+msgstr "Повідомлення, яке містить посилання для підтвердження, було надіслан по"
+
+msgid "Invalid login"
+msgstr "Невірний логін"
+
+msgid "Session has expired. Please reload current page and log in again."
+msgstr "Сесія минула. Перезавантажте сторінку, будь ласка, та увійдіть повторно."
+
+msgid "Update theme"
+msgstr "Оновити тему дизайну"
+
+msgid "Confirm the list of files which will be replaced with their newest versions from theme version %s."
+msgstr "Підтвердіть перелік файлів, які буде замінено найновішими версіями з теми дизайну версії %s."
+
+msgid "Files marked with <strong>bold</strong> were previously modified by you — select them only if you’d like to completely drop changes you’ve made to these files. All selected files will be overwritten with their newest versions from the original theme, and there will be no way to automatically rollback this update. (If you feel non-confident, don’t select modified templates by now. You will be able to update them manually file-by-file later on.)"
+msgstr "Файли, які відмічено <strong>жирним</strong>, були раніше модифіковані вами. Обирайте їх тільки у разі, якщо ви бажаєте повністю скинути зміни, які ви внесли в них. Усі обрані файли буде перезаписано їх найновішими версіями з оригінальної теми. Не буде ніякого шляху автоматично відмінити це оновлення. (Якщо ви не впевнені, не обирайте модифіковані шаблони зараз. Ви зможете оновити їх вручну, один за одним, пізніше)."
+
+msgid "Theme appearance settings will be updated automatically"
+msgstr "Налаштування відображення теми дизайна буде оновлено автоматично"
+
+msgid "Theme appearance settings (theme.xml)"
+msgstr "Налаштування відображення теми (theme.xml)"
+
+msgid "You did not modify this file"
+msgstr "Ви не змінювали цей файл"
+
+msgid "%s and %d more unmodified files"
+msgstr "%s та %d додатково немодифікованих файлів"
+
+msgid "You modified this file"
+msgstr "Ви змінювали цей файл"
+
+msgid "Parent theme"
+msgstr "Батьківська тема"
+
+msgid "Update all to %s"
+msgstr "Оновити усе до %s"
+
+msgid "This design theme is also used on <strong>%s</strong>. Editing theme template files will affect both %s and other listed routes."
+msgstr "Ця тема дизайну також використовується у додаткові <strong>%s</strong>. Редагування шаблонів теми дизайну може вплинути на %s та інші зазначені поселення."
+
+msgid "parent theme file"
+msgstr "файл батьківської теми"
+
+msgid "New file"
+msgstr "Новий файл"
+
+msgid "View original"
+msgstr "Переглянути оригінал"
+
+msgid "Roll back my file to the original version"
+msgstr "Повернути мій файл до оригінальної версії"
+
+msgid "This will reset all your changes. Are you sure?"
+msgstr "Це скине усі зміни. Ви впевнені?"
+
+msgid "Template settings"
+msgstr "Налаштування шаблону"
+
+msgid "Delete"
+msgstr "Видалити"
+
+msgid "File will be deleted without the ability to recover. Are you sure?"
+msgstr "Файл буде видалено без можливості відновлення. Ви впевнені?"
+
+msgid "Create new file"
+msgstr "Створити новий файл"
+
+msgid "Link from parent theme"
+msgstr "Посилання з батьківскої теми"
+
+msgid "File name"
+msgstr "Назва файлу"
+
+msgid "File should have one of the allowed extensions: .html, .css, .js"
+msgstr "Файл повинен мати одне з дозволених розширень: .html, .css, .js"
+
+msgid "Description"
+msgstr "Опис"
+
+msgid "Optional template description"
+msgstr "Необов`язковий опис шаблону"
+
+msgid "Select file"
+msgstr "Обрати файл"
+
+msgid "all available parent theme files are already linked"
+msgstr "усі доступні файли батьківскої теми вже пов`язані"
+
+msgid "This list represent all parent theme (<strong>%s</strong>) templates which are currently not linked in this design theme."
+msgstr "Цей перелік відображує усі шаблони батьківскої теми (<strong>%s</strong>), на які наразі немає посилань у цій темі дизайну."
+
+msgid "Cheat sheet"
+msgstr "Шпаргалка"
+
+msgid "Saving..."
+msgstr "Збереження ..."
+
+msgid "Saved"
+msgstr "Збережено"
+
+msgid "An error occurred while saving"
+msgstr "При спробі збереження сталася помилка"
+
+msgid "All"
+msgstr "Усі"
+
+msgid "Paid"
+msgstr "Платні"
+
+msgid "Free"
+msgstr "Безкоштовні"
+
+msgid "All categories"
+msgstr "Усі категорії"
+
+msgid "Installed themes only"
+msgstr "Тільки встановлені теми дизайну"
+
+msgid "All colors"
+msgstr "Усі кольори"
+
+msgid "Upload theme archive"
+msgstr "Завантажити архів теми"
+
+msgid "Design themes for %s app"
+msgstr "Теми дизайну для додатку %s"
+
+msgid "Upload theme"
+msgstr "Завантажити архів теми"
+
+msgid "Theme must be uploaded as a valid Webasyst design theme archive (.tar.gz archive with theme files and theme.xml manifest file)."
+msgstr "Тема має бути завантажена як коректний архів з темою дизайну Вебасист (архів у форматі .tar.gz з файлами теми і маніфестом theme.xml)."
+
+msgid "Uploading..."
+msgstr "Завантаження ..."
+
+msgid "Upload"
+msgstr "Завантажити"
+
+msgid "Start using this theme on one of your existing %s app routes, or create a new route:"
+msgstr "Почніть використовувати цю тему на одному з існуючих поселень додатку %s, або створіть нове поселення:"
+
+msgid "Existing route"
+msgstr "Існуюче поселення"
+
+msgid "There are no routes for %s app on this site yet."
+msgstr "Для додатку %s на цьому сайті ще немає поселень."
+
+msgid "New route"
+msgstr "Нове поселення"
+
+msgid "Start using %s theme"
+msgstr "Почніть використовувати тему дизайну %s"
+
+msgid "%s design theme"
+msgstr "Тема дизайну %s"
+
+msgid "Theme ID"
+msgstr "Ідентифікатор теми"
+
+msgid "Original version <strong>%s</strong>"
+msgstr "Оригінальна версія <strong>%s</strong>"
+
+msgid "No customizations have been made to theme settings and template files."
+msgstr "В тему дизайну та файли шаблонів зміни не вносились."
+
+msgid "Latest version <strong>%s</strong>"
+msgstr "Остання версія <strong>%s</strong>"
+
+msgid "Your customized version of %s theme is up to date."
+msgstr "Ваша модифікована версія теми %s не потребує оновлень."
+
+msgid "This will reset all customizations you applied to this design theme. Are you sure?"
+msgstr "Це скине всі зміни, які ви застосовували до теми дизайну. Продовжити?"
+
+msgid "Update is available"
+msgstr "Доступне оновлення"
+
+msgid "Theme update requires your commitment because it may affect changes that you previously applied to template files and thus alter your site layout. Click to review the list of files and update."
+msgstr "Оновлення теми дизайну потребує вашої уваги, тому що стосується змін, які ви раніше вносили до шаблонів — а відповідно і відображення вашго сайту. Клікніть, аби переглянути перелік файлів та оновлення."
+
+msgid "Update to version %s is available"
+msgstr "Доступне оновлення до версії %s"
+
+msgid "This theme was either cloned from some of the original themes, or manually uploaded as archive. It can not be updated via Installer app or reverted to the original version because there is no original theme with same ID installed (<strong>%s</strong>)."
+msgstr "Цю тему дизайну було або клоновано з оригінальних тем, або завантажено вручну у вигляді архіву. Її не вдасться оновити через Інсталлер або скинути до оригінального вигляду — тому що не встановлено оригінальної теми з тим же ідентифікатором (<strong>%s</strong>)."
+
+msgid "Download theme backup"
+msgstr "Завантажити резервну копію теми"
+
+msgid "Clone theme"
+msgstr "Клонувати тему"
+
+msgid "Rename theme"
+msgstr "Перейменувати тему"
+
+msgid "not set"
+msgstr "не встановлено"
+
+msgid "Change"
+msgstr "Змінити"
+
+msgid "You did not apply customizations to this theme yet, and thus there is nothing to revert."
+msgstr "Ви ще не вносили змін до цієї теми, тому тут немає чого відновлювати."
+
+msgid "Revert theme to original"
+msgstr "Відновити оригінал теми"
+
+msgid "You are using the original version of this design theme. No customizations have been applied to theme files yet, and thus there is nothing to revert for now."
+msgstr "Ви використовуєте оригінальну версію цієї теми дизайну. Ви ще не вносили змін до її файлів, тому тут немає чого відновлювати."
+
+msgid "This will erase all customizations you’ve made to this theme’s template files using the design editor, and reset this theme to original"
+msgstr "Ця дія знищить усі модифікації, які ви вносили до шаблонів цієї теми за допомогою редактора дизайну і скине тему до оригінального стану"
+
+msgid "This will permanently delete theme without the ability to recover. Are you sure?"
+msgstr "Тему буде видалено без можливості відновлення. Ви впевнені?"
+
+msgid "Delete theme"
+msgstr "Видалити тему"
+
+msgid "Default theme cannot be deleted"
+msgstr "Стандартну тему неможливо видалити"
+
+msgid "preview this theme"
+msgstr "попередній перегляд цієї теми"
+
+msgid "%s design theme does not offer customizable display settings. Please use template editor for customizing the theme."
+msgstr "Тема дизайну %s не пропонує налаштувань зовнішнього виду. Для внесення змін використовуйте редактор шаблонів, будь ласка."
+
+msgid "Theme usage"
+msgstr "Використання теми"
+
+msgid "Theme version"
+msgstr "Версія теми"
+
+msgid "Theme path"
+msgstr "Шлях теми"
+
+msgid "Last modified"
+msgstr "Останні зміни"
+
+msgid "Customizing %s theme settings below will affect all listed routes. If you want to keep individual designs, use separate theme copies (clones) for each route."
+msgstr "Налаштування теми дизайну %s зачепить усі поселення, які наведено нижче. Якщо ви бажаєте зберегти індивідуальний дизайн поселень, використовуйте окремі копії тем дизайну (клони) для кожного поселення."
+
+msgid "About this theme"
+msgstr "Про цю тему дизайну"
+
+msgid "Thumbnails"
+msgstr "Ескізи"
+
+msgid "This design theme links image thumbnails of sizes listed below. If custom-sized on-fly thumbnail generation is not allowed by the app settings, please make sure that at least listed thumbnail sizes are allowed. If on-fly thumbnail generation is allowed, thumbnails will be generated automatically."
+msgstr "Ця тема дизайну посилається на ескізи, розміри яких зазначено нижче. Якщо генерація ескізів \"на льоту\" не дозволена налаштуваннями додатку,  переконайтеся у тому, що дозволені ескізи хоча б зазначених розмірів. Якщо генерація ескізів \"на льоту\" дозволена, ескізи будуть створюватися автоматично."
+
+msgid "Revert to original"
+msgstr "Повернути до оригінального стану"
+
+msgid "This will erase all customizations you’ve made to this theme’s template files using the design editor, and reset this theme to original. Are you sure?"
+msgstr "Ця дія знищить усі модифікації, які ви вносили до шаблонів цієї теми за допомогою редактора дизайну і скине тему до оригінального стану. Ви впевнені?"
+
+msgid "Drop all customizations and revert parent theme <strong>%s</strong> to the original version too"
+msgstr "Відкинути усі модифікації і також повернути батьківску тему дизайну <strong>%s</strong> до оригінального стану"
+
+msgid "Apply this theme for mobile devices only"
+msgstr "Задіяти цю тему дизайну виключно для мобільних пристроїв"
+
+msgid "Theme name"
+msgstr "Назва теми дизайну"
+
+msgid "IMPORTANT: Change Theme ID only if you are sure what you are doing. If this theme is in use by any of your websites, you will have to manually update these websites’ app settings to use this or another theme after altering the Theme ID parameter. Otherwise websites may stop working with the “Unable to load template file” error."
+msgstr "ВАЖЛИВО: Змінюйте ID теми дизайну тільки якщо ви впевнені у своїх діях. Якщо ця тема дизайну використовується будь-яким з ваших сайтів, вам знадобиться вручну оновити налаштування додатків, які використовують цю або іншу тему дизайну. В іншому випадку сайти можуть припинити роботу із помилкою \"Неможливо завантажити файл шаблону\"."
+
+msgid "Themes to clone"
+msgstr "Теми дизайну для клонування"
+
+msgid "All %s themes (recommended)"
+msgstr "Усі %s теми дизайну (рекомендовано)"
+
+msgid "Only %s theme for this app (%s)"
+msgstr "Тільки тема дизайну %s для цього додатку (%s)"
+
+msgid "%s theme (version %s) for %s app"
+msgstr "Тема дизайну %s (версія %s) для додатку %s"
+
+msgid "Change parent theme"
+msgstr "Змінити батьківску тему"
+
+msgid "Not set"
+msgstr "Не встановлено"
+
+msgid "IMPORTANT: Theme parenting allows linking HTML templates, CSS files and images from other design themes. If you are about to change parent for a design theme which already has a parent, be aware that existing file links and connections may become corrupted. A design theme can have not more than one parent theme."
+msgstr "ВАЖЛИВО: Вказання батьківської теми дозволяє зв`язувати шаблони HTML, файли CSS та зображення з інших тем дизайну. Якщо ви збираєтесь змінити батьківську тему дизайну, в якої вона вже вказана — майте на увазі, що існуючі посилання на файли та зображення можуть втратити чинність. У теми дизайну не може бути більше одної батьківскої теми."
+
+msgid "All customizations you’ve made to this file will be lost!"
+msgstr "Усі модифікації, які ви внесли до цього файлу, буде втрачено!"
+
+msgid "All selected files will be overwritten with their newest versions from the original theme. In case of incompatibility between your customizations and newer theme templates, CSS, and images, your site looks may change unexpectedly. There will be no way to automatically rollback this update. Update?"
+msgstr "Усі обрані файли буде перезаписано їх новішими версіями з оригінальної теми дизайну. У разі несумісності між вашими модифікаціями та оновленими шаблонами, CSS та зображеннями, вигляд вашого сайту може непередбачувано змінитися. Шляху автоматично відмінити ці зміни немає. Оновлювати?"
+
+msgid "%s design theme has been successfully installed. Start using this theme by clicking the button below."
+msgstr "Тему дизайну %s було оновлено. Почніть використовувати цю тему, натиснувши кнопку нижче."
+
+msgid "%s design theme is currently not in use on your websites."
+msgstr "Тема дизайну %s зараз на вашому сайті не використовується."
+
+msgid "Site"
+msgstr "Сайт"
+
+msgid "Preview"
+msgstr "Попередній перегляд"
+
+msgid "Appearance"
+msgstr "Вигляд"
+
+msgid "Pages"
+msgstr "Сторінки"
+
+msgid "Templates"
+msgstr "Шаблони"
+
+msgid "Themes"
+msgstr "Теми дизайну"
+
+msgid "Theme preview"
+msgstr "Попередній перегляд теми дизайну"
+
+msgid "Design theme “<strong id=\"wa-current-theme\"></strong>” is temporary enabled for you to see how it looks with your frontend. You can navigate through your website as you do it usually. Other users don't see that you are previewing this design theme."
+msgstr "Тему дизайну “<strong id=\"wa-current-theme\"></strong>” тимчасово включено, щоб ви могли перевірити її вигляд у фронтенді сайту. Ви можете переміщатися по сайту як зазвичай. Інші користувачі не бачать, що ви передивляєтесь цю тему дизайна."
+
+msgid "Finish preview session"
+msgstr "Завершити попередній перегляд"
+
+msgid "Unsaved changes will be lost if you leave this page now. Are you sure?"
+msgstr "Незбережені зміни буде втрачено, якщо ви зараз покинете цю сторінку. Ви впевнені?"
+
+msgid "Files with extensions %s are allowed only."
+msgstr "Дозволяются тільки файли з розширеннями %s."
+
+msgid "Theme %s for “%s” app not found."
+msgstr "Теми дизайну %s для додатку \"%s\" не знайдено."
+
+msgid "Insufficient file access permissions to save theme settings"
+msgstr "Недостатньо прав доступу до файлів, аби зберегти налаштування теми"
+
+msgid "Insufficient access permissions to save the file"
+msgstr "Недостатньо прав доступу, аби зберегти файл"
+
+msgid "Please enter a filename"
+msgstr "Будь ласка, введіть ім`я файлу"
+
+msgid "Only latin characters (a—z, A—Z), numbers (0—9) and underline character (_) are allowed."
+msgstr "Дозволені тільки символи латиниці (a—z, A—Z), цифри (0—9) та знак підкреслення (_)."
+
+msgid "File should have one of the allowed extensions:"
+msgstr "Назва файлу повинна закінчуватися одним з дозволених розширень:"
+
+msgid "<strong>%s</strong> theme preview in action"
+msgstr "Задіяно попередній перегляд теми <strong>%s</strong>"
+
+msgid "Stop preview session"
+msgstr "Завершити попередній перегляд"
+
+msgid "100"
+msgstr "сто"
+
+msgid "Today"
+msgstr "Сьогодні"
+
+msgid "Tomorrow"
+msgstr "Завтра"
+
+msgid "Error copying file from %s to %s"
+msgstr "Помилка копіювання файлу з %s до %s"
+
+msgid "Theme %s already exists"
+msgstr "Тема %s вже існує"
+
+msgid "Invalid theme id %s"
+msgstr "Помилковий ідентифікатор теми %s"
+
+msgid "Cannot create a theme copy with specified ID. A theme with this ID already exists."
+msgstr "Неможливо створити тему дизайну зі вказаним ідентифікатором. Тема з таким ідентифікатором вже існує."
+
+msgid "Error cUrl init"
+msgstr "Помилка ініціалізації сURL"
+
+msgid "Effective<br/>rights"
+msgstr "Діючі<br/>права"
+
+msgid "Granted<br/>personally"
+msgstr "Призначено<br/>персонально"
+
+msgid "Inherited<br/>from groups"
+msgstr "Успадковано<br/>від груп"
+
+msgid "Group"
+msgstr "Група"
+
+msgid "all"
+msgstr "усі"
+
+msgid "added a new template"
+msgstr "додав новий шаблон"
+
+msgid "edited template"
+msgstr "відредагував шаблон"
+
+msgid "deleted template"
+msgstr "видалив шаблон"
+
+msgid "uploaded a new theme"
+msgstr "завантажив нову тему"
+
+msgid "downloaded theme"
+msgstr "скачав тему"
+
+msgid "deleted theme"
+msgstr "видалив тему"
+
+msgid "reset theme settings"
+msgstr "скинув налаштування теми"
+
+msgid "create theme duplicate"
+msgstr "створив клон теми"
+
+msgid "renamed theme"
+msgstr "перейменував тему"
+
+msgid "added a new page"
+msgstr "додав нову сторінку"
+
+msgid "edited a website page"
+msgstr "відрегував сторінку"
+
+msgid "deleted page"
+msgstr "видалив сторінку"
+
+msgid "moved page"
+msgstr "перемістив сторінку"
+
+msgid "logged in"
+msgstr "увійшов"
+
+msgid "logged out"
+msgstr "вийшов"
+
+msgid "signed up"
+msgstr "зареєструвався"
+
+msgid "edited profile in customer portal"
+msgstr "відредагував профіль у клієнтському порталі"
+
+msgid "enabled access for contact"
+msgstr "увімкнув доступ для контакту"
+
+msgid "disabled access for contact"
+msgstr "вимкнув доступ для контакту"
+
+msgid "logout"
+msgstr "вийти"
+
+msgid "Customize dashboard"
+msgstr "Налаштувати панель управління"
+
+msgid "Done editing"
+msgstr "Закінчити редагування"
+
+msgid "Popular plugins"
+msgstr "Популярні плагіни"
+
+msgid "Installed"
+msgstr "Встановлено"
+
+msgid "No plugins are installed."
+msgstr "Плагіни не встановлено."
+
+msgid "Loading..."
+msgstr "Завантаження..."
+
+msgid "Plugin %s is installed and working."
+msgstr "Плагін «%s» встановлений і працює."
+
+msgid "No configuration options are available for this plugin."
+msgstr "Цей плагін не надає можливості зміни налаштувань."
+
+msgid "Unknown plugin"
+msgstr "Невідомий плагін"
+
+msgid "Can't save plugin settings: unknown plugin id"
+msgstr "Неможливо зберегти налаштування плагіну: невідомий ідентифікатор плагіну"
+
+msgid "Incorrect date"
+msgstr "Вказано некоректну дату"
+
+msgid "Invalid"
+msgstr "Недійсно"
+
+msgid "No more than %d character please"
+msgid_plural "No more than %d characters please"
+msgstr[0] "Не більше ніж %d символ, будь ласка"
+msgstr[1] "Не більше ніж %d символи, будь ласка"
+msgstr[2] "Не більше ніж %d символів, будь ласка"
+
+msgid "No less than %d character please"
+msgid_plural "No less than %d characters please"
+msgstr[0] "Не менше ніж %d символ, будь ласка"
+msgstr[1] "Не менше ніж %d символи, будь ласка"
+msgstr[2] "Не менше ніж %d символів, будь ласка"
+
+msgid "Not match."
+msgstr "Не співпадає."
+
+msgid "Invalid Email"
+msgstr "Невірна email-адреса"
+
+msgid "Incorrect numerical value"
+msgstr "Некоректне числове значення"
+
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini."
+msgstr "Розмір файлу перевищує дозволений директивою upload_max_filesize у php.ini."
+
+msgid "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form."
+msgstr "Розмір файлу перевищує дозволений директивою MAX_FILE_SIZE, яка зазначена у формі HTML."
+
+msgid "The uploaded file was only partially uploaded."
+msgstr "Файл було завантажено тільки частково."
+
+msgid "No file was uploaded."
+msgstr "Файл не завантажено."
+
+msgid "Missing a temporary folder."
+msgstr "Тимчасову папку не знайдено."
+
+msgid "Failed to write file to disk."
+msgstr "Не вдалося записати файл на диск."
+
+msgid "A PHP extension stopped the file upload."
+msgstr "Розширення PHP зупинило завантаження файлу."
+
+msgid "Unknown upload error"
+msgstr "Невідома помилка завантаження"
+
+msgid "ImageMagick is not installed."
+msgstr "ImageMagick не встановлено."
+
+msgid "Not %s image adapter"
+msgstr "Адаптер зображень не %s"
+
+msgid "No image adapters found. Install ImageMagick or GD extension to enable image-processing functionality."
+msgstr "Не виявлено адаптерів зображень. Встановіть розширення ImageMagick або GD, аби включити можливості оброблення зображень."
+
+msgid "File must be writable:"
+msgstr "Файл має бути відкрито для запису:"
+
+msgid "Can't read font file $font_file"
+msgstr "Неможливо прочитати файл шрифту $font_file"
+
+msgid "GD does not support %s images"
+msgstr "GD не підтримує зображення %s"
+
+msgid "GD is not installed"
+msgstr "GD не встановлено"
+
+msgid "Need GD version of the above 2.0.1"
+msgstr "Потрібен GD версії не нижче 2.0.1"
+
+msgid "Unpublished"
+msgstr "Не опубліковано"
+
+msgid "draft"
+msgstr "чернетка"
+
+msgid "These pages are not connected to any of the site’s structure rules and are therefore not displayed on your site. To publish these pages now, select a site structure rule for them:"
+msgstr "Ці сторінки не під`єднано до жодного з правил у структурі, тому вони не відображатимуться на вашому сайті. Аби опубліковати ці сторінки, оберіть правило у структурі сайту:"
+
+msgid "Unpublished pages"
+msgstr "Неопубліковані сторінки"
+
+msgid "New page"
+msgstr "Нова сторінка"
+
+msgid "Blocks"
+msgstr "Блоки"
+
+msgid "Page settings"
+msgstr "Налаштування сторінки"
+
+msgid "This page is unsettled (unpublished), i.e. not connected to any of your site’s routing rules. Drag this page out of the Unpublished section in the left sidebar to connect it to any of your existing site’s routes."
+msgstr "Ця сторінка не є опублікованою, тобто не під`єднаною до будь якого з правил у структурі сайту. Перенесіть цю сторінку із секції \"Неопубліковано\" до панелі зліва, аби підключити її до любого з існуючих правил у структурі сайту."
+
+msgid "Page name"
+msgstr "Назва сторінки"
+
+msgid "Draft"
+msgstr "Чернетка"
+
+msgid "Published"
+msgstr "Опубліковано"
+
+msgid "Page URL"
+msgstr "URL сторінки"
+
+msgid "more"
+msgstr "ще"
+
+msgid "<strong class=\"title\">Title</strong>"
+msgstr "<strong class=\"title\">Назва</strong>"
+
+msgid "Social sharing"
+msgstr "Розміщення у соціальних мережах"
+
+msgid "Use these meta tags for social sharing too"
+msgstr "Використати ці мета-теги для розміщення у соціальних мережах"
+
+msgid "Social sharing title"
+msgstr "Назва для розміщення у соціальних мережах"
+
+msgid "Social sharing image URL"
+msgstr "URL зображення для розміщення у соціальних мережах"
+
+msgid "If not set, a social network will attempt to determine preview image on it’s own."
+msgstr "Якщо не встановлено, соціальна мережа намагатиметься визначити зображення для прев`ю самостійно."
+
+msgid "Social sharing video URL"
+msgstr "URL відео для розміщення у соціальних мережах"
+
+msgid "Social sharing description"
+msgstr "Опис для розміщення у соціальних мережах"
+
+msgid "Social sharing type"
+msgstr "Тип розміщення у соціальній мережі"
+
+msgid "Please refer to <a href=\"http://ogp.me\" target=\"_blank\">Open Graph</a> protocol site for more information on social sharing meta tags and available values."
+msgstr "Зверніться, будь ласка до сайту протоколу <a href=\"http://ogp.me\" target=\"_blank\">Open Graph</a>, аби отримати більше інформації про мета-теги для розміщення в соціальних мережах та їх доступні значення."
+
+msgid "Page custom parameters"
+msgstr "Додаткові параметри сторінки"
+
+msgid "Optional set of custom <em>key=value</em> parameters which can be used within page.html template or this page content as <em>&#123;$page.key&#125;</em>. Each key=value pair should be on a separate line."
+msgstr "Додатковий набір параметрів <em>key=value</em>, який можна використовуваит у шаблоні page.html або у вмісті цій сторінки як <em>&#123;$page.key&#125;</em>. Кожна пара key=value має бути розміщена на окремому рядку."
+
+msgid "http://www.webasyst.com/framework/docs/site/pages/"
+msgstr "https://developers.webasyst.ru/templates/pages/"
+
+msgid "Help"
+msgstr "Допомога"
+
+msgid "WYSIWYG"
+msgstr "Візуальний редактор"
+
+msgid "Upload image"
+msgstr "Завантажити зображення"
+
+msgid "<b>WYSIWYG editor may change your HTML code.</b><br><br>It is necessary for correct text formatting. Smarty code may be broken and outdated HTML tags may be replaced with modern ones.<br><br>Are you sure to switch to WYSIWYG editor?"
+msgstr "<b>Візуальний редактор може змінити ваш код HTML.</b><br><br>Це необхідно для коректного форматування тексту. Код Smarty може бути пошкоджено, а застарілі теги HTML — замінено сучастними.<br><br>Ви впевнені, що бажаєте переключитися на візуальний редактор?"
+
+msgid "Switch"
+msgstr "Переключити"
+
+msgid "This will delete entire page. Are you sure?"
+msgstr "Цілу сторінку буде видалено. Ви впевнені?"
+
+msgid "WYSIWYG editor is disabled because page source contains Smarty code tags."
+msgstr "Візуальний редактор відключено тому, що вихідний код містить теги Smarty."
+
+msgid "META Keywords"
+msgstr "META Ключові слова"
+
+msgid "META Description"
+msgstr "META Опис"
+
+msgid "no-title"
+msgstr "no-title"
+
+msgid "Error saving web page"
+msgstr "Помилка при збереженні веб-сторінки"
+
+msgid "URL of this Webasyst installation (relative)"
+msgstr "URL установки Webasyst (відносний)"
+
+msgid "URL of the current app settlement (relative)"
+msgstr "URL поточного поселення додатку (відносний)"
+
+msgid "URL to access Webasyst backend (relative)"
+msgstr "URL доступу до бекенду Webasyst (відносний)"
+
+msgid "URL of the current app design theme folder (relative)"
+msgstr "URL папки з файлами поточної теми оформлення (відносний)"
+
+msgid "Title"
+msgstr "Назва"
+
+msgid "Assigns a new title"
+msgstr "Встановлює новий заголовок"
+
+msgid "Returns name of this Webasyst installation (name is specified in “Installer” app settings)"
+msgstr "Повертає назву даної установки Webasyst, вказану в налаштуваннях програми «Інсталлер»"
+
+msgid "Returns this site’s core navigation menu which is either set automatically or manually in the “Site settings” screen"
+msgstr "Повертає основне меню навігації цього сайту, сформоване автоматично або вказане вручну в налаштуваннях сайту"
+
+msgid "Returns current page URL (either absolute or relative)"
+msgstr "Повертає URL поточної сторінки (абсолютний або відносний)"
+
+msgid "Returns this domain’s root URL (absolute)"
+msgstr "Повертає кореневий URL цього домену (абсолютний)"
+
+msgid "Returns value of the global var by <em>key</em>. Global var array is initially empty, and can be used arbitrarily."
+msgstr "Повертає значення глобальної змінної по ключу <em>key</em>. Масив глобальних змінних спочатку порожній і може використовуватися довільним чином."
+
+msgid "Assigns global var a new value"
+msgstr "Присвоює нове значення глобальній змінній"
+
+msgid "Returns GET parameter value (same as PHP $_GET[\"<em>key</em>\"])"
+msgstr "Повертає значення GET-параметра (аналогічно $_GET[\"<em>key</em>\"] у PHP)"
+
+msgid "Based on current session data returns <em>true</em> or <em>false</em> if user is using a multi-touch mobile device; if no session var reflecting current website version (mobile or desktop) is available, User Agent information is used"
+msgstr "Повертає <em>true</em> або <em>false</em> в залежності від того, чи використовує користувач в даний момент мобільний multi-touch пристрій (iPhone, Android та ін.) чи ні; якщо змінна сесії, яка містить тип версії сайту (мобільний або стандартний), відсутня, то використовується інформація із заголовків User Agent"
+
+msgid "Returns user locale, e.g. \"en_US\", \"ru_RU\". In case user is authorized, locale is retrieved from “Contacts” app user record, or detected automatically otherwise"
+msgstr "Повертає мовну локаль користувача, наприклад, en_US, ru_RU. Якщо користувач авторизований, інформація про локалі витягується з програми «Контакти»; в іншому випадку визначається автоматично"
+
+msgid "Returns POST parameter value (same as PHP $_POST[\"<em>key</em>\"])"
+msgstr "Повертає значення POST-параметра (аналогічно $_POST[\"<em>key</em>\"] у PHP)"
+
+msgid "Returns SERVER parameter value (same as PHP $_SERVER[\"KEY\"])"
+msgstr "Повертає значення параметра масиву SERVER (аналогічно $_SERVER[\"<em>key</em>\"] у PHP)"
+
+msgid "Returns SESSION var value (same as PHP $_SESSION[\"<em>key</em>\"])"
+msgstr "Повертає значення змінної сесії SESSION (аналогічно $_SESSION[\"<em>key</em>\"] у PHP)"
+
+msgid "Embeds HTML snippet by ID"
+msgstr "Відображає вміст сніпету HTML за його ідентифікатором"
+
+msgid "Returns authorized user data from associated record in “Contacts” app. \"<em>field</em>\" (string) is optional and indicates the field id to be returned. If not  Returns <em>false</em> if user is not authorized"
+msgstr "Повертає масив з даними авторизованого користувача з відповідного запису у додатку «Контакти». Якщо вказаний необов`язковий параметр \"<em>field</em>\" (string), то повертається вміст конкретного поля запису про контакт. Якщо користувач не авторизований, функція повертає <em>false</em>"
+
+msgid "Returns User Agent info by specified “<em>key</em>” parameter:"
+msgstr "Повертає інформацію User Agent за вказаним параметром <em>key</em>:"
+
+msgid "— <em>\"platform\"</em>: current visitor device platform name, e.g. <em>windows, mac, linux, ios, android, blackberry</em>;"
+msgstr "— <em>platform</em>: назва системної платформи пристрою користувача, наприклад, <em>windows, mac, linux, ios, android, blackberry</em>;"
+
+msgid "— <em>\"isMobile\"</em>: returns <em>true</em> or <em>false</em> if user is using a multi-touch mobile device (iOS, Android and similar), based solely on User Agent string;"
+msgstr "— <em>\"isMobile\"</em>: ґрунтуючись на вмісті заголовків User Agent, повертає <em>true</em> или <em>false</em> в залежності від того, чи використовує користувач в даний момент мобільне multi-touch пристрій (iPhone, Android та ін.) чи ні;"
+
+msgid "— not specified: returns entire User Agent string;"
+msgstr "— не вказано: повертає повний рядок User Agent;"
+
+msgid "Returns path to theme folder by <em>theme_id</em> and <em>APP_ID</em>"
+msgstr "Повертає шлях до папки теми дизайну по <em>theme_id</em> та <em>APP_ID</em>"
+
+msgid "Displays a simple variable (non array/object)"
+msgstr "Відображає просту змінну (не підходить для масивів та об`єктів)"
+
+msgid "Displays the 5th element of a zero-indexed array"
+msgstr "Відображає 5-й елемент масиву, вважаючи з нульового індексу"
+
+msgid "Displays the \"<em>bar</em>\" key value of an array. Similar to PHP $foo[\"bar\"]"
+msgstr "Відображає значення ключа масиву «<em>bar</em>» аналогічно $foo[\"bar\"] в PHP."
+
+msgid "Displays variable key value of an array. Similar to PHP $foo[$bar]"
+msgstr "Відображає значення елементу масиву з перемінним ключем. Аналогічно використанню $foo[$bar] у PHP"
+
+msgid "Displays the object property named <em>bar</em>"
+msgstr "Відображає властивість об`єкта з назвою <em>bar</em>"
+
+msgid "Displays the return value of object method named <em>bar()</em>"
+msgstr "Відображає значення, що повертається методом об`єкта з ім`ям <em>bar()</em>"
+
+msgid "Displays structured information about variable. Arrays and objects are explored recursively with values indented to show structure. Similar to PHP var_dump($foo)"
+msgstr "Відображає докладну інформацію про структуру змінної, масиву або об`єкта. Працює аналогічно функції PHP var_dump($foo)"
+
+msgid "Escapes a variable for safe display in HTML"
+msgstr "Екранує змінну для безпечного відображення в HTML-коді"
+
+msgid "Outputs <em>$var</em> datetime in a user-friendly form. Supported <em>$format</em> values: <em>monthdate, date, dtime, datetime, fulldatetime, time, fulltime, humandate, humandatetime</em>"
+msgstr "Відображає час <em>$var</em> у зручному для читання вигляді. Доступні значення <em>$format</em>: <em>monthdate, date, dtime, datetime, fulldatetime, time, fulltime, humandate, humandatetime</em>"
+
+msgid "Outputs the sum of <em>$x</em> and <em>$y</em>"
+msgstr "Відображає суму <em>$x</em> і <em>$y</em>"
+
+msgid "Assigns variable a value"
+msgstr "Присвоює значення змінної"
+
+msgid "Direct PHP function access. E.g. <em>{time()}</em> displays the current timestamp"
+msgstr "Прямий доступ до функцій PHP. Наприклад, <em>{time()}</em> відображає поточну мітку часу UNIX"
+
+msgid "Content between {literal} tags will not be parsed by Smarty"
+msgstr "Текст між тегами {literal} не обробляється Smarty"
+
+msgid "Embeds a Smarty template into the current content. <em>file</em> attribute specifies a template filename within the current design theme folder"
+msgstr "Впроваджує шаблон Smarty в поточний зміст. Атрибут <em>file</em> вказує на ім`я файлу шаблона у папці поточної теми дизайну"
+
+msgid "Similar to PHP if statements"
+msgstr "Аналогічно конструкції if в PHP"
+
+msgid "{foreach} is for looping over arrays of data"
+msgstr "{foreach} використовується для перебору елементів в масивах даних"
+
+msgid "%s is now online"
+msgstr "%s зараз онлайн"
+
+msgid "%s's birthday — %s"
+msgstr "День нарождення %s — %s"
+
+msgid "<a href=\"https://developers.google.com/maps/documentation/javascript/get-api-key\">Obtain a Google Maps API key</a> to display a map within the Webasyst backend. Without a key, only a link to the map will be displayed."
+msgstr "<a href=\"https://developers.google.com/maps/documentation/javascript/get-api-key\">Отримайте ключ API Карт Google</a>, аби виводити карти у бекенді Вебасисту. Без ключа буде відображатись тільки посилання на карту."
+
+msgid "Copy"
+msgstr "Копія"
+
+msgid "login failed"
+msgstr "авторизація не вдалася"
+
+msgid "Plugins"
+msgstr "Плагіни"
+
+msgid "<strong>id</strong>: block ID.<br><strong>$params</strong>: associative array of additional parameters passed to a block (example: <code>['myparam' => 100]</code>). A parameter is available by its name as a Smarty variable within a block (example: <code>$myparam</code>)."
+msgstr "<strong>id</strong>: ідентифікатор блока.<br><strong>$params</strong>: асоціативний масив додаткових параметрів передається у блок (приклад: <code>[&#39;myparam&#39; => 100]</code>). Параметр доступний за своїм ім`ям як змінна Smarty усередині блоку (приклад: <code>$myparam</code>)."
+
+msgid "Unknown page domain"
+msgstr "Невідомий домен сторінки"
+
+msgid "Unknown page route"
+msgstr "Невідоме поселення сторінки"
+
+msgid "Page URL is in conflict with the website structure."
+msgstr "Адреса сторінки конфліктує із структурою веб-сайту."
+
+msgid "Incorrect phone number value"
+msgstr "Некоректне значення номеру телефону"
+
+msgid "Incorrect time"
+msgstr "Некоректні дата/час"
+
+msgid "System template"
+msgstr "Системний шаблон"
+
+msgid "New channel %s"
+msgstr "Новий канал %s"
+
+msgid "SMS"
+msgstr "SMS"
+
+msgid "Name of site that has sent a message"
+msgstr "Назва сайту, який направив повідомлення"
+
+msgid "Address of site that has sent a message"
+msgstr "Адреса сайту, який направив повідомлення"
+
+msgid "Signup confirmation link URL"
+msgstr "URL посилання для підтвердження реєстрації"
+
+msgid "Login page URL"
+msgstr "URL сторінки логіну"
+
+msgid "One-time password"
+msgstr "Одноразовий пароль"
+
+msgid "Password recovery page URL"
+msgstr "URL сторінки відновлення пароля"
+
+msgid "User email address"
+msgstr "Email-адреса користувача"
+
+msgid "Generated password"
+msgstr "Згенерований пароль"
+
+msgid "Successful signup"
+msgstr "Успішна реєстрація"
+
+msgid "Signup confirmation"
+msgstr "Підтвердження реєстрації"
+
+msgid "Please contact app developer."
+msgstr "Зв`яжіться із розробником, будь ласка."
+
+msgid "Please contact server administrator."
+msgstr "Зв`яжіться із адміністратором сервера."
+
+msgid "Link to map"
+msgstr "Посилання на карту"
+
+msgid "https://developers.webasyst.com/templates/pages/"
+msgstr "https://developers.webasyst.ru/docs/templates/pages/"
+
+msgid "Contact is not registered."
+msgstr "Контакт не зареєстровано."
+
+msgid "Contact can't be authorized"
+msgstr "Контакт не може бути авторизовано"
+
+msgid "Please confirm your phone number to sign in."
+msgstr "Аби увійти, потрібно підтвердити номер телефону."
+
+msgid "Invalid login name or password."
+msgstr "Невірний логін або пароль."
+
+msgid "Auth exception"
+msgstr "Виключення авторизації"
+
+msgid "Phone number confirmation error."
+msgstr "Помилка підтвердження номеру."
+
+msgid "Confirm email exception"
+msgstr "Виключення підтвердження email"
+
+msgid "Theme %s not found"
+msgstr "Тему %s не знайдено"
+
+msgid "These images were not found in archive:"
+msgstr "Ці зображення в архіві не знайдено:"
+
+msgid "Missing theme files: %s."
+msgstr "Відсутні файли теми: %s."
+
+msgid "Invalid theme slug"
+msgstr "Помилковий ідентифікатор теми"
+
+msgid "Brush custom theme not available"
+msgstr "Тема дизайну Brush custom недоступна"
+
+msgid "Theme “%s” is for %s app, which is not installed in your Webasyst. Install the app and upload the theme once again."
+msgstr "Тема дизайну “%s” призначена для додатку %s, який не встановлено у вашому Webasyst. Встановіть додаток та завантажте тему повторно."
+
+msgid "http://www.webasyst.com/framework/docs/site/themes/#%s"
+msgstr "http://www.webasyst.com/framework/docs/site/themes/#%s"
+
+msgid "Invalid theme archive structure (%s). <a href=\"%s\" target=\"_blank\">See help</a> for details."
+msgstr "Невірна структура теми (%s). <a href=\"%s\" target=\"_blank\">Дивіться довідку</a> аби дізнатись більше."
+
+msgid "Failed to extract files from theme archive (%s). <a href=\"%s\" target=\"_blank\">See help</a> for details."
+msgstr "Не вдалося витягти файли з архіву теми дизайну (%s). <a href=\"%s\" target=\"_blank\">Дивіться довідку</a> аби дізнатися більше."
+
+msgid "Empty archive."
+msgstr "Пустий архів."
+
+msgid "No valid settings.json file in archive."
+msgstr "В архіві немає коректного файлу settings.json."
+
+msgid "These settings are not for selected app’s design theme."
+msgstr "Ці налаштування не підходять до теми дизайну для обраного додатку."
+
+msgid "No settings found in archive."
+msgstr "В архіві не знайдено налаштувань."
+
+msgid "Expand"
+msgstr "Розкрити"
+
+msgid "Show all group’s settings"
+msgstr "Показати усі налаштування групи"
+
+msgid "Design theme user manual"
+msgstr "Посібник користувача теми дизайну"
+
+msgid "User support"
+msgstr "Підтримка користувачів"
+
+msgid "Update not available"
+msgstr "Оновлення недоступне"
+
+msgid "Export theme settings"
+msgstr "Експорт налаштувань теми дизайну"
+
+msgid "Import theme settings"
+msgstr "Імпорт налаштувань теми дизайну"
+
+msgid "not selected"
+msgstr "не обрано"
+
+msgid "Change theme"
+msgstr "Змінити тему дизайну"
+
+msgid "Select"
+msgstr "Обрати"
+
+msgid "You can change the theme in settlement settings."
+msgstr "Ви можете змінити тему дизайну у налаштуваннях поселення."
+
+msgid "Find setting"
+msgstr "Знайти поселення"
+
+msgid "Show hidden settings"
+msgstr "Показати приховані налаштування"
+
+msgid "Images thumbnails"
+msgstr "Ескізи зображень"
+
+msgid "Minimum 3 characters"
+msgstr "Мінімум 3 символи"
+
+msgid "Search results:"
+msgstr "Результати пошуку:"
+
+msgid "No settings found"
+msgstr "Налаштувань не знайдено"
+
+msgid "Expand all"
+msgstr "Розкрити все"
+
+msgid "Collapse all"
+msgstr "Згорнути усе"
+
+msgid "Collapse"
+msgstr "Згорнути"
+
+msgid "Scroll up"
+msgstr "Наверх"
+
+msgid "Current design settings will be lost during import. Export current settings before import to restore them later, if necessary."
+msgstr "Поточні налаштування теми дизайну буде втрачено. Експортуйте поточні налаштування перед імпортом, аби пізніше відновити їх, при необхідності."
+
+msgid "Select archive"
+msgstr "Оберіть архів"
+
+msgid "Select a TAR.GZ archive file"
+msgstr "Оберіть файл архіву TAR.GZ"
+
+msgid "Import"
+msgstr "Імпорт"
+
+msgid "General settings"
+msgstr "Загальні налаштування"
+
+msgid "Invalid archive"
+msgstr "Некоректний архів"
+
+msgid "Enter characters from an image"
+msgstr "Введіть символи, показані на зображенні"
+
+msgid "Refresh code"
+msgstr "Оновити код"
+
+msgid "Via social media"
+msgstr "Через соціальні мережі"
+
+msgid "Confirmation code"
+msgstr "Код підтвердження"
+
+msgid "Re-send"
+msgstr "Надіслати знову"
+
+msgid "Confirm signup"
+msgstr "Підтвердіть реєстрацію"
+
+msgid "Done"
+msgstr "Готово"
+
+msgid "Already registered?"
+msgstr "Вже зареєстровані?"
+
+msgid "Signup completed"
+msgstr "Реєстрацію завершено"
+
+msgid "You have successfully signed up."
+msgstr "Ви успішно зареєструвались."
+
+msgid "Open website →"
+msgstr "Відкрити вебсайт →"
+
+msgid "Spam protection"
+msgstr "Захист від спаму"
+
+msgid "Field is required"
+msgstr "Це поле є обов`язковим"
+
+msgid "Enter a confirmation code to complete signup"
+msgstr "Введіть код підтвердження, аби закінчити реєстрацію"
+
+msgid "Captcha is required"
+msgstr "CAPTCHA є обов`язковою"
+
+msgid "Edit"
+msgstr "Редагувати"
+
+msgid "At least one of these fields is required"
+msgstr "Має бути заповнено хоча б одне поле"
+
+msgid "You have successfully signed up. Please check new mail at <strong>%s</strong>, we have sent you a message with your password."
+msgstr "Ви успішно зареєструвалися. Перевірте, будь ласка, нові листи у  <strong>%s</strong>: ми направили вам повідомлення із вашим паролем."
+
+msgid "You have successfully signed up. An SMS message with your password has been sent to phone number <strong>%s</strong>."
+msgstr "Ви успішно зареєструвалися. SMS-повідомлення із вашим паролем направлене на номер <strong>%s</strong>."
+
+msgid "Signup failed."
+msgstr "Реєстрація не вдалася."
+
+msgid "Please check new mail at <strong>%s</strong>, we have sent a message for you to confirm signup."
+msgstr "Перевірте, будь ласка, пошту у <strong>%s</strong>, ми надіслали вам повідомлення, аби завершити реєстрацію."
+
+msgid "An SMS message has been sent to phone number <strong>%s</strong> for you to confirm signup."
+msgstr "Для завершення реєстрації SMS-повідомлення із вашим паролем направлене на номер <strong>%s</strong>."
+
+msgid "Signup has failed, password was not sent."
+msgstr "Реєстрація не вдалася, пароль не надіслано."
+
+msgid "User with the same “%s” field value is already registered."
+msgstr "Користувача із тим же значенням поля «%s» вже зареєстровано."
+
+msgid "Incorrect or expired one-time password. Try again or request a new one-time password."
+msgstr "Невірний або застарілий одноразовий пароль. Спробуйте знову або запросіть новий одноразовий пароль."
+
+msgid "Incorrect or expired confirmation code. Try again or request a new code."
+msgstr "Невірний або застарілий код підтвердження. Спробуйте знову або запросіть новий код."
+
+msgid "Unknown field"
+msgstr "Невідоме поле"
+
+msgid "Phone"
+msgstr "Телефон"
+
+msgid "Text (input)"
+msgstr "Текст (input)"
+
+msgid "Address"
+msgstr "Адреса"
+
+msgid "Selectable (radio)"
+msgstr "Список (radio)"
+
+msgid "Text (textarea)"
+msgstr "Текст (textarea)"
+
+msgid "Composite field group"
+msgstr "Група полів"
+
+msgid "Checkbox"
+msgstr "Прапорець"
+
+msgid "Number"
+msgstr "Число"
+
+msgid "Region"
+msgstr "Регіон"
+
+msgid "Country"
+msgstr "Країна"
+
+msgid "Hidden field"
+msgstr "Приховане поле"
+
+msgid "Full name"
+msgstr "Повне ім`я"
+
+msgid "DD"
+msgstr "ДД"
+
+msgid "D"
+msgstr "Д"
+
+msgid "Month"
+msgstr "Місяць"
+
+msgid "Mth"
+msgstr "Мсц"
+
+msgid "M"
+msgstr "М"
+
+msgid "MM"
+msgstr "ММ"
+
+msgid "YYYY"
+msgstr "РРРР"
+
+msgid "YY"
+msgstr "РР"
+
+msgid "Only you can see this dashboard."
+msgstr "Тільки ви можете бачити цю панель."
+
+msgid "To change drop another photo or upload file (JPG, GIF, or PNG):"
+msgstr "Для заміни перетягніть інше фото або завантажте файл (JPG, GIF або PNG):"
+
+msgid "Countries & regions"
+msgstr "Країни і регіони"
+
+msgid "Select a country"
+msgstr "Виберіть країну"
+
+msgid "Clone on top of the list"
+msgstr "Дублювати на початку списку"
+
+msgid "Regions"
+msgstr "Регіони"
+
+msgid "Region name"
+msgstr "Назва регіону"
+
+msgid "Region code"
+msgstr "Код регіону"
+
+msgid "No regions (states, provinces) are defined for this country."
+msgstr "Для цієї країни не визначено жодного регіону (штату, провінції)."
+
+msgid "Add region"
+msgstr "Додати регіон"
+
+msgid "Click “Save” button below to commit the delete."
+msgstr "Натисніть на кнопку «Зберегти» нижче, аби підтвердити видалення."
+
+msgid "Regions are not saved. Are you sure you want to leave current page?"
+msgstr "Регіони не збережено. Залишити цю сторінку без збереження?"
+
+msgid "New template group"
+msgstr "Нова група шаблонів"
+
+msgid "Creating new templates"
+msgstr "Створення нових шаблонів"
+
+msgid "Template group name"
+msgstr "Назва групи шаблонів"
+
+msgid "Sender"
+msgstr "Відправник"
+
+msgid "Senders are edited in “<a class=\"js-disable-router\" href=\"%s\">SMS&nbsp;providers</a>” section."
+msgstr "Відправників можна визначити у секції «<a class=\"js-disable-router\" href=\"%s\">SMS-провайдери</a>»."
+
+msgid "Edit channel"
+msgstr "Редагувати канал"
+
+msgid "Senders are edited in “<a class=\"js-disable-router\" href=\"%s\">Email&nbsp;settings</a>” section."
+msgstr "Відправників можна визначити у секції «<a class=\"js-disable-router\" href=\"%s\">Налаштування email</a>»."
+
+msgid "Duplicate"
+msgstr "Дублікат"
+
+msgid "Delete template group?"
+msgstr "Видалити групу шаблонів?"
+
+msgid "SMS providers"
+msgstr "SMS-провайдери"
+
+msgid "Sender IDs"
+msgstr "ID відправників"
+
+msgid "Enter sender IDs to use with this SMS gateway. A sender ID is either your phone number or up-to-11-characters text label. Enter * to use the default sender ID issued for your account by the gateway."
+msgstr "Введіть ідентифікатори відправників для цього SMS-шлюзу (ID відправника являє собою або номер телефону, або рядок довжиною до 11 символів). Введіть зірочку *, щоб використовувати ID, призначений SMS-шлюзом."
+
+msgid "To enable SMS message sending, install and configure an integration plugin for your preferred SMS gateway.<br> <a href=\"%s\">Browse for SMS gateway plugins</a> in Installer app."
+msgstr "Аби увімкнути відправку SMS, встановіть та налаштуйте плагін інтеграції із обраним шлюзом.<br> <a href=\"%s\">Переглянути плагіни SMS-шлюзів</a> у «Інсталері»."
+
+msgid "password"
+msgstr "пароль"
+
+msgid "Email settings"
+msgstr "Параметри email"
+
+msgid "Remove"
+msgstr "Видалити"
+
+msgid "Email or domain"
+msgstr "Email або доменне ім`я"
+
+msgid "Default"
+msgstr "За замовчуванням"
+
+msgid "Enter an <strong>email address</strong> to set up a transport <em>for one sender email</em>.<br>Enter a <strong>domain name</strong> to set up a transport <em>for all sender emails on that domain</em>."
+msgstr "Вкажіть <strong>email-адресу</strong>, аби налаштувати транспорт для <em>одного email відправника</em>. Вкажіть <strong>доменне ім`я</strong>, аби налаштувати транспорт для <em>усіх email відправника на цьому домені</em>."
+
+msgid "Transport"
+msgstr "Транспорт"
+
+msgid "Options"
+msgstr "Параметри"
+
+msgid "Port"
+msgstr "Порт"
+
+msgid "Encryption"
+msgstr "Шифрування"
+
+msgid "None"
+msgstr "Немає"
+
+msgid "SSL/TLS"
+msgstr "SSL/TLS"
+
+msgid "STARTTLS"
+msgstr "STARTTLS"
+
+msgid "POP3 host name"
+msgstr "Хост POP3"
+
+msgid "POP3 port"
+msgstr "Порт POP3"
+
+msgid "Command"
+msgstr "Команда"
+
+msgid "Add a DKIM signature to outgoing email messages to confirm your ownership of the sender’s email address."
+msgstr "Додайте підпис DKIM для вихідних email-повідомлень, аби підтвердити належність email-адреси вам."
+
+msgid "Enter an email address in “Sender” field to use DKIM."
+msgstr "Для використання DKIM вкажіть адресу відправника."
+
+msgid "You need to install openssl php extention to use DKIM"
+msgstr "Аби користуватись DKIM, вам необхідно встановити розширення PHP OpenSSL"
+
+msgid "You need PHP version 5.3 or higher to use DKIM. Your current version is:"
+msgstr "Аби користуватись DKIM, потрібна версія PHP 5.3 або вища. Ваша поточна версія:"
+
+msgid "Add a new <b>TXT record</b> with this public DKIM key to the DNS zone of domain name"
+msgstr "Додайте новий <b>TXT-запис</b> із цим публічним ключем DKIM у DNS-зону домену"
+
+msgid "Host "
+msgstr "Хост "
+
+msgid "Domain"
+msgstr "Доменне ім`я"
+
+msgid "Record type"
+msgstr "Тип запису"
+
+msgid "Value"
+msgstr "Значення"
+
+msgid "Email address for notifications"
+msgstr "Email-адреса для повідомлень"
+
+msgid "Main account administrative email where system notification will be sent."
+msgstr "Основна електронна адреса адміністратора, на яку відправлятимуться системні повідомлення."
+
+msgid "Sender email address"
+msgstr "Email-адреса відправника"
+
+msgid "Reply-To address for system email notifications sent by Webasyst."
+msgstr "Цю електронну адресу буде вказано в якості зворотної адреси в системних email-повідомленнях, що відправляються Вебасістом."
+
+msgid "Select how email messages must be sent by default from your Webasyst."
+msgstr "Оберіть, яким чином Вебасіст відправлятиме email-повідомлення за замовчуванням."
+
+msgid "If you use different sender email addresses in your apps, then you can add extra rules to send messages from those addresses. Emails from other addresses will be sent via the transport selected in “Default” section."
+msgstr "Якщо ви використовуєте різні email-адреси відправника у своїх додатках, то можете створити додаткові правила для цих адрес. Email з інших адрес будуть відправлятися транспортом, вказаним у розділі «За замовчуванням»."
+
+msgid "Add email sending rule"
+msgstr "Додати правило надсилання email"
+
+msgid "Backend authorization"
+msgstr "Авторизація у бекенді"
+
+msgid "B,KB,MB"
+msgstr "Б,КБ,МБ"
+
+msgid "File not found."
+msgstr "Файл не знайдено."
+
+msgid "Stretch to fill entire screen"
+msgstr "Розтягнути зображення на весь екран"
+
+msgid "Set up how users will log into your Webasyst backend."
+msgstr "Оберіть, яким чином користувачі входитимуть у бекенд Webasyst."
+
+msgid "Passwords type"
+msgstr "Типи паролів"
+
+msgid "Re-sending of verification code"
+msgstr "Надсилаємо код підтвердження повторно"
+
+msgid "Waiting period in seconds before sending next verification code:"
+msgstr "Період очікування в секундах перед надсиланням наступного коду верифікації:"
+
+msgid "User notifications"
+msgstr "Повідомлення користуівачів"
+
+msgid "No sender email address specified in “<a href=\"%s\">Email settings</a>” section."
+msgstr "У секції “<a href=\"%s\">Налаштування Email</a>” не визначено адресу відправника."
+
+msgid "Email notification templates"
+msgstr "Шаблони email-повідомлень"
+
+msgid "Select template"
+msgstr "Оберіть шаблон"
+
+msgid "Edit the list in “<a href=\"%s\">Email&nbsp;templates</a>” section."
+msgstr "Відредагуйте перелік у розділі «<a href=\"%s\">Email&nbsp;шаблони</a>»."
+
+msgid "SMS notification templates"
+msgstr "Шаблони SMS-повідомлень"
+
+msgid "Edit the list in “<a href=\"%s\">SMS&nbsp;templates</a>” section."
+msgstr "Відредагуйте перелік у розділі «<a href=\"%s\">SMS&nbsp;шаблони</a>»."
+
+msgid "Login form"
+msgstr "Форма логіну"
+
+msgid "Captcha"
+msgstr "CAPTCHA"
+
+msgid "A user must enter characters shown in an image"
+msgstr "Користувач має увести символи із зображення"
+
+msgid "Select Webasyst default captcha or Google reCAPTCHA"
+msgstr "Оберіть стандартну CAPTCHA від Webasyst або reCAPTCHA від Google"
+
+msgid "Auto-login"
+msgstr "Автологін"
+
+msgid "“Remember me” option"
+msgstr "«Запам`ятати мене» у формі авторизації"
+
+msgid "enabled"
+msgstr "увімкнено"
+
+msgid "disabled"
+msgstr "відключений"
+
+msgid "Login form background"
+msgstr "Фон форми авторизації"
+
+msgid "Edit field label"
+msgstr "Редагувати назву поля"
+
+msgid "Edit hint for this placeholder"
+msgstr "Редагувати підказку поля"
+
+msgid "Invisible captcha will be used"
+msgstr "Буде використано невидимий режим CAPTCHA"
+
+msgid "Delete background?"
+msgstr "Видалити тло?"
+
+msgid "Login or phone"
+msgstr "Логін або телефон"
+
+msgid "person"
+msgstr "особа"
+
+msgid "company"
+msgstr "компанія"
+
+msgid "Preview template"
+msgstr "Попередній перегляд шаблону"
+
+msgid "Check sending"
+msgstr "Перевірити відправку"
+
+msgid "Restore default text"
+msgstr "Відновити стандартний текст"
+
+msgid "Reset"
+msgstr "Скинути"
+
+msgid "Duplicate templates"
+msgstr "Дублікати шаблонів"
+
+msgid "Delete templates"
+msgstr "Видалити шаблони"
+
+msgid "Templates not found"
+msgstr "Шаблони не знайдено"
+
+msgid "No templates"
+msgstr "Немає шаблонів"
+
+msgid "Preview SMS-message \"<span class=\"js-template-name\"></span>\""
+msgstr "Попередній перегляд SMS-повідомлення «<span class=\"js-template-name\"></span>»"
+
+msgid "Checking the sending of SMS-messages"
+msgstr "Перевірка відправки SMS-повідомлень"
+
+msgid "Recipient's phone number"
+msgstr "Номер телефону одержувача"
+
+msgid "+1XXXXXXXXXX, 1XXXXXXXXXX"
+msgstr "+380XXXXXXXXXX, 80XXXXXXXXXX"
+
+msgid "Send %s SMS"
+msgstr "Надіслати %s SMS"
+
+msgid "Save your templates"
+msgstr "Зберегти ваші шаблони"
+
+msgid "To check the sending of SMS-messages, you must save the changes you made."
+msgstr "Аби перевірити відправку SMS-повідомлень, потрібно зберегти внесені зміни."
+
+msgid "Add item"
+msgstr "Додати елемент"
+
+msgid "Radio selector advanced settings"
+msgstr "Розширені налаштування поля-перемикача"
+
+msgid "Depending on the current radio selector value, other contact form fields may be set to be omitted (become hidden). Manage form fields visibility settings using checkboxes below for each radio selector value."
+msgstr "Залежно від обраного значення поля-перемикача інші поля форми для введення контактної інформації можуть бути позначені як приховані (будуть пропущені). Для кожного із значень поля-перемикача відзначте галочками ті поля форми введення контактної інформації, які повинні бути запитані у користувача."
+
+msgid "Please specify options for multiple choice field."
+msgstr "Вкажіть значення для множинного поля."
+
+msgid "Manage conditions"
+msgstr "Налаштувати умови"
+
+msgid "Click “Save” button below to commit changes."
+msgstr "Натисніть на кнопку «Зберегти», аби підтвердити зміни."
+
+msgid "This field is required."
+msgstr "Це поле є обов`язковим."
+
+msgid "Delete field"
+msgstr "Видалити поле"
+
+msgid "No data in the field"
+msgstr "У полі немає даних"
+
+msgid "Deleting this field will not cause a loss of any contact information."
+msgstr "Видалення цього поля не призведе до втрати інформації про контакти."
+
+msgid "%d contact have data in the field"
+msgid_plural "%d contacts have data in the field"
+msgstr[0] "Дані в цьому полі є у %s контакта"
+msgstr[1] "Дані в цьому полі є у %s контактів"
+msgstr[2] "Дані в цьому полі є у %s контактів"
+
+msgid "Deleting the field will cause a loss of this contact information."
+msgid_plural "Deleting the field will cause a loss of these contacts information."
+msgstr[0] "Видалення поля призведе до втрати інформації про цей контакт."
+msgstr[1] "Видалення поля призведе до втрати інформації про ці контакти."
+msgstr[2] "Видалення поля призведе до втрати інформації про ці контакти."
+
+msgid "Maps settings"
+msgstr "Налаштування карт"
+
+msgid "Select an online map service to display maps."
+msgstr "Оберіть сервіс онлайн-карт для показу карт."
+
+msgid "Map service"
+msgstr "Сервіс карт"
+
+msgid "No map services available"
+msgstr "Немає доступних сервісів карт"
+
+msgid "Captcha settings"
+msgstr "Налаштування CAPTCHA"
+
+msgid "Select a type of captcha to be used on your websites."
+msgstr "Оберіть тип CAPTCHA, який буде використовуватись на ваших сайтах."
+
+msgid "Captcha type"
+msgstr "Тип CAPTCHA"
+
+msgid "Webasyst Captcha"
+msgstr "CAPTCHA Webasyst"
+
+msgid "Google reCAPTCHA"
+msgstr "reCAPTCHA від Google"
+
+msgid "Site Key"
+msgstr "Ключ сайту"
+
+msgid "Secret"
+msgstr "Секрет"
+
+msgid "Get site key and secret for your website"
+msgstr "Отримати ключ та секрет для вашого веб-сайту"
+
+msgid "Invisible mode"
+msgstr "Невидимий режим"
+
+msgid "Edit field"
+msgstr "Редагувати поле"
+
+msgid "New field"
+msgstr "Нове поле"
+
+msgid "Field name"
+msgstr "Назва поля"
+
+msgid "Add name in another language"
+msgstr "Додати ім`я в іншій мові"
+
+msgid "Field ID"
+msgstr "ID поля"
+
+msgid "Type of field"
+msgstr "Тип поля"
+
+msgid "List items"
+msgstr "Перелік"
+
+msgid "Enter each new item on new line"
+msgstr "Введіть значення кожне з нового рядка"
+
+msgid "Applied to"
+msgstr "Застосовується до"
+
+msgid "Person"
+msgstr "Особа"
+
+msgid "Address fields"
+msgstr "Поля адреси"
+
+msgid "Add field"
+msgstr "Додати поле"
+
+msgid "Enable field"
+msgstr "Увімкнути поле"
+
+msgid "Disable field"
+msgstr "Вимкнути поле"
+
+msgid "This will remove field and all its data from all existing contacts. Are you sure?"
+msgstr "Буде видалено це поле і пов`язані з ним дані в усіх контактах. Видалити?"
+
+msgid "Contact fields"
+msgstr "Поля контакта"
+
+msgid "Main contact fields cannot be modified or disabled."
+msgstr "Головні поля контакта не можна змінювати або відключати."
+
+msgid "May be displayed on websites and in email notifications."
+msgstr "Може бути показано на веб-сайтах та у повідомленнях email."
+
+msgid "Website address"
+msgstr "Адреса сайту"
+
+msgid "May be used on websites and in email notifications."
+msgstr "Може бути показано на веб-сайтах та у повідомленнях email."
+
+msgid "Locale of software available for installation"
+msgstr "Локаль продуктів, які доступні для установки"
+
+msgid "Localization engine"
+msgstr "Двигун локалізації"
+
+msgid "Clear cache"
+msgstr "Очистити кеш"
+
+msgid "For developers"
+msgstr "Для розробників"
+
+msgid "Developer mode"
+msgstr "Режим налагодження (debug mode)"
+
+msgid "Debug mode disables caching and enables verbose error messages. Recommended for debugging and during software development."
+msgstr "Режим налагодження вимикає кешування та вмикає детальні повідомлення про помилки. Рекомендується для діагностики помилок та протягом розробки програмного забезпечення."
+
+msgid "Webasyst version"
+msgstr "Версія Вебасиста"
+
+msgid "<a class=\"%s\" href=\"javascript:void(0);\">Change sender address</a> <i class=\"icon10 settings\"></i> for entire template group"
+msgstr "<a class=\"%s\" href=\"javascript:void(0);\">Змінити відправнику</a> <i class=\"icon10 settings\"></i> для усієї групи шаблонів"
+
+msgid "Letter subject"
+msgstr "Тема листа"
+
+msgid "Text of the letter"
+msgstr "Текст листа"
+
+msgid "Checking the sending of Email message"
+msgstr "Перевірка відправки email"
+
+msgid "Recipient's email"
+msgstr "Адреса отримувача"
+
+msgid "Save your template"
+msgstr "Зберегти ваш шаблон"
+
+msgid "To check whether you send email message, you must save the changes you made."
+msgstr "Аби перевірити відправку листа, потрібно зберегти внесені вами зміни."
+
+msgid "Enter available options for %s depending on it’s parent field value."
+msgstr "Заповніть списки значень поля «%s» залежно від значення його батьківського поля."
+
+msgid "http://www.shop-script.com/help/conditional-contact-fields/"
+msgstr "http://www.webasyst.ru/help/7/conditional-contact-fields/"
+
+msgid "Get help"
+msgstr "Допомога"
+
+msgid "<strong>IF</strong> parent field"
+msgstr "<strong>IF</strong> батьківське поле"
+
+msgid "Prompt to select %s from the following list:"
+msgstr "Пропонувати вибрати %s з таких варіантів:"
+
+msgid "Add option"
+msgstr "Додати варіант"
+
+msgid "Add rule"
+msgstr "Додати правило"
+
+msgid "<strong>ELSE</strong>, in case parent field value does not match any of the listed above"
+msgstr "<strong>ELSE</strong>, якщо значення батьківського поля не збігається з жодним варіантом"
+
+msgid "Display &lt;input&gt; (custom text) field for %s"
+msgstr "Показати &lt;input&gt; для введення довільного тексту"
+
+msgid "Do not prompt for %s"
+msgstr "Не запитувати поле %s"
+
+msgid "Number (input)"
+msgstr "Число (input)"
+
+msgid "Selectable (select)"
+msgstr "Список (select)"
+
+msgid "Conditional (select/input)"
+msgstr "Залежний список (select/input)"
+
+msgid "Set default fixed value"
+msgstr "Встановити значення"
+
+msgid "Default fixed value:"
+msgstr "Фіксоване значення:"
+
+msgid "Password required"
+msgstr "Потрібен пароль"
+
+msgid "SMTP"
+msgstr "SMTP"
+
+msgid "A special server for sending email messages. You can send email via any SMTP server for which you have connection credentials: host, port, user name, and password. It may belong either to your web-hosting company or to a public mail service such as Gmail, Yahoo! Mail, Outlook.com, etc."
+msgstr "Спеціальний сервер для надсилання email-повідомлень. Ви можете надсилати email через довільний сервер SMTP, до якого у вас є дані для підключення: хост, порт, ім`я користувача та пароль. Він може належати вашому провайдеру хостинга або публічному поштовому сервісу — Gmail, Yahoo! Mail, Outlook.com та іншим."
+
+msgid "php mail() function"
+msgstr "PHP-функція mail()"
+
+msgid "Some web-hosting companies allow sending email message by means of this transport only. If it is required to specify additional parameters for the mail() function you can enter them in the provided text field. The default parameters are -f%s."
+msgstr "Деякі хостинг-провайдери дозволяють надсилати електронні повідомлення тільки цим транспортом. Якщо існує необхідність ввести додаткові параметри, їх можна вказати у текстовому полі при виборі варіанту «PHP-функція mail ()». За замовчуванням використовується параметр -f%s."
+
+msgid "Sendmail"
+msgstr "Sendmail"
+
+msgid "This is a default command for sending email in UNIX-like operating systems. You can edit it to use a different command for sending messages if you are an experienced server administrator."
+msgstr "Це стандартна команда для надсилання email у UNIX-подібних операційних системах. Ви можете відредагувати її, аби використовувати іншу команду для надсилання повідомлень, якщо ви досвідчений системний адміністратор."
+
+msgid "Extension openssl is not installed"
+msgstr "Розширення OpenSSL не встановлено"
+
+msgid "Failed to create DKIM signature"
+msgstr "Не вдалось створити підпис DKIM"
+
+msgid "File could not be saved due to the insufficient file write permissions for the \"%s\" folder."
+msgstr "Не вдалося зберегти файл через недостатні права запису до папки «%s»."
+
+msgid "Cache cleared"
+msgstr "Кеш очищено"
+
+msgid "But with errors:"
+msgstr "Але виникли помилки:"
+
+msgid "Unknown parent field"
+msgstr "Невідоме батьківське поле"
+
+msgid "Conditional field"
+msgstr "Залежне поле"
+
+msgid "Can't construct field"
+msgstr "Не вдається створити поле"
+
+msgid "Channel not exists"
+msgstr "Канал не існує"
+
+msgid "Select at least one template to send"
+msgstr "Оберіть хоча б один шаблон для відправки"
+
+msgid "Error sending message"
+msgstr "Помилка надслання повідомлення"
+
+msgid "Invalid value"
+msgstr "Невірне значення"
+
+msgid "Channel not found"
+msgstr "Канал не знайдено"
+
+msgid "(Copy of %s)"
+msgstr "(Копія %s)"
+
+msgid "Maps"
+msgstr "Карти"
+
+msgid "Email templates"
+msgstr "Шаблони email"
+
+msgid "We have found %d duplicate for this field"
+msgid_plural "We have found %d duplicates for this field"
+msgstr[0] "Ми знайшли %d дублікат цього поля"
+msgstr[1] "Ми знайшли %d дублікати цього поля"
+msgstr[2] "Ми знайшли %d дублікатів цього поля"
+
+msgid "Unknown locale: %s"
+msgstr "Невідома локаль: %s"
+
+msgid "Required field"
+msgstr "Обов`язкове поле"
+
+msgid "Only English alphanumeric, hyphen and underline symbols are allowed"
+msgstr "Можна використовувати тільки букви, цифри, знак переносу і підкреслювання"
+
+msgid "This ID is already in use"
+msgstr "ID вже використовується"
+
+msgid "Unknown field type:"
+msgstr "Невідомий тип поля:"
+
+msgid "one-line text"
+msgstr "текст в один рядок"
+
+msgid "multi-line text"
+msgstr "текст в декілька рядків"
+
+msgid "number"
+msgstr "число"
+
+msgid "radio select"
+msgstr "радіокнопка"
+
+msgid "drop-down list"
+msgstr "випадаючий список"
+
+msgid "checkbox"
+msgstr "чекбокс"
+
+msgid "date"
+msgstr "дата"
+
+msgid "Repeat new password"
+msgstr "Повторіть новий пароль"
+
+msgid "Found the password?"
+msgstr "Згадали пароль?"
+
+msgid "Recover password"
+msgstr "Відновити пароль"
+
+msgid "Confirm and change password"
+msgstr "Підтвердити та змінити пароль"
+
+msgid "Enter a confirmation code to complete the operation."
+msgstr "Введіть код підтвердження, аби виконати операцію."
+
+msgid "You can’t restore password too often. Try again in %s seconds."
+msgstr "Не можна відновлювати пароль занадто часто. Повторіть спробу через %s секунд."
+
+msgid "Code"
+msgstr "Код"
+
+msgid "For the first time with us?"
+msgstr "Вперше з нами?"
+
+msgid "Password is required"
+msgstr "Потрібен пароль"
+
+msgid "(sent by email)"
+msgstr "(надіслано по email)"
+
+msgid "(sent in SMS)"
+msgstr "(надіслано по SMS)"
+
+msgid "Enter a one-time code to log in."
+msgstr "Введіть одноразовий пароль, аби увійти."
+
+msgid "Receive code"
+msgstr "Отримати код"
+
+msgid "Receive confirmation code"
+msgstr "Отримати код підтвердження"
+
+msgid "Contact doesn't exist."
+msgstr "Контакту не існує."
+
+msgid "Done! A message with a new password has been sent to email address <strong>%s</strong>."
+msgstr "Виконано! Повідомлення з новим паролем надіслано на email-адресу <strong>%s</strong>."
+
+msgid "Done! An SMS message with a new password has been sent to phone number <strong>%s</strong>."
+msgstr "Виконано! SMS-повідомлення з новим паролем було направлено на номер телефону <strong>%s</strong>."
+
+msgid "Incorrect confirmation code. Try again or request a new code."
+msgstr "Невірний код підтвердження. Спробуйте знову або запросіть новий код."
+
+msgid "Password recovery for “%s” has been banned."
+msgstr "Відновлення паролю для %s заблоковано."
+
+msgid "No user with this login name has been found."
+msgstr "Користувача з таким логіном не знайдено."
+
+msgid "Sorry, we cannot recover password for this login name or email. Please refer to your system administrator."
+msgstr "Вибачте, але ми не можемо відновити пароль для цього логіну або email. Зверніться, будь ласка, до свого системного адміністратора."
+
+msgid "Please check new mail at <strong>%s</strong>, we have sent you a message with a password recovery link to confirm the password change. After confirmation, we will send you your password in the next message."
+msgstr "Перевірте нову пошту за адресою <strong>%s</strong>, ми щойно надіслали вам повідомлення із посиланням для відновлення паролю, аби підтвердили зміни паролю. Після підтверждення ми надішлемо вам ваш пароль наступним повідомленням."
+
+msgid "Please check new mail at <strong>%s</strong>, we have sent you a message with a password recovery link."
+msgstr "Перевірте нову пошту за адресою <strong>%s</strong>, ми щойно надіслали вам повідомлення із посиланням для відновлення паролю."
+
+msgid "Confirm your phone number"
+msgstr "Підтвердіть свій номер телефону"
+
+msgid "One-time password was not sent."
+msgstr "Одноразовий пароль не було надіслано."
+
+msgid "Contact does not exist. <a href=\"%s\">Sign up</a> first."
+msgstr "Контакту не існує. Спочатку <a href=\"%s\">зареєструйтесь</a>."
+
+msgid "One-time password has been sent."
+msgstr "Одноразовий пароль надіслано."
+
+msgid "One-time password has been sent to your email address."
+msgstr "Одноразовий пароль було надіслано на вашу адресу email."
+
+msgid "One-time password has been sent to you as an SMS."
+msgstr "Одноразовий пароль було надіслано у SMS."
+
+msgid "Password recovery for %s"
+msgstr "Відновлення паролю для %s"
+
+msgid "Passwords changed"
+msgstr "Паролі змінено"
+
+msgid "You can request password recovery in <strong>%s:%s</strong>."
+msgstr "Ви можете запросити відновлення паролю через <strong>%s:%s</strong>."
+
+msgid "You have been requesting password recovery too frequently. Try again in <strong>%s:%s</strong>."
+msgstr "Ви запрошували відновлення паролю занадто часто. Спробуйте знову через <strong>%s:%s</strong>."
+
+msgid "You can request a one-time password in <strong>%s:%s</strong>."
+msgstr "Ви можете запросити одноразовий пароль через <strong>%s:%s</strong>."
+
+msgid "You have been requesting a one-time password too frequently. Try again in <strong>%s:%s</strong>."
+msgstr "Ви запрошували одноразовий пароль занадто часто. Спробуйте знову через <strong>%s:%s</strong>."
+
+msgid "You can request a code in <strong>%s:%s</strong>."
+msgstr "Ви можете запросити код через <strong>%s:%s</strong>."
+
+msgid "You have been requesting a code too frequently. Try again in <strong>%s:%s</strong>."
+msgstr "Ви запрошували код занадто часто. Спробуйте знову через <strong>%s:%s</strong>."
+
+msgid "Never require"
+msgstr "Ніколи не запитувати"
+
+msgid "Require at once"
+msgstr "Запитати один раз"
+
+msgid "A user enters a password during signup"
+msgstr "Користувач вводить пароль під час реєстрації"
+
+msgid "A password is generated during signup and sent in a notification"
+msgstr "Пароль генерується під час реєстрації та надсилається повідомленням"
+
+msgid "A one-time password (4-digit code) is sent to a user for each login"
+msgstr "Одноразовий пароль (чотиризначний код) надсилається користувачеві під час кожного входу"
+
+msgid "Permanent user password"
+msgstr "Постійний пароль користувача"
+
+msgid "One-time password (4-digit code)"
+msgstr "Одноразовий пароль (чотиризначний код)"
+
+msgid "1"
+msgid_plural "1"
+msgstr[0] "один"
+msgstr[1] "один"
+msgstr[2] "один"
+
+msgid "2"
+msgid_plural "2"
+msgstr[0] "два"
+msgstr[1] "два"
+msgstr[2] "два"
+
+msgid "3"
+msgstr "три"
+
+msgid "4"
+msgstr "чотири"
+
+msgid "5"
+msgstr "п`ять"
+
+msgid "6"
+msgstr "шість"
+
+msgid "7"
+msgstr "сім"
+
+msgid "8"
+msgstr "вісім"
+
+msgid "9"
+msgstr "дев`ять"
+
+msgid "10"
+msgstr "десять"
+
+msgid "11"
+msgstr "одинадцять"
+
+msgid "12"
+msgstr "дванадцять"
+
+msgid "13"
+msgstr "тринадцять"
+
+msgid "14"
+msgstr "чотирнадцять"
+
+msgid "15"
+msgstr "п`ятнадцять"
+
+msgid "16"
+msgstr "шістнадцять"
+
+msgid "17"
+msgstr "сімнадцять"
+
+msgid "18"
+msgstr "вісімнадцять"
+
+msgid "19"
+msgstr "дев`ятнадцять"
+
+msgid "20"
+msgstr "двадцять"
+
+msgid "30"
+msgstr "тридцять"
+
+msgid "40"
+msgstr "сорок"
+
+msgid "50"
+msgstr "п`ятдесят"
+
+msgid "60"
+msgstr "шістдесят"
+
+msgid "70"
+msgstr "сімдесят"
+
+msgid "80"
+msgstr "вісімдесят"
+
+msgid "90"
+msgstr "дев`яносто"
+
+msgid "200"
+msgstr "двісті"
+
+msgid "300"
+msgstr "триста"
+
+msgid "400"
+msgstr "чотириста"
+
+msgid "500"
+msgstr "п`ятсот"
+
+msgid "600"
+msgstr "шістсот"
+
+msgid "700"
+msgstr "сімсот"
+
+msgid "800"
+msgstr "вісімсот"
+
+msgid "900"
+msgstr "дев`ятсот"
+
+msgid "1000"
+msgid_plural "1000"
+msgstr[0] "тисяча"
+msgstr[1] "тисячі"
+msgstr[2] "тисяч"
+
+msgid "1000000"
+msgid_plural "1000000"
+msgstr[0] "мільйон"
+msgstr[1] "мільйони"
+msgstr[2] "мільйонів"
+
+msgid "1000000000"
+msgid_plural "1000000000"
+msgstr[0] "мільярд"
+msgstr[1] "мільярди"
+msgstr[2] "мільярдів"
+
+msgid "1000000000000"
+msgid_plural "1000000000000"
+msgstr[0] "трільон"
+msgstr[1] "трільони"
+msgstr[2] "трільонів"
+
+msgid "Welcome"
+msgstr "Ласкаво просимо"
+
+msgid "Hi %s!"
+msgstr "Привіт, %s!"
+
+msgid "This is your Dashboard."
+msgstr "Це ваша панель управління."
+
+msgid "So far it is empty, but soon it will have useful content."
+msgstr "Поки що вона пуста, але скоро буде мати корисний контент."
+
+msgid "Until then use icons on the top of this page to work with available applications."
+msgstr "До того часу використовуйте іконки зверху цієї сторінки, аби працювати із доступними додатками."
+
+msgid "Thank you for using Webasyst!"
+msgstr "Дякуємо за використання Webasyst!"
+
+msgid "[close]"
+msgstr "[закрити]"
+
+msgid "You are banned!"
+msgstr "Вас заблоковано!"
+
+msgid "Application \"%s\" not exists"
+msgstr "Додатку «%s» не існує"
+
+msgid "Unknown response format"
+msgstr "Невідомий формат відповіді"
+
+msgid "Not an image or invalid image: "
+msgstr "Не зображення, або некоректне зображення: "
+
+msgid "File must be writable: "
+msgstr "Файл має бути відкрито для запису: "
+
+msgid "\"Sign up\""
+msgstr "«Реєстрація»"
+
+msgid "There are <strong><span>%d</span> unsettled page(s)</strong>, i.e. pages which are not connected to any of the site’s routing rules. These pages are not displayed on your site. To publish these pages now, select the new route for them:"
+msgstr "<strong><span>%d</span> Ці сторінки не поселено</strong>, тобто їх не під`єданано до жодного с правил структури сайту. Ці сторінки не відображаються на вашому сайті. Аби опублікувати їх зараз, оберіть для них поселення:"
+
+msgid "Select a file and click Save button below."
+msgstr "Оберіть файл та клікніть по кнопці «Зберегти» нижче."
+
+msgid "Design theme “<strong id=\"wa-current-theme\"></strong>” is temporary enabled for you to see how it looks with your frontend. You can navigate through your website as you normally do. Other users don't see that you are previewing this design theme."
+msgstr "Тему дизайну “<strong id=\"wa-current-theme\"></strong>” тимчасово увімкнено, аби ви могли перевірити її вигляд у фронтенді сайту. Ви можете переміщатися по сайту як зазвичай. Інші користувачі не бачать, що ви передивляєтесь цю тему дизайну."
+
+msgid "Design themes for %s"
+msgstr "Теми дизайну для додатку %s"
+
+msgid "Theme list is downloaded from webasyst.com website."
+msgstr "Перелік тем завантажується з сайту webasyst.com і встановлюються одним кліком."
+
+msgid "not in use"
+msgstr "не використовується"
+
+msgid "Theme settings"
+msgstr "Налаштування теми дизайну"
+
+msgid "About"
+msgstr "Про продукт"
+
+msgid "Design themes"
+msgstr "Теми дизайну"
+
+msgid "not modified"
+msgstr "не змінено"
+
+msgid "This design theme is in use on"
+msgstr "Ця тема дизайну використовується на"
+
+msgid "This design theme is not in use. Apply this theme in your website <span class=\"js-theme-routing-url\">Routing settings</span>."
+msgstr "Ця тема дизайну не використовується. Увімкніть цю тему у <span class=\"js-theme-routing-url\">налаштуваннях структури</span> вашого сайту."
+
+msgid "Download"
+msgstr "Завантажити"
+
+msgid "Rename"
+msgstr "Перейменувати"
+
+msgid "Subscribe"
+msgstr "Підписатися"
+
+msgid "Shopping cart"
+msgstr "Кошик"
+
+msgid "Powered by Webasyst"
+msgstr "Працює на основі Webasyst"
+
+msgid "This theme is in use on"
+msgstr "Ця тема дизайну використовується на"
+
+msgid "This theme is currently not in use. Connect this theme in your site <a href=\"%s\">Routing settings</a>."
+msgstr "Ця тема дизайну не використовується. Підключіть цю тему у <span class=\"js-theme-routing-url\">налаштуваннях структури</span>  вашого сайту."
+
+msgid "Display settings"
+msgstr "Налаштування відображення"
+
+msgid "Manage theme"
+msgstr "Керування темою дизайну"
+
+msgid "Download theme"
+msgstr "Завантаження теми дизайну"
+
+msgid "Click on a design theme to download and install it from the Webasyst Store"
+msgstr "Клікніть на темі дизайну, аби завантажити її та встановити із магазину Webasyst"
+
+msgid "Revert"
+msgstr "Відмінити"
+
+msgid "All listed routes are linking %s design theme right now."
+msgstr "Всі зазначені поселення зараз зв`язані з темою дизайну %s."
+
+msgid "<strong>%s</strong> theme preview in action."
+msgstr "Задіяно попередній перегляд теми <strong>%s</strong>."
+
+msgid "Dashboard"
+msgstr "Панель управління"
+
+msgid "Everything"
+msgstr "Усе"
+
+msgid "System"
+msgstr "Система"
+
+msgid "(Copy %s)"
+msgstr "(Копія %s)"
+
+msgid "SMS templates"
+msgstr "Шаблони SMS-повідомлень"
+
+msgid "Support"
+msgstr "Підтримка користувачів"
+
+msgid "User manual"
+msgstr "Посібник користувача"
+
+msgid "Email confirmation failed"
+msgstr "Підтвердження за email не вдалося"
+
+msgid "Couldn’t sign in via “%s”."
+msgstr "Не вдалося увійти через «%s»."
+
+msgid "Couldn’t recover password via “%s”."
+msgstr "Не вдалося відновити пароль через «%s»."
+
+msgid "Add SMS templates in <a href=\"%s\">Settings</a> app."
+msgstr "Додайте шаблони SMS через <a href=\"%s\">додаток «Налаштування»</a>."
+
+msgid "You have been requesting code too frequently. Try again in <strong>%s:%s</strong>."
+msgstr "Ви запрошували код занадто часто. Спробуйте знову через <strong>%s:%s</strong>."
+
+msgid "Invalid theme archive structure (%s). <a href=\"%s\" target=\"_blank\">See help</a> for details"
+msgstr "Невірна структура теми (%s). <a href=\"%s\" target=\"_blank\">Дивіться довідку</a> аби дізнатись більше"
+
+msgid "API key"
+msgstr "Ключ API"
+
+msgid "Obtain an API key on the <a href=\"https://developer.tech.yandex.ru/\" target=\"_blank\">developer dashboard</a>."
+msgstr "Отримайте ключ API на <a href=\"https://developer.tech.yandex.ru/\" target=\"_blank\">панелі розробника</a>."
+
+msgid "Password has not been sent. Please contact your administrator."
+msgstr "Пароль не надіслано. Зверніться, будь ласка, до свого системного адміністратора."
+
+msgid "Sending error"
+msgstr "Помилка відправки"
+
+msgid "“Address” is a complex field, which cannot be completely disabled; you can only edit its components listed below."
+msgstr "«Адреса» — це складне поле, яке неможливо відключити повністю. Ви можете редагувати тілько його складові, що наведені нижче."
+
+msgid "Please check new mail, we have sent you a message with a link to confirm the password change. After confirmation, we will send you your password in the next message."
+msgstr "Перевірте пошту: мі надіслали вам повідомлення із посиланням для скидання паролю. Після підтверждення ми надішлемо вам пароль у наступному листі."
+
+msgid "Please check new mail, we have sent you a message with a password recovery link."
+msgstr "Перевірте пошту: ми надісали вам повідомлення із посиланням для скидання паролю."
+
+msgid "Contact is singed up, but password has not sent. Contact with admin"
+msgstr "Контакт зареєстровано, але пароль не надіслано. Зв`яжіться з адміністратором, будь ласка"
+
+msgid "Send error"
+msgstr "Надіслати дані про помилку"
+
+msgid "Email address is not valid."
+msgstr "Некоректна email-адреса."
+
+msgid "Sender address %s is not configured."
+msgstr "Email-адресу відправника %s не нелаштовано."
+
+msgid "Configure a sender in “<a href=\"%s\">%s</a>” section."
+msgstr "Налаштуйте відправника у розділі «<a href=\"%s\">%s</a>»."
+
+msgid "Notification sending is not working."
+msgstr "Надсилання повідомлень не працює."
+
+msgid "You have run out of available attempts."
+msgstr "Ви вичерпали доступні спроби."
+
+msgid "You have run out of available attempts. Please request a new one-time password."
+msgstr "Ви вичерпали доступні спроби. Запитайте, будь ласка, новий одноразовий пароль."
+
+msgid "<strong>%s</strong> in <strong>%s</strong> template."
+msgstr "<strong>%s</strong> у <strong>%s</strong> шаблоні."
+
+msgid "Email notifications must be enabled."
+msgstr "Повідомлення по email має бути увімкнено."
+
+msgid "Sender ID “%s” is already in use by “%s” provider. You can save each sender ID for one provider only."
+msgstr "Ідентифікатор відправника “%s” вже використовується провайдером “%s”. Для одного провайдера ви можете зберегти тільки один ідентифікатор."
+
+msgid "Specify email sender address"
+msgstr "Вкажіть email-адресу відправника"
+
+msgid "Please be sure to correctly set up a sender. It will be used to restore a lost password or to regain access to the backend should the one-time password authentication fail."
+msgstr "Впевніться, что коректно налаштували відправника. Він буде використовуватися втраченого пароля або для відновлення доступу в бекенд, якщо зі входом за допомогою одноразового пароля виникне проблема."
+
+msgid "No email template group is selected."
+msgstr "Групу шаблонів не обрано."
+
+msgid "Set one-time password authentication?"
+msgstr "Встановити авторизацію за одноразовим паролем?"
+
+msgid "This authentication type means that a backend user is sent a new one-time password every time they log into the backend. Therefore, you must ensure that at least either email or SMS notifications, or both, are being sent and delivered so that your backend users can always log in with their one-time passwords."
+msgstr "Цей тип авторизації означає, що користувачеві бекенду надсилається одноразовий пароль кожного разу, коли він входить до бекенду. Таким чином, ви маєте впевнитись, що email або SMS-повідомлення надсилаються, аби користувачы вашого бекенду могли завжди авторизуватися за одноразовим паролем."
+
+msgid "Please check in “<a href=\"%s\">%s</a>” section that email notifications based on “%s“ template are correctly sent."
+msgstr "Перевірте, будь ласка, у розділі “<a href=\"%s\">%s</a>”, що email-повідомлення на основі шаблону “%s“ налаштовано коректно."
+
+msgid "Also check in “<a href=\"%s\">%s</a>” section that SMS notifications based on “%s“ template are correctly sent, too. Be aware that SMS sending mignt not work occasionally; e.g., due to low SMS balance."
+msgstr "Також перевірте у розділі «“<a href=\"%s\">%s</a>», що SMS-повідомлення на основі шаблону “%s“ налаштовано коректно. Майте на увазі, що час від часу SMS-повідомлення можуть не працювати — наприклад, через низький баланс на рахунку."
+
+msgid "You have run out of available attempts. Please request a new code."
+msgstr "Ви вичерпали доступні спроби. Запитайте новий код, будь ласка."
+
+msgid "User does not exist."
+msgstr "Користувача не існує."
+
+msgid "Server address is required"
+msgstr "Адреса сервера є обов`язковою"
+
+msgid "Port is required"
+msgstr "Порт є обов`язковим"
+
+msgid "Obtain an API key on the <a href=\"https://developer.tech.yandex.ru/\" target=\"_blank\">developer dashboard</a>. Select “JavaScript API, Geocoding API” option."
+msgstr "Отримайте ключ на <a href=\"https://developer.tech.yandex.ru/\" target=\"_blank\">панелі розробника</a>. Оберіть опцію Select “JavaScript API, Geocoding API” ."
+
+msgid "Design theme update failure"
+msgstr "Помилка оновлення теми оформлення"
+
+msgid "This design theme cannot be updated."
+msgstr "Цю тему дизайну не може бути оновлено."
+
+msgid "Insufficient permissions to read files"
+msgstr "Недостатньо прав доступу для читання файлів"
+
+msgid "Insufficient permissions to write to files"
+msgstr "Недостатньо прав доступу для запису файлів"
+
+msgid "I'm aware"
+msgstr "Я знаю"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "WYSIWYG editor may change your HTML code. It is necessary for correct text formatting. Smarty code may be broken and outdated HTML tags may be replaced with modern ones. Are you sure to switch to WYSIWYG editor?"
+msgstr "Візуальний редактор може змінити ваш HTML-код. Це необхідно для коректного форматування тексту. Код Smarty може бути зламано, а застарілі теги HTML може бути замінено на сучасні. Ви впевнені, що бажаете переключитися на візуальний редактор?"
+
+msgid "No user with these data was found."
+msgstr "Користувача з такими даними не знайдено."
+
+msgid "Database tables and fields"
+msgstr "Таблиці та поля бази даних"
+
+msgid "New encoding"
+msgstr "Нове кодування"
+
+msgid "Old encoding"
+msgstr "Старе кодування"
+
+msgid "Some tables and fields will not be converted. Do not try to run the conversion again to fix it."
+msgstr "Деякі таблиці та поля не буде конвертовано. Не намагайтесь повторювати конвертацію, аби це виправити."
+
+msgid "Repeat the conversion after the installation of apps or plugins whenever you need to add emoji support for them."
+msgstr "Повторіть конвертацію після встановлення додатків або плагінів, коли захочете увімкнути підтримку емодзі і для них."
+
+msgid "You may also use phpMyAdmin to change database tables and fields encoding."
+msgstr "Ви також можете використовувати phpMyAdmin для зміни кодування таблиць та полів."
+
+msgid "Total tables"
+msgstr "Усього таблиць"
+
+msgid "Total fields"
+msgstr "Усього полів"
+
+msgid "Converted tables"
+msgstr "Перетворені таблиці"
+
+msgid "Converted fields"
+msgstr "Перетворені поля"
+
+msgid "Not converted tables"
+msgstr "Таблиці, що не конвертовано"
+
+msgid "Not converted fields"
+msgstr "Поля, що не конвертовано"
+
+msgid "Path to log file"
+msgstr "Шлях до лог-файлу"
+
+msgid "Change encoding"
+msgstr "Змінити кодування"
+
+msgid "Do not close this form until the conversion is completed."
+msgstr "Не закривайте цю форму доки конвертацію не буде завершено."
+
+msgid "Start changing encoding for tables and fields?"
+msgstr "Почати зміну кодування для таблиць та полів?"
+
+msgid "This will start the conversion of your database tables and fields to <code>utf8mb4</code> encoding."
+msgstr "Почати конвертацію таблиць та полів вашої бази даних до кодування <code>utf8mb4</code>."
+
+msgid "It will enable you and your website visitors use emoji (smilies), hieroglyphs, and other Unicode symbols."
+msgstr "Це дозволить вам та користувачам вашого сайту використовувати емодзі (смайлики), ієрогліфи та інші Юнікод-символи."
+
+msgid "The encoding change may last a few seconds or minutes."
+msgstr "Зміна кодування може зайняти декілька секунд або хвилин."
+
+msgid "It is essential to wait until the process completion to ensure that no tables or fields with outdated encoding remain."
+msgstr "Важливо дочекатися, доки процес буде завершено. Це необхідно, аби впевнитися, що таблиць або полів із застарілим кодуванням не залишилось."
+
+msgid "Do not close this browser tab until the process is completed. It is recommended to start conversion during a period of minimum load on your website."
+msgstr "Не закривайте цю вкладку браузера, доки процес не буде завершено. Рекомендується починати конвертацію в період мінімального навантаження на ваш сайт."
+
+msgid "Run"
+msgstr "Запустити"
+
+msgid "Table"
+msgstr "Таблиця"
+
+msgid "Fields"
+msgstr "Поля"
+
+msgid "Collation"
+msgstr "Зіставлення"
+
+msgid "Tables not found."
+msgstr "Таблиці не знайдені."
+
+msgid "PHP version"
+msgstr "Версія PHP"
+
+msgid "Webasyst is moving to PHP versions 5.6 and higher."
+msgstr "Webasyst рухається до PHP версій 5.6 та вище."
+
+msgid "Database"
+msgstr "База даних"
+
+msgid "MySQL version"
+msgstr "Версія MySQL"
+
+msgid "supports emoji"
+msgstr "підтримує емодзі"
+
+msgid "does not support emoji"
+msgstr "не підтримує емодзі"
+
+msgid "Connection charset"
+msgstr "Кодування з`єднання"
+
+msgid "Tables and fields without emoji support"
+msgstr "Таблиці та поля без підтримки емодзі"
+
+msgid "Proceed to adding emoji support"
+msgstr "Перейти до увімкнення підтримки емодзі"
+
+msgid "To add emoji support enable <b>Debug mode</b> in <b>General settings</b>."
+msgstr "Аби додати підтримку емодзі, увімкніть <b>режим налагодження</b> у <b>розділі загальних налаштувань</b>."
+
+msgid "Unable to delete design theme"
+msgstr "Не вдалося видалити тему дизайну"
+
+msgid "This design theme is still in use on your website."
+msgstr "Тема дизайну все ще використовується на вашому сайті."
+
+msgid "To delete this theme, first select another theme in the following settlements’ settings:"
+msgstr "Аби видалити цю тему, спочатку оберіть іншу тему дизайну у налаштуваннях поступних поселень:"
+
+msgid "Design theme deleted."
+msgstr "Тему дизайну видалено."
+
+msgid "Design theme was not installed from Webasyst Store."
+msgstr "Тему дизайну не було встановлено з магазину Webasyst."
+
+msgid "Only image files can be uploaded"
+msgstr "Можна завантажити лише зображення"
+
+msgid "Georgia State"
+msgstr "Держава Грузія"
+
+msgid "This setting must be supported by the app; e.g., Shop-Script ver. 8.0 or higher."
+msgstr "Це налаштування має підтримуватись додатком; наприклад, Shop-Script версії 8.0 або вище."
+
+msgid "rouble"
+msgid_plural "roubles"
+msgstr[0] "рубль"
+msgstr[1] "рублі"
+msgstr[2] "рублів"
+
+msgid "hryvnia"
+msgid_plural "hryvnias"
+msgstr[0] "гривня"
+msgstr[1] "гривні"
+msgstr[2] "гривень"
+
+msgid "kopeck"
+msgid_plural "kopeks"
+msgstr[0] "копійка"
+msgstr[1] "копійки"
+msgstr[2] "копійок"
+
+msgid "kop."
+msgstr "коп."
+
+msgid "k."
+msgstr "к."
+
+msgid "dollar"
+msgid_plural "dollars"
+msgstr[0] "долар"
+msgstr[1] "долари"
+msgstr[2] "доларів"
+
+msgid "cent"
+msgid_plural "cents"
+msgstr[0] "цент"
+msgstr[1] "центи"
+msgstr[2] "центів"
+
+msgid "Jan"
+msgstr "Січ"
+
+msgid "Feb"
+msgstr "Лют"
+
+msgid "Mar"
+msgstr "Бер"
+
+msgid "Apr"
+msgstr "Квіт"
+
+msgid "Jun"
+msgstr "Черв"
+
+msgid "Jul"
+msgstr "Лип"
+
+msgid "Aug"
+msgstr "Серп"
+
+msgid "Sep"
+msgstr "Вер"
+
+msgid "Oct"
+msgstr "Жовт"
+
+msgid "Nov"
+msgstr "Лист"
+
+msgid "Dec"
+msgstr "Груд"
+
+msgid "Mon"
+msgstr "Пн"
+
+msgid "Tue"
+msgstr "Вт"
+
+msgid "Wed"
+msgstr "Ср"
+
+msgid "Thu"
+msgstr "Чт"
+
+msgid "Fri"
+msgstr "Пт"
+
+msgid "Sat"
+msgstr "Сб"
+
+msgid "Sun"
+msgstr "Нд"
+
+msgid "Monday"
+msgstr "Понеділок"
+
+msgid "Tuesday"
+msgstr "Вівторок"
+
+msgid "Wednesday"
+msgstr "Середа"
+
+msgid "Thursday"
+msgstr "Четвер"
+
+msgid "Friday"
+msgstr "П`ятниця"
+
+msgid "Saturday"
+msgstr "Субота"
+
+msgid "Sunday"
+msgstr "Неділя"
+
+msgid "year"
+msgid_plural "years"
+msgstr[0] "рік"
+msgstr[1] "роки"
+msgstr[2] "років"
+
+msgid "month"
+msgid_plural "months"
+msgstr[0] "місяць"
+msgstr[1] "місяці"
+msgstr[2] "місяців"
+
+msgid "day"
+msgid_plural "days"
+msgstr[0] "день"
+msgstr[1] "дні"
+msgstr[2] "днів"
+
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "година"
+msgstr[1] "години"
+msgstr[2] "годин"
+
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] "хвилина"
+msgstr[1] "хвилини"
+msgstr[2] "хвилин"
+
+msgid "Sign in Webasyst"
+msgstr "Вход у Webasyst"
+
+msgid "Aruba"
+msgstr "Аруба"
+
+msgid "Afghanistan"
+msgstr "Афганістан"
+
+msgid "Angola"
+msgstr "Ангола"
+
+msgid "Anguilla"
+msgstr "Ангілья"
+
+msgid "Åland Islands"
+msgstr "Аландські Острови"
+
+msgid "Albania"
+msgstr "Албанія"
+
+msgid "Andorra"
+msgstr "Андорра"
+
+msgid "Netherlands Antilles"
+msgstr "Нідерландські Антильські Острови"
+
+msgid "United Arab Emirates"
+msgstr "Об`єднані Арабські Емірати"
+
+msgid "Argentina"
+msgstr "Аргентина"
+
+msgid "Armenia"
+msgstr "Вірменія"
+
+msgid "American Samoa"
+msgstr "Американське Самоа"
+
+msgid "Antarctica"
+msgstr "Антарктида"
+
+msgid "French Southern Territories"
+msgstr "Французькі Південні Території"
+
+msgid "Antigua and Barbuda"
+msgstr "Антигуа і Барбуда"
+
+msgid "Australia"
+msgstr "Австралія"
+
+msgid "Austria"
+msgstr "Австрія"
+
+msgid "Azerbaijan"
+msgstr "Азербайджан"
+
+msgid "Burundi"
+msgstr "Бурунді"
+
+msgid "Belgium"
+msgstr "Бельгія"
+
+msgid "Benin"
+msgstr "Бенін"
+
+msgid "Burkina Faso"
+msgstr "Буркіна-Фасо"
+
+msgid "Bangladesh"
+msgstr "Бангладеш"
+
+msgid "Bulgaria"
+msgstr "Болгарія"
+
+msgid "Bahrain"
+msgstr "Бахрейн"
+
+msgid "Bahamas"
+msgstr "Багамські острови"
+
+msgid "Bosnia and Herzegovina"
+msgstr "Боснія та Герцеговина"
+
+msgid "Saint Barthélemy"
+msgstr "Сен-Бартельмі"
+
+msgid "Belarus"
+msgstr "Білорусь"
+
+msgid "Belize"
+msgstr "Беліз"
+
+msgid "Bermuda"
+msgstr "Бермуди"
+
+msgid "Bolivia, Plurinational State of"
+msgstr "Болівія, багатонаціональна держава"
+
+msgid "Brazil"
+msgstr "Бразилія"
+
+msgid "Barbados"
+msgstr "Барбадос"
+
+msgid "Brunei Darussalam"
+msgstr "Бруней-Даруссалам"
+
+msgid "Bhutan"
+msgstr "Бутан"
+
+msgid "Bouvet Island"
+msgstr "Острів Буве"
+
+msgid "Botswana"
+msgstr "Ботсвана"
+
+msgid "Central African Republic"
+msgstr "Центрально-Африканська Республіка"
+
+msgid "Canada"
+msgstr "Канада"
+
+msgid "Cocos (Keeling) Islands"
+msgstr "Кокосові (Кілінг) острови"
+
+msgid "Switzerland"
+msgstr "Швейцарія"
+
+msgid "Chile"
+msgstr "Чилі"
+
+msgid "China"
+msgstr "Китай"
+
+msgid "Côte d'Ivoire"
+msgstr "Кот-Д`івуар"
+
+msgid "Cameroon"
+msgstr "Камерун"
+
+msgid "Congo, the Democratic Republic of the"
+msgstr "Конго, Демократична Республіка"
+
+msgid "Congo"
+msgstr "Конго"
+
+msgid "Cook Islands"
+msgstr "Острови Кука"
+
+msgid "Colombia"
+msgstr "Колумбія"
+
+msgid "Comoros"
+msgstr "Коморські острови"
+
+msgid "Cape Verde"
+msgstr "Кабо-Верде"
+
+msgid "Costa Rica"
+msgstr "Коста-Ріка"
+
+msgid "Cuba"
+msgstr "Куба"
+
+msgid "Christmas Island"
+msgstr "Острів Різдва"
+
+msgid "Cayman Islands"
+msgstr "Кайманові Острови"
+
+msgid "Cyprus"
+msgstr "Кіпр"
+
+msgid "Czech Republic"
+msgstr "Чехія"
+
+msgid "Germany"
+msgstr "Німеччина"
+
+msgid "Djibouti"
+msgstr "Джибуті"
+
+msgid "Dominica"
+msgstr "Домініка"
+
+msgid "Denmark"
+msgstr "Данія"
+
+msgid "Dominican Republic"
+msgstr "Домініканська Республіка"
+
+msgid "Algeria"
+msgstr "Алжир"
+
+msgid "Ecuador"
+msgstr "Еквадор"
+
+msgid "Egypt"
+msgstr "Єгипет"
+
+msgid "Eritrea"
+msgstr "Еритрея"
+
+msgid "Western Sahara"
+msgstr "Західна Сахара"
+
+msgid "Spain"
+msgstr "Іспанія"
+
+msgid "Estonia"
+msgstr "Естонія"
+
+msgid "Ethiopia"
+msgstr "Ефіопія"
+
+msgid "Finland"
+msgstr "Фінляндія"
+
+msgid "Fiji"
+msgstr "Фіджі"
+
+msgid "Falkland Islands (Malvinas)"
+msgstr "Фолклендські (Мальвінські) Острови"
+
+msgid "France"
+msgstr "Франція"
+
+msgid "Faroe Islands"
+msgstr "Фарерські Острови"
+
+msgid "Micronesia, Federated States of"
+msgstr "Мікронезія, Федеративні Штати"
+
+msgid "Gabon"
+msgstr "Габон"
+
+msgid "United Kingdom"
+msgstr "Великобританія"
+
+msgid "Georgia"
+msgstr "Грузія"
+
+msgid "Guernsey"
+msgstr "Гернсі"
+
+msgid "Ghana"
+msgstr "Гана"
+
+msgid "Gibraltar"
+msgstr "Гібралтар"
+
+msgid "Guinea"
+msgstr "Гвінея"
+
+msgid "Guadeloupe"
+msgstr "Гваделупа"
+
+msgid "Gambia"
+msgstr "Гамбія"
+
+msgid "Guinea-Bissau"
+msgstr "Гвінея-Бісау"
+
+msgid "Equatorial Guinea"
+msgstr "Екваторіальна Гвінея"
+
+msgid "Greece"
+msgstr "Греція"
+
+msgid "Grenada"
+msgstr "Гренада"
+
+msgid "Greenland"
+msgstr "Гренландія"
+
+msgid "Guatemala"
+msgstr "Гватемала"
+
+msgid "French Guiana"
+msgstr "Французька Гвіана"
+
+msgid "Guam"
+msgstr "Гуам"
+
+msgid "Guyana"
+msgstr "Гайана"
+
+msgid "Hong Kong"
+msgstr "Гонконг"
+
+msgid "Heard Island and McDonald Islands"
+msgstr "Острів Херд і острови Макдональд"
+
+msgid "Honduras"
+msgstr "Гондурас"
+
+msgid "Croatia"
+msgstr "Хорватія"
+
+msgid "Haiti"
+msgstr "Гаїті"
+
+msgid "Hungary"
+msgstr "Угорщина"
+
+msgid "Indonesia"
+msgstr "Індонезія"
+
+msgid "Isle of Man"
+msgstr "Острів Мен"
+
+msgid "India"
+msgstr "Індія"
+
+msgid "British Indian Ocean Territory"
+msgstr "Британська Територія в Індійському Океані"
+
+msgid "Ireland"
+msgstr "Ірландія"
+
+msgid "Iran, Islamic Republic of"
+msgstr "Іран, Ісламська Республіка"
+
+msgid "Iraq"
+msgstr "Ірак"
+
+msgid "Iceland"
+msgstr "Ісландія"
+
+msgid "Israel"
+msgstr "Ізраїль"
+
+msgid "Italy"
+msgstr "Італія"
+
+msgid "Jamaica"
+msgstr "Ямайка"
+
+msgid "Jersey"
+msgstr "Джерсі"
+
+msgid "Jordan"
+msgstr "Йорданія"
+
+msgid "Japan"
+msgstr "Японія"
+
+msgid "Kazakhstan"
+msgstr "Казахстан"
+
+msgid "Kenya"
+msgstr "Кенія"
+
+msgid "Kyrgyzstan"
+msgstr "Киргизстан"
+
+msgid "Cambodia"
+msgstr "Камбоджа"
+
+msgid "Kiribati"
+msgstr "Кірібаті"
+
+msgid "Saint Kitts and Nevis"
+msgstr "Сент-Кітс і Невіс"
+
+msgid "Korea, Republic of"
+msgstr "Корея, Республіка"
+
+msgid "Kuwait"
+msgstr "Кувейт"
+
+msgid "Lao People's Democratic Republic"
+msgstr "Лаоська Народно-Демократична Республіка"
+
+msgid "Lebanon"
+msgstr "Ліван"
+
+msgid "Liberia"
+msgstr "Ліберія"
+
+msgid "Libyan Arab Jamahiriya"
+msgstr "Лівійська Арабська Джамахірія"
+
+msgid "Saint Lucia"
+msgstr "Сент-Люсія"
+
+msgid "Liechtenstein"
+msgstr "Ліхтенштейн"
+
+msgid "Sri Lanka"
+msgstr "Шрі-Ланка"
+
+msgid "Lesotho"
+msgstr "Лесото"
+
+msgid "Lithuania"
+msgstr "Литва"
+
+msgid "Luxembourg"
+msgstr "Люксембург"
+
+msgid "Latvia"
+msgstr "Латвія"
+
+msgid "Macao"
+msgstr "Макао"
+
+msgid "Saint Martin (French part)"
+msgstr "Сен-Мартен (французька частина)"
+
+msgid "Morocco"
+msgstr "Марокко"
+
+msgid "Monaco"
+msgstr "Монако"
+
+msgid "Moldova, Republic of"
+msgstr "Молдова, Республіка"
+
+msgid "Madagascar"
+msgstr "Мадагаскар"
+
+msgid "Maldives"
+msgstr "Мальдіви"
+
+msgid "Mexico"
+msgstr "Мексика"
+
+msgid "Marshall Islands"
+msgstr "Маршаллові Острови"
+
+msgid "Macedonia, the former Yugoslav Republic of"
+msgstr "Македонія, Колишня Югославська Республіка"
+
+msgid "Mali"
+msgstr "Малі"
+
+msgid "Malta"
+msgstr "Мальта"
+
+msgid "Myanmar"
+msgstr "М`янма"
+
+msgid "Montenegro"
+msgstr "Чорногорія"
+
+msgid "Mongolia"
+msgstr "Монголія"
+
+msgid "Northern Mariana Islands"
+msgstr "Північні Маріанські Острови"
+
+msgid "Mozambique"
+msgstr "Мозамбік"
+
+msgid "Mauritania"
+msgstr "Мавританія"
+
+msgid "Montserrat"
+msgstr "Монсеррат"
+
+msgid "Martinique"
+msgstr "Мартініка"
+
+msgid "Mauritius"
+msgstr "Маврикій"
+
+msgid "Malawi"
+msgstr "Малаві"
+
+msgid "Malaysia"
+msgstr "Малайзія"
+
+msgid "Mayotte"
+msgstr "Майотта"
+
+msgid "Namibia"
+msgstr "Намібія"
+
+msgid "New Caledonia"
+msgstr "Нова Каледонія"
+
+msgid "Niger"
+msgstr "Нігер"
+
+msgid "Norfolk Island"
+msgstr "Острів Норфолк"
+
+msgid "Nigeria"
+msgstr "Нігерія"
+
+msgid "Nicaragua"
+msgstr "Нікарагуа"
+
+msgid "Niue"
+msgstr "Ніуе"
+
+msgid "Netherlands"
+msgstr "Нідерланди"
+
+msgid "Norway"
+msgstr "Норвегія"
+
+msgid "Nepal"
+msgstr "Непал"
+
+msgid "Nauru"
+msgstr "Науру"
+
+msgid "New Zealand"
+msgstr "Нова Зеландія"
+
+msgid "Oman"
+msgstr "Оман"
+
+msgid "Pakistan"
+msgstr "Пакистан"
+
+msgid "Panama"
+msgstr "Панама"
+
+msgid "Pitcairn"
+msgstr "Піткерн"
+
+msgid "Peru"
+msgstr "Перу"
+
+msgid "Philippines"
+msgstr "Філіппіни"
+
+msgid "Palau"
+msgstr "Палау"
+
+msgid "Papua New Guinea"
+msgstr "Папуа Нова Гвінея"
+
+msgid "Poland"
+msgstr "Польща"
+
+msgid "Puerto Rico"
+msgstr "Пуерто-Ріко"
+
+msgid "Korea, Democratic People's Republic of"
+msgstr "Корейська Народно-Демократична Республіка"
+
+msgid "Portugal"
+msgstr "Португалія"
+
+msgid "Paraguay"
+msgstr "Парагвай"
+
+msgid "Palestinian Territory, Occupied"
+msgstr "Окуповані Палестинські Території"
+
+msgid "French Polynesia"
+msgstr "Французька Полінезія"
+
+msgid "Qatar"
+msgstr "Катар"
+
+msgid "Réunion"
+msgstr "Реюньйон"
+
+msgid "Romania"
+msgstr "Румунія"
+
+msgid "Russia"
+msgstr "Росія"
+
+msgid "Russian Federation"
+msgstr "Російська Федерація"
+
+msgid "Rwanda"
+msgstr "Руанда"
+
+msgid "Saudi Arabia"
+msgstr "Саудівська Аравія"
+
+msgid "Sudan"
+msgstr "Судан"
+
+msgid "Senegal"
+msgstr "Сенегал"
+
+msgid "Singapore"
+msgstr "Сінгапур"
+
+msgid "South Georgia and the South Sandwich Islands"
+msgstr "Південна Георгія і Південні Сандвічеві острови"
+
+msgid "Saint Helena, Ascension and Tristan da Cunha"
+msgstr "Острови Святої Єлени, Вознесіння і Трістан-да-Кунья"
+
+msgid "Svalbard and Jan Mayen"
+msgstr "Свальбард і Ян-Маєн"
+
+msgid "Solomon Islands"
+msgstr "Соломонові Острови"
+
+msgid "Sierra Leone"
+msgstr "Сьєрра-Леоне"
+
+msgid "El Salvador"
+msgstr "Ель-Сальвадор"
+
+msgid "San Marino"
+msgstr "Сан-Марино"
+
+msgid "Somalia"
+msgstr "Сомалі"
+
+msgid "Saint Pierre and Miquelon"
+msgstr "Сен-П`єр і Мікелон"
+
+msgid "Serbia"
+msgstr "Сербія"
+
+msgid "Sao Tome and Principe"
+msgstr "Сан-Томе і Прінсіпі"
+
+msgid "Suriname"
+msgstr "Сурінам"
+
+msgid "Slovakia"
+msgstr "Словаччина"
+
+msgid "Slovenia"
+msgstr "Словенія"
+
+msgid "Sweden"
+msgstr "Швеція"
+
+msgid "Swaziland"
+msgstr "Свазіленд"
+
+msgid "Seychelles"
+msgstr "Сейшели"
+
+msgid "Syrian Arab Republic"
+msgstr "Сирійська Арабська Республіка"
+
+msgid "Turks and Caicos Islands"
+msgstr "Теркс і Кайкос"
+
+msgid "Chad"
+msgstr "Чад"
+
+msgid "Togo"
+msgstr "Того"
+
+msgid "Thailand"
+msgstr "Таїланд"
+
+msgid "Tajikistan"
+msgstr "Таджикистан"
+
+msgid "Tokelau"
+msgstr "Токелау"
+
+msgid "Turkmenistan"
+msgstr "Туркменістан"
+
+msgid "Timor-Leste"
+msgstr "Тимор-Лешті"
+
+msgid "Tonga"
+msgstr "Тонга"
+
+msgid "Trinidad and Tobago"
+msgstr "Тринідад і Тобаго"
+
+msgid "Tunisia"
+msgstr "Туніс"
+
+msgid "Turkey"
+msgstr "Туреччина"
+
+msgid "Tuvalu"
+msgstr "Тувалу"
+
+msgid "Taiwan, Province of China"
+msgstr "Тайвань, провінція Китаю"
+
+msgid "Tanzania, United Republic of"
+msgstr "Об`єднана Республіка Танзані"
+
+msgid "Uganda"
+msgstr "Уганда"
+
+msgid "Ukraine"
+msgstr "Україна"
+
+msgid "United States Minor Outlying Islands"
+msgstr "Зовнішні Малі Острови США"
+
+msgid "Uruguay"
+msgstr "Уругвай"
+
+msgid "United States"
+msgstr "США"
+
+msgid "Uzbekistan"
+msgstr "Узбекистан"
+
+msgid "Holy See (Vatican City State)"
+msgstr "Святий Престол (Держава-місто Ватикан)"
+
+msgid "Saint Vincent and the Grenadines"
+msgstr "Сент-Вінсент і Гренадіни"
+
+msgid "Venezuela, Bolivarian Republic of"
+msgstr "Боліваріанська Республіка Венесуела"
+
+msgid "Virgin Islands, British"
+msgstr "Британські Віргінські Острови"
+
+msgid "Virgin Islands, U.S."
+msgstr "Віргінські острови, США"
+
+msgid "Viet Nam"
+msgstr "В`єтнам"
+
+msgid "Vanuatu"
+msgstr "Вануату"
+
+msgid "Wallis and Futuna"
+msgstr "Уолліс і Футуна"
+
+msgid "Samoa"
+msgstr "Самоа"
+
+msgid "Yemen"
+msgstr "Ємен"
+
+msgid "South Africa"
+msgstr "Південна Африка"
+
+msgid "Zambia"
+msgstr "Замбія"
+
+msgid "Zimbabwe"
+msgstr "Зімбабве"
+
+msgid "Moscow"
+msgstr "Москва"
+
+msgid "Samara"
+msgstr "Самара"
+
+msgid "Volgograd"
+msgstr "Волгоград"
+
+msgid "Yekaterinburg"
+msgstr "Єкатеринбург"
+
+msgid "Novosibirsk"
+msgstr "Новосибірськ"
+
+msgid "Omsk"
+msgstr "Омськ"
+
+msgid "Krasnoyarsk"
+msgstr "Красноярськ"
+
+msgid "Sakhalin"
+msgstr "Сахалін"
+
+msgid "Vladivostok"
+msgstr "Владивосток"
+
+msgid "Novokuznetsk"
+msgstr "Новокузнецьк"
+
+msgid "Paris"
+msgstr "Париж"
+
+msgid "Tunis"
+msgstr "Туніс"
+
+msgid "Dublin"
+msgstr "Дублін"
+
+msgid "London"
+msgstr "Лондон"
+
+msgid "Johannesburg"
+msgstr "Йоганнесбург"
+
+msgid "Tripoli"
+msgstr "Тріполі"
+
+msgid "Amsterdam"
+msgstr "Амстердам"
+
+msgid "Belgrade"
+msgstr "Белград"
+
+msgid "Bratislava"
+msgstr "Братислава"
+
+msgid "Brussels"
+msgstr "Брюссель"
+
+msgid "Budapest"
+msgstr "Будапешт"
+
+msgid "Copenhagen"
+msgstr "Копенгаген"
+
+msgid "Madrid"
+msgstr "Мадрид"
+
+msgid "Oslo"
+msgstr "Осло"
+
+msgid "Prague"
+msgstr "Прага"
+
+msgid "Rome"
+msgstr "Рим"
+
+msgid "Stockholm"
+msgstr "Стокгольм"
+
+msgid "Berlin"
+msgstr "Берлін"
+
+msgid "Helsinki"
+msgstr "Гельсінкі"
+
+msgid "Kaliningrad"
+msgstr "Калінінград"
+
+msgid "Kiev"
+msgstr "Київ"
+
+msgid "Minsk"
+msgstr "Мінськ"
+
+msgid "Riga"
+msgstr "Рига"
+
+msgid "Vilnius"
+msgstr "Вільнюс"
+
+msgid "Sofia"
+msgstr "Софія"
+
+msgid "Tallinn"
+msgstr "Таллін"
+
+msgid "Simferopol"
+msgstr "Сімферополь"
+
+msgid "Tbilisi"
+msgstr "Тбілісі"
+
+msgid "Dushanbe"
+msgstr "Душанбе"
+
+msgid "Tashkent"
+msgstr "Ташкент"
+
+msgid "Yerevan"
+msgstr "Єреван"
+
+msgid "Vostok"
+msgstr "Восток"
+
+msgid "Thimphu"
+msgstr "Тхімпху"
+
+msgid "UTC"
+msgstr "UTC"
+
+msgid "New York"
+msgstr "Нью-Йорк"
+
+msgid "Toronto"
+msgstr "Торонто"
+
+msgid "Dawson"
+msgstr "Доусон"
+
+msgid "Phoenix"
+msgstr "Фенікс"
+
+msgid "Los Angeles"
+msgstr "Лос-Анджелес"
+
+msgid "Chicago"
+msgstr "Чикаго"
+
+msgid "Abkhazia"
+msgstr "Абхазія"
+
+msgid "Bonaire, Sint Eustatius and Saba"
+msgstr "Бонайре, Сінт-Естатіус і Саба"
+
+msgid "Curaçao"
+msgstr "Кюрасао"
+
+msgid "Saint Martin (French Part)"
+msgstr "Сен-Мартен (французька частина)"
+
+msgid "Sint Maarten"
+msgstr "Сен-Мартен"
+
+msgid "South Ossetia"
+msgstr "Південна Осетія"
+
+msgid "South Sudan"
+msgstr "Південний Судан"
+
+msgid "Street"
+msgstr "Вулиця"
+
+msgid "Street address"
+msgstr "Номер будинку (та квартири)"
+
+msgid "State"
+msgstr "Статус"
+
+msgid "City"
+msgstr "Місто"
+
+msgid "ZIP"
+msgstr "Індекс"
+
+msgid "home"
+msgstr "домашній"
+
+msgid "work"
+msgstr "робочий"
+
+msgid "personal"
+msgstr "особистий"
+
+msgid "Middle name"
+msgstr "По-батькові"
+
+msgid "Website"
+msgstr "Сайт"
+
+msgid "Birthday"
+msgstr "День народження"
+
+msgid "Language"
+msgstr "Мова"
+
+msgid "Time zone"
+msgstr "Часовий пояс"
+
+msgid "Categories"
+msgstr "Категорії"
+
+msgid "Select country"
+msgstr "Оберіть країну"
+
+msgid "Select time zone"
+msgstr "Оберіть часовий пояс"
+
+msgid "Select language"
+msgstr "Оберіть мову"
+
+msgid "mobile"
+msgstr "мобільний"
+
+msgid "Instant messenger"
+msgstr "Мессенджер"
+
+msgid "Social network"
+msgstr "Соціальна мережа"
+
+msgid "Enter any login and password so<br> we can create a user account for you"
+msgstr "Введіть будь-який логін і пароль, аби<br> ми могли створити для вас обліковий запис"
+
+msgid "This field is must be unique"
+msgstr "Це поле має бути унікальним"
+
+msgid "When done editing, click “Save” to apply changes."
+msgstr "Після завершення редагування не забудьте натиснути кнопку «Зберегти»."
+
+msgid "Enable this URL"
+msgstr "Включити цей URL"
+
+msgid "Disable this URL"
+msgstr "Відключити цю URL-адресу"
+
+msgid "enable"
+msgstr "увімкнути"
+
+msgid "disable"
+msgstr "вимкнути"
+
+msgid "You have no permission to access this page."
+msgstr "У вас немає прав доступу до цієї сторінки."
+
+msgid "Please refer to your system administrator."
+msgstr "Будь ласка, зверніться до вашого системного адміністратора."
+
+msgid "Failed to connect to the “%s” database."
+msgstr "Не вдалося підключитися до бази даних \"%s\"."
+
+msgid "Failed to connect to specified MySQL database server."
+msgstr "Не вдалося підключитися до вказаного сервера баз даних MySQL."
+
+msgid "Error creating file %s"
+msgstr "Помилка при створенні файлу %s"
+
+msgid "Not enough access permissions to write in the folder %s"
+msgstr "Для запису у папку %s недостатньо прав"
+
+msgid "Sex"
+msgstr "Стать"
+
+msgid "Gender"
+msgstr "Гендер"
+
+msgid "Job title"
+msgstr "Назва посади"
+
+msgid "Male"
+msgstr "Чоловік"
+
+msgid "Female"
+msgstr "Жінка"
+
+msgid "kB"
+msgstr "КБ"
+
+msgid "MB"
+msgstr "МБ"
+
+msgid "GB"
+msgstr "ГБ"
+
+msgid "TB"
+msgstr "ТБ"
+
+msgid "PB"
+msgstr "PB"
+
+msgid "EB"
+msgstr "EB"
+
+msgid "This page will not be visible in the public frontend, because this app is not connected in the website structure."
+msgstr "Цю сторінку не буде видно в публічній частині сайту, тому що цей додаток не підключений до структури сайту."
+
+msgid "Design"
+msgstr "Дизайн"
+
+msgid "Can edit pages"
+msgstr "Можете редагувати сторінки"
+
+msgid "Can edit design"
+msgstr "Може редагувати дизайн"
+
+msgid "Used on"
+msgstr "Використовується на"
+
+msgid "Theme updated"
+msgstr "Тему оновлено"
+
+msgid "All themes files will be deleted permanently without the ability to recover. Are you sure?"
+msgstr "Усі файли теми буде вилучено назавжди без можливості відновлення. Ви впевнені?"
+
+msgid "rollback to the original theme"
+msgstr "відновити оригінал теми"
+
+msgid "Preview theme"
+msgstr "Перегляд теми"
+
+msgid "Unsettled"
+msgstr "Не поселено"
+
+msgid "Select route"
+msgstr "Оберіть маршрут"
+
+msgid "Order by phone"
+msgstr "Замовлення по телефону"
+
+msgid "Design theme"
+msgstr "Тема оформлення"
+
+msgid "Find"
+msgstr "Знайти"
+
+msgid "Search"
+msgstr "Пошук"
+
+msgid "Find products"
+msgstr "Знайти товари"
+
+msgid "Cart"
+msgstr "Кошик"
+
+msgid "My account"
+msgstr "Мій акаунт"
+
+msgid "Abidjan"
+msgstr "Абіджан"
+
+msgid "Accra"
+msgstr "Аккра"
+
+msgid "Addis Ababa"
+msgstr "Аддіс-Абеба"
+
+msgid "Algiers"
+msgstr "Алжир"
+
+msgid "Asmara"
+msgstr "Асмера"
+
+msgid "Asmera"
+msgstr "Асмера"
+
+msgid "Bamako"
+msgstr "Бамако"
+
+msgid "Bangui"
+msgstr "Бангі"
+
+msgid "Banjul"
+msgstr "Банжул"
+
+msgid "Bissau"
+msgstr "Бісау"
+
+msgid "Blantyre"
+msgstr "Блантайр"
+
+msgid "Brazzaville"
+msgstr "Браззавіль"
+
+msgid "Bujumbura"
+msgstr "Бужумбура"
+
+msgid "Cairo"
+msgstr "Каїр"
+
+msgid "Casablanca"
+msgstr "Касабланка"
+
+msgid "Ceuta"
+msgstr "Сеута"
+
+msgid "Conakry"
+msgstr "Конакрі"
+
+msgid "Dakar"
+msgstr "Дакар"
+
+msgid "Dar es Salaam"
+msgstr "Дар-ес-Салам"
+
+msgid "Douala"
+msgstr "Дуала"
+
+msgid "El Aaiun"
+msgstr "Ель-Аюн"
+
+msgid "Freetown"
+msgstr "Фрітаун"
+
+msgid "Gaborone"
+msgstr "Габороне"
+
+msgid "Harare"
+msgstr "Хараре"
+
+msgid "Kampala"
+msgstr "Кампала"
+
+msgid "Khartoum"
+msgstr "Хартум"
+
+msgid "Kigali"
+msgstr "Кігалі"
+
+msgid "Kinshasa"
+msgstr "Кіншаса"
+
+msgid "Lagos"
+msgstr "Лагос"
+
+msgid "Libreville"
+msgstr "Лібревіль"
+
+msgid "Lome"
+msgstr "Ломе"
+
+msgid "Luanda"
+msgstr "Луанда"
+
+msgid "Lubumbashi"
+msgstr "Лубумбаши"
+
+msgid "Lusaka"
+msgstr "Лусака"
+
+msgid "Malabo"
+msgstr "Малабо"
+
+msgid "Maputo"
+msgstr "Мапуту"
+
+msgid "Maseru"
+msgstr "Масеру"
+
+msgid "Mbabane"
+msgstr "Мбабане"
+
+msgid "Mogadishu"
+msgstr "Могадішо"
+
+msgid "Monrovia"
+msgstr "Монровія"
+
+msgid "Nairobi"
+msgstr "Найробі"
+
+msgid "Ndjamena"
+msgstr "Нджамена"
+
+msgid "Niamey"
+msgstr "Ніамей"
+
+msgid "Nouakchott"
+msgstr "Нуакшот"
+
+msgid "Ouagadougou"
+msgstr "Уагадугу"
+
+msgid "Porto-Novo"
+msgstr "Порто-Ново"
+
+msgid "Sao Tome"
+msgstr "Сан-Томе"
+
+msgid "Timbuktu"
+msgstr "Томбукту"
+
+msgid "Windhoek"
+msgstr "Віндхук"
+
+msgid "Adak"
+msgstr "Адак"
+
+msgid "Anchorage"
+msgstr "Анкоридж"
+
+msgid "Antigua"
+msgstr "Антігуа"
+
+msgid "Araguaina"
+msgstr "Арагуаина"
+
+msgid "Buenos Aires"
+msgstr "Буенос-Айрес"
+
+msgid "Catamarca"
+msgstr "Катамарка"
+
+msgid "ComodRivadavia"
+msgstr "Комодоро Рівадавія"
+
+msgid "Cordoba"
+msgstr "Кордоба"
+
+msgid "Jujuy"
+msgstr "Жужуй"
+
+msgid "La Rioja"
+msgstr "Ла-Ріоха"
+
+msgid "Mendoza"
+msgstr "Мендоса"
+
+msgid "Rio Gallegos"
+msgstr "Ріо-Ґалеґос"
+
+msgid "San Juan"
+msgstr "Сан-Хуан"
+
+msgid "San Luis"
+msgstr "Сан-Луїс"
+
+msgid "Tucuman"
+msgstr "Тукуман"
+
+msgid "Ushuaia"
+msgstr "Ушуайя"
+
+msgid "Asuncion"
+msgstr "Асунсьйон"
+
+msgid "Atikokan"
+msgstr "Атікокан"
+
+msgid "Atka"
+msgstr "Атка"
+
+msgid "Bahia"
+msgstr "Бая"
+
+msgid "Belem"
+msgstr "Белен"
+
+msgid "Blanc-Sablon"
+msgstr "Блан-Саблон"
+
+msgid "Boa Vista"
+msgstr "Боа-Віста"
+
+msgid "Bogota"
+msgstr "Богота"
+
+msgid "Boise"
+msgstr "Бойсе"
+
+msgid "Cambridge Bay"
+msgstr "Кембридж-Бей"
+
+msgid "Campo Grande"
+msgstr "Кампо Гранде"
+
+msgid "Cancun"
+msgstr "Канкун"
+
+msgid "Caracas"
+msgstr "Каракас"
+
+msgid "Cayenne"
+msgstr "Кайєн"
+
+msgid "Cayman"
+msgstr "Кайман"
+
+msgid "Chihuahua"
+msgstr "Чихуахуа"
+
+msgid "Coral Harbour"
+msgstr "Корал-Харбор"
+
+msgid "Cuiaba"
+msgstr "Куяба"
+
+msgid "Curacao"
+msgstr "Кюрасао"
+
+msgid "Danmarkshavn"
+msgstr "Данмарксхавн"
+
+msgid "Dawson Creek"
+msgstr "Доусон Крік"
+
+msgid "Denver"
+msgstr "Денвер"
+
+msgid "Detroit"
+msgstr "Детройт"
+
+msgid "Edmonton"
+msgstr "Едмонтон"
+
+msgid "Eirunepe"
+msgstr "Еирунепе"
+
+msgid "Ensenada"
+msgstr "Енсенада"
+
+msgid "Fort Wayne"
+msgstr "Форт Вейн"
+
+msgid "Fortaleza"
+msgstr "Форталеза"
+
+msgid "Glace Bay"
+msgstr "Глейс-Бей"
+
+msgid "Godthab"
+msgstr "Готхоб"
+
+msgid "Goose Bay"
+msgstr "Гуз Бей"
+
+msgid "Grand Turk"
+msgstr "Гранд-Терк"
+
+msgid "Guayaquil"
+msgstr "Гуаякіль"
+
+msgid "Halifax"
+msgstr "Галіфакс"
+
+msgid "Havana"
+msgstr "Гавана"
+
+msgid "Hermosillo"
+msgstr "Хермосилльо"
+
+msgid "Indiana"
+msgstr "Індіана"
+
+msgid "Indianapolis"
+msgstr "Індіанаполіс"
+
+msgid "Knox"
+msgstr "Нокс"
+
+msgid "Marengo"
+msgstr "Маренго"
+
+msgid "Petersburg"
+msgstr "Петербург"
+
+msgid "Tell City"
+msgstr "Телль-Сіті"
+
+msgid "Vevay"
+msgstr "Вевей"
+
+msgid "Vincennes"
+msgstr "Венсен"
+
+msgid "Winamac"
+msgstr "Уинамак"
+
+msgid "Inuvik"
+msgstr "Инувик"
+
+msgid "Iqaluit"
+msgstr "Ікалуїт"
+
+msgid "Juneau"
+msgstr "Джуно"
+
+msgid "Kentucky"
+msgstr "Кентуккі"
+
+msgid "Louisville"
+msgstr "Луїсвілл"
+
+msgid "Monticello"
+msgstr "Монтіселло"
+
+msgid "Knox IN"
+msgstr "Нокс, Індіана"
+
+msgid "La Paz"
+msgstr "Ла-Пас"
+
+msgid "Lima"
+msgstr "Ліма"
+
+msgid "Maceio"
+msgstr "Масейо"
+
+msgid "Managua"
+msgstr "Манагуа"
+
+msgid "Manaus"
+msgstr "Манаус"
+
+msgid "Marigot"
+msgstr "Маріго"
+
+msgid "Mazatlan"
+msgstr "Мазатлан"
+
+msgid "Menominee"
+msgstr "Меномини"
+
+msgid "Merida"
+msgstr "Меріда"
+
+msgid "Mexico City"
+msgstr "Мехіко"
+
+msgid "Miquelon"
+msgstr "Мікелон"
+
+msgid "Moncton"
+msgstr "Монктон"
+
+msgid "Monterrey"
+msgstr "Монтеррей"
+
+msgid "Montevideo"
+msgstr "Монтевідео"
+
+msgid "Montreal"
+msgstr "Монреаль"
+
+msgid "Nassau"
+msgstr "Нассау"
+
+msgid "Nipigon"
+msgstr "Нипигон"
+
+msgid "Nome"
+msgstr "Ном"
+
+msgid "Noronha"
+msgstr "Норонья"
+
+msgid "North Dakota"
+msgstr "Північна Дакота"
+
+msgid "New Salem"
+msgstr "Новий Салем"
+
+msgid "Pangnirtung"
+msgstr "Панглао"
+
+msgid "Paramaribo"
+msgstr "Парамарібо"
+
+msgid "Port-au-Prince"
+msgstr "Порт-о-Пренс"
+
+msgid "Port of Spain"
+msgstr "Порт-оф-Спейн"
+
+msgid "Porto Acre"
+msgstr "Порту Акко"
+
+msgid "Porto Velho"
+msgstr "Порту-Велью"
+
+msgid "Rainy River"
+msgstr "Річки Дощів"
+
+msgid "Rankin Inlet"
+msgstr "Ранкін Інлет"
+
+msgid "Recife"
+msgstr "Ресіфі"
+
+msgid "Regina"
+msgstr "Регіна"
+
+msgid "Resolute"
+msgstr "Резолют"
+
+msgid "Rio Branco"
+msgstr "Ріо Бранко"
+
+msgid "Rosario"
+msgstr "Росаріо"
+
+msgid "Santiago"
+msgstr "Сантьяго"
+
+msgid "Santo Domingo"
+msgstr "Санто-Домінго"
+
+msgid "Sao Paulo"
+msgstr "Сан-Паулу"
+
+msgid "Scoresbysund"
+msgstr "Скоресбісунд"
+
+msgid "Shiprock"
+msgstr "Шипрок"
+
+msgid "St Barthelemy"
+msgstr "Сент-Бартелемі"
+
+msgid "St Johns"
+msgstr "Сент-Джонс"
+
+msgid "St Kitts"
+msgstr "Сент-Кітс"
+
+msgid "St Lucia"
+msgstr "Сент-Люсія"
+
+msgid "St Thomas"
+msgstr "Сент-Томас"
+
+msgid "St Vincent"
+msgstr "Сент-Вінсент"
+
+msgid "Swift Current"
+msgstr "Свіфт-Каррент"
+
+msgid "Tegucigalpa"
+msgstr "Тегусігальпа"
+
+msgid "Thule"
+msgstr "Тулі"
+
+msgid "Thunder Bay"
+msgstr "Тандер-Бей"
+
+msgid "Tijuana"
+msgstr "Тіхуана"
+
+msgid "Tortola"
+msgstr "Тортола"
+
+msgid "Vancouver"
+msgstr "Ванкувер"
+
+msgid "Virgin"
+msgstr "Вірджин"
+
+msgid "Whitehorse"
+msgstr "Уайтхорс"
+
+msgid "Winnipeg"
+msgstr "Вінніпег"
+
+msgid "Yakutat"
+msgstr "Якутат"
+
+msgid "Yellowknife"
+msgstr "Йеллоунайф"
+
+msgid "Casey"
+msgstr "Кейсі"
+
+msgid "Davis"
+msgstr "Девіс"
+
+msgid "DumontDUrville"
+msgstr "Дюмон-Дюрвіль"
+
+msgid "Mawson"
+msgstr "Моусон"
+
+msgid "McMurdo"
+msgstr "Мак-Мердо"
+
+msgid "Palmer"
+msgstr "Палмер"
+
+msgid "Rothera"
+msgstr "Ротера"
+
+msgid "South Pole"
+msgstr "Південний Полюс"
+
+msgid "Syowa"
+msgstr "Сівби"
+
+msgid "Arctic"
+msgstr "Арктика"
+
+msgid "Longyearbyen"
+msgstr "Лонгйір"
+
+msgid "Asia"
+msgstr "Азія"
+
+msgid "Aden"
+msgstr "Аден"
+
+msgid "Almaty"
+msgstr "Алмати"
+
+msgid "Amman"
+msgstr "Амман"
+
+msgid "Anadyr"
+msgstr "Анадир"
+
+msgid "Aqtau"
+msgstr "Актау"
+
+msgid "Aqtobe"
+msgstr "Актюбінськ"
+
+msgid "Ashgabat"
+msgstr "Ашхабад"
+
+msgid "Ashkhabad"
+msgstr "Ашхабад"
+
+msgid "Baghdad"
+msgstr "Багдад"
+
+msgid "Baku"
+msgstr "Баку"
+
+msgid "Bangkok"
+msgstr "Бангкок"
+
+msgid "Beirut"
+msgstr "Бейрут"
+
+msgid "Bishkek"
+msgstr "Бішкек"
+
+msgid "Brunei"
+msgstr "Бруней"
+
+msgid "Calcutta"
+msgstr "Калькутта"
+
+msgid "Choibalsan"
+msgstr "Чойбалсан"
+
+msgid "Chongqing"
+msgstr "Чунцин"
+
+msgid "Chungking"
+msgstr "Чунцин"
+
+msgid "Colombo"
+msgstr "Коломбо"
+
+msgid "Dacca"
+msgstr "Дакка"
+
+msgid "Damascus"
+msgstr "Дамаск"
+
+msgid "Dhaka"
+msgstr "Дакка"
+
+msgid "Dili"
+msgstr "Ділі"
+
+msgid "Dubai"
+msgstr "Дубай"
+
+msgid "Gaza"
+msgstr "Газа"
+
+msgid "Harbin"
+msgstr "Харбін"
+
+msgid "Ho Chi Minh"
+msgstr "Хошимін"
+
+msgid "Hovd"
+msgstr "Ховд"
+
+msgid "Irkutsk"
+msgstr "Іркутськ"
+
+msgid "Istanbul"
+msgstr "Стамбул"
+
+msgid "Jakarta"
+msgstr "Джакарта"
+
+msgid "Jayapura"
+msgstr "Джаяпура"
+
+msgid "Jerusalem"
+msgstr "Єрусалим"
+
+msgid "Kabul"
+msgstr "Кабул"
+
+msgid "Kamchatka"
+msgstr "Камчатський"
+
+msgid "Karachi"
+msgstr "Карачі"
+
+msgid "Kashgar"
+msgstr "Кашгар"
+
+msgid "Katmandu"
+msgstr "Катманду"
+
+msgid "Kolkata"
+msgstr "Калькутта"
+
+msgid "Kuala Lumpur"
+msgstr "Куала-Лумпур"
+
+msgid "Kuching"
+msgstr "Кучінг"
+
+msgid "Macau"
+msgstr "Макао"
+
+msgid "Magadan"
+msgstr "Магадан"
+
+msgid "Makassar"
+msgstr "Макассар"
+
+msgid "Manila"
+msgstr "Маніла"
+
+msgid "Muscat"
+msgstr "Мускат"
+
+msgid "Nicosia"
+msgstr "Нікозія"
+
+msgid "Oral"
+msgstr "Орал"
+
+msgid "Phnom Penh"
+msgstr "Пномпень"
+
+msgid "Pontianak"
+msgstr "Понтіанак"
+
+msgid "Pyongyang"
+msgstr "Пхеньян"
+
+msgid "Qyzylorda"
+msgstr "Кизилорда"
+
+msgid "Rangoon"
+msgstr "Рангун"
+
+msgid "Riyadh"
+msgstr "Ер-Ріяд"
+
+msgid "Saigon"
+msgstr "Сайгон"
+
+msgid "Samarkand"
+msgstr "Самарканд"
+
+msgid "Seoul"
+msgstr "Сеул"
+
+msgid "Shanghai"
+msgstr "Шанхай"
+
+msgid "Taipei"
+msgstr "Тайбей"
+
+msgid "Tehran"
+msgstr "Тегеран"
+
+msgid "Tel Aviv"
+msgstr "Тель-Авів"
+
+msgid "Thimbu"
+msgstr "Тхімбу"
+
+msgid "Tokyo"
+msgstr "Токіо"
+
+msgid "Ujung Pandang"
+msgstr "Уджунг Панданг"
+
+msgid "Ulaanbaatar"
+msgstr "Улан-Батор"
+
+msgid "Ulan Bator"
+msgstr "Улан-Батор"
+
+msgid "Urumqi"
+msgstr "Урумчі"
+
+msgid "Vientiane"
+msgstr "В`єнтьян"
+
+msgid "Yakutsk"
+msgstr "Якутськ"
+
+msgid "Atlantic"
+msgstr "Атлантик"
+
+msgid "Azores"
+msgstr "Азорські острови"
+
+msgid "Canary"
+msgstr "Канари"
+
+msgid "Faeroe"
+msgstr "Фарери"
+
+msgid "Faroe"
+msgstr "Фарери"
+
+msgid "Jan Mayen"
+msgstr "Ян-Майєн"
+
+msgid "Madeira"
+msgstr "Мадейра"
+
+msgid "Reykjavik"
+msgstr "Рейк`явік"
+
+msgid "South Georgia"
+msgstr "Південна Джорджія"
+
+msgid "St Helena"
+msgstr "Святої Єлени"
+
+msgid "Stanley"
+msgstr "Стенлі"
+
+msgid "Adelaide"
+msgstr "Аделаїда"
+
+msgid "Brisbane"
+msgstr "Брісбен"
+
+msgid "Broken Hill"
+msgstr "Брокен-Хілл"
+
+msgid "Canberra"
+msgstr "Канберра"
+
+msgid "Currie"
+msgstr "Каррі"
+
+msgid "Darwin"
+msgstr "Дарвін"
+
+msgid "Eucla"
+msgstr "Евкла"
+
+msgid "Hobart"
+msgstr "Хобарт"
+
+msgid "Lindeman"
+msgstr "Ліндеман"
+
+msgid "Lord Howe"
+msgstr "Лорд-Хау"
+
+msgid "Melbourne"
+msgstr "Мельбурн"
+
+msgid "North"
+msgstr "Північ"
+
+msgid "NSW"
+msgstr "NSW"
+
+msgid "Perth"
+msgstr "Перт"
+
+msgid "Queensland"
+msgstr "Квінсленд"
+
+msgid "Sydney"
+msgstr "Сідней"
+
+msgid "Tasmania"
+msgstr "Тасманія"
+
+msgid "Victoria"
+msgstr "Вікторія"
+
+msgid "Yancowinna"
+msgstr "Янковінна"
+
+msgid "Greenwich"
+msgstr "Грінвіч"
+
+msgid "Zulu"
+msgstr "Zulu"
+
+msgid "Athens"
+msgstr "Афіни"
+
+msgid "Belfast"
+msgstr "Белфаст"
+
+msgid "Bucharest"
+msgstr "Бухарест"
+
+msgid "Chisinau"
+msgstr "Кишинів"
+
+msgid "Lisbon"
+msgstr "Лісабон"
+
+msgid "Ljubljana"
+msgstr "Любляна"
+
+msgid "Mariehamn"
+msgstr "Марієхамн"
+
+msgid "Podgorica"
+msgstr "Подгориця"
+
+msgid "Sarajevo"
+msgstr "Сараєво"
+
+msgid "Skopje"
+msgstr "Скоп`є"
+
+msgid "Tirane"
+msgstr "Тирана"
+
+msgid "Tiraspol"
+msgstr "Тирасполь"
+
+msgid "Uzhgorod"
+msgstr "Ужгород"
+
+msgid "Vaduz"
+msgstr "Вадуц"
+
+msgid "Vatican"
+msgstr "Ватикан"
+
+msgid "Vienna"
+msgstr "Відень"
+
+msgid "Warsaw"
+msgstr "Варшава"
+
+msgid "Zagreb"
+msgstr "Загреб"
+
+msgid "Zaporozhye"
+msgstr "Запоріжжя"
+
+msgid "Zurich"
+msgstr "Цюріх"
+
+msgid "Indian"
+msgstr "Індійський"
+
+msgid "Antananarivo"
+msgstr "Антананаріву"
+
+msgid "Chagos"
+msgstr "Чагос"
+
+msgid "Christmas"
+msgstr "Крісмас"
+
+msgid "Cocos"
+msgstr "Кокоси"
+
+msgid "Comoro"
+msgstr "Комори"
+
+msgid "Kerguelen"
+msgstr "Кергелен"
+
+msgid "Mahe"
+msgstr "Мае"
+
+msgid "Reunion"
+msgstr "Реюньон"
+
+msgid "Pacific"
+msgstr "Тихий океан"
+
+msgid "Apia"
+msgstr "Апіа"
+
+msgid "Auckland"
+msgstr "Окленд"
+
+msgid "Chatham"
+msgstr "Чатем"
+
+msgid "Easter"
+msgstr "Пасхи"
+
+msgid "Efate"
+msgstr "Ефате"
+
+msgid "Enderbury"
+msgstr "Эндербери"
+
+msgid "Fakaofo"
+msgstr "Факаофо"
+
+msgid "Funafuti"
+msgstr "Фунафуті"
+
+msgid "Galapagos"
+msgstr "Галапагоси"
+
+msgid "Gambier"
+msgstr "Гамб`є"
+
+msgid "Guadalcanal"
+msgstr "Гуадалканал"
+
+msgid "Honolulu"
+msgstr "Гонолулу"
+
+msgid "Johnston"
+msgstr "Джонстон"
+
+msgid "Kiritimati"
+msgstr "Кірітіматі"
+
+msgid "Kosrae"
+msgstr "Косрае"
+
+msgid "Kwajalein"
+msgstr "Кваджалейн"
+
+msgid "Majuro"
+msgstr "Маджуро"
+
+msgid "Marquesas"
+msgstr "Маркізи"
+
+msgid "Midway"
+msgstr "Мідуей"
+
+msgid "Norfolk"
+msgstr "Норфолк"
+
+msgid "Noumea"
+msgstr "Нумеа"
+
+msgid "Pago Pago"
+msgstr "Паго-Паго"
+
+msgid "Ponape"
+msgstr "Понапе"
+
+msgid "Port Moresby"
+msgstr "Порт-Морсбі"
+
+msgid "Rarotonga"
+msgstr "Раротонга"
+
+msgid "Saipan"
+msgstr "Сайпан"
+
+msgid "Tahiti"
+msgstr "Таїті"
+
+msgid "Tarawa"
+msgstr "Тарава"
+
+msgid "Tongatapu"
+msgstr "Тонгатапу"
+
+msgid "Truk"
+msgstr "Трук"
+
+msgid "Wake"
+msgstr "Уейк"
+
+msgid "Wallis"
+msgstr "Уолліс"
+
+msgid "Yap"
+msgstr "Яп"
+
+msgid "Russian Rouble"
+msgstr "Російський рубль"
+
+msgid "rub."
+msgstr "руб."
+
+msgid "r."
+msgstr "р."
+
+msgid "United States Dollar"
+msgstr "Долар США"
+
+msgid "Euro"
+msgstr "Євро"
+
+msgid "Ukrainian hryvnia"
+msgstr "Українська гривня"
+
+msgid "Belarusian ruble"
+msgstr "Білоруський рубль"
+
+msgid "Canadian dollar"
+msgstr "Канадський долар"
+
+msgid "Pound sterling"
+msgstr "Фунт стерлінгів"
+
+msgid "Israeli new shekel"
+msgstr "Ізраїльський новий шекель"
+
+msgid "Armenian dram"
+msgstr "Вірменський драм"
+
+msgid "Azerbaijani manat"
+msgstr "Азербайджанський манат"
+
+msgid "Kazakhstani tenge"
+msgstr "Казахстанський тенге"
+
+msgid "Moldovan leu"
+msgstr "Молдавський лей"
+
+msgid "Kyrgyzstani som"
+msgstr "Киргизький сом"
+
+msgid "Message"
+msgstr "Повідомлення"
+
+msgid "I agree to the"
+msgstr "Я згоден з"
+
+msgid "personal data protection policy"
+msgstr "політика захисту персональних даних"
+
+msgid "Embeds HTML block by ID"
+msgstr "Відображає вміст блоку за його ідентифікатором"
+
+msgid "Returns path to theme folder by <em>theme_id</em>"
+msgstr "Повертає шлях до папки теми дизайну за <em>theme_id</em>"
+
+msgid "Thank you!"
+msgstr "Дякуємо!"
+
+msgid "Proceed to checkout"
+msgstr "Продовжити замовлення"
+
+msgid "Checkout"
+msgstr "Оформлення замовлення"
+
+msgid "Shop"
+msgstr "Магазин"
+
+msgid "Blog"
+msgstr "Блог"
+
+msgid "Photos"
+msgstr "Фото"
+
+msgid "Photostream"
+msgstr "Фотопоток"
+
+msgid "Favorites"
+msgstr "Обране"
+
+msgid "Your message has been sent."
+msgstr "Ваше повідомлення було відправлено."
+
+msgid "Facebook"
+msgstr "Фейсбук"
+
+msgid "Twitter"
+msgstr "Твіттер"
+
+msgid "VK"
+msgstr "VK"
+
+msgid "Instagram"
+msgstr "Instagram"
+
+msgid "Social"
+msgstr "Соціальні"
+
+msgid "Contact us"
+msgstr "Зв`яжіться з нами"
+
+msgid "Submit"
+msgstr "Відправити"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Subscribe to our email newsletter"
+msgstr "Підписатися на наше електронне розсилання"
+
+msgid "Follow us"
+msgstr "Стежте за нами"
+
+msgid "Thank you! We’ll keep you posted."
+msgstr "Дякуємо! Ми будемо тримати вас в курсі."
+
+msgid "View cart"
+msgstr "Перегляд кошика"
+
+msgid "My profile"
+msgstr "Мій профіль"
+
+msgid "Contact information successfully updated!"
+msgstr "Контактні дані успішно оновлено!"
+
+msgid "Change password"
+msgstr "Змінити пароль"
+
+msgid "Connected accounts"
+msgstr "Підключені облікові записи"
+
+msgid "Connect this account to your social network accounts so next time you can log in without entering your password:"
+msgstr "Підключіть цей акаунт у соціальній мережі, аби наступного разу увійти в систему без введення пароля:"
+
+msgid "Confirmation link has been resent."
+msgstr "Посилання для підтвердження було відправлене."
+
+msgid "The requested resource is not available."
+msgstr "Запитаний ресурс недоступний."
+
+msgid "You have successfully confirmed your email."
+msgstr "Ви успішно підтвердили вашу адресу електронної пошти."
+
+msgid "A confirmation link has been sent to you by email. Please click this link to confirm your signup and to sign in."
+msgstr "Посилання для підтвердження було надіслано вам електронною поштою. Будь-ласка, перейдіть за посиланням для підтвердження вашої реєстрації, і також для входу."
+
+msgid "Use these meta tags and default product image for social sharing too"
+msgstr "Використовувати ці мета-теги і зображення продукту для соцмережі за замовчуванням"
+
+msgid "Customize the rest of theme settings in your Webasyst backend > <i>select app</i> > Design."
+msgstr "Налаштуйте решту параметрів тему в бекенді вашого Webasyst → <i>оберіть додаток</i> → розділ «Дизайн»."
+
+msgid "Bytes"
+msgstr "Байт"
+
+msgid "KBytes"
+msgstr "КБ"
+
+msgid "MBytes"
+msgstr "МБ"
+
+msgid "GBytes"
+msgstr "ГБ"
+
+msgid "Extra workday"
+msgstr "Додатковий робочий день"
+
+msgid "Extra day off"
+msgstr "Додатковий вихідний день"
+
+msgid "Comma"
+msgstr "Кома"
+
+msgid "Semicolon"
+msgstr "Крапка з комою"
+
+msgid "Tab"
+msgstr "Табуляція"
+
+msgid "Settings groups"
+msgstr "Групи налаштувань"
+
+msgid "These images were not found in archive: "
+msgstr "Ці зображення не було знайдено в архіві: "
+
+msgid "May be displayed on websites and in notifications."
+msgstr "Може бути показано на сайтах та у повідомленнях."
+
+msgid "May be used on websites and in notifications."
+msgstr "Може бути використано на сайтах та у повідомленнях."
+
+msgid "Email transport"
+msgstr "Транспорт email"
+
+msgid "Debug mailer"
+msgstr "Тестовий відправник"
+
+msgid "When this option is selected messages are sent by the default transport specified in the Webasyst framework configuration."
+msgstr "Якщо обрано цей варіант, розсилання будуть надсилатися транспортом за замовчуванням, обраним в конфігурації фреймворка Webasyst."
+
+msgid "Your website, blog or company URL (will be displayed as a link below the company name in the top left corner)."
+msgstr "Адреса вашого сайту або блогу (буде відображатися у вигляді посилання під назвою компанії в лівому верхньому кутові)."
+
+msgid "Allow “Remember me” option in Webasyst backend authorization form"
+msgstr "Можна включити «Запам`ятати мене» при вході у Вебасіст"
+
+msgid "Login only"
+msgstr "Тільки логін"
+
+msgid "Login or email"
+msgstr "Логін або email"
+
+msgid "Gettext (recommended)"
+msgstr "Gettext (рекомендується)"
+
+msgid "Clear"
+msgstr "Очистити"
+
+msgid "CDN address"
+msgstr "Адреса CDN"
+
+msgid "Authorization type"
+msgstr "Тип авторизації"
+
+msgid "After one unsuccessful attempt"
+msgstr "Після однієї невдалої спроби"
+
+msgid "Placeholder in the login field"
+msgstr "Заповнювач в полі логіну"
+
+msgid "Communication channel"
+msgstr "Канал зв`язку"
+
+msgid "Phone number"
+msgstr "Телефон"
+
+msgid " (Copy %s)"
+msgstr " (Копіювати %s)"
+
+msgid "Enter a valid phone number"
+msgstr "Введіть номер телефону"
+
+msgid "Wait for specified number of seconds before sending next one-time password"
+msgstr "Чекати вказану кількість секунд перед відправкою наступного одноразового пароля"
+
+msgid "Selectable (checkboxes)"
+msgstr "Перелік (checkboxes)"
+
+msgid "Date (input)"
+msgstr "Дата (input)"
+
+msgid "Select "
+msgstr "Обрати "
+
+msgid "Radio Select"
+msgstr "Обрати радіокнопкою"
+
+msgid "IF"
+msgstr "Якщо"
+
+msgid "You have succesully signed up. Please check new mail at <strong>%s</strong>, we have sent you a message with your password."
+msgstr "Ви успішно зареєструвалися. Перевірте, будь ласка, нові листи у <strong>%s</strong>: ми направили вам повідомлення із вашим паролем."
+
+msgid "Some files could not be deleted."
+msgstr "Деякі файли видалити не вдалося."
+
+msgid "Shipping plugin class “%s” not found."
+msgstr "Клас “%s” плагіна доставки не знайдено."
+
+msgid "Payment plugin class “%s” not found."
+msgstr "Клас “%s” плагіна оплати не знайдено."
+
+msgid "SMS plugin class “%s” not found."
+msgstr "Клас “%s” плагіна SMS не знайдено."
+
+msgid "Web push notifications"
+msgstr "Web-push-повідомлення"
+
+msgid "Web push notifications settings"
+msgstr "Налаштування web-push-повідомлень"
+
+msgid "Select and configure a service for sending web push notifications."
+msgstr "Оберіть та налаштуйте службу для надсилання web-push-повідомлень."
+
+msgid "Web push notifications service"
+msgstr "Служба web-push-повідомлень"
+
+msgid "No web push notifications services available"
+msgstr "Немає доступних служб web-push-повідомлень"
+
+msgid "Administrative center"
+msgstr "Адміністративний центр"
+
+msgid "Account ID"
+msgstr "ID акаунта"
+
+msgid "Get an account ID <a href=\"https://pushcrew.com/admin/app.php#/settings/account/general\" target=\"_blank\">in your profile</a>."
+msgstr "Отримайте ID акаунта <a href=\"https://pushcrew.com/admin/app.php#/settings/account/general\" target=\"_blank\">у вашому профілі</a>."
+
+msgid "API token"
+msgstr "Токен API"
+
+msgid "Get an API token <a href=\"https://pushcrew.com/admin/app.php#/settings/account/general\" target=\"_blank\">in your profile</a>."
+msgstr "Отримайие токен API <a href=\"https://pushcrew.com/admin/app.php#/settings/account/general\" target=\"_blank\">у вашому профілі</a>."
+
+msgid "OneSignal User Auth Key"
+msgstr "Ключ авторизації користувача OneSignal"
+
+msgid "OneSignal User Auth Key is required."
+msgstr "Необхідний ключ авторизації користувача OneSignal."
+
+msgid "A OneSignal account is required to notify backend users."
+msgstr "Обліковий запис OneSignal потрібен, аби надсилати повідомлення користувачам бекенду."
+
+msgid "Each domain used by your backend users has to be configured separately in OneSignal account."
+msgstr "Кожен домен, який використовується у якості бекенду, повинен бути налаштований окремо у обліковому записі OneSignal."
+
+msgid "Connected"
+msgstr "Підключено"
+
+msgid "Not connected"
+msgstr "Не підключено"
+
+msgid "To add a different domain, open Webasyst backend on that domain and save settings again."
+msgstr "Аби додати інший домен, відкрийте бекенд Webasyst на цьому домені та знову збережіть налаштування."
+
+msgid "Do not use"
+msgstr "Не використовувати"
+
+msgid "Installed themes"
+msgstr "Встановлені теми дизайну"
+
+msgid "Used"
+msgstr "Використовується"
+
+msgid "Not used"
+msgstr "Не використовується"
+
+msgid "No installed themes."
+msgstr "Немає встановлених тем дизайну."
+
+msgid "Server key"
+msgstr "Ключ сервера"
+
+msgid "Sender ID"
+msgstr "Ідентифікатор відправника"
+
+msgid "Copy a <strong>Server key</strong> and a <strong>Sender ID</strong> under “Cloud Messaging” tab in <a href=\"https://console.firebase.google.com/project/\" target=\"_blank\">project settings<i class=\"icon16 new-window\"></i></a>."
+msgstr "Скопіюйте <strong>ключ сервера</strong> та <strong>ідентифікатор відправника</strong> на вкладці “Cloud Messaging” у <a href=\"https://console.firebase.google.com/project/\" target=\"_blank\">налаштуваннях проекту<i class=\"icon16 new-window\"></i></a>."
+
+msgid "Show %d more"
+msgstr "Показати ще %d"
+
+msgid "Buy theme"
+msgstr "Придбати тему дизайну"
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d година"
+msgstr[1] "%d години"
+msgstr[2] "%d годин"
+
+msgid "Scheduled tasks"
+msgstr "Заплановані завдання"
+
+msgid "The app does not support scheduled updating of plugin data. This may slow down the plugin operation."
+msgstr "Цей додаток не підтримує оновлення данних плагіну за розкладом. Це може зменшити швидкість роботи плагіну."
+
+msgid "The data update of %s failed."
+msgstr "Оновлення даних %s не вдалося."
+
+msgid "Most recent data update was attempted on %s."
+msgstr "Найостанніше успішне оновлення даних сталося %s."
+
+msgid "Most recent data update occurred on %s."
+msgstr "Найостанніше оновлення даних сталося %s."
+
+msgid "Data update was never run for this plugin. Check the server scheduler settings."
+msgstr "Оновлення даних для цього плагіну ще не виконувалось. Перевірте налаштування планувальника на сервері."
+
+msgid "Data update was never run for this plugin."
+msgstr "Оновлення даних для цього плагіну ще не виконувалось."
+
+msgid "Recommended data updating interval (%s) was disrupted."
+msgstr "Рекомендований інтервал оновлення даних (%s) перервано."
+
+msgid "Preview on my website"
+msgstr "Попередньо переглянути на моєму сайті"
+
+msgid "Your website will display this trial theme for you only."
+msgstr "Пробна тема дизайну на сайті буде видимою тільки вам."
+
+msgid "Other visitors will keep seeing existing theme with no change."
+msgstr "Інші користувачі будуть бачити існуючу тему дизайну без змін."
+
+msgid "Trial theme"
+msgstr "Пробна тема дизайну"
+
+msgid "Please sign up at %s and copy <b>User Auth Key</b> from <b>Account &amp; API Keys</b> page."
+msgstr "Зареєструйтеся за адресою %s та скопіюйте <b>User Auth Key</b> зі сторінки <b>Account &amp; API Keys</b>."
+
+msgid "Add emoji support"
+msgstr "Додати підтримку емодзі"
+
+msgid "For emoji support to be enabled, tables in your database need to be converted to another encoding."
+msgstr "Аби увімкнути підтримку emoji, таблиці у вашій базі даних мають бути перетворені в інше кодування."
+
+msgid "Click the button below to start the conversion."
+msgstr "Натисніть на кнопку нижче, аби почати перетворення."
+
+msgid "Cache is temporary data that help reduce extensive load on your server. Clear cache to update those data, if you have encountered a malfunction."
+msgstr "Кеш — це тимчасові дані, що допомагають знизити підвищене навантаження на ваш сервер. Якщо ви натрапили на помилку, очистіть кеш, аби оновити ці дані."
+
+msgid "Sorry, we cannot recover a password for these contact data. Please refer to your system administrator."
+msgstr "Вибачте, але ми не можемо відновити пароль для цих контактів. Зверніться, будь ласка, до свого системного адміністратора."
+
+msgid "Yandex.Maps returns error “%s”"
+msgstr "Яндекс.Карти повертають помилку “%s”"
+
+msgid "Yandex.Maps returns error “%s”, API key is invalid. Try to fix it in the <a href=\"https://developer.tech.yandex.ru/services/\">developer dashboard</a>."
+msgstr "Яндекс.Карти повертають помилку “%s”, ключ API недійсний. Спробуйте виправити це у <a href=\"https://developer.tech.yandex.ru/services/\">контрольній панелі розробника</a>\n."
+
+msgid "Yandex.Maps returns error “%s”, daily rate limit is exceeded."
+msgstr "Яндекс.Карти повертають помилку “%s”, денний ліміт вичерпано."
+
+msgid "Yandex.Maps returns error “%s”, probably API key is invalid or daily rate limit is exceeded."
+msgstr "Яндекс.Карти повертають помилку “%s”: ключ API недійсний, або денний ліміт вичерпано."
+
+msgid "To learn more details about this error, enable the debug mode in Settings app and reload this page."
+msgstr "Аби дізнатися більше про цю помилку, увімкніть режим налагодження в додатку налаштування та оновіть цю сторінку."
+
+msgid "Saving error"
+msgstr "Помилка при збереженні"
+
+msgid "Enter digits only"
+msgstr "Введіть тільки цифри"
+
+msgid "SMS notifications must be enabled."
+msgstr "SMS-повідомлення має бути увімкнено."
+
+msgid "Unknown error"
+msgstr "Невідома помилка"
+
+msgid "Enable authorization by phone number"
+msgstr "Увімкніть авторизацію за номером телефону"
+
+msgid "No SMS notifications template group is selected."
+msgstr "Не обрано групу шаблонів SMS-повідомлень."
+
+msgid "National direct-dialing code (NDD)"
+msgstr "Національній код прямого виклику (National direct-dialing code, NDD)"
+
+msgid "Enter the NDD code which is used for making calls within your country."
+msgstr "Вкажіть код прямого виклику, який використовується для дзвінків по вашій країні."
+
+msgid "The NDD, if specified, will be replaced with the country code in website visitors’ phone numbers."
+msgstr "Код прямого виклику, якщо вказано, буде замінено кодом країни у номерах телефонів користувачів сайту."
+
+msgid "Country code"
+msgstr "Код країни"
+
+msgid "Enter your country’s phone number code to be used in website visitors’ phone numbers instead of the NDD."
+msgstr "Введіть телефонний код вашої країни, який буде використовуватись у номерах телефонів користувачів замість коду прямого виклику."
+
+msgid "Specified URL already exists."
+msgstr "Вказаний URL вже існує."
+
+msgid "Specified password is too long."
+msgstr "Вказаний пароль занадто довгий."
+
+msgid "Some web-hosting companies allow sending email messages by means of this transport only. If it is required to specify additional parameters for the mail() function enter them below. The default parameters are -f%s."
+msgstr "Деякі хостингові компанії дозволяють надсилати email-повідомлення тільки цим транспортом. Якщо для функції mail() потрібні додаткові параметри — введіть їх нижче. Параметри за замочуванням: -f%s."
+
+msgid "<strong>Enable sign in with Webasyst ID</strong>, a universal authorization option that unites Webasyst Customer Center and backend sign-in on your custom domains. Webasyst ID allows you to use all Webasyst apps, sites, and services, and to avoid the use of different passwords on various domains."
+msgstr "<strong>Увімкніть вхід з Webasyst ID</strong> — універсальною опцією авторизації, що об'єднує вхід до Центру замовника Webasyst та у админістративну частину ваших сайтів. Webasyst ID дозволяє вам використовувати додатки, сайти та сервіси Webasyst без необхідності тримати різні паролі."
+
+msgid "Enable&nbsp;Webasyst&nbsp;ID — it’s free and secure!"
+msgstr "Увімкніть Webasyst ID — це безкоштовно та безпечно!"
+
+msgid "How it works?"
+msgstr "Як це працює?"
+
+msgid "What is Webasyst ID"
+msgstr "Що таке Webasyst ID"
+
+msgid "1. Customer Center &rarr; Webasyst ID"
+msgstr "Центр замовника &rarr; Webasyst ID"
+
+msgid "Based on a Webasyst Customer Center account, Webasyst ID is a unified secure authorization, <strong>a single password</strong> for all Webasyst apps, sites, and backends — including those that work on your custom domains."
+msgstr "Webasyst ID, що базується на Центрові замовника, це універсальна та безпечна авторизація, <strong>єдиний пароль </strong> для усіх додатків, сервісів та панелей Webasyst — у тому числі тих, які розташовані на ваших доменах."
+
+msgid "2. Start using Webasyst ID"
+msgstr "2. Почати використовувати Webasyst ID"
+
+msgid "To enable Webasyst ID, simply sign in with your Webasyst Customer Center account <strong>just once</strong>. The system will connect everything automatically and will then allow you to quickly sign into your backend using your single Webasyst ID password. If you do not remember your Customer Center account details, simply <a href=\"https://www.webasyst.com/my/forgotpassword/\">recover the password</a> or <a href=\"https://www.webasyst.com/my/signup/\">create an account for free</a>."
+msgstr "Аби увімкнути Webasyst ID, достатньо  <strong>одного разу</strong> увійти до Центра замовника Webasyst. Система пов'яже усе автоматично та дозволить вам швидко входити до вашого бекенду, використовуючи ваш єдиний пароль від Webasyst ID. Якщо ви не пам'ятаєте подробиці про ваш Центр замовника, просто  <a href=\"https://www.webasyst.ru/my/forgotpassword/\">відновіть пароль</a> або <a href=\"https://www.webasyst.ru/my/signup/\">створіть новий безкоштовний акаунт</a>."
+
+msgid "3. Personal Webasyst ID for each user"
+msgstr "3. Персональний Webasyst ID для кожного користувача"
+
+msgid "If you are working together with your team then each of your teammates will be able to use their own Webasyst ID. All access rights remain unchanged while users get an option to log in with a new single password."
+msgstr "Якщо ви працюєте сумісно з командою, тоді у кожного з її учасників буде можливість використовувати власний Webasyst ID. Усі права доступу залишаються незмінними, а у користувачів з'являється можливість заходити з новим єдиним паролем."
+
+msgid "4. Why this is useful"
+msgstr "4. Чому це корисно"
+
+msgid "With Webasyst ID, it is much more convenient to use the entire Webasyst <strong>ecosystem of apps and plugins</strong>, communicate with developers and get support, manage your Webasyst customer assets such as software licenses, cloud accounts, domain names, and purchases. A single account for everything."
+msgstr "За допомогою Webasyst ID набагато зручніше використовувати всю <strong> екосистему додатків та плагінів </strong>, спілкуватися з розробниками та отримувати підтримку, керувати своїми клієнтськими активами — такими як ліцензії на програмне забезпечення, хмарні облікові записи, доменні імена, та покупки. Єдиний акаунт для усього."
+
+msgid "5. Will I retain the usual login option?"
+msgstr "5. Чи залишиться в мене можливість звичайного логіну?"
+
+msgid "Yes, you will be able to use it as before. Simply enter your user name and password as usual, without selecting the Webasyst ID login option."
+msgstr "Так, ви зможете використовувати її, як і раніше. Просто введіть ім'я користувача та пароль, не обираючи опцію Webasyst ID."
+
+msgid "Next"
+msgstr "Далі"
+
+msgid "Connect"
+msgstr "Підключити"
+
+msgid "Finish"
+msgstr "Закінчити"
+
+msgid "Sign in with Webasyst ID"
+msgstr "Вхід із Webasyst ID"
+
+msgid "has been successfully connected to account"
+msgstr "було успішно підключено до акаунту"
+
+msgid "Got it"
+msgstr "Зрозуміло"
+
+msgid "Will close in"
+msgstr "Закриється"
+
+msgid "sec"
+msgstr "сек"
+
+msgid "Change connection to a new user?"
+msgstr "Змінити підключення на нового користувача?"
+
+msgid "Confirm"
+msgstr "Підтвердити"
+
+msgid "Leave as it is"
+msgstr "Залишити як є"
+
+msgid "Disable sign in with Webasyst ID"
+msgstr "Вимкнути вхід з Webasyst ID"
+
+msgid "If you disable sign in with Webasyst ID, all configured user associations with Webasyst ID accounts will be deleted. Users will not be able to sign into the control panel with Webasyst ID."
+msgstr "Якщо ви вимкнете вхід за допомогою Webasyst ID, усі налаштовані зв'язки користувачів з обліковими записами Webasyst ID буде видалено. Користувачі не зможуть увійти в панель керування сайту за допомогою Webasyst ID."
+
+msgid "Sign in with Webasyst ID has been successfully disabled"
+msgstr "Вхід за допомогою Webasyst ID було вимкнено"
+
+msgid "Fail to disable sign in with Webasyst ID"
+msgstr "Не вдалося вимкнути вхід із Webasyst ID"
+
+msgid "Disconnect"
+msgstr "Від'єднати"
+
+msgid "Allow users to use their Webasyst ID accounts to sign into the control panel."
+msgstr "Дозволити користувачам використовувати свій Webasyst ID для входу у контрольну панель."
+
+msgid "More info"
+msgstr "Більше інформації"
+
+msgid "is enabled"
+msgstr "увімкнено"
+
+msgid "Disable"
+msgstr "Вимкнути"
+
+msgid "is disabled"
+msgstr "вимкнено"
+
+msgid "Enable"
+msgstr "Увімкнути"
+
+msgid "Connected: all team users"
+msgstr "Під'єднано: усі користувачі команди"
+
+msgid "Last sign-in with Webasyst ID"
+msgstr "Останній вхід із Webasyst ID"
+
+msgid "Connected users"
+msgstr "Під'єднані користувачі"
+
+msgid "No users have connected Webasyst ID"
+msgstr "Жоден користувач не підключив Webasyst ID"
+
+msgid "Connected: ** from %d team user"
+msgid_plural "Connected: ** from %d team users"
+msgstr[0] "Підключено: ** з %d користувачів команди"
+msgstr[1] "Підключено: ** з %d користувачів команди"
+msgstr[2] "Підключено: ** з %d користувачів команди"
+
+msgid "Checking the sending of SMS messages"
+msgstr "Перевірка відправки SMS-повідомлень"
+
+msgid "Checking the sending of email messages"
+msgstr "Перевірка відправки email"
+
+msgid "Enable sign in with Webasyst ID"
+msgstr "Увімкнути вхід із Webasyst ID"
+
+msgid "Connecting to the Webasyst ID Authentication Server"
+msgstr "Під'єднання до серверу аутентифікації Webasyst ID"
+
+msgid "Sign in with Webasyst ID has been successfully enabled"
+msgstr "Вхід з Webasyst ID увімкнено"
+
+msgid "Connect my Webasyst ID account"
+msgstr "Під'єднати мій акаунт Webasyst ID"
+
+msgid "Fail to connect to Webasyst ID Authentication Server"
+msgstr "Під'єднання до серверу аутентифікації Webasyst ID не вдалося"
+
+msgid "Database indices and AUTO_INCREMENT repair tool"
+msgstr "Інструмент для ремонту індексів та AUTO_INCREMENT"
+
+msgid "Restoring of missing database indices and AUTO_INCREMENT values"
+msgstr "Відновлення відсутніх індексів бази даних та значень AUTO_INCREMENT"
+
+msgid "Table name"
+msgstr "Назва таблиці"
+
+msgid "Query"
+msgstr "Запит"
+
+msgid "Fix selected tables"
+msgstr "Відремонтувати обрані таблиці"
+
+msgid "Indices and AUTO_INCREMENT values will be restored <strong>only for selected tables</strong>."
+msgstr "Індекси та значення AUTO_INCREMENT буде відновлено <strong>тільки для обраних таблиць</strong>."
+
+msgid "Fix all listed tables"
+msgstr "Відремонтувати усі показані таблиці"
+
+msgid "Indices and AUTO_INCREMENT values will be restored for <strong>all tables listed on this page</strong>."
+msgstr "Індекси та значення AUTO_INCREMENT буде відновлено <strong>для усіх показаних на цій сторінці таблиць</strong>."
+
+msgid "Update all database tables"
+msgstr "Оновити усі таблиці бази даних"
+
+msgid "Indices and AUTO_INCREMENT values will be <strong>removed and restored for all tables in the database</strong>."
+msgstr "Індекси та значення AUTO_INCREMENT буде відновлено <strong>для усіх таблиць у цій базі даних</strong>."
+
+msgid "No errors found."
+msgstr "Помилок не знайдено."
+
+msgid "Go to the Webasyst Customer Center"
+msgstr "Перейти до Центру замовника Webasyst"
+
+msgid "User revoked permission to log into the Webasyst Customer Center"
+msgstr "Користувач відкликав дозвіл на вхід у Центр замовника Webasyst"
+
+msgid "Failed to log into the Webasyst Customer Center"
+msgstr "Не вдалося увійти до Центру замовника Webasyst"
+
+msgid "Sign in and connect Webasyst ID"
+msgstr "Увійти та під'єднати Webasyst ID"
+
+msgid "Sign in without Webasyst ID"
+msgstr "Увійти без Webasyst ID"
+
+msgid "Sign in with"
+msgstr "Увійти через"
+
+msgid "What is it?"
+msgstr "Що це?"
+
+msgid "Webasyst ID account"
+msgstr "Акаунт Webasyst ID"
+
+msgid "is not connected to any control panel user"
+msgstr "не під'єднано до жодного користувача панелі управління"
+
+msgid "Sign in with a login name or email address to connect the account:"
+msgstr "Увійдіть з логіном або адресою email, аби під'єднати акаунт:"
+
+msgid "Failed to get Webasyst ID account data from the Webasyst resource server."
+msgstr "Не вдалося отримати дані про акаунт Webasyst ID з серверу Webasyst."
+
+msgid "Unknown error from Webasyst ID server."
+msgstr "Невідома помилка на серверові Webasyst ID."
+
+msgid "Anti-CSRF protection."
+msgstr "Захист CSRF."
+
+msgid "This may be caused by a server error, or by a limitation on the allowed number of POST variables or their values size. Try to increase the values of “max_input_vars” and “post_max_size” parameters in PHP configuration or other similar parameters in you web server configuration."
+msgstr "Це може бути спричинено помилкою сервера, або обмеження дозволеної кількості змінних POST або їх значень. Спробуйте підвищити значення параметрів “max_input_vars” та “post_max_size” у налаштуваннях PHP або виконати інші налаштування із тим же призначенням."
+
+msgid "This is a custom file and it will not be affected by the update."
+msgstr "Це користувальницький файл, його не буде змінено оновленням."
+
+msgid "The design theme preview will not work on your domain name <strong id=\"wa-preview-domain\"></strong> if it is not available via HTTPS protocol. If so then please either install an SSL certificate for your domain name or log into your Webasyst backend on that domain to preview a design theme."
+msgstr "Попередній перегляд теми дизайну не буде працювати на вашому домені <strong id=\"wa-preview-domain\"></strong> , якщо він недоступний по протоколу HTTPS. Якщо так — встановіть SSL-сертифікат для свого домена або увійдіть у бекенд свого домену, аби попередньо переглянути тему дизайна."
+
+msgid "This design theme does not have its own settings. Try to export the parent theme’s settings."
+msgstr "У цієї теми дизайна немає власних налаштувань. Спробуйте експортувати налаштування батьківскої теми."
+
+msgid "A password cannot be empty."
+msgstr "Пароль не може бути порожнім."
+
+msgid "%d invitation email has been sent."
+msgid_plural "%d invitation emails have been sent."
+msgstr[0] "Надіслано %d електронний лист із запрошенням."
+msgstr[1] "Надіслано %d електронних листи із запрошенням."
+msgstr[2] "Надіслано %d електронних листів із запрошенням."
+
+msgid "The system sender email address is not configured. Save it in “<a href=\"%s\">Email settings</a>” section."
+msgstr "Адресу електронної пошти системного відправника не налаштовано. Збережіть її в розділі <a href=\"%s\">Налаштування email</a>."
+
+msgid "User not found."
+msgstr "Користувача не знайдено."
+
+msgid "Sending failure."
+msgstr "Помилка відправки."
+
+msgid "Upgrade to Webasyst ID"
+msgstr "Оновити до Webasyst ID"
+
+msgid "Connect Webasyst ID"
+msgstr "Під'єднати Webasyst ID"
+
+msgid "What is Webasyst ID?"
+msgstr "Що таке Webasyst ID?"
+
+msgid "It is your personal account in Webasyst Customer Center, via which you can quickly access Webasyst apps either in the Cloud or on your own server."
+msgstr "Це ваш особистий обліковий запис у Центрі замовника Webasyst, за допомогою якого ви можете швидко отримати доступ до програм Webasyst або в хмарі, або на власному сервері."
+
+msgid "With Webasyst ID, it is convenient to access your apps and data, communicate with software developers, contact Webasyst support team, and manage your Webasyst client assets such as software licenses, Cloud accounts, or domain names. It is a universal login option to use all Webasyst apps and services."
+msgstr "За допомогою ідентифікатора Webasyst зручно отримувати доступ до ваших програм і даних, спілкуватися з розробниками програмного забезпечення, звертатися до служби підтримки Webasyst і керувати клієнтськими активами Webasyst, такими як ліцензії на програмне забезпечення, облікові записи хмари або доменні імена. Це універсальний варіант входу для використання всіх веб-програм і сервісів."
+
+msgid "How to use it?"
+msgstr "Як його використовувати?"
+
+msgid "Simply click the Webasyst login button, which will appear on your website’s backend authorization page. You won’t even need to enter a password if you recently signed into your Customer Center account."
+msgstr "Просто натисніть кнопку входу Webasyst, яка з’явиться на сторінці авторизації вашого веб-сайту. Вам навіть не потрібно буде вводити пароль, якщо нещодавно ви входили у свій обліковий запис Центру замовника."
+
+msgid "Will I be able to use again the ordinary login option, without Webasyst ID?"
+msgstr "Чи зможу я знову використовувати звичайний вхід без Webasyst ID?"
+
+msgid "Yes, just enter your login name and password as usual."
+msgstr "Так, просто введіть ваш логін та пароль, як зазвичай."
+
+msgid "%s prompts you to upgrade your account on %s with the Webasyst ID secure login option — a single sign in system across all Webasyst apps, sites, and services. Confirm the upgrade for %s by linking it with your existing Webasyst ID account or by creating a new one. It’s free and secure!"
+msgstr "%s пропонує вам оновити свій обліковий запис на %s за допомогою опції безпечного входу Webasyst ID - системи єдиного входу в усіх додатках, сайтах та службах Webasyst. Підтвердьте оновлення для %s, зв’язавши його з наявним обліковим записом Webasyst ID або створивши новий. Це безкоштовно та безпечно!"
+
+msgid "for login as %s%s"
+msgstr "щоб увійти як %s%s"
+
+msgid "<strong>Enable sign-in with Webasyst ID</strong>, a universal authorization option that unites Webasyst Customer Center and backend sign-in on your custom domains. Webasyst ID allows you to use all Webasyst apps, sites, and services, and to avoid the use of different passwords on various domains."
+msgstr "<strong>Увімкніть вхід з Webasyst ID</strong> — універсальною опцією авторизації, що об'єднує вхід до Центру замовника Webasyst та у админістративну частину ваших сайтів. Webasyst ID дозволяє вам використовувати додатки, сайти та сервіси Webasyst без необхідності тримати різні паролі."
+
+msgid "Enable&nbsp;Webasyst&nbsp;ID on %s — it’s free and secure!"
+msgstr "Увімкніть Webasyst ID — це безкоштовно та безпечно!"
+
+msgid "How does it work?"
+msgstr "Як це працює?"
+
+msgid "<strong>Upgrade your user account (%s) to Webasyst ID</strong>, a unified authorization across all Webasyst apps, sites, and services. It’s free, secure, and takes just a minute."
+msgstr "<strong>Оновіть свій обліковий запис користувача (%s) до Webasyst ID</strong> - єдиної опції авторизації для усіх програм, веб-сайтів та служб Webasyst. Це безкоштовно, безпечно та займає лише хвилину."
+
+msgid "Enable&nbsp;Webasyst&nbsp;ID for %s now!"
+msgstr "Увімкнути &nbsp;Webasyst&nbsp;ID для %s зараз!"
+
+msgid "Based on a Webasyst Customer Center account, Webasyst ID is a unified secure authorization option, <strong>a single password</strong> for all Webasyst apps, sites, and backends — including those that work on your own domains."
+msgstr "Webasyst ID, що базується на Центрові замовника, це універсальна та безпечна авторизація, <strong>єдиний пароль</strong> для усіх додатків, сервісів та панелей Webasyst — у тому числі тих, які розташовані на ваших доменах."
+
+msgid "Sign-in with Webasyst ID"
+msgstr "Увійти із Webasyst ID"
+
+msgid "Sorry, the login has failed."
+msgstr "Шкодуємо, але авторизація не вдалася."
+
+msgid "Webasyst ID account <i class=\"icon16 userpic20\" style=\"background-image: url(%s);\"></i> <strong>%s</strong> is already connected to user <i class=\"icon16 userpic20\" style=\"background-image: url(%s);\"></i> <strong>%s</strong>"
+msgstr "Акаунт Webasyst ID <i class=\"icon16 userpic20\" style=\"background-image: url(%s);\"></i> <strong>%s</strong> вже під'єднано до користувача <i class=\"icon16 userpic20\" style=\"background-image: url(%s);\"></i> <strong>%s</strong>"
+
+msgid "If you need to change the connection of your Webasyst ID account to user <strong>%s</strong>, press “Confirm”."
+msgstr "Якщо вам потрібно змінити підключення вашого облікового запису Webasyst ID на користувача <strong>%s</strong>, натисніть “Підтвердити”."
+
+msgid "Disable sign-in with Webasyst ID"
+msgstr "Вимкнути вхід з Webasyst ID"
+
+msgid "If you disable sign-in with Webasyst ID, all configured user associations with Webasyst ID accounts will be deleted. Users will not be able to sign into the backend with Webasyst ID."
+msgstr "Якщо ви вимкнете вхід за допомогою Webasyst ID, усі налаштовані зв'язки користувачів з обліковими записами Webasyst ID буде видалено. Користувачі не зможуть увійти в панель керування сайту за допомогою Webasyst ID."
+
+msgid "Sign-in with Webasyst ID has been disabled."
+msgstr "Вхід за допомогою Webasyst ID було вимкнено."
+
+msgid "Failed to disable sign-in with Webasyst ID."
+msgstr "Не вдалося вимкнути вхід із Webasyst ID."
+
+msgid "Disable Webasyst ID for everyone"
+msgstr "Вимкнути вхід з Webasyst ID для всіх"
+
+msgid "Disable Webasyst ID sign-in for all users"
+msgstr "Вимкнути вхід з Webasyst ID для усіх користувачів"
+
+msgid "<strong>Sign-in with Webasyst ID</strong> is a universal authorization option that unites Webasyst Customer Center and sign-in to Webasyst backends on your own domains."
+msgstr "<strong>Вхід за допомогою Webasyst ID</strong> - це універсальний варіант авторизації, який об’єднує Центр замовника Webasyst та вхід у панель управління Webasyst на власних доменах."
+
+msgid "Webasyst ID allows you to use all Webasyst apps, sites, and services, and to avoid the use of different passwords on various domains."
+msgstr "Webasyst ID дозволяє використовувати всі програми, веб-сайти та служби Webasyst, а також уникати використання різних паролів у різних доменах."
+
+msgid "Pending upgrade to Webasyst ID"
+msgstr "Очікується оновлення до Webasyst ID"
+
+msgid "Sending invitations. Please don’t leave this page until the process is completed."
+msgstr "Запрошення надсилаються. Будь ласка, не залишайте цю сторінку, поки процес не буде завершено."
+
+msgid "Awaiting the user to confirm"
+msgstr "Очікується підтвердження користувача"
+
+msgid "Connect Webasyst ID for my account"
+msgstr "Під'єднати мій акаунт Webasyst ID"
+
+msgid "Email upgrade instructions"
+msgstr "Надіслати інструкції електронною поштою"
+
+msgid "Email again"
+msgstr "Надіслати знову"
+
+msgid "An invitation has been sent"
+msgstr "Запрошення було надіслано"
+
+msgid "User email is unknown."
+msgstr "Email користувача невідомий."
+
+msgid "Successfully upgraded to Webasyst ID"
+msgstr "Успішно оновлено до Webasyst ID"
+
+msgid "all users!"
+msgstr "усім користувачам!"
+
+msgid "Webasyst ID"
+msgstr "Webasyst ID"
+
+msgid "Allow users to use their Webasyst ID accounts to sign into the backend:"
+msgstr "Дозволити користувачам використовувати свій Webasyst ID для входу у контрольну панель:"
+
+msgid "Enable Webasyst ID"
+msgstr "Увімкнути Webasyst ID"
+
+msgid "and email invitations to users for fast upgrade"
+msgstr "і надіслати запрошення по email користувачам для швидкого оновлення"
+
+msgid "Should the sending of email invitations fail, users will still see a notification with an upgrade link in the backend. Users will also have the option to enable or disable the sign-in with Webasyst ID in their profiles."
+msgstr "Якщо надсилання запрошень електронною поштою не вдасться, користувачі все одно бачитимуть сповіщення із посиланням на оновлення у панелі управління. Користувачі також матимуть можливість увімкнути або вимкнути вхід за допомогою Webasyst ID у своїх профілях."
+
+msgid "%sRead more%s."
+msgstr "%Читати далі%s."
+
+msgid "%d user"
+msgid_plural "%d users"
+msgstr[0] "%d користувач"
+msgstr[1] "%d користувача"
+msgstr[2] "%d користувачів"
+
+msgid "Image processing library"
+msgstr "Бібліотека обробки зображень"
+
+msgid "not installed"
+msgstr "не встановлено"
+
+msgid "Enable sign-in with Webasyst ID"
+msgstr "Увімкнути вхід із Webasyst ID"
+
+msgid "Connecting to the Webasyst ID authentication server..."
+msgstr "Під'єднання до серверу аутентифікації Webasyst ID..."
+
+msgid "Sign-in with Webasyst ID has been enabled."
+msgstr "Вхід з Webasyst ID увімкнено."
+
+msgid "Failed to connect to Webasyst ID authentication server."
+msgstr "Під'єднання до серверу аутентифікації Webasyst ID не вдалося."
+
+msgid "Disconnect Webasyst ID account"
+msgstr "Від'єднати акаунт Webasyst ID"
+
+msgid "Association with Webasyst ID account will be deleted. The user will not be able to sign into the backend with Webasyst ID."
+msgstr "Зв'язок з акаунтом Webasyst ID буде видалено. Користувач не зможе увійти у панель управління із Webasyst ID."
+
+msgid "The user will be able to connect a Webasyst ID account again at any time."
+msgstr "Користувач зможе знову підключити акаунт Webasyst ID у любий час."
+
+msgid "Enable sign in with"
+msgstr "Увімкнути вхід із"
+
+msgid "Unknown authorization error. Sign in with a login and a password."
+msgstr "Невідома помилка авторизації. Увійдіть за допомогою логіну та пароля."
+
+msgid "Webasyst ID account %s is not connected to any backend user."
+msgstr "Акаунт Webasyst ID %s не пов'язано із жодним користувачем панелі управління."
+
+msgid "Obtain an API key on the <a href=\"https://developer.tech.yandex.ru/\" target=\"_blank\">developer dashboard</a>. Select “<strong>JavaScript API, Geocoding API</strong>” option."
+msgstr "Отримайте ключ на <a href=\"https://developer.tech.yandex.ru/\" target=\"_blank\">панелі розробника</a>. Оберіть опцію “JavaScript API, Geocoding API”."
+
+msgid "Invalid or expired state"
+msgstr "Невідомий або застарілий стан"
+
+msgid "Already bound"
+msgstr "Вже пов'язано"
+
+msgid "Invitation token is invalid."
+msgstr "Токен запрошення недійсний."
+
+msgid "Invited contact doesn't exist."
+msgstr "Запрошеного контакту не існує."
+
+msgid "[Action Required] %s invites you to upgrade to Webasyst ID on %s"
+msgstr "[Потребується дія] %s запрошує вас оновитися до Webasyst ID на %s"
+
+msgid "Client ID"
+msgstr "Ідентифікатор клієнта"
+
+msgid "Client secret"
+msgstr "Секрет клієнта"
+
+msgid "%d more non-modified file"
+msgid_plural "%d more non-modified files"
+msgstr[0] "Ще %d немодифікований файл"
+msgstr[1] "Ще %d немодифікованих файли"
+msgstr[2] "Ще %d немодифікованих файлів"
+
+msgid "%s and %d more unmodified file"
+msgid_plural "%s and %d more unmodified files"
+msgstr[0] "%s та %d додатково немодифікований файл"
+msgstr[1] "%s та %d додатково немодифіковані файли"
+msgstr[2] "%s та %d додатково немодифікованих файлів"
+
+msgid "To learn more details about this error, enable the debug mode in Settings app, or change '<code>debug</code>' parameter to <code>true</code> in <em style=\"white-space: nowrap\">wa-config/config.php</em> file, and reload this page."
+msgstr "Аби дізнатися більше про цю помилку, увімкніть режим налагодження у додатку «Налаштування», або змініть параметр '<code>debug</code>' на <code>true</code> у файлі <em style=\"white-space: nowrap\">wa-config/config.php</em>, та перезавантажте цю сторінку."
+
+msgid "%s offers you to sign into %s via Webasyst ID"
+msgstr "%s пропонує вам увійти %s через Webasyst ID"
+
+msgid "%s offers you to connect the Webasyst ID login option to %s. You will be able to quickly sign into your website’s backend and use Webasyst apps and services only with one secure password."
+msgstr "%s пропонує вам підключити опцію входу в систему Webasyst ID до %s. Ви зможете швидко ввійти у панель управління вашого веб-сайту та використовувати програми та послуги Webasyst лише за одним захищеним паролем."
+
+msgid "Sorry, login failed"
+msgstr "Шкодуємо, але авторизація не вдалася"
+
+msgid "Enable Webasyst ID for my account now"
+msgstr "Під'єднати мій акаунт до Webasyst ID зараз"
+
+msgid "Successfully upgraded to Webasyst ID:"
+msgstr "Успішно оновлено до Webasyst ID:"
+
+msgid "Try with another Webasyst ID"
+msgstr "Спробуйте з іншим Webasyst ID"
+
+msgid "You cannot sign in because Webasyst ID <strong>%s</strong> is connected to the backend at <strong>%s</strong>."
+msgstr "Не вдається увійти, оскільки Webasyst ID <strong>%s</strong> підключено до панелі керування сайтом<strong>%s</strong>."
+
+msgid "Or <a class=\"link\" href=\"%s\">sign into your backend in the usual way</a> and connect it to your Webasyst ID."
+msgstr "Або <a class=\"link\" href=\"%s\">увійдіть до панелі керування сайтом звичайним чином</a> та підключіть його до вашого Webasyst ID."
+
+msgid "Use another Webasyst ID"
+msgstr "Використати інший Webasyst ID"
+
+msgid "Use only sign-in option with Webasyst ID — <span class=\"s-green\">recommended</span>"
+msgstr "Використовувати вхід тільки з Webasyst ID — <span class=\"s-green\">рекомендовано</span>"
+
+msgid "When sign-in with Webasyst ID is enabled by default, the usual sign-in method is disabled, with all its configuration saved for later use. Backend users who are not yet connected to Webasyst ID will be able to get connected later on, or you may send them an email invitation in section “<a href=\"%s\">Sign-in with Webasyst ID</a>”. Newly added users will get connected to Webasyst ID right away."
+msgstr "Коли вхід за допомогою Webasyst ID увімкнено за промовчанням, звичайний метод входу вимикається, а його конфігурація зберігається для використання пізніше. Користувачі панелі керування, які не ще не підключили Webasyst ID, зможуть зробити це пізніше, або ви можете надіслати їм email-запрошення у розділі <a href=\"%s\">«Вхід із Webasyst ID»</a>. Нових користувачів буде підключено до Webasyst ID з самого початку."
+
+msgid "You need to connect Webasyst ID to your account."
+msgstr "Вам необхідно під'єднати Webasyst ID до вашого акаунта."
+
+msgid "When sign-in with Webasyst ID is enabled by default, the usual sign-in method is disabled, with all its configuration saved for later use. Backend users who are not yet connected to Webasyst ID will be able to get connected later on, or you may send them an email invitation. Newly added users will get connected to Webasyst ID right away."
+msgstr "Коли вхід за допомогою Webasyst ID увімкнено за промовчанням, звичайний метод входу вимикається, а його конфігурація зберігається для використання пізніше. Користувачі панелі керування, які не ще не підключили Webasyst ID, зможуть зробити це пізніше, або ви можете надіслати їм email-запрошення. Нових користувачів буде підключено до Webasyst ID з самого початку."
+
+msgid "Sign-in with Webasyst ID is enabled by default, a disconnection is not allowed."
+msgstr "Вхід із Webasyst ID увімкнено за замовчуванням, відключення не дозволене."
+
+msgid "This page will not be published because there is no settlement, or routing rule, for this app in the site structure settings. Set up a settlement in Site app’s “Structure” section to publish this page."
+msgstr "Цю сторінку не буде опубліковано, тому що для цього додатку у структурі сайту не існує поселення, або правила маршрутизації. Налаштуйте правило у розділі «Структура» додатку «Сайт», аби опублікувати цю сторінку."
+
+msgid "This page is unsettled (unpublished), i.e. not connected to any of your site’s routing rules. Set up a settlement in Site app’s “Structure” section to publish this page."
+msgstr "Цю сторінку не опубліковано, тобто не пов'язано з жодним з правил у структурі вашого сайту. Налаштуйте правило у розділі «Структура» додатку «Сайт», аби опублікувати цю сторінку."

@@ -1,0 +1,63 @@
+<div>
+    <h1>
+        {if isset($theme)}
+            <a href="#/themes/" class="back">← [`Back`]</a>[`Themes`] - {$theme.name}({$theme.id})
+        {else}
+            [`Themes`]
+        {/if}
+    </h1>
+    <form id="s-mylang-saveall-form" method="POST" action="?module=themes&action=save" data-form="save">
+        <input type="hidden" name="app_id" value="shop"/>
+    <div>
+    
+    {if $theme}
+        {if $theme.disabled}
+            <span>[`Theme has no text fields to translate.`]</span>
+        {else}
+            <input type="hidden" name="theme_id" value="{$theme.id}"/>
+            {$current = $wa->locale()}
+            <table class="zebra single-lined with-x-scroll">
+                <tr class="header">
+                    <th>[`Theme field`]</th>
+                    {foreach $locales as $l}
+                        <th>[`Value`] - {$l}</th>
+                    {/foreach}
+                </tr>
+                {foreach $theme.settings as $key=>$val}
+                <tr>
+                    <td data-key="{$key}" style="width:60%">{$val.name[$current]|default:$val.name['ru_RU']|strip_tags}</td>
+                    {foreach $locales as $l}
+                        <td data-locale="{$l}">
+                            <input tabindex="{$smarty.foreach.locales.index}" type="text" name="settings[{$key}][{$l}]" value="{if is_array($val.value)}{$val.value[$l]}{else}{$val.value}{/if}" placeholder="{$l}" data-mylang="{$l}"/>
+                        </td>
+                    {/foreach}
+                </tr>
+                {/foreach}
+            </table>
+        {/if}
+    {else}
+    <table class="zebra single-lined">
+        <tr class="header">
+            <th>[`Theme name`]</th>
+            <th>[`Theme ID`]</th>
+        </tr>
+        {foreach $themes as $theme}
+        <tr>
+            <td><a href="#/themes/{$theme.id}">{$theme.name}</a></td>
+            <td>{$theme.id}</td>
+        </tr>
+        {/foreach}
+    </table>
+    {/if}
+    </div>
+    <div class="placeholder"></div>
+    <div>
+        <div class="wa-mylang-save-panel block bordered-top">
+            <input id="wa-save-button" type="submit" class="button green" value="[`Save`]">
+            <em class="hint">Ctrl + S</em>
+            <span id="wa-form-status" class="stealth"><i class="icon16 yes"></i> [`Saved`]</span>
+            <span id="wa-form-error" class="stealth"><i class="icon16 no"></i> [`Error`]</span>
+        </div>
+    </div>
+    </form>
+</div>

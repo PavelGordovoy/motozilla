@@ -1,0 +1,35 @@
+<div class="block">
+    <h1>[`Export`]</h1>
+    <div class="fields form">
+        <form action="?module=shop&action=exportRun" method="post" id="plugins-export-form" enctype="multipart/form-data" target="plugins-settings-iframe">
+            {$wa->csrf()}
+            <div class="field">
+                <div class="name">
+                    <label>[`Select locale`]</label>
+                </div>
+                <div class="value">
+                    {html_checkboxes name='locales' options=$locales separator='<br />'}<br>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">
+                    <label>[`Select items`]</label>
+                </div>
+                <div class="value">
+                    {html_radios name='hash' options=['products'=>"[`Products`]", 'categories' => "[`Categories`]"] selected='products' separator='<br />'}<br>
+                    <span class="hint">[`By default search is using translated strings. Check option to use full text search.`]</span>
+                </div>
+            </div>
+            <div class="field">
+                <div class="field">
+                    <div class="value submit">
+                        <input type="submit" class="button green" value="[`Save`]">
+                        <span id="mylang-settings-form-status" style=""></span>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <iframe style="display:none" name="plugins-settings-iframe" id="plugins-settings-iframe"></iframe>
+    </div>
+    <div class="clear-left"></div>
+</div>

@@ -1,0 +1,57 @@
+{$access = multiformHelper::recordAccess($form)}
+<div class="block record-tab">
+    {if $record}
+        <div class="form-container multiform-wrap" data-id="{$form.id}" data-action="?module=form&action=recordEdit">
+            <div class="multiform-gap-fields">
+                {include file="./include.record.template.html"}
+            </div>
+        </div>
+        <div class="record-side">
+            <ul class="menu-h">
+                {if $access > 1}
+                    <li><a href="#/record/edit/{$record.id}/" class='js-action f-edit' title="[`Edit`]"><i class="icon16 edit"></i> <span>[`Edit`]</span></a></li>
+                    {if multiformHelper::notificationsAccess() >= 3}
+                        <li><a href="#/record/email/{$record.id}/" class='js-action' title="[`Email`]"><i class="icon16 email"></i> [`Email`]</a></li>
+                    {/if}
+                {/if}
+                <li><a href="#/record/print/" class='js-action' title="[`Print`]"><i class="icon16 print"></i> [`Print`]</a></li>
+                {if $access == 3}
+                    <li><a href="#/record/delete/{$record.id}/" class='js-action' title="[`Delete`]"><i class="icon16 delete"></i> [`Delete`]</a></li>
+                {/if}
+            </ul>
+            <div class="record-comment-block">
+                <div style='margin-bottom: 5px;'><i class="icon16 comments"></i> {if !empty($record.comments)}{$record.comments|count}{else}0{/if} [`Comments`]</div>
+                <div class="record-comments">
+                    {if !empty($record.comments)}
+                        {foreach $record.comments as $rc}
+                        <div class="record-comment">
+                            {if ($access == 2 && $rc.create_contact_id == $wa->userId()) || $access == 3}
+                                <a href="#/record/deleteComment/{$rc.id}" title='[`Delete`]' class='js-action delete'><i class="icon16 no"></i></a>
+                            {/if}
+                            <div class="small"><a href='{$wa_backend_url}contacts/#/contact/{$rc.create_contact_id}' class="bold" title="{$rc.name|escape}">{$rc.name|escape}</a> {$rc.create_datetime|wa_datetime:'humandate'} {$rc.create_datetime|wa_datetime:'fulltime'}</div>
+                            <div class="margin-block" style="font-size: 12px">{$rc.comment}</div>
+                        </div>
+                        {/foreach}
+                    {/if}
+                </div>
+                {if $access > 1}
+                    <div class="record-comment-form align-center">
+                        <form action="">
+                            <div class="margin-block">[`Your comment`]</div>
+                            <textarea name="comment"></textarea>
+                            <div class="margin-block">[`Your name`]</div>
+                            <input type="text" name="name" value="{$wa->user('name')|escape}" />
+                            <div class="margin-block">
+                                <div class="errormsg"></div>
+                                <input type="hidden" name="record_id" value="{$record.id}" />
+                                <input type="submit" name="submit" value="[`Save`]" />
+                            </div>
+                        </form>
+                    </div>
+                {/if}
+            </div>
+        </div>
+    {else}
+        <p class='align-center'>[`Record does not exist`]</p>
+    {/if}
+</div>

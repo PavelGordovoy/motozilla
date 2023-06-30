@@ -1,0 +1,29 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Webasyst Shop Favorite Products plugin 1.0.0.23604 UA translation v 0.1\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: /wa-apps/shop/plugins/favoriteproducts/lib/config/plugin.php:4
+msgid "Favorite products"
+msgstr "Обрані товари"
+
+#: /wa-apps/shop/plugins/favoriteproducts/lib/config/plugin.php:5
+msgid "Backend favorite products filtering"
+msgstr "Фільтрація по улюбленим товарам у бекенді"
+
+#: /wa-apps/shop/plugins/favoriteproducts/lib/shopFavoriteproducts.plugin.php:15
+#: /wa-apps/shop/plugins/favoriteproducts/lib/shopFavoriteproducts.plugin.php:32
+msgid "Favorites"
+msgstr "Обране"
+
+#: /wa-apps/shop/plugins/favoriteproducts/lib/shopFavoriteproducts.plugin.php:61
+msgid "Add to favorites"
+msgstr "Додати в обране"

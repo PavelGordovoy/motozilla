@@ -1,0 +1,51 @@
+{strip}
+{$count_products = count($products)}
+{if (!isset($wa_parent_theme_path) || !$wa_parent_theme_path)}
+    {$parent_theme_path = $wa_active_theme_path}
+{else}
+    {$parent_theme_path = $wa_parent_theme_path}
+{/if}
+
+{$is_carousel_direction_footer = ($theme_settings.sidebar_product_direction_type == 'footer')}
+
+{function displayDirection}
+    <div class="items-sidebar__direction bs-color js-carousel-direction">
+        <span class="carousel-prev fal carousel-prev--mini js-carousel-prev"></span>
+        <span class="carousel-next fal carousel-next--mini js-carousel-next"></span>
+    </div>
+{/function}
+
+{$count_visible = (int)$theme_settings.sidebar_product_list_visible_count}
+{$is_carousel = (!empty($count_visible) && $count_products > $count_visible)}
+
+{if $count_products > 0}
+    <div class="sidebar-wrap sidebar-wrap--products{if $is_carousel} js-carousel-products-sidebar{/if}">
+        <div class="sidebar-wrap__head{if !$is_carousel_direction_footer} sidebar-wrap__head--carousel{/if}">
+            {$list_title}
+            {if $is_carousel && !$is_carousel_direction_footer}
+                {displayDirection}
+            {/if}
+        </div>
+        {$is_image_lazy = $theme_settings.preview_product_images_lazy}
+        <div class="js-carousel-items js-preview-products" data-count-visible="{$count_visible}" data-retina="{$wa->shop->config('enable_2x')}" data-image-lazy="{$is_image_lazy}">
+            <ul class="products-mini">
+                {foreach $products as $p}
+                    {include file="`$parent_theme_path`/product-preview-mini.html" is_image_lazy=$is_image_lazy}
+                {/foreach}
+            </ul>
+        </div>
+
+        {$is_display_link = (!empty($link_text) && !empty($link_url))}
+        {if $is_display_link || ($is_carousel_direction_footer && $count_products > 3)}
+            <div class="sidebar-wrap__bottom{if $is_carousel_direction_footer} sidebar-wrap__bottom--carousel{/if}">
+                {if $is_display_link}
+                    <a href="{$link_url}" class="show-all ac-color">{$link_text} <i class="button-more fal fa-long-arrow-right"></i></a>
+                {/if}
+                {if $is_carousel && $is_carousel_direction_footer}
+                    {displayDirection}
+                {/if}
+            </div>
+        {/if}
+    </div>
+{/if}
+{/strip}

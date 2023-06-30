@@ -1,0 +1,1499 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst Contacts 1.1.6.20 UA translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-05-31T20:32:41+00:00\n"
+"PO-Revision-Date: 2020-11-07 08:18+0300\n"
+"Language: uk\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: /wa-apps/contacts/js/fieldTypes.js:430
+msgid "&lt;no name&gt;"
+msgstr "&lt;без імені&gt;"
+
+#: /wa-apps/contacts/templates/actions/backend/BackendBlank.html:3
+msgid "No view selected."
+msgstr "Вигляд не обрано."
+
+#: /wa-apps/contacts/templates/actions/backend/BackendSidebar.html:13
+msgid "New contact"
+msgstr "Новий контакт"
+
+#: /wa-apps/contacts/templates/actions/backend/BackendSidebar.html:19
+msgid "Person"
+msgstr "Особа"
+
+#: /wa-apps/contacts/js/wa.grid.js:283
+msgid "Company"
+msgstr "Компанія"
+
+#: /wa-apps/contacts/templates/actions/backend/BackendSidebar.html:29
+msgid "Import..."
+msgstr "Імпорт..."
+
+#: /wa-apps/contacts/templates/actions/backend/BackendSidebar.html:62
+msgid "clear"
+msgstr "очистити"
+
+#: /wa-apps/contacts/templates/actions/backend/BackendSidebar.html:44
+msgid "Recently added"
+msgstr "Нещодавно додані"
+
+#: /wa-apps/contacts/templates/actions/backend/BackendSidebar.html:57
+msgid "Advanced search"
+msgstr "Розширений пошук"
+
+#: /wa-apps/contacts/templates/actions/backend/BackendSidebar.html:63
+msgid "Recent Searches"
+msgstr "Недавні пошуки"
+
+#: /wa-apps/contacts/templates/actions/backend/BackendSidebar.html:69
+msgid "search by name or email"
+msgstr "пошук за іменем або email"
+
+#: /wa-apps/contacts/templates/actions/backend/BackendSidebar.html:124
+msgid "All contacts"
+msgstr "Усі контакти"
+
+#: /wa-apps/contacts/templates/actions/backend/BackendSidebar.html:94
+msgid "My filters"
+msgstr "Мої фільтри"
+
+#: /wa-apps/contacts/templates/actions/backend/BackendSidebar.html:104
+msgid "Lists"
+msgstr "Списки"
+
+#: /wa-apps/contacts/templates/actions/categories/CategoriesEditor.html:6
+msgid "New category"
+msgstr "Нова категорія"
+
+#: /wa-apps/contacts/templates/actions/backend/BackendSidebar.html:136
+msgid "Categories"
+msgstr "Категорії"
+
+#: /wa-apps/contacts/templates/actions/backend/BackendSidebar.html:147
+msgid "Categories are for classifying contacts, e.g. customers, providers, partners, etc."
+msgstr "Категорії служать для класифікації контактів, наприклад: клієнти, постачальники, партнери і т.д."
+
+#: /wa-apps/contacts/templates/actions/backend/BackendSidebar.html:162
+msgid "All users"
+msgstr "Усі користувачі"
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsEditor.html:6
+msgid "New user group"
+msgstr "Нова група користувачів"
+
+#: /wa-apps/contacts/templates/actions/backend/BackendSidebar.html:170
+msgid "Groups"
+msgstr "Групи"
+
+#: /wa-apps/contacts/templates/actions/backend/BackendSidebar.html:181
+msgid "User groups are for organizing Webasyst users and setting common access rights for groups."
+msgstr "Групи користувачів служать для класифікації користувачів Webasyst та налаштування загальних прав доступу для груп."
+
+#: /wa-apps/contacts/js/wa.grid.js:10
+msgid "Photo"
+msgstr "Фото"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsInfo.html:14
+msgid "No photo"
+msgstr "Немає фото"
+
+#: /wa-apps/contacts/templates/actions/photo/PhotoEditor.html:5
+msgid "Change photo"
+msgstr "Змінити фото"
+
+#: /wa-apps/contacts/templates/actions/photo/PhotoEditor.html:32
+msgid "Upload image (JPG, GIF or PNG):"
+msgstr "Завантажити зображення (JPG, GIF або PNG):"
+
+#: /wa-apps/contacts/js/wa.contactEditor.js:384
+msgid "or"
+msgstr "або"
+
+#: /wa-apps/contacts/js/wa.contactEditor.js:370
+msgid "cancel"
+msgstr "відмінити"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsInfo.html:39
+msgid "Edit contact info"
+msgstr "Редагувати контакт"
+
+#: /wa-apps/contacts/js/wa.controller.js:826
+msgid "Delete"
+msgstr "Видалити"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsInfo.html:65
+msgid "Contact"
+msgstr "Контакт"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsInfo.html:72
+msgid "Create user account"
+msgstr "Створити акаунт користувача"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsInfo.html:74
+msgid "User"
+msgstr "Користувач"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsInfo.html:86
+msgid "Field constructor"
+msgstr "Конструктор полів"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsInfo.html:97
+msgid "Added"
+msgstr "Додав"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsInfo.html:99
+msgid "Author"
+msgstr "Автор"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsInfo.html:101
+msgid "Method"
+msgstr "Метод"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsInfo.html:102
+msgid "Application"
+msgstr "Додаток"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsLinks.html:58
+msgid "Delete contacts"
+msgstr "Видалити контакти"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsLinks.html:4
+msgid "Contact deletion cannot be undone."
+msgstr "Контакти будуть видалені без можливості відновлення."
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsLinks.html:7
+msgid "IMPORTANT NOTE:"
+msgstr "ВАЖЛИВО:"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsLinks.html:9
+msgid "All selected contacts have links to other applications."
+msgstr "Усі обрані контакти мають звязок з іншими додатками."
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsLinks.html:15
+msgid "Deletion of these contacts is allowed to Administrator only."
+msgstr "Видалення цих контактів дозволено тільки Адміністратору."
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsLinks.html:17
+msgid "After deletion of these contacts other applications will refer to not existing contacts."
+msgstr "Після видалення цих контактів інші додатки будуть звертатись до неіснуючих контактів."
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsLinks.html:60
+msgid "Delete anyway"
+msgstr "Все одно видалити"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsLinks.html:11
+msgid "%d of %d selected contacts shown below have links to other applications."
+msgstr "%d з %d обраних контактів, показані нижче, мають зв&#39;язки з іншими додатками."
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsLinks.html:62
+msgid "Delete %d of %d selected"
+msgstr "Видалити %d з %d обраних"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:295
+msgid "Delete user account"
+msgstr "Видалити акаунт користувача"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:39
+msgid "Login"
+msgstr "Логін"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:22
+msgid "Password"
+msgstr "Пароль"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:55
+msgid "Confirm password"
+msgstr "Підтвердження пароля"
+
+#: /wa-apps/contacts/js/wa.contactEditor.js:364
+msgid "Save"
+msgstr "Зберегти"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:42
+msgid "change password"
+msgstr "змінити пароль"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:49
+msgid "New password"
+msgstr "Новий пароль"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:69
+msgid "Status"
+msgstr "Статус"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:73
+msgid "Online"
+msgstr "Онлайн"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:76
+msgid "Never logged in"
+msgstr "Ще не заходив"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:78
+msgid "Last login"
+msgstr "Заходив востаннє"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:87
+msgid "Belongs to groups"
+msgstr "Належить до груп"
+
+#: /wa-apps/contacts/js/fieldTypes.js:384
+msgid "&lt;none&gt;"
+msgstr "&lt;немає&gt;"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:97
+msgid "customize groups"
+msgstr "налаштувати групи"
+
+#: /wa-apps/contacts/js/wa.grid.js:65
+msgid "Access"
+msgstr "Доступ"
+
+#: /wa-apps/contacts/js/wa.grid.js:68
+msgid "Administrator"
+msgstr "Адміністратор"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:134
+msgid "This access level is inherited from groups. To change you must customize these group settings or group membership for this user."
+msgstr "Цей рівень доступу успадковується від групп. Щоб змінити його, ви маєте налаштувати групи або членство у групі для цього користувача."
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:137
+msgid "You can not revoke administrative access level for yourself. Only another Administrator can do this."
+msgstr "Ви не можете лишити себе адміністративного доступу. Це може зробити тільки інший Адміністратор."
+
+#: /wa-apps/contacts/js/wa.grid.js:70
+msgid "No access"
+msgstr "Немає доступу"
+
+#: /wa-apps/contacts/js/wa.grid.js:72
+msgid "Limited access"
+msgstr "Обмежений доступ"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:193
+msgid "Can not set &ldquo;No access&rdquo; because some access rights are inherited from groups. To revoke access rights, customize group settings or group membership for this user."
+msgstr "Неможливо встановити &ldquo;Доступ відсутній&rdquo; тому що деякі права доступу успадковані від групп. Щоб відкликати права доступу, потрібно налаштувати групу або змінити членство користувача у групах."
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsRights.html:24
+msgid "Set up access rights for each application"
+msgstr "Налаштувати права доступу для кожного додатку"
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsEditor.html:116
+msgid "Saved"
+msgstr "Збережено"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:164
+msgid "Full access is inherited from groups."
+msgstr "Повний доступ успадковано від груп."
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsRights.html:43
+msgid "Full access"
+msgstr "Повний доступ"
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsRights.html:47
+msgid "Customize"
+msgstr "Налаштувати"
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsRights.html:54
+msgid "NOTE:"
+msgstr "УВАГА:"
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsRights.html:54
+msgid "Limited and Full access levels in Contacts application DO NOT allow managing user accounts and categories. These access rights are granted to Administrator only."
+msgstr "Права обмеженого та повного доступу у додатку \"Контакти\" НЕ дозволяють керувати акаунтами користувачів та категоріями. Цими правами наділені тільки Адміністратори."
+
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsUser.controller.php:64
+msgid "Login is required."
+msgstr "Необхідно вказати логін."
+
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsUser.controller.php:74
+msgid "Passwords do not match."
+msgstr "Паролі не співпадають."
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:293
+msgid "Are you sure?"
+msgstr "Ви впевнені?"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:293
+msgid "Contact will not be deleted, but the user won't be able to log in anymore."
+msgstr "Контакт не буде видалено, але користувач більше не зможе увійти."
+
+#: /wa-apps/contacts/templates/actions/categories/CategoriesAddSelected.html:2
+msgid "No categories available"
+msgstr "Немає жодної доступної категорії"
+
+#: /wa-apps/contacts/templates/actions/categories/CategoriesAddSelected.html:4
+msgid "Add users to categories"
+msgstr "Добавити користувачів у категорію"
+
+#: /wa-apps/contacts/templates/actions/categories/CategoriesAddSelected.html:30
+msgid "Add"
+msgstr "Додати"
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsEditor.html:19
+msgid "Name:"
+msgstr "Назва:"
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsEditor.html:134
+msgid "<no name>"
+msgstr "<без імені>"
+
+#: /wa-apps/contacts/templates/actions/categories/CategoriesEditor.html:4
+msgid "Edit category &ldquo;%s&rdquo;"
+msgstr "Редагування категорії &ldquo;%s&rdquo;"
+
+#: /wa-apps/contacts/templates/actions/photo/PhotoEditor.html:3
+msgid "Change photo for contact"
+msgstr "Змінити фото для контакта"
+
+#: /wa-apps/contacts/templates/actions/photo/PhotoEditor.html:31
+msgid "Select an image file (JPG, GIF or PNG) to change photo:"
+msgstr "Для заміни зображення завантажте файл (JPG, GIF або PNG):"
+
+#: /wa-apps/contacts/templates/actions/photo/PhotoEditor.html:55
+msgid "Delete photo"
+msgstr "Видалити фото"
+
+#: /wa-apps/contacts/templates/actions/photo/PhotoEditor.html:58
+msgid "Are you sure you want to delete this photo?"
+msgstr "Ви дійсно хочете видалити фото?"
+
+#: /wa-apps/contacts/templates/actions/photo/PhotoEditor.html:126
+msgid "Close"
+msgstr "Закрити"
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsRights.html:5
+msgid "Access rights for group &ldquo;%s&rdquo;"
+msgstr "Права доступу для групи &ldquo;%s&rdquo;"
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsRights.html:14
+msgid "Select access level"
+msgstr "Оберіть рівень доступу"
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsRights.html:23
+msgid "Full access to all applications and user management."
+msgstr "Повний доступ до всіх додатків та управління користувачами."
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsEditor.html:23
+msgid "Select users you want to add to this group:"
+msgstr "Оберіть користувачів, яких ви бажаєте додати в цю групу:"
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsEditor.html:26
+msgid "Included"
+msgstr "Включені"
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsEditor.html:38
+msgid "Not included"
+msgstr "Виключені"
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsEditor.html:4
+msgid "Edit group &ldquo;%s&rdquo;"
+msgstr "Редагування групи &ldquo;%s&rdquo;"
+
+#: /wa-apps/contacts/js/wa.controller.js:654
+msgid "Loading..."
+msgstr "Завантаження..."
+
+#: /wa-apps/contacts/js/wa.controller.js:310
+msgid "Delete this category?"
+msgstr "Видалити цю категорію?"
+
+#: /wa-apps/contacts/js/wa.controller.js:368
+msgid "No contacts will be deleted."
+msgstr "Контакти не буде видалено."
+
+#: /wa-apps/contacts/js/wa.controller.js:313
+msgid "Delete category"
+msgstr "Видалити категорію"
+
+#: /wa-apps/contacts/js/wa.controller.js:368
+msgid "Delete this group?"
+msgstr "Видалити цю групу?"
+
+#: /wa-apps/contacts/js/wa.controller.js:371
+msgid "Delete group"
+msgstr "Відалити групу"
+
+#: /wa-apps/contacts/js/wa.controller.js:477
+msgid "edit search"
+msgstr "змінити параметри пошуку"
+
+#: /wa-apps/contacts/js/wa.controller.js:586
+msgid "Exclude contacts from category \"%s\"?"
+msgstr "Виключити контакти з категорії \"%s\"?"
+
+#: /wa-apps/contacts/js/wa.controller.js:589
+msgid "Exclude"
+msgstr "Виключити"
+
+#: /wa-apps/contacts/js/wa.controller.js:629
+msgid "Checking links to other applications..."
+msgstr "Пошук зв&#39;язків з іншими додатками..."
+
+#: /wa-apps/contacts/js/wa.controller.js:680
+msgid "Edit group"
+msgstr "Редагувати групу"
+
+#: /wa-apps/contacts/js/wa.controller.js:683
+msgid "Customize access"
+msgstr "Налаштувати доступ"
+
+#: /wa-apps/contacts/js/wa.controller.js:695
+msgid "Edit category"
+msgstr "Редагувати категорію"
+
+#: /wa-apps/contacts/js/wa.controller.js:707
+msgid "Save as a filter"
+msgstr "Зберегти як фільтр"
+
+#: /wa-apps/contacts/js/wa.controller.js:716
+msgid "Edit list"
+msgstr "Редагувати список"
+
+#: /wa-apps/contacts/js/wa.controller.js:728
+msgid "Edit filter"
+msgstr "Редагувати фільтр"
+
+#: /wa-apps/contacts/lib/config/contactsAnalyticsConfig.class.php:60
+msgid "Contacts"
+msgstr "Контакти"
+
+#: /wa-apps/contacts/js/wa.controller.js:797
+msgid "Actions with selected"
+msgstr "Дії з обраними"
+
+#: /wa-apps/contacts/js/wa.controller.js:803
+msgid "Add to category"
+msgstr "Додати в категорію"
+
+#: /wa-apps/contacts/js/wa.controller.js:807
+msgid "Exclude from this category"
+msgstr "Виключити з цієї категорії"
+
+#: /wa-apps/contacts/js/wa.controller.js:811
+msgid "Exclude from this list"
+msgstr "Виключити з цього списку"
+
+#: /wa-apps/contacts/js/wa.controller.js:815
+msgid "Add to list"
+msgstr "Додати до списку"
+
+#: /wa-apps/contacts/js/wa.controller.js:819
+msgid "Merge"
+msgstr "Об&#39;єднати"
+
+#: /wa-apps/contacts/js/wa.controller.js:823
+msgid "Export"
+msgstr "Експорт"
+
+#: /wa-apps/contacts/js/fieldTypes.js:1386
+msgid "This field is required."
+msgstr "Це поле обов&#39;язкове."
+
+#: /wa-apps/contacts/js/fieldTypes.js:321
+msgid "not set"
+msgstr "не встановлено"
+
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsList.controller.php:103
+msgid "no name"
+msgstr "без імені"
+
+#: /wa-apps/contacts/js/fieldTypes.js:479
+msgid "At least one of these fields must be filled"
+msgstr "Має бути заповнено хоча б одне поле"
+
+#: /wa-apps/contacts/js/fieldTypes.js:722
+msgid "delete"
+msgstr "видалити"
+
+#: /wa-apps/contacts/js/fieldTypes.js:880
+msgid "Add another"
+msgstr "Додати ще"
+
+#: /wa-apps/contacts/js/fieldTypes.js:1199
+msgid "required"
+msgstr "обов&#39;язкове"
+
+#: /wa-apps/contacts/js/fieldTypes.js:1327
+msgid "Incorrect URL format."
+msgstr "Невірний формат URL."
+
+#: /wa-apps/contacts/js/fieldTypes.js:1347
+msgid "Incorrect Email address format."
+msgstr "Невірний формат адреси email."
+
+#: /wa-apps/contacts/js/fieldTypes.js:1389
+msgid "Must be a number."
+msgstr "Повинно бути числом."
+
+#: /wa-apps/contacts/js/wa.grid.js:278
+msgid "Sort by"
+msgstr "Сортування за"
+
+#: /wa-apps/contacts/js/wa.grid.js:282
+msgid "Name"
+msgstr "Ім&#39;я"
+
+#: /wa-apps/contacts/js/wa.grid.js:473
+msgid "Show %s records on a page"
+msgstr "Показати %s записів на сторінці"
+
+#: /wa-apps/contacts/js/wa.grid.js:488
+msgid "Pages"
+msgstr "Сторінки"
+
+#: /wa-apps/contacts/js/wa.grid.js:505
+msgid "prev"
+msgstr "попер"
+
+#: /wa-apps/contacts/js/wa.grid.js:508
+msgid "next"
+msgstr "наст"
+
+#: /wa-apps/contacts/js/wa.contactEditor.js:279
+msgid "other"
+msgstr "інший"
+
+#: /wa-apps/contacts/js/wa.contactEditor.js:291
+msgid "which?"
+msgstr "який?"
+
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsLinks.action.php:18
+msgid "You can not delete yourself."
+msgstr "Ви не можете видалити себе."
+
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsLinks.action.php:18
+msgid "Please eliminate yourself from deletion list."
+msgstr "Будь ласка, виключіть себе із списку на видалення."
+
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsUser.controller.php:67
+msgid "This login is already set for user %NAME_LINK%"
+msgstr "Цей логін вже встановлено для користувача %NAME_LINK%"
+
+#: /wa-apps/contacts/lib/actions/categories/contactsCategoriesDelete.controller.php:19
+msgid "Category has been deleted"
+msgstr "Категорію видалено"
+
+#: /wa-apps/contacts/lib/actions/groups/contactsGroupsDelete.controller.php:19
+msgid "Group has been deleted"
+msgstr "Групу видалено"
+
+#: /wa-apps/contacts/lib/config/contactsRightConfig.class.php:14
+msgid "Can add contacts"
+msgstr "Може додавати контакти"
+
+#: /wa-apps/contacts/lib/config/contactsRightConfig.class.php:15
+msgid "Available categories"
+msgstr "Доступні категорії"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsInfo.html:39
+msgid "Actions"
+msgstr "Дії"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsInfo.html:48
+msgid "Delete contact"
+msgstr "Видалити контакт"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsLinks.html:30
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsMergeSelectMaster.action.php:75
+msgid "%d link"
+msgid_plural "%d links"
+msgstr[0] "%d посилання"
+msgstr[1] "%d посилання"
+msgstr[2] "%d посилань"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsMergeSelectMaster.html:6
+#: /wa-apps/contacts/js/compiled/contacts.js:31
+#: /wa-apps/contacts/js/wa.controller.js:845
+msgid "Merge contacts"
+msgstr "Об&#39;єднання контактів"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsMergeSelectMaster.html:11
+#: /wa-apps/contacts/templates/actions/contacts/ContactsMergeSelectMaster.html:88
+#: /wa-apps/contacts/templates/actions/contacts/ContactsMergeSelectMaster.html:93
+msgid "Choose a master contact that will be retained after merging."
+msgstr "Оберіть головний контакт, який залишиться після об&#39;єднання."
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsMergeSelectMaster.html:12
+msgid "Other contacts will be deleted during this merging operation."
+msgstr "Інші контакти в результаті виконання процедури об&#39;єднання буде видалено."
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsMergeSelectMaster.html:13
+msgid "Contact info from the contacts to be deleted, except unique fields, will be added to master contact."
+msgstr "Контактна інформація з контактів, що видаляються, за винятком унікальних полів, буде додана в головний контакт."
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsMergeSelectMaster.html:14
+msgid "Links to deleted contacts from other applications will be updated to link to master contact."
+msgstr "Посилання на контакти, що видаляються, які є в інших додатках, будуть змінені на головний контакт."
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsMergeSelectMaster.html:35
+msgid "selected as a master contact"
+msgstr "обрано як головний контакт"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsMergeSelectMaster.html:58
+msgid "%d other contact will be merged with %%s."
+msgid_plural "%d other contacts will be merged with %%s."
+msgstr[0] "%d контакт буде об&#39;єднаний з %%s."
+msgstr[1] "%d контакти буде об&#39;єднано з %%s."
+msgstr[2] "%d контактів буде об&#39;єднано з %%s."
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsMergeSelectMaster.html:61
+msgid "%d contact will not be merged by the reasons designated above."
+msgid_plural "%d contacts will not be merged by the reasons designated above."
+msgstr[0] "%d контакт не буде об&#39;єднаний з вказаних вище причин."
+msgstr[1] "%d контакти не буде об&#39;єднано з вказаних вище причин."
+msgstr[2] "%d контактів не буде об&#39;єднано з вказаних вище причин."
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:26
+msgid "Leave blank to keep existing password."
+msgstr "Для того, щоб зберегти пароль незмінним, залиште поле пустим."
+
+#: /wa-apps/contacts/js/fieldTypes.js:427
+#: /wa-apps/contacts/js/compiled/contacts.js:91
+msgid "select region"
+msgstr "оберіть регіон"
+
+#: /wa-apps/contacts/lib/actions/categories/contactsCategories.controller.php:56
+msgid "%d contact has been removed"
+msgid_plural "%d contacts have been removed"
+msgstr[0] "%d контакт видалено"
+msgstr[1] "%d контакти видалено"
+msgstr[2] "%d контактів видалено"
+
+#: /wa-apps/contacts/lib/actions/categories/contactsCategories.controller.php:58
+msgid "from %d category"
+msgid_plural "from %d categories"
+msgstr[0] "з %d категорії"
+msgstr[1] "з %d категорій"
+msgstr[2] "з %d категорій"
+
+#: /wa-apps/contacts/lib/actions/categories/contactsCategories.controller.php:76
+msgid "%d contact has been added"
+msgid_plural "%d contacts have been added"
+msgstr[0] "%d контакт доданий"
+msgstr[1] "%d контакти додано"
+msgstr[2] "%d контактів додано"
+
+#: /wa-apps/contacts/lib/actions/categories/contactsCategories.controller.php:78
+msgid "to %d category"
+msgid_plural "to %d categories"
+msgstr[0] "в %d категорію"
+msgstr[1] "в %d категорії"
+msgstr[2] "в %d категорій"
+
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsDelete.controller.php:60
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsDelete.controller.php:69
+msgid "%d contact has been deleted"
+msgid_plural "%d contacts have been deleted"
+msgstr[0] "%d контакт видалено"
+msgstr[1] "%d контакти видалено"
+msgstr[2] "%d контактів видалено"
+
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsMergeSelectMaster.action.php:94
+msgid "Users can not be merged into other contacts."
+msgstr "Користувачі не можуть бути об&#39;єднані з іншим контактом."
+
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsMerge.controller.php:39
+msgid "contact"
+msgid_plural "contacts"
+msgstr[0] "контакт"
+msgstr[1] "контакти"
+msgstr[2] "контактів"
+
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsMerge.controller.php:33
+msgid "%s of %s contacts have been merged"
+msgstr "%s з %s контактів об&#39;єднано"
+
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsMerge.controller.php:36
+msgid "No contacts were merged"
+msgstr "Контакти не було об&#39;єднано"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsInfo.html:12
+msgid "of"
+msgstr "з"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsInfo.html:86
+msgid "@"
+msgstr "@"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsInfo.html:134
+msgid "Edit"
+msgstr "Редагувати"
+
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsAdd.action.php:20
+msgid "New compnay"
+msgstr "Нова компанія"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser2.html:47
+msgid "Deny"
+msgstr "Відмовити"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser2.html:49
+msgid "Allow"
+msgstr "Дозволити"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsInfo.html:110
+msgid "Account"
+msgstr "Акаунт"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:13
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:18
+msgid "Disabled"
+msgstr "Заблоковано"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:15
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:18
+msgid "Enabled"
+msgstr "Дозволено"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:32
+msgid "Email address is not specified"
+msgstr "Не вказано email-адресу"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:86
+msgid "Available resources"
+msgstr "Доступні ресурси"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:96
+msgid "Customer portal only"
+msgstr "Лише особистий кабінет"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:97
+msgid "Customer portal + backend"
+msgstr "Особистий кабінет й бекенд"
+
+#: /wa-apps/contacts/js/fieldTypes.js:297
+msgid "Choose company"
+msgstr "Оберіть компанію"
+
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsAdd.action.php:30
+msgid "New person"
+msgstr "Нова особа"
+
+#: /wa-apps/contacts/lib/classes/contactsHelper.class.php:57
+msgid "Access disabled by"
+msgstr "Доступ вимкнуто користувачем"
+
+#: /wa-apps/contacts/lib/config/logs.php:5
+msgid "added a new contact"
+msgstr "додав новий контакт"
+
+#: /wa-apps/contacts/lib/config/logs.php:8
+msgid "deleted contact"
+msgstr "видалив контакт"
+
+#: /wa-apps/contacts/lib/config/logs.php:12
+msgid "changed photo"
+msgstr "змінив зображення"
+
+#: /wa-apps/contacts/js/fieldTypes.js:1537
+msgid "day"
+msgstr "день"
+
+#: /wa-apps/contacts/js/fieldTypes.js:1547
+msgid "month"
+msgstr "місяць"
+
+#: /wa-apps/contacts/js/fieldTypes.js:1575
+#: /wa-apps/contacts/js/fieldTypes.js:1577
+msgid "year"
+msgstr "рік"
+
+#: /wa-apps/contacts/js/compiled/contacts-jquery.js:5
+msgid "Cancel"
+msgstr "Відмінити"
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsEditor.html:26
+msgid "Icon"
+msgstr "Значок"
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsEditor.html:39
+msgid "Group members"
+msgstr "Учасники групи"
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsEditor.html:41
+#: /wa-apps/contacts/templates/actions/groups/GroupsEditor.html:55
+#: /wa-apps/contacts/js/wa.controller.js:448
+msgid "To add users to group, go to <a href=\"#/users/all/\">All users</a>, select them, and click <strong>Actions with selected / Add to group</strong>."
+msgstr "Для додавання користувачів в групу перейдіть у <a href=\"#/users/all/\">Всі користувачі</a>, оберіть потрібних і скористайтеся командою <strong>Дії з обраними / Додати в групу</ strong>."
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsEditor.html:54
+#: /wa-apps/contacts/js/wa.controller.js:447
+msgid "No users in this group."
+msgstr "У цій групі немає користувачів."
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsAdd.html:1
+msgid "Add contacts to groups"
+msgstr "Додати користувачів у групи"
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsAdd.html:4
+msgid "Select groups:"
+msgstr "Обрати групи:"
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsAdd.html:16
+msgid "No user groups."
+msgstr "У користувача немає груп."
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsAdd.html:18
+#: /wa-apps/contacts/js/wa.controller.js:944
+msgid "New group"
+msgstr "Нова група"
+
+#: /wa-apps/contacts/templates/actions/groups/includeGroupsRights.html:5
+msgid "Access level"
+msgstr "Рівень доступу"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsInfo.html:174
+msgid "Contact not found"
+msgstr "Контакт не знайдено"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:40
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:108
+msgid "Offline"
+msgstr "Офлайн"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:63
+msgid "The same password is used to access personal account and backend."
+msgstr "Для доступу в особистий кабінет і в бекенд використовується єдиний пароль."
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:66
+msgid "Also to set password set email first"
+msgstr "Щоб встановити пароль, спочатку встановіть email"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:118
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:135
+msgid "Customer portal"
+msgstr "Особистий кабінет"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:121
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:154
+msgid "Customer Portal is a part of your site available for registered clients and containing their personal data. To access their customer portals your clients must log in with email and password as specified above."
+msgstr "Особистий кабінет — це частина вашого сайту, яка доступна кожному зареєстрованому користувачеві і яка містить персональні дані клієнта. Для доступу в особистий кабінет клієнтам знадобиться авторизація за допомогою адреси email і пароля."
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:124
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:156
+msgid "Personal portal settings"
+msgstr "Налаштування особистого кабінету"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:124
+msgid "in Site app"
+msgstr "у додатку \"Сайт\""
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:149
+msgid "Email address is used as a login"
+msgstr "У якості логіна використовується адреса email"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:170
+msgid "Backend"
+msgstr "Бекенд"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:205
+msgid "change login"
+msgstr "змінити логін"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:253
+msgid "Access rights"
+msgstr "Права доступу"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:255
+msgid "Backend access rights are customized for every app separately and appear to be a combination of personal and group access rights."
+msgstr "Права доступу у бекенді налаштовуються для кожного додатка окремо і складаються із персональних та успадкованих від груп прав."
+
+#: /wa-apps/contacts/templates/actions/photo/PhotoEditor.html:19
+msgid "Drop photo here"
+msgstr "Перетягніть фото сюди"
+
+#: /wa-apps/contacts/templates/actions/photo/PhotoEditor.html:44
+msgid "To change drop another photo or upload file (JPG, GIF или PNG):"
+msgstr "Для заміни перетягніть інше фото або завантажте файл (JPG, GIF або PNG):"
+
+#: /wa-apps/contacts/templates/actions/photo/PhotoEditor.html:47
+msgid "Or upload file (JPG, GIF or PNG):"
+msgstr "Або завантажити файл (JPG, GIF или PNG):"
+
+#: /wa-apps/contacts/templates/actions/backend/BackendSidebar.html:127
+msgid "Users"
+msgstr "Користувачі"
+
+#: /wa-apps/contacts/js/jquery.combobox.js:550
+msgid "Apply"
+msgstr "Застосувати"
+
+#: /wa-apps/contacts/js/fieldTypes.js:1528
+#: /wa-apps/contacts/lib/classes/contactsHelper.class.php:46
+msgid "map"
+msgstr "карта"
+
+#: /wa-apps/contacts/js/wa.grid.js:211
+msgid "<no-name>"
+msgstr "<без імені>"
+
+#: /wa-apps/contacts/js/wa.grid.js:371
+msgid "There is no geographic location info for these contacts."
+msgstr "Для цих контактів немає ніякої географічної інформації."
+
+#: /wa-apps/contacts/js/wa.controller.js:326
+msgid "Edit user group"
+msgstr "Редагувати групу"
+
+#: /wa-apps/contacts/js/wa.controller.js:331
+msgid "Close settings panel"
+msgstr "Закрити панель налаштувань"
+
+#: /wa-apps/contacts/js/wa.controller.js:645
+#: /wa-apps/contacts/js/wa.controller.js:940
+msgid "New user"
+msgstr "Новий користувач"
+
+#: /wa-apps/contacts/js/wa.controller.js:650
+msgid "<a href=\"#/contacts/add/\">Create a new contact</a> and customize access rights on Account tab."
+msgstr "<a href=\"#/contacts/add/\">Створіть новий контакт</a> і налаштуйте права доступу у вкладці «Акаунт»."
+
+#: /wa-apps/contacts/js/wa.controller.js:810
+msgid "Exclude users from group \"%s\"?"
+msgstr "Виключити користувачів з групи \"%s\"?"
+
+#: /wa-apps/contacts/js/wa.controller.js:1107
+msgid "Add to group"
+msgstr "Додати до групи"
+
+#: /wa-apps/contacts/js/wa.controller.js:1114
+msgid "Exclude from this group"
+msgstr "Виключити з цієї групи"
+
+#: /wa-apps/contacts/js/wa.controller.js:1133
+msgid "on the map"
+msgstr "на мапі"
+
+#: /wa-apps/contacts/lib/config/contactsRightConfig.class.php:15
+msgid "Can edit or delete contacts added by other users"
+msgstr "Може редагувати або видаляти контакти, додані іншими користувачами"
+
+#: /wa-apps/contacts/lib/config/logs.php:11
+msgid "edited contact"
+msgstr "відредагував контакт"
+
+#: /wa-apps/contacts/lib/config/logs.php:14
+msgid "added contact photo"
+msgstr "додав фото контакту"
+
+#: /wa-apps/contacts/lib/config/logs.php:17
+msgid "added a new contact category"
+msgstr "додав нову категорію контактів"
+
+#: /wa-apps/contacts/lib/config/logs.php:20
+msgid "added a new user group"
+msgstr "додав нову групу користувачів"
+
+#: /wa-apps/contacts/lib/config/logs.php:23
+msgid "created user account"
+msgstr "створив акаунт користувача"
+
+#: /wa-apps/contacts/lib/config/logs.php:26
+msgid "performed contact search"
+msgstr "виконав пошук контактів"
+
+#: /wa-apps/contacts/lib/config/logs.php:29
+msgid "merged contacts"
+msgstr "об&#39;єднав контакти"
+
+#: /wa-apps/contacts/lib/config/logs.php:32
+msgid "added note about contact"
+msgstr "додав запис про контакт"
+
+#: /wa-apps/contacts/lib/config/logs.php:35
+msgid "edited note about contact"
+msgstr "відредагував замітку про контакт"
+
+#: /wa-apps/contacts/lib/config/logs.php:38
+msgid "delete note about contact"
+msgstr "видалив замітку про контакт"
+
+#: /wa-apps/contacts/lib/config/logs.php:41
+msgid "granted backend access rights"
+msgstr "надав права доступу у бекенд"
+
+#: /wa-apps/contacts/lib/config/logs.php:44
+msgid "revoked backend access rights"
+msgstr "скасовава права доступу у бекенд"
+
+#: /wa-apps/contacts/lib/config/logs.php:47
+msgid "added event"
+msgstr "додав подію"
+
+#: /wa-apps/contacts/lib/config/logs.php:50
+msgid "edited event"
+msgstr "відредагував подію"
+
+#: /wa-apps/contacts/lib/actions/groups/contactsGroupsContactSave.controller.php:38
+msgid "to %d group"
+msgid_plural "to %d groups"
+msgstr[0] "у %d групу"
+msgstr[1] "у %d групи"
+msgstr[2] "у %d груп"
+
+#: /wa-apps/contacts/lib/actions/groups/contactsGroupsDeleteFrom.controller.php:37
+msgid "from %d group"
+msgid_plural "from %d groups"
+msgstr[0] "з %d групи"
+msgstr[1] "з %d груп"
+msgstr[2] "з %d груп"
+
+#: /wa-apps/contacts/js/wa.controller.js:940
+msgid "Create user"
+msgstr "Створити користувача"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:94
+msgid "Available"
+msgstr "Доступний"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:96
+msgid "Not available"
+msgstr "Недоступний"
+
+#: /wa-apps/contacts/js/wa.grid.js:544
+msgid "No contacts"
+msgstr "Немає контактів"
+
+#: /wa-apps/contacts/js/wa.controller.js:631
+msgid "You can grant access to your account backend to any existing contact."
+msgstr "Ви можете надати доступ в бекенд будь-якому існуючому контакту."
+
+#: /wa-apps/contacts/js/wa.controller.js:632
+msgid "Find a contact, or <a href=\"#/contacts/add/\">create a new contact</a>, and then customize their access rights on Access tab."
+msgstr "Знайдіть, або <a href=\"#/contacts/add/\">створіть новий контакт</a>, а потім налаштуйте йому права доступу на вкладці Доступ."
+
+#: /wa-apps/contacts/js/wa.grid.js:544
+msgid "No contacts."
+msgstr "Немає контактів."
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:67
+msgid "Customer Portal is a part of your site available for registered clients and containing their personal data. To access their customer portals your clients must log in with email and password."
+msgstr "Особистий кабінет - це частина вашого сайту, яка доступна кожному зареєстрованому клієнтові і яка містить персональні дані клієнта. Для доступу в особистий кабінет клієнтам знадобиться авторизація за допомогою адреси email і пароля."
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:121
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:161
+msgid "Login name is required to access your account backend."
+msgstr "Логін обов&#39;язковий для доступу в бекенд."
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:122
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:162
+msgid "Ex.: john, agent07, and etc."
+msgstr "Приклад: john, agent07, і т.д."
+
+#: /wa-apps/contacts/templates/actions/groups/GroupsAdd.html:1
+msgid "Add users to groups"
+msgstr "Додати користувачів у групи"
+
+#: /wa-apps/contacts/templates/actions/categories/CategoriesAddSelected.html:4
+msgid "Add contacts to categories"
+msgstr "Додати контакти в категорії"
+
+#: /wa-apps/contacts/lib/actions/groups/contactsGroupsContactSave.controller.php:40
+msgid "%d user has been added"
+msgid_plural "%d users have been added"
+msgstr[0] "%d користувач доданий"
+msgstr[1] "%d користувача додано"
+msgstr[2] "%d користувачів додано"
+
+#: /wa-apps/contacts/lib/actions/groups/contactsGroupsDeleteFrom.controller.php:35
+msgid "%d user excluded"
+msgid_plural "%d users excluded"
+msgstr[0] "%d користувач виключений"
+msgstr[1] "%d користувача виключено"
+msgstr[2] "%d користувачів виключено"
+
+#: /wa-apps/contacts/templates/actions/backend/BackendSidebar.html:33
+msgid "Recent searches"
+msgstr "Нещодавні пошуки"
+
+#: /wa-apps/contacts/lib/config/logs.php:38
+msgid "deleted note about contact"
+msgstr "видалив замітку про контакт"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsInfo.html:127
+msgid "ID"
+msgstr "ID"
+
+#: /wa-apps/contacts/js/wa.controller.js:1121
+msgid "List"
+msgstr "Список"
+
+#: /wa-apps/contacts/js/wa.controller.js:1122
+msgid "Details"
+msgstr "Детально"
+
+#: /wa-apps/contacts/js/wa.controller.js:1123
+msgid "Userpics"
+msgstr "Юзерпіки"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:43
+msgid "never logged in"
+msgstr "ніколи не входив в систему"
+
+#: /wa-apps/contacts/templates/actions/contacts/ContactsUser.html:45
+msgid "last login:"
+msgstr "в останнє входив до системи:"
+
+#: /wa-apps/contacts/lib/actions/groups/contactsGroupsAdd.action.php:9
+#: /wa-apps/contacts/lib/actions/groups/contactsGroupsContactSave.controller.php:15
+#: /wa-apps/contacts/lib/actions/groups/contactsGroupsSave.controller.php:9
+#: /wa-apps/contacts/lib/actions/groups/contactsGroupsDelete.controller.php:10
+#: /wa-apps/contacts/lib/actions/groups/contactsGroupsEditor.action.php:9
+#: /wa-apps/contacts/lib/actions/groups/contactsGroupsDeleteFrom.controller.php:9
+#: /wa-apps/contacts/lib/actions/rights/contactsRights.action.php:10
+#: /wa-apps/contacts/lib/actions/rights/contactsRightsSave.controller.php:10
+#: /wa-apps/contacts/lib/actions/categories/contactsCategoriesDelete.controller.php:10
+#: /wa-apps/contacts/lib/actions/categories/contactsCategoriesSave.controller.php:9
+#: /wa-apps/contacts/lib/actions/categories/contactsCategoriesDeleteFrom.controller.php:10
+#: /wa-apps/contacts/lib/actions/categories/contactsCategoriesEditor.action.php:9
+#: /wa-apps/contacts/lib/actions/categories/contactsCategoriesContactSave.controller.php:9
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsList.controller.php:68
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsUser.controller.php:13
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsUser.controller.php:26
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsMergeSelectMaster.action.php:15
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsMerge.controller.php:10
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsSave.controller.php:24
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsSave.controller.php:29
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsAdd.action.php:8
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsInfo.action.php:41
+#: /wa-apps/contacts/lib/actions/contacts/contactsContactsLinks.action.php:24
+msgid "Access denied"
+msgstr "Доступ заборонено"
+
+#: /wa-apps/contacts//lib/actions/contacts/contactsContactsMerge.controller.php:39
+msgid "%d contact was skipped because they have user accounts"
+msgid_plural "%d contacts were skipped because they have user accounts"
+msgstr[0] "%d контакт було пропущено, тому що він є користувачем"
+msgstr[1] "%d контакти було пропущено, тому що вони є користувачами"
+msgstr[2] "%d контактів було пропущено, тому що вони є користувачами"
+
+#: /wa-apps/contacts/lib/config/logs.php:62
+msgid "created a new signup form"
+msgstr "створив нову форму реєстрації"
+
+#: /wa-apps/contacts/lib/handlers/shop.backend_customers_list.handler.php:38
+#: /wa-apps/contacts/lib/handlers/shop.backend_customers_list.handler.php:43
+#: /wa-apps/contacts/lib/handlers/shop.backend_customers_list.handler.php:48
+msgid "Open in Contacts"
+msgstr "Відкрити у «Контактах»"
+
+msgid "Reports"
+msgstr "Звіти"
+
+msgid "View"
+msgstr "Вигляд"
+
+msgid "Settings"
+msgstr "Налаштування"
+
+msgid "Delete selected"
+msgstr "Видалити обрані"
+
+msgid "Merge selected"
+msgstr "Об&#39;єднати обрані"
+
+msgid "Contacts:"
+msgstr "Контактів:"
+
+msgid "Pages:"
+msgstr "Сторінок:"
+
+msgid "Import"
+msgstr "Імпорт"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Import results"
+msgstr "Результати імпорту"
+
+msgid "Search results"
+msgstr "Результати пошуку"
+
+msgid "Forms"
+msgstr "Форми"
+
+msgid "Duplicates"
+msgstr "Дублікати"
+
+msgid "Plugins"
+msgstr "Плагіни"
+
+msgid "OR"
+msgstr "АБО"
+
+msgid "no access"
+msgstr "немає доступу"
+
+msgid "custom"
+msgstr "налаштований"
+
+msgid "Limited"
+msgstr "Обмежений"
+
+msgid "full access"
+msgstr "повний доступ"
+
+msgid "Selected"
+msgstr "Обрані"
+
+msgid "Not selected"
+msgstr "Не обрані"
+
+msgid "Select categories for this contact:"
+msgstr "Оберіть категорії для даного контакту:"
+
+msgid "none"
+msgstr "ні"
+
+msgid "Delete this contact"
+msgstr "Відалити цей контакт"
+
+msgid "Yes"
+msgstr "Так"
+
+msgid "No"
+msgstr "Ні"
+
+msgid "no categories"
+msgstr "немає категорій"
+
+msgid "Send"
+msgstr "Надіслати"
+
+msgid "All customers"
+msgstr "Усі клієнти"
+
+msgid "Are you sure you want to delete this form?"
+msgstr "Ви впевнені, що бажаєте відалити цю форму?"
+
+msgid "Contacts will not be deleted."
+msgstr "Контакти не буде видалено."
+
+msgid "Facebook"
+msgstr "Facebook"
+
+msgid "Flickr"
+msgstr "Flickr"
+
+msgid "Internet"
+msgstr "Інтернет"
+
+msgid "Page not found"
+msgstr "Сторінку не знайдено"
+
+msgid "Picasa"
+msgstr "Picasa"
+
+msgid "Remove selected"
+msgstr "Відалити обрані"
+
+msgid "WebAsyst Contacts"
+msgstr "WebAsyst Контакти"
+
+msgid "contact deleted"
+msgstr "контакт видалено"
+
+msgid "logout"
+msgstr "вихід"
+
+msgid "Enable validation control (required and unique fields and data format)"
+msgstr "Увімкнути перевірку даних (обов&#39;язкових та унікальних полів, а також формату даних)"
+
+msgid "Error description"
+msgstr "Опис помилки"
+
+msgid "This line was not imported"
+msgstr "Цю строку не було імпортовано"
+
+msgid "Error details shown in columns"
+msgstr "Опис помилок наведено в колонках"
+
+msgid "Invalid format"
+msgstr "Неприпустимий формат"
+
+msgid "This field does not allow duplicates"
+msgstr "Дублікати неприпустимі для цього поля"
+
+msgid "This field is required"
+msgstr "Це поле обов&#39;язкове"
+
+msgid "One of these fields must have a value"
+msgstr "Одне з цих полів має мати значення"
+
+msgid "User groups"
+msgstr "Групи користувачів"
+
+msgid "no groups"
+msgstr "немає груп"
+
+msgid "Change password"
+msgstr "Змінити пароль"
+
+msgid "last login"
+msgstr "останній вхід"
+
+msgid "This login is already in use."
+msgstr "Такий логін вже використовується."
+
+msgid "contact selected"
+msgstr "контакт обраний"
+
+msgid "Filters"
+msgstr "Фільтри"
+
+msgid "select country"
+msgstr "оберіть країну"
+
+msgid "Exclude contacts from category &ldquo;%s&rdquo;?"
+msgstr "Виключити контакти з категорії &ldquo;%s&rdquo;?"
+
+msgid "Exclude contacts from list &ldquo;%s&rdquo;?"
+msgstr "Виключити контакти з списку &ldquo;%s&rdquo;?"
+
+msgid "Edit contact"
+msgstr "Редагувати контакт"
+
+msgid "Add contacts to lists"
+msgstr "Додати контакти в списки"
+
+msgid "Select lists:"
+msgstr "Оберіть списки:"
+
+msgid "to %d list"
+msgstr "в %d список"
+
+msgid "from %d list"
+msgstr "зі %d списку"
+
+msgid "from a list"
+msgstr "зі списку"
+
+msgid "View has been deleted"
+msgstr "Представлення видалено"
+
+msgid "Delete this filter?"
+msgstr "Видалити цей фільтр?"
+
+msgid "Delete filter"
+msgstr "Видалити фільтр"
+
+msgid "Delete this list?"
+msgstr "Видалити цей список?"
+
+msgid "Delete list"
+msgstr "Видалити список"
+
+msgid "Edit list &ldquo;%s&rdquo;"
+msgstr "Редагування списку &ldquo;%s&rdquo;"
+
+msgid "Edit filter &ldquo;%s&rdquo;"
+msgstr "Редагування фільтру &ldquo;%s&rdquo;"
+
+msgid "Filter name:"
+msgstr "Назва фільтра:"
+
+msgid "Full name"
+msgstr "Повне ім&#39;я"
+
+msgid "This email address is in use."
+msgstr "Ця адреса email вже використовується."
+
+msgid "(unconfirmed)"
+msgstr "(не підтверджені)"
+
+msgid "Maximum allowed number of emails is %s"
+msgstr "Максимально припустима кількість email — %s"
+
+msgid "Unable to change list of emails: no main email exists."
+msgstr "Неможливо змінити перелік email, якщо немає головного email."
+
+msgid "Main email %s cannot be removed"
+msgstr "Головний email  %s не може бути видалено"
+
+msgid "Error sending confirmation email."
+msgstr "Помилка при відправці листа з підтвердженням."
+
+msgid "A message with confirmation link has been sent to this address."
+msgstr "На цю адресу було відправлено повідомлення, яке містить посилання для підтвердження."
+
+msgid "Password updated successfully."
+msgstr "Пароль змінено."
+
+msgid "Password cannot be empty."
+msgstr "Пароль не може бути порожнім."
+
+msgid "Current password"
+msgstr "Діючий пароль"
+
+msgid "Incorrect current password"
+msgstr "Невірний діючий пароль"
+
+msgid "Email %s is successfully confirmed."
+msgstr "Адресу %s успішно підтверджено."
+
+msgid "Merge with another account"
+msgstr "Об&#39;єднати з іншим акаунтом"
+
+msgid "Incorrect email or password."
+msgstr "Невірний email або пароль."
+
+msgid "Unable to merge with themselves."
+msgstr "Не можна об&#39;єднувати з самими собою."
+
+msgid "Session has expired."
+msgstr "Сесія минула."
+
+msgid "Unable to merge:"
+msgstr "Неможливо об&#39;єднати:"
+
+msgid "Continue"
+msgstr "Продовжити"
+
+msgid "Fields visible on %sown profile%s page"
+msgstr "Поля, видимі на %sown сторінці свого профилю %s"
+
+msgid "%s has been selected as a master contact."
+msgstr "%s обрано як головний контакт."
+
+msgid "However, there are no contacts to be merged with %s, by the reasons designated above."
+msgstr "Проте, немає жодного контакту, який міг би бути об&#39;єднаний із %s, з вищевказаних причин."
+
+msgid "were skipped because they have user accounts"
+msgstr "були пропущені, тому що вони є користувачами"
+
+msgid "Backend — this is where you are now. By adding backend users you create a team for collaboration. Every user can have their own access rights."
+msgstr "Бекенд - це те місце, де ви зараз перебуваєте. Додаючи користувачів бекенда, ви створюєте команду для колективної праці. Кожному користувачу можна налаштувати права доступу."
+
+msgid "Link for backend sign in"
+msgstr "Адреса входу в бекенд"
+
+msgid "Login ID"
+msgstr "Логін ID"
+
+msgid "create Login ID"
+msgstr "створити логін ID"
+
+msgid "Login ID is an alternative (optional) login for your backend users convenience. It can be used instead of email login specified above."
+msgstr "Логін ID є альтернативним (необов&#39;язковим) логіном для зручності авторизації користувачем бекенду. Його можна використовувати замість адреси email, вказаної вище."
+
+msgid "Name of group"
+msgstr "Назва групи"
+
+msgid "First email address is used as a login"
+msgstr "В якості логіну використовується головна адреса email контакту"
+
+msgid "Exclude contacts from group \"%s\"?"
+msgstr "Виключити контакти з групи \"%s\"?"

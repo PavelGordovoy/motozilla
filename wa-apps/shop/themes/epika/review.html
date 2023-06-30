@@ -1,0 +1,62 @@
+{* one review output *}
+
+{if !empty($ajax_append)}<li data-id={$review.id} data-parent-id="{$review.parent_id}">{/if}
+
+
+    {$lettColors = ['#4CAF50', '#E91E63', '#673AB7', '#FF5722', '#2196F3', '#795548', '#607D8B', '#00BCD4']}
+    {$rand = "0"|mt_rand:($lettColors|count-1)}
+    {$lettColor = $lettColors[$rand]}
+
+<figure class="review" itemprop="review" itemscope itemtype="http://schema.org/Review">
+    <div class="user-pic">
+
+        {if isset($review.author.photo_url_50)}
+            <i class="icon16 avatar userpic45 float-left logined" style="background-image: url('{$review.author.photo_url_50}');"></i>
+        {else}
+            <!--<i class="icon16 avatar userpic45 float-left not-logined" style="background-image: url('{shopHelper::getGravatar($review.author.email, 50, 'custom')}');"></i>-->
+
+            {assign var=firstletter value=$review.author.name|mb_substr:0:1}
+            <i class="icon16 avatar userpic45 float-left not-logined" style="background-color: {$lettColor};"><span class="first-letter">{$firstletter|upper}</span></i>
+        {/if}
+    </div>
+    <div class="comment">
+        <div class="summary">
+            [`By`]
+            {if empty($review.site)}
+                <span class="username" itemprop="author">{$review.author.name}</span>
+            {else}
+                <a href="{$review.site}" class="username" itemprop="author">{$review.author.name}</a>
+            {/if}
+
+            {if ifempty($review.author.is_user) > 0}
+                <span class="staff">{$wa->shop->settings('name')}</span>
+            {/if}
+            <meta itemprop="itemReviewed" content="{$product.name|escape}">
+            <meta itemprop="datePublished" content="{$review.datetime|date_format:'Y-m-d'}">
+            <span class="date" title="{$review.datetime|wa_datetime}">{$review.datetime|wa_datetime:"humandatetime"}</span>
+            <span itemprop="name" class="review-title">"{if $review.title}{$review.title}{/if}"</span>
+                {if !$review.parent_id && !empty($review.rate)}
+                    <span class="reviewRating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                        {$rate = round($review.rate)}
+                        <meta itemprop="worstRating" content = "1">
+                        <meta itemprop="ratingValue" content="{$rate}">
+                        <meta itemprop="bestRating" content = "5">
+                        {$wa->shop->ratingHtml($rate)}
+                    </span>
+                {/if}
+
+
+        </div>
+        {if $review.text}
+            <p itemprop="description">{$review.text}</p>
+        {/if}
+
+        {if $reply_allowed}
+            <div class="actions">
+                <a href="{if isset($reply_link)}{$reply_link}{else}#{/if}" class="review-reply"><i class="icon-reply-rev"></i> <span>[`reply`]</span></a>
+            </div>
+        {/if}
+    </div>
+</figure>
+
+{if !empty($ajax_append)}<ul class="reviews-branch"></ul></li>{/if}

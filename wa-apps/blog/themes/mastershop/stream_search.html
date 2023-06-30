@@ -1,0 +1,51 @@
+{strip}
+{* post stream (list): minimalistic view mode; used for post filtering by tags, author, search, etc. *}
+{$is_schema_org = $theme_settings.schema_org_active}
+
+{foreach $posts as $post}
+    <section class="post post--list search-match" id="post-{$post.id}" {if $is_schema_org} {if $wa->param('blog_url')}itemprop="blogPosts" {/if}itemscope itemtype="http://schema.org/BlogPosting"{/if}>
+        <div class="post__head">
+            {if $is_schema_org}
+                <meta itemprop="dateModified" content="{$post.datetime|date_format:'Y-m-d'}" />
+            {/if}
+            <span class="post__date"{if $is_schema_org} itemprop="datePublished" content="{$post.datetime|date_format:'Y-m-d'}"{/if}>
+                {$post.datetime|wa_datetime:"humandate"}
+            </span>
+            <h3 class="post__title">
+                <a href="{$post.link}" {if $is_schema_org} itemprop="url"{/if}>
+                    <span {if $is_schema_org}itemprop="headline"{/if}>{$post.title}</span>
+                </a>
+            </h3>
+        </div>
+        <div class="post__text"{if $is_schema_org} itemprop="articleBody"{/if}>
+            {if $wa->isMobile()}{$post.text|strip_tags|truncate:400}{else}{$post.text|strip_tags}{/if}
+        </div>
+        <div class="post__credentials">
+            {if $post.user.posts_link}
+                <span class="post_author"{if $is_schema_org} itemprop="author" itemscope itemtype="http://schema.org/Person"{/if}>
+                    <a href="{$post.user.posts_link}"{if $is_schema_org} itemprop="url"{/if}>
+                        {if isset($post.user.photo_url_20)}<img src="{$post.user.photo_url_20}" class="post_userpic" alt="">{/if}
+                        <span class="post_username"{if $is_schema_org} itemprop="name"{/if}>{$post.user.name}</span>
+                    </a>
+                </span>
+            {else}
+                <span class="post_author"{if $is_schema_org} itemprop="author" itemscope itemtype="http://schema.org/Person"{/if}>
+                    {if isset($post.user.photo_url_20)}<img src="{$post.user.photo_url_20}" class="post_userpic" alt="">{/if}
+                    <span class="post_username"{if $is_schema_org} itemprop="name"{/if}>{$post.user.name}</span>
+                </span>
+            {/if}
+            <a class="show-all post__more ac-color" href="{$post.link}">
+                [`Read more`]
+                <i class="button-more fal fa-long-arrow-right"></i>
+            </a>
+        </div>
+
+
+
+    </section>
+{foreachelse}
+    {if !isset($page) || $page lt 2}
+        {_w('%d post','%d posts',0)}
+    {/if}
+{/foreach}
+{/strip}

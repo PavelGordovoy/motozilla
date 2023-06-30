@@ -1,0 +1,63 @@
+<div class='s-helper-block'>
+
+    {* Вкладки *}
+    <ul class='tabs'>
+        {if !empty($form['fields'])}
+            <li id='s-helper-fields' class='selected'>
+                <a href='#/change/Tab/' class='js-action'>[`Form fields`]</a>
+            </li>
+        {/if}
+        <li id='s-helper-vars'{if empty($form['fields'])} class='selected'{/if}>
+            <a href='#/change/Tab/' class='js-action'>[`Template vars`]</a>
+        </li>
+        <li id='s-helper-fields' class='no-tab'>
+            <a href='javascript:void(0)' onclick='$(this).closest(".s-helper-block").remove()'>[`close`]</a>
+        </li>
+    </ul>
+    
+    {* Доступные поля формы *}
+    {if !empty($form['fields'])}
+        <div id='s-helper-fields-content' class='tab-content'>
+            <div class='fields'>
+                {foreach $form['fields'] as $ff}
+                    {* Если выбрано не сохранять значения *}
+                    {if (isset($ff['properties']['save_data']) && !$ff['properties']['save_data'])}
+                        {continue}
+                    {/if}
+                    {if $ff['type'] !== 'html' && $ff['type'] !== 'section' && !$ff['hidden']}
+                        <div class='field'><div class='name'>{$ff['title']|escape}</div><div class='value'>ID: {$ff['unique_id']}</div></div>
+                        {if ($ff['title'])}
+                            {$example_field = $ff['unique_id']}
+                        {/if}
+                    {/if}
+                {/foreach}
+
+                {* Дополнительные параметры, переданные в форму *}
+                {foreach $custom_params as $cp_name => $cp}
+                    {$translit = multiformTemplate::transliterate($cp_name)}
+                    {if $translit}
+                        <div class='field additional-field'>[`Additional field`] - {$cp_name|escape} (<span>ID: {$translit}</span>)</div>
+                    {/if}
+                {/foreach}
+            </div>
+        </div>
+    {/if}
+    
+    {* Переменные шаблона *}
+    <div id='s-helper-vars-content' class='tab-content'{if !empty($form['fields'])} style='display: none'"{/if}>
+        <div class='fields'>
+            <div class='field'><div class='name'>{ldelim}Field:ID{rdelim}</div><div class='value'>[`Output the name of the field`]{if !empty($example_field)}<br>[`E.g`], {ldelim}Field:{$example_field}{rdelim}{/if}</div></div>
+            <div class='field'><div class='name'>{ldelim}Record:ID{rdelim}</div><div class='value'>[`Output the value of the field`]{if !empty($example_field)}<br>[`E.g`], {ldelim}Record:{$example_field}{rdelim}{/if}</div></div>
+            <div class='field'><div class='name'>{ldelim}Record:DATE{rdelim}</div><div class='value'>[`Output the date of the record.`]</div></div>
+            <div class='field'><div class='name'>{ldelim}Record:ALL{rdelim}</div><div class='value'>[`Output all records. Default mail template.`]</div></div>
+            <div class='field'><div class='name'>{ldelim}Request:ID{rdelim}</div><div class='value'>[`Records ID format.`]</div></div>
+            <div class='field'><div class='name'>{ldelim}Form:ID{rdelim}</div><div class='value'>[`Output form ID.`]</div></div>
+            <div class='field'><div class='name'>{ldelim}Form:NAME{rdelim}</div><div class='value'>[`Output form name (title).`]</div></div>
+            <div class='field'><div class='name'>{ldelim}Form:DESCRIPTION{rdelim}</div><div class='value'>[`Output form description.`]</div></div>
+            <div class='field'><div class='name'>{ldelim}Form:URL{rdelim}</div><div class='value'>[`Output form url.`]</div></div>
+            <div class='field'><div class='name'>{ldelim}Form:LINK{rdelim}</div><div class='value'>[`Output link to form.`]</div></div>
+            <div class='field'><div class='name'>{ldelim}Contact:FIELD{rdelim}</div><div class='value'>[`Output contact info from the Contacts.`]<br>[`E.g`], {ldelim}Contact:name{rdelim}, {ldelim}Contact:ip{rdelim}, {ldelim}Contact:about{rdelim},[`etc.`]</div></div>
+        </div>
+    </div>
+
+</div>

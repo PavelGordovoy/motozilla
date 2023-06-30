@@ -1,0 +1,345 @@
+{$viewed = waRequest::cookie('shop_viewed')}
+{$viewed_products = $wa->shop->products("id/$viewed")}
+
+{if isset($category.params.slider) && !empty($category.params.slider) && class_exists('shopRevolutionsliderPlugin')}
+	{shopRevolutionsliderPlugin::display($category.params.slider)}
+{/if}
+
+
+<div class="e-space">
+	{include file='breadcrumbs.html'}
+</div>
+		<!-- sorting -->
+		{$sort_fields = [
+		['sort' => 'price', 'name' => 'От дешевых к дорогим', 'order' => 'asc'],
+		['sort' => 'price', 'name' => 'От дорогих к дешевым', 'order' => 'desc'],
+		['sort' => 'name', 'name' => '[`Name`]', 'order' => 'desc'],
+		['sort' => 'total_sales', 'name' => '[`Bestsellers`]', 'order' => 'desc'],
+		['sort' => 'rating', 'name' => '[`Customer rating`]', 'order' => 'desc'],
+		['sort' => 'create_datetime', 'name' => '[`Date added`]', 'order' => 'desc'],
+		['sort' => 'stock', 'name' => '[`In stock`]', 'order' => 'desc'] ]}
+
+		{if !isset($active_sort)}
+		{$active_sort = $wa->get('sort', 'create_datetime')}
+		{/if}
+
+		{$sort_order = $wa->get('order', 'asc')}
+
+		{$sort_selected = "[`Sort by`]"}
+		{foreach $sort_fields as $sort}
+		{if $active_sort == $sort.sort && $sort.order == $sort_order} {$sort_selected = $sort.name} {/if}
+		{/foreach}
+
+<div class="row no-padding category-page">
+	<!-- plugin hook: 'frontend_category' -->
+	{* @event frontend_category.%plugin_id% *}
+	{foreach $frontend_category as $_}{$_}{/foreach}
+		<aside class="category-sidebar">
+			{if isset($filters) && !empty($filters)}
+			<div class="sidebar fl-sidebar">
+				<!-- filtering by product features -->
+				{if waRequest::isXMLHttpRequest() && waRequest::get('page', 1) == 1}
+					<link href="{$wa_static_url}wa-content/css/jquery-ui/base/jquery.ui.slider.css" rel="stylesheet" type="text/css">
+					<script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery-ui/jquery.ui.core.min.js?v{$wa->version(true)}"></script>
+					<script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery-ui/jquery.ui.widget.min.js?v{$wa->version(true)}"></script>
+					<script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery-ui/jquery.ui.mouse.min.js?v{$wa->version(true)}"></script>
+					<script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery-ui/jquery.ui.slider.min.js?v{$wa->version(true)}"></script>
+				{/if}
+				<div  class="filters leadbox{if !empty($theme_settings.ajax_filters)} ajax{/if}">
+					<h3><span>Фильтр</span><a href="" class="close-filter-button"><i class="icon-cross97"></i> Скрыть фильтр</a><a href="{strtok($wa->currentUrl(), '?')}" class="clear-filtre"><i class="icon-cw"></i></a></h3>
+
+					<form class="filters-form-wrapper" method="get" action="{$wa->currentUrl(0,1)}" data-loading="{$wa_parent_theme_url}img/loading16.gif">
+
+							{foreach $filters as $fid => $filter}
+							<div class="filter-param">
+								{if $fid == 'price'}
+								{$c = $wa->shop->currency(true)}
+									<h5><i class="icon-minus-squared-alt"></i>[`Price`]</h5>
+									<div class="slider">
+										<div class="prices">
+											<div class="item">
+												<label>[`from`]</label> <input type="text" class="min" name="price_min" {if $wa->get('price_min')}value="{(int)$wa->get('price_min')}"{/if} placeholder="{floor($filter.min)}">
+											</div>
+											<div class="item">
+												<label>[`to`] {$c.sign}</label> <input type="text" class="max" name="price_max" {if $wa->get('price_max')}value="{(int)$wa->get('price_max')}"{/if} placeholder="{ceil($filter.max)}">
+											</div>
+										</div>
+									</div>
+								{else}
+										<h5><i class="icon-minus-squared-alt"></i>{$filter.name|escape}</h5>
+										{if $filter.type == 'boolean'}
+											<div class="group">
+												<div class="item radios">
+													<label><input type="radio" name="{$filter.code}"{if $wa->get($filter.code)} checked{/if} value="1"> <span>[`Yes`]</span></label>
+												</div>
+												<div class="item radios">
+													<label><input type="radio" name="{$filter.code}"{if $wa->get($filter.code) === '0'} checked{/if} value="0"> <span>[`No`]</span></label>
+												</div>
+												<div class="item radios">
+													<label><input type="radio" name="{$filter.code}"{if $wa->get($filter.code, '') === ''} checked{/if} value=""> <span>[`Any`]</span></label>
+												</div>
+											</div>
+									{elseif isset($filter.min)}
+										{$_v = $wa->get($filter.code)}
+										<div class="slider">
+											<div class="range">
+												<div class="item">
+													<label>[`from`]</label>
+													<input type="text" class="min" name="{$filter.code}[min]" placeholder="{$filter.min}" {if !empty($_v.min)}value="{$_v.min}"{/if}>
+												</div>
+												<div class="item">
+													<label>[`to`]</label>
+													<input type="text" class="max" name="{$filter.code}[max]" placeholder="{$filter.max}" {if !empty($_v.max)}value="{$_v.max}"{/if}>
+													<span>
+														{if !empty($filter.unit)}
+														{$filter.unit.title}
+														{if $filter.unit.value != $filter.base_unit.value}<input type="hidden" name="{$filter.code}[unit]" value="{$filter.unit.value}">{/if}
+														{/if}
+													</span>
+												</div>
+											</div>
+
+										</div>
+									{else}
+										<div class="group">
+											{foreach $filter.values as $v_id => $v}
+												<div class="item {if $filter.code == 'color'}colory{else}squaredThree{/if}">
+													<label {if in_array($v_id, (array)$wa->get($filter.code, array()))}class="checked"{/if}>
+														<input type="checkbox" name="{$filter.code}[]" {if in_array($v_id, (array)$wa->get($filter.code, array()))}checked{/if} value="{$v_id}"><span>{$v}</span>
+													</label>
+												</div>
+											{/foreach}
+										</div>
+									{/if}
+								{/if}
+							</div>
+							{/foreach}
+
+						{if $wa->get('sort')}<input type="hidden" name="sort" value="{$wa->get('sort')|escape}">{/if}
+						{if $wa->get('order')}<input type="hidden" name="order" value="{$wa->get('order')|escape}">{/if}
+						<!--<input type="submit" class="gray blue-btn full-size" value="[`Filter products`]">-->
+					</form>
+				</div>
+				</div>
+				{/if}
+
+				{if !empty($category.subcategories)}
+				<div class="sidebar">
+					<h3><span>Разделы</span></h3>
+						<ul class="subcats-list">
+							{foreach $category.subcategories as $sc}
+							{$cid=$sc.id}
+							{$catcount = $wa->shop->productsCount("category/$cid")}
+							<li>
+								<a href="{$sc.url}" class="sub-link-name">{$sc.name|escape}</a> <span>{$catcount}</span>
+							</li>
+							{/foreach}
+						</ul>
+				</div>
+				{/if}
+
+				{if $viewed_products}
+				<div class="sidebar">
+					<h3><span>Просмотренные</span></h3>
+					{include file="list-thumbs-mini-vertical-zeus.html" products=$viewed_products}
+				</div>
+				{/if}
+
+				{$wa->block("category_sidebar")}
+		</aside>
+
+
+
+	<div class="g-product-list catogery-products-list {if !$products}no-prod-cat{/if}">
+
+		<div class="row">
+			{if $products || !empty($filters) || $category.parent_id != 0}
+				<div class="e-space category-header">
+					<h1 class="category-name">
+						{if !empty($category.params.icon)}<i class="cat-ico icon-{$category.params.icon}"></i>{/if}{$category.name|escape}
+					</h1>
+
+					<div class="dropdown prd-sorting">
+						<div>
+							<span class="lable" style="display: none">Сортировка</span>
+							<button class="sorting-btn" type="button" data-toggle="dropdown">{$sort_selected} <i class="icon-angle-down"></i></button>
+							<ul class="dropdown-menu">
+								{foreach $sort_fields as $sort}
+								<li><a href="?sort={$sort.sort}&order={$sort.order}" {if $active_sort == $sort.sort && $sort_order == $sort.order} class="selected"{/if}>{$sort.name}</a></li>
+								{/foreach}
+							</ul>
+						</div>
+						<div class="catalog-view">
+							<span class="lable" style="display: none">Вид</span>
+							<ul>
+								<li><a href="{strtok($wa->currentUrl(), '?')}" class="viev-grid {if waRequest::cookie('epika_product_list_view') == 'grid'}active{/if}"><i class="icon-th"></i></a></li>
+								<li><a href="{strtok($wa->currentUrl(), '?')}" class="viev-list {if waRequest::cookie('epika_product_list_view') == 'list'}active{/if}"><i class="icon-th-list"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			{/if}
+
+
+
+			{if !empty($category.subcategories)  && !empty($category.params.showCategoryLogos)}
+
+				<ul class="subcats-logo-list e-space">
+					{foreach $category.subcategories as $sc}
+					{$cid=$sc.id}
+					{$catParams = $wa->shop->category($cid)}
+					{$catcount = $wa->shop->productsCount("category/$cid")}
+					<li>
+						<a href="{$sc.url}">
+						<img src="{if isset($catParams.params.categoryLogo)}{$catParams.params.categoryLogo}{else}{$wa_theme_url}assets/img/nophoto.png{/if}" alt="">
+						</a>
+
+						<a href="{$sc.url}">{$sc.name|escape}</a>
+
+					</li>
+					{/foreach}
+				</ul>
+
+			{/if}
+
+
+		<div class="e-space">
+			<div class="options-list">
+				<ul>
+				{if isset($filters) && !empty($filters)}
+					{$active_filter = false}
+					{foreach $filters as $fid => $filter}
+					{if $fid == 'price'}
+					{$c = $wa->shop->currency(true)}
+					{if $wa->get('price_min')}
+					{$active_filter = true}
+					<li class="filter-active">
+						<input type="hidden" class="hidden-active-filter type-text" name="price_min" value="{(int)$wa->get('price_min')}">
+						<span><span class="name">[`from`] {(int)$wa->get('price_min')} {$c.sign}</span ><i class="icon-cross97 remove-filter-active"></i></span>
+					</li>
+					{/if}
+
+					{if $wa->get('price_max')}
+					{$active_filter = true}
+					<li class="filter-active">
+						<input type="hidden" class="hidden-active-filter type-text" name="price_max" value="{(int)$wa->get('price_max')}">
+						<span><span class="name">[`to`] {(int)$wa->get('price_max')} {$c.sign}</span ><i class="icon-cross97 remove-filter-active"></i></span>
+					</li>
+					{/if}
+
+					{else}
+
+					{if $filter.type == 'boolean'}
+					{if $wa->get($filter.code) || $wa->get($filter.code) === '0'}
+					{$active_filter = true}
+					<li class="filter-active">
+						<input type="hidden" class="hidden-active-filter type-radio" name="{$filter.code}" value="{if $wa->get($filter.code) === '0'}0{else}1{/if}">
+						<span><span class="name">{$filter.name|escape}: {if $wa->get($filter.code) === '0'}[`No`]{else}[`Yes`]{/if}</span ><i class="icon-cross97 remove-filter-active"></i></span>
+					</li>
+					{/if}
+
+					{elseif isset($filter.min)}
+					{$_v = $wa->get($filter.code)}
+
+					{if !empty($_v.min)}
+					{$active_filter = true}
+					<li class="filter-active">
+						<input type="hidden" class="hidden-active-filter type-text" name="{$filter.code}[min]" value="{$_v.min}">
+						<span><span class="name">[`from`] {$_v.min} {if !empty($filter.unit)}{$filter.unit.title}{/if}</span ><i class="icon-cross97 remove-filter-active"></i></span>
+					</li>
+					{/if}
+
+					{if !empty($_v.max)}
+					{$active_filter = true}
+					<li class="filter-active">
+						<input type="hidden" class="hidden-active-filter type-text" name="{$filter.code}[max]" value="{$_v.max}">
+						<span><span class="name">[`to`] {$_v.max} {if !empty($filter.unit)}{$filter.unit.title}{/if}</span ><i class="icon-cross97 remove-filter-active"></i></span>
+					</li>
+					{/if}
+
+					{else}
+					{foreach $filter.values as $v_id => $v}
+					{if in_array($v_id, (array)$wa->get($filter.code, array()))}
+					{$active_filter = true}
+					<li class="filter-active">
+						<input type="hidden" class="hidden-active-filter" name="{$filter.code}[]" value="{$v_id}">
+						<span><span class="name">{$v}</span ><i class="icon-cross97 remove-filter-active"></i></span>
+					</li>
+					{/if}
+					{/foreach}
+					{/if}
+					{/if}
+					{/foreach}
+					{if $active_filter}<li><span class="clear-all"><span class="name">Сбросить</span ></span></li>{/if}
+					{if $active_filter}<li class="left"><span class="title"><span class="name">Фильтр по:</span ></span></li>{/if}
+				{/if}
+				</ul>
+			</div>
+
+
+
+
+
+		</div>
+
+		</div>
+
+		{if isset($theme_settings.category_descr_pos) && $theme_settings.category_descr_pos == "above_products"}
+		{if $category.description}
+		<div class="e-space">
+			<p>{$category.description}</p>
+		</div>
+		{/if}
+		{/if}
+
+		<div id="product-list">		
+		{if !$products}
+			{if isset($filters) && !empty($filters)}
+				[`No products were found.`]
+			{else}
+				{$epikaBannerUrl = str_replace("-","", $category.url)}
+				{$home_banner_var=$wa->block("$epikaBannerUrl")}
+				{if !empty($home_banner_var)}
+					{$wa->block("$epikaBannerUrl")}
+				{/if}
+
+
+			{/if}
+		{else}
+			{if isset($filters) && !empty($filters)}
+			<button class="show-filter-button"><i class="icon-sliders"></i> Фильтр по характеристикам</button>
+			{/if}
+			
+			<input type="hidden" id="category_loaded_page" value="{waRequest::get('page', 1)}">
+			{$cat_id = $category.id}
+			<input type="hidden" id="category_products_count" value="{$wa->shop->productsCount("category/$cat_id")}">
+			<input type="hidden" id="category_products_per_page" value="{$wa->shop->config('products_per_page')}">
+
+			{if waRequest::cookie('epika_product_list_view') == 'list'}
+			{include file='list-thumbs-zeus-list.html' sorting=!empty($category.params.enable_sorting)}
+			{else}
+			{include file='list-thumbs-zeus.html' sorting=!empty($category.params.enable_sorting)}
+			{/if}
+
+		{/if}
+		</div>
+
+		{if isset($theme_settings.category_descr_pos) && $theme_settings.category_descr_pos == "below_products"}
+			{if $category.description}
+				<div class="e-space" style="margin-top: 30px">
+					<p>{$category.description}</p>
+				</div>
+			{/if}
+		{/if}
+	</div>
+	{if !empty($category.params.epikacat_list)}
+	{$cat_list_var=$wa->shop->productSet($category.params.epikacat_list)}
+	{/if}
+	{if !empty($category.params.epikacat_list) && !empty($cat_list_var)}
+		<div class="category-carousel g-product-list col-xs-12">
+			<h3 class="icon-title g-title">{if !empty($category.params.epikacat_list_icon)}{$category.params.epikacat_list_icon}{else}<i class="icon-menu-flat"></i>{/if}{if !empty($category.params.epikacat_list_name)}<span>{$category.params.epikacat_list_name}</span>{/if}</h3>
+			{$products = $wa->shop->productSet($category.params.epikacat_list)}
+			{include file="list-thumbs-mini.html" products=$products ulclass="related-slick-slider cross-up-carousel category-carousel"}
+		</div>
+	{/if}
+</div>

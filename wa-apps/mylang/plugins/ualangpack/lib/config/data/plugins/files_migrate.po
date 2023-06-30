@@ -1,0 +1,191 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Project-Id-Version: Webasyst Files Migrate plugin 1.0.44373 UA translation v 1.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: /wa-apps/files/plugins/migrate/templates/actions/settings/Settings.html:2
+msgid "Transfer data from third-party platforms and sources to Webasyst Files."
+msgstr "Перенесення даних зі сторонніх платформ і джерел у додаток «Файли» від Webasyst."
+
+#: /wa-apps/files/plugins/migrate/templates/actions/settings/Settings.html:5
+msgid "Source"
+msgstr "Джерело"
+
+#: /wa-apps/files/plugins/migrate/templates/actions/settings/Settings.html:8
+msgid "Platform"
+msgstr "Платформа"
+
+#: /wa-apps/files/plugins/migrate/templates/actions/settings/Settings.html:47
+msgid "Connect"
+msgstr "Підключити"
+
+#: /wa-apps/files/plugins/migrate/templates/actions/settings/Settings.html:47
+msgid "Import data"
+msgstr "Імпорт даних"
+
+#: /wa-apps/files/plugins/migrate/templates/actions/settings/Settings.html:60
+msgid "Please do not close your browser window and do not leave this page until the entire migration process is finished."
+msgstr "Будь ласка, не закривайте браузер і не покидайте цю сторінку до закінчення імпорту."
+
+#: /wa-apps/files/plugins/migrate/templates/actions/settings/Settings.html:79
+#: /wa-apps/files/plugins/migrate/js/migrate.js:210
+msgid "Loading..."
+msgstr "Завантаження..."
+
+#: /wa-apps/files/plugins/migrate/lib/filesMigratePlugin.class.php:12
+#: /wa-apps/files/plugins/migrate/lib/filesMigratePlugin.class.php:31
+msgid "Select platform"
+msgstr "Оберіть платформу"
+
+#: /wa-apps/files/plugins/migrate/lib/filesMigratePlugin.class.php:17
+msgid "WebAsyst Files (old version) on the same server"
+msgstr "WebAsyst Файли (стара версія) на тому ж сервері"
+
+#: /wa-apps/files/plugins/migrate/lib/filesMigratePlugin.class.php:18
+#: /wa-apps/files/plugins/migrate/lib/filesMigratePlugin.class.php:24
+msgid "IMPORTANT: All root folders will be imported to your new Files app as new storages available to admin users only. You will be able to customize access rights after import is finished."
+msgstr "ВАЖЛИВО: усі кореневі папки буде імпортовано у ваш новий додаток «Файлі» у якості нових сховищ, які доступні тільки адміністраторам. Ви зможете налаштувати права доступу після закінчення імпорту."
+
+#: /wa-apps/files/plugins/migrate/lib/filesMigratePlugin.class.php:23
+msgid "WebAsyst Files (old version) on a remote server"
+msgstr "WebAsyst Файли (стара версія) на віддаленому сервері"
+
+#: /wa-apps/files/plugins/migrate/lib/config/plugin.php:3
+msgid "Migrate"
+msgstr "Перенос"
+
+#: /wa-apps/files/plugins/migrate/lib/config/plugin.php:4
+msgid "Transfer data from other platforms to Webasyst Files"
+msgstr "Перенести дані з інших платформ у Webasyst «Файли»"
+
+#: /wa-apps/files/plugins/migrate/lib/actions/settings/filesMigratePluginSettingsRun.controller.php:128
+msgid "Successfully imported"
+msgstr "Імпортовано успішно"
+
+#: /wa-apps/files/plugins/migrate/lib/actions/settings/filesMigratePluginSettingsRun.controller.php:148
+msgid "%02d hr %02d min %02d sec"
+msgstr "%02d год %02d хв %02d сек"
+
+#: /wa-apps/files/plugins/migrate/lib/actions/settings/filesMigratePluginSettingsRun.controller.php:153
+msgid "(total time: %s)"
+msgstr "(загальний час: %s)"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateTransport.class.php:56
+msgid "%d folder"
+msgid_plural "%d folders"
+msgstr[0] "%d папка"
+msgstr[1] "%d папки"
+msgstr[2] "%d папок"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateTransport.class.php:59
+msgid "%d file"
+msgid_plural "%d files"
+msgstr[0] "%d файл"
+msgstr[1] "%d файли"
+msgstr[2] "%d файлів"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateTransport.class.php:39
+msgid "Importing folders..."
+msgstr "Імпорт папок..."
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateTransport.class.php:42
+msgid "Importing files..."
+msgstr "Імпорт файлів..."
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateTransport.class.php:293
+msgid "Errors only"
+msgstr "Тільки помилки"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateTransport.class.php:294
+msgid "Debug (detailed log)"
+msgstr "Дебаг (детальний звіт)"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateTransport.class.php:299
+msgid "Log level"
+msgstr "Рівень журналу"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystTransport.class.php:15
+msgid "All root folders will be imported to your new Files app as new storages <strong>available to admin users only</strong>. You will be able to customize access rights after import is finished."
+msgstr "ВАЖЛИВО: усі кореневі папки буде імпортовано у ваш новий додаток «Файлі» у якості нових сховищ, <strong>які доступні тільки адміністраторам</strong>. Ви зможете налаштувати права доступу після закінчення імпорту."
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystTransport.class.php:241
+msgid "There no required WebAsyst tables: %s"
+msgstr "Немає потрібних таблиць WebAsyst: %s"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystsameTransport.class.php:23
+msgid "Path to folder"
+msgstr "Шлях до папки"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystsameTransport.class.php:25
+msgid "Path to folder of the WebAsyst (old version) installation"
+msgstr "Шлях до папки установки старої версії Webasyst"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystsameTransport.class.php:54
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystsameTransport.class.php:57
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystsameTransport.class.php:67
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystsameTransport.class.php:74
+msgid "Invalid PATH %s"
+msgstr "Невірний PATH %s"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystsameTransport.class.php:85
+msgid "Invalid SQL server name"
+msgstr "Неприпустиме ім&#39;я сервера SQL"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystremoteTransport.class.php:208
+msgid "Invalid server response with code %d"
+msgstr "Неправильна відповідь сервера з кодом %d"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystremoteTransport.class.php:18
+msgid "Data access URL"
+msgstr "URL-адреса доступу до даних"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystremoteTransport.class.php:32
+msgid "Login"
+msgstr "Логін"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystremoteTransport.class.php:34
+msgid "WebAsyst user login"
+msgstr "Логін користувача Webasyst"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystremoteTransport.class.php:38
+msgid "Password"
+msgstr "Пароль"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystremoteTransport.class.php:40
+msgid "WebAsyst user password"
+msgstr "Пароль користувача Webasyst"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystremoteTransport.class.php:106
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystremoteTransport.class.php:125
+msgid "Invalid URL, login or password"
+msgstr "Невірні URL, логін або пароль"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystremoteTransport.class.php:113
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystremoteTransport.class.php:117
+msgid "Invalid server response"
+msgstr "Неправильна відповідь сервера"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystremoteTransport.class.php:285
+msgid "PHP extension curl not loaded"
+msgstr "Розширення PHP cURL не завантажене"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystremoteTransport.class.php:288
+msgid "Error while init Curl"
+msgstr "Помилка ініціалізації сURL"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystremoteTransport.class.php:292
+msgid "Curl error %d#:%s"
+msgstr "Помилка cURL %d#:%s"
+
+#: /wa-apps/files/plugins/migrate/lib/transport/filesMigrateWebasystremoteTransport.class.php:342
+msgid "Import data from %s"
+msgstr "Імпорт даних з %s"

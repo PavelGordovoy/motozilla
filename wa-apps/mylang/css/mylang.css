@@ -1,0 +1,53 @@
+#wa{background: rgb(245, 247, 240);}
+#wa-app{overflow:visible}
+#s-mylang-saveall-form{overflow-x: auto;}
+#maincontent{background:#fff}
+.wa-mylang-save-panel{display:block;position:fixed;bottom:0;left:0;right:0;background:#fff;box-shadow:0 -6px 10px -10px #AAA;z-index:1052;padding-left:40%}
+.right{right:0;position:fixed;padding-right:10px}
+.stealth{opacity:0}
+.placeholder{height:50px}
+.sidebar ul.menu-v{width:80%}
+#transtable table{width:90%}
+#transtable td{width:50%}
+#transtable textarea{width:100%!important;resize:both}
+.paging{float:right}
+.translate-provider{cursor: pointer;}
+.icon16.yandextranslate{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABCFBMVEUAAAD/AAA4ODg4ODj/AAD/AAA4ODg5OTn/AAC5ExP/AAA4ODj/AAA4ODg4ODj/AAD/AAA3Nzc5OTn/AAA8PDw8PDz/AAD/CQk4ODj/AAA4ODj/AAA4ODj/AAA4ODj/AAD/AAD/AAA4ODjU1NT/o6NFRUX/DQ3/4+Pi4uLJycmysrKRkZGJiYl7e3tycnL/cHBiYmJPT0//PDz/+/v29vb/8/P/7+/v7+//6enk5OT/3t7/2Nj/ycn/xMT/vb29vb27u7u3t7empqahoaGVlZX/lJT/i4vlioqCgoL/d3dubm5lZWWvW1tjWFhWVlb/SEj/RUVCNTX/Li52Jyd3Jib/JSX1DAzxBARJfO38AAAAIXRSTlMA+uz779PSy8u1ral1dGppNDIsEhEICPz2t7KpqGBfLSpvvLjTAAAAw0lEQVQY0zWOVXLDUBAEVzI7ppjCMKtIZoyZmRnvfxM/laT+m66u2iWTmN8py5/PZBF1cZGZbd+WeC/lkpm0MrGZTZh32eRivWJ+MkRA5P3xoKmyrM+foOd8zNdHmdSQX4kibxDc58WUoirspLgbOPwB2FSy+TT7yQegUz0Bt22upLpi5AD2rYKeXMSNKJEEdJdaQwM8gTAJ7Cj/JxK1AhA0XvCiJ/pyG/g1ROhlegUw07xk8iVBxx0hi9CHXXL44uZ6ABQXGhO4ctGTAAAAAElFTkSuQmCC);background-size:16px 16px;background-position:0 0}
+.icon16.googletranslate{background-image:url(data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALiIfmXGrqn/z83N/9PS0v/W1tb/19fX/9jY2P/OycaZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC5cWXguFxM/8y3tP/V09P/2NfX/9nZ2f/b29v/29vb/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADMf38KtlVD/7ZVQ/+5YU//0MG//9nY2P/Z2dn/29vb/9zc3P/sgkaV8ohI//KISP/yiEj/8ohH//KIR//yh0b/8ohH//SJSP/0iEf/9IhH/9y5o//Y19f/ycbB/9nZ2f/c3Nz/84pK//WLS//1i0v/9YtL//SKSv/0ikr/9IpJ//SKSf/0iUn/9IlI//CJSv/Kv7r/v7qx/6Kah//b2tr/3Nzc//OKS//1i0z/9YtM//WLTP/1i0z/9YtL//WLS//0ikr/9IpJ//SJSf/il2n/loh0/6GXhP/Y2Nj/3d3d/97e3v/zi0z/9YxN//WMTP/1jEz/9YxM//WLTP/1i0z/9YtL//SKSv/0ikn/0qaP/5qOe/+gloT/29vb/9/f3//i4uL/84xN//WNTv/1m2T/8NjJ//Dn4P/x2cv/9Jlh//WLTP/1i0v/84xO/7all//NycT/tK6i/8O/tv/k5OT/4uLi//OMTv/1jU//8NnL//Otgv/1jU7/866E//HSv//1jEz/9YtM/9qMW/+jmIj/ppyM/6Wcif+aj3f/rqaU/+Li4v/zjU7/9Y5P/+/n4f/1jk//87eT//Dh2P/w3tT/9YxN//WMTP/csJj/1dLS/4p/ZP/l5eX/5eXl/+Xl5f/i4uL/845Q//WOUP/w2cv/86yB//WOT//1llz/9Y1O//WMTf/0jU//0sXA/9vZ2P/l5eX/5ubm/+bm5v/l5eX/4+Pj//OOUf/1j1L/9Zxn//DZyv/w5N7/8NXF//WPUv/1jU7/6pxu/9fT0v/l5OT/5+fn/+bm5v/m5ub/5eXl/+Pj4//zj1H/9ZBS//WPUv/1j1L/9Y9R//WOUP/1jk//9Y1P/9+sktjb2Niz39/fsePj47Dj4OCw4N3dsODg4K/c1tZY849S//WQU//1kFL/9Y9S//WPUf/1jlD/9Y5P/+6LTvvUf38GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPOPU//1kFT/9ZBT//WQUv/1j1L/9Y9R//WOUP/qhk+hAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwjlac85BU//OPU//zj1H/845R//OOUP/zjU//4YlXPQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/AAAA/wAAAP8AAA==);}
+.icon16.microsofttranslate{background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJ6SURBVDhPpVNtSFNRGH7u7sytbelss7Uy0wTTCgrKH36wQoQ+qD+NfkkllBj9if5lLsKIjCLp37RA+sDCoCipiCQwI9CifjRL1GUtc9FoOm3fH7f3nHudC4p+9Fzee+77nvc89znve46wtqVawn9ApRIE/MsgSX+Mc1OI/opwPAK9RgfvzHf8jIaU6ALSBAKx+YMzEOiJxqPcQrEILEvMcOw+Dmf9eRys2odgLKyskMEJ2KJJ/1d0NVzG8PggKoo2YeeGWohEuqPMhuqSCoz6JnCmt51iv4uWPdrmHMmrK6uB1B1Bd6MT66ylWGm04tStZkyHAtizvhbutiFUrdmCYDTIlzEs0PFCye7oNzeaOg7jpfsVXO0ujEyNYWrOh+IDq3DO3oJoIsbzGESzrfA0+2C91GRp8GzkBb7QdspXb2RhapMK1lwLJqe9eDD8BIe2NqCj/zoMWr08z9+EPL0RVwZuoshUgCwxC539N/DBOwbtIi2O3Xbg0lMn+k4+RmXbLliNFmVVhgKmQUfJPa97EU8m0LH/AroH78LzYxK20kqoRTXeelyYDc/yrbKuMaQVRKhthUsL8L71ORpt9TxBSqUw7vuEbURw72gXepo6EUvG6VcLhzdN4A8GcOfIVeTZjdjeWkeCBIQTEeTrTShZVqxkASkppXzJSBOkUkk+XnP04H7zQyzPMcOQrcfZvSfw0fcZtRftePSuD2aDSa64AqHcUcNdtiMPVX8zVX9o4g1W5FopKFHPw0gSuS57MQKhWVhy8rk/XwOhLOM2siCbVKtEJEnq/LngoHNCCTRk/J5AF4pVVDamQ1SpSSG7aSL306bMZ+YLggq/AEQr28zxGpHOAAAAAElFTkSuQmCC);}
+.changed{box-shadow: 0 0 5px #10bc18;padding: 3px 0 3px 3px;  margin: 5px 1px 3px 0; border: 1px solid rgba(16, 188, 24, 1);}
+.chosen-container .chosen-results {max-height:200px !important;}
+#mainmenu {width: 100%; z-index: 101; min-width: 600px; top: 0; }
+#mainmenu ul.tabs { font-size: 15px; margin: 0; padding-left: 10px; padding-top: 5px; box-shadow: 0 -6px 5px -5px rgba(0, 0, 0, 0.04) inset; border-bottom: 1px solid #ddd; height: 38px; font-family: 'Helvetica Neue', Arial, sans-serif; }
+#mainmenu ul.tabs li { background: transparent !important; border-bottom: none !important; }
+#mainmenu ul.tabs li a { height: 35px; line-height: 35px;  }
+#mainmenu ul.tabs li a sup { position: relative; line-height: 1.2em; }
+#mainmenu ul.tabs li.selected { padding-bottom: 3px; background: #fff !important; border-color: #ddd #ddd #fff; }
+#mainmenu ul.tabs li.selected a { padding: 0 1em; }
+#mainmenu ul.tabs li a sup{ display: none; }
+#mainmenu ul.tabs li.selected a sup { display: none; }
+#mylang-autotranslate .fields {width:70%;}
+#mylang-autotranslate details {float: right; margin-right: 10px; color: #888;}
+.h-ear-box{right: initial !important;}
+#add-dialog .plural {display:none;}
+.add-dialog-plural {position: absolute; top:20px; right:20px;}
+#add-dialog-plural:checked ~ div > .plural{display:inherit;}
+.auto-width{width: auto !important;}
+table.with-x-scroll{display: block; overflow-x: auto;white-space: nowrap;}
+/* shop */
+.icon16.ss { background-image: url('../../shop/img/ss-icon16.png?1503'); }
+.icon16.ss.new { background-position:0 -32px; }
+.icon16.ss.confirmed,
+.icon16.ss.processing { background-position:-16px -32px; }
+.icon16.ss.paid { background-position:-32px -32px; }
+.icon16.ss.sent { background-position:-48px -32px; }
+.icon16.ss.completed { background-position:-64px -32px; }
+.icon16.ss.refunded { background-position:-80px -32px; }
+.icon16.ss.trash { background-position:-96px -32px; }
+.icon16.ss.flag-white { background-position:0 -16px; }
+.icon16.ss.flag-blue { background-position:-16px -16px; }
+.icon16.ss.flag-yellow { background-position:-32px -16px; }
+.icon16.ss.flag-green { background-position:-48px -16px; }
+.icon16.ss.flag-red { background-position:-64px -16px; }
+.icon16.ss.flag-purple { background-position:-80px -16px; }
+.icon16.ss.flag-black { background-position:-96px -16px; }

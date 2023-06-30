@@ -1,0 +1,287 @@
+{strip}
+{$sidebar_left = false}
+{$sidebar_right = false}
+{$cols = 1}
+{$is_mobile = ($wa->isMobile() && ($wa->cookie("is_desktop_for_mobile") != 1 || !$theme_settings.switch_version))}
+{if !$is_mobile}
+    {$sidebar_left = $theme_settings.checkout_sidebar_left}
+    {$sidebar_right = $theme_settings.checkout_sidebar_right}
+{/if}
+{if $sidebar_left}{$cols = $cols + 1}{/if}
+{if $sidebar_right}{$cols = $cols + 1}{/if}
+
+{$content_cols_class_align = ""}
+{if $sidebar_left}{$content_cols_class_align = " flex-align-r"}{/if}
+{if $sidebar_right}{$content_cols_class_align = " flex-align-l"}{/if}
+{if $sidebar_right && $sidebar_left}{$content_cols_class_align = " flex-align-r"}{/if}
+
+<div class="content-cols content-cols--checkout cols-{$cols}{$content_cols_class_align}">
+    <div class="content{if $sidebar_left} with-sidebar-l{/if}">
+        <div class="content-head">
+            {* main menu *}
+            {if !$wa->isMobile() && $theme_settings.checkout_main_menu_button_head && !$sidebar_left}
+                {include file="`$wa_parent_theme_path`/vertical.main.menu.html" is_close=true}
+            {/if}
+            <div class="content-head__title">
+                {* breadcrumbs *}
+                {if !isset($breadcrumbs)}{$breadcrumbs = []}{/if}
+                {$breadcrumbs[] = ['name' => '[`Cart`]', 'url' => $wa->getUrl('shop/frontend/cart')]}
+                {include file="`$wa_parent_theme_path`/breadcrumbs.html" last="[`Оrdering`]" inline}
+
+                <h1 class="page-title">[`Оrdering`]</h1>
+            </div>
+        </div>
+        <div class="checkout-outer">
+            <div class="checkout{if $sidebar_right} with-sidebar-r{/if}">
+                {if isset($checkout_steps)}
+                    {$current_step_index = array_search($checkout_current_step, array_keys($checkout_steps)) + 1}
+                    <div class="checkout-head bs-color">
+                        {$prev_step_id = null}
+                        {foreach $checkout_steps as $step_id => $s}
+                            <span id="step-header-{$step_id}" class="js-step-header step-header{if isset($_upcoming_flag)} upcoming{/if}{if $step_id == $checkout_current_step} current{/if}" data-step="{$step_id}">
+                                {if empty($prev_step_id)}
+                                    <span class="step-header__prev fal fa-chevron-left"></span>
+                                {else}
+                                    <span class="js-step-prev step-header__prev fal fa-chevron-left ac-color" data-step="{$prev_step_id}"></span>
+                                {/if}
+
+                                <span class="step-header_title">
+                                    <span class="step-header_count bs-color">
+                                        0{$s@iteration}
+                                        <span class="step-header_total">из {count($checkout_steps)} [`steps`]</span>.
+                                    </span>
+                                    {$s.name}
+                                </span>
+                            </span>
+                            {if $step_id == $checkout_current_step}{$_upcoming_flag = 1}{/if}
+                            {$prev_step_id = $step_id}
+                        {/foreach}
+                    </div>
+                <!-- checkout step content -->
+                {foreach $checkout_steps as $step_id => $s}
+                    <div class="checkout-step step-{$step_id} {if $current_step_index > 0 && $current_step_index > $s@iteration}is-done{/if}" data-step-index="{$s@iteration}">
+                        <form class="checkout-form {if $s@last}last{/if}" method="post" action="">
+                            {if $s@first && $wa->isAuthEnabled()}
+                                <div class="checkout-step-content auth{if !$wa->user()->isAuth()} checkout-step-content--auth{else} checkout-step-content--user{/if}" {if $checkout_current_step != $step_id}style="display:none"{/if}>
+                                    {if !$wa->user()->isAuth()}
+                                        <!-- authorized / not authorized selector -->
+                                        <ul class="checkout-step__check-auth">
+                                            <li><label><input name="user_type" type="radio" {if !$wa->post('wa_auth_login')}checked{/if} value="0"> [`I’m a new customer`]</label></li>
+                                            <li><label><input name="user_type" type="radio" {if $wa->post('wa_auth_login')}checked{/if} value="1"> [`I already have an account`]</label></li>
+                                        </ul>
+                                        <div id="login-form"{if !$wa->post('wa_auth_login')} style="display:none"{/if}>
+                                            {include file="`$wa_parent_theme_path`/login.html" without_form=true}
+                                        </div>
+                                        <script type="text/javascript">
+                                            $(function () {
+                                                $("#login-form input").attr('disabled', 'disabled');
+                                                $("input[name='user_type']").change(function () {
+                                                    if ($("input[name='user_type']:checked").val() == '1') {
+                                                        $("#login-form input").removeAttr('disabled');
+                                                        $(this).closest('div.auth').next(".checkout-step-content").hide();
+                                                        $("input[type=submit]:last").hide();
+                                                        $("#login-form").show();
+                                                    } else {
+                                                        $("#login-form input").attr('disabled', 'disabled');
+                                                        $("#login-form").hide();
+                                                        $(this).closest('div.auth').next(".checkout-step-content").show();
+                                                        $("input[type=submit]:last").show();
+                                                    }
+                                                });
+                                                {if $checkout_current_step == $step_id}
+                                                    $("input[name='user_type']").change();
+                                                {/if}
+                                            });
+                                        </script>
+                                    {else}
+                                    <!-- authorized -->
+                                        <blockquote class="checkout-auth__user">
+                                            <img class="checkout-auth__userpic" src="{$wa->user()->getPhoto(40)}">
+                                            <div class="checkout-auth__text">
+                                                <span class="black">{sprintf("[`You are currently authorized as <strong>%s</strong>. Please verify or update your contact information using the form below. Your existing contact info will be automatically updated.`]", $wa->user('name'))}</span>
+                                                <em>[`If you want to place an order on behalf of another customer, <a href="?logout">log out</a> from your current profile and proceed to checkout again.`]</em>
+                                            </div>
+                                        </blockquote>
+                                    {/if}
+                                </div>
+                            {/if}
+
+                            <div class="checkout-step-content" style="{if $checkout_current_step != $step_id || $wa->post('wa_auth_login')} display:none;{/if}">
+                                {if $checkout_current_step == $step_id}
+                                    {if in_array($step_id,['contactinfo', 'shipping', 'payment', 'confirmation'])}
+                                        {include file="checkout.`$step_id`.html"}
+                                    {else}
+                                        {$s.content}
+                                    {/if}
+                                {else}
+                                    <div class="checkout-content" data-step-id="{$step_id}"></div>
+                                {/if}
+                                <div class="checkout-step-buttons">
+                                    <input type="hidden" name="step" value="{$step_id}">
+                                    {if $s@last}
+                                        <input type="submit" class="large" value="[`Place order`]">
+                                    {else}
+                                        <input type="submit" class="large" value="[`Next &rarr;`]">
+                                    {/if}
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                {/foreach}
+                {else}
+                    <div class="checkout-step">
+                        {include file="checkout.`$checkout_current_step`.html"}
+                    </div>
+                {/if}
+            </div>
+            {* right sidebar  *}
+            {if $sidebar_right}{include file="./sidebar.right.html" blocks=$sidebar_right inline}{/if}
+        </div>
+    </div>
+    {* left sidebar *}
+    {if $sidebar_left}{include file="./sidebar.left.html" blocks=$sidebar_left inline}{/if}
+</div>
+<script>
+( function($) {
+    $(document).ready( function() {
+        $('header .banner h3').text('[`Checkout`]').show();
+
+        var $steps = $(".checkout-step");
+
+        function setStepOrnament( $step ) {
+            var step_index = $step.data("step-index"),
+                done_class = "is-done",
+                current_class = "current",
+                upcoming_class = "upcoming";
+
+            if (step_index > 0) {
+                $steps.each( function(index) {
+                    var $step = $(this),
+                        step_content = $step.find('.checkout-content'),
+                        step_id = step_content.data("step-id"),
+                        $header = $("#step-header-"+step_id);
+
+                    if (index + 1 >= step_index) {
+                        $step.removeClass(done_class);
+                        $header.removeClass(done_class);
+
+                        if (index + 1 === step_index) {
+                            $header.removeClass(upcoming_class);
+                            $header.addClass(current_class);
+                        }
+
+                        if (index + 1 > step_index) {
+                            $header.addClass(upcoming_class);
+                            $header.removeClass(current_class);
+                        }
+
+                    } else {
+                        $header.removeClass(upcoming_class);
+                        $header.removeClass(current_class);
+                        $header.addClass(done_class);
+                        $step.addClass(done_class);
+                    }
+                })
+            }
+            $step.find('input[type="checkbox"], input[type="radio"], .js-select').styler();
+            $('html,body').animate({
+                scrollTop: 120
+            }, 500);
+        }
+
+        function checkoutStep(step_id) {
+            $('#step-header-'+ step_id).addClass('disabled');
+
+            $.get("{$wa->getUrl('/frontend/checkout')}" + step_id + '/', function (response) {
+                var current = $(".checkout-step .checkout-step-content:visible");
+                var current_step_id =  current.find(".checkout-content").data('step-id');
+                if (current_step_id != step_id) {
+                    current.animate( { height: 0 }, 200, function() { $(this).hide(); } );
+                    current.parent().find('a.back').hide();
+                }
+                $(".checkout-step.step-" + step_id + " .checkout-content").replaceWith(response);
+                $(".checkout-step.step-" + step_id + " a.back").show();
+                if (current_step_id != step_id) {
+                    $(".checkout-step.step-" + step_id + " .checkout-step-content").show(0).css({ height: 'auto'});
+                }
+                if ($(".checkout-step.step-" + step_id + ' .auth').length) {
+                    $("input[name='user_type']").change();
+                }
+
+                var $step = $(".checkout-step.step-" + step_id);
+                setStepOrnament( $step );
+                $('#step-header-'+ step_id).removeClass('disabled');
+                $(".js-step-prev").removeClass('loading');
+            });
+        }
+        $(".js-step-header").click(function () {
+            if ($(this).hasClass('upcoming')) {
+                return false;
+            }
+            checkoutStep($(this).data('step'));
+            return false;
+        });
+
+        $(".js-step-prev").click(function (event) {
+            event.stopPropagation();
+            $(this).addClass("loading");
+            checkoutStep($(this).data('step'));
+
+            return false;
+        });
+        $("form.checkout-form").on('submit', function () {
+            var f = $(this);
+            var step = f.find('.checkout-content').data('step-id');
+            if (step == 'payment' || step == 'shipping') {
+                if (!f.find('input[name="' + step + '_id"]:checked').not(':disabled').length) {
+                    if (!f.find('em.errormsg').length) {
+                    $('<em class="errormsg inline">' + (step == 'payment' ? '[`Please select payment option`]' :
+                            '[`Please select shipping option`]') + '</em>').insertAfter(f.find('input:submit:last'));
+                    }
+                    return false;
+                } else {
+                    f.find('em.errormsg').remove();
+                }
+            }
+            if (f.hasClass('last') || ($("#login-form").length && !$("#login-form input:submit").attr('disabled'))) {
+                $('<span class="loading"> <i class="content-loading content-loading--mini bs-color"></i></span>').insertAfter(f.find('input:submit:last').attr('disabled', 'disabled'));
+                return true;
+            }
+            $('<span class="loading"> <i class="content-loading content-loading--mini bs-color"></i></span>').insertAfter(f.find('input:submit:last').attr('disabled', 'disabled'));
+            $.post(f.attr('action') || window.location, f.serialize(), function (response) {
+                var content = $(response);
+                var step_id = content.data('step-id');
+                if (!step_id) {
+                    step_id = content.filter('.checkout-content').data('step-id');
+                }
+                var current = $(".checkout-step .checkout-step-content:visible");
+                var current_step_id =  current.find(".checkout-content").data('step-id');
+                if (current_step_id != step_id) {
+                    current.animate({ height: 0}, 200, function() {
+                        $(this).hide();
+                    });
+                    $(".checkout-step.step-" + step_id + " .checkout-step-content").css({ height: 'auto'}).show(200, function () {
+                        $(document).scrollTop($(".checkout-step.step-" + step_id).offset().top);
+                    });
+                    current.parent().find('a.back').hide();
+                }
+                $(".checkout-step.step-" + step_id + " .checkout-content").replaceWith(content);
+                $(".checkout-step.step-" + step_id + " a.back").show();
+                $(".checkout-step.step-" + step_id + " input[type=submit]:last").show();
+                if (current_step_id != step_id) {
+                    $(".checkout-step.step-" + step_id + " .checkout-step-content").show(0).css({ height: 'auto'});
+                }
+
+                var $step = $(".checkout-step.step-" + step_id);
+                setStepOrnament( $step );
+
+            }).always(function () {
+                f.find('span.loading').remove();
+                f.find('input:submit:last').removeAttr('disabled');
+            });
+            return false;
+        });
+    });
+})(jQuery);
+</script>
+{/strip}

@@ -1,0 +1,2 @@
+.s-actions-block > .s-multiple > .fields > .submit-block { display: none; }
+.s-actions-block > .s-multiple.new-action > .fields > .submit-block { display: block; }

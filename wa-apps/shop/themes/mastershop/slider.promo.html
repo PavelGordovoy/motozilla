@@ -1,0 +1,55 @@
+{strip}
+{if !empty($theme_settings.slider_height_promo)}{$height_slider = (int)$theme_settings.slider_height_promo}{/if}
+{if !empty($theme_settings.preload_image_homepage) && !empty($is_fist) && !empty($promo.image)}
+    {$wa->globals('preload_image', $promo.image)}
+{/if}
+<div class="js-main-slider-el main-slider_el main-slider_el--{$promo.id}">
+    <a class="js-slider-banner-inner slider-banner__inner" href="{$promo.link|escape}">
+        {if empty($height_slider) || $is_mobile}
+            {if $is_lazy_images && !$is_fist}
+                <img class="owl-lazy js-slider-image slider-banner__img" data-src="{$promo.image}" src="{$wa_theme_url}img/lazy-image.png" alt="{$promo.title|escape}" />
+            {else}
+                <img class="js-slider-image js-slider-banner slider-banner__img" src="{$promo.image}" alt="{$promo.title|escape}" />
+            {/if}
+        {else}
+            {if $is_lazy_images && !$is_fist}
+                <span class="owl-lazy slider-banner__bg-img" data-src="{$promo.image}" style="height: {$height_slider}px;"></span>
+            {else}
+                <span class="slider-banner__bg-img" style="height: {$height_slider}px; background-image: url({$promo.image})"></span>
+            {/if}
+        {/if}
+        {if $theme_settings.slider_description && (!empty($promo.title) || !empty($promo.body) || (!empty($promo.countdown_datetime) && time() <= strtotime($promo.countdown_datetime)))}
+            {$background = null}
+            {$color = null}
+            {if isset($promo.background_color) && !empty($promo.background_color)}{$background = $promo.background_color}{/if}
+            {if isset($promo.color) && !empty($promo.color)}{$color = $promo.color}{/if}
+            <div class="slider-banner__content" {if $background || $color} style="{if $background}background: {$background};{/if}{if $color}color: {$color};{/if}"{/if}>
+                {if !empty($promo.title)}<div class="slider-banner__title">{$promo.title|escape}</div>{/if}
+                {if !empty($promo.body)}<div class="slider-banner__text">{$promo.body|escape}</div>{/if}
+                {if !empty($promo.countdown_datetime) && time() <= strtotime($promo.countdown_datetime)}
+                <div class="slider-banner__countdown">
+                    <div data-wrap="1" data-day-text="[`d.`]" class="slider-banner__time js-promo-countdown" data-end="{$promo.countdown_datetime}">
+                        <div class="countdown-item">
+                            <span class="countdown-item-count js-countdown-days"></span>
+                            <span class="countdown-item-text">[`d`]</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-item-count js-countdown-hours"></span>
+                            <span class="countdown-item-text">[`h`]</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-item-count js-countdown-minutes"></span>
+                            <span class="countdown-item-text">[`min`]</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-item-count js-countdown-seconds"></span>
+                            <span class="countdown-item-text">[`sec`]</span>
+                        </div>
+                    </div>
+                </div>
+                {/if}
+            </div>
+        {/if}
+    </a>
+</div>
+{/strip}

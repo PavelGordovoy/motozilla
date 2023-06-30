@@ -1,0 +1,249 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst Shop-Script CML1C plugin 2.5.13.101 UA translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2016-09-06 13:13+0000\n"
+"PO-Revision-Date: \n"
+"Language: uk_UA\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "imported %d product image"
+msgid_plural "imported %d product images"
+msgstr[0] "імпортовано %d зображення товару"
+msgstr[1] "імпортовано %d зображення товару"
+msgstr[2] "імпортовано %d зображень товару"
+
+msgid "imported %d category"
+msgid_plural "imported %d categories"
+msgstr[0] "імпортовано %d категорію"
+msgstr[1] "імпортовано %d категорії"
+msgstr[2] "імпортовано %d категорій"
+
+msgid "imported %d product"
+msgid_plural "imported %d products"
+msgstr[0] "імпортовано %d товар"
+msgstr[1] "імпортовано %d товари"
+msgstr[2] "імпортовано %d товарів"
+
+msgid "imported %d sku"
+msgid_plural "imported %d skus"
+msgstr[0] "імпортовано %d артикул"
+msgstr[1] "імпортовано %d артикули"
+msgstr[2] "імпортовано %d артикулів"
+
+msgid "imported %d offer"
+msgid_plural "imported %d offers"
+msgstr[0] "імпортовано %d пропозицію"
+msgstr[1] "імпортовано %d пропозиції"
+msgstr[2] "імпортовано %d пропозицій"
+
+msgid "updated %d order"
+msgid_plural "updated %d orders"
+msgstr[0] "оновлено %d замовлення"
+msgstr[1] "оновлено %d замовлення"
+msgstr[2] "оновлено %d замовлень"
+
+msgid "updated %d product image"
+msgid_plural "updated %d product images"
+msgstr[0] "оновлено %d зображення товару"
+msgstr[1] "оновлено %d зображення товару"
+msgstr[2] "оновлено %d зображень товару"
+
+msgid "updated %d category"
+msgid_plural "updated %d categories"
+msgstr[0] "оновлено %d категорію"
+msgstr[1] "оновлено %d категорії"
+msgstr[2] "оновлено %d категорій"
+
+msgid "updated %d product"
+msgid_plural "updated %d products"
+msgstr[0] "оновлено %d товар"
+msgstr[1] "оновлено %d товари"
+msgstr[2] "оновлено %d товарів"
+
+msgid "updated %d sku"
+msgid_plural "updated %d skus"
+msgstr[0] "оновлено %d артикул"
+msgstr[1] "оновлено %d артикули"
+msgstr[2] "оновлено %d артикулів"
+
+msgid "updated %d offer"
+msgid_plural "updated %d offers"
+msgstr[0] "оновлено %d пропозицію"
+msgstr[1] "оновлено %d пропозиції"
+msgstr[2] "оновлено %d пропозицій"
+
+msgid "analyzed %d product"
+msgid_plural "analyzed %d products"
+msgstr[0] "проаналізовано %d товар"
+msgstr[1] "проаналізовано %d товари"
+msgstr[2] "проаналізовано %d товарів"
+
+msgid "analyzed %d sku"
+msgid_plural "analyzed %d skus"
+msgstr[0] "проаналізовано %d артикул"
+msgstr[1] "проаналізовано %d артикули"
+msgstr[2] "проаналізовано %d артикулів"
+
+msgid "analyzed %d offer"
+msgid_plural "analyzed %d offers"
+msgstr[0] "проаналізовано %d пропозицію"
+msgstr[1] "проаналізовано %d пропозиції"
+msgstr[2] "проаналізовано %d пропозицій"
+
+msgid "analyzed %d feature"
+msgid_plural "analyzed %d features"
+msgstr[0] "проаналізовано %d характеристику"
+msgstr[1] "проаналізовано %d характеристики"
+msgstr[2] "проаналізовано %d характеристик"
+
+msgid "analyzed %d stock"
+msgid_plural "analyzed %d stocks"
+msgstr[0] "проаналізовано %d склад"
+msgstr[1] "проаналізовано %d склади"
+msgstr[2] "проаналізовано %d складів"
+
+msgid "skipped %d order"
+msgid_plural "skipped %d orders"
+msgstr[0] "пропущене %d замовлення"
+msgstr[1] "пропущене %d замовлення"
+msgstr[2] "пропущені %d замовлень"
+
+msgid "skipped %d product image"
+msgid_plural "skipped %d product images"
+msgstr[0] "пропущено %d зображення товару"
+msgstr[1] "пропущено %d зображення товару"
+msgstr[2] "пропущено %d зображень товару"
+
+msgid "skipped %d category"
+msgid_plural "skipped %d categories"
+msgstr[0] "пропущено %d категорію"
+msgstr[1] "пропущено %d категорії"
+msgstr[2] "пропущено %d категорій"
+
+msgid "skipped %d product"
+msgid_plural "skipped %d products"
+msgstr[0] "пропущено %d товар"
+msgstr[1] "пропущено %d товари"
+msgstr[2] "пропущено %d товарів"
+
+msgid "skipped %d sku"
+msgid_plural "skipped %d skus"
+msgstr[0] "пропущено %d артикул"
+msgstr[1] "пропущено %d артикули"
+msgstr[2] "пропущено %d артикулів"
+
+msgid "skipped %d offer"
+msgid_plural "skipped %d offers"
+msgstr[0] "пропущено %d пропозицію"
+msgstr[1] "пропущено %d пропозиції"
+msgstr[2] "пропущено %d пропозицій"
+
+msgid "%d order"
+msgid_plural "%d orders"
+msgstr[0] "%d замовлення"
+msgstr[1] "%d замовлення"
+msgstr[2] "%d замовлень"
+
+msgid "%d product"
+msgid_plural "%d products"
+msgstr[0] "%d товар"
+msgstr[1] "%d товари"
+msgstr[2] "%d товарів"
+
+msgid "%d offer"
+msgid_plural "%d offers"
+msgstr[0] "%d пропозиція"
+msgstr[1] "%d пропозиції"
+msgstr[2] "%d пропозицій"
+
+msgid "%d category"
+msgid_plural "%d categories"
+msgstr[0] "%d категорія"
+msgstr[1] "%d категорії"
+msgstr[2] "%d категорій"
+
+msgid "analyzed %d price"
+msgid_plural "analyzed %d prices"
+msgstr[0] "проаналізовано %d ціну"
+msgstr[1] "проаналізовано %d ціни"
+msgstr[2] "проаналізовано %d цін"
+
+msgid "Product name"
+msgstr "Найменування товару"
+
+msgid "SKU"
+msgstr "Артикул"
+
+msgid "SKU name"
+msgstr "Назва артикулу"
+
+msgid "Description"
+msgstr "Опис"
+
+msgid "Summary"
+msgstr "Опис"
+
+msgid "Tax type"
+msgstr "Тип податку"
+
+msgid "Features"
+msgstr "Характеристики"
+
+msgid "Weight"
+msgstr "Вага"
+
+msgid "Custom parameters"
+msgstr "Додаткові параметри"
+
+msgid "Badge"
+msgstr "Наклейка"
+
+msgid "Product type"
+msgstr "Тип товару"
+
+msgid "Tags"
+msgstr "Теги"
+
+msgid "Taxable"
+msgstr "Оподатковується"
+
+msgid "Title"
+msgstr "Назва"
+
+msgid "META Keyword"
+msgstr "META ключові слова"
+
+msgid "META Description"
+msgstr "META опис"
+
+msgid "Storefront link"
+msgstr "Посилання на вітрину"
+
+msgid "Video URL on YouTube or Vimeo"
+msgstr "Посилання на відео на YouTube або Vimeo"
+
+msgid "Price"
+msgstr "Ціна"
+
+msgid "Purchase price"
+msgstr "Закупівельна ціна"
+
+msgid "Compare at price"
+msgstr "Закреслена ціна"
+
+msgid "Error while rebuild thumbnails"
+msgstr "Помилка при оновленні ескізів"
+
+msgid "File uploading error"
+msgstr "Помилка завантаження файлу"

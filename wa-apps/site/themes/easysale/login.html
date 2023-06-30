@@ -1,0 +1,50 @@
+{strip}
+
+{$wa->globals("hideSidebar", true)}
+
+<div class="s-profile-wrapper col-md-12">
+    {* HEADER *}
+    <h2 class="s-profile-header">[s`Login`]</h2>
+
+    {* SOCIAL ACCOUNTS *}
+    {$auth_adapters = $wa->authAdapters(true)}
+    {if $auth_adapters}
+        <section class="page-section social-auth-wrapper">
+
+            {$linked_adapters = []}
+            {$other_adapters = []}
+            {foreach $auth_adapters as $a}
+                {if $wa->user("{$a->getId()}_id")}
+                    {$linked_adapters[] = $a}
+                {else}
+                    {$other_adapters[] = $a}
+                {/if}
+            {/foreach}
+
+            {if $other_adapters}
+                <ul class="auth-type-wrapper list-inline">
+                    {foreach $other_adapters as $a}
+                        <li class="auth-item list-inline-item">
+                            <a href="{$a->getUrl()}"><img alt="{$a->getName()}" src="{$a->getIcon()}"/>{$a->getName()}</a>
+                        </li>
+                    {/foreach}
+                </ul>
+            {/if}
+        </section>
+    {/if}
+
+    <section class="page-section login-form-wrapper">
+        {$wa->loginForm($error, empty($without_form))}
+    </section>
+</div>
+
+{literal}
+<script>
+    var $submit = $('.login-form-wrapper input[type="submit"');
+
+    $submit.addClass('btn btn-default');
+
+</script>
+{/literal}
+
+{/strip}

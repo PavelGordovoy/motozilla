@@ -1,0 +1,45 @@
+{if empty($stocks)&&empty($stocks_v)}
+<span>[`Stocks list is empty. Add <a href="{$wa_backend_url}shop/?action=settings#/stock/">new stock</a> to translate it.`]</span>
+{else}
+<div>
+    <h1>[`Stocks`]</h1>
+    <form id="s-mylang-form" method="POST" action="?module=shop&action=save" data-form="save">
+    <table class="zebra single-lined">
+        <tr class="header">
+            <th>[`Stock name`]</th>
+            {foreach $locales as $l}
+                <th class="short align-right">{$l}</th>
+            {/foreach}
+        </tr>
+        {foreach $stocks as $stock}
+            <tr data-id={$stock.id}>
+                <td>
+                    {$stock.name}
+                </td>
+                {foreach $locales as $key=>$l name="locales"}
+                <td><input tabindex="{$smarty.foreach.locales.index}" type="text" name="mylang[stock][{$key}][{$stock.id}][name]" value="{if isset($stock.locale.$key.text)}{$stock.locale.$key.text}{/if}" placeholder="{$l}" data-mylang="{$l}"/></td>
+                {/foreach}
+            </tr>
+        {/foreach}
+        {if !empty($stocks_v)}
+            {foreach $stocks_v as $stock_v}
+                <tr data-id={$stock_v.id}>
+                    <td>
+                        {$stock_v.name}
+                    </td>
+                    {foreach $locales as $key=>$l name="locales"}
+                    <td><input tabindex="{$smarty.foreach.locales.index}" type="text" name="mylang[stock][{$key}][v{$stock_v.id}][name]" value="{if isset($stock_v.locale.$key.text)}{$stock_v.locale.$key.text}{/if}" placeholder="{$l}" data-mylang="{$l}"/></td>
+                    {/foreach}
+                </tr>
+            {/foreach}
+        {/if}
+    </table>
+    <div class="placeholder"><div>
+        <div class="wa-mylang-save-panel block bordered-top">
+            <input id="wa-save-button" type="submit" class="button green" value="[`Save`]">
+            <em class="hint">Ctrl + S</em>
+            <span id="wa-editor-status" style="margin-left: 20px; display: none;"><i class="icon16 yes"></i> [`Saved`]</span>
+        </div>
+    </form>
+</div>
+{/if}

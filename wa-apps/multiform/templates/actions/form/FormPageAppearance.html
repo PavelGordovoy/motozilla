@@ -1,0 +1,357 @@
+{if $wa->get('addJs')}
+    <script src="{$wa_app_static_url}js/form/appearance.js"></script>
+    <script src="{$wa_app_static_url}js/jquery.simple-color.js"></script>
+{/if}
+<link rel="stylesheet" href="{$wa_app_static_url}css/frontend.css?v={$wa->version()}">
+<link href="https://fonts.googleapis.com/css?family=Lobster|Lora|Noto+Sans|Open+Sans|Open+Sans+Condensed:300|PT+Sans|Roboto|Roboto+Condensed|Roboto+Slab|Ubuntu" rel="stylesheet">
+
+<div class="block appearance-tab">
+    <div class="margin-block">
+        <a href="#/save/theme/" class="button green js-action">[`Save theme`]</a>
+        <a href="#/rename/theme/" class="button blue f-not-new hidden js-action">[`Rename`]</a>
+        <a href="#/duplicate/theme/" class="button blue f-not-new hidden js-action">[`Duplicate`]</a>
+        <a href="#/delete/theme/" class="button red f-not-new hidden js-action">[`Delete`]</a>
+        <span class="hidden f-not-new"><span style="border-left: 1px solid #ccc; display: inline-block; height: 30px; margin: 0 5px; vertical-align: middle;"></span></span>
+        <a href="#/use/theme/" class="button blue hidden f-use-theme f-not-new js-action">[`Use this theme`]</a>
+        <span class="hidden f-theme-used"><i class="icon16 yes" style="vertical-align: middle;"></i> [`Theme is used`]</span>
+    </div>
+    <div class="margin-block bottom">
+        <label style='margin-right: 5px;'><input type="checkbox" id='important-rule'/> [`Use !important rule`]</label>{sprintf("<a href='%s' class='small' target='_blank' title='%s'>%s <i class='icon16 new-window'></i></a>", "[`https://www.w3.org/TR/CSS2/cascade.html#important-rules`]", "[`More info`]", "[`More info`]")}
+    </div>
+    <div id="columns">
+        <div class="column" id="themes-column">
+            <div class="head">[`Themes`]</div>
+            <select name="" id="themes-menu" onchange="$.form_appearance.selectThemes(this)">
+                <option value="new"{if !isset($form.theme_id) || (isset($form.theme_id) && !isset($themes[$form.theme_id]))} selected{/if}>[`Create new`]</option>
+                {$isAdmin = $wa->user()->isAdmin()}
+                {foreach $themes as $theme}
+                    {if $isAdmin || $wa->user()->getRights('multiform', 'appearance') == 4 || ($wa->user()->getRights('multiform', 'appearance') == 1 && $theme.create_contact_id == $wa->user()->getId())}
+                        <option data-id="{$theme.id}" data-important='{$theme.important}' value="{$theme.id}"{if isset($form.theme_id) && $theme.id == $form.theme_id} selected{/if}>{$theme.name|escape}</option>
+                    {/if}
+                {/foreach}
+            </select>
+        </div>
+        <div class="column" id="properties-column">
+            <div class="head">[`Properties`]</div>
+            <select id="properties-menu" size="10" onchange="$.form_appearance.selectProperties(this)">
+                <option value="header">[`Header`]</option>
+                <option value="fonts">[`Fonts`]</option>
+                <option value="background">[`Background`]</option>
+                <option value="borders">[`Borders`]</option>
+                <option value="shadows">[`Shadows`]</option>
+                <option value="sizes">[`Sizes`]</option>
+                <option value="marginpadding">[`Margin/padding`]</option>
+                <option value="alignment">[`Alignment`]</option>
+                <option value="additional">[`Additional`]</option>
+            </select>
+        </div>
+        {* Логотип *}
+        <div class="column" id="header-column">
+            <div class="head">[`Header`]</div>
+            <select id="header-menu" size="5" onchange="$.form_appearance.selectHeader(this)">
+                <option value="default" id="default-logo" data-src="{$wa_app_static_url}img/multiform24.png">[`Web-forms`]</option>
+                <option value="custom">[`My logo`]</option>
+                <option value="text">[`Text`]</option>
+                <option value="none">[`Hide logo`]</option>
+                <option value="hide">[`Hide block`]</option>
+            </select>
+        </div>
+        <div class="column" id="header-edit-column">
+            <div id="logo-custom" class='hidden'><div class="margin-block bottom">[`Link to your logo`]</div><input type="text" name="logo_link" value="http://" /><input type="submit" value="[`Save`]" onsubmit="return false" onclick="$.form_appearance.styles[$.form_appearance.activeTheme]['header']['logo_src'] = $(this).prev().val(); $.form_appearance.updateHeader($.form_appearance.styles[$.form_appearance.activeTheme]['header']); return false;" /></div>
+            <div id="logo-text" class='hidden'><div class="margin-block bottom">[`Print your text`]</div><input type="text" name="logo_text" oninput="$.form_appearance.styles[$.form_appearance.activeTheme]['header']['text'] = $(this).val(); $.form_appearance.updateHeader($.form_appearance.styles[$.form_appearance.activeTheme]['header']);" value="[`Application Web-forms`]" /></div>
+        </div>
+        {* Шрифты *}
+        <div class="column" id="fonts-column">
+            <div class="head">[`Fonts`]</div>
+            <select id="fonts-menu" size="11" onchange="$('#columns').addClass('showF'); $.form_appearance.setFonts(this);">
+                <option value="header">[`Header`]</option>
+                <option value="title">[`Title`]</option>
+                <option value="description">[`Description`]</option>
+                <option value="ftitle">[`Field title`]</option>
+                <option value="ftext">[`Field text`]</option>
+                <option value="fdesc">[`Field description`]</option>
+                <option value="presuf">[`Prefix/suffix`]</option>
+                <option value="error">[`Error blocks`]</option>
+                <option value="button">[`Button`]</option>
+                <option value="tgst">[`Table grid statement`]</option>
+                <option value="tgcol">[`Table grid column`]</option>
+            </select>
+        </div>
+        <div class="column" id="fonts-fam-column">
+            <div class="head">[`Font family`]</div>
+            <select name="family" id="fonts-fam-menu" size="23" onchange="$.form_appearance.selectFonts(this)">
+                <option value="Arial,sans-serif">Arial</option>
+                <option value="'Comic Sans MS',cursive,sans-serif">Comic Sans MS</option>
+                <option value="'Courier New',Courier,monospace">Courier New</option>
+                <option value="Georgia,serif">Georgia</option>
+                <option value="Helvetica,sans-serif">Helvetica</option>
+                <option value="'Lucida Sans Unicode','Lucida Grande',sans-serif">Lucida Sans</option>
+                <option value="'Palatino Linotype','Book Antiqua',Palatino,serif">Palantino Linotype</option>
+                <option value="Tahoma,sans-serif">Tahoma</option>
+                <option value="'Times New Roman',Times,serif">Times New Romans</option>
+                <option value="'Trebuchet MS',sans-serif">Trebuchet MS</option>
+                <option value="Verdana,sans-serif">Verdana</option>
+                <optgroup label="[`Google fonts`]">
+                    <option value="'Open Sans',sans-serif">Open Sans</option>
+                    <option value="'Open Sans Condensed',sans-serif">Open Sans Condensed</option>
+                    <option value="'Roboto',sans-serif">Roboto</option>
+                    <option value="'Roboto Condensed',sans-serif">Roboto Condensed</option>
+                    <option value="'Roboto Slab',serif">Roboto Slab</option>
+                    <option value="'PT Sans',sans-serif">PT Sans</option>
+                    <option value="'Lora',serif">Lora</option>
+                    <option value="'Lobster',cursive">Lobster</option>
+                    <option value="'Ubuntu',sans-serif">Ubuntu</option>
+                    <option value="'Noto Sans',sans-serif">Noto Sans</option>
+                </optgroup>
+            </select>
+        </div>
+        <div class="column" id="fonts-st-column">
+            <div class="head">[`Font style`]</div>
+            <select name="style" id="fonts-st-menu" size="4" onchange="$.form_appearance.selectFonts(this)">
+                <option value="normal">[`Normal`]</option>
+                <option value="bold">[`Bold`]</option>
+                <option value="italic">[`Italic`]</option>
+                <option value="bolditalic">[`Bold/Italic`]</option>
+            </select>
+        </div>
+        <div class="column" id="fonts-size-column">
+            <div class="head">[`Size`]</div>
+            {$sizes = ['8', '9', '10', '11', '12', '14', '16', '18', '20', '22', '24', '26', '28', '30', '32', '36', '40', '46', '64']}
+            <select name="size" id="fonts-size-menu" size="{$sizes|count}" onchange="$.form_appearance.selectFonts(this)">
+                {foreach $sizes as $s}
+                    <option value="{$s}px">{$s}</option>
+                {/foreach}
+            </select>
+        </div>
+        {* Задний фон *}
+        <div class="column" id="bg-column">
+            <div class="head">[`Background`]</div>
+            <select id="bg-menu" size="16" onchange="$.form_appearance.selectBackground(this)">
+                <option value="page" data-class="showPatterns">[`Page`]</option>
+                <option value="form" data-class="showPatterns">[`Form`]</option>
+                <option value="header" data-class="showPatterns">[`Header`]</option>
+                <option value="title">[`Title`]</option>
+                <option value="formdesk">[`Form description`]</option>
+                <option value="field">[`Field row`]</option>
+                <option value="hover_highlight">[`Field row hover`]</option>
+                <option value="fname">[`Field title`]</option>
+                <option value="fdesc">[`Field description`]</option>
+                <option value="ftext">[`Field text`]</option>
+                <option value="ftextfoc">[`Field text focus`]</option>
+                <option value="button">[`Button`]</option>
+                <option value="button_hover">[`Button hover`]</option>
+                <option value="button_block" data-class="showPatterns">[`Button block`]</option>
+                <option value="errors">[`Error blocks`]</option>
+                <option value="field_err_text">[`Error fields`]</option>
+            </select>
+        </div>
+        <div class="column" id="bg-pattern-column">
+            <div class="head">[`Pattern`]</div>
+            <select name="pattern" id="bg-pattern-menu" size="4" onchange="$.form_appearance.selectPattern(this)">
+                <option value="color" data-class="showPicker">[`Solid color`]</option>
+                <option value="pattern" class="c-pattern" data-class="showPatternAll">[`Patterns`]</option>
+                <option value="custom" class="c-pattern" data-class="showPatternCus">[`Custom pattern`]</option>
+                <option value="none">[`None`]</option>
+            </select>
+        </div>
+        <div class="column" id="bg-patterns-column">
+            <ul class="menu-h">
+                {for $i=0; $i<=46; $i++}
+                    <li data-id="{$i}"><a href="#/select/pattern/{$i}" class="js-action"><img style="max-width: 25px; max-height: 25px;" src="{$wa_url}wa-apps/multiform/img/patterns/pattern{$i}.png"></a></li>
+                {/for}
+            </ul>
+        </div>
+        <div class="column" id="bg-custom-column">
+            <div class="margin-block">[`Link to your pattern`]</div>
+            <input type="text" name="pattern_link" value="http://" />
+            <input type="submit" value="[`Save`]" onsubmit="return false" onclick="$.form_appearance.styles[$.form_appearance.activeTheme]['background'][$('#bg-menu').val()]['pattern_src'] = $(this).prev().val(); $.form_appearance.updateBackground($.form_appearance.styles[$.form_appearance.activeTheme]['background']); return false;" />
+        </div>
+        {* Рамка *}
+        <div class="column" id="border-column">
+            <div class="head">[`Borders`]</div>
+            <select id="border-menu" size="9" onchange="$('#columns').addClass('showBord'); $.form_appearance.setBorders(this);">
+                <option value="form">[`Form`]</option>
+                <option value="fields">[`Fields`]</option>
+                <option value="fdesc">[`Field description`]</option>
+                <option value="frows">[`Field rows`]</option>
+                <option value="fname">[`Field title`]</option>
+                <option value="ffocus">[`Field focus`]</option>
+                <option value="errors">[`Error blocks`]</option>
+                <option value="field_err_text">[`Error fields`]</option>
+                <option value="button">[`Button`]</option>
+            </select>
+        </div>
+        <div class="column" id="border-thick-column">
+            <div class="head">[`Thickness`]</div>
+            <select name="width" id="border-thick-menu" size="9" onchange="$.form_appearance.selectBorders(this)">
+                <option value="0">0</option>
+                <option value="1px">1px</option>
+                <option value="2px">2px</option>
+                <option value="3px">3px</option>
+                <option value="5px">5px</option>
+                <option value="8px">8px</option>
+                <option value="10px">10px</option>
+                <option value="12px">12px</option>
+                <option value="15px">15px</option>
+            </select>
+        </div>
+        <div class="column" id="border-style-column">
+            <div class="head">[`Style`]</div>
+            <select name="style" id="border-style-menu" size="4" onchange="$.form_appearance.selectBorders(this)">
+                <option value="solid">[`Solid`]</option>
+                <option value="dotted">[`Dotted`]</option>
+                <option value="dashed">[`Dashed`]</option>
+                <option value="double">[`Double`]</option>
+            </select>
+        </div>
+        <div class="column" id="border-radius-column">
+            <div class="head">[`Border radius`]</div>
+            <input type="text" class="width50px" value="0" oninput="$.form_appearance.styles[$.form_appearance.activeTheme]['borders'][$('#border-menu').val()]['radius'] = $(this).val(); $.form_appearance.updateBorders($.form_appearance.styles[$.form_appearance.activeTheme]['borders']);" />
+        </div>
+        {* Тени *}
+        <div class="column" id="shadow-column">
+            <div class="head">[`Shadows`]</div>
+            <select id="shadow-menu" size="8" onchange="$('#columns').addClass('showShade'); $.form_appearance.setShadows(this);">
+                <option value="form">[`Form`]</option>
+                <option value="header">[`Header`]</option>
+                <option value="fields">[`Fields`]</option>
+                <option value="fdesc">[`Field description`]</option>
+                <option value="fname">[`Field title`]</option>
+                <option value="ffocus">[`Field focus`]</option>
+                <option value="button">[`Button`]</option>
+                <option value="errors">[`Error blocks`]</option>
+            </select>
+        </div>
+        <div class="column" id="shadow-edit-column">
+            <div class="head">[`Values`]</div>
+            <div class="margin-block semi"><span>[`H-shadow`]:</span> <input type="text" class="width50px" name='h-shadow' id='shadows-h-shadow' oninput='$.form_appearance.selectShadows(this)' /> px</div>
+            <div class="margin-block bottom semi"><span>[`V-shadow`]:</span> <input type="text" class="width50px" name='v-shadow' id='shadows-v-shadow' oninput='$.form_appearance.selectShadows(this)' /> px</div>
+            <div class="margin-block bottom semi"><span>[`Blur`]:</span> <input type="text" class="width50px" name='blur' id='shadows-blur' oninput='$.form_appearance.selectShadows(this)' /> px</div>
+            <div class="margin-block bottom semi"><span>[`Spread`]:</span> <input type="text" class="width50px" name='spread' oninput='$.form_appearance.selectShadows(this)' id='shadows-spread' /> px</div>
+            <div><span>[`Inset`]:</span> <input type="checkbox" name='inset' onchange='$.form_appearance.selectShadows(this)' id='shadows-inset' /></div>
+        </div>
+        {* Размеры *}
+        <div class="column" id="sizes-column">
+            <div class="head">[`Sizes`]</div>
+            <select id="sizes-menu" size="4" onchange="$.form_appearance.selectSizes(this)">
+                <option value="form" data-class="showFormSize">[`Form`]</option>
+                <option value="header" data-class="showSizeValues hideWidth">[`Header`]</option>
+                <option value="button_block" data-class="showSizeValues hideWidth">[`Button block`]</option>
+            </select>
+        </div>
+        <div class="column" id="sizes-form-column">
+            <div class="head">[`Form`]</div>
+            <select id="sizes-form-menu" size="2" onchange="$.form_appearance.selectSizesForm(this)">
+                <option value="fixed">[`Fixed`]</option>
+                <option value="adaptive">[`Adaptive`]</option>
+            </select>
+        </div>
+        <div class="column" id="sizes-values-column">
+            <div class="margin-block semi" id="sizes-width"><span>[`Width`]:</span> <input type="text" class="width50px" id="sizes-width-field" oninput="$.form_appearance.styles[$.form_appearance.activeTheme]['sizes'][$('#sizes-menu').val()]['width'] = $(this).val(); $.form_appearance.updateSizes($.form_appearance.styles[$.form_appearance.activeTheme]['sizes']);" /> px</div>
+            <div><span>[`Height`]</span> <input type="text" class="width50px" id="sizes-height-field" oninput="$.form_appearance.styles[$.form_appearance.activeTheme]['sizes'][$('#sizes-menu').val()]['height'] = $(this).val(); $.form_appearance.updateSizes($.form_appearance.styles[$.form_appearance.activeTheme]['sizes']);" /> px</div>
+        </div>
+        {* Отступы *}
+        <div class="column" id="marginpadding-column">
+            <div class="head">[`Margin/padding`]</div>
+            <select id="marginpadding-menu" size="9" onchange="$.form_appearance.selectMarginpadding(this)">
+                <option value="form">[`Form`]</option>
+                <option value="header">[`Header`]</option>
+                <option value="fields">[`Fields`]</option>
+                <option value="frows">[`Field rows`]</option>
+                <option value="fdesc">[`Field description`]</option>
+                <option value="fname">[`Field title`]</option>
+                <option value="errors">[`Errors`]</option>
+                <option value="button">[`Button`]</option>
+                <option value="button_block">[`Button block`]</option>
+            </select>
+        </div>
+        <div class="column" id="marginpadding-edit-column">
+            <div id="marginpadding-mar" class="margin-block semi bottom">
+                <span>[`Margin`]:</span>
+                <div class="inline-block align-center"><div class="small">[`Top`]</div><input type="text" class="width50px align-center" name='margin-top' id='marpad-margin-top' oninput='$.form_appearance.selectMarPadValues(this)' /></div>
+                <div class="inline-block align-center"><div class="small">[`Right`]</div><input type="text" class="width50px align-center" name='margin-right' id='marpad-margin-right' oninput='$.form_appearance.selectMarPadValues(this)' /></div>
+                <div class="inline-block align-center"><div class="small">[`Bottom`]</div><input type="text" class="width50px align-center" name='margin-bottom' id='marpad-margin-bottom' oninput='$.form_appearance.selectMarPadValues(this)' /></div>
+                <div class="inline-block align-center"><div class="small">[`Left`]</div><input type="text" class="width50px align-center" name='margin-left' id='marpad-margin-left' oninput='$.form_appearance.selectMarPadValues(this)' /></div>
+            </div>
+            <div id="marginpadding-pad">
+                <span>[`Padding`]:</span>
+                <div class="inline-block align-center"><div class="small">[`Top`]</div><input type="text" class="width50px align-center" name='padding-top' id='marpad-padding-top' oninput='$.form_appearance.selectMarPadValues(this)' /></div>
+                <div class="inline-block align-center"><div class="small">[`Right`]</div><input type="text" class="width50px align-center" name='padding-right' id='marpad-padding-right' oninput='$.form_appearance.selectMarPadValues(this)' /></div>
+                <div class="inline-block align-center"><div class="small">[`Bottom`]</div><input type="text" class="width50px align-center" name='padding-bottom' id='marpad-padding-bottom' oninput='$.form_appearance.selectMarPadValues(this)' /></div>
+                <div class="inline-block align-center"><div class="small">[`Left`]</div><input type="text" class="width50px align-center" name='padding-left' id='marpad-padding-left' oninput='$.form_appearance.selectMarPadValues(this)' /></div>
+            </div>
+        </div>
+        {* Выравнивание *}
+        <div class="column" id="alignment-column">
+            <div class="head">[`Select element`]</div>
+            <select id="alignment-menu" size="5" onchange="$('#columns').addClass('showAlign'); $.form_appearance.setAlignment(this);">
+                <option value="header">[`Header`]</option>
+                <option value="title">[`Title`]</option>
+                <option value="fdesc">[`Form description`]</option>
+                <option value="fname">[`Field title`]</option>
+                <option value="button">[`Button`]</option>
+            </select>
+        </div>
+        <div class="column" id="alignment-edit-column">
+            <div class="head">[`Alignment`]</div>
+            <select id="alignment-edit-menu" size="4" onchange="$.form_appearance.selectAlignment(this)">
+                <option value="left">[`Left`]</option>
+                <option value="right">[`Right`]</option>
+                <option value="center">[`Center`]</option>
+                <option value="justify">[`Justify`]</option>
+            </select>
+        </div>
+        {* Доп настройки *}
+        <div class="column" id="additional-column">
+            <div class="head">[`Fields`]</div>
+            <select id="additional-menu" size="3" onchange="$.form_appearance.selectAdditional(this)">
+                <option value="table_grid">[`Table grid`]</option>
+                <option value="rating">[`Rating`]</option>
+                <option value="rangeslider">[`Range slider`]</option>
+            </select>
+        </div>
+        <div class="column" id="additional-tg-column">
+            <div class="head">[`Table grid`]</div>
+            <select id="additional-tg-menu" size="4" onchange="$('#columns').addClass('showPicker'); $.form_appearance.setAdditional(this, 'table_grid');">
+                <option value="header">[`Header`]</option>
+                <option value="odd">[`Odd rows`]</option>
+                <option value="even">[`Even rows`]</option>
+                <option value="highlight">[`Highlight`]</option>
+            </select>
+        </div>
+        <div class="column" id="additional-rs-column">
+            <div class="head">[`Range slider`]</div>
+            <select id="additional-rs-menu" size="4" onchange="$('#columns').addClass('showPicker'); $.form_appearance.setAdditional(this, 'rangeslider');">
+                <option value="line">[`Slider line`]</option>
+                <option value="inactive_line">[`Inactive line`]</option>
+                <option value="circle">[`Slider circle`]</option>
+                <option value="value">[`Slider active value`]</option>
+                <option value="value_block">[`Slider active value block`]</option>
+                <option value="inactive_value">[`Slider inactive value`]</option>
+                <option value="inactive_value_block">[`Slider inactive value block`]</option>
+                <option value="grid">[`Slider grid`]</option>
+                <option value="grid_value">[`Slider grid value`]</option>
+            </select>
+        </div>
+        {* Выбор цвета *}
+        <div class="column" id="color-picker-column">
+            <div class="color-chooser"></div>
+            <div class="inline-block">
+                <input class='colorpicker' name="" value='#000000'/>
+                <input class='colorpicker_input width50px' value='#000000' oninput='$("#color-picker-column .colorpicker").setColor(this.value); $.form_appearance.setColor(this.value);' />
+            </div>
+        </div>
+    </div>
+    <div class="margin-block interactive">
+        {include file="./include.example.form.html"}
+    </div>
+</div>
+<script>
+    $(function () {
+        {foreach $themes as $t}
+            $.form_appearance.styles[''+{$t.id}] = {json_encode($t.settings)};
+        {/foreach}
+        $.form_appearance.usedTheme = "{if !empty($form.theme_id)}{$form.theme_id}{else}0{/if}";
+        $.form_appearance.initPageAppearance();
+    });
+</script>

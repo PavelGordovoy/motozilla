@@ -1,0 +1,85 @@
+{function name=discount_type}
+    {$types = [
+        'promocode' => '[`Promo code`]',
+        'partner'=>'[`Partners sale`]',
+        'repeate_buy'=>'[`Repeat buy`]',
+        'special_offer'=>'[`Special offer`]'
+    ]}
+    {if isset($type)}{if !empty($types[$type])}{$types[$type]}{else}{$type}{/if}{/if}
+{/function}
+
+{function name=order_state}
+    {$states = [
+        'shipped' => '[`shipped`]',
+        'refunded' => '[`refunded`]',
+        'paid' => '[`paid`]',
+        'new' => '[`new`]',
+        'processing' => '[`processing`]'
+    ]}
+    {if isset($type)}{if !empty($states[$type])}{$states[$type]}{else}{$type}{/if}{/if}
+{/function}
+
+{if !empty($all_data)}
+
+    {foreach $all_data as $k => $data}
+
+        {if $all_data|count > 1}
+            <div class="block bold">
+                [`Developer ID`]: {$developer_ids[$k]}
+            </div>
+        {/if}
+
+        {if $data.status !== 'ok' || empty($data.data)}
+            <div class="block attention">
+                [`Licenses not found`]
+            </div>
+        {elseif !empty($data.data)}
+            {$order = $data.data}
+            <h2>[`Order`] №{$wa->post('order')|escape}{if !empty($order['status'])} <span class="hint">{order_state type=$order.status|lower}</span>{/if}</h2>
+            {$discounts = ifset($order.discounts, [])}
+            {if !empty($discounts)}
+                <h3>[`Discounts`]</h3>
+                <ul>
+                    {foreach $discounts as $d}
+                        <li>{discount_type type=$d.type}{if isset($d['code'])} <b>{$d.code}</b>{/if} &mdash; {$d.percent}%</li>
+                    {/foreach}
+                </ul>
+            {/if}
+            {$transactions = ifempty($order.transactions, [])}
+            {if !empty($transactions)}
+                <div class="margin-block bottom">
+                    <h3>[`Transactions`]</h3>
+                    <table class="zebra">
+                        <thead><tr> <th class="align-left">[`Date`]</th><th class="align-left">[`Amount`]</th><th class="align-left">[`Comment`]</th></tr></thead>
+                        {foreach $transactions as $t}
+                            <tr>
+                                <td>{$t.datetime|wa_date:'humandatetime'}</td>
+                                <td class="align-right">{$t.amount|wa_currency:$t.currency}</td>
+                                <td>{$t.comment|escape}</td>
+                            </tr>
+                        {/foreach}
+                    </table>
+                </div>
+            {/if}
+            {$licenses = ifempty($order.licenses,  [])}
+            {if !empty($licenses)}
+                <h3>[`Licenses`]</h3>
+                <table class="zebra">
+                    <thead>
+                    <tr><th class="align-left">[`Product`]</th><th class="align-left">[`Domain`]</th><th class="align-left">[`Install date`]</th></tr>
+                    </thead>
+                    <tbody>
+                    {foreach $licenses as $l}
+                        <tr>
+                            <td>{if isset($products[$l.product])}{$products[$l.product]|escape}{else}{$l.product|escape}{/if}</td>
+                            <td>{if !empty($l.domain)}<a href="http://{$l.domain|escape}" target="_blank">{$l.domain|escape} <i class="icon16 new-window"></i></a>{/if}</td>
+                            <td>{$l.inst_datetime|wa_date:'humandatetime'}</td>
+                        </tr>
+                    {/foreach}
+                    </tbody>
+                </table>
+            {/if}
+        {/if}
+
+    {/foreach}
+{/if}

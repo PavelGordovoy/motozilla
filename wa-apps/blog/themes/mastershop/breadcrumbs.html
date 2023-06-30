@@ -1,0 +1,87 @@
+{strip}
+{$is_mobile = $wa->isMobile()}
+{$is_schema_org = $theme_settings.schema_org_active}
+{if !isset($current_blog)}
+    {$globals_blog_id = $wa->globals('blog_id')}
+    {if isset($globals_blog_id) && !is_array($globals_blog_id)}
+        {$current_blog = $wa->blog->blog($wa->globals('blog_id'))}
+    {else if isset($post.blog_id) && !empty($post.blog_id)}
+        {$current_blog = $wa->blog->blog($post.blog_id)}
+    {/if}
+{/if}
+
+{$lastBreadcrumb = null}
+{if !isset($breadcrumbs)}{$breadcrumbs = []}{/if}
+
+{if isset($current_blog)}
+    {if isset($action) && $action == 'default'}
+        {$lastBreadcrumb = ['name' => $current_blog.name, 'url' => $current_blog.link]}
+    {else}
+        {$unshift = array_unshift($breadcrumbs, ['name' => $current_blog.name, 'url' => $current_blog.link])}
+    {/if}
+{else}
+    {if $wa->currentUrl() == $wa_app_url}
+        {$lastBreadcrumb = ['name' => "[`Blog`]", 'url' => $wa_app_url]}
+    {else}
+        {$unshift = array_unshift($breadcrumbs, ['name' => "[`Blog`]", 'url' => $wa_app_url])}
+    {/if}
+{/if}
+
+{if isset($post) && $post}
+    {$lastBreadcrumb = ['name' => $post.title, 'url' => $wa->currentUrl(false, true)]}
+{elseif isset($page.name)}
+    {$lastBreadcrumb = ['name' => $page.name, 'url' => $wa->currentUrl(false, true)]}
+{elseif $is_search}
+    {if $wa->get('query')}
+        {$lastBreadcrumb = "[`Search`]"}
+    {else}
+        {$lastBreadcrumb = ['name' => $stream_title|escape, 'url' => $wa->currentUrl(false, true)]}
+    {/if}
+{/if}
+
+{if !empty($lastBreadcrumb) && is_array($lastBreadcrumb)}
+    {$lastBreadcrumb['is_current'] = true}
+    {$breadcrumbs[] = $lastBreadcrumb}
+{else if !empty($lastBreadcrumb)}
+    {$breadcrumbs[] = ['name' => $lastBreadcrumb, 'is_current' => true]}
+{/if}
+
+{$position = 1}
+<ul class="breadcrumbs{if $is_mobile} breadcrumbs--scroll js-breadcrumbs-scroll{/if}"{if $is_schema_org} itemscope itemtype="http://schema.org/BreadcrumbList"{/if}>
+    <li{if $is_schema_org} itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem"{/if}>
+        <a{if $is_schema_org} itemprop="item"{/if} href="{$wa_url}">
+            <span{if $is_schema_org} itemprop="name"{/if}>[`Home`]</span>
+            {if $is_schema_org}<meta itemprop="position" content="{$position}" />{/if}
+        </a>
+        {if !empty($breadcrumbs)}<span class="rarr"><i class="fal fa-long-arrow-right"></i></span>{/if}
+    </li>
+    {if !empty($breadcrumbs)}
+        {foreach $breadcrumbs as $breadcrumb}
+            {if $breadcrumb}
+                {if !empty($breadcrumb.url)}
+                    {$position = $position + 1}
+                    <li{if $is_schema_org} itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem"{/if}>
+                        {if !empty($breadcrumb.is_current)}
+                            {$breadcrumb.name}
+                        {else}
+                            <a href="{$breadcrumb.url}">{$breadcrumb.name}</a>
+                        {/if}
+
+                        {if $is_schema_org}
+                            <link itemprop="item" href="{$breadcrumb.url|escape}">
+                            <meta itemprop="name" content="{$breadcrumb.name}" />
+                            <meta itemprop="position" content="{$position}" />
+                        {/if}
+
+                        {if !$breadcrumb@last}<span class="rarr"><i class="fal fa-long-arrow-right"></i></span>{/if}
+
+                    </li>
+                {else}
+                    <li>{$breadcrumb.name}</li>
+                {/if}
+            {/if}
+        {/foreach}
+    {/if}
+</ul>
+
+{/strip}

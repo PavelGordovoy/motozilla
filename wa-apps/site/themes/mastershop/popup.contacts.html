@@ -1,0 +1,28 @@
+{strip}
+<div id="popup-contacts" class="js-m-popup m-popup">
+    <i class="js-close-m-popup m-close-popup fal fa-times"></i>
+
+    <div class="m-popup__head">[`Contacts`]</div>
+    <div class="popup-contacts">
+        {* popup phones *}
+        {if $theme_settings.display_popup_phones == 'block'}
+            {$wa->block("`$theme_settings.popup_phones_block_name`")}
+        {else}
+            {include file="`$parent_theme_path`/popup.contacts.phones.html"}
+        {/if}
+
+        {* popup address *}
+        {if $theme_settings.display_popup_address == 'block'}
+            {$wa->block("`$theme_settings.popup_address_block_name`")}
+        {else}
+            {include file="`$parent_theme_path`/popup.contacts.address.html"}
+        {/if}
+    </div>
+
+    {$map = $theme_settings.iframe_link_map}
+    {if !empty($map)}
+        {if $theme_settings.static_var_smarty}{eval var=$map assign='map'}{/if}
+        <div data-link-map="{$map}" class="js-popup-map popup-map"></div>
+    {/if}
+</div>
+{/strip}

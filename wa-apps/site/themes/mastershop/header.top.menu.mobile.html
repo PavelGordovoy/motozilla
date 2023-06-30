@@ -1,0 +1,51 @@
+{strip}
+{$is_main_menu_mobile_btn = !empty($theme_settings.mobile_main_menu_display_info_menu)}
+{if count($_links) > 0 || $is_main_menu_mobile_btn}
+    {$count_levels = (int)$theme_settings.header_menu_levels}
+    <div id="m-header-menu" class="js-mobile-menu m-header-menu__outer" data-open-selected-item="true">
+        <div class="m-header-menu__head ac-color">
+            <i class="js-mobile-menu-close m-close-popup fal fa-times bs-color"></i>
+        </div>
+        <ul class="m-header-menu">
+            {if $is_main_menu_mobile_btn}
+                <li data-id="m-categories-menu" class="js-open-mobile-menu m-header-menu__catalog ac-color">
+                    <i class="far fa-bars m-header-menu__catalog__icon"></i>
+                    {if $theme_settings.mobile_main_menu_title_text}{$theme_settings.mobile_main_menu_title_text}{else}[`Catalog`]{/if}
+                    <i class="fas fa-chevron-right m-header-menu__catalog__caret"></i>
+                </li>
+            {/if}
+            {foreach $_links as $a}
+                {if !($a.url == $wa_url && $a.name == $wa->accountName()) && !isset($a.top_menu_hide)}
+                    {$is_select = strlen($a.url)>1 && $wa->currentUrl() == $a.url}
+                    {$is_open = $a.url==$wa_app_url && !$wa->globals('isMyAccount') || strlen($a.url)>1 && $wa->currentUrl()|strstr:$a.url}
+                    {$is_has_childs = isset($a.childs) && $a.childs && count($a.childs) && $count_levels > 1}
+                    <li class="js-m-menu-item m-header-menu__item{if $is_select} selected{/if}">
+                        {if $is_has_childs}<span class="js-m-submenu-open m-header-menu__open bs-color"></span>{/if}
+                        <a class="m-header-menu__link" href="{$a.url}"{if !empty($a.target)} target="{$a.target}"{/if}>{$a.name}</a>
+                        {if $is_has_childs}
+                            <ul class="m-header-submenu">
+                                {foreach $a.childs as $subp}
+                                    {$is_has_childs = isset($subp.childs) && $subp.childs && count($subp.childs) && $count_levels > 2}
+                                    <li class="js-m-menu-item m-header-menu__item{if strlen($subp.url)>1 && $wa->currentUrl() == $subp.url} selected{/if}">
+                                        {if $is_has_childs}<span class="js-m-submenu-open m-header-menu__open bs-color"></span>{/if}
+                                        <a class="m-header-submenu__link" href="{$subp.url}"{if !empty($subp.target)} target="{$subp.target}"{/if}>{$subp.name}</a>
+                                        {if $is_has_childs}
+                                            <ul class="m-header-submenu">
+                                                {foreach $subp.childs as $subp_lvl3}
+                                                    <li class="js-m-menu-item m-header-submenu__item{if strlen($subp_lvl3.url)>1 && $wa->currentUrl() == $subp_lvl3.url} selected{/if}">
+                                                        <a class="m-header-submenu__link" href="{$subp_lvl3.url}"{if !empty($subp_lvl3.target)} target="{$subp_lvl3.target}"{/if}>{$subp_lvl3.name}</a>
+                                                    </li>
+                                                {/foreach}
+                                            </ul>
+                                        {/if}
+                                    </li>
+                                {/foreach}
+                            </ul>
+                        {/if}
+                    </li>
+                {/if}
+            {/foreach}
+        </ul>
+    </div>
+{/if}
+{/strip}

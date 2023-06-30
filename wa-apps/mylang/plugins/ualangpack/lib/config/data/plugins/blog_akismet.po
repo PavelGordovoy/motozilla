@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Webasyst Blog Akismet plugin 1.0.0.37785 UA translation v 0.1\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: /wa-apps/blog/plugins/akismet/js/akismet.js:67
+#: /wa-apps/blog/plugins/akismet/lib/blogAkismet.plugin.php:42
+msgid "mark as spam"
+msgstr "позначити як спам"
+
+#: /wa-apps/blog/plugins/akismet/lib/config/plugin.php:4
+msgid "Akismet"
+msgstr "Akismet"
+
+#: /wa-apps/blog/plugins/akismet/lib/config/plugin.php:5
+msgid "Anti-spam comment fitering powered by Akismet.com"
+msgstr "Фільтрація спаму, забезпечена Akismet.com"
+
+#: /wa-apps/blog/plugins/akismet/lib/config/plugin.php:11
+msgid "Akismet API Key"
+msgstr "Ключ API Akismet"
+
+#: /wa-apps/blog/plugins/akismet/lib/config/plugin.php:12
+msgid "Get an API key for your domain at <a target=\"_blank\" href=\"%s\">Akismet website</a>"
+msgstr "Отримайте ключ API для вашого домену на <a target=\"_blank\" href=\"%s\">сайті Akismet</a>"
+
+#: /wa-apps/blog/plugins/akismet/lib/config/plugin.php:17
+msgid "Report spam"
+msgstr "Повідомити про спам"
+
+#: /wa-apps/blog/plugins/akismet/lib/config/plugin.php:18
+msgid "Send comments marked as spam to Akismet server"
+msgstr "Надіслати коментарі, позначені як спам, на сервер Akismet"
+
+#: /wa-apps/blog/plugins/akismet/lib/blogAkismet.plugin.php:31
+msgid "According to Akismet.com, your comment very much looks like spam, thus will not be published. Please rewrite your comment. Sorry for the inconvenience."
+msgstr "За даними Akismet.com ваш коментар дуже схожий на спам, і, таким чином, не буде опублікований. Будь ласка, перепишіть ваш коментар. Вибачте за незручності."

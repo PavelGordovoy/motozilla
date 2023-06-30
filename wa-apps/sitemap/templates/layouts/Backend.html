@@ -1,0 +1,79 @@
+{if $layout_state.without_layout}
+	<script>
+		window.assets_path = {json_encode($assets_path)};
+		window.layout_state = {json_encode($layout_state)};
+		window.action_state = {json_encode($action_state)};
+	</script>
+	{$wa->js()}
+{else}<!DOCTYPE html><html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	{$title=$wa->title()}
+	<title>{{$title|default:$wa->appName()}|cat:" — ":{$wa->accountName(false)}|escape}</title>
+
+	{$wa->css()}
+
+	<link href="{$wa_url}wa-content/css/jquery-ui/base/jquery.ui.autocomplete.css" rel="stylesheet" type="text/css" />
+	<link href="{$wa_url}wa-content/js/jquery-plugins/jquery-plot/jquery.jqplot.min.css" rel="stylesheet" type="text/css" />
+	<link href="{$wa_url}wa-content/js/jquery-plugins/ibutton/jquery.ibutton.min.css" rel="stylesheet" type="text/css" />
+
+	<!-- link your CSS files here -->
+	<script src="{$wa_url}wa-content/js/jquery/jquery-1.11.1.min.js"></script>
+	<script src="{$wa_url}wa-content/js/jquery/jquery-migrate-1.2.1.min.js"></script>
+
+	<script src="{$wa_url}wa-content/js/jquery-plugins/jquery-plot/jquery.jqplot.min.js"></script>
+	<!--[if lt IE 9]><script language="javascript" src="{$wa_url}wa-content/js/jquery-plugins/jquery-plot/excanvas.min.js"></script><![endif]-->
+
+	{wa_js file="js/shop-jquery.min.js"}
+	{$wa_url}wa-content/js/jquery-wa/wa.core.js
+	{$wa_url}wa-content/js/jquery-wa/wa.dialog.js
+	{$wa_url}wa-content/js/jquery-plugins/ibutton/jquery.ibutton.min.js
+	{$wa_url}wa-content/js/jquery-plugins/jquery.history.js
+	{$wa_url}wa-content/js/jquery-plugins/jquery.store.js
+	{$wa_url}wa-content/js/jquery-ui/jquery.ui.core.min.js
+	{$wa_url}wa-content/js/jquery-ui/jquery.ui.widget.min.js
+	{$wa_url}wa-content/js/jquery-ui/jquery.ui.mouse.min.js
+	{$wa_url}wa-content/js/jquery-ui/jquery.ui.position.min.js
+	{$wa_url}wa-content/js/jquery-ui/jquery.ui.autocomplete.min.js
+	{$wa_url}wa-content/js/jquery-ui/jquery.ui.draggable.min.js
+	{$wa_url}wa-content/js/jquery-ui/jquery.ui.droppable.min.js
+	{$wa_url}wa-content/js/jquery-ui/jquery.ui.sortable.min.js
+	{$wa_url}wa-content/js/jquery-ui/jquery.ui.datepicker.min.js
+
+	{$wa_url}wa-content/js/jquery-plugins/jquery.retina.js
+
+	{$wa_url}wa-content/js/jquery-plugins/jquery-plot/plugins/jqplot.highlighter.min.js
+	{$wa_url}wa-content/js/jquery-plugins/jquery-plot/plugins/jqplot.cursor.min.js
+	{$wa_url}wa-content/js/jquery-plugins/jquery-plot/plugins/jqplot.dateAxisRenderer.min.js
+	{$wa_url}wa-content/js/jquery-plugins/jquery-plot/plugins/jqplot.pieRenderer.min.js
+	{/wa_js}
+	{if is_readable("wa-content/js/jquery-ui/i18n/jquery.ui.datepicker-{$wa->locale()}.js")}
+		<script src="{$wa_url}wa-content/js/jquery-ui/i18n/jquery.ui.datepicker-{$wa->locale()}.js"></script>
+	{/if}
+
+	<script>
+		window.assets_path = {json_encode($assets_path)};
+		window.layout_state = {json_encode($layout_state)};
+		window.action_state = {json_encode($action_state)};
+
+		jQuery(function($) {
+			window.sitemapRenderView();
+		});
+	</script>
+	{$wa->js()}
+	{block name="head"} {/block}
+
+</head>
+<body>
+<div id="wa"{if isset($no_level2)} class="s-no-level2"{/if}>
+
+	{$wa->header()}
+
+	<div id="wa-app">
+		<div id="sitemap-maincontent"></div>
+	</div>
+
+</div>
+</body>
+</html>
+{/if}

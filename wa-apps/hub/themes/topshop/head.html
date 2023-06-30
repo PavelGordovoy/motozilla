@@ -1,0 +1,34 @@
+<script type="text/javascript" src="{$wa_parent_theme_url}js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="{$wa_parent_theme_url}js/jquery.scrollTo.js"></script>
+
+<script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery-ui/jquery.ui.core.min.js?v{$wa->version(true)}"></script>
+<script type="text/javascript" src="{$wa_parent_theme_url}js/jquery.ui.widget.min.js?v{$wa->version(true)}"></script>
+<script type="text/javascript" src="{$wa_parent_theme_url}js/jquery.ui.mouse.min.js?v{$wa->version(true)}"></script>
+<script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery-ui/jquery.ui.slider.min.js?v{$wa->version(true)}"></script>
+<script type="text/javascript" src="{$wa_parent_theme_url}js/jquery.cookie.js"></script>
+<script type="text/javascript" src="{$wa_app_static_url}js/lazy.load.js?v{$wa->version()}"></script>
+<script type="text/javascript" src="{$wa_parent_theme_url}js/jquery.ui.touch-punch.min.js?v{$wa->version()}"></script>
+<script type="text/javascript" src="{$wa_parent_theme_url}js/jquery.countdownTimer.min.js?v={$wa->version(true)}"></script>
+<script type="text/javascript" src="{$wa_parent_theme_url}shop.js"></script>
+
+
+<link href="{$wa_active_theme_url}default.hub.css?v{$wa_theme_version}" rel="stylesheet" type="text/css">
+<link href="{$wa_static_url}wa-apps/hub/css/glyphs.css?v{$wa->version()}" rel="stylesheet" type="text/css">
+
+<link type="text/css" rel="stylesheet" href="{$wa_static_url}wa-content/js/redactor/redactor.css?v{$wa->version(true)}">
+<script src="{$wa_static_url}wa-content/js/redactor/redactor.min.js?v{$wa->version(true)}"></script>
+{if substr($wa->locale(), 0, 2)!='en'}<script src="{$wa_static_url}wa-content/js/redactor/{substr($wa->locale(), 0, 2)}.js?v{$wa->version(true)}"></script>{/if}
+<script type="text/javascript" src="{$wa_app_static_url}js/redactor/redactor.codeblock.js?v{$wa->version()}"></script>
+
+<script type="text/javascript" src="{$wa_active_theme_url}default.hub.js?v{$wa_theme_version}"></script>
+<script type="text/javascript">
+    $.hub.locale = $.extend($.hub.locale || {}, {
+        'Insert code block': "[`Insert code block`]",
+        'Insert quote': "[`Insert quote`]",
+        'Insert': "[`Insert`]"
+    });
+</script>
+
+<!-- plugin hook: 'frontend_head' -->
+{* @event frontend_head.%plugin_id% *}
+{foreach $frontend_head as $_}{$_}{/foreach}

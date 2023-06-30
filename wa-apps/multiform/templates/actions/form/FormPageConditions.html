@@ -1,0 +1,348 @@
+{* Switcher *}
+<link rel="stylesheet" href="{$wa_url}wa-content/js/jquery-plugins/ibutton/jquery.ibutton.min.css?v={$wa->version()}">
+<script src="{$wa_url}wa-content/js/jquery-plugins/ibutton/jquery.ibutton.min.js"></script>
+
+<link rel="stylesheet" href="{$wa_app_static_url}js/datepicker/css/metallic.css">
+<script src="{$wa_app_static_url}js/datepicker/javascript/zebra_datepicker.src.js"></script>
+
+<link rel="stylesheet" href="{$wa_url}wa-content/js/redactor/2/redactor.css">
+<script src="{$wa_url}wa-content/js/redactor/2/redactor.min.js?v={$wa->version()}"></script>
+{if $lang != 'en'}
+<script src="{$wa_url}wa-content/js/redactor/2/{$lang}.js"></script>
+{/if}
+
+<style>
+    #wa-app { overflow: visible; }
+</style>
+
+
+{if $wa->get('addJs')}
+<script src="{$wa_app_static_url}js/form/conditions.js"></script>
+{/if}
+
+{function name="build_condition"}
+    {foreach $conditions as $sort_id => $condition}
+        {$is_template = $sort_id == 'template'}
+        {if empty($condition.params)}{continue}{/if}
+        <div class="field{if $is_template} s-template{/if}"{if !$is_template} data-pos="p{$condition.sort}"{/if}>
+            <a href="#/sort/condition/" data-dir='up' class='js-action'><i class="icon16 upload"></i></a>
+            <a href="#/sort/condition/" data-dir='down' class="js-action"><i class="icon16 download"></i></a>
+
+            {$target = $first_field}
+            {if !$is_template}
+                {$ct = (int)$condition.target}
+                {if !empty($fields[$ct])}{$target = $fields[$ct]}{/if}
+            {/if}
+
+            {foreach $condition.params as $param_key => $param}
+
+            {$source = $first_field}
+            {if !$is_template}
+                {if !empty($fields[$param.source])}{$source = $fields[$param.source]}{/if}
+            {/if}
+
+            <div class="s-condition-field" data-pos='p{if !$is_template}{$param_key}{else}0{/if}'>
+                <div class="s-andor"{if !$param@first} style='display: block'{/if}>
+                    <div class="dropdown-ul s-small">
+                        <a href="#/show/dropdownUl/" class="js-action">
+                            <span class="s-name">{if $condition.andor}[`and`]{else}[`or`]{/if}</span>
+                            <span class="arrow"><i class="icon16 darr"></i></span>
+                            <input type="hidden" name='condition[{if !$is_template}p{/if}{$condition.sort}][andor]'{if $is_template} disabled{else} value='{$condition.andor|escape}'{/if} />
+                        </a>
+                        <ul>
+                            <li{if $condition.andor} class='selected'{/if}>
+                                <a href="#/select/dropdownItem/" data-dropdown='andor' data-value="1" class="js-action">[`and`]</a>
+                            </li>
+                            <li{if !$condition.andor} class='selected'{/if}>
+                                <a href="#/select/dropdownItem/" data-dropdown='andor' data-value="0" class="js-action">[`or`]</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <span>[`If`]</span>
+                <div class="dropdown-ul f-fields">
+                    <a href="#/show/dropdownUl/" class="js-action">
+                        <span class="s-name" title="{$source.title|escape}">{$source.title|escape}&nbsp;<b>{$source.type}</b></span>
+                        <span class="arrow"><i class="icon16 darr"></i></span>
+                        <input type="hidden" name='condition[{if !$is_template}p{/if}{$condition.sort}][params][{$param_key}][source]'{if $is_template} disabled{else} value='{$source.id}'{/if} />
+                    </a>
+                    <ul>
+                        {foreach $fields as $f}
+                            {if !in_array($f.type, ['html', 'file', 'section', 'button']) && !$f.hidden}
+                                <li{if !$is_template && $f.id == $source.id} class='selected'{/if}>
+                                    <a data-id="{$f.id}" data-value="{$f.id}" data-type="{$f.type}" data-operator='{if in_array($f.type, ["input", "textarea", "email", "phone"])}input{elseif in_array($f.type, ["number", "rating"])}number{elseif in_array($f.type, ["checkbox", "radio", "select", "table_grid"])}checkbox{else}{$f.type}{/if}' href="#/select/dropdownItem/" data-dropdown='fields' class="js-action">{$f.title|escape}&nbsp;<b>{$f.type}</b></a>
+                                </li>
+                            {/if}
+                        {/foreach}
+                    </ul>
+                </div>
+                {foreach $fields as $f}
+                    {if $f.type == 'checkbox' || $f.type == 'table_grid'}
+
+                        {if $f.type == 'table_grid' && !empty($f.option_fields.statement)}
+                            {$option_fields_f = $f.option_fields.statement}
+                        {elseif !empty($f.option_fields)}
+                            {$option_fields_f = $f.option_fields}
+                        {else}
+                            {continue}
+                        {/if}
+
+                        {if !$is_template && $param.source_ext && ($source.type == 'checkbox' || $source.type == 'table_grid')}
+                            {if $source.type == 'table_grid' && !empty($source['option_fields']['statement'][$param.source_ext])}
+                                {$additional_field = $source['option_fields']['statement'][$param.source_ext]}
+                            {elseif !empty($source['option_fields'][$param.source_ext])}
+                                {$additional_field = $source['option_fields'][$param.source_ext]}
+                            {else}
+                                {continue}
+                            {/if}
+                        {elseif $is_template}
+                            {$additional_field = $option_fields_f[$option_fields_f|@key]}
+                        {/if}
+                        <div class="dropdown-ul f-additional-field {$f.id}"{if $source.id !== $f.id} style='display: none'{/if}>
+                            <a href="#/show/dropdownUl/" class="js-action">
+                                <span class="s-name" title="{if !empty($additional_field)}{$additional_field.value|escape}{/if}">{if !empty($additional_field)}{$additional_field.value|escape}{/if}</span>
+                                <span class="arrow"><i class="icon16 darr"></i></span>
+                                <input type="hidden" name='condition[{if !$is_template}p{/if}{$condition.sort}][params][{$param_key}][source_ext]'{if $is_template || (!$is_template && ($source.id !== $f.id || !$param.source_ext))} disabled {else} value='{$param.source_ext}'{/if} />
+                            </a>
+                            <ul>
+                            {foreach $option_fields_f as $off}
+                                <li{if !$is_template && $param.source_ext == $off.id} class='selected'{/if}>
+                                    <a data-value="{$off.id}" data-dropdown="additional" data-id="{$f.id}" href="#/select/dropdownItem/" class="js-action">{$off.value|escape}&nbsp;</a>
+                                </li>
+                            {/foreach}
+                            </ul>
+                        </div>
+                    {/if}
+                {/foreach}
+                <div class="dropdown-ul f-operator">
+                    {if in_array($source.type, ["input", "textarea", "email", "phone"])}{$source_op = "input"}{elseif in_array($source.type, ["number", "rating"])}{$source_op = "number"}{elseif in_array($source.type, ["checkbox", "radio", "select", "table_grid"])}{$source_op = "checkbox"}{else}{$source_op = $source.type}{/if}
+                    {$operators = ['input' => ['is'=>"[`is`]", 'is_not' => "[`is not`]", 'contains' => "[`contains`]", 'doesnt_contain' => "[`doesn't contain`]", 'begins_with' => "[`begins with`]", 'ends_with' => "[`ends with`]", 'is_blank' => "[`is blank`]", 'is_not_blank' => "[`is not blank`]"],
+                                   'number' => ['is_equal_to'=>"[`is equal to`]", 'is_not_equal_to'=>"[`is not equal to`]", 'is_greater_than'=>"[`is greater than`]", 'is_less_than'=>"[`is less than`]"],
+                                   'formula' => ['is_equal_to'=>"[`is equal to`]", 'is_not_equal_to'=>"[`is not equal to`]", 'is_greater_than'=>"[`is greater than`]", 'is_less_than'=>"[`is less than`]", 'is'=>"[`is`]", 'is_not' => "[`is not`]", 'contains' => "[`contains`]", 'doesnt_contain' => "[`doesn't contain`]", 'begins_with' => "[`begins with`]", 'ends_with' => "[`ends with`]", 'is_blank' => "[`is blank`]", 'is_not_blank' => "[`is not blank`]"],
+                                   'date' => ['is_on'=>"[`is on`]", 'is_before'=>"[`is before`]", 'is_after'=>"[`is after`]"],
+                                   'time' => ['is_at'=>"[`is at`]", 'is_time_before'=>"[`is before`]", 'is_time_after'=>"[`is after`]"],
+                                   'checkbox' => ['is'=>"[`is `]", 'is_not' => "[`is not `]"]
+                                   ]}
+                    {if !isset($operators[$source_op])}{$source_op = 'formula'}{/if}
+
+                    {if !$is_template && !empty($operators[$source_op][$param.operator])}
+                        {$operator_value = $operators[$source_op][$param.operator]}
+                    {else}
+                        {$operator_value = {$operators[$source_op][$operators[$source_op]|@key]}}
+                    {/if}
+
+                    <a href="#/show/dropdownUl/" class="js-action">
+                        <span class="s-name" title="{$operator_value}">{$operator_value}</span>
+                        <span class="arrow"><i class="icon16 darr"></i></span>
+                        <input type="hidden" name='condition[{if !$is_template}p{/if}{$condition.sort}][params][{$param_key}][operator]'{if $is_template} disabled {else} value='{$param.operator}'{/if} />
+                    </a>
+                    <ul>
+                        {foreach $operators as $op_type => $op_types}
+                            {foreach $op_types as $op => $op_val}
+                                <li data-operator="{$op}" class="s-operator-{$op_type}{if !$is_template && $param.operator == $op} selected{/if}"{if $source_op !== $op_type} style="display: none"{/if}>
+                                    <a href="#/select/dropdownItem/" data-value='{$op}' class="js-action">{$op_val}</a>
+                                </li>
+                            {/foreach}
+                        {/foreach}
+                    </ul>
+                </div>
+                <div class="field-values">
+                    <span class="f-input-value f-number-value f-time-value f-file-value f-formula-value"{if !$is_template && in_array($source_op, ['input', 'number', 'time', 'file', 'formula'])} style='display: inline'{/if}>
+                        <input type="text" name='condition[{if !$is_template}p{/if}{$condition.sort}][params][{$param_key}][value]'{if $is_template || (!$is_template && !in_array($source_op, ['input', 'number', 'time', 'file', 'formula']))} disabled{/if}{if in_array($source_op, ['input', 'number', 'time', 'file', 'formula'])} value='{$param.value|escape}'{/if} maxlength='255'/>
+                    </span>
+                    <span class="f-date-value"{if !$is_template && $source_op == 'date'} style='display: inline'{/if}>
+                        <input type="text" name='condition[{if !$is_template}p{/if}{$condition.sort}][params][{$param_key}][value]' class='multiform-datepicker'{if $is_template || (!$is_template && $source_op !== 'date')} disabled{/if}{if $source_op == 'date'} value='{$param.value|escape}'{/if} />
+                    </span>
+                    <span class="f-checkbox-value"{if !$is_template && $source.type == 'checkbox'} style='display: inline'{/if}>
+                        <b>[`checked`]</b>
+                        <input type="hidden" name='condition[{if !$is_template}p{/if}{$condition.sort}][params][{$param_key}][value]'{if $is_template || (!$is_template && $source.type !== 'checkbox')} disabled{/if}{if $source.type == 'checkbox'}{/if} value='checked'/>
+                    </span>
+                    {foreach $fields as $f}
+                        {if in_array($f.type, ['radio', 'select', 'table_grid']) && !empty($f.option_fields)}
+                            {if $f.type == 'table_grid' && !empty($f.option_fields.column)}
+                                {$option_fields = $f.option_fields.column}
+                            {else}
+                                {$option_fields = $f.option_fields}
+                            {/if}
+
+                            {if !$is_template && $param.value && in_array($source.type, ['radio', 'select', 'table_grid'])}
+                                {if $source.type == 'table_grid' && !empty($source['option_fields']['column'][$param.value])}
+                                    {$field_value = $source['option_fields']['column'][$param.value]}
+                                {elseif !empty($source['option_fields'][$param.value])}
+                                    {$field_value = $source['option_fields'][$param.value]}
+                                {else}
+                                    {continue}
+                                {/if}
+                            {elseif $is_template}
+                                {$field_value = $option_fields[$option_fields|@key]}
+                            {/if}
+
+                            <div class="dropdown-ul f-{$f.type}-value {$f.id}"{if in_array($source.type, ['radio', 'select', 'table_grid']) && !empty($field_value) && $field_value.field_id == $f.id} style='display: inline'{/if}>
+                                <a href="#/show/dropdownUl/" class="js-action">
+                                    <span class="s-name" title="{if !empty($field_value)}{$field_value.value|escape}{/if}">{if !empty($field_value)}{$field_value.value|escape}{/if}</span>
+                                    <span class="arrow"><i class="icon16 darr"></i></span>
+                                    <input type="hidden" name='condition[{if !$is_template}p{/if}{$condition.sort}][params][{$param_key}][value]'{if $is_template || (!$is_template && $source.id !== $f.id)} disabled{else} value='{$param.value}'{/if}/>
+                                </a>
+                                <ul>
+                                    {foreach $option_fields as $of}
+                                        <li data-id="{$of.id}"{if !$is_template && in_array($source.type, ['radio', 'select', 'table_grid']) && $of.id == $param.value} class='selected'{/if}>
+                                            <a href="#/select/dropdownItem/" data-value='{$of.id}' class="js-action">{$of.value|escape}&nbsp;</a>
+                                        </li>
+                                    {/foreach}
+                                </ul>
+                            </div>
+                        {/if}
+                    {/foreach}
+                </div>
+                <span class="s-buttons">
+                    <a href="#/add/conditionInside/" title="[`Add inside condition`]" class="js-action">+</a>
+                    <a href="#/remove/conditionInside/"{if $param@first} style="display: none;"{/if} title="[`Remove inside condition`]" class="js-action">-</a>
+                </span>
+                <a href="#/remove/condition/" title="[`Remove condition`]" class="js-action s-button-1 delete-condition">-</a>
+            </div>
+            {/foreach}
+            <div class="s-actions">
+                {if $tab == 'field'}
+                <div class="dropdown-ul">
+                    <a href="#/show/dropdownUl/" class="js-action">
+                        <span class="s-name">{if $condition.action == 'show'}[`show`]{else}[`hide`]{/if}</span>
+                        <span class="arrow"><i class="icon16 darr"></i></span>
+                        <input type="hidden" name='condition[{if !$is_template}p{/if}{$condition.sort}][action]'{if $is_template} disabled{else} value="{$condition.action}"{/if}/>
+                    </a>
+                    <ul>
+                        <li{if $condition.action == 'show'} class="selected"{/if}>
+                            <a href="#/select/dropdownItem/" data-value="show" class="js-action">[`show`]</a>
+                        </li>
+                        <li{if !$condition.action == 'hide'} class="selected"{/if}>
+                            <a href="#/select/dropdownItem/" data-value="hide" class="js-action">[`hide`]</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown-ul">
+                    <a href="#/show/dropdownUl/" class="js-action">
+                        <span class="s-name" title="{$target.title|escape}">{$target.title|escape}&nbsp;<b>{$target.type}</b></span>
+                        <span class="arrow"><i class="icon16 darr"></i></span>
+                        <input type="hidden" name='condition[{if !$is_template}p{/if}{$condition.sort}][target]'{if $is_template} disabled{else} value='{$target.id}'{/if}/>
+                    </a>
+                    <ul>
+                        {foreach $fields as $f}
+                            {if !$f.hidden}
+                                <li{if $target.id == $f.id} class='selected'{/if}>
+                                    <a data-value="{$f.id}" href="#/select/dropdownItem/" class="js-action">{$f.title|escape}&nbsp;<b>{$f.type}</b></a>
+                                </li>
+                            {/if}
+                        {/foreach}
+                    </ul>
+                </div>
+                {else}
+                    <div class="field cloud-style with-tabs white-blue no-tab">
+                        <div class="name{if $condition.action !== 'message'} inactive{/if}">
+                            <input onclick='$(this).next().click()' id='condition-message-tab' type="radio"{if $condition.action == 'message'} checked{/if}{if $is_template} disabled{/if} name='condition[{if !$is_template}p{/if}{$condition.sort}][action]' value='message' />
+                            <a href="#/change/CloudTab/" class="js-action" data-tab="message"><label for='condition-message-tab'>[`Show message`]</label></a>
+                        </div>
+                        <div class="name{if $condition.action !== 'redirect'} inactive{/if}">
+                            <input onclick='$(this).next().click()' id='condition-redirect-tab' type="radio"{if $condition.action == 'redirect'} checked{/if}{if $is_template} disabled{/if} name='condition[{if !$is_template}p{/if}{$condition.sort}][action]' value='redirect' />
+                            <a href="#/change/CloudTab/" class="js-action" data-tab="redirect"><label for='condition-redirect-tab'>[`Redirect`]</label></a>
+                        </div>
+                        <div class="name{if $condition.action !== 'email'} inactive{/if}">
+                            <input onclick='$(this).next().click()' id='condition-email-tab' type="radio"{if $condition.action == 'email'} checked{/if}{if $is_template} disabled{/if} name='condition[{if !$is_template}p{/if}{$condition.sort}][action]' value='email' />
+                            <a href="#/change/CloudTab/" class="js-action" data-tab="email"><label for='condition-email-tab'>[`Send email`]</label></a>
+                        </div>
+                        <div class="value">
+                            <div class="s-message-tab f-tab" data-tab='message' style='display:{if $condition.action == 'message'}block{else}none{/if}'>
+                                <textarea name="condition[{if !$is_template}p{/if}{$condition.sort}][target]"{if $is_template || $condition.action !== 'message'} disabled{/if} class="{if !$is_template}redactor-editor{else}init-redactor{/if}">{if $condition.action == 'message' && $condition.target}{$condition.target|escape}{/if}</textarea>
+                                <div class="margin-block">[`You can use <a href='#/get/templateVars/' class='js-action' title='template vars'>template vars</a>`]</div>
+                            </div>
+                            <div class="s-redirect-tab f-tab" data-tab='redirect' style='display:{if $condition.action == 'redirect'}block{else}none{/if}'>
+                                <input type="text" style='width: 90%;'{if $is_template || $condition.action !== 'redirect'} disabled{/if} name='condition[{if !$is_template}p{/if}{$condition.sort}][target]' placeholder="http://yourwebsite.com" value='{if !empty($condition.target) && $condition.action == 'redirect'}{$condition.target|escape}{else}http://{/if}' />
+                                <div class="margin-block">[`Specify website you would like user to redirect after successfully submitted form`]</div>
+                                <div class="margin-block">[`You can use <a href='#/get/templateVars/' class='js-action' title='template vars'>template vars</a>`]</div>
+                            </div>
+                            <div class="s-email-tab f-tab" data-tab='email' style='display:{if $condition.action == 'email'}block{else}none{/if}'>
+                                <div class="margin-block">
+                                    <textarea name="condition[{if !$is_template}p{/if}{$condition.sort}][target][email_message]"{if $is_template || $condition.action !== 'email'} disabled{/if} class="{if !$is_template}redactor-editor{else}init-redactor{/if}">{if !empty($condition.target.email_message) && $condition.action == 'email'}{$condition.target.email_message|escape}{/if}</textarea>
+                                    <div class="info-text">[`You can use <a href='#/get/templateVars/' class='js-action' title='template vars'>template vars</a>`]</div>
+                                </div>
+                                <div class="margin-block">
+                                    [`Send to`]
+                                    <input type="text" style='width: 90%;' name="condition[{if !$is_template}p{/if}{$condition.sort}][target][email_list]"{if $is_template || $condition.action !== 'email'} disabled{elseif !empty($condition.target.email_list) && $condition.action == 'email'} value='{$condition.target.email_list|escape}'{/if} />
+                                    <div class="margin-block">[`Use commas to separate emails`]</div>
+                                    <div class="margin-block">[`You can use <a href='#/get/templateVars/' class='js-action' title='template vars'>template vars</a>`]</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {/if}
+            </div>
+        </div>
+        {/foreach}
+{/function}
+
+<div class="block conditions-tab">
+    <form action="?module=form&action=conditionsSave" method="post" id="s-form-conditions-save" class="submit-fixed">
+        <div class="fields">
+            {if $fields}
+            <div class="field">
+                <div class="name">[`Enable conditions`]</div>
+                <div class="value no-shift s-ibutton-checkbox">
+                    <ul class="menu-h">
+                        <li><span class="gray" id="s-condition-off-label">[`Off`]</span></li>
+                        <li>
+                            <input type="checkbox" id="s-condition-status" name="status" value="1"{if !empty($enable)} checked{/if} />
+                        </li>
+                        <li><span id="s-condition-on-label">[`On`]</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="field cloud-style with-tabs">
+                {if !isset($conditions['field'])}{$conditions_field = []}{else}{$conditions_field = $conditions['field']}{/if}
+                {if !isset($conditions['form'])}{$conditions_form = []}{else}{$conditions_form = $conditions['form']}{/if}
+                <div class="name"><a href="#/change/CloudTab/" class="js-action s-field-tab-name" data-tab="field">[`Field conditions`]{if $conditions_field} ({$conditions_field|count}){/if}</a></div>
+                <div class="name inactive"><a href="#/change/CloudTab/" class="js-action s-form-tab-name" data-tab="form">[`Form conditions`]{if $conditions_form} ({$conditions_form|count}){/if}</a></div>
+                <div class="value condition-tabs">
+                    <div class="s-field-tab f-tab" data-tab='field'>
+                        <div class="margin-block align-center"><p>[`Show or hide fields`]</p></div>
+                        <p class='align-center'{if !empty($conditions_field)} style='display: none'{/if}>[`You don't have any conditions`]</p>
+                        {$conditions_field['template'] = ['action' => 'show', 'target' => 0, 'andor'=> 1, 'sort' => 'newID', 'params' => [0 => ['source' => 0, 'source_ext' => 0, 'operator' => '0', 'value' => '']]]}
+
+                        {build_condition conditions=$conditions_field tab="field"}
+
+                        <div class="s-new-condition">
+                            <a href="#/add/condition/" title="[`Add new condition`]" class="js-action"><span class="s-button-1">+</span> [`Add new condition`]</a>
+                        </div>
+                        <input type="hidden" value="field" name="tab" />
+                        <input type="hidden" value="{$id}" name="id" />
+                    </div>
+                    <div class="s-form-tab f-tab" data-tab='form' style="display: none">
+                        <div class="margin-block align-center"><p>[`After the form is submitted`]</p></div>
+                        <p class='align-center'{if !empty($conditions_form)} style='display: none'{/if}>[`You don't have any conditions`]</p>
+                        {$conditions_form['template'] = ['action' => 'message', 'target' => '', 'andor'=> 1, 'sort' => 'newID', 'params' => [0 => ['source' => 0, 'source_ext' => 0, 'operator' => '0', 'value' => '']]]}
+
+                        {build_condition conditions=$conditions_form tab="form"}
+
+                        <div class="s-new-condition">
+                            <a href="#/add/condition/" title="[`Add new condition`]" class="js-action"><span class="s-button-1">+</span> [`Add new condition`]</a>
+                        </div>
+                        <input type="hidden" value="form" name="tab" />
+                        <input type="hidden" value="{$id}" name="id" />
+                    </div>
+                </div>
+            </div>
+            {else}
+            <div class="field">
+                [`You don't have any acceptable fields. First of all <a href='?module=form&action=edit&id={$id}'><i class='icon16 add'></i> create them</a>`]
+            </div>
+            {/if}
+            <div class="field submit-block">
+
+                <input type="submit" value="[`Save`]" class="button green" />
+                <div class="errormsg"></div>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    $(function () {
+        $.form_conditions.initPageConditions();
+    });
+</script>

@@ -1,0 +1,885 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst MyLang 2.7.4 UA translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-04-12T16:12:04+03:00\n"
+"PO-Revision-Date: 2020-11-07 08:20+0300\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "Sign up"
+msgstr "Реєстрація"
+
+msgid "You have custom fields names available only for 1 language:"
+msgstr "У вас є користувальницькі поля імен, які доступні тільки для 1 мови:"
+
+msgid "Use default"
+msgstr "Використовувати за замовчування"
+
+msgid "Names will be changed to use system translations."
+msgstr "Назви буде змінено, аби використовувати системні переклади."
+
+msgid "You have default auth settings and all fields use system translations."
+msgstr "Ви використовуєте стандартні налаштування авторизації і усі поля використовують системний переклад."
+
+msgid "Themes"
+msgstr "Теми дизайну"
+
+msgid "Loading..."
+msgstr "Завантаження..."
+
+msgid "Store settings"
+msgstr "Налаштування магазину"
+
+msgid "Search scope"
+msgstr "Область пошуку"
+
+msgid "Use full text search."
+msgstr "Використовувати повнотекстовий пошук."
+
+msgid "By default search is using translated strings. Check option to use full text search."
+msgstr "За замовчуванням пошук здійснюється з допомогою перекладу рядка. Відмітьте опцію, аби використовувати повнотекстовий пошук."
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "Tags"
+msgstr "Теги"
+
+msgid "Tag name"
+msgstr "Назва тегу"
+
+msgid "Saved"
+msgstr "Збережено"
+
+msgid "Autotranslate"
+msgstr "Автопереклад"
+
+msgid "Cache files"
+msgstr "Файли кешу"
+
+msgid "Source language"
+msgstr "Мова джерела"
+
+msgid "Target language"
+msgstr "Цільова мова"
+
+msgid "Providers"
+msgstr "Провайдери"
+
+msgid "No API key"
+msgstr "Немає API-ключа"
+
+msgid "Replace old data"
+msgstr "Замінити старі дані"
+
+msgid "Replace old data with new"
+msgstr "Замінити старі дані новими"
+
+msgid "All selected fields will be overwritten with new translations data."
+msgstr "Усі обрані поля буде замінено новими даними перекладу."
+
+msgid "Items to translate"
+msgstr "Що підлягає перекладу"
+
+msgid "Categories"
+msgstr "Категорії"
+
+msgid "not translated"
+msgstr "не перекладено"
+
+msgid "Name"
+msgstr "Назва"
+
+msgid "Description"
+msgstr "Опис"
+
+msgid "Products"
+msgstr "Продукти"
+
+msgid "Summary"
+msgstr "Короткий опис"
+
+msgid "Start"
+msgstr "Почати"
+
+msgid "Source and target language should be different."
+msgstr "Вихідна і цільова мова мають відрізнятися."
+
+msgid "Check at least 1 field to translate."
+msgstr "Оберіть як мінімум 1 поле для перекладу."
+
+msgid "Stocks list is empty. Add <a href=\"{$wa_backend_url}shop/?action=settings#/stock/\">new stock</a> to translate it."
+msgstr "Перелік складів порожній. Додайте <a href=\"{$wa_backend_url}shop/?action=settings#/stock/\">новий склад</a>, аби перевести його."
+
+msgid "Stocks"
+msgstr "Склади"
+
+msgid "Stock name"
+msgstr "Назва складу"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Theme has no text fields to translate."
+msgstr "У темі немає текстових полів для перекладу."
+
+msgid "Theme field"
+msgstr "Поле «Тема»"
+
+msgid "Value"
+msgstr "Значення"
+
+msgid "Theme name"
+msgstr "Назва теми дизайну"
+
+msgid "Theme ID"
+msgstr "Ідентифікатор теми"
+
+msgid "Error"
+msgstr "Помилка"
+
+msgid "Services list is empty. Add <a href=\"{$wa_backend_url}shop/?action=products#/services/\">new</a> to translate it."
+msgstr "Список послуг порожній. Додайте <a href=\"{$wa_backend_url}shop/?action=products#/services/\">нові</a>, аби перекласти їх."
+
+msgid "Services"
+msgstr "Послуги"
+
+msgid "Service name"
+msgstr "Назва послуги"
+
+msgid "Service"
+msgstr "Послуга"
+
+msgid "Noname"
+msgstr "Немає назви"
+
+msgid "Features"
+msgstr "Характеристики"
+
+msgid "Checkout"
+msgstr "Оформлення замовлення"
+
+msgid "Order states"
+msgstr "Статуси замовлень"
+
+msgid "Promos"
+msgstr "Промо"
+
+msgid "Export"
+msgstr "Експорт"
+
+msgid "Settings"
+msgstr "Налаштування"
+
+msgid "Translate empty"
+msgstr "Перекласти порожні"
+
+msgid "Yandex Translate"
+msgstr "Яндекс.Переклад"
+
+msgid "Google Translate"
+msgstr "Google Translate"
+
+msgid "Microsoft Translate"
+msgstr "Microsoft Translate"
+
+msgid "Promos list is empty. Add <a href=\"{$wa_backend_url}shop/?action=products#/promos/\">new</a> to translate it."
+msgstr "Список промо порожній. Додайте <a href=\"{$wa_backend_url}shop/?action=products#/promos/\">нові</a>, аби перекласти їх."
+
+msgid "Promo title"
+msgstr "Назва промо"
+
+msgid "Promo"
+msgstr "Промо"
+
+msgid "Promo text"
+msgstr "Текст промо"
+
+msgid "Set default"
+msgstr "За замовчуванням"
+
+msgid "Order state"
+msgstr "Статус замовлення"
+
+msgid "You have custom steps names available only for 1 language:"
+msgstr "У вас є власні назви статусів, що доступні тільки для 1 мови:"
+
+msgid "You have default checkout settings and all fields use system translations."
+msgstr "Ви використовуєте стандартні налаштування оформлення замовлення і усі поля використовують системний переклад."
+
+msgid "Feature name"
+msgstr "Назва характеристики"
+
+msgid "Save the main value beforehand, to translate it."
+msgstr "Аби перевести головне значення, спочатку збережіть його."
+
+msgid "Select locale"
+msgstr "Оберіть мову"
+
+msgid "Select items"
+msgstr "Оберіть елементи"
+
+msgid "Add"
+msgstr "Додати"
+
+msgid "Import"
+msgstr "Імпорт"
+
+msgid "Search"
+msgstr "Пошук"
+
+msgid "Reload file"
+msgstr "Перезавантажити файл"
+
+msgid "Actions"
+msgstr "Дії"
+
+msgid "prev"
+msgstr "назад"
+
+msgid "next"
+msgstr "далі"
+
+msgid "PO-file for locale - "
+msgstr "PO-файл для локалі — "
+
+msgid "App doesn't support additional locales."
+msgstr "Додаток не підтримує додаткові локалі."
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "File to upload should have *.po extension and been created with poedit or other tools."
+msgstr "Завантажуваний файл повинен мати розширення *.po і має бути створений за допомогою POEdit або інших інструментів."
+
+msgid "Select locale to upload"
+msgstr "Оберіть локаль для завантаження"
+
+msgid "Upload"
+msgstr "Завантажити"
+
+msgid "or"
+msgstr "або"
+
+msgid "Scan new"
+msgstr "Сканування нових"
+
+msgid "Scan product to get new strings to translate for all locales."
+msgstr "Сканувати продукт, аби отримати нові рядки перекладу для всіх мов."
+
+msgid "Clean hash strings"
+msgstr "Очистити хеш рядків"
+
+msgid "Repair file for md5-hash keys."
+msgstr "Відновити файл для хеш-ключів MD5."
+
+msgid "Unescape keys"
+msgstr "Ключі unescape"
+
+msgid "Repair keys."
+msgstr "Відновити ключі."
+
+msgid "Completed"
+msgstr "Завершено"
+
+msgid "Add custom text"
+msgstr "Додати довільний текст"
+
+msgid "Plural forms"
+msgstr "Множинні форми"
+
+msgid "Original text"
+msgstr "Оригінальний текст"
+
+msgid "Key text"
+msgstr "Текст ключа"
+
+msgid "Key text plural"
+msgstr "Текст ключа множини"
+
+msgid "ID string"
+msgstr "ID рядка"
+
+msgid "plural"
+msgstr "множина"
+
+msgid "Usage:"
+msgstr "Використання:"
+
+msgid "[&#96;Key text&#96;] or {_w('Key text')} for apps"
+msgstr "[&#96;Key text&#96;] або {_w(&#39;Key text&#39;)} для додатків"
+
+msgid "Plural form"
+msgstr "Форма множини"
+
+msgid "Delete string?"
+msgstr "Видалити рядок?"
+
+msgid "System keys"
+msgstr "Системні ключі"
+
+msgid "Api error. Check the token key and quota."
+msgstr "Помилка API. Перевірте ключ-токен і квоти."
+
+msgid "Widgets"
+msgstr "Віджети"
+
+msgid "Payment"
+msgstr "Оплата"
+
+msgid "Shipping"
+msgstr "Доставка"
+
+msgid "Contact fields"
+msgstr "Поля контактів"
+
+msgid "Delete locale"
+msgstr "Видалити локаль"
+
+msgid "Edit locale"
+msgstr "Редагувати локаль"
+
+msgid "Currency"
+msgstr "Валюта"
+
+msgid "Original"
+msgstr "Оригінал"
+
+msgid "Name:"
+msgstr "Ім&#39;я:"
+
+msgid "Region:"
+msgstr "Регіон:"
+
+msgid "English"
+msgstr "Англійська"
+
+msgid "Thousands separator"
+msgstr "Роздільник тисяч"
+
+msgid "Usually space or comma"
+msgstr "Зазвичай пробіл або кома"
+
+msgid "Decimal point"
+msgstr "Десяткова крапка"
+
+msgid "Usually full stop or comma"
+msgstr "Зазвичай крапка або кома"
+
+msgid "Fractional digits"
+msgstr "Десяткові цифри"
+
+msgid "First day of week"
+msgstr "Перший день тижня"
+
+msgid "This locale is not installed on the server."
+msgstr "Локаль не встановлено на сервері."
+
+msgid "Some transalted strings may display incorrect."
+msgstr "Деякі перекладені рядки можуть відображатися некоректно."
+
+msgid "Update"
+msgstr "Оновити"
+
+msgid "close"
+msgstr "закрити"
+
+msgid "All data with locale %s will be cleared. Are you sure?"
+msgstr "Усі дані локалі %s буде очищено. Ви впевнені?"
+
+msgid "Selector settings"
+msgstr "Налаштування селектора"
+
+msgid "Redirects"
+msgstr "Перенаправлення"
+
+msgid "New rule"
+msgstr "Нове правило"
+
+msgid "Remove"
+msgstr "Видалити"
+
+msgid "Available selectors"
+msgstr "Доступні селектори"
+
+msgid "Customize Your Shopping Experience!"
+msgstr "Налаштуйте почуття від магазину!"
+
+msgid "Please select the destination country, language, and currency you prefer."
+msgstr "Оберіть, будь ласка, країну призначення, мову і валюту, яким ви надаєте перевагу."
+
+msgid "Select the Destination"
+msgstr "Оберіть місце призначення"
+
+msgid "Select Your Language"
+msgstr "Оберіть вашу мову"
+
+msgid "Select Your Currency"
+msgstr "Оберіть вашу валюту"
+
+msgid "Available Shipping Methods"
+msgstr "Доступні способи доставки"
+
+msgid "Available Payment Methods"
+msgstr "Доступні способи оплати"
+
+msgid "Save Preferences"
+msgstr "Зберегти налаштування"
+
+msgid "Change language"
+msgstr "Змінити мову"
+
+msgid "General settings"
+msgstr "Загальні налаштування"
+
+msgid "Selector"
+msgstr "Селектор"
+
+msgid "Domains"
+msgstr "Домени"
+
+msgid "Available locales"
+msgstr "Список доступних локалей"
+
+msgid "Select additional locales"
+msgstr "Обрати додаткові локалі"
+
+msgid "Add new locale"
+msgstr "Додати нову локаль"
+
+msgid "Fix locales"
+msgstr "Відремонтувати локалі"
+
+msgid "Done"
+msgstr "Готово"
+
+msgid "Main language"
+msgstr "Основна мова"
+
+msgid "Yandex API key"
+msgstr "Ключ API Яндекс"
+
+msgid "https://tech.yandex.com/translate/"
+msgstr "https://tech.yandex.ru/translate/"
+
+msgid "Free < 10 millions chars per month. More info..."
+msgstr "Безкоштовно — до 10 мільйонів символів в місяць. Детальніше..."
+
+msgid "Google API key"
+msgstr "Ключ API Google"
+
+msgid "Free trial. More info..."
+msgstr "Безкоштовна пробна версія. Детальніше..."
+
+msgid "Microsoft API key"
+msgstr "Ключ Microsoft API"
+
+msgid "Select main provider"
+msgstr "Виберіть основного постачальника"
+
+msgid "Integrate with Menu app"
+msgstr "Інтеграція із додатком «Меню»"
+
+msgid "Translate menu items"
+msgstr "Перекласти пункти меню"
+
+msgid "New locale"
+msgstr "Нова локаль"
+
+msgid "Locale"
+msgstr "Локаль"
+
+msgid "Empty value"
+msgstr "Порожнє значення"
+
+msgid "Plugins"
+msgstr "Плагіни"
+
+msgid "All"
+msgstr "Усі"
+
+msgid "Translate"
+msgstr "Переклад"
+
+msgid "Everyone"
+msgstr "Усі"
+
+msgid "Locale is not selected."
+msgstr "Локаль не обрано."
+
+msgid "File is not selected."
+msgstr "Файл не обрано."
+
+msgid "None"
+msgstr "Немає"
+
+msgid "File could not be saved due to the insufficient file write permissions for the \"%s\" folder."
+msgstr "Файл не вдалося зберегти через недостатні права запису до папки «%s»."
+
+msgid "Translate process is finished."
+msgstr "Процес перекладу закінчено."
+
+msgid "Product name"
+msgstr "Назва продукту"
+
+msgid "SKU name"
+msgstr "Назва артикулу"
+
+msgid "SKU code"
+msgstr "Код артикулу"
+
+msgid "Price"
+msgstr "Ціна"
+
+msgid "Storefront link"
+msgstr "Посилання на вітрину"
+
+msgid "Access denied"
+msgstr "Доступ заборонено"
+
+msgid "Language is empty."
+msgstr "Мову не заповнено."
+
+msgid "Empty provider."
+msgstr "Порожній постачальник."
+
+msgid "Select currency"
+msgstr "Оберіть валюту"
+
+msgid "Input data error"
+msgstr "Помилка у вхідних даних"
+
+msgid "Input file error"
+msgstr "Помилка у вхідному файлі"
+
+msgid "Input file content error"
+msgstr "Помилка у вмісті вхідного файлу"
+
+msgid "Previous file content error"
+msgstr "Помилка у вмісті попереднього вхідного файлу"
+
+msgid "File not found."
+msgstr "Файл не знайдено."
+
+msgid "Empty filename."
+msgstr "Назва файлу порожня."
+
+msgid "Request strings error"
+msgstr "Помилка запиту рядків"
+
+msgid "Custom strings"
+msgstr "Користувальницькі рядки"
+
+msgid "Unknown provider"
+msgstr "Невідомий провайдер"
+
+msgid "Invalid API key"
+msgstr "Невірний ключ API"
+
+msgid "Blocked API key"
+msgstr "Ключ API заблоковано"
+
+msgid "Exceeded the daily limit on the amount of translated text"
+msgstr "Перевищено добовий ліміт на обсяг перекладеного тексту"
+
+msgid "Exceeded the maximum text size"
+msgstr "Перевищено максимальний розмір тексту"
+
+msgid "The text cannot be translated"
+msgstr "Текст не може бути перекладено"
+
+msgid "The specified translation direction is not supported"
+msgstr "Зазначений напрямок перекладу не підтримується"
+
+msgid "Unknown error. See logs."
+msgstr "Невідома помилка. Перегляньте логи."
+
+msgid "Theme %s not found"
+msgstr "Тему дизайна %s не знайдено"
+
+msgid "Duplicate theme failed"
+msgstr "Дублювати тему не вдалося"
+
+msgid "Missed theme file(s): %s"
+msgstr "Не вистачає файлів теми дизайну: %s"
+
+msgid "Invalid theme slug"
+msgstr "Помилковий ідентифікатор теми"
+
+msgid "Brush custom theme not available"
+msgstr "Тема дизайну Brush custom недоступна"
+
+msgid "Theme “%s” is for app “%s”, which is not installed in your Webasyst. Install the app, and upload theme once again."
+msgstr "Тема дизайну “%s” призначена для додатку %s, який не встановлено у вашому Webasyst. Встановіть додаток та завантажте тему повторно."
+
+msgid "http://www.webasyst.com/framework/docs/site/themes/#%s"
+msgstr "http://www.webasyst.com/framework/docs/site/themes/#%s"
+
+msgid "Invalid theme archive structure (%s). <a href=\"%s\" target=\"_blank\">See help</a> for details"
+msgstr "Невірна структура архіву з темою дизайну (%s). <a href=\"%s\" target=\"_blank\">Дивіться довідку</a> аби дізнатись більше"
+
+msgid "Failed to extract files from theme archive (%s). <a href=\"%s\" target=\"_blank\">See help</a> for details"
+msgstr "Не вдалося витягти файли з архіву теми дизайну (%s). <a href=\"%s\" target=\"_blank\">Дивіться довідку</a> аби дізнатися більше"
+
+msgid "Editor"
+msgstr "Редактор"
+
+msgid "Select locale to edit"
+msgstr "Оберіть локаль для редагування"
+
+msgid "Compile"
+msgstr "Компілювати"
+
+msgid "Translate empty(Yandex)"
+msgstr "Перекласти порожні (Яндекс)"
+
+msgid "Generate mo-file containing all translated strings."
+msgstr "Створити МО-файл, що містить усі перекладені рядки."
+
+msgid "Generate"
+msgstr "Створити"
+
+msgid "Rollback to first original mo-file. May contain partial translation."
+msgstr "Повернутися до першого оригінального MO-файлу. Може містити частковий переклад."
+
+msgid "Rollback"
+msgstr "Відкат"
+
+msgid "Choose strings locale"
+msgstr "Оберіть рядки локалі"
+
+msgid "change"
+msgstr "змінити"
+
+msgid "Delete"
+msgstr "Видалити"
+
+msgid "You can translate tags in"
+msgstr "Теги можна перекласти у"
+
+msgid "Mylang app"
+msgstr "Додаток Mylang"
+
+msgid "MO-file restored"
+msgstr "МО-файл відновлено"
+
+msgid "No backup MO-file"
+msgstr "Немає резервного MO-файлу"
+
+msgid "Thousands sep"
+msgstr "Роздільник тисяч"
+
+msgid "State"
+msgstr "Держава"
+
+msgid "MyLang version"
+msgstr "Версія MyLang"
+
+msgid "Plugin settings page"
+msgstr "Сторінка налаштувань плагіну"
+
+msgid "Language packs"
+msgstr "Мовні пакети"
+
+msgid "Version"
+msgstr "Версія"
+
+msgid "Language"
+msgstr "Мова"
+
+msgid "There are no language packs installed."
+msgstr "Не встановлено жодного мовного пакету."
+
+msgid "Install new plugins from the Webasyst Store using the Installer app"
+msgstr "Встановіть нові плагіни з магазину Webasyst за допомогою додатку «Інсталлер»"
+
+msgid "Language pack"
+msgstr "Мовний пакет"
+
+msgid "For developers"
+msgstr "Для розробників"
+
+msgid "Your current version is"
+msgstr "Ваша поточна версія"
+
+msgid "Install"
+msgstr "Встановити"
+
+msgid "Show other plugins"
+msgstr "Показати інші плагіни"
+
+msgid "Select locale to generate export files:"
+msgstr "Оберіть локаль для генерації файлів експорту:"
+
+msgid "By default langpack will replace all supported:"
+msgstr "За замовчуванням мовний пакет замінить усі підтримувані:"
+
+msgid "Only missing"
+msgstr "Тільки відсутні"
+
+msgid "Create data for langpack"
+msgstr "Створити дані для мовного пакету"
+
+msgid "Create pack"
+msgstr "Створити пакет"
+
+msgid "Install langpack"
+msgstr "Встановити мовний пакет"
+
+msgid "%d app"
+msgid_plural "%d apps"
+msgstr[0] "%d додаток"
+msgstr[1] "%d додатки"
+msgstr[2] "%d додатків"
+
+msgid "%d plugin"
+msgid_plural "%d plugins"
+msgstr[0] "%d плагін"
+msgstr[1] "%d плагіни"
+msgstr[2] "%d плагінів"
+
+msgid "%d widget"
+msgid_plural "%d widgets"
+msgstr[0] "%d віджет"
+msgstr[1] "%d віджети"
+msgstr[2] "%d віджетів"
+
+msgid "Download"
+msgstr "Скачати"
+
+msgid "Files added:"
+msgstr "Додані файли:"
+
+msgid "Cancel"
+msgstr "Скасувати"
+
+msgid "Maintenance"
+msgstr "Обслуговування"
+
+msgid "Tables"
+msgstr "Таблиці"
+
+msgid "Optimize"
+msgstr "Оптимізувати"
+
+msgid "All tables are optimized."
+msgstr "Оптимізовано усі таблиці."
+
+msgid "Clean data"
+msgstr "Очистити дані"
+
+msgid "Autotranslate cache files"
+msgstr "Автоматичний переклад файлів кешу"
+
+msgid "No files"
+msgstr "Немає файлів"
+
+msgid "Localized data"
+msgstr "Локалізовані дані"
+
+msgid "Shop"
+msgstr "Магазин"
+
+msgid "Values"
+msgstr "Значення"
+
+msgid "Category"
+msgstr "Категорія"
+
+msgid "Site"
+msgstr "Сайт"
+
+msgid "Blog"
+msgstr "Блог"
+
+msgid "Photos"
+msgstr "Фотографії"
+
+msgid "Albums"
+msgstr "Альбоми"
+
+msgid "Photo"
+msgstr "Фото"
+
+msgid "Themes data is removed from datatbase, not from theme files."
+msgstr "Дані тем видалено з бази даних, а не з файлів теми."
+
+msgid "Clear"
+msgstr "Очистити"
+
+msgid "%d entry"
+msgid_plural "%d entries"
+msgstr[0] "%d запис"
+msgstr[1] "%d записи"
+msgstr[2] "%d записів"
+
+msgid "Clear selected data?"
+msgstr "Очистити виділені дані?"
+
+msgid "Reviews filter"
+msgstr "Фільтр відгуків"
+
+msgid "Disable reviews filter."
+msgstr "Вимкнути фільтр відгуків."
+
+msgid "By default reviews are filtered by locale."
+msgstr "За умовчанням відгуки фільтруються за локаллю."
+
+msgid "No table name"
+msgstr "Відсутня назва таблиці"
+
+msgid "Database error"
+msgstr "Помилка бази даних"
+
+msgid "No filename"
+msgstr "Назва файлу порожня"
+
+msgid "No data"
+msgstr "Немає даних"
+
+msgid "B,KB,MB,GB"
+msgstr "Б,КБ,МБ,ГБ"
+
+msgid "There are no translate plugins installed."
+msgstr "Плагіни локалізації не встановлено."
+
+msgid "Meta title"
+msgstr "Meta title"
+
+msgid "Meta keywords"
+msgstr "Meta keywords"
+
+msgid "Meta description"
+msgstr "Meta description"
+
+msgid "added a product"
+msgstr "додав товар"
+
+msgid "String"
+msgstr "Рядок"
+
+msgid "No translate plugins"
+msgstr "Плагіни локалізації не встановлено"
+
+msgid ""
+"Install new plugins from the\n"
+"                        Webasyst Store using the Installer app"
+msgstr ""
+"Встановіть нові плагіни з \n"
+"                        магазину Webasyst за допомогою додатку «Інсталлер»"
+
+msgid "No translation plugin."
+msgstr "Немає плагіну перекладу."
+
+msgid "Skip N products"
+msgstr "Пропустити N товарів"
+
+msgid "Skip N products from the start"
+msgstr "Пропустити N товарів від початку"

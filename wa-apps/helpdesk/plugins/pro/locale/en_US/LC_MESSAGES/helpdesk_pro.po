@@ -1,0 +1,627 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: helpdesk/plugins/pro\n"
+"POT-Creation-Date: 2018-01-17 23:54+0400\n"
+"PO-Revision-Date: \n"
+"Last-Translator: helpdesk/plugins/pro\n"
+"Language-Team: helpdesk/plugins/pro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: en_US\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Contact fields constructor"
+msgstr ""
+
+msgid "Choose additional contact fields, which will be displayed on request page. Inside each field you can edit the appearance and select the place of output."
+msgstr ""
+
+msgid "before name"
+msgstr ""
+
+msgid "after name"
+msgstr ""
+
+msgid "before tabs"
+msgstr ""
+
+msgid "after tabs"
+msgstr ""
+
+msgid "bottom"
+msgstr ""
+
+msgid "after request ID"
+msgstr ""
+
+msgid "Cloud website"
+msgstr ""
+
+msgid "Licenses not found"
+msgstr ""
+
+msgid "Product"
+msgstr ""
+
+msgid "Create datetime"
+msgstr ""
+
+msgid "Install datetime"
+msgstr ""
+
+msgid "Order number"
+msgstr ""
+
+msgid "Leasing"
+msgstr ""
+
+msgid "Promo code"
+msgstr ""
+
+msgid "Partners sale"
+msgstr ""
+
+msgid "Repeat buy"
+msgstr ""
+
+msgid "Special offer"
+msgstr ""
+
+msgid "shipped"
+msgstr ""
+
+msgid "refunded"
+msgstr ""
+
+msgid "paid"
+msgstr ""
+
+msgid "new"
+msgstr ""
+
+msgid "processing"
+msgstr ""
+
+msgid "Order"
+msgstr ""
+
+msgid "Discounts"
+msgstr ""
+
+msgid "Transactions"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Amount"
+msgstr ""
+
+msgid "Comment"
+msgstr ""
+
+msgid "Licenses"
+msgstr ""
+
+msgid "Domain"
+msgstr ""
+
+msgid "Install date"
+msgstr ""
+
+msgid "Output places"
+msgstr ""
+
+msgid "Before contact name"
+msgstr ""
+
+msgid "After contact name"
+msgstr ""
+
+msgid "Before contact tabs"
+msgstr ""
+
+msgid "After contact tabs"
+msgstr ""
+
+msgid "At the bottom of contact profile"
+msgstr ""
+
+msgid "After request ID"
+msgstr ""
+
+msgid "Field name"
+msgstr ""
+
+msgid "Show"
+msgstr ""
+
+msgid "change color"
+msgstr ""
+
+msgid "Your own name of the field"
+msgstr ""
+
+msgid "Font"
+msgstr ""
+
+msgid "Font family"
+msgstr ""
+
+msgid "Font size"
+msgstr ""
+
+msgid "Normal"
+msgstr ""
+
+msgid "Bold"
+msgstr ""
+
+msgid "Italic"
+msgstr ""
+
+msgid "Bold/Italic"
+msgstr ""
+
+msgid "Font style"
+msgstr ""
+
+msgid "Background"
+msgstr ""
+
+msgid "Border"
+msgstr ""
+
+msgid "Border size"
+msgstr ""
+
+msgid "Solid"
+msgstr ""
+
+msgid "Dotted"
+msgstr ""
+
+msgid "Dashed"
+msgstr ""
+
+msgid "Double"
+msgstr ""
+
+msgid "Border style"
+msgstr ""
+
+msgid "Border radius"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "or"
+msgstr ""
+
+msgid "cancel"
+msgstr ""
+
+msgid "Field not found"
+msgstr ""
+
+msgid "Developer products"
+msgstr ""
+
+msgid "Product name"
+msgstr ""
+
+msgid "Product slug"
+msgstr ""
+
+msgid "delete"
+msgstr ""
+
+msgid "add product"
+msgstr ""
+
+msgid "load products by API"
+msgstr ""
+
+msgid "Developer settings"
+msgstr ""
+
+msgid "List of products"
+msgstr ""
+
+msgid "Domain check"
+msgstr ""
+
+msgid "Specify domain"
+msgstr ""
+
+msgid "Specify developer ID and add your products on settings page"
+msgstr ""
+
+msgid "Start checking"
+msgstr ""
+
+msgid "New request"
+msgstr ""
+
+msgid "Phone"
+msgstr ""
+
+msgid "Subject"
+msgstr ""
+
+msgid "Attach"
+msgstr ""
+
+msgid "Add current attachments"
+msgstr ""
+
+msgid "Assign to"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Status of current request"
+msgstr ""
+
+msgid "Cannot get message information"
+msgstr ""
+
+msgid "Create new request"
+msgstr ""
+
+msgid "remove"
+msgstr ""
+
+msgid "Check order number"
+msgstr ""
+
+msgid "Specify order number (only digits)"
+msgstr ""
+
+msgid "Helpdesk PRO settings"
+msgstr ""
+
+msgid "Show developer settings"
+msgstr ""
+
+msgid "I am Webasyst developer"
+msgstr ""
+
+msgid "Spam"
+msgstr ""
+
+msgid "A list of email addresses, new requests from which will be deleted."
+msgstr ""
+
+msgid "Email address"
+msgstr ""
+
+msgid "add spam email"
+msgstr ""
+
+msgid "Write to email"
+msgstr ""
+
+msgid "delete from spam"
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
+
+msgid "Email is in spam. Do you really want to create request?"
+msgstr ""
+
+msgid "Spam email"
+msgstr ""
+
+msgid "Continue"
+msgstr ""
+
+msgid "Applications"
+msgstr ""
+
+msgid "Something wrong"
+msgstr ""
+
+msgid "Fill in required fields"
+msgstr ""
+
+msgid "image &#123;current&#125; of &#123;total&#125;"
+msgstr ""
+
+msgid "previous"
+msgstr ""
+
+msgid "next"
+msgstr ""
+
+msgid "close"
+msgstr ""
+
+msgid "This content failed to load."
+msgstr ""
+
+msgid "This image failed to load."
+msgstr ""
+
+msgid "Remove from spam"
+msgstr ""
+
+msgid "Add to spam"
+msgstr ""
+
+msgid "Do you really want to add this email to spam list? The request will be deleted automatically."
+msgstr ""
+
+msgid "Do you really want to remove this email from spam list?"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Message added to favourites"
+msgstr ""
+
+msgid "Message is not favourite"
+msgstr ""
+
+msgid "create new request"
+msgstr ""
+
+msgid "Add email \"%s\" to spam"
+msgstr ""
+
+msgid "Remove email \"%s\" from spam"
+msgstr ""
+
+msgid "Contact will also be deleted."
+msgstr ""
+
+msgid "and delete the contact"
+msgstr ""
+
+msgid "Wait, please. Redirecting..."
+msgstr ""
+
+msgid "An error occurred while processing your request. Please try again later."
+msgstr ""
+
+msgid "Request ID is empty"
+msgstr ""
+
+msgid "Something goes wrong"
+msgstr ""
+
+msgid "Email is not valid"
+msgstr ""
+
+msgid "Cannot load products"
+msgstr ""
+
+msgid "Developer ID is empty"
+msgstr ""
+
+msgid "Specify order number"
+msgstr ""
+
+msgid "API key not found"
+msgstr ""
+
+msgid "Check domain"
+msgstr ""
+
+msgid "Check order"
+msgstr ""
+
+msgid "map"
+msgstr ""
+
+msgid "Helpdesk PRO"
+msgstr ""
+
+msgid "Helpdesk with advanced opportunities"
+msgstr ""
+
+msgid "CRM settings"
+msgstr ""
+
+msgid "Display CRM tags before contact tabs"
+msgstr ""
+
+msgid "CRM tags"
+msgstr ""
+
+msgid "Name of link to CRM tags"
+msgstr ""
+
+msgid "Helpdesk settings"
+msgstr ""
+
+msgid "Requests"
+msgstr ""
+
+msgid "Background of unread request"
+msgstr ""
+
+msgid "Background of selected request"
+msgstr ""
+
+msgid "Favourite messages"
+msgstr ""
+
+msgid "Use image for favourite messages"
+msgstr ""
+
+msgid "Favourite image"
+msgstr ""
+
+msgid "Background of favourite message"
+msgstr ""
+
+msgid "Others"
+msgstr ""
+
+msgid "Do not reset page, when something goes wrong"
+msgstr ""
+
+msgid "Ajax errors"
+msgstr ""
+
+msgid "Spam settings"
+msgstr ""
+
+msgid "Delete spam contacts"
+msgstr ""
+
+msgid "Be careful, if you enable this setting, then not only spam-requests <br>will be deleted, but also contacts that generated these requests. <br>Thus, spam-contacts with all the links to other applications will be deleted from Contacts."
+msgstr ""
+
+msgid "Spam contacts"
+msgstr ""
+
+msgid "Developer API key"
+msgstr ""
+
+msgid "Developer ID"
+msgstr ""
+
+msgid "You are temporarily not allowed to send requests"
+msgstr ""
+
+msgid "SPAM"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Select product"
+msgstr ""
+
+msgid "Specify order number (digits)"
+msgstr ""
+
+msgid "image %c of %t"
+msgstr ""
+
+msgid "Toolbar"
+msgstr ""
+
+msgid "edit"
+msgstr ""
+
+msgid "Editing field"
+msgstr ""
+
+msgid "Show tags in request list"
+msgstr ""
+
+msgid "Tags"
+msgstr ""
+
+msgid "Additional fields constructor"
+msgstr ""
+
+msgid "Choose additional request fields, which will be displayed on the requests list. Inside each field you can edit the appearance."
+msgstr ""
+
+msgid "Licenses not found for"
+msgstr ""
+
+msgid "You can specify several values. Each on new row."
+msgstr ""
+
+msgid "Attachments"
+msgstr ""
+
+msgid "A list of all request attachments sorted by descendant"
+msgstr ""
+
+msgid "Reindex files"
+msgstr ""
+
+msgid "Number of files per page"
+msgstr ""
+
+msgid "delete attachment"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Sort"
+msgstr ""
+
+msgid "File not found"
+msgstr ""
+
+msgid "Download"
+msgstr ""
+
+msgid "Open request"
+msgstr ""
+
+msgid "Cached files not found"
+msgstr ""
+
+msgid "Start indexing files"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Request"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Request updated"
+msgstr ""
+
+msgid "Wait, please. Files are indexing."
+msgstr ""
+
+msgid "Please don't close your browser window until process is over"
+msgstr ""
+
+msgid "prev"
+msgstr ""
+
+msgid "%02d h %02d min %02d sec"
+msgstr ""
+
+msgid "Files have been indexed successfully!"
+msgstr ""
+
+msgid "Number of processed files"
+msgstr ""
+
+msgid "time elapsed"
+msgstr ""
+
+msgid "A list of all request attachments"
+msgstr ""
+
+msgid "Total size of all attachments:"
+msgstr ""
+
+msgid "or use CRON command:"
+msgstr ""
+
+msgid "Number of all files"
+msgstr ""
+
+msgid "Error occurred: %s"
+msgstr ""
+
+msgid "Indexing files."
+msgstr ""
+
+msgid "Time elapsed:"
+msgstr ""

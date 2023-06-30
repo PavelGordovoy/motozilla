@@ -1,0 +1,221 @@
+{
+    "packages": [
+        {
+            "name": "fire015/flintstone",
+            "version": "v2.2",
+            "version_normalized": "2.2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fire015/flintstone.git",
+                "reference": "b507136fb5119c5d3be2c7530eb33a91a5bd0aff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fire015/flintstone/zipball/b507136fb5119c5d3be2c7530eb33a91a5bd0aff",
+                "reference": "b507136fb5119c5d3be2c7530eb33a91a5bd0aff",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6"
+            },
+            "time": "2019-03-12T12:12:25+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Flintstone\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jason M",
+                    "email": "emailfire@gmail.com"
+                }
+            ],
+            "description": "A key/value database store using flat files for PHP",
+            "homepage": "http://www.xeweb.net/flintstone/",
+            "keywords": [
+                "cache",
+                "database",
+                "files",
+                "flintstone",
+                "memory"
+            ],
+            "install-path": "../fire015/flintstone"
+        },
+        {
+            "name": "gettext/gettext",
+            "version": "v5.5.4",
+            "version_normalized": "5.5.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-gettext/Gettext.git",
+                "reference": "77baf40326b4eac0230cd11ee75680969dcbe72a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-gettext/Gettext/zipball/77baf40326b4eac0230cd11ee75680969dcbe72a",
+                "reference": "77baf40326b4eac0230cd11ee75680969dcbe72a",
+                "shasum": ""
+            },
+            "require": {
+                "gettext/languages": "^2.3",
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "brick/varexporter": "^0.2.1",
+                "friendsofphp/php-cs-fixer": "^2.15",
+                "oscarotero/php-cs-fixer-config": "^1.0",
+                "phpunit/phpunit": "^8.0",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "time": "2020-12-20T13:37:30+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Gettext\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oscar Otero",
+                    "email": "oom@oscarotero.com",
+                    "homepage": "http://oscarotero.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP gettext manager",
+            "homepage": "https://github.com/php-gettext/Gettext",
+            "keywords": [
+                "JS",
+                "gettext",
+                "i18n",
+                "mo",
+                "po",
+                "translation"
+            ],
+            "support": {
+                "email": "oom@oscarotero.com",
+                "issues": "https://github.com/php-gettext/Gettext/issues",
+                "source": "https://github.com/php-gettext/Gettext/tree/v5.5.4"
+            },
+            "install-path": "../gettext/gettext"
+        },
+        {
+            "name": "gettext/languages",
+            "version": "2.6.0",
+            "version_normalized": "2.6.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-gettext/Languages.git",
+                "reference": "38ea0482f649e0802e475f0ed19fa993bcb7a618"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-gettext/Languages/zipball/38ea0482f649e0802e475f0ed19fa993bcb7a618",
+                "reference": "38ea0482f649e0802e475f0ed19fa993bcb7a618",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.16.0",
+                "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.5 || ^8.4"
+            },
+            "time": "2019-11-13T10:30:21+00:00",
+            "bin": [
+                "bin/export-plural-rules"
+            ],
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Gettext\\Languages\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michele Locati",
+                    "email": "mlocati@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "gettext languages with plural rules",
+            "homepage": "https://github.com/php-gettext/Languages",
+            "keywords": [
+                "cldr",
+                "i18n",
+                "internationalization",
+                "l10n",
+                "language",
+                "languages",
+                "localization",
+                "php",
+                "plural",
+                "plural rules",
+                "plurals",
+                "translate",
+                "translations",
+                "unicode"
+            ],
+            "install-path": "../gettext/languages"
+        },
+        {
+            "name": "jmathai/php-multi-curl",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jmathai/php-multi-curl.git",
+                "reference": "33c5d80128e6ea1e72a9440ffbdb8fab05a472da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jmathai/php-multi-curl/zipball/33c5d80128e6ea1e72a9440ffbdb8fab05a472da",
+                "reference": "33c5d80128e6ea1e72a9440ffbdb8fab05a472da",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.0.*"
+            },
+            "time": "2016-12-03T03:27:02+00:00",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-4": {
+                    "JMathai\\PhpMultiCurl\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache"
+            ],
+            "description": "A high performance PHP library for asynchronous curl http calls.",
+            "keywords": [
+                "asynchronous",
+                "curl",
+                "parallel",
+                "php-multi-curl"
+            ],
+            "install-path": "../jmathai/php-multi-curl"
+        }
+    ],
+    "dev": true
+}

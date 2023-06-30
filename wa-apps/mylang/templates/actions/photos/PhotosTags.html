@@ -1,0 +1,29 @@
+<div>
+    <h1>[`Tags`]</h1>
+    <form id="s-mylang-form" method="POST" action="?module=backend&action=save" data-form="save">
+    <table class="zebra single-lined">
+        <tr class="header">
+            <th>[`Tag name`]</th>
+            {foreach $locales as $l}
+                <th class="short align-right">{$l}</th>
+            {/foreach}
+        </tr>
+        {foreach $tags as $tag}
+            <tr data-id={$tag.id}>
+                <td>
+                    {$tag.name}
+                </td>
+                {foreach $locales as $key=>$l}
+                <td><input tabindex="{$smarty.foreach.locales.index}" type="text" name="mylang[tag][{$key}][{$tag.id}][value]" value="{if isset($tag.locale.$key.text)}{$tag.locale.$key.text}{/if}" placeholder="{$l}" data-mylang="{$l}"/></td>
+                {/foreach}
+            </tr>
+        {/foreach}
+    </table>
+    <div class="placeholder"><div>
+        <div class="wa-mylang-save-panel block bordered-top">
+            <input id="wa-save-button" type="submit" class="button green" value="[`Save`]">
+            <em class="hint">Ctrl + S</em>
+            <span id="wa-editor-status" style="margin-left: 20px; display: none;"><i class="icon16 yes"></i> [`Saved`]</span>
+        </div>
+    </form>
+</div>

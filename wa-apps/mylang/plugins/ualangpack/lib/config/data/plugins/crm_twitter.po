@@ -1,0 +1,153 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst CRM Twitter plugin 1.0.4.28 UA translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-06-15 18:08+0300\n"
+"PO-Revision-Date: \n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Plugin %s is installed and working."
+msgstr "Плагін %s встановлено і запущено."
+
+msgid "Specify configuration parameters on <a href=\"%s\">deal source settings</a>."
+msgstr "Задайте параметри на <a href=\"%s\">екрані налаштувань джерела угод</a>."
+
+msgid "Name"
+msgstr "Назва"
+
+msgid "Consumer Key (API Key)"
+msgstr "Ключ споживача (ключ API)"
+
+msgid "Consumer Secret (API Secret)"
+msgstr "Секрет споживача (API Secret)"
+
+msgid "Access Token"
+msgstr "Токен доступу"
+
+msgid "Access Token Secret"
+msgstr "Секрет токена доступу"
+
+msgid "Disabled"
+msgstr "Вимкнено"
+
+msgid "Enabled"
+msgstr "Увімкнено"
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "incoming"
+msgstr "вхідні"
+
+msgid "from"
+msgstr "від"
+
+msgid "outgoing"
+msgstr "вихідні"
+
+msgid "to"
+msgstr "для"
+
+msgid "(no subject)"
+msgstr "(без теми)"
+
+msgid "From"
+msgstr "Від"
+
+msgid "To"
+msgstr "Для"
+
+msgid "Deal"
+msgstr "Угода"
+
+msgid "Reply"
+msgstr "Відповісти"
+
+msgid "or"
+msgstr "або"
+
+msgid "cancel"
+msgstr "скасувати"
+
+msgid "Delete message"
+msgstr "Видалити повідомлення"
+
+msgid "Delete"
+msgstr "Видалити"
+
+msgid "Send"
+msgstr "Надіслати"
+
+msgid "Message sent successfully"
+msgstr "Повідомлення відправлене"
+
+msgid "Stage deleted"
+msgstr "Етап видалено"
+
+msgid "Funnel deleted"
+msgstr "Воронку видалено"
+
+msgid "Unknown source"
+msgstr "Невідоме джерело"
+
+msgid "Delete message from %s"
+msgstr "Видалити повідомлення від %s"
+
+msgid "This field is required"
+msgstr "Це поле є обов’язковим"
+
+msgid "Save configuration parameters in <a href=\"%s\">deal source settings</a>."
+msgstr "Збережіть параметри на <a href=\"%s\">екрані налаштувань джерела угод</a>."
+
+msgid "Message has been sent."
+msgstr "Повідомлення надіслано."
+
+msgid "open in Twitter"
+msgstr "відкрити у Твітері"
+
+msgid "open tweet"
+msgstr "відкрити твіт"
+
+msgid "Write reply tweet"
+msgstr "Написати твіт у відповідь"
+
+msgid "Write direct message"
+msgstr "Написати приватне повідомлення"
+
+msgid "You can get this data by creating <a href=\"%s\" target=\"_blank\">an application on Twitter</a>,<br>in the «Keys and Access Tokens» tab."
+msgstr "Ви можете отримати ці дані, створивши <a href=\"%s\" target=\"_blank\">додаток у Твітері</a>,<br>на вкладці «Ключі та токени доступу»."
+
+msgid "Collect the mentions"
+msgstr "Зібрати згадування"
+
+msgid "By default, only direct messages."
+msgstr "За замовчуванням — лише приватні повідомлення."
+
+msgid "Validation error"
+msgstr "Помилка перевірки"
+
+msgid "You can not change the twitter user within the same source.<br><br>If you want to change the user — <a href=\\\"%ssettings/sources/twitter\\\">create a new source</a> for it."
+msgstr "Ви не можете змінити користувача Twitter у межах одного джерела.<br><br>Якщо ви хочете змінити користувача — <a href=\\\"%ssettings/sources/twitter\\\">створіть нове джерело</a> для нього."
+
+msgid "Tweet"
+msgstr "Твіт"
+
+msgid "Direct message"
+msgstr "Приватне повідомлення"
+
+msgid "Make sure the entered data is correct or try again after 15 minutes."
+msgstr "Переконайтеся, що введені дані правильні, або повторіть спробу через 15 хвилин."
+
+msgid "Field is required"
+msgstr "Поле є обов'язковим"

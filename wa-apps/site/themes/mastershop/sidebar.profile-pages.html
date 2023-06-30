@@ -1,0 +1,15 @@
+{strip}
+{if (!isset($wa_parent_theme_path) || !$wa_parent_theme_path)}
+    {$parent_theme_path = $wa_active_theme_path}
+{else}
+    {$parent_theme_path = $wa_parent_theme_path}
+{/if}
+<div class="sidebar-wrap">
+    <div class="sidebar-wrap__head">
+        [`My account`]
+    </div>
+    <div class="sidebar-wrap__menu">
+        {include file="`$parent_theme_path`/profile-links.html" ul_class="pages"}
+    </div>
+</div>
+{/strip}

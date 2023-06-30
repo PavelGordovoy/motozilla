@@ -1,0 +1,43 @@
+{strip}
+{if $wa->mailer && $wa->getUrl('mailer/frontend/subscribe') && $theme_settings.display_form_subscription}
+    {if !$theme_settings.form_subscription_id}
+        {$theme_settings.form_subscription_id = 1}
+    {/if}
+    {$is_usual_captcha = $theme_settings.form_subscription_captcha == 'usual'}
+    <div class="footer-subs">
+        {if $theme_settings.form_subscription_title}
+            <div class="footer-subs__head">
+                {$theme_settings.form_subscription_title}
+            </div>
+        {/if}
+        <form action="{$wa->getUrl('mailer/frontend/subscribe')}" method="post" id="mailer-subscribe-form" target="mailer-subscribe-iframe" class="footer-subs__form">
+            <input type="hidden" name="form_id" value="{$theme_settings.form_subscription_id}">
+            <div class="js-subscribe-inputs subscribe-inputs">
+                <div class="footer-subs__mail-image">
+                    <div class="footer-subs__input">
+                        <input autocomplete="off" name="{if $is_usual_captcha}email{else}username{/if}" class="js-subscribe-input" placeholder="[`Enter your e-mail`]" type="text" />
+                        <span class="bs-bg icon__submit js-submit-form"><i class="far fa-long-arrow-right"></i></span>
+                        <i class="fas fa-spinner bs-color footer-subs__loading js-subscribe-load"></i>
+                    </div>
+                    {if $is_usual_captcha}<div class="js-subscribe-image footer-subs__image hide">{$wa->captcha(['app_id'=>'mailer'])}</div>{/if}
+                </div>
+                {if $theme_settings.display_consent_subscription}
+                    <label class="footer-subs__agree js-subscribe-agree">
+                        <span class="js-checkbox-styler checkbox-styler">
+                            <input value="1" name="agree" type="checkbox" class="js-checkbox-styler-input" />
+                        </span>
+                        [`I agree`] <a href="{$theme_settings.link_rules_personal}">[`with the policy of processing personal data`]</a>
+                    </label>
+                {/if}
+            </div>
+            <div class="subscribe-thankyou" id="mailer-subscribe-thankyou">
+                [s`Thank you! We’ll keep you posted.`]
+            </div>
+            <div class="subscribe-error" id="mailer-subscribe-error">
+                <i class="subscribe-error__icon fas fa-exclamation-circle"></i>
+                [`Form submission error`]
+            </div>
+        </form>
+    </div>
+{/if}
+{/strip}

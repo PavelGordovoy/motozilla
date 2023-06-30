@@ -1,0 +1,138 @@
+{strip}
+<div class="w-dialog-wrapper is-full-screen">
+    <div class="w-dialog-background"></div>
+    <div class="w-dialog-block gray-header compact-header is-animated">
+        <form id="{$uniqid}" target="{$uniqid}-target" action="?module=requests&action=save{if !empty($message) && !empty($request)}&message_id={$message.id|escape}&request_id={$request.id}{/if}" method="post" enctype='multipart/form-data'>
+            {$wa->csrf()}
+            <input type="hidden" name="source_id" value="1">
+            <input type="hidden" name="create_new_request" value="1">
+            <input type="hidden" name="contact_id" value="{$request.client_contact_id}">
+            <input type="hidden" name="text" class="js-message" value="{$message.text|strip_tags}">
+            <header class="w-dialog-header">
+                <h1>[`New request`]</h1>
+            </header>
+            <div class="w-dialog-content contacts-data">
+                {if !empty($message) && $user}
+                    <div class="profile image50px">
+                        <div class="image">
+                            <img class="userpic" src="{$request.client_photo_url}">
+                        </div>
+                        <div class="details">
+                            <p class="contact-name">{$request.client_name}</p>
+                            <p><span class="c-details-label">Email</span> <a class="inline" href="mailto:{$request.client_email}">{$request.client_email}</a></p>
+                            {$phone = $user->get('phone', 'value')}
+                            {if $phone}
+                                <p><span class="c-details-label">[`Phone`]</span> {if isset($phone[0])}{$phone[0]|escape}{else}{$phone|escape}{/if}</p>
+                            {/if}
+                        </div>
+                    </div>
+                <div class="fields backend-new-request-form">
+                    <div class="field">
+                        <div class="name">[`Subject`]</div>
+                        <div class="value"><input type="text" name="subject" value="" class="large bold"></div>
+                    </div>
+                    <div class="field" id="attachments">
+                        <div class="name">
+                            [`Attach`]
+                        </div>
+                        {if !empty($message.params.attachments)}
+                            <div class="value">
+                                <label><input type="checkbox" value="1" checked name="add_current_attach" /> [`Add current attachments`]</label>
+                            </div>
+                        {/if}
+                    </div>
+                    <div class="field">
+                        <div class="name">[`Assign to`]</div>
+                        <div class="value">
+                            <select name="assigned_contact_id">
+                                <option value="0"></option>
+                                {foreach $assignees as $user_id => $user_name}
+                                    <option value="{$user_id}" {if $request.assigned_contact_id == $user_id}selected="selected"{/if}>{$user_name|escape}</option>
+                                {/foreach}
+                            <select>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="name">[`Status`]</div>
+                        <div class="value">
+                            {$all_states_count = count($all_states)}
+                            <select name="new_request_state_id">
+                                <option value=""></option>
+                                {foreach $all_states as $workflow_info}
+                                    {foreach $workflow_info['states'] as $state_info}
+                                        {if !$workflow_info.id && !$state_info.id}{continue}{/if}
+                                        {$full_state_id = $workflow_info.id|cat:'@':$state_info.id}
+                                        <option value="{$full_state_id}" data-customer-portal="{if $state_info.customer_portal_name|default:''}1{else}0{/if}"
+                                                             {if 'new' == $state_info.id}selected="selected"{/if}
+                                                         >
+                                            {if $all_states_count > 1}{$workflow_info.name|escape}&mdash;{/if}{$state_info.name|escape}
+                                        </option>
+                                    {/foreach}
+                                {/foreach}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="name">[`Status of current request`]</div>
+                        <div class="value">
+                            {$all_states_count = count($all_states)}
+                            <select name="current_request_state_id">
+                                <option value=""></option>
+                                {foreach $all_states as $workflow_info}
+                                    {foreach $workflow_info['states'] as $state_info}
+                                        {if !$workflow_info.id && !$state_info.id}{continue}{/if}
+                                        {$full_state_id = $workflow_info.id|cat:'@':$state_info.id}
+                                        <option value="{$full_state_id}" data-customer-portal="{if $state_info.customer_portal_name|default:''}1{else}0{/if}"
+                                                {if $state_info.id == $request.state_id}selected="selected"{/if}
+                                                         >
+                                            {if $all_states_count > 1}{$workflow_info.name|escape}&mdash;{/if}{$state_info.name|escape}
+                                        </option>
+                                    {/foreach}
+                                {/foreach}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                {else}
+                    <div class="attention block">[`Cannot get message information`]</div>
+                {/if}
+            </div>
+            <footer class="w-dialog-footer">
+                <div class="margin-block errormsg"></div>
+                <div class="t-actions">
+                    <div class="t-layout">
+                        <div class="t-column left">
+                            <input type="submit" class="button green t-button" value="[`Create new request`]">
+                            <span style="margin: 0 4px;">[`or`]</span>
+                            <a class="js-close-dialog" href="javascript:void(0);">[`cancel`]</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </form>
+        <iframe src="javascript:true" id="{$uniqid}-target" name="{$uniqid}-target" style="width:0;height:0;border:0px solid #fff;"></iframe>
+    </div>
+</div>
+<script type="text/javascript">
+    (function ($) {
+        $(function () {
+            var dialog = $("#{$uniqid}").closest(".w-dialog-wrapper").data('proDialog');
+            var addNewField = function() {
+                $('#attachments').append('<div class="value attach"><input type="file" name="attachment[]"></div>');
+                dialog.resize();
+            };
+            addNewField();
+
+            $('#attachments').on('change', '.value:last-child :file', function() {
+                addNewField();
+                $('<a href="javascript:void(0)" class="small inline-link remove-attach"><i>'+"[`remove`]"+'</i></a>').click(function() {
+                    $(this).closest('.value.attach').remove();
+                    dialog.resize();
+                    return false;
+                }).appendTo($(this).parent());
+            });
+
+        });
+    })(jQuery);
+</script>
+{/strip}

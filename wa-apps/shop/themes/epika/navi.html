@@ -1,0 +1,229 @@
+{*if ($action == 'cart' || $action == 'compare')*}
+
+{*if $theme_settings.category_nav_mode == 'sidebar' && !( $action|strstr:'product' || $action == 'cart' || $action == 'compare')*}  
+<div class="navUpDiv"> 
+	<nav class="page-nav" role="navigation">
+		{$_NAV_SIDEBAR = 1}
+		{if isset($category)}{$selected_category=$category.id}{else}{$selected_category=null}{/if}		
+			{$categories = $wa->shop->categories(0, null, true)}
+			{$category = $wa->shop->category(0, null, true)}
+				<a class="fat-btn" hre="javascript:void(0)"><i class="icon-menu"></i><span>[`Catalogue`]</span></a>
+					{$path = [$category.id]}
+					{$parent = $wa->shop->category($category.parent_id)}
+					
+					{if $parent.id|default:null > 0}
+						{$path[] = $parent.id}
+						{while $parent.id|default:null > 0}
+							{$parent = $wa->shop->category($parent.parent_id)}
+								{if $parent.id|default:null > 0}
+									{$path[] = $parent.id}
+								{/if}
+						{/while}
+					{/if}
+					
+				<div>
+					{function tree}
+						{if $level <=2}
+						<ul class="{if $item.childs|default:null}drop nested{else}g-menu category-tree{/if}">
+						{foreach $items as $item}
+							
+							{$catbadge = $wa->shop->category($item.id)}
+							{$catpromolink = $wa->shop->category($item.id)}
+							{$catpromobg = $wa->shop->category($item.id)}
+								<li {if $item.childs|default:null && $level <=1} class="collapsible{if !empty($catpromobg.params.promoBg)} with-bg{/if}" {/if}>
+									<a href="{$item.url}"{if (in_array($item.id, $path))} class="selected"{/if}>{if !empty($catbadge.params.icon)}<i class="cat-ico icon-{$catbadge.params.icon}"></i>{/if}{$item.name|escape} {if !empty($catbadge.params.badge)}<span style="background-color:{if !empty($catbadge.params.badgeColor)}{$catbadge.params.badgeColor}{/if}" class="badge">{$catbadge.params.badge}</span>{/if}<i class="icon-right"></i></a>
+									{if $item.childs|default:null}
+										{if $level == 0}
+											<div class="inside-menu{if empty($catpromobg.params.promoBg)} without-bg{else} with-bg{/if}" {if !empty($catpromobg.params.promoBg) && !$wa->isMobile()}style="background-image:url({$catpromobg.params.promoBg})"{elseif empty($catpromobg.params.promoBg)}style="max-height:none;"{/if}>
+															{tree items=$item.childs level=$level + 1}
+															{if !empty($catpromolink.params.promoUrl)}<a class="menu-promo-link" href="{$catpromolink.params.promoUrl}"></a>{/if}
+											</div>	
+											{else}
+												{tree items=$item.childs level=$level + 1}
+										{/if}
+									{/if}
+								</li>
+
+						{/foreach}
+						</ul>
+						{/if}
+					{/function}
+					{tree items=$wa->shop->categories(0, null, true) level=0}
+				</div>
+	</nav>
+</div> 
+
+{*/if*}
+
+<script>
+	if ( MatchMedia("only screen and (min-width: 993px)") ) {
+        $(window).load(function(){
+            $(".inside-menu.with-bg > .drop").mCustomScrollbar({
+				scrollbarPosition:"outside",
+				theme:"rounded-dark",
+				scrollInertia:200,
+				callbacks:{
+					onInit: function(){
+						addScrollButtons(this);
+					},
+					whileScrolling: function(){
+						var scrollPos = -this.mcs.top;
+						var scrollPercentPos = this.mcs.topPct;
+						$('.inside-menu .drop .drop').css('top',scrollPos);
+						if (this.mcs.topPct==0){
+							$('.category-scroll-arr.prev-arr').addClass('disabled');
+						} else if (this.mcs.topPct==100){
+							$('.category-scroll-arr.next-arr').addClass('disabled');
+						} else{
+							$('.category-scroll-arr.prev-arr, .category-scroll-arr.next-arr').removeClass('disabled');
+						}
+					}
+				}
+			});
+
+			function addScrollButtons(el){
+				that= $(el);
+			    that.parent().append('<a href="#" class="category-scroll-arr prev-arr disabled"><i class="icon-arrow1"></i></a>');
+			    that.parent().append('<a href="#" class="category-scroll-arr next-arr"><i class="icon-arrow1"></i></a>');
+			    catScroll();
+			};
+
+			function catScroll() {
+
+				$('.category-scroll-arr.prev-arr').click(function(e){
+					e.preventDefault();
+					var that = $(this);
+					var scrollPosElem = that.siblings('.drop').children('.mCustomScrollBox').children();
+					var scrollPos = parseInt(scrollPosElem.css('top'));
+					var scrolEmount = scrollPosElem.closest('li').height()+1;
+					var scrollTo = scrollPos+scrolEmount;
+					that.siblings('.category-scroll-arr.next-arr').removeClass('disabled');
+					if (scrollTo>0 || scrollTo==0){
+						that.addClass('disabled');
+						{literal}scrollPosElem.animate({top:0}, 300);{/literal}
+						{literal}$('.inside-menu .drop .drop').animate({top:0}, 300);{/literal}
+					} else {
+						{literal}scrollPosElem.animate({top:scrollTo}, 300);{/literal}
+						{literal}$('.inside-menu .drop .drop').animate({top:-scrollTo}, 300);{/literal}
+						that.removeClass('disabled');
+					};
+					
+					
+				});
+
+				$('.category-scroll-arr.next-arr').click(function(e){
+					e.preventDefault();
+					var that = $(this);
+					var topScrollVal = (that.siblings('.drop').find('.mCSB_container').height())-(that.siblings('.drop').height());
+					var scrollPosElem = that.siblings('.drop').children('.mCustomScrollBox').children();
+					var scrollPos = parseInt(scrollPosElem.css('top'));
+					var scrolEmount = scrollPosElem.closest('li').height()+1;
+					var scrollTo = scrollPos-scrolEmount;
+					that.siblings('.category-scroll-arr.prev-arr').removeClass('disabled');
+					if (scrollTo < -topScrollVal || scrollTo == -topScrollVal){
+						that.addClass('disabled');
+						{literal}scrollPosElem.animate({top:-topScrollVal}, 300);{/literal}
+						{literal}$('.inside-menu .drop .drop').animate({top:topScrollVal}, 300);{/literal}
+					} else {
+						{literal}scrollPosElem.animate({top:scrollTo}, 300);{/literal}
+						{literal}$('.inside-menu .drop .drop').animate({top:-scrollTo}, 300);{/literal}
+						that.removeClass('disabled');
+					};
+				});
+			};
+
+			$(".inside-menu.with-bg > .drop .drop").mCustomScrollbar({
+				scrollbarPosition:"outside",
+				theme:"light",
+				scrollInertia:200,
+				callbacks:{
+					onInit: function(){
+						addScrollSubButtons(this)
+					},
+					whileScrolling: function(){
+						var scrollPercentPos = this.mcs.topPct;
+						if (this.mcs.topPct==0){
+							$('.subcategory-scroll-arr.prev-arr').addClass('disabled');
+						} else if (this.mcs.topPct==100){
+							$('.subcategory-scroll-arr.next-arr').addClass('disabled');
+						} else{
+							$('.subcategory-scroll-arr.prev-arr, .subcategory-scroll-arr.next-arr').removeClass('disabled');
+						}
+					}
+				}
+			});
+
+			function addScrollSubButtons(elem){
+				var that = $(elem);
+				that.find('.mCustomScrollBox').append('<a href="#" class="subcategory-scroll-arr prev-arr disabled"><i class="icon-arrow1"></i></a>');
+				that.find('.mCustomScrollBox').append('<a href="#" class="subcategory-scroll-arr next-arr"><i class="icon-arrow1"></i></a>');
+				subCatScroll();
+			}
+
+			function subCatScroll() {
+
+				$('.subcategory-scroll-arr.prev-arr').click(function(e){
+					e.preventDefault();
+					var that = $(this);
+					var scrollPosElem = that.siblings('.mCSB_container');
+					var scrollPos = parseInt(scrollPosElem.css('top'));
+					var scrolEmount = scrollPosElem.closest('li').height();
+					var scrollTo = scrollPos+scrolEmount+1;
+					that.siblings('.subcategory-scroll-arr.next-arr').removeClass('disabled');
+					if (scrollTo >= 0){
+						that.addClass('disabled');
+						{literal}scrollPosElem.animate({top:0}, 300);{/literal}
+					} else {
+						{literal}scrollPosElem.animate({top:scrollTo}, 300);{/literal}
+						that.removeClass('disabled');
+					};
+					
+				});
+
+				$('.subcategory-scroll-arr.next-arr').click(function(e){
+					e.preventDefault();
+					var that = $(this);
+					var topScrollVal = (that.siblings('.mCSB_container').height())-(that.parent().parent().height());
+					var scrollPosElem = that.siblings('.mCSB_container');
+					var scrollPos = parseInt(scrollPosElem.css('top'));
+					var scrolEmount = scrollPosElem.closest('li').height()+1;
+					var scrollTo = scrollPos-scrolEmount;
+					that.siblings('.subcategory-scroll-arr.prev-arr').removeClass('disabled');
+					if (scrollTo <= -topScrollVal){
+						that.addClass('disabled');
+						{literal}scrollPosElem.animate({top:-topScrollVal}, 300);{/literal}
+					} else {
+						{literal}scrollPosElem.animate({top:scrollTo}, 300);{/literal}
+						that.removeClass('disabled');
+					};
+				});
+			};
+
+			$('.g-menu.category-tree > li.collapsible').hover(function(){
+				setTimeout(function(){
+					var topListHeight = $('.inside-menu > .drop').height();
+					$('.inside-menu .drop .drop').css('max-height',topListHeight+'px');
+				},300);
+			});
+
+			$('.g-menu.category-tree .inside-menu li.collapsible > a').hover(function(){
+				$(this).siblings('.drop').find('.subcategory-scroll-arr.next-arr').removeClass('disabled');
+				$(this).siblings('.drop').find('.subcategory-scroll-arr.prev-arr').addClass('disabled');
+			});
+
+			$('.g-menu.category-tree > li.collapsible > a').hover(function(){
+				var that = $(this);
+				that.parent().find('.drop .drop').css('top','0');
+				that.parent().find('.category-scroll-arr.next-arr').removeClass('disabled');
+				that.parent().find('.category-scroll-arr.prev-arr').addClass('disabled');
+
+			});
+
+			if ( $('.home-menu .g-menu.category-tree').height() > $('nav.page-nav > div').height() ){
+				$('nav.page-nav > div').css('width','108%');
+			};
+
+			topcatScrollBtns();
+        });
+	};
+</script>

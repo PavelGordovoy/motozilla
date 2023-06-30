@@ -1,0 +1,141 @@
+{strip}
+{$is_schema_org = $theme_settings.schema_org_active}
+{$is_retina = $wa->shop->config('enable_2x')}
+{$is_dialog = $wa->get('cart')}
+{function getDiscountCart price=null compare_price=null}
+    {if $theme_settings.show_product_discount == 1}
+        {if $compare_price > $price}
+            {$discount = (($compare_price-$price)/$compare_price)*100}
+            {if $theme_settings.show_product_discount_round == "ceil"}
+                {$discount = ceil($discount)}
+            {else if $theme_settings.show_product_discount_round == "floor"}
+                {$discount = floor($discount)}
+            {else}
+                {$discount = round($discount)}
+            {/if}
+        {/if}
+        {$isDiscount = isset($discount) && $discount >= (int)$theme_settings.show_product_discount_minimal && $price > 0}
+        <div data-round="{$theme_settings.show_product_discount_round}" data-minimal="{$theme_settings.show_product_discount_minimal}" class="js-product-discount product-discount product-card__discount{if !$isDiscount} display-none{/if}">{if $isDiscount}-{$discount}%{/if}</div>
+    {/if}
+{/function}
+
+{if $theme_settings.test_settings && !empty($wa->cookie('product_gallery_previews'))}{$theme_settings.product_gallery_previews = $wa->cookie('product_gallery_previews')}{/if}
+{$isPhotoSwipe = !empty($wa->isMobile())}
+{$isZoom = $theme_settings.product_gallery_zoom && !$wa->isMobile()}
+{$isLeftPreviews = $theme_settings.product_gallery_previews == 'left' || $wa->isMobile()}
+
+{$video = $product->video}
+{$count_images = count($product.images)}
+
+{if $isLeftPreviews}{include file="product.gallery.previews.left.html" product=$product}{/if}
+
+{$is_video_last = ($theme_settings.product_gallery_video_sort === 'end')}
+
+{function video_gallery_item position=null}
+    <div class="product-gallery-main__el-outer">
+        <div data-id="video" data-video-url="{$video.url}" data-video-width="{$video.width}" data-video-height="{$video.height}" data-position="{$position}" class="product-gallery-main__el js-product-gallery-main-el">
+            {if $position == 0}
+                <iframe src="{$video.url}" width="{$video.width}" height="{$video.height}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            {else}
+                <div class="product-gallery-main__loaded-video bs-color"></div>
+            {/if}
+        </div>
+    </div>
+{/function}
+
+<div class="product-card__left">
+    {getDiscountCart price=$product.price compare_price=$product.compare_price}
+
+    {if $theme_settings.use_plugin_autobadge}
+        {if isset($product.autobadge) && !empty($product.autobadge)}{$product.autobadge}{/if}
+    {/if}
+
+    {$badge_html = $wa->shop->badgeHtml($product.badge)}
+    {if !empty($badge_html)}
+        {if !empty($theme_settings.title_badge_hit)}
+            {$badge_html = $badge_html|replace:"Хит!":$theme_settings.title_badge_hit|replace:"Bestseller!":$theme_settings.title_badge_hit}
+        {/if}
+        {if !empty($theme_settings.title_badge_new)}
+            {$badge_html = $badge_html|replace:"New!":$theme_settings.title_badge_new}
+        {/if}
+        {if !empty($theme_settings.title_badge_sale)}
+            {$badge_html = $badge_html|replace:"Скидка!":$theme_settings.title_badge_sale|replace:"Low price!":$theme_settings.title_badge_sale}
+        {/if}
+    {/if}
+    {$is_badge_saving = ($theme_settings.show_product_badge_saving == 1)}
+    {if $badge_html || $is_badge_saving}
+        <div class="product-card__badges">
+            {if $badge_html}{$badge_html}{/if}
+            {if $is_badge_saving}
+                {$product_saving = 0}
+                {if $product.price > 0 && !empty($product.compare_price) && $product.compare_price > $product.price}
+                    {$product_saving = $product.price - $product.compare_price}
+                {/if}
+                <span class="js-product-saving product-saving{if empty($product_saving)} display-none{/if}">{if $product_saving}{shop_currency_html($product_saving)}{/if}</span>
+            {/if}
+        </div>
+    {/if}
+
+    <div class="product-card__gallery">
+        <div class="js-product-gallery-main product-gallery-main owl-carousel"{if !$isPhotoSwipe} data-popup-previews="{$theme_settings.product_popup_gallery_desktop_display_previews}"{/if} data-photoswipe="{$isPhotoSwipe}" data-zoom="{$isZoom}">
+            {$position = 0}
+            {$is_dialog = $wa->get('cart')}
+            {$is_popup_video = $theme_settings.product_gallery_video_popup && !$is_dialog}
+            {$image_size = '580'}
+            {if isset($cols) && $cols == 2}{$image_size = '440'}{/if}
+            {if  isset($cols) && $cols == 3}{$image_size = '345'}{/if}
+            {if !empty($theme_settings.product_gallery_main_size_img)}{$image_size = $theme_settings.product_gallery_main_size_img}{/if}
+            {$popup_image_size = '970'}
+            {if !empty($theme_settings.product_gallery_popup_size_img)}{$popup_image_size = $theme_settings.product_gallery_popup_size_img}{/if}
+            {if !$is_video_last && $video}
+                {if !$is_popup_video || !$product.images}
+                    {video_gallery_item position=$position}
+                {else}
+                    <div class="product-gallery-main__el-outer product-gallery-main__el-outer--empty">
+                        <div class="product-gallery-main__el-inner">
+                            <div data-id="video" data-position="{$position}"></div>
+                        </div>
+                    </div>
+                {/if}
+                {$position = $position + 1}
+            {/if}
+            {$first_image_description = null}
+            {if $product.images}
+                 {foreach $product.images as $image}
+                    {if $image@first}{$first_image_description = $image.description}{/if}
+                    <div class="product-gallery-main__el-outer">
+                        <div class="product-gallery-main__el-inner">
+                            <a data-id="{$image.id}" data-position="{$position}" {if $image@iteration == 1 && $is_schema_org} itemprop="image"{/if} class="product-gallery-main__el js-product-gallery-main-el js-product-image-popup" href="{$wa->shop->imgUrl($image, $popup_image_size)}">
+                                {if $image@first}
+                                    {$wa->shop->imgHtml($image, $image_size, ['class' => 'product-gallery-main__el-photo'])}
+                                {else}
+                                    {$wa->shop->imgHtml($image, $image_size, ['class' => 'owl-lazy product-gallery-main__el-photo'])|replace:"src":"src=`$wa_theme_url`img/lazy-image.png data-src"}
+                                {/if}
+                            </a>
+                        </div>
+                    </div>
+                    {if $theme_settings.preload_image_product && ($is_video_last || $is_popup_video) && $image@first}
+                        {$first_image = $wa->shop->imgUrl($image, $image_size)}
+                        {$wa->globals('preload_image', $first_image)}
+                    {/if}
+                    {$position = $position + 1}
+                {/foreach}
+            {else if !$product.images && !$video}
+                {$default_image = "`$wa_theme_url`img/dummy200.png"}
+                {if !empty($theme_settings.default_image)}
+                    {$default_image = strtok($theme_settings.default_image, "?")}
+                    {$default_image = "`$wa_parent_theme_url``$default_image`"}
+                {/if}
+                <img src="{$default_image}"{if $is_retina} class="js-img-retina"{/if} alt="{$product.name|escape}"/>
+            {/if}
+            {if $is_video_last && $video && (!$is_popup_video || !$product.images)}
+                {video_gallery_item position=$position}
+                {$position = $position + 1}
+            {/if}
+        </div>
+        {if $theme_settings.product_gallery_display_description && $product.images}<div class="product-gallery__title js-product-gallery-title">{$first_image_description}</div>{/if}
+        {if !$isLeftPreviews}{include file="product.gallery.previews.bottom.html" product=$product}{/if}
+    </div>
+</div>
+{if $isPhotoSwipe}{include file="photoswipe.html" inline}{/if}
+{/strip}

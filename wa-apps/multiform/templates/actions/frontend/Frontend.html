@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html{if empty($form.popup)} class='multiform-body'{/if}>
+    <head>
+        <title>{$wa->meta('title')|escape}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Keywords" content="{$wa->meta('keywords')|escape}" />
+        <meta name="Description" content="{$wa->meta('description')|escape}" />
+        <link rel="shortcut icon" href="/favicon.ico"/>
+        <link rel="stylesheet" href="{$wa_app_static_url}css/default.css" />
+
+        <script src="{$wa_static_url}wa-content/js/jquery/jquery-1.11.1.min.js"></script>
+    </head>
+    <body {if empty($form.popup)}class='multiform-body' data-theme-id='{if !empty($form.theme_id)}{$form.theme_id}{else}0{/if}'{/if}>
+        <div class='container'>
+            {if !empty($form)}
+                {if !empty($form.popup)}
+                <div class="multiform-body is-popup" data-id="{$form.id}" data-theme-id='{if !empty($form.theme_id)}{$form.theme_id}{else}0{/if}'>
+                {/if}
+                {multiformFormBuilder::buildForm($form)}
+                {if !empty($form.popup)}
+                </div>
+                {/if}
+            {else}
+                <p style='text-align: center;'><img src="{$wa_app_static_url}img/cry.png" /></p>
+                <h1 style='text-align: center;'>[`Form not found`]</h1>
+            {/if}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<div class="block">
+    <div class="block">
+        <h1>[`Helpdesk PRO settings`]</h1>
+    </div>
+
+    <div class="block">
+        {$settings_config = helpdeskProPluginHelper::getSettingsConfig()}
+        {$is_admin = $wa->user()->isAdmin()}
+        <form action="?plugin=pro&module=setings&action=save" method="post" id="helpdesk-pro-settings-form">
+            <div class="fields">
+                {foreach $settings as $k => $s}
+                    {if isset($settings_config[$k])}
+                        {if ($settings_config[$k].app == 'crm' && !$crmAccess) || $settings_config[$k].app == 'developer' || ($settings_config[$k].app == 'admin' && !$is_admin)}{continue}{/if}
+                        {$s}
+                    {/if}
+                {/foreach}
+
+                <div class="field submit-block margin-block">
+                    <input type="submit" class="button green" value="[`Save`]">
+                </div>
+                {if $is_admin}
+                <div class="field margin-block top">
+                    <a href="#" class="js-developer-settings inline-link" title="[`Show developer settings`]"><b><i>[`I am Webasyst developer`]</i></b></a>
+                </div>
+                {/if}
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src="{$plugin_url}js/pro.settings.js"></script>
+<script>
+    (function($) {
+        new helpdeskProSettings({
+            $form: $("#helpdesk-pro-settings-form")
+        });
+    })(jQuery);
+ </script>

@@ -1,0 +1,16 @@
+<select id="language" onChange="mylang_language()">
+    {foreach waLocale::getAll('name') as $language => $lang_name}
+        <option value="{$language}" {if $wa->locale() == $language} selected{/if}>{$lang_name|escape}</option>
+    {/foreach}
+</select>
+<script>
+    function mylang_language(){
+        var url = location.href;
+        if (url.indexOf('?') == -1) {
+            url += '?';
+        } else {
+            url += '&';
+        }
+        location.href = url + 'locale=' + document.getElementById("language").value;
+    }
+</script>

@@ -1,0 +1,106 @@
+<div class="aux-page">
+
+        <aside class="aux-page-sidebar">
+            <div class="sidebar">
+                <h3><span>Страницы</span></h3>
+            {$shop_pages = $wa->shop->pages()}
+            {if $shop_pages}
+                <ul class="categories">
+                    {foreach $shop_pages as $shop_page}
+                    <li{if strlen($shop_page.url)>1 && $wa->currentUrl()|strstr:$shop_page.url} class="selected"{/if}>
+                        <a href="{$shop_page.url}">{$shop_page.name}</a>
+
+                        {$subpages = $wa->shop->pages($shop_page.id)}
+                        {if $subpages}
+                            <ul class="sub-links">
+                                {foreach $subpages as $p}
+                                <li><a href="{$p.url}">- {$p.name}</a></li>
+                                {/foreach}
+                            </ul>
+                        {/if}
+                    </li>
+                    {/foreach}
+                </ul>
+            {/if}
+            </div>
+
+
+        </aside>
+
+
+
+    <div class="content {if strpos($smarty.server.REQUEST_URI, "contacts")}contact-page{/if}" id="page" role="main">
+        <h1 class="aux-page-name">{$page.name}</h1>
+        {$page.content}
+    </div>
+</div>
+
+{if strpos($smarty.server.REQUEST_URI, "contacts")}
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDo55iZ8AdR2yHh2X_85-fJRzkvA7RSEDQ&callback=initMap" type="text/javascript"></script>
+
+<script>
+//var myCenter=new google.maps.LatLng({if !empty($theme_settings.epika_contact_map)}{$theme_settings.epika_contact_map}{/if});
+
+function initMap() {
+    var myCenter = new google.maps.LatLng({if !empty($theme_settings.epika_contact_map)}{$theme_settings.epika_contact_map}{/if});
+
+    var mapProp = {
+        center:myCenter,
+        {if $wa->isMobile}
+          scrollwheel: false,
+        {else}
+          scrollwheel: false,
+        {/if}
+        panControl:false,
+        zoomControl:true,
+        mapTypeControl:false,
+        scaleControl:false,
+        streetViewControl:false,
+        overviewMapControl:true,
+        rotateControl:false,
+        zoom:12,
+        mapTypeId:google.maps.MapTypeId.ROADMAP
+    };
+
+    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+    var marker=new google.maps.Marker({
+      position:myCenter,
+      icon:'{$wa_theme_url}{if !empty($theme_settings.epika_marker_image)}{$theme_settings.epika_marker_image}{/if}'
+      });
+
+    marker.setMap(map);
+    // Zoom to 17 when clicking on marker
+    google.maps.event.addListener(marker,'click',function() {
+      map.setZoom(17);
+      map.setCenter(marker.getPosition());
+    });
+
+    var infowindow = new google.maps.InfoWindow({
+      content:"{if !empty($theme_settings.epika_marker_text)}{$theme_settings.epika_marker_text}{/if}"
+      });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+      });
+
+}
+
+//initializeMap();
+$(document).ready(function(){
+//  if ( MatchMedia("only screen and (min-width: 768px)") ) {
+//    var contHeight = $('.contacts').outerHeight()+200;
+//  } else {
+//    var contHeight = $('.contacts').outerHeight()+200;
+//  }
+//
+//  var contBlockHeight = $('.contacts').outerHeight();
+//  $('.contacts').css('height', contBlockHeight);
+//  $('main.g-main').css('min-height',contHeight);
+//  contactMapShow();
+});
+</script>
+<style>
+	/*main.g-main{ position: relative; }*/
+</style>
+{/if}

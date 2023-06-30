@@ -1,0 +1,50 @@
+{strip}
+{if count($categories) > 0}
+    {$is_retina = $theme_settings.categories_list_images_retina && !empty($skImages)}
+    {$is_lazy = $theme_settings.categories_list_images_lazy}
+    <div class="categories-list-wrap js-categories-list" data-retina="{$is_retina}" data-lazy="{$is_lazy}">
+        <ul class="categories-tile">
+            {foreach $categories as $cat}
+                {if !empty($is_count_products) && !empty($is_count_products_with_subs)}
+                    {$cat.count = $wa->shop->productsCount("category/`$cat.id`")}
+                {/if}
+                <li class="categories-tile-item">
+                    <a class="categories-tile-item__inner js-category-link" href="{$cat.url}">
+                        <div class="categories-tile-item__image">
+                            {$is_badge = (!empty($is_display_badge) && !empty($cat.params.badge_text) && !empty($cat.params.badge_class))}
+                            {if $is_badge} <span class="cat-badge cat-badge--{$cat.params.badge_class} categories-tile-item__badge">{$cat.params.badge_text}</span>{/if}
+                            {$cat_image = null}
+                            {if !empty($cat.image)}
+                                {$cat_image = $cat.image}
+                            {/if}
+                            {if isset($Wmimages[$cat.id].image)}
+                                {$cat_image = $Wmimages[$cat.id].image}
+                            {/if}
+                            {if isset($skImages[$cat.id].image)}
+                                {$cat_image = $skImages[$cat.id].image}
+                            {/if}
+                            {if !empty($cat.is_menus) && !empty($menus_list_with_img[$cat.id]['img'])}
+                                {$cat_image_name = $menus_list_with_img[$cat.id]['img']}
+                                {$cat_image = "`$wa_url`wa-data/public/menus/image/`$cat_image_name`"}
+                            {/if}
+                            {$default_image = "`$wa_theme_url`img/dummy200.png"}
+                            {if !empty($theme_settings.default_image)}
+                                {$default_image = strtok($theme_settings.default_image, "?")}
+                                {$default_image = "`$wa_parent_theme_url``$default_image`"}
+                            {/if}
+                            {if $theme_settings.categories_list_images_lazy && !empty($cat_image)}
+                                <img class="js-categories-item-image" src="{$wa_theme_url}img/lazy-image.png" data-src="{if !empty($cat_image)}{$cat_image}{else}{$default_image}{/if}" alt="{$cat.name|escape}" />
+                            {else}
+                                <img class="js-categories-item-image" src="{if !empty($cat_image)}{$cat_image}{else}{$default_image}{/if}" alt="{$cat.name|escape}" />
+                            {/if}
+                        </div>
+                        <div class="categories-tile-item__title">
+                            {$cat.name|escape}{if !empty($is_count_products) && !empty($cat.count)}<span class="categories-tile-item__count bs-color">{$cat.count}</span>{/if}<i class="categories-tile-item__more ac-color fal fa-long-arrow-right"></i>
+                        </div>
+                    </a>
+                </li>
+            {/foreach}
+        </ul>
+    </div>
+{/if}
+{/strip}

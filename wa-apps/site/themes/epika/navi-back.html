@@ -1,0 +1,52 @@
+<div class="navUpDiv">
+    <nav class="page-nav" role="navigation">
+        {$_NAV_SIDEBAR = 1}
+        {if isset($category)}{$selected_category=$category.id}{else}{$selected_category=null}{/if}
+        {$categories = $wa->shop->categories(0, null, true)}
+        {$category = $wa->shop->category(0, null, true)}
+        <a class="fat-btn" hre="javascript:void(0)"><i class="icon-menu"></i><span>[`Catalogue`]</span></a>
+        {$path = [$category.id]}
+        {$parent = $wa->shop->category($category.parent_id)}
+
+        {if $parent.id|default:null > 0}
+        {$path[] = $parent.id}
+        {while $parent.id|default:null > 0}
+        {$parent = $wa->shop->category($parent.parent_id)}
+        {if $parent.id|default:null > 0}
+        {$path[] = $parent.id}
+        {/if}
+        {/while}
+        {/if}
+
+        <div>
+            {function tree}
+            {if $level <=2}
+            <ul class="{if $item.childs|default:null}drop nested{else}g-menu category-tree{/if}">
+                {foreach $items as $item}
+
+                {$catbadge = $wa->shop->category($item.id)}
+                {$catpromolink = $wa->shop->category($item.id)}
+                {$catpromobg = $wa->shop->category($item.id)}
+
+                <li {if $item.childs|default:null && $level <=1} class="collapsible{if !empty($catpromobg.params.promoBg)} with-bg{/if}" {/if}>
+                    <a href="{$item.url}"{if (in_array($item.id, $path))} class="selected"{/if}>{if !empty($catbadge.params.icon)}<i class="cat-ico icon-{$catbadge.params.icon}"></i>{/if}{$item.name|escape} {if !empty($catbadge.params.badge)}<span style="background-color:{if !empty($catbadge.params.badgeColor)}{$catbadge.params.badgeColor}{/if}" class="badge">{$catbadge.params.badge}</span>{/if}<i class="icon-right"></i></a>
+                    {if $item.childs|default:null}
+                        {if $level == 0}
+                            <div class="inside-menu{if empty($catpromobg.params.promoBg)} without-bg{else} with-bg{/if}" {if !empty($catpromobg.params.promoBg) && !$wa->isMobile()}style="background-image:url({$catpromobg.params.promoBg})"{elseif empty($catpromobg.params.promoBg)}style="max-height:none;"{/if}>
+                                {tree items=$item.childs level=$level + 1}
+                                {if !empty($catpromolink.params.promoUrl)}<a class="menu-promo-link" href="{$catpromolink.params.promoUrl}"></a>{/if}
+                            </div>
+                        {else}
+                            {tree items=$item.childs level=$level + 1}
+                        {/if}
+                    {/if}
+                </li>
+
+                {/foreach}
+            </ul>
+            {/if}
+            {/function}
+            {tree items=$wa->shop->categories(0, null, true) level=0}
+        </div>
+    </nav>
+</div>

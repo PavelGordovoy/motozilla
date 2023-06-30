@@ -1,0 +1,98 @@
+{*
+* @author Gaponov Igor <gapon2401@gmail.com>
+    *}
+    <!DOCTYPE HTML>
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <title>{$wa->appName()} &mdash; {$wa->accountName()}</title>
+            {$wa->css()}
+            <link rel="stylesheet" href="{$wa_app_static_url}css/multiform.css?v={$wa->version()}" />
+            <script src="{$wa_url}wa-content/js/jquery/jquery-1.11.1.min.js"></script>
+            <script src="{$wa_url}wa-content/js/jquery/jquery-migrate-1.2.1.min.js"></script>
+            <script src="{$wa_url}wa-content/js/jquery-wa/wa.dialog.js"></script>
+            <script src="{$wa_url}wa-content/js/jquery-plugins/jquery.store.js"></script>
+            <script src="{$wa_url}wa-content/js/jquery-plugins/jquery.history.js"></script>
+            <script src="{$wa_app_static_url}js/multiform.js?v={$wa->version()}"></script>
+            {$wa->js()}
+             <script>
+                    $(function() {
+                        $.multiform.init({
+                            locale : "{$wa->locale()}",
+                            csrf: "{waRequest::cookie('_csrf', '')}",
+                            module: "{$module}",
+                            lang: "{$lang}",
+                            domainHash: "{$domain_hash}",
+                            localeStrings: {$js_locale_strings}
+                        });
+                    });
+                </script>
+        </head>
+        <body>
+            <div id="wa">
+                {if $domain == 'demo.web-forms.ru'}
+                    <div style="text-align: center;display: table;margin: 20px auto;border: 1px solid #ff0000;padding: 10px;box-shadow: 0 0 5px 0 #ff0000;line-height:1.5">
+                        <div>[`This is Demo account. You don't have access to create pages. You can only create Web-forms.`]</div>
+                        <div>[`All your data will be deleted in an hour.`] <div class="inline-block" style="margin-top: 10px"><a href="[`https://www.webasyst.com/store/app/multiform/`]" title="[`Buy`]" class="button green" target="_blank">[`Buy Web-forms`]</a></div></div>
+                    </div>
+		{/if}
+
+                {$wa->header()}
+                <div id="wa-app">
+                    <div class="sidebar left200px">
+                        {if $wa->userRights('create')}
+                            <div class="block">
+                                <ul class="menu-v with-icons">
+                                    <li {if $wa->get('module') == 'backend' && $wa->get('action') == 'add'}class='selected'{/if}>
+                                        <a href="?module=form&action=edit">
+                                            <i class="icon16 add"></i>
+                                            [`Create form`]
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        {/if}
+                        <div class="block">
+                            <ul class="menu-v with-icons">
+                                <li {if $wa->get('module') == 'backend' || !$wa->get('module')}class='selected'{/if}>
+                                    <a href="?module=backend">
+                                        <i class="icon-custom forms"></i>
+                                        [`Forms`]
+                                    </a>
+                                </li>
+                                {if $wa->userRights('backend') > 1}
+                                <li {if $wa->get('module') == 'masks'}class='selected'{/if}>
+                                    <a href="?module=masks">
+                                        <i class="icon-custom regexp"></i>
+                                        [`Regexp masks`]
+                                    </a>
+                                </li>
+                                <li {if $wa->get('module') == 'settings'}class='selected'{/if}>
+                                    <a href="?module=settings">
+                                        <i class="icon16 settings"></i>
+                                        [`Settings`]
+                                    </a>
+                                </li>
+                                <li {if $wa->get('module') == 'plugins'}class='selected'{/if}>
+                                    <a href="?module=plugins">
+                                        <i class="icon16 plugins"></i>
+                                        [`Plugins`]
+                                    </a>
+                                </li>
+                                {/if}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content left200px block">
+                        {if !$route_url}
+                            <div class="red margin-block">{sprintf(_w('Create <b>private</b> settlement for application Web-forms (Multiform) in %s - Site - Structure and put it above the rest.'), $domain)}</div>
+                        {/if}
+                        {$content}
+                    </div>
+                </div>
+
+                <div class="loading-process">
+                    [`Loading`]...
+                </div>
+        </body>
+    </html>

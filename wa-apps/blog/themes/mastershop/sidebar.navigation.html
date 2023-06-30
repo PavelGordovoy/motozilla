@@ -1,0 +1,83 @@
+{strip}
+<div class="sidebar-wrap js-m-sidebar-menu m-sidebar-menu m-show">
+    <div class="sidebar-wrap__head">
+        [s`Blog`]
+        {if $theme_settings.blog_sidebar_rss}
+            {$rss = $wa->blog->rssUrl()}
+            {if $rss}
+                <a class="sidebar-rss" href="{$rss}" title="[s`RSS`]">
+                    <i class="fas fa-rss ac-color"></i>
+                </a>
+            {/if}
+        {/if}
+        <span class="m-sidebar-menu-caret js-m-sidebar-menu-open">
+            <i class="fal fa-angle-down bs-color"></i>
+        </span>
+    </div>
+    <div class="m-sidebar-menu-body">
+        {* timeline *}
+        {$timeline = $wa->blog->timeline()}
+        <ul class="sidebar-menu-dropdown sidebar-menu-dropdown--blog">
+            {if !empty($timeline)}
+                {$year=null}
+                {foreach $timeline as $year_month => $item}
+                    {if $year neq $item.year}
+                    {if !$item@first}
+                    </ul>
+                    </li>
+                    {/if}
+                        <li class="menu-hover sidebar-menu-dropdown__item{if $item.year_selected} selected{/if}">
+                            {$year=$item.year}
+                            <a class="sidebar-menu-dropdown__link sidebar-menu-dropdown__link--with-subs" href="{$item.year_link}">{$item.year|default:'NULL'}</a>
+                            <i class="sidebar-menu-dropdown__caret fal fa-angle-right"></i>
+                            <span class="js-m-sidebar-submenu-open sidebar-menu-dropdown__open bs-color"></span>
+                            <ul class="sidebar-submenu-dropdown">
+                                {/if}
+                                <li class="menu-hover sidebar-menu-dropdown__item{if $item.selected} selected{/if}">
+                                    <a class="sidebar-menu-dropdown__link" href="{$item.link}" title="{_w("%d post","%d posts",$item.count)}">{_ws(date("F",gmmktime(0,0,0,$item.month,1)))}</a>
+                                </li>
+                                {if $item@last}
+                            </ul>
+                        </li>
+                    {/if}
+                {/foreach}
+            {/if}
+            {foreach $wa->blog->blogs() as $blog}
+                <li class="menu-hover sidebar-menu-dropdown__item {if $wa->globals('blog_id') eq $blog.id && empty($is_search)}selected{/if}">
+                    <a class="sidebar-menu-dropdown__link" href="{$blog.link}">{$blog.name}</a>
+                </li>
+            {foreachelse}
+                <li class="menu-hover sidebar-menu-dropdown__item">
+                    <a class="sidebar-menu-dropdown__link" href="{$wa->blog->url()}">[`All posts`]</a>
+                </li>
+            {/foreach}
+        </ul>
+
+
+        {* plugins *}
+        {* @event (frontend_action_default|frontend_action_post|frontend_action_page|frontend_action_error).%plugin_id%.sidebar *}
+        {foreach $frontend_action as $plugin => $output}
+            {if !empty($output.sidebar) && $plugin != 'tag-plugin'}
+                <div class="blog-plugins {$plugin}">
+                    {$output.sidebar}
+                </div>
+            {/if}
+        {/foreach}
+
+        {* search *}
+        <form method="get" action="{$wa_app_url}" class="sidebar-wrap__search">
+            <input class="sidebar-wrap__search-input" type="search" name="query" {if !empty($blog_query)}value="{$blog_query}"{/if} placeholder="[`Search posts`]">
+            <span class="bs-bg icon__submit js-submit-form">
+                <i class="far fa-search"></i>
+            </span>
+        </form>
+    </div>
+</div>
+
+{* tags *}
+{if isset($frontend_action['tag-plugin'])}
+    <div class="blog-tags m-hide">
+        {$frontend_action['tag-plugin'].sidebar}
+    </div>
+{/if}
+{/strip}

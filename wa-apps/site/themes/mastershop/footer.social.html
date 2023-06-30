@@ -1,0 +1,42 @@
+{strip}
+{$is_schema_org = $theme_settings.schema_org_active}
+<div class="footer-contacts_social">
+    {if $theme_settings.footer_social_title}
+        {$theme_settings.footer_social_title}
+        <hr class="footer-contacts_social-delimiter" />
+    {/if}
+    {if !empty($theme_settings.facebook)}
+        <a target="_blank" class="footer-contacts_social-item" href="{$theme_settings.facebook}"{if $is_schema_org && $theme_settings.schema_org_same_as == "facebook"} itemprop="sameAs"{/if}><i class="fab fa-facebook-f"></i></a>
+    {/if}
+    {if !empty($theme_settings.twitter)}
+        <a target="_blank" class="footer-contacts_social-item" href="{$theme_settings.twitter}"{if $is_schema_org && $theme_settings.schema_org_same_as == "twitter"} itemprop="sameAs"{/if}><i class="fab fa-twitter"></i></a>
+    {/if}
+    {if !empty($theme_settings.vk)}
+        <a target="_blank" class="footer-contacts_social-item" href="{$theme_settings.vk}"{if $is_schema_org && $theme_settings.schema_org_same_as == "vk"} itemprop="sameAs"{/if}><i class="fab fa-vk"></i></a>
+    {/if}
+    {if !empty($theme_settings.odnoclassniki)}
+        <a target="_blank" class="footer-contacts_social-item" href="{$theme_settings.odnoclassniki}"{if $is_schema_org && $theme_settings.schema_org_same_as == "ok"} itemprop="sameAs"{/if}><i class="fab fa-odnoklassniki"></i></a>
+    {/if}
+    {if !empty($theme_settings.instagram)}
+        <a target="_blank" class="footer-contacts_social-item" href="{$theme_settings.instagram}"{if $is_schema_org && $theme_settings.schema_org_same_as == "instagram"} itemprop="sameAs"{/if}><i class="fab fa-instagram"></i></a>
+    {/if}
+    {if !empty($theme_settings.youtube)}
+        <a target="_blank" class="footer-contacts_social-item" href="{$theme_settings.youtube}"{if $is_schema_org && $theme_settings.schema_org_same_as == "youtube"} itemprop="sameAs"{/if}><i class="fab fa-youtube"></i></a>
+    {/if}
+    {if !empty($theme_settings.whatsapp)}
+        <a target="_blank" class="footer-contacts_social-item" href="{$theme_settings.whatsapp}"{if $is_schema_org && $theme_settings.schema_org_same_as == "whatsapp"} itemprop="sameAs"{/if}><i class="fab fa-whatsapp"></i></a>
+    {/if}
+    {if !empty($theme_settings.telegram)}
+        <a target="_blank" class="footer-contacts_social-item" href="{$theme_settings.telegram}"{if $is_schema_org && $theme_settings.schema_org_same_as == "telegram"} itemprop="sameAs"{/if}><i class="fab fa-telegram-plane"></i></a>
+    {/if}
+    {if !empty($theme_settings.viber)}
+        <a target="_blank" class="footer-contacts_social-item" href="{$theme_settings.viber}"{if $is_schema_org && $theme_settings.schema_org_same_as == "whatsapp"} itemprop="sameAs"{/if}><i class="fab fa-viber"></i></a>
+    {/if}
+
+
+    {if $theme_settings.rss && $wa->blog}
+        {if !isset($rss)}{$rss=$wa->blog->rssUrl()}{/if}
+        {if $rss}<a target="_blank" class="footer-contacts_social-item" href="{$rss}"><i class="fas fa-rss"></i></a>{/if}
+    {/if}
+</div>
+{/strip}

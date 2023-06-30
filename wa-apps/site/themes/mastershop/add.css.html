@@ -1,0 +1,438 @@
+{strip}
+{$is_mobile = ($wa->isMobile() && ($wa->cookie("is_desktop_for_mobile") != 1 || !$theme_settings.switch_version))}
+<style>
+    {* --- ширина блока с логотипом *}
+
+    {$logo_wrap_width = '284px'}{if $theme_settings.logo_wrap_width}{$logo_wrap_width = $theme_settings.logo_wrap_width}{/if}
+    {$logo_wrap_width_1100 = '230px'}{if $theme_settings.logo_wrap_width_1100}{$logo_wrap_width_1100 = $theme_settings.logo_wrap_width_1100}{/if}
+    @media (min-width: 1101px) {
+        .header-logo{
+            width: {$logo_wrap_width};
+            flex: 0 1 {$logo_wrap_width};
+            margin: 0 2% 0 0;
+        }
+    }
+
+    @media (max-width: 1100px) and (min-width: 651px) {
+        .header-logo{
+            width: {$logo_wrap_width_1100};
+            flex: 0 1 {$logo_wrap_width_1100};
+            margin: 0 2% 0 0;
+        }
+    }
+
+    {* --- размеры картинки логотипа *}
+
+    {$logo_img_max_width = '284px'}{if $theme_settings.logo_img_max_width}{$logo_img_max_width = $theme_settings.logo_img_max_width}{/if}
+    {$logo_img_max_height = '70px'}{if $theme_settings.logo_img_max_height}{$logo_img_max_height = $theme_settings.logo_img_max_height}{/if}
+    {$logo_img_max_width_1100 = '230px'}{if $theme_settings.logo_img_max_width_1100}{$logo_img_max_width_1100 = $theme_settings.logo_img_max_width_1100}{/if}
+    {$logo_img_max_height_1100 = '50px'}{if $theme_settings.logo_img_max_height_1100}{$logo_img_max_height_1100 = $theme_settings.logo_img_max_height_1100}{/if}
+    {$logo_img_width_mobile = '230px'}{if $theme_settings.logo_img_width_mobile}{$logo_img_width_mobile = $theme_settings.logo_img_width_mobile}{/if}
+    {if empty($is_mobile)}
+        .header-logo img{
+            max-width: {$logo_img_max_width};
+            max-height: {$logo_img_max_height};
+        }
+
+        @media (max-width: 1100px){
+            .header-logo img{
+                max-width: {$logo_img_max_width_1100};
+                max-height: {$logo_img_max_height_1100};
+            }
+        }
+    {else}
+        .header-logo img{
+            max-width: {$logo_img_width_mobile};
+        }
+    {/if}
+
+    {* --- размеры шрифтовой иконки логотипа *}
+
+    {$logo_text_size_font = '33px'}{if $theme_settings.logo_text_size_font}{$logo_text_size_font = $theme_settings.logo_text_size_font}{/if}
+    {$logo_icon_size_font = '29px'}{if $theme_settings.logo_icon_size_font}{$logo_icon_size_font = $theme_settings.logo_icon_size_font}{/if}
+    {$logo_text_size_font_1100 = '28px'}{if $theme_settings.logo_text_size_font_1100}{$logo_text_size_font_1100 = $theme_settings.logo_text_size_font_1100}{/if}
+    {$logo_icon_size_font_1100 = '28px'}{if $theme_settings.logo_icon_size_font_1100}{$logo_icon_size_font_1100 = $theme_settings.logo_icon_size_font_1100}{/if}
+    {$logo_text_size_font_mobile = '28px'}{if $theme_settings.logo_text_size_font_mobile}{$logo_text_size_font_mobile = $theme_settings.logo_text_size_font_mobile}{/if}
+    {$logo_icon_size_font_mobile = '28px'}{if $theme_settings.logo_icon_size_font_mobile}{$logo_icon_size_font_mobile = $theme_settings.logo_icon_size_font_mobile}{/if}
+    {if empty($is_mobile)}
+        .header-logo__text{
+            font-size: {$logo_text_size_font};
+        }
+
+        .header-logo__icon{
+            font-size: {$logo_icon_size_font};
+        }
+
+        @media (max-width: 1100px){
+            .header-logo__text{
+                font-size: {$logo_text_size_font_1100};
+            }
+
+            .header-logo__icon{
+                font-size: {$logo_icon_size_font_1100};
+            }
+        }
+    {else}
+        .header-logo__text{
+            font-size: {$logo_text_size_font_mobile};
+        }
+
+        .header-logo__icon{
+            font-size: {$logo_icon_size_font_mobile};
+        }
+    {/if}
+
+    {* --- настройки слогана логотипа *}
+
+    {$logo_tagline_size = $theme_settings.logo_tagline_font_size}
+    {$logo_tagline_color = $theme_settings.logo_tagline_font_color}
+    {$logo_tagline_line_height = $theme_settings.logo_tagline_line_height}
+    {$logo_tagline_margin_top = $theme_settings.logo_tagline_margin_top}
+
+    {if $logo_tagline_size || $logo_tagline_color || $logo_tagline_line_height || $logo_tagline_margin_top}
+        .header-logo__tagline{
+            {if $logo_tagline_size}font-size: {$logo_tagline_size};{/if}
+            {if $logo_tagline_color}color: {$logo_tagline_color};{/if}
+            {if $logo_tagline_line_height}line-height: {$logo_tagline_line_height};{/if}
+            {if $logo_tagline_margin_top}margin-top: {$logo_tagline_margin_top};{/if}
+        }
+    {/if}
+
+
+    {*  --- Цветовые настройки стикеров товаров  *}
+
+    {if $theme_settings.color_badge_hit || $theme_settings.color_badge_hit_font}
+        .badge.bestseller{
+            {if $theme_settings.color_badge_hit} background: {$theme_settings.color_badge_hit}; {/if}
+            {if $theme_settings.color_badge_hit_font} color: {$theme_settings.color_badge_hit_font}; {/if}
+        }
+    {/if}
+
+    {if $theme_settings.color_badge_new || $theme_settings.color_badge_new_font}
+        .badge.new{
+             {if $theme_settings.color_badge_new} background: {$theme_settings.color_badge_new}; {/if}
+             {if $theme_settings.color_badge_new_font} color: {$theme_settings.color_badge_new_font}; {/if}
+        }
+    {/if}
+
+    {if $theme_settings.color_badge_sale ||  $theme_settings.color_badge_sale_font}
+        .badge.low-price{
+            {if $theme_settings.color_badge_sale} background: {$theme_settings.color_badge_sale}; {/if}
+            {if $theme_settings.color_badge_sale_font} color: {$theme_settings.color_badge_sale_font}; {/if}
+        }
+    {/if}
+
+    {if $theme_settings.color_badge_discount} .product-discount{  color: {$theme_settings.color_badge_discount}; } {/if}
+
+    {if $theme_settings.color_badge_saving_font}
+        .product-saving{
+            {if $theme_settings.color_badge_saving_font} color: {$theme_settings.color_badge_saving_font}; {/if}
+        }
+    {/if}
+
+    {*  --- Цветовые настройки стикеров категорий  *}
+    {if $theme_settings.color_bg_badge_category_custom1 || $theme_settings.color_font_badge_category_custom1}
+        .cat-badge--custom1{
+            {if $theme_settings.color_bg_badge_category_custom1} background: {$theme_settings.color_bg_badge_category_custom1}; {/if}
+            {if $theme_settings.color_font_badge_category_custom1} color: {$theme_settings.color_font_badge_category_custom1}; {/if}
+        }
+    {/if}
+
+    {if $theme_settings.color_bg_badge_category_custom2 || $theme_settings.color_font_badge_category_custom2}
+        .cat-badge--custom2{
+            {if $theme_settings.color_bg_badge_category_custom2} background: {$theme_settings.color_bg_badge_category_custom2}; {/if}
+            {if $theme_settings.color_font_badge_category_custom2} color: {$theme_settings.color_font_badge_category_custom2}; {/if}
+        }
+    {/if}
+
+    {if $theme_settings.color_bg_badge_category_custom3 || $theme_settings.color_font_badge_category_custom3}
+        .cat-badge--custom3{
+            {if $theme_settings.color_bg_badge_category_custom3} background: {$theme_settings.color_bg_badge_category_custom3}; {/if}
+            {if $theme_settings.color_font_badge_category_custom3} color: {$theme_settings.color_font_badge_category_custom3}; {/if}
+        }
+    {/if}
+
+
+    {*  --- Выравнивание картинки в карточке товара  *}
+    {if $theme_settings.product_gallery_align_middle}
+        .product-gallery-main{
+            align-self: center;
+        }
+
+        .product-gallery-main.owl-carousel .owl-stage{
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-card__gallery{
+            justify-content: center;
+        }
+    {/if}
+
+    {*  --- Настройки высоты основной картинки в карточке товара  *}
+    {$theme_settings.product_gallery_main_height = (int)$theme_settings.product_gallery_main_height}
+    {if $theme_settings.product_gallery_main_height}
+        .product-gallery-main__el-outer{
+            height:  {$theme_settings.product_gallery_main_height}px;
+            line-height: {$theme_settings.product_gallery_main_height}px;
+        }
+
+
+        .product-gallery-main__el-outer img{
+            max-height:  {$theme_settings.product_gallery_main_height}px;
+        }
+    {/if}
+
+
+    {*  --- Настройки высоты блока c наименованием в превью товара типа "Плитка"  *}
+
+    {$tile_preview_name_height = (int)$theme_settings.tile_preview_name_height}
+    {if $tile_preview_name_height}
+        .product-tile__name{
+            max-height: {$tile_preview_name_height}px;
+        }
+    {/if}
+    {$tile_preview_name_height_mobile = (int)$theme_settings.tile_preview_name_height_mobile}
+    @media (max-width: 480px){
+        .product-tile__name{
+            max-height: {if $tile_preview_name_height_mobile}{$tile_preview_name_height_mobile}px{else}none{/if};
+        }
+    }
+
+
+    {*  --- Цветовые настройки информационного сообещения в шапке сайта  *}
+
+    {if $theme_settings.info_message_background || $theme_settings.info_message_border_bottom || $theme_settings.info_message_color}
+        .info-massage{
+            {if $theme_settings.info_message_background}background-color: {$theme_settings.info_message_background};{/if}
+            {if $theme_settings.info_message_border_bottom}border-bottom: 1px solid #ebebeb;{/if}
+            {if $theme_settings.info_message_color}color: {$theme_settings.info_message_color};{/if}
+        }
+    {/if}
+
+
+    {*  --- Настройки для падднига и высоты блока с картинкой в превью типа "Плитка"  *}
+
+    {$product_tile_block_image_padding = "30"}
+    {$product_tile_block_image_height = "240"}
+    {$product_tile_block_image_padding = (int)$theme_settings.product_tile_image_padding}
+    {$product_tile_block_image_height = (int)$theme_settings.product_tile_image_height}
+
+    .product-tile__image{
+        padding: {$product_tile_block_image_padding}px {$product_tile_block_image_padding}px 0;
+        {if $product_tile_block_image_height > 0}
+            height: {$product_tile_block_image_height}px;
+            line-height: {$product_tile_block_image_height}px;
+        {/if}
+    }
+
+    {if $product_tile_block_image_height > 0}
+        .product-tile__image img{
+            max-height: {$product_tile_block_image_height-20}px;
+        }
+    {/if}
+
+    {if $product_tile_block_image_padding > 20 || $product_tile_block_image_height > 200}
+        @media (max-width: 1430px) and (min-width: 1251px){
+            .cols-3 .product-tile__image{
+                {if $product_tile_block_image_padding > 20}
+                    padding: 20px 20px 0;
+                {/if}
+                {if $product_tile_block_image_height > 200}
+                    height: 200px;
+                    line-height: 180px;
+                {/if}
+            }
+            {if $product_tile_block_image_height > 200}
+                .cols-3 .product-tile__image img{
+                    max-height: 180px;
+                }
+            {/if}
+        }
+    {/if}
+
+    {if $product_tile_block_image_padding > 20}
+        @media (max-width: 1150px) and (min-width: 1001px){
+            .cols-2 .product-tile__image,
+            .cols-3 .product-tile__image{
+                padding: 20px 20px 0;
+            }
+        }
+    {/if}
+
+    {if $product_tile_block_image_height > 180}
+        @media (max-width: 1080px) and (min-width: 1001px){
+            .cols-2 .product-tile__image,
+            .cols-3 .product-tile__image{
+                height: 180px;
+                line-height: 180px;
+            }
+
+            .cols-2 .product-tile__image img,
+            .cols-3 .product-tile__image img{
+                max-height: 180px;
+            }
+        }
+
+        @media (max-width: 1024px){
+            .product-tile__image{
+                height: 180px;
+                line-height: 180px;
+            }
+
+            .product-tile__image img{
+                max-height: 180px;
+            }
+        }
+    {/if}
+
+    {if $product_tile_block_image_padding > 20}
+        @media (max-width: 850px) and (min-width: 361px) {
+            .product-tile__image {
+                padding: 20px 20px 0;
+            }
+        }
+    {/if}
+
+    {if $product_tile_block_image_height > 130}
+        @media (max-width: 580px){
+            .product-tile__image{
+                height: 130px;
+                line-height: 130px;
+            }
+
+            .product-tile__image img{
+                max-height: 130px;
+            }
+        }
+    {/if}
+
+
+    {*  --- Настройки для падднига и высоты блока с картинкой в превью типа "Плитка" для мобильной версии  *}
+
+    {$product_tile_block_image_padding_mobile = "10"}
+    {$product_tile_block_image_height_mobile = "100"}
+    {$product_tile_block_image_padding_mobile = (int)$theme_settings.product_tile_image_padding_mobile}
+    {$product_tile_block_image_height_mobile = (int)$theme_settings.product_tile_image_height_mobile}
+
+    {if $product_tile_block_image_height_mobile > 0}
+        @media (max-width: 500px){
+            .product-tile__image{
+                height: {$product_tile_block_image_height_mobile}px;
+                line-height: {$product_tile_block_image_height_mobile}px;
+            }
+
+            .product-tile__image img{
+                max-height: {$product_tile_block_image_height_mobile}px;
+            }
+        }
+    {/if}
+
+    @media (max-width: 379px){
+        .product-tile__image{
+            padding: {$product_tile_block_image_padding_mobile}px {$product_tile_block_image_padding_mobile}px 0;
+        }
+    }
+
+
+    {*  --- Настройки для падднига блока с картинкой в превью типа "Список"  *}
+
+    {$product_list_block_image_padding = "40"}
+    {$product_list_block_image_width = "220"}
+    {* $product_list_block_image_padding = (int)$theme_settings.product_list_image_padding *}
+    {if (int)$theme_settings.product_list_image_width > 0}{$product_list_block_image_width = (int)$theme_settings.product_list_image_width}{/if}
+
+    .product-list__left{
+        padding: {$product_list_block_image_padding}px;
+        padding-right: 0;
+        width: {$product_list_block_image_width}px;
+    }
+
+    .product-list__left .badge{
+        top: {$product_list_block_image_padding}px;
+    }
+
+    {if $product_list_block_image_padding > 15}
+        @media (min-width: 1001px){
+            .cols-3 .product-list__left{
+                padding: 15px;
+            }
+            .cols-3 .product-list__left .badge{
+                top: 15px;
+            }
+        }
+
+        @media (max-width: 1250px) and (min-width: 1001px){
+            .cols-2 .product-list__left{
+                padding: 15px;
+            }
+            .cols-2 .product-list__left .badge{
+                top: 15px;
+            }
+        }
+
+        @media (max-width: 900px){
+            .product-list__left{
+                padding: 15px;
+            }
+            .product-list__left .badge{
+                top: 15px;
+            }
+        }
+    {/if}
+
+    {if $product_list_block_image_width > 150}
+        @media (max-width: 1400px) and (min-width: 1250px){
+            .cols-3 .product-list__left{
+                width: 150px;
+            }
+        }
+        @media (max-width: 1150px) and (min-width: 1001px){
+            .cols-2 .product-list__left,
+            .cols-3 .product-list__left{
+                vertical-align: top;
+                width: 150px;
+            }
+        }
+        @media (max-width: 600px){
+            .product-list__left{
+                width: 150px;
+            }
+        }
+    {/if}
+
+    @media (max-width: 400px){
+        .product-list__left{
+            float: none;
+            text-align: center;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    {*  --- Настройки высоты блока с картинкой в превью типа "Список"  *}
+    {$product_list_block_image_max_height = (int)$theme_settings.product_list_image_max_height}
+    {if $product_list_block_image_max_height}
+        .product-list__image img{
+            max-height: {$product_list_block_image_max_height}px;
+        }
+    {/if}
+    {$product_list_block_image_max_height_mobile = (int)$theme_settings.product_list_image_max_height_mobile}
+    {if $product_list_block_image_max_height_mobile}
+        @media (max-width: 400px){
+            .product-list__image img{
+                max-height: {$product_list_block_image_max_height_mobile}px;
+            }
+        }
+    {/if}
+
+    {$sidebar_max_plugins = (int)$theme_settings.sidebar_plugin_max}
+    {if $sidebar_max_plugins > 0}
+        .sidebar-wrap--plugin .menu-v li:nth-child({$sidebar_max_plugins}) ~ li:not(.show){
+            display: none;
+        }
+    {/if}
+
+
+</style>
+{/strip}

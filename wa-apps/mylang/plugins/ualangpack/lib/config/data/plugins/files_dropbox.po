@@ -1,0 +1,107 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst Files Dropbox plugin 1.1.0.54 UA translation v 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2015-12-23 10:00+0000\n"
+"PO-Revision-Date: \n"
+"Language: uk_UA\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Provides integration with Dropbox accounts"
+msgstr "Забезпечує інтеграцію з обліковими записами Dropbox"
+
+msgid "Issued by Dropbox for your application"
+msgstr "Надається Dropbox для вашого додатку"
+
+#: /wa-apps/files/plugins/dropbox/lib/filesDropboxPlugin.class.php:90
+msgid "To receive App key and secret <a href=\"https://www.dropbox.com/developers/apps/create\" target=\"_blank\">register an application</a> on the Dropbox Platform.<br> Choose <strong>Dropbox API</strong> and <strong>App folder access</strong>."
+msgstr "Аби отримати ключ та секрет додатку, <a href=\"https://www.dropbox.com/developers/apps/create\" target=\"_blank\">зареєструйте додаток</a> на платформі Dropbox.<br> Оберіть <strong>Dropbox API</strong> та <strong>доступ додатку до папки (App folder access)</strong>."
+
+#: /wa-apps/files/plugins/dropbox/lib/filesDropboxPlugin.class.php:114
+msgid "URL(https) where a user will return after Dropbox OAuth authorization."
+msgstr "URL (https), до якого буде повернуто користувача після авторизації Dropbox OAuth."
+
+#: /wa-apps/files/plugins/dropbox/lib/filesDropboxPlugin.class.php:115
+msgid "Copy specified URL to the appropriate field in your Dropbox application settings."
+msgstr "Скопіюйте вказаний URL до відповідного поля у налаштуваннях додатку Dropbox."
+
+#: /wa-apps/files/plugins/dropbox/lib/filesDropboxPlugin.class.php:116
+msgid "If you do not have a valid HTTPS certificate for your domain name, leave this field empty."
+msgstr "Якщо у вас немає дійсного сертифікату HTTPS для вашого домену, залиште це поле порожнім."
+
+#: /wa-apps/files/plugins/dropbox/lib/filesDropboxPlugin.class.php:69
+#: /wa-apps/files/plugins/dropbox/lib/filesDropboxPlugin.class.php:65
+msgid "You are signed into a different Dropbox account"
+msgstr "Ви увійшли до іншого облікового запису Dropbox"
+
+#: /wa-apps/files/plugins/dropbox/lib/filesDropboxPlugin.class.php:115
+#: /wa-apps/files/plugins/dropbox/lib/filesDropboxPlugin.class.php:111
+msgid "oAuth2 Redirect URI"
+msgstr "oAuth2 Redirect URI"
+
+#: /wa-apps/files/plugins/dropbox/lib/templates/authorize.html:25
+msgid "You will be sended to Dropbox page, where you need to confirm the access to your Dropbox account."
+msgstr "Вас буде перенаправлено на сторінку в Dropbox, де вам необхідно підтвердити доступ до вашого облікового запису Dropbox."
+
+#: /wa-apps/files/plugins/dropbox/lib/templates/authorize.html:26
+msgid "After confirmation you will get the connection code that must be manually copied to finish the connection process."
+msgstr "Після підтвердження ви отримаєте код, який необхідно скопіювати вручну, щоб завершити процес підключення."
+
+#: /wa-apps/files/plugins/dropbox/lib/templates/authorize.html:29
+msgid "Receive connection code"
+msgstr "Отримати код підключення"
+
+#: /wa-apps/files/plugins/dropbox/lib/templates/authorize.html:32
+msgid "or"
+msgstr "або"
+
+#: /wa-apps/files/plugins/dropbox/lib/templates/authorize.html:33
+msgid "cancel"
+msgstr "відміна"
+
+#: /wa-apps/files/plugins/dropbox/lib/templates/authorize.html:46
+msgid "Enter code provided by Dropbox to finish the connection process."
+msgstr "Введіть код, наданий Dropbox, аби завершити процес підключення."
+
+#: /wa-apps/files/plugins/dropbox/lib/templates/authorize.html:48
+msgid "Connection code"
+msgstr "Код підключення"
+
+#: /wa-apps/files/plugins/dropbox/lib/templates/authorize.html:55
+msgid "Connect"
+msgstr "Підключити"
+
+#: /wa-apps/files/plugins/dropbox/lib/config/requirements.php:8
+msgid "Max memory limit"
+msgstr "Максимальний ліміт пам&#39;яті"
+
+#: /wa-apps/files/plugins/dropbox/lib/classes/filesDropboxSourceProvider.class.php:12
+#: /wa-apps/files/plugins/dropbox/lib/classes/filesDropboxSourceProvider.class.php:17
+msgid "Dropbox"
+msgstr "Dropbox"
+
+#: /wa-apps/files/plugins/dropbox/lib/classes/filesDropboxOauth.class.php:97
+msgid "Session protection validated"
+msgstr "Захист сесії затверджено"
+
+#: /wa-apps/files/plugins/dropbox/lib/classes/filesDropboxOauth.class.php:114
+msgid "Code for generating token is not received"
+msgstr "Код для генерації токена не отримано"
+
+#: /wa-apps/files/plugins/dropbox/lib/classes/filesDropboxOauth.class.php:146
+msgid "Token is not generated"
+msgstr "Токен не згенеровано"
+
+#: /wa-apps/files/plugins/dropbox/lib/actions/filesDropboxPluginAuthorize.controller.php:23
+msgid "Invalid code specified"
+msgstr "Вказано невірний код"

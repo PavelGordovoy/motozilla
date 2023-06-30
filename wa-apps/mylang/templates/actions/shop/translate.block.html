@@ -1,0 +1,18 @@
+<ul class="menu-h dropdown">
+    <li class="float-right" style="width:150px">
+        {$providers = $wa->mylang->providers()}
+        {if $providers}
+            <a href="#" onClick="return false;"><i class="icon16 globe"></i><span>[`Translate empty`]</span></a>
+            <ul class="menu-v">
+                {foreach $providers as $key=>$provider}
+                    <li><span class="translate-provider" onClick="$.mylang.backend.translate('{$key}')">{$provider|escape}</span></li>
+                {/foreach}
+            </ul>
+        {else}
+            <span class="gray">[`No translate plugins`]</span>
+        {/if}
+    </li>
+</ul>
+{capture name="mylang_widen" assign=mylangWidenAll}
+    <span class="float-right" id="mylang-widen-all"><i class="icon16 larr"></i><i class="icon16 rarr"></i></span>
+{/capture}

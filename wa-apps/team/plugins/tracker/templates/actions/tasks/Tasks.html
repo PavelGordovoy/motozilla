@@ -1,0 +1,104 @@
+{strip}
+{$show = waRequest::get('show')}
+{$group_id = waRequest::get('group')}
+{$status = waRequest::get('status')}
+{$level = waRequest::get('level')}
+
+<div>
+<header class="t-content-header">
+	<h1 style="margin-bottom: 10px;">
+	Задачи
+	{if teamTrackerAccess::canAddTask()}
+		<a href="?plugin=tracker&module=tasks&action=add"><i class="icon16 add router-loading-indicator"></i></a>
+	{/if}
+	</h1>
+</header>
+<ul class="menu-h with-icons">
+	<li{if !$show} class="selected"{/if}><a href="?plugin=tracker&module=tasks{if $status}&status={$status}{/if}">все {if !$status}активные {/if}задачи</a></li>
+	<li{if $show == 'my'} class="selected"{/if}><a href="?plugin=tracker&module=tasks&show=my{if $status}&status={$status}{/if}">задачи для меня</a></li>
+	{foreach teamTrackerPlugin::getUserGroups() as $id => $group}
+	<li{if $show == 'group' && $group_id == $id} class="selected"{/if}><a href="?plugin=tracker&module=tasks&show=group&group={$id}{if $status}&status={$status}{/if}"><i class="icon16 {ifempty($group['icon'], 'user')}"></i> {mb_strtolower($group['name'])}</a></li>
+	{/foreach}
+	{if teamHelper::hasRights('tracker.view_any')}<li{if $show == 'all'} class="selected"{/if}><a href="?plugin=tracker&module=tasks&show=all{if $status}&status={$status}{/if}" class="bold">все существующие задачи</a></li>{/if}
+</ul>
+
+{if count($tasks)}
+{foreach $tasks as $task}
+<div class="ui {teamTrackerPlugin::$status_semantic_ui_class[$task['status']]} message level-{$task['level']} {if $task['expired']}expired{/if}" {if $task['unread']}style="background: #ffffca;"{/if}>
+	<a href="?plugin=tracker&module=tasks{if $show}&show={$show}{/if}{if $status}&status={$status}{/if}&level={$task['level']}" class="ui {teamTrackerPlugin::$level_semantic_ui_class[$task['level']]} ribbon label">{teamTrackerPlugin::$level[$task['level']]}</a>
+	<span class="header" style="display: inline;"><a href="?plugin=tracker&module=task&id={$task['id']}">{if $task['status'] == 'deleted'}<s>{/if}{$task['title']|escape:'html'}{if $task['status'] == 'deleted'}</s>{/if}</a></span>
+	<div style="float: right; margin-right: -5px;" class="ui {teamTrackerPlugin::$level_semantic_ui_class[$task['level']]} label">
+		<i class="calendar icon"></i> {if $task['expired']}<s>{/if}До {$task['until_date']|wa_date:'humandate'} {ifempty($task['until_time'])}{if $task['expired']}</s>{/if}
+	</div>
+	<div style="margin-top: 10px;" class="small">для {if $task['type'] == 'contact'}&nbsp;<a href="u/{$task['contributor_contact']->get('login')}/"><img class="ui avatar image" src="{$task['contributor_contact']->getPhoto()}"/>{else}<a href="group/{$task['contributor_group_id']}/">{/if} <b>{$task['name']}</b></a> от &nbsp;<a href="u/{$task['manager_contact']->get('login')}/"><img class="ui avatar image" src="{$task['manager_contact']->getPhoto()}"/> <b>{$task['manager_name']}</b></a> {$task['date']|wa_date:'humandatetime'}</div>
+	<div class="ui mini steps">
+		<div class="{if $task['status'] == 'new'}active{else}disabled{/if} step">
+			<i class="sticky note icon"></i>
+			<div class="content">
+				<div class="title">Новый</div>
+			</div>
+		</div>
+		<div class="{if $task['status'] == 'checking'}active{else}disabled{/if} step">
+			<i class="unhide icon"></i>
+			<div class="content">
+				<div class="title">На рассмотрении</div>
+			</div>
+		</div>
+		{if $task['status'] == 'deleted'}
+		<div class="active step">
+			<i class="remove icon red"></i>
+			<div class="content">
+				<div class="title">Отклонено</div>
+			</div>
+		</div>
+		{else}
+		<div class="{if $task['status'] == 'processing'}active{else}disabled{/if} step">
+			<i class="wait icon"></i>
+			<div class="content">
+				<div class="title">В процессе</div>
+			</div>
+		</div>
+		<div class="{if $task['status'] == 'done'}active{else}disabled{/if} step">
+			<i class="checkmark icon{if $task['status'] == 'done'} green{/if}"></i>
+			<div class="content">
+				<div class="title">Выполнено</div>
+			</div>
+		</div>
+		{/if}
+	</div>
+</div>
+{/foreach}
+
+{if count($pagination) > 1}
+<div style="margin-top: 20px;" class="paging">
+	<div class="c-page-list">
+		<span style="margin-right: 20px;">Всего записей: {$total_tasks}</span>
+		<span>
+			{foreach $pagination as $page_n => $offset}
+				{if $offset !== false}
+					<a{if $page == $page_n} class="selected"{/if} href="?plugin=tracker&module=tasks{if $show}&show={$show}{/if}{$url_params}&page={$page_n}">{$page_n}</a>
+				{else}
+					...
+				{/if}
+			{/foreach}
+			{if $page != 1}
+				<a href="?plugin=tracker&module=tasks{if $show}&show={$show}{/if}{$url_params}&page={$page-1}" class="prevnext"><i class="icon10 larr"></i> [`пред`]</a>
+			{/if}
+			{if $page != $page_n}
+				<a href="?plugin=tracker&module=tasks{if $show}&show={$show}{/if}{$url_params}&page={$page+1}" class="prevnext">[`след`] <i class="icon10 rarr"></i></a>
+			{/if}
+		</span>
+	</div>
+</div>
+{/if}
+
+{else}
+	<p style="margin-top: 10px;">Не найдено ни одной задачи.</p>
+{/if}
+<script type="text/javascript">
+	(function($) {
+		$.team.setTitle('{$title|escape}');
+	})(jQuery);
+</script>
+</div>
+{/strip}

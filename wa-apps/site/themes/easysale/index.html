@@ -1,0 +1,277 @@
+{strip}
+
+<!DOCTYPE html>
+
+{$html_class_array = []}
+{if $theme_settings.color_scheme_custom}
+    {$color_scheme = 'color_scheme_custom'}
+{else}
+    {$color_scheme = 'color_scheme_'|cat:str_replace('img/themesettings/','',str_replace('.png','',$theme_settings.color_scheme))}
+{/if}
+
+{if $theme_settings.color_scheme}{$html_class_array[] = $color_scheme}{/if}
+
+<html lang="{if $wa->locale()}{$wa->locale()}{else}en{/if}"{if !empty($html_class_array)} class="{join(' ', $html_class_array)}"{/if}{if $theme_settings.color_scheme_custom} data-custom="{$theme_settings.color_scheme_custom}"{/if} data-mobile="{if $wa->isMobile()}true{else}false{/if}" itemscope itemtype="http://schema.org/{if $wa->shop && $wa->app() == 'shop'}{if $action == 'default'}Store{else}WebPage{/if}{else}WebPage{/if}">
+<head>
+    <title>{$wa->title()}</title>
+
+    {* META *}
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="keywords" content="{$wa->meta('keywords')|escape}" />
+    <meta name="description" content="{$wa->meta('description')|escape}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {* ICO *}
+    <link rel="shortcut icon" href="{$wa_static_url}favicon.ico" />
+
+    {* CSS *}
+    <link href="{$wa_real_theme_url}plugins/bootstrap/bootstrap.min.css?v{$wa_theme_version}" rel="stylesheet" />
+    <link href="{$wa_real_theme_url}plugins/bootstrap/normalize.min.css?v{$wa_theme_version}" rel="stylesheet" />
+    <link href="{$wa_real_theme_url}plugins/swipebox/css/swipebox.min.css?v{$wa_theme_version}" rel="stylesheet" />
+    <link href="{$wa_real_theme_url}css/animate.css?v{$wa_theme_version}" rel="stylesheet" />
+    <link href="{$wa_real_theme_url}css/easysale.css?v{$wa_theme_version}" rel="stylesheet" />
+    <link href="{$wa_real_theme_url}css/mobile.css?v{$wa_theme_version}" rel="stylesheet" />
+    <link href="{$wa_real_theme_url}css/font-awesome.min.css?v{$wa_theme_version}" rel="stylesheet" />
+    <link href="{$wa_real_theme_url}css/simple-line-icons.css?v{$wa_theme_version}" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&subset=cyrillic-ext" rel="stylesheet">
+    <link href="{$wa_url}wa-content/font/ruble/arial/fontface.css" rel="stylesheet" />
+    <link href="{$wa_real_theme_url}css/default.css?v{$wa_theme_version}" rel="stylesheet" />
+
+    {$wa->css()}
+
+    {* JS *}
+    <script src="{$wa_static_url}wa-content/js/jquery/jquery-1.11.1.min.js"></script>
+    <script src="{$wa_static_url}wa-content/js/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script src="{$wa_real_theme_url}plugins/bootstrap/tether.min.js?v{$wa_theme_version}"></script>
+    <script src="{$wa_real_theme_url}plugins/bootstrap/bootstrap.min.js?v{$wa_theme_version}"></script>
+    <script src="{$wa_real_theme_url}plugins/jquery.touchSwipe.min.js?v{$wa_theme_version}"></script>
+    <script src="{$wa_real_theme_url}plugins/jquery.waitforimages.min.js?v{$wa_theme_version}"></script>
+    {if $wa->shop} {* Search autocomplete *}
+        <script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery-ui/jquery.ui.core.min.js?v{$wa->version(true)}"></script>
+        <script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery-ui/jquery.ui.widget.min.js?v{$wa->version(true)}"></script>
+        <script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery-ui/jquery.ui.position.min.js?v{$wa_theme_version}"></script>
+        <script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery-ui/jquery.ui.autocomplete.min.js?v{$wa_theme_version}"></script>
+    {/if}
+    <script src="{$wa_real_theme_url}plugins/swipebox/js/jquery.swipebox.min.js?v{$wa_theme_version}"></script>
+    <script src="{$wa_real_theme_url}plugins/jquery.matchHeight.min.js?v{$wa_theme_version}"></script>
+    <script src="{$wa_real_theme_url}js/easysale.js?v{$wa_theme_version}"></script>
+    <script src="{$wa_real_theme_url}js/default.js?v{$wa_theme_version}"></script>
+
+    {$wa->js()}
+
+    {include file="`$wa_active_theme_path`/head.html" inline}
+
+    {$wa->head()}
+
+
+</head>
+<body{if $theme_settings.theme_shadows} class="s-theme-shadows"{/if}>
+
+{* MOBILE MENU *}
+<div id="s-mobile-nav" class="collapse{if empty($theme_settings.mobile_toggle)} hidden-xl-up{/if}">
+    {if $wa->isAuthEnabled()}
+      <div class="s-mobile-auth">
+          <ul class="list-inline">
+              <li class="list-inline-item"><a class="nav-link" href="{$wa->getUrl('/frontend/myProfile')}">{if $wa->user()->isAuth()}[s`My profile`]{else}[`Login`]{/if}</a></li>
+              {if $wa->user()->isAuth()}
+                  <li class="list-inline-item"><a class="nav-link" href="?logout">[s`Log out`]</a></li>
+              {else}
+                  <li class="list-inline-item"><a class="nav-link" href="{$wa->signupUrl()}">[s`Sign up`]</a></li>
+              {/if}
+          </ul>
+      </div>
+    {/if}
+    {if $wa->shop}
+        <div class="s-mobile-search hidden-md-up">
+            <div class="s-search-wrapper">
+                <form method="get" action="{$wa->getUrl("shop/frontend/search")}" data-url="{$wa->getUrl("shop/frontend/search")}">
+                    {$_query = $smarty.get.query|default:''|escape}
+                    <input class="s-text-input" type="text" name="query" value="{if !empty($_query)}{$_query}{/if}" placeholder="[`Search`]">
+                    <input class="s-submit-input" type="submit" value="">
+                </form>
+            </div>
+        </div>
+    {/if}
+    <ul>
+        {include file="`$wa_active_theme_path`/header.html" inline mobile=1}
+    </ul>
+</div>
+
+{* MAIN SITE WRAPPER *}
+<div class="s-main-wrapper">
+
+    {* SALE HEADER *}
+    {$sale_header = waRequest::cookie('sale_header', 'true')}
+    {if !empty($sale_header) && $sale_header != 'false' && !empty($theme_settings.sale_header)}
+        <div id="s-sale-header" class="hidden-sm-down" style="background-image: url('{$wa_real_theme_url}{$theme_settings.sale_header}?v{$wa_theme_version}');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-right">
+                        <i class="fa fa-2x fa-times" aria-hidden="true"></i>
+                    </div>
+                </div>
+                {if !empty($theme_settings.sale_header_link)}<a class="s-link" href="{$theme_settings.sale_header_link}"></a>{/if}
+            </div>
+        </div>
+    {/if}
+
+    {*HEADER*}
+    {include file="./header.layout.html" inline}
+
+    {* SLIDER *}
+    {if !empty($theme_settings.slider_home_only) && $wa->app() == 'shop' && ($wa->currentUrl(false, true) == $wa_app_url || $theme_settings.contacts_page && $wa->currentUrl()|strpos:"{$theme_settings.contacts_page}")}
+        {if empty($theme_settings.slider_width)}<div class="container push-top even">{/if}
+
+            {$promocards = $wa->shop->promos()}
+            {$_show_photos_slider = ( $theme_settings.slider_mode == "photos" )}
+            {$_show_products_slider = ( $theme_settings.slider_mode == "products" )}
+            {$_show_promocards_slider = ( $theme_settings.slider_mode == "promos" )}
+
+            {if $_show_photos_slider}
+                {if $theme_settings.slider_photos_products_id && $wa->photos}
+                    {$photos = $wa->photos->photos("/album/{$theme_settings.slider_photos_products_id}", "1500")}
+                    {include file="`$wa_active_theme_path`/home.slider.html" _photos=$photos inline}
+                {/if}
+            {elseif $_show_products_slider}
+                {if $theme_settings.slider_photos_products_id}
+                    {$_bestsellers = $wa->shop->productSet({$theme_settings.slider_photos_products_id})}
+                    {if !empty($_bestsellers)}
+                        {include file="`$wa_active_theme_path`/home.slider.html" _products=$_bestsellers inline}
+                    {/if}
+                {/if}
+            {elseif $_show_promocards_slider}
+                {if !empty($promocards)}
+                    {include file="`$wa_active_theme_path`/home.slider.html" _promocards=$promocards inline}
+                {/if}
+            {/if}
+        {if empty($theme_settings.slider_width)}</div>{/if}
+    {elseif empty($theme_settings.slider_home_only) && $wa->app() == 'shop'}
+        {if empty($theme_settings.slider_width)}<div class="container push-top even">{/if}
+
+            {$promocards = $wa->shop->promos()}
+            {$_show_photos_slider = ( $theme_settings.slider_mode == "photos" )}
+            {$_show_products_slider = ( $theme_settings.slider_mode == "products" )}
+            {$_show_promocards_slider = ( $theme_settings.slider_mode == "promos" )}
+
+            {if $_show_photos_slider}
+                {if $theme_settings.slider_photos_products_id && $wa->photos}
+                    {$photos = $wa->photos->photos("/album/{$theme_settings.slider_photos_products_id}", "1500")}
+                    {include file="`$wa_active_theme_path`/home.slider.html" _photos=$photos inline}
+                {/if}
+            {elseif $_show_products_slider}
+                {if $theme_settings.slider_photos_products_id}
+                    {$_bestsellers = $wa->shop->productSet({$theme_settings.slider_photos_products_id})}
+                    {if !empty($_bestsellers)}
+                        {include file="`$wa_active_theme_path`/home.slider.html" _products=$_bestsellers inline}
+                    {/if}
+                {/if}
+            {elseif $_show_promocards_slider}
+                {if !empty($promocards)}
+                    {include file="`$wa_active_theme_path`/home.slider.html" _promocards=$promocards inline}
+                {/if}
+            {/if}
+        {if empty($theme_settings.slider_width)}</div>{/if}
+    {/if}
+
+    {* CONTENT AREA *}
+    <div class="s-main-block">
+
+        {if ($wa->currentUrl(false, true) != $wa_app_url && $wa->app() == 'shop') || $wa->app() != 'shop'}
+            <div class="container">
+                <div class="row">
+        {/if}
+
+                    {* BREADCRUMBS *}
+                    {include file="`$wa_active_theme_path`/breadcrumbs.html" inline}
+
+                    {* LEFT SIDEBAR *}
+                    {$show_sidebar = $wa->globals("hideSidebar")}
+                    {if empty($show_sidebar)}
+                        <aside class="s-sidebar-wrapper col-lg-3 col-md-4 col-xs-12">
+                            <div class="s-sidebar-block">
+                                {include file="`$wa_active_theme_path`/sidebar.html" inline}
+                            </div>
+                        </aside>
+                    {/if}
+
+                    {* CONTENT *}
+                    <main class="s-content-wrapper{if empty($show_sidebar)} s-with-sidebar col-lg-9 col-md-8 col-xs-12{/if}">
+                        <div class="s-content-block" id="s-content-block">
+                            {include file="`$wa_active_theme_path`/main.html" inline}
+                        </div>
+                    </main>
+
+        {if ($wa->currentUrl(false, true) != $wa_app_url && $wa->app() == 'shop') || $wa->app() != 'shop'}
+                </div>
+            </div>
+        {/if}
+
+    </div>
+
+    {*FOOTER*}
+    {include file="./footer-all.html" inline}
+
+</div>
+
+{if !empty($theme_settings.feedback_link) && $wa->currentUrl(false, true) != $theme_settings.feedback_link}
+<div id="callback-dialog" class="dialog">
+  <div class="dialog-background cancel"></div>
+  <div class="dialog-window">
+    <div class="dialog-body">
+      <div class="dialog-buttons default-color"><i class="fa fa-times dialog-close cancel"></i></div>
+      {$errors = array()}
+      {if empty($theme_settings.feedback_captcha)}
+      {$wa->storage(['captcha', $wa->app()], '')}
+      {/if}
+      {if $wa->post("send") and $wa->sendEmail("", $errors)}
+      <h1>Спасибо!</h1>
+      <p>Ваше сообщение было отправлено.</p>
+      {else}
+      <form class="contact-form contact-section" method="post" action="{if !empty($theme_settings.feedback_link)}{$theme_settings.feedback_link}{else}/feedback/{/if}">
+      <div class="form-content">
+      <div class="input-group push-bottom">
+        <span class="input-group-addon default-color"><i class="fa fa-user"></i></span>
+        <input class="form-control" type="text" name="name" placeholder="Имя" value="{$wa->post('name')|escape}">
+      </div>
+      <div class="input-group push-bottom{if empty($theme_settings.feedback_email)} hidden{/if}">
+        <span class="input-group-addon default-color"><i class="fa fa-envelope-o"></i></span>
+        <input class="form-control{if !empty($errors.email)} wa-error{/if}" type="email" name="email" placeholder="Email" value="{if !empty($theme_settings.feedback_email)}{$wa->post('email')|escape}{else}noreply@{$wa->domainUrl()|replace:'https://':''|replace:'http://':''}{/if}">
+      </div>
+      {if !empty($theme_settings.feedback_phone)}
+        <div class="input-group push-bottom">
+          <span class="input-group-addon default-color"><i class="fa fa-phone"></i></span>
+          <input class="form-control{if !empty($errors.body)} wa-error{/if}" type="text" name="body" placeholder="Телефон" value="{$wa->post('body')|escape}">
+          </div>
+      {else}
+        <div class="input-group push-bottom">
+            <textarea class="form-control{if !empty($errors.body)} wa-error{/if}" name="body" placeholder="Сообщение">{$wa->post("body")|escape}</textarea>
+        </div>
+      {/if}
+      <input type="hidden" name="subject" value="Запрос с сайта {$wa->currentUrl(true)}">
+      {if !empty($theme_settings.feedback_captcha)}
+        <div class="wa-captcha-section">
+          {$wa->captcha(!empty($errors.captcha))}
+        </div>
+      {/if}
+      <div class="keep-left text-left">
+        <input type="hidden" name="send" value="feedback">
+        <input class="btn btn-default" type="submit" value="Отправить">
+      </div>
+      </div>
+      </form>
+      {/if}
+    </div>
+  </div>
+</div>
+{/if}
+
+<script src="{$wa_static_url}wa-content/js/jquery-wa/wa.dialog.js"></script>
+
+<div id='s-top-button' class="default-bg"><i class="fa fa-3x fa-angle-up"></i></div>
+
+</body>
+</html>
+
+{/strip}

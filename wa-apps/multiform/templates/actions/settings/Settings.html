@@ -1,0 +1,34 @@
+{*
+* @author Gaponov Igor <gapon2401@gmail.com>
+    *}
+
+<div class="shadowed blank">
+    <form action="about:blank" id="settings-form">
+        <div class="block double-padded fields">
+            <div class="field">
+                <div class="name">[`Page with list of all forms. Link address of form name`]</div>
+                <div class="value">
+                    <div class="margin-block bottom">
+                        <label>
+                            <input type="radio" name="settings[backend-form-name-link]" value="edit" {if (!empty($settings['backend-form-name-link']) && $settings['backend-form-name-link'] == 'edit') || !isset($settings['backend-form-name-link'])}checked{/if}>
+                            [`Page of form editing`]
+                        </label>
+                    </div>
+                    <div class="margin-block bottom">
+                        <label>
+                            <input type="radio" name="settings[backend-form-name-link]" value="records" {if (!empty($settings['backend-form-name-link']) && $settings['backend-form-name-link'] == 'records')}checked{/if}>
+                            [`Page of form records`]
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="errormsg block"></div>
+            <div><input type="submit" value="[`Save`]" class="button green" /></div>
+        </div>
+    </form>
+</div>
+<script>
+    $(function() {
+        $.settings.init();
+    });
+</script>

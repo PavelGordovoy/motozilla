@@ -1,0 +1,2746 @@
+
+
+msgid ""
+msgstr "Content-Transfer-Encoding: 8bit\nContent-Type: text/plain; charset=utf-8\nLanguage: ru_RU\nLanguage-Team: multiform\nLast-Translator: multiform\nMIME-Version: 1.0\nPO-Revision-Date: \nPOT-Creation-Date: 2016-09-04 19:41+0400\nPlural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\nProject-Id-Version: multiform\nX-Generator: Poedit 2.0.5\nX-Poedit-Basepath: .\nX-Poedit-SearchPath-0: .\nX-Poedit-SearchPath-1: .\nX-Poedit-SourceCharset: utf-8\n"
+
+msgid "of"
+msgstr "из"
+
+msgid "Forms"
+msgstr "Формы"
+
+msgid "Records"
+msgstr "Записи"
+
+msgid "Actions"
+msgstr "Действия"
+
+msgid "Last record"
+msgstr "Последняя запись"
+
+msgid "Created"
+msgstr "Создано"
+
+msgid "Created by"
+msgstr "Создатель"
+
+msgid "Start"
+msgstr "Начало"
+
+msgid "Stop"
+msgstr "Конец"
+
+msgid "Theme"
+msgstr "Тема"
+
+msgid "Change status"
+msgstr "Изменить статус"
+
+msgid "Duplicate"
+msgstr "Дублировать"
+
+msgid "Private form"
+msgstr "Частная форма"
+
+msgid "Has schedule"
+msgstr "Имеет расписание"
+
+msgid "Form is hidden according to schedule"
+msgstr "Форма скрыта согласно расписанию"
+
+msgid "No name"
+msgstr "Без имени"
+
+msgid "records"
+msgstr "записи"
+
+msgid "edit"
+msgstr "редактировать"
+
+msgid "Unknown"
+msgstr "Неизвестный"
+
+msgid "Default theme"
+msgstr "Дефолт"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "You havent't created any forms yet. Do it right now!"
+msgstr "Вы еще не создали ни одной формы. Сделайте это прямо сейчас!"
+
+msgid "Create form"
+msgstr "Создать форму"
+
+msgid "Untitled form"
+msgstr "Форма без названия"
+
+msgid "Fields"
+msgstr "Поля"
+
+msgid "Form settings"
+msgstr "Настройки"
+
+msgid "Conditions"
+msgstr "Условия"
+
+msgid "Notifications"
+msgstr "Уведомления"
+
+msgid "Share"
+msgstr "Поделиться"
+
+msgid "Appearance"
+msgstr "Внешний вид"
+
+msgid "View form"
+msgstr "Открыть форму"
+
+msgid "Save theme"
+msgstr "Сохранить тему"
+
+msgid "Rename"
+msgstr "Переименовать"
+
+msgid "Use this theme"
+msgstr "Использовать эту тему"
+
+msgid "Theme is used"
+msgstr "Тема используется"
+
+msgid "Use !important rule"
+msgstr "Использовать правило !important"
+
+msgid "https://www.w3.org/TR/CSS2/cascade.html#important-rules"
+msgstr "https://webref.ru/css/!important"
+
+msgid "More info"
+msgstr "Больше информации"
+
+msgid "Themes"
+msgstr "Темы"
+
+msgid "Create new"
+msgstr "Создать новую"
+
+msgid "Properties"
+msgstr "Характеристики"
+
+msgid "Header"
+msgstr "Шапка (хедер)"
+
+msgid "Fonts"
+msgstr "Шрифты"
+
+msgid "Background"
+msgstr "Задний фон"
+
+msgid "Borders"
+msgstr "Рамки"
+
+msgid "Shadows"
+msgstr "Тени"
+
+msgid "Sizes"
+msgstr "Размеры"
+
+msgid "Buttons"
+msgstr "Кнопки"
+
+msgid "Margin/padding"
+msgstr "Отступы"
+
+msgid "Alignment"
+msgstr "Выравнивание"
+
+msgid "Additional"
+msgstr "Дополнительно"
+
+msgid "Web-forms"
+msgstr "Веб-формы"
+
+msgid "My logo"
+msgstr "Мой лого"
+
+msgid "Text"
+msgstr "Текст"
+
+msgid "Hide logo"
+msgstr "Спрятать лого"
+
+msgid "Hide block"
+msgstr "Спрятать блок"
+
+msgid "Link to your logo"
+msgstr "Ссылка к логотипу"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "Print your text"
+msgstr "Введите Ваш текст"
+
+msgid "Application Web-forms"
+msgstr "Приложение Веб-формы"
+
+msgid "Title"
+msgstr "Заголовок"
+
+msgid "Description"
+msgstr "Описание"
+
+msgid "Field title"
+msgstr "Заголовок поля"
+
+msgid "Field text"
+msgstr "Поле для ввода"
+
+msgid "Field description"
+msgstr "Описание поля"
+
+msgid "Prefix/suffix"
+msgstr "Префикс/суффикс"
+
+msgid "Error blocks"
+msgstr "Блоки ошибок"
+
+msgid "Button"
+msgstr "Кнопка"
+
+msgid "Table grid statement"
+msgstr "Строки таблицы"
+
+msgid "Table grid column"
+msgstr "Колонки таблицы"
+
+msgid "Font family"
+msgstr "Семейство шрифтов"
+
+msgid "Google fonts"
+msgstr "Шрифты Google"
+
+msgid "Font style"
+msgstr "Стиль шрифта"
+
+msgid "Normal"
+msgstr "Нормальный"
+
+msgid "Bold"
+msgstr "Жирный"
+
+msgid "Italic"
+msgstr "Курсив"
+
+msgid "Bold/Italic"
+msgstr "Жирный/курсив"
+
+msgid "Size"
+msgstr "Размер"
+
+msgid "Page"
+msgstr "Страница"
+
+msgid "Form"
+msgstr "Форма"
+
+msgid "Form description"
+msgstr "Описание формы"
+
+msgid "Field row"
+msgstr "Строка поля"
+
+msgid "Field row hover"
+msgstr "Строка поля при наведении"
+
+msgid "Field text focus"
+msgstr "Поле в фокусе"
+
+msgid "Button hover"
+msgstr "Кнопка при наведении"
+
+msgid "Button block"
+msgstr "Блок с кнопкой"
+
+msgid "Error fields"
+msgstr "Поля с ошибками"
+
+msgid "Pattern"
+msgstr "Текстура"
+
+msgid "Solid color"
+msgstr "Цвет"
+
+msgid "Patterns"
+msgstr "Текстуры"
+
+msgid "Custom pattern"
+msgstr "Своя текстура"
+
+msgid "None"
+msgstr "Нет"
+
+msgid "Link to your pattern"
+msgstr "Ссылка на Вашу текстуру"
+
+msgid "Field rows"
+msgstr "Строки полей"
+
+msgid "Field focus"
+msgstr "Поле при наведении"
+
+msgid "Thickness"
+msgstr "Толщина"
+
+msgid "Style"
+msgstr "Стиль"
+
+msgid "Solid"
+msgstr "Сплошной"
+
+msgid "Dotted"
+msgstr "Точки"
+
+msgid "Dashed"
+msgstr "Пунктир"
+
+msgid "Double"
+msgstr "Двойная сплошная"
+
+msgid "Border radius"
+msgstr "Радиус скругления"
+
+msgid "Values"
+msgstr "Значения"
+
+msgid "H-shadow"
+msgstr "X-сдвиг"
+
+msgid "V-shadow"
+msgstr "Y-сдвиг"
+
+msgid "Blur"
+msgstr "Размытие"
+
+msgid "Spread"
+msgstr "Растяжение"
+
+msgid "Inset"
+msgstr "Внутренняя тень"
+
+msgid "Fixed"
+msgstr "Фиксированная"
+
+msgid "Adaptive"
+msgstr "Адаптивная"
+
+msgid "Width"
+msgstr "Ширина"
+
+msgid "Height"
+msgstr "Высота"
+
+msgid "Errors"
+msgstr "Ошибки"
+
+msgid "Margin"
+msgstr "Внеш. отступ"
+
+msgid "Top"
+msgstr "Сверху"
+
+msgid "Right"
+msgstr "Справа"
+
+msgid "Bottom"
+msgstr "Снизу"
+
+msgid "Left"
+msgstr "Слева"
+
+msgid "Padding"
+msgstr "Внутр. отступ"
+
+msgid "Select element"
+msgstr "Выберите элемент"
+
+msgid "Select"
+msgstr "Список (select)"
+
+msgid "Center"
+msgstr "По центру"
+
+msgid "Justify"
+msgstr "По ширине"
+
+msgid "Table grid"
+msgstr "Таблица"
+
+msgid "Rating"
+msgstr "Рейтинг"
+
+msgid "Range slider"
+msgstr "Слайдер значений"
+
+msgid "Odd rows"
+msgstr "Нечетные строки"
+
+msgid "Even rows"
+msgstr "Четные строки"
+
+msgid "Highlight"
+msgstr "Подсвечивание"
+
+msgid "and"
+msgstr "и"
+
+msgid "or"
+msgstr "или"
+
+msgid "If"
+msgstr "Если"
+
+msgid "is"
+msgstr "соответствует"
+
+msgid "is "
+msgstr "будет"
+
+msgid "is not"
+msgstr "не соответствует"
+
+msgid "is not "
+msgstr "не"
+
+msgid "contains"
+msgstr "содержит"
+
+msgid "doesn't contain"
+msgstr "не содержит"
+
+msgid "begins with"
+msgstr "начинается с"
+
+msgid "ends with"
+msgstr "заканчивается"
+
+msgid "is blank"
+msgstr "пусто"
+
+msgid "is not blank"
+msgstr "не пусто"
+
+msgid "is equal to"
+msgstr "равно"
+
+msgid "is not equal to"
+msgstr "не равно"
+
+msgid "is greater than"
+msgstr "больше чем"
+
+msgid "is less than"
+msgstr "меньше чем"
+
+msgid "is on"
+msgstr "равно"
+
+msgid "is before"
+msgstr "до"
+
+msgid "is after"
+msgstr "после"
+
+msgid "is at"
+msgstr "равно"
+
+msgid "checked"
+msgstr "выбрано"
+
+msgid "Add inside condition"
+msgstr "Добавить внутреннее условие"
+
+msgid "Remove inside condition"
+msgstr "Удалить внутреннее условие"
+
+msgid "Remove condition"
+msgstr "Удалить условие"
+
+msgid "show"
+msgstr "показать"
+
+msgid "hide"
+msgstr "скрыть"
+
+msgid "Show message"
+msgstr "Показать сообщение"
+
+msgid "Redirect"
+msgstr "Перенаправить"
+
+msgid "Send email"
+msgstr "Отправить сообщение"
+
+msgid "You can use <a href='#/get/templateVars/' class='js-action' title='template vars'>template vars</a>"
+msgstr "Вы можете использовать <a href='#/get/templateVars/' class='js-action' title='переменные шаблона'>переменные шаблона</a>"
+
+msgid "Specify website you would like user to redirect after successfully submitted form"
+msgstr "Укажите вебсайт, на который следует перенаправить пользователя после успешного отправления формы"
+
+msgid "Send to"
+msgstr "Получатель"
+
+msgid "Use commas to separate emails"
+msgstr "Используйте запятые для разделения email адресов"
+
+msgid "Enable conditions"
+msgstr "Включить условия"
+
+msgid "Off"
+msgstr "Выкл"
+
+msgid "On"
+msgstr "Вкл"
+
+msgid "Field conditions"
+msgstr "Условия полей"
+
+msgid "Form conditions"
+msgstr "Условия формы"
+
+msgid "Show or hide fields"
+msgstr "Показать или скрыть поля"
+
+msgid "You don't have any conditions"
+msgstr "У Вас нет ни одного условия"
+
+msgid "Add new condition"
+msgstr "Добавить новое условия"
+
+msgid "After the form is submitted"
+msgstr "После того, как форма будет отправлена"
+
+msgid "You don't have any acceptable fields. First of all <a href='?module=form&action=edit&id={$id}'><i class='icon16 add'></i> create them</a>"
+msgstr "У Вас нет ни одного поля, с которым можно создать условие. Прежде всего <a href='?module=form&action=edit&id={$id}'><i class='icon16 add'></i> создайте его</a>"
+
+msgid "Select field"
+msgstr "Выберите поле"
+
+msgid "Text field"
+msgstr "Текст (input)"
+
+msgid "Textarea"
+msgstr "Текст (textarea)"
+
+msgid "Number"
+msgstr "Число"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Phone"
+msgstr "Телефон"
+
+msgid "Date field"
+msgstr "Дата"
+
+msgid "Time"
+msgstr "Время"
+
+msgid "Checkbox list"
+msgstr "Список (checkbox)"
+
+msgid "Radio"
+msgstr "Список (radio)"
+
+msgid "File"
+msgstr "Файл"
+
+msgid "HTML-text"
+msgstr "HTML"
+
+msgid "Hidden"
+msgstr "Скрытое"
+
+msgid "Formula"
+msgstr "Формула"
+
+msgid "Page break"
+msgstr "Разрыв"
+
+msgid "Email notifications"
+msgstr "Email уведомления"
+
+msgid "Your email"
+msgstr "Ваш email"
+
+msgid "Use commas to separate emails. Limit: 10 emails"
+msgstr "Используйте запятые для разделения email адресов. Максимум 10шт"
+
+msgid "New records"
+msgstr "Новых записях"
+
+msgid "New comments"
+msgstr "Новых комментариях"
+
+msgid "Reply to"
+msgstr "Ответить (reply to)"
+
+msgid "* * * Select field * * *"
+msgstr "* * * Выберите поле * * *"
+
+msgid "Field"
+msgstr "Поле"
+
+msgid "Create email field"
+msgstr "Создайте поле email"
+
+msgid "if you want to reply to user"
+msgstr "если хотите ответить пользователю"
+
+msgid "Select the email field you want to reply to"
+msgstr "Выберите email поле, на которые Вы хотите ответить"
+
+msgid "Send emails about"
+msgstr "Уведомлять о"
+
+msgid "Email sender"
+msgstr "Отправитель email сообщения"
+
+msgid "Sender name (field \"From:\" in your mail box)"
+msgstr "Имя отправителя (поле\"From\" в Вашей почте)"
+
+msgid "Comments"
+msgstr "Комментарии"
+
+msgid "Message subject"
+msgstr "Тема сообщения"
+
+msgid "You've got new notification"
+msgstr "У Вас новое уведомление"
+
+msgid "New comment on record"
+msgstr "Новый комментарий у записи"
+
+msgid "Email CC"
+msgstr "Email CC"
+
+msgid "Send message copy to email recipients. The list of CCed recipients is visible to all other recipients of the message."
+msgstr "Посылать копию сообщения вторичным получателям. Список email адресов получателей доступен каждому включенному в этот список"
+
+msgid "Email BCC"
+msgstr "Email BCC"
+
+msgid "Send message copy to email recipients. The list of BCCed recipients are not shown to any other recipient's."
+msgstr "Посылать копию сообщения вторичным получателям. Список email адресов скрыт. Каждый получатель не будет видеть других получателей."
+
+msgid "Allow attaching files to email notification"
+msgstr "Разрешить прикреплять файлы к email уведомлениям"
+
+msgid "Send emails in plain text"
+msgstr "Отправлять email сообщения в формате обычного текста"
+
+msgid "Customize email template"
+msgstr "Настроить шаблон email уведомления"
+
+msgid "Leave it blank, if you want to use default template"
+msgstr "Оставьте поле пустым, если хотите использовать стандартный шаблон"
+
+msgid "SMS notifications"
+msgstr "СМС уведомления о"
+
+msgid "Your phone number"
+msgstr "Ваш номер телефона"
+
+msgid "Sender IDs"
+msgstr "ID отправителей"
+
+msgid "Enter Sender IDs to use with this SMS gateway (Sender ID is either your phone number or up-to-11-characters text label). Enter * to use default Sender ID issued for your account by the gateway."
+msgstr "Введите идентификаторы отправителей для этого SMS-шлюза (ID отправителя представляет собой либо номер телефона, либо строку длиной до 11 символов). Введите звездочку *, чтобы использовать ID, назначенный SMS-шлюзом."
+
+msgid "To enable SMS message sending, install and configure sending plugin for your preferred SMS gateway.<br /> <a href=\"%s\">Browse for SMS gateway plugins</a> in Installer app."
+msgstr "Для отправки SMS-сообщений установите и настройте подключение к какому-либо из SMS-провайдеров.<br />Плагины подключения к SMS-провайдеров доступны для установки <a href=\"%s\">в «Инсталлере»</a>."
+
+msgid "Send from"
+msgstr "Отправитель"
+
+msgid "Default (as configured in SMS gateway)"
+msgstr "По умолчанию (назначается SMS-шлюзом)"
+
+msgid "Send sms about"
+msgstr "СМС сообщение"
+
+msgid "Customize sms template"
+msgstr "Настроить шаблон СМС уведомления"
+
+msgid "Max 300 symbols"
+msgstr "Максимум 300 символов"
+
+msgid "Edit"
+msgstr "Редактировать"
+
+msgid "Display"
+msgstr "Отображение"
+
+msgid "Validation"
+msgstr "Проверка"
+
+msgid "Print"
+msgstr "Печатать"
+
+msgid "Your comment"
+msgstr "Ваш комментарий"
+
+msgid "Your name"
+msgstr "Ваше имя"
+
+msgid "Record does not exist"
+msgstr "Запись не существует"
+
+msgid "Create new record"
+msgstr "Создать новую запись"
+
+msgid "Export"
+msgstr "Экспорт"
+
+msgid "Delete selected"
+msgstr "Удалить выделенные"
+
+msgid "Delete all"
+msgstr "Удалить все"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Change columns"
+msgstr "Изменить колонки"
+
+msgid "Updated"
+msgstr "Обновлено"
+
+msgid "Updated by"
+msgstr "Обновил"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Download"
+msgstr "Скачать"
+
+msgid "Saved"
+msgstr "Сохранено"
+
+msgid "Processing"
+msgstr "Обрабатывается"
+
+msgid "Export all records"
+msgstr "Экспортировать все записи"
+
+msgid "All records will be exported in CSV file. Please, don't close or update webpage"
+msgstr "Все записи будут экспортированы в CSV файл. Пожалуйста, не закрывайте и не обновляйте страницу"
+
+msgid "Please don't close your browser window until export is over."
+msgstr "Пожалуйста, не закрывайте окно браузера, пока не завершится процесс экспорта"
+
+msgid "Start export"
+msgstr "Начать экспорт"
+
+msgid "cancel"
+msgstr "отмена"
+
+msgid "You don't have any records."
+msgstr "У Вас нет ни одной записи"
+
+msgid "delete"
+msgstr "удалить"
+
+msgid "Activity"
+msgstr "Активность"
+
+msgid "Enable records output"
+msgstr "Разрешить вывод записей на сайте"
+
+msgid "This is the template of records output. You can show users their data, if it's necessary."
+msgstr "Это шаблон вывода записей на сайте. Вы можете вывести пользователям переданные ими данные, если это необходимо."
+
+msgid "Use the following code in your theme templates: <b style='border: 1px solid #ccc; display: inline-block; padding: 5px;'>&#123;$wa-&gt;multiform-&gtrecordsTemplate({$form.id})&#125;</b>"
+msgstr "Для вывода используйте этот код в Вашей теме дизайна: <b style='border: 1px solid #ccc; display: inline-block; padding: 5px;'>&#123;$wa-&gt;multiform-&gtrecordsTemplate({$form.id})&#125;</b>"
+
+msgid "Form in popup window"
+msgstr "Форма во всплывающем окне"
+
+msgid "Button text"
+msgstr "Текст кнопки"
+
+msgid "You can use HTML"
+msgstr "Вы можете использовать HTML"
+
+msgid "Form ID"
+msgstr "ID формы"
+
+msgid "Available symbols"
+msgstr "Разрешенные символы"
+
+msgid "Use this ID to output the form."
+msgstr "Используйте этот ID для вывода формы"
+
+msgid "Form name"
+msgstr "Название формы"
+
+msgid "Only used in admin area"
+msgstr "Используется только в админ части"
+
+msgid "Form title"
+msgstr "Заголовок формы"
+
+msgid "Records ID format"
+msgstr "Формат запроса"
+
+msgid "Code &#123;$record_id&#125; will be replaced by record ID. Do not remove <b>&#123;$record_id&#125;</b>"
+msgstr "Код &#123;$record_id&#125; будет заменен ID запроса. Не удаляйте <b>&#123;$record_id&#125;</b>"
+
+msgid "Form type"
+msgstr "Тип формы"
+
+msgid "public"
+msgstr "открытая"
+
+msgid "private"
+msgstr "закрытая"
+
+msgid "Private form will be available for authorized users with special access. Use application Contacts to set the rights"
+msgstr "Закрытые формы будут доступны авторизованным пользователям со специальными правами доступа. Используйте приложение Контакты для изменения прав"
+
+msgid "Form CSS class"
+msgstr "CSS класс формы"
+
+msgid "Confirmation options"
+msgstr "После отправления формы"
+
+msgid "Your message successfully sent! Your request number is &#123;Request:ID&#125;"
+msgstr "Ваше сообщение успешно отправлено! Номер Вашего запроса &#123;Request:ID&#125;"
+
+msgid "Send confirmation email to user"
+msgstr "Отправить подтверждающее письмо пользователю"
+
+msgid "if you want to send confirmation message"
+msgstr "если Вы хотите отправить подтверждающее письмо"
+
+msgid "Select the email field you want to send the confirmation message."
+msgstr "Выберите поле email, на которое Вы хотите послать подтверждающее сообщение."
+
+msgid "Sender email"
+msgstr "Email отправителя"
+
+msgid "Sender name"
+msgstr "Имя отправителя"
+
+msgid "Specify email address you want the users to send messages when they reply to the confirmation message. If you don't want them to email you, leave it blank."
+msgstr "Укажите email адрес, на который смогут ответить пользователи, когда им придет подтверждающее письмо."
+
+msgid "Subject"
+msgstr "Тема"
+
+msgid "JS Callback after successfully form submission"
+msgstr "Javascript код, который будет выполнен после успешного отправления формы"
+
+msgid "Limitation options"
+msgstr "Настройки ограничений"
+
+msgid "Form submissions"
+msgstr "Отправление формы"
+
+msgid "Unlimited"
+msgstr "Неограниченно"
+
+msgid "Limit to"
+msgstr "Ограничить до"
+
+msgid "submissions"
+msgstr "подтверждений"
+
+msgid "ever"
+msgstr "когда бы то ни было"
+
+msgid "every day"
+msgstr "каждый день"
+
+msgid "every week"
+msgstr "каждую неделю"
+
+msgid "every month"
+msgstr "каждый месяц"
+
+msgid "The form will stop accepting submissions after collecting that many entries"
+msgstr "Форма перестанет работать после достижения указанного предела"
+
+msgid "Authorized user submissions"
+msgstr "Отправление авторизованными пользователями"
+
+msgid "IP limitation"
+msgstr "Ограничения по IP"
+
+msgid "Allow only one submission per IP"
+msgstr "Разрешить только одно отправление для IP"
+
+msgid "Form condition after reaching the limit"
+msgstr "Состояние формы после достижения ограничений"
+
+msgid "Hide form"
+msgstr "Спрятать форму"
+
+msgid "Disable form"
+msgstr "Деактивировать форму"
+
+msgid "Websites limitations"
+msgstr "Ограничения по Витринам"
+
+msgid "No limitations"
+msgstr "Нет ограничений"
+
+msgid "Limit by domain routes"
+msgstr "Ограничить по поселениям"
+
+msgid "Select domain"
+msgstr "Выберите домен"
+
+msgid "Select route"
+msgstr "Выберите поселение"
+
+msgid "add domain route"
+msgstr "добавить поселение домена"
+
+msgid "delete route"
+msgstr "удалить поселение"
+
+msgid "META settings"
+msgstr "Настройки META"
+
+msgid "META title"
+msgstr "META заголовок"
+
+msgid "META keywords"
+msgstr "META ключевые слова"
+
+msgid "META description"
+msgstr "META описание"
+
+msgid "Spam protection"
+msgstr "Защита от спама"
+
+msgid "Basic protection (captcha)"
+msgstr "Базовая (капча)"
+
+msgid "Medium protection (need javascript)"
+msgstr "Средняя (необходим javascript)"
+
+msgid "Advanced protection (need javascript + captcha field)"
+msgstr "Продвинутая (нужен javascript + капча)"
+
+msgid "Form schedule"
+msgstr "Расписание формы"
+
+msgid "Specify form schedule activity"
+msgstr "Укажите время активности формы"
+
+msgid "Server time"
+msgstr "Серверное время"
+
+msgid "DD"
+msgstr "ДД"
+
+msgid "MM"
+msgstr "ММ"
+
+msgid "YYYY"
+msgstr "ГГГГ"
+
+msgid "HH"
+msgstr "ЧЧ"
+
+msgid "End"
+msgstr "Конец"
+
+msgid "Embed your form"
+msgstr "Поделитесь Вашей формой"
+
+msgid "Embed with Javascript"
+msgstr "Поделиться (Javascript)"
+
+msgid "Embed with iFrame"
+msgstr "Поделиться (iFrame)"
+
+msgid "Embed on Webasyst"
+msgstr "Встроить в Вебасист"
+
+msgid "Use this code to place your form into other websites."
+msgstr "Используйте этот код, чтобы встроить форму на другие сайты"
+
+msgid "Fill out my <a href=\"%s\" title=\"%s\">%s</a>."
+msgstr "Заполните мою <a href=\"%s\" title=\"%s\">%s</a>"
+
+msgid "online form"
+msgstr "онлайн форму"
+
+msgid "Use this iframe code to place your form into pages where <b>JavaScript is unavailable</b>."
+msgstr "Используйте этот код, чтобы встроить форму на другие сайты, где <b>JavaScript отсутствует</b>."
+
+msgid "iFrame height"
+msgstr "Высота фрейма"
+
+msgid "Fill out my"
+msgstr "Заполните мою"
+
+msgid "Use this code to place your form into Webasyst template or page, where Smarty is available."
+msgstr "Используйте этот код, чтобы встроить форму в шаблон Вебасиста, где разрешено использование Smarty"
+
+msgid "Share a link"
+msgstr "Поделиться ссылкой"
+
+msgid "Permanent link"
+msgstr "Постоянная ссылка"
+
+msgid "Form ID link"
+msgstr "Ссылка согласно ID"
+
+msgid "Form description text"
+msgstr "Описание формы"
+
+msgid "New input"
+msgstr "Новое поле input"
+
+msgid "prefix"
+msgstr "префикс"
+
+msgid "suffix"
+msgstr "суффикс"
+
+msgid "Error field"
+msgstr "Поле ошибки"
+
+msgid "New textarea"
+msgstr "Новое поле textarea"
+
+msgid "Some text inside field"
+msgstr "Некоторый текст внутри поля"
+
+msgid "New table grid"
+msgstr "Новая таблица"
+
+msgid "Column1"
+msgstr "Колонка 1"
+
+msgid "Column2"
+msgstr "Колонка 2"
+
+msgid "Column3"
+msgstr "Колонка 3"
+
+msgid "Statement1"
+msgstr "Строка 1"
+
+msgid "Statement2"
+msgstr "Строка 2"
+
+msgid "Statement3"
+msgstr "Строка 3"
+
+msgid "New rating"
+msgstr "Новое поле рейтинга"
+
+msgid "New number field"
+msgstr "Новое числовое поле"
+
+msgid "Send"
+msgstr "Отправить"
+
+msgid "Record is processing or failed. Be carefull about it's data"
+msgstr "Запись обрабатывается или обработана с ошибками. Будьте аккуратны с пришедшими данными"
+
+msgid "Checked value not equal to user value."
+msgstr "Проверочное значение не совпадает со значением пользователя"
+
+msgid "User value"
+msgstr "Значение пользователя"
+
+msgid "Checked value"
+msgstr "Проверочное значение"
+
+msgid "Delete file"
+msgstr "Удалить файл"
+
+msgid "IP Address"
+msgstr "IP адрес"
+
+msgid "Record ID"
+msgstr "ID записи"
+
+msgid "Form not found"
+msgstr "Форма не найдена"
+
+msgid "This section is intended for creation regular expressions that are used to check in text fields of the form. If You are not good at this - contact the developer. Any errors in regular expressions can affect the application's work."
+msgstr "Данный раздел предназначен для создания масок регулярных выражений, служащих для проверки текстовых полей формы. Если Вы плохо в этом разбираетесь - обратитесь к разработчику. Любые ошибки в регулярных выражениях могут сказаться на работе приложения."
+
+msgid "IMPORTANT! Write regular expressions only between symbols"
+msgstr "ВАЖНО! Описывайте регулярные выражения только между символами"
+
+msgid "More"
+msgstr "Подробнее"
+
+msgid "info about regular expressions"
+msgstr "узнать про регулярные выражения"
+
+msgid "Name"
+msgstr "Название"
+
+msgid "RegExp mask"
+msgstr "Маска"
+
+msgid "Error message"
+msgstr "Текст ошибки"
+
+msgid "remove"
+msgstr "удалить"
+
+msgid "Add regexp mask"
+msgstr "Добавить маску"
+
+msgid "Plugins not installed"
+msgstr "Плагины не установлены"
+
+msgid "Search new plugins"
+msgstr "Найти новые плагины"
+
+msgid "Use «Installer» to find new plugins"
+msgstr "Используйте Инсталлер, чтобы найти новые плагины"
+
+msgid "Plugin %s is installed"
+msgstr "Плагин %s установлен"
+
+msgid "No available settings for plugin"
+msgstr "Для данного плагина нет доступных настроек"
+
+msgid "Unknown plugin"
+msgstr "Неизвестный плагин"
+
+msgid "Cannot save"
+msgstr "Сохранить не удалось"
+
+msgid "Showes"
+msgstr "Показано"
+
+msgid "Show"
+msgstr "Выводить по"
+
+msgid "per page"
+msgstr "на страницу"
+
+msgid "Select all"
+msgstr "Отметить все"
+
+msgid "Cancel selection"
+msgstr "Снять выделение"
+
+msgid "Download file"
+msgstr "Скачать файл"
+
+msgid "Date"
+msgstr "Дата добавления"
+
+msgid "No records"
+msgstr "Записи отсутствуют"
+
+msgid "This is Demo account. You don't have access to create pages. You can only create Web-forms."
+msgstr "Вы находитесь в Демо режиме. У вас нет доступа к созданию страниц Сайта. Вы можете только создавать Веб-формы."
+
+msgid "All your data will be deleted in an hour."
+msgstr "Все Ваши данные будут удалены через час."
+
+msgid "Buy"
+msgstr "Купить"
+
+msgid "https://www.webasyst.com/store/app/multiform/"
+msgstr "https://www.webasyst.ru/store/app/multiform/"
+
+msgid "Buy Web-forms"
+msgstr "Купить Веб-формы"
+
+msgid "Old version records"
+msgstr "Записи старых версий"
+
+msgid "Regexp masks"
+msgstr "Проверочные маски"
+
+msgid "Plugins"
+msgstr "Плагины"
+
+msgid "Loading"
+msgstr "Идет загрузка"
+
+msgid "Value"
+msgstr "Значение"
+
+msgid "Other"
+msgstr "Другое"
+
+msgid "Fill in the required fields"
+msgstr "Заполните обязательные поля"
+
+msgid "Create <b>private</b> settlement for application Web-forms (Multiform) in %s - Site - Structure and put it above the rest."
+msgstr "Создайте <b>скрытое</b> поселение для приложения Веб-формы в разделе %s - Сайт - Структура и поставьте его выше всех."
+
+msgid "prev"
+msgstr "назад"
+
+msgid "next"
+msgstr "вперед"
+
+msgid "You've got new message: {Request:ID}"
+msgstr "У Вас новое сообщение: {Request:ID}"
+
+msgid "You've got new notification: {Request:ID}"
+msgstr "У вас новое уведомление: {Request:ID}"
+
+msgid "Access denied"
+msgstr "Доступ запрещен"
+
+msgid "Record ID is empty"
+msgstr "ID записи пусто"
+
+msgid "Hey, where is theme ID?"
+msgstr "Где потеряли ID темы?"
+
+msgid "Access denied to theme appearance"
+msgstr "Доступ к внешнему виду формы закрыт"
+
+msgid "Hey, where is form ID?"
+msgstr "Где потеряли ID формы?"
+
+msgid "Form fields"
+msgstr "Поля формы"
+
+msgid "Template vars"
+msgstr "Переменные шаблона"
+
+msgid "close"
+msgstr "закрыть"
+
+msgid "Output the name of the field."
+msgstr "Выводит название поля"
+
+msgid "E.g, {Field:{$example_field}}"
+msgstr "Например, {Field:{$example_field}}"
+
+msgid "Output the value of the field."
+msgstr "Выводит переданное значение поля"
+
+msgid "E.g, {Record:{$example_field}}"
+msgstr "Например, {Record:{$example_field}}"
+
+msgid "Output the date of the record."
+msgstr "Выводит дату создания записи"
+
+msgid "Output all records. Default mail template."
+msgstr "Выводит все записи. Шаблон email уведомлений по умолчанию."
+
+msgid "Records ID format."
+msgstr "Выводит ID запроса"
+
+msgid "Output form ID."
+msgstr "Выводит ID формы"
+
+msgid "Output form name (title)."
+msgstr "Выводит название формы (заголовок)"
+
+msgid "Output form description."
+msgstr "Выводит описание формы"
+
+msgid "Output form url."
+msgstr "Выводит URL адрес формы"
+
+msgid "Output link to form."
+msgstr "Выводит ссылку на форму"
+
+msgid "Output contact info from the Contacts."
+msgstr "Выводит информацию о контакте из приложения Контакты"
+
+msgid "E.g, {Contact:name}, {Contact:ip}, {Contact:about}, etc."
+msgstr "Пример, {Contact:name}, {Contact:ip}, {Contact:about}, и т. д."
+
+msgid "commented"
+msgstr "прокомментировал"
+
+msgid "My theme"
+msgstr "Моя тема"
+
+msgid "Cannot upload file."
+msgstr "Не удается загрузить файл"
+
+msgid "Trying to add attachment to wrong field"
+msgstr "Попытка загрузить приложение к другому полю"
+
+msgid "Uploaded file's size exceeds the upload_max_filesize or post_max_size limit"
+msgstr "Загружаемые размеры файлов превышают значения upload_max_filesize или post_max_size в php.ini"
+
+msgid "Cannot save file \"%s\""
+msgstr "Не удалось сохранить файл \"%s\""
+
+msgid "Cannot save file. Check log file for more information."
+msgstr "Не удалось сохранить файл. Проверьте лог-файлы для получения большей информации."
+
+msgid "Email is not valid"
+msgstr "Email не прошел проверку"
+
+msgid "Redirect URL is not valid"
+msgstr "Ссылка перенаправления не прошла проверку"
+
+msgid "Something wrong. Check log files."
+msgstr "Произошла ошибка. Проверьте лог-файлы для получения большей информации."
+
+msgid "is not valid"
+msgstr "не прошел проверку"
+
+msgid "Cannot upload file. Try to upload image"
+msgstr "Не удалось загрузить файл. Попробуйте загружать изобажения"
+
+msgid "Option doesn't exist"
+msgstr "Вариант поля поля существует"
+
+msgid "Upload only images"
+msgstr "Загружайте только изображения"
+
+msgid "Option ID is empty"
+msgstr "ID варианта поля пустой"
+
+msgid "Specify form ID"
+msgstr "Укажите ID формы"
+
+msgid "Download:"
+msgstr "Загрузить:"
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "Files with extensions %s are allowed only."
+msgstr "Только файлы с разрешениями %s разрешены к загрузке"
+
+msgid "Field parameters are not existing"
+msgstr "Параметры поля не существуют"
+
+msgid "Field type %s is undefined"
+msgstr "Тип поля %s не найден"
+
+msgid "Field is undefined"
+msgstr "Поле не определено"
+
+msgid "Field \"Sender\" contains wrong email"
+msgstr "Поле \"Отправитель\" содержит неверный email адрес"
+
+msgid "Field \"Reply to\" contains wrong email"
+msgstr "Поле \"Ответить (reply to)\" содержит неверный email адрес"
+
+msgid "Field \"Redirect\" contains wrong URL"
+msgstr "Поле \"Перенаправить\" содержит неверный URL"
+
+msgid "CSRF Protection"
+msgstr "Защита CSRF"
+
+msgid "Specify mask name"
+msgstr "Укажите название маски"
+
+msgid "Print regexp mask"
+msgstr "Введите маску регулярного выражения"
+
+msgid "Permission denied"
+msgstr "Доступ закрыт"
+
+msgid "Plugin settings"
+msgstr "Настройки плагина"
+
+msgid "Cannot save settings: unknown plugin"
+msgstr "Не удается сохранить настройки: неизвестный плагин"
+
+msgid "Plugin settings %s"
+msgstr "Настройки плагина %s"
+
+msgid "Key"
+msgstr "Ключ"
+
+msgid "Pre-selected option"
+msgstr "Значение по умолчанию"
+
+msgid "Add image"
+msgstr "Добавить изображение"
+
+msgid "Add option"
+msgstr "Добавить вариант"
+
+msgid "Delete option"
+msgstr "Удалить вариант"
+
+msgid "Import options"
+msgstr "Импорт вариантов"
+
+msgid "Use new line to specify new option. <br>- If you want to customize keys, you should use symbol '<b>|</b>' as divider."
+msgstr "Вводите каждое значение варианта с новой строки. <br>- Если Вы хотите настроить ключи, используйте в качестве разделителя символ '<b>|</b>'"
+
+msgid "E.g"
+msgstr "Например"
+
+msgid "No default"
+msgstr "Сбросить"
+
+msgid "key|First option<br>another key|Second option<br>new key|Third option"
+msgstr "ключ|Первый вариант<br>другой ключ|Второй вариант<br>новый ключ|Третий вариант"
+
+msgid "Option keys should be unique"
+msgstr "Ключи вариантов должны быть уникальны"
+
+msgid "Options"
+msgstr "Варианты"
+
+msgid "New checkbox field"
+msgstr "Новый список (checkbox)"
+
+msgid "Valid characters"
+msgstr "Разрешенные символы"
+
+msgid "CSS class"
+msgstr "CSS класс"
+
+msgid "Save users data"
+msgstr "Сохранять значение пользователя"
+
+msgid "Prefix"
+msgstr "Префикс"
+
+msgid "Suffix"
+msgstr "Суффикс"
+
+msgid "Title position"
+msgstr "Расположение заголовка"
+
+msgid "Hide"
+msgstr "Убрать"
+
+msgid "Options layout"
+msgstr "Макет вариантов"
+
+msgid "One column"
+msgstr "Одна колонка"
+
+msgid "Two columns"
+msgstr "Две колонки"
+
+msgid "Three columns"
+msgstr "Три колонки"
+
+msgid "One by one"
+msgstr "Один за одним"
+
+msgid "Randomize"
+msgstr "Перемешать"
+
+msgid "The options will be shuffled each time"
+msgstr "Варианты будут перемешаны каждый раз"
+
+msgid "Read only"
+msgstr "Только для чтения"
+
+msgid "Private"
+msgstr "Закрытое (частное)"
+
+msgid "Private fields are shown to users with special access"
+msgstr "Закрытые поля отображаются у пользователей со специальными правами доступа"
+
+msgid "Hidden fields not shown to users. They can be edited only in admin page. But you can use the values of hidden fields in frontend"
+msgstr "Скрытые поля не показываются пользователю. Они могут быть изменены лишь через админ панель. Но Вы можете использовать значения этих полей на сайте при выводе записей."
+
+msgid "Customize keys"
+msgstr "Настроить ключи"
+
+msgid "Show to user one value, but save in DB another"
+msgstr "Показать пользователю одно значение, но сохранить в базе данных другое"
+
+msgid "Option image size"
+msgstr "Размер изображения"
+
+msgid "Required"
+msgstr "Обязательно к заполнению"
+
+msgid "Day"
+msgstr "День"
+
+msgid "Month"
+msgstr "Месяц"
+
+msgid "January"
+msgstr "Январь"
+
+msgid "February"
+msgstr "Февраль"
+
+msgid "March"
+msgstr "Март"
+
+msgid "April"
+msgstr "Апрель"
+
+msgid "May"
+msgstr "Май"
+
+msgid "June"
+msgstr "Июнь"
+
+msgid "July"
+msgstr "Июль"
+
+msgid "August"
+msgstr "Август"
+
+msgid "September"
+msgstr "Сентябрь"
+
+msgid "October"
+msgstr "Октябрь"
+
+msgid "November"
+msgstr "Ноябрь"
+
+msgid "December"
+msgstr "Декабрь"
+
+msgid "Year"
+msgstr "Год"
+
+msgid "Available characters: d, D, j, l, N, w, S, F, m, M, n, Y, y"
+msgstr "Доступные символы: d, D, j, l, N, w, S, F, m, M, n, Y, y"
+
+msgid "Default value"
+msgstr "Значение по умолчанию"
+
+msgid "New date"
+msgstr "Новая дата"
+
+msgid "Use current date as default"
+msgstr "Использовать текущую дату в качестве значения по умолчанию"
+
+msgid "In frontend users will see formatted value"
+msgstr "На сайте пользователи увидят дату в отформатированном виде"
+
+msgid "Date field type"
+msgstr "Тип поля даты"
+
+msgid "3 fields"
+msgstr "3 поля"
+
+msgid "Textfield"
+msgstr "Текстовое"
+
+msgid "Date format"
+msgstr "Формат даты"
+
+msgid "Fields separator"
+msgstr "Разделитель полей"
+
+msgid "Day field"
+msgstr "Поле \"День\""
+
+msgid "Dropdown"
+msgstr "Выпадающее"
+
+msgid "Day field width"
+msgstr "Ширина поля \"День\""
+
+msgid "Month field"
+msgstr "Поле \"Месяц\""
+
+msgid "Month field width"
+msgstr "Ширина поля \"Месяц\""
+
+msgid "Year field"
+msgstr "Поле \"Год\""
+
+msgid "Year field width"
+msgstr "Ширина поля \"Год\""
+
+msgid "Year interval"
+msgstr "Промежуток выводимых лет"
+
+msgid "Enable popup calendar"
+msgstr "Включить всплывающий календарь для выбора даты"
+
+msgid "Incorrect email"
+msgstr "Неверный email"
+
+msgid "Value of the field \"%s\" is already exist. Please, specify unique value"
+msgstr "Значение поля \"%s\" уже существует. Пожалуйста, укажите уникальное значение"
+
+msgid "The information entered into this field is unique and has not been submitted previously"
+msgstr "Информация, которая будет введена в это поле, должна быть уникальна по отношению к данным, которые уже имеются у Вас в таблице Записей"
+
+msgid "for the field"
+msgstr "для поля"
+
+msgid "New email"
+msgstr "Новый email"
+
+msgid "Placeholder"
+msgstr "Плейсходер"
+
+msgid "Predefined value"
+msgstr "Значение по умолчанию"
+
+msgid "Field size"
+msgstr "Размер поля"
+
+msgid "Small"
+msgstr "Маленькая (25%)"
+
+msgid "Medium"
+msgstr "Средняя (50%)"
+
+msgid "Large"
+msgstr "Большая (100%)"
+
+msgid "Unique (no duplicates)"
+msgstr "Уникальное"
+
+msgid "Valid extensions"
+msgstr "Допустимые расширения"
+
+msgid "Maximum file size"
+msgstr "Максимальный размер одного файла"
+
+msgid "Maximum files count"
+msgstr "Максимальное количество файлов"
+
+msgid "Value cannot be more than %sbyte (or %s byte) in your server php.ini"
+msgstr "Значение не может быть больше, чем %sбайт ( или %s байт), указанные в настройках Вашего сервера в php.ini"
+
+msgid "Specify value in bytes."
+msgstr "Указывайте значение в байтах."
+
+msgid "Value cannot be more than %sB (or %s byte) in your server php.ini"
+msgstr "Значение не может быть больше, чем %sБ ( или %s байт), указанные в настройках Вашего сервера в php.ini"
+
+msgid "select all"
+msgstr "выбрать все"
+
+msgid "Images"
+msgstr "Изображения"
+
+msgid "Documents"
+msgstr "Документы"
+
+msgid "Video"
+msgstr "Видео"
+
+msgid "Audio"
+msgstr "Аудио"
+
+msgid "Archives"
+msgstr "Архивы"
+
+msgid "Custom"
+msgstr "Произвольные расширения"
+
+msgid "Specify your extensions. Use commas as separators"
+msgstr "Укажите Ваши собственные расширения. Используйте запятые в качестве разделителей"
+
+msgid "If you want to allow upload files of any extension - do not select anything"
+msgstr "Если Вы хотите разрешить загружать файлы любых расширений - оставьте все поля пустыми"
+
+msgid "Check file size"
+msgstr "Проверьте размер файла"
+
+msgid "Check file extension"
+msgstr "Проверьте расширение файла"
+
+msgid "File uploaded"
+msgstr "Файл загружен"
+
+msgid "Cannot save files"
+msgstr "Не удалось сохранить файлы"
+
+msgid "New file field"
+msgstr "Новое поле Файл"
+
+msgid "Attach file"
+msgstr "Приложить файл"
+
+msgid "You can attach any file, and users will be able to download it"
+msgstr "Вы можете приложить любой файл. Пользователи смогут скачать его"
+
+msgid "Attachment"
+msgstr "Вложение"
+
+msgid "File name"
+msgstr "Название файла"
+
+msgid "Download it!"
+msgstr "Скачайте меня!"
+
+msgid "Text before attachment"
+msgstr "Текст перед вложением"
+
+msgid "Text after attachment"
+msgstr "Текст после вложения"
+
+msgid "Position of attachment block"
+msgstr "Расположение блока вложения"
+
+msgid "Hide file field"
+msgstr "Скрыть поле файла"
+
+msgid "Users will see only attach field"
+msgstr "Пользователи будут видеть только файл вложения"
+
+msgid "Maximum quantity of files"
+msgstr "Максимальное количество файлов"
+
+msgid "Maximum size of each file"
+msgstr "Максимальный размер каждого файла"
+
+msgid "Allowed extensions"
+msgstr "Допустимые расширения"
+
+msgid "Hide file requirements"
+msgstr "Скрыть информацию о ограничении файлов"
+
+msgid "Enable formula mode"
+msgstr "Активировать режим для ввода формул"
+
+msgid "Show helper"
+msgstr "Показать дополнительную информацию"
+
+msgid "For the fields, the result of which is a number, you can use arithmetic operators: <b>+</b>, <b>-</b>, <b>*</b>, <b>/</b>"
+msgstr "Для полей, результатом которых является число, Вы можете использовать арифметические операторы: <b>+</b> (плюс), <b>-</b> (минус), <b>*</b> (умножить), <b>/</b> (разделить)"
+
+msgid "For string results you can use <b>~</b> to concatenate results"
+msgstr "Для строковых результатов Вы можете использовать символ <b>~</b>, чтобы соединить две строки"
+
+msgid "Any syntax errors may cause incorrect calculations!"
+msgstr "Любые синтаксические ошибки могут привести к некорректным расчетам!"
+
+msgid "the result of this fields will be a number (use modifier `string` to change the type of the result)"
+msgstr "результатом полей будут числовые значения (используйте модификатор `string`, чтобы изменить значение результата на строковое)"
+
+msgid "the result of this fields will be a string"
+msgstr "результатом этого поля будет строка"
+
+msgid "Functions"
+msgstr "Функции"
+
+msgid "Logical"
+msgstr "Логические"
+
+msgid "Mathematical"
+msgstr "Математические"
+
+msgid "Text "
+msgstr "Строковые"
+
+msgid "Show more"
+msgstr "Показать еще"
+
+msgid "Modifiers"
+msgstr "Модификаторы"
+
+msgid "convert field result to string."
+msgstr "конвертировать результат поля в строку"
+
+msgid "Usage:"
+msgstr "Использование:"
+
+msgid "Show the results of calculation to user or not"
+msgstr "Отображать пользователю результаты вычислений или нет"
+
+msgid "Syntax error. Number of opened brackets should be equal to number of closed."
+msgstr "Синтаксическая ошибка. Количество открытых круглых скобок должно быть равно количеству закрытых."
+
+msgid "Syntax error. Number of opened braces should be equal to number of closed."
+msgstr "Синтаксическая ошибка. Количество открытых фигурных скобок должно быть равно количеству закрытых."
+
+msgid "Check, whether the logical expression is correct. If it is correct, then function will return true_value, else - false_value."
+msgstr "Проверить, является ли логическое выражение правильным. Если оно правильное, то функция вернет true_value, иначе - false_value."
+
+msgid "Returns TRUE if all its arguments evaluate to TRUE; returns FALSE if one or more arguments evaluate to FALSE."
+msgstr "Вернет TRUE (истина), если все значения возвращают TRUE (истина); вернет FALSE (ложь), если одно или более значений вернет FALSE (ложь)."
+
+msgid "Returns TRUE if any argument is TRUE; returns FALSE if all arguments are FALSE."
+msgstr "Вернет TRUE (истина), если любое значение вернет TRUE (истина); вернет FALSE (ложь), если все значения вернут FALSE (ложь)."
+
+msgid "Reverses the value of its argument. Use NOT when you want to make sure a value is not equal to one particular value."
+msgstr "Изменяет значение аргумента. Используйте NOT, когда Вы хотите удостовериться, что значение не равно определенному выражению."
+
+msgid "Returns the logical value FALSE."
+msgstr "Возвражает логическое FALSE (ложь)."
+
+msgid "Returns the logical value TRUE."
+msgstr "Возвращает логическое TRUE (истина)."
+
+msgid "Determines if number1 &gt; number2 (greater than)."
+msgstr "Определяет, является ли число number1 &gt; number2 (больше чем)."
+
+msgid "Determines if number1 &gt;= number2 (greater than or equal to)."
+msgstr "Определяет, является ли число number1 &gt;= number2 (больше или равно)."
+
+msgid "Determines if number1 &lt; number2 (less than)."
+msgstr "Определяет, является ли число number1 &lt; number2 (меньше чем)."
+
+msgid "Determines if number1 &lt;= number2 (less than or equal to)."
+msgstr "Определяет, является ли число number1 &lt;= number2 (меньше или равно)."
+
+msgid "Determines if number1 == number2 (equal to)."
+msgstr "Определяет, является ли число number1 == number2 (равно)."
+
+msgid "Determines if number1 != number2 (not equal)."
+msgstr "Определяет, является ли число number1 != number2 (не равно)."
+
+msgid "Determines if number1 !== number2 (not equal value or not equal type)."
+msgstr "Определяет, является ли число number1 !== number2 (не равно по значению или не равно по типу)."
+
+msgid "Returns the absolute value of a number. The absolute value of a number is the number without its sign."
+msgstr "Возвращает модуль числа."
+
+msgid "Returns the arccosine, or inverse cosine, of a number."
+msgstr "Возвращает арккосинус."
+
+msgid "Returns the inverse hyperbolic cosine of a number."
+msgstr "Возвращает гиперболический арккосинус."
+
+msgid "Returns the principal value of the arccotangent, or inverse cotangent, of a number."
+msgstr "Возвращает арккотангенс."
+
+msgid "Returns the inverse hyperbolic cotangent of a number."
+msgstr "Возвращает гиперболический арккотангенс."
+
+msgid "Returns the arcsine, or inverse sine, of a number."
+msgstr "Возвращает арксинус."
+
+msgid "Returns the inverse hyperbolic sine of a number."
+msgstr "Возвращает гиперболический арксинус."
+
+msgid "Returns the arctangent, or inverse tangent, of a number."
+msgstr "Возвращает арктангенс."
+
+msgid "Returns the arctangent, or inverse tangent, of the specified x- and y-coordinates."
+msgstr "Возвращает арктангенс для заданных координат x и y."
+
+msgid "Returns the inverse hyperbolic tangent of a number."
+msgstr "Возвращает гиперболический арктангенс."
+
+msgid "Returns the average (arithmetic mean) of the arguments."
+msgstr "Вычисляет среднее."
+
+msgid "Calculates the average (arithmetic mean) of the values in the list of arguments."
+msgstr "Вычисляет среднее арифметическое."
+
+msgid "Returns the cosine of the given angle."
+msgstr "Возвращает косинус."
+
+msgid "Returns the hyperbolic cosine of a number."
+msgstr "Возвращает гиперболический косинус."
+
+msgid "Return the cotangent of an angle specified in radians."
+msgstr "Возвращает котангенс."
+
+msgid "Return the hyperbolic cotangent of a hyperbolic angle."
+msgstr "Возвращает гиперболический котангенс."
+
+msgid "Returns the cosecant of an angle specified in radians."
+msgstr "Возвращает косеканс."
+
+msgid "Return the hyperbolic cosecant of an angle specified in radians."
+msgstr "Возвращает гиперболический косеканс."
+
+msgid "Converts a text representation of a number in a given base into a decimal number."
+msgstr "Преобразует текстовое представление числа с указанным основанием в десятичное число."
+
+msgid "Converts radians into degrees."
+msgstr "Преобразует радианы в градусы."
+
+msgid "Returns e raised to the power of number."
+msgstr "Возвращает число e, возведенное в указанную степень."
+
+msgid "Returns the factorial of a number."
+msgstr "Возвращает факториал числа."
+
+msgid "Rounds a number down to the nearest integer."
+msgstr "Округляет число до ближайшего меньшего целого."
+
+msgid "Returns the natural logarithm of a number."
+msgstr "Возвращает натуральный логарифм числа."
+
+msgid "Returns the logarithm of a number to the base you specify."
+msgstr "Возвращает логарифм числа по заданному основанию."
+
+msgid "Returns the base-10 logarithm of a number."
+msgstr "Возвращает десятичный логарифм числа."
+
+msgid "Returns the largest value in a set of values."
+msgstr "Возвращает максимальное значение."
+
+msgid "Returns the smallest number in a set of values."
+msgstr "Возвращает минимальное значение."
+
+msgid "Returns the remainder after number is divided by divisor. The result has the same sign as divisor."
+msgstr "Возвращает остаток от деления числа на делитель. Результат имеет такой же знак, как делитель."
+
+msgid "Returns number rounded up to the nearest odd integer."
+msgstr "Возвращает число, округленное до ближайшего нечетного целого."
+
+msgid "Returns the number 3.14159265358979, the mathematical constant pi"
+msgstr "Возвращает значение числа ПИ 3.14159265358979"
+
+msgid "Returns the result of a number raised to a power."
+msgstr "Возвращает число, возведенное в степень."
+
+msgid "Converts degrees to radians."
+msgstr "Конвертирует градусы в радианы."
+
+msgid "Round number with precision. ROUND(11.478, -1) = 11.5; ROUND(11.478, -2) = 11.48; ROUND(11.478, 0) = 11; ROUND(11.478, 1) = 20; etc"
+msgstr "Возвращает число, округленное до заданного количества десятичных знаков. ROUND(11.478, -1) = 11.5; ROUND(11.478, -2) = 11.48; ROUND(11.478, 0) = 11; ROUND(11.478, 1) = 20; и тд"
+
+msgid "Returns the secant of an angle."
+msgstr "Возвращает секанс."
+
+msgid "Returns the hyperbolic secant of an angle."
+msgstr "Возвращает гиперболический секанс."
+
+msgid "Returns the sine of the given angle."
+msgstr "Возвращает синус."
+
+msgid "Returns a positive square root."
+msgstr "Возвращае квадратный корень числа."
+
+msgid "Returns the square root of (number * pi)."
+msgstr "Возвращает квадратный корень из значения выражения (число * ПИ)."
+
+msgid "Returns the tangent of the given angle."
+msgstr "Возвращает тангенс."
+
+msgid "Returns the hyperbolic tangent of a number."
+msgstr "Возвращает гиперболический тангенс."
+
+msgid "Returns the character specified by a number."
+msgstr "Возвращает символ под указанным номером."
+
+msgid "Returns a numeric code for the first character in a text string."
+msgstr "Возвращает числовой код первого символа в текстовой строке."
+
+msgid "Returns the first character or characters in a text string, based on the number of characters you specify."
+msgstr "Возвращает значение, содержащее указанное число символов с левой стороны строки."
+
+msgid "Returns the number of characters in a text string."
+msgstr "Возвращает количество символов в строке."
+
+msgid "Converts all uppercase letters in a text string to lowercase."
+msgstr "Конвертирует все символы в нижний регистр."
+
+msgid "Returns a Variant (String) containing a specified number of characters from a string."
+msgstr "Возвращает значение, которое содержит указанное количество знаков строки."
+
+msgid "Searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced."
+msgstr "Выполняет поиск и замену по регулярному выражению."
+
+msgid "Returns the last character or characters in a text string, based on the number of characters you specify."
+msgstr "Возвращает значение, содержащее заданное количество знаков с правой стороны строки."
+
+msgid "Returns the position of the first occurrence of a specified value in a string."
+msgstr "Возвращает позиция первого вхождения знака или строки текста."
+
+msgid "Remove whitespace from both sides of a string."
+msgstr "Удаляет пробелы с обеих сторон строки."
+
+msgid "Converts text to uppercase."
+msgstr "Конвертирует все символы в верхний регистр."
+
+msgid "New formula"
+msgstr "Новая формула"
+
+msgid "Visibility to user"
+msgstr "Видимость для пользователя"
+
+msgid "Show the field"
+msgstr "Отображать поле"
+
+msgid "Number fields rounding"
+msgstr "Округление числовых значений"
+
+msgid "Pay attention! Only number fields will be rounded, not the result. For result rounding use function ROUND()"
+msgstr "Внимание! Только числовые поля будут округлены, не конечный результат вычислений. Если Вы хотите округлить результат вычислений, то используйте функцию ROUND()"
+
+msgid "not round"
+msgstr "не округлять"
+
+msgid "0.01"
+msgstr "0.01"
+
+msgid "0.1"
+msgstr "0.1"
+
+msgid "1"
+msgstr "1"
+
+msgid "10"
+msgstr "10"
+
+msgid "100"
+msgstr "100"
+
+msgid "Hidden field"
+msgstr "Скрытое поле (hidden)"
+
+msgid "Current page link"
+msgstr "Ссылка на страницу, где расположена форма"
+
+msgid "Referer"
+msgstr "Реферер"
+
+msgid "New hidden field"
+msgstr "Новое скрытое поле"
+
+msgid "Visible only in admin area"
+msgstr "Отображается только в админ части"
+
+msgid "New html field"
+msgstr "Новое поле HTML"
+
+msgid "HTML code"
+msgstr "HTML код"
+
+msgid "<p>This is <b>HTML</b> field.</p><p>Use clean markup!</p>"
+msgstr "<p>Это <b>HTML</b> поле.</p><p>Используйте чистую разметку!</p>"
+
+msgid "New textfield"
+msgstr "Новое текстовое поле (input)"
+
+msgid "Maxlength"
+msgstr "Максимальная длина"
+
+msgid "For example,"
+msgstr "Например,"
+
+msgid "Only integers would be valid"
+msgstr "Только целочисленные будут разрешены"
+
+msgid "Minimum value"
+msgstr "Минимальное значение"
+
+msgid "Maximum value"
+msgstr "Максимальное значение"
+
+msgid "Step increment/decrement value"
+msgstr "Шаг увеличения/уменьшения значения"
+
+msgid "Use slider for the field"
+msgstr "Использовать слайдер значений для поля"
+
+msgid "Value must be more than"
+msgstr "Значение должно быть больше, чем"
+
+msgid "Value must be less than"
+msgstr "Значение должно быть меньше, чем"
+
+msgid "Value must be a multiple of"
+msgstr "Значение должно быть кратно"
+
+msgid "Only integers"
+msgstr "Только целочисленные"
+
+msgid "Range"
+msgstr "Диапазон значений"
+
+msgid "Min"
+msgstr "Минимум"
+
+msgid "Max"
+msgstr "Максимум"
+
+msgid "Step"
+msgstr "Шаг"
+
+msgid "Print correct phone format"
+msgstr "Введите корректный формат телефона"
+
+msgid "New phone"
+msgstr "Новый телефон"
+
+msgid "Phone mask"
+msgstr "Маска телефона"
+
+msgid "Use 0 where digits should be."
+msgstr "Используйте 0, где должны быть введены числа."
+
+msgid "Examples:"
+msgstr "Примеры:"
+
+msgid "New radio field"
+msgstr "Новый список (radio)"
+
+msgid "Allow other"
+msgstr "Разрешить произвольное поле"
+
+msgid "Add additional input text field as the last choice"
+msgstr "Добавить дополнительный пункт, где в качестве значения необходимо будет вводить текст"
+
+msgid "reset"
+msgstr "сбросить"
+
+msgid "New rating field"
+msgstr "Новое поле рейтинга"
+
+msgid "No predefined value"
+msgstr "Нет значения по умолчанию"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "5"
+msgstr "5"
+
+msgid "New select field"
+msgstr "Новый выпадающий список"
+
+msgid "Pre-selected column"
+msgstr "Выделенная колонка по умолчанию"
+
+msgid "Statements"
+msgstr "Строки"
+
+msgid "Columns"
+msgstr "Колонки"
+
+msgid "Randomize statements"
+msgstr "Перемешать строки"
+
+msgid "Statement options will be shuffled each time"
+msgstr "Значения строк будут постоянно меняться местами"
+
+msgid "Randomize columns"
+msgstr "Перемешать колонки"
+
+msgid "Column options will be shuffled each time"
+msgstr "Значения колонок будут постоянно меняться местами"
+
+msgid "Statement"
+msgstr "Строка"
+
+msgid "Customize statement keys"
+msgstr "Настроить ключи строк"
+
+msgid "Column"
+msgstr "Колонка"
+
+msgid "Customize column keys"
+msgstr "Настроить ключи колонок"
+
+msgid "Hour"
+msgstr "Час"
+
+msgid "Minute"
+msgstr "Минута"
+
+msgid "Second"
+msgstr "Секунда"
+
+msgid "SS"
+msgstr "СС"
+
+msgid "AM/PM"
+msgstr "AM/PM"
+
+msgid "New time"
+msgstr "Новое время"
+
+msgid "Time field type"
+msgstr "Тип поля"
+
+msgid "Hour field"
+msgstr "Поле для ввода часов"
+
+msgid "Minute field"
+msgstr "Поле для ввода минут"
+
+msgid "Second field"
+msgstr "Поле для ввода секунд"
+
+msgid "Time format"
+msgstr "Формат времени"
+
+msgid "12 hours (am, pm)"
+msgstr "12 часов (am, pm)"
+
+msgid "Use for dropdown fields"
+msgstr "Используется для выпадающих списков"
+
+msgid "24 hours"
+msgstr "24 часа"
+
+msgid "Hidden from user"
+msgstr "Скрыто от пользователя"
+
+msgid "Private field"
+msgstr "Закрытое (частное) поле"
+
+msgid "Parameter"
+msgstr "Параметр"
+
+msgid "Captcha field"
+msgstr "Проверочный код"
+
+msgid "Captcha image"
+msgstr "Проверочный код (изображение)"
+
+msgid "Refresh"
+msgstr "Обновить"
+
+msgid "Custom attributes"
+msgstr "Атрибуты поля"
+
+msgid "add attribute"
+msgstr "добавить атрибут"
+
+msgid "Use only construction /pattern/"
+msgstr "Используйте конструкцию /выражение/"
+
+msgid "Select the mask"
+msgstr "Выберите маску"
+
+msgid "You don't have any masks."
+msgstr "У вас не создано ни одной маски"
+
+msgid "Read more"
+msgstr "Узнать больше"
+
+msgid "Symbolic code"
+msgstr "Символьный код"
+
+msgid "Regular expression"
+msgstr "Регулярное выражение"
+
+msgid "Regular expression (pattern)"
+msgstr "Регулярное выражение (шаблон)"
+
+msgid "Case insensitive"
+msgstr "Регистронезависимый поиск"
+
+msgid "Mask"
+msgstr "Маска"
+
+msgid "Invalid expression"
+msgstr "Ошибочное значение"
+
+msgid "Division by zero"
+msgstr "Деление на ноль"
+
+msgid "Form has reached submission limit"
+msgstr "Форма достигла предела отправлений"
+
+msgid "Record ID(#)"
+msgstr "ID запроса (#)"
+
+msgid "You've got new message"
+msgstr "У Вас новое сообщение"
+
+msgid "Your message successfully sent! Your request number is {Request:ID}"
+msgstr "Ваше сообщение успешно отправлено! Номер Вашего обращения {Request:ID}"
+
+msgid "Form is not active"
+msgstr "Форма неактивна"
+
+msgid "Captcha code is invalid"
+msgstr "Проверочный код не совпал"
+
+msgid "Field %s has incorrect value"
+msgstr "Поле %s имеет некорректное значение"
+
+msgid "Sorry, we have some technical problems"
+msgstr "Извините, у нас произошли неполадки"
+
+msgid "File \"%s\" is too large"
+msgstr "Файл \"%s\" слишком большой"
+
+msgid "Maximum filesize is %d byte"
+msgstr "Максимальный размер файла %d байт"
+
+msgid "File extension \"%s\" is not permitted"
+msgstr "Расширение файла \"%s\" запрещено"
+
+msgid "Form builder. Create online surveys, form calculators, contact forms, logic forms."
+msgstr "Конструктор форм. Создание онлайн опросов, форм обратной связи, форм-калькуляторов, форм с условиями."
+
+msgid "Print valid email address"
+msgstr "Введите корректные email адреса"
+
+msgid "Only digits"
+msgstr "Только целочисленные значения"
+
+msgid "Print only digits"
+msgstr "Вводите только целочисленные значения"
+
+msgid "Can create new forms"
+msgstr "Создание новых форм"
+
+msgid "No access"
+msgstr "Нет доступа"
+
+msgid "Can create and use own theme appearances"
+msgstr "Создание и использование своих тем оформления"
+
+msgid "Full access"
+msgstr "Полный доступ"
+
+msgid "Access to private fields"
+msgstr "Доступ к закрытым (частным) полям"
+
+msgid "Private access to form without private fields"
+msgstr "Частный доступ без доступа к закрытым полям"
+
+msgid "Private access to form with private fields"
+msgstr "Частный доступ с доступом к закрытым полям"
+
+msgid "Only read"
+msgstr "Только чтение"
+
+msgid "Edit records and add comments"
+msgstr "Редактирование записей и добавление комментариев"
+
+msgid "First option"
+msgstr "Первое значение"
+
+msgid "Second option"
+msgstr "Второе значение"
+
+msgid "Third option"
+msgstr "Третье значение"
+
+msgid "New selection field"
+msgstr "Новый выпадающий список"
+
+msgid "Select option"
+msgstr "Выберите значение"
+
+msgid "New file"
+msgstr "Новый файл"
+
+msgid "New html"
+msgstr "Новое поле HTML"
+
+msgid "This is my new form!"
+msgstr "Это моя новая форма!"
+
+msgid "Form with custom HTML"
+msgstr "Форма с произвольным HTML"
+
+msgid "This field is hidden and is designed specifically for You, as a short instruction. Here is an example of creating form. In order to place it on the website, click on the blue icon above, and You will see a code which can be inserted into any page on the website. That's all, good luck!"
+msgstr "Данное поле скрыто и создано специально для Вас, как краткая инструкция. Перед Вами пример создания формы. Для того чтобы разместить ее на сайте, нажмите на голубую иконку выше, и Вы увидите код, который необходимо вставить в любую страницу на сайте. Вот и все, успехов!"
+
+msgid "<h2>Order Information</h2>%s Enter data without errors"
+msgstr "<h2>Информация о заказе</h2>%s Вводите данные без ошибок"
+
+msgid "Order number"
+msgstr "Номер заказа"
+
+msgid "Product name"
+msgstr "Наименование товара"
+
+msgid "Quantity"
+msgstr "Количество"
+
+msgid "<h2>Delivery</h2>%s Delivery information"
+msgstr "<h2>Доставка</h2>%s Информация о доставке"
+
+msgid "<h2>Payment</h2>%s Choose the best method of payment"
+msgstr "<h2>Оплата</h2>%s Укажите удобный способ оплаты"
+
+msgid "Please select"
+msgstr "Выберите значение"
+
+msgid "Credit card"
+msgstr "Картой"
+
+msgid "Contact info"
+msgstr "Контактная информация"
+
+msgid "First name"
+msgstr "Имя"
+
+msgid "Comment"
+msgstr "Комментарий"
+
+msgid "Country"
+msgstr "Страна"
+
+msgid "City"
+msgstr "Город"
+
+msgid "Region"
+msgstr "Регион"
+
+msgid "Payment"
+msgstr "Оплата"
+
+msgid "Edit group"
+msgstr "Изменить группу"
+
+msgid "No any actions. Create it, make your form alive!"
+msgstr "Действия отсутствуют. Создайте их, оживите вшу форму!"
+
+msgid "add action"
+msgstr "добавить действие"
+
+msgid "Select action"
+msgstr "Выбрать действие"
+
+msgid "add group"
+msgstr "добавить группу"
+
+msgid "Drag fields here"
+msgstr "Переместите сюда поля"
+
+msgid "Search records..."
+msgstr "Искать записи..."
+
+msgid "Everywhere"
+msgstr "Везде"
+
+msgid "Search"
+msgstr "Поиск"
+
+msgid "Found records:"
+msgstr "Найдено записей:"
+
+msgid "Record has cloned values"
+msgstr "Запись имеет дублированные поля"
+
+msgid "Use tag &lt;form&gt;"
+msgstr "Использовать тег &lt;form&gt;"
+
+msgid "If you decided to embed webform into some &lt;form&gt; on your website, then disable this option to prevent unexpected behavior of website."
+msgstr "Если вы решили встроить веб-форму в какую-либо другую форму на сайте (вовнуть тега &lt;form&gt;), тогда отключите данную опцию, чтобы избежать ошибок"
+
+msgid "Field name"
+msgstr "Название поля"
+
+msgid "Webasyst Captcha"
+msgstr "Капча Вебасист"
+
+msgid "Google reCAPTCHA"
+msgstr "Google reCAPTCHA"
+
+msgid "Site Key"
+msgstr "Ключ сайта"
+
+msgid "Secret"
+msgstr "Секретный ключ"
+
+msgid "Get Google reCAPTCHA site key and secret for your site on <a href=\"https://www.google.com/recaptcha\" target=\"_blank\">https://www.google.com/recaptcha</a>"
+msgstr "Получить ключ сайта и секретный ключ можно на сайте <a href=\"https://www.google.com/recaptcha\" target=\"_blank\">https://www.google.com/recaptcha</a>"
+
+msgid "This meta tags belong to the <a href=\"%s\" target=\"_blank\">page</a>"
+msgstr "Данные мета-теги принадлежат <a href=\"%s\" target=\"_blank\">данной странице</a>"
+
+msgid "Beginning of the"
+msgstr "Начало"
+
+msgid "End of the"
+msgstr "Конец"
+
+msgid "Additional field"
+msgstr "Дополнительное поле"
+
+msgid "etc."
+msgstr "и тд."
+
+msgid "Disabled"
+msgstr "Отключено"
+
+msgid "Enabled"
+msgstr "Включено"
+
+msgid "Action will be executed immediatelly after form successfully submited"
+msgstr "Действия будут выполнены сразу после успешного отправления формы"
+
+msgid "Action will be executed by yourself on demand"
+msgstr "Действие будет выполнено по запросу"
+
+msgid "Creating of new action"
+msgstr "Создание нового действия"
+
+msgid "Action name"
+msgstr "Название действия"
+
+msgid "This name will be displayed in the list of actions for the form."
+msgstr "Данное имя будет отображено в списке действий формы"
+
+msgid "Action description"
+msgstr "Описание действия"
+
+msgid "Specify more information about action for yourself"
+msgstr "Опишите детально суть действия"
+
+msgid "Action color"
+msgstr "Цвет"
+
+msgid "This is the color of action icon"
+msgstr "Это цвет иконки действия"
+
+msgid "Auto execute"
+msgstr "Автовыполнение"
+
+msgid "When action should be executed: immediatelly after form successfully submited (auto execute) or on demand"
+msgstr "Когда необходимо выполнять действие: сразу поле успешного отправления формы (автовыполнение) или по запросу"
+
+msgid "Section"
+msgstr "Секция"
+
+msgid "Action does not exist"
+msgstr "Действие не существует"
+
+msgid "New button"
+msgstr "Новая кнопка"
+
+msgid "Onclick action"
+msgstr "Действие при нажатии"
+
+msgid "Form submit"
+msgstr "Отправить форму"
+
+msgid "Page link"
+msgstr "Ссылка на страницу"
+
+msgid "Open in new tab"
+msgstr "Открыть в новой вкладке"
+
+msgid "Use default button styles"
+msgstr "Использовать для кнопки стили по умолчанию"
+
+msgid "Button will have CSS styles as on the tab Appearance"
+msgstr "Кнопка будет выглядеть также, как и во вкладке \"Внешний вид\""
+
+msgid "Use default button block styles"
+msgstr "Использовать для блока с кнопой стили по умолчанию"
+
+msgid "Button block will have CSS styles as on the tab Appearance"
+msgstr "Блок с кнопкой  будет выглядеть также, как и во вкладке \"Внешний вид\""
+
+msgid "Field properties"
+msgstr "Свойства поля"
+
+msgid "Block width"
+msgstr "Ширина блока"
+
+msgid "Field width"
+msgstr "Ширина поля"
+
+msgid "Minimal number of boxes, which user have to select to submit the form"
+msgstr "Минимальное количество вариантов, которые пользователю необходимо выбрать"
+
+msgid "Maximal number of checked boxes, which user cannot exceed"
+msgstr "Максимальное количество вариантов, которые пользователю допускается выбрать"
+
+msgid "Basic"
+msgstr "Основные"
+
+msgid "Show option IDs"
+msgstr "Показать ID вариантов"
+
+msgid "Title width"
+msgstr "Ширина заголовка"
+
+msgid "Number of checked boxes"
+msgstr "Количество допустимых вариантов"
+
+msgid "Minimal number of checked boxes"
+msgstr "Минимальное количество вариантов"
+
+msgid "Maximum number of checked boxes"
+msgstr "Максимальное количество вариантов"
+
+msgid "Popup calendar"
+msgstr "Всплывающий календарь"
+
+msgid "Button name"
+msgstr "Название кнопки"
+
+msgid "Select files.."
+msgstr "Выберите файлы.."
+
+msgid "Round number with precision. ROUND(11.478, 0-1) = 11.5; ROUND(11.478, 0-2) = 11.48; ROUND(11.478, 0) = 11; ROUND(11.478, 1) = 20; etc"
+msgstr "Округление числа с точностью. ROUND(11.478, 0-1) = 11.5; ROUND(11.478, 0-2) = 11.48; ROUND(11.478, 0) = 11; ROUND(11.478, 1) = 20; и тд."
+
+msgid "Add parameter"
+msgstr "Добавить параметр"
+
+msgid "Slider parameters. More info in <a target=\"_blank\" href=\"http://ionden.com/a/plugins/ion.rangeSlider/api.html\">docs</a>"
+msgstr "Параметры слайдера. Больше информации можно найти на странице <a target=\"_blank\" href=\"http://ionden.com/a/plugins/ion.rangeSlider/api.html\">документации</a>"
+
+msgid "Star sizes"
+msgstr "Размер звезд"
+
+msgid "Maximum value of additional fields"
+msgstr "Максимальное значение дополнительных полей"
+
+msgid "add additional field"
+msgstr "добавить дополнительное поле"
+
+msgid "remove field"
+msgstr "удалить поле"
+
+msgid "Allow users to add extra fields"
+msgstr "Разрешить пользователю добавлять дополнительные поля"
+
+msgid "\"Add button\" text"
+msgstr "Текст кнопки добавления"
+
+msgid "\"Remove button\" text"
+msgstr "Текст кнопки удаления"
+
+msgid "Maximum times"
+msgstr "Максимальное количество"
+
+msgid "Select the color of the section"
+msgstr "Выберите цвет секции"
+
+msgid "Useful for Records tab"
+msgstr "Удобно использовать для вкладки \"Записи\""
+
+msgid "Layout"
+msgstr "Шаблон"
+
+msgid "Fields layout"
+msgstr "Шаблон полей"
+
+msgid "Select how fields inside section will be positioned."
+msgstr "Выберите, как будут отображаться поля внутри секции"
+
+msgid "Horizontal"
+msgstr "Горизонтальный"
+
+msgid "Vertical"
+msgstr "Вертикальный"
+
+msgid "Automatic mode for horizontal layout"
+msgstr "Автоматический режим для горизонтального шаблона"
+
+msgid "Automatically change sizes of the elements in the section"
+msgstr "Автоматически изменять размеры всех элементов внутри секции"
+
+msgid "Disable this option, if you want to control the sizes (title width, field width, etc) of each element"
+msgstr "Отключите данную функцию, если хотите контролировать размеры (ширина заголовка, ширина поля и тд) каждого элемента"
+
+msgid "Width of each block"
+msgstr "Ширина каждого блока"
+
+msgid "Width of all fields"
+msgstr "Ширина всех полей"
+
+msgid "Titles will be calculated depending on fields width"
+msgstr "Ширина заголовков будет рассчитана в зависимости от ширины полей"
+
+msgid "Size settings"
+msgstr "Настройки размеров"
+
+msgid "Section width"
+msgstr "Ширина секции"
+
+msgid "Randomize output"
+msgstr "Случайный вывод полей"
+
+msgid "return required"
+msgstr "вернуть обязательное поле"
+
+msgid "skip required?"
+msgstr "пропустить обязательное поле?"
+
+msgid "Drag to sort"
+msgstr "Перетаскивайте для сортировки"
+
+msgid "Type"
+msgstr "Тип"
+
+msgid "Auto"
+msgstr "Авто"
+
+msgid "Ooops, you don't have any fields. <a href='#/page/edit' title='Create field'><i class='icon16 add'></i> Create it</a>"
+msgstr "Похоже, что у вас еще нет ни одного поля. <a href='#/page/edit' title='Создать поле'><i class='icon16 add'></i> Создайте их</a>"
+
+msgid "Use regular expression"
+msgstr "Использовать регулярное выражение"
+
+msgid "Unknown field"
+msgstr "Неизвестное поле"
+
+msgid "Slider line"
+msgstr "Полоса слайдера"
+
+msgid "Inactive line"
+msgstr "Неактивная полоса"
+
+msgid "Slider circle"
+msgstr "Кружок слайдера"
+
+msgid "Slider active value"
+msgstr "Активное значение слайдера"
+
+msgid "Slider active value block"
+msgstr "Блок активного значения слайдера"
+
+msgid "Slider inactive value"
+msgstr "Неактивное значение слайдера"
+
+msgid "Slider inactive value block"
+msgstr "Блок неактивного значения слайдера"
+
+msgid "Slider grid"
+msgstr "Числовая сетка слайдера"
+
+msgid "Slider grid value"
+msgstr "Значения числовой сетки слайдера"
+
+msgid "Cancel notifications when editing a record in backend"
+msgstr "Отменить отправку уведомлений при редактировании записей в бэкенде"
+
+msgid "Output the name of the field"
+msgstr "Выводит название поля"
+
+msgid "Output the value of the field"
+msgstr "Выводит переданное значение поля"
+
+msgid "Specify name"
+msgstr "Укажите имя"
+
+msgid "Specify comment"
+msgstr "Укажите комментарий"
+
+msgid "Page with list of all forms. Link address of form name"
+msgstr "Страница со всеми формами. Ссылка при нажатии на название формы"
+
+msgid "Page of form editing"
+msgstr "Страница редактирования формы"
+
+msgid "Page of form records"
+msgstr "Страница записей формы"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "You don't have access"
+msgstr "У нет доступа"
+
+msgid "No access (Hide tab)"
+msgstr "Нет доступа (Скрыть вкладку)"
+
+msgid "No access (Readonly)"
+msgstr "Нет доступа (Только просмотр)"

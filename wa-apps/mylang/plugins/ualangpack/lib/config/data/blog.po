@@ -1,0 +1,1092 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst Blog 1.4.7.46 UA translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2011-11-11 13:30+0300\n"
+"PO-Revision-Date: \n"
+"Language: uk_UA\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Loading"
+msgstr "Завантаження"
+
+msgid "Settings"
+msgstr "Налаштування"
+
+msgid "Delete"
+msgstr "Видалити"
+
+msgid "(empty title)"
+msgstr "(немає заголовку)"
+
+msgid "Public post"
+msgstr "Публічний запис"
+
+msgid "Private post"
+msgstr "Приватний запис"
+
+msgid "No comments"
+msgstr "Коментарі відсутні"
+
+msgid "Archive"
+msgstr "Архів"
+
+msgid "Click to create a post scheduled to be published on this day"
+msgstr "Клікніть, аби створити запис з датою публікації у цей день"
+
+msgid "Comments"
+msgstr "Коментарі"
+
+msgid "delete"
+msgstr "видалити"
+
+msgid "restore"
+msgstr "відновити"
+
+msgid "reply"
+msgstr "відповісти"
+
+msgid "no comments"
+msgstr "коментарі відсутні"
+
+msgid "Done"
+msgstr "Готово"
+
+msgid "Blog"
+msgstr "Блог"
+
+msgid "New blog"
+msgstr "Новий блог"
+
+msgid "Blog name"
+msgstr "Назва блогу"
+
+msgid "Private"
+msgstr "Приватний"
+
+msgid "Public"
+msgstr "Публічний"
+
+msgid "Blog posts are published and available in the frontend and RSS feed"
+msgstr "Записи публікуються у загальнодоступній частині блогу і у RSS блогу"
+
+msgid "Blog posts are published and available only within Webasyst backend for users who have rights to access this blog"
+msgstr "Записи доступні лише користувачам бекенду Webasyst, які мають доступ до цього блогу"
+
+msgid "Color"
+msgstr "Колір"
+
+msgid "Color coding is used only within Webasyst backend"
+msgstr "Кольорове кодування використовується лише в межах бекенду Webasyst"
+
+msgid "Icon"
+msgstr "Іконка"
+
+msgid "Or enter icon URL (should be a 16x16 px image)"
+msgstr "Або вкажіть адресу іконки (розмір — 16х16 пікселів)"
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "New post"
+msgstr "Новий запис"
+
+msgid "All posts"
+msgstr "Усі записи"
+
+msgid "Calendar"
+msgstr "Календар"
+
+msgid "Drafts"
+msgstr "Чернетки"
+
+msgid "Plugins"
+msgstr "Плагіни"
+
+msgid "No plugins installed"
+msgstr "Плагіни не встановлено"
+
+msgid "Plugin order defines the order they are executed. Sort plugin list to change the order."
+msgstr "Порядок сортування плагінів налаштовується перетягуванням і визначає порядок їх підключення."
+
+msgid "Plugin does not offer configuration settings."
+msgstr "Цей плагін не пропонує налаштувань."
+
+msgid "To add posts, you must first <a href=\"%s\"> create a new blog</a>."
+msgstr "Для додавання записів необхідно спочатку <a href=\"%s\">створити новий блог</a>."
+
+msgid "Edit post"
+msgstr "Редагувати запис"
+
+msgid "Post %s will be deleted permanently. Delete?"
+msgstr "Запис %s буде видалений назавжди. Видалити?"
+
+msgid "Delete post"
+msgstr "Видалити запис"
+
+msgid "Delete blog"
+msgstr "Видалити блог"
+
+msgid "Add comment"
+msgstr "Написати коментар"
+
+msgid "Author"
+msgstr "Автор"
+
+msgid "Preview"
+msgstr "Попередній перегляд"
+
+msgid "Published"
+msgstr "Опубліковано"
+
+msgid "WYSIWYG"
+msgstr "Візуальний редактор"
+
+msgid "Publication deadline"
+msgstr "Термін публікації"
+
+msgid "Not set"
+msgstr "Не встановлено"
+
+msgid "Publish"
+msgstr "Опублікувати"
+
+msgid "Save draft"
+msgstr "Зберегти чернетку"
+
+msgid "or"
+msgstr "або"
+
+msgid "cancel"
+msgstr "відмінити"
+
+msgid "Schedule publication"
+msgstr "Запланувати публікацію"
+
+msgid "Schedule"
+msgstr "Запланувати"
+
+msgid "edit"
+msgstr "редагувати"
+
+msgid "Autopublication is scheduled for"
+msgstr "Автоматична публікація запланована на"
+
+msgid "Unpublish"
+msgstr "Відмінити публікацію"
+
+msgid "Max %d characters"
+msgstr "Максимум %d символів"
+
+msgid "Access denied"
+msgstr "Доступ заборонений"
+
+msgid "Post not found"
+msgstr "Запис не знайдений"
+
+msgid "Name can not be left blank"
+msgstr "Ім&#39;я не може бути пустим"
+
+msgid "Email can not be left blank"
+msgstr "Email-адреса не може бути пустою"
+
+msgid "Email is not valid"
+msgstr "Некоректна email-адреса"
+
+msgid "Site URL is not valid"
+msgstr "Некоректний URL сайту"
+
+msgid "Comment text can not be left blank"
+msgstr "Коментар не може бути пустим"
+
+msgid "Comment length should not exceed 4096 symbols"
+msgstr "Коментар не повинен бути довшим 4096 символів"
+
+msgid "Database error"
+msgstr "Помилка бази даних"
+
+msgid "URL must not contain /"
+msgstr "URL не повинен містити /"
+
+msgid "This address is already in use"
+msgstr "Ця адреса вже використовується"
+
+msgid "comment"
+msgid_plural "comments"
+msgstr[0] "коментар"
+msgstr[1] "коментарі"
+msgstr[2] "коментарів"
+
+msgid "Private blog"
+msgstr "Закритий блог"
+
+msgid "Blogs"
+msgstr "Блоги"
+
+msgid "Name length should not exceed 255 symbols"
+msgstr "Ім&#39;я не повинно бути довшим за 255 символів"
+
+msgid "%d post"
+msgid_plural "%d posts"
+msgstr[0] "%d запис"
+msgstr[1] "%d записи"
+msgstr[2] "%d записів"
+
+msgid "%d post of %d"
+msgid_plural "%d posts of %d"
+msgstr[0] "%d запис з %d"
+msgstr[1] "%d записи з %d"
+msgstr[2] "%d записів з %d"
+
+msgid "%d comment of %d (including deleted)"
+msgid_plural "%d comments of %d (including deleted)"
+msgstr[0] "%d коментар з %d (включно видалені)"
+msgstr[1] "%d коментарі з %d (включно видалені)"
+msgstr[2] "%d коментарів з %d (включно видалені)"
+
+msgid "%d comment"
+msgid_plural "%d comments"
+msgstr[0] "%d коментар"
+msgstr[1] "%d коментарі"
+msgstr[2] "%d коментарів"
+
+msgid "Editing post %s"
+msgstr "Редагування запису %s"
+
+msgid "Select posts"
+msgstr "Обрати записи"
+
+msgid "Move to blog"
+msgstr "Перемістити до блогу"
+
+msgid "Open on website"
+msgstr "Відкрити на сайті"
+
+msgid "Continue reading →"
+msgstr "Читати далі →"
+
+msgid "Show older posts"
+msgstr "Показати більш ранні записи"
+
+msgid "Overdue posts"
+msgstr "Прострочені записи"
+
+msgid "Overdue"
+msgstr "Прострочений"
+
+msgid "Draft"
+msgstr "Чернетка"
+
+msgid "Scheduled for publication"
+msgstr "Запланована публікація"
+
+msgid "Belong to private blog"
+msgstr "Належить приватному блогу"
+
+msgid "Blog type"
+msgstr "Тип блогу"
+
+msgid "Public URL"
+msgstr "Адреса запису"
+
+msgid "Show older comments"
+msgstr "Показати попередні коментарі"
+
+msgid "on"
+msgstr "до запису"
+
+msgid "unpublished post"
+msgstr "відключений запис"
+
+msgid "Comment deleted"
+msgstr "Коментар видалений"
+
+msgid "Comment for unpublished post"
+msgstr "Коментар до неопублікованого запису"
+
+msgid "in reply to"
+msgstr "відповідь на коментар"
+
+msgid "Allow comments"
+msgstr "Коментарі"
+
+msgid "Off"
+msgstr "Вимкнути"
+
+msgid "On"
+msgstr "Увімкнути"
+
+msgid "Deadline is for plan purposes only. It will not automatically published the post, but will highlight the post if publication date is overdue."
+msgstr "Призначення терміну публікації дозволяє планувати майбутні записи, але автоматично не публікує їх."
+
+msgid "format"
+msgstr "формат"
+
+msgid "current time is"
+msgstr "поточний час"
+
+msgid "Custom parameters"
+msgstr "Додаткові параметри"
+
+msgid "Optional set of custom <em>key=value</em> parameters which can be used within a frontend's theme template as <em>&#123;$post.key&#125;</em>. Each key=value pair should be on a separate line."
+msgstr "Необов’язковий набір додаткових параметрів <em>key=value</em> (використовуються в шаблоні загальнодоступної частини у вигляді <em>&#123;$post.key&#125;</em>). Кожну пару key=value вказуйте з нового рядка."
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid "Saved"
+msgstr "Збережено"
+
+msgid "Unpublish this blog post?"
+msgstr "Відмінити публікацію запису?"
+
+msgid "Settings updated"
+msgstr "Налаштування збережені"
+
+msgid "Personal settings"
+msgstr "Особисті налаштування"
+
+msgid "App icon counter"
+msgstr "Лічильник на іконці"
+
+msgid "Frontend settings"
+msgstr "Налаштування загальнодоступної частини"
+
+msgid "Homepage <title>"
+msgstr "Заголовок головної сторінки <title>"
+
+msgid "Title format"
+msgstr "Формат заголовка"
+
+msgid "Post title only"
+msgstr "Лише заголовок запису"
+
+msgid "E.g."
+msgstr "Наприклад"
+
+msgid "Blog » Post title"
+msgstr "Блог » Заголовок запису"
+
+msgid "URLs & Titles"
+msgstr "Адреси (URL) і заголовки (title)"
+
+msgid "RSS"
+msgstr "RSS"
+
+msgid "Number of posts in RSS file"
+msgstr "Кількість записів в RSS-файлі"
+
+msgid "&lt;author&gt; tag"
+msgstr "тег &lt;автор&gt;"
+
+msgid "Use blog post author's real name"
+msgstr "Використати справжнє ім’я автора"
+
+msgid "Use blog name"
+msgstr "Використовувати назву блогу"
+
+msgid "The blog %s contains <strong>%d posts</strong>. What should be done with these posts?"
+msgstr "В блозі «%s» міститься <strong>%d записів</strong>. Що слід зробити з цими записами?"
+
+msgid "Move posts to another blog"
+msgstr "Перенести записи до іншого блогу"
+
+msgid "Delete permanently"
+msgstr "Видалити назавжди"
+
+msgid "This blog does no contain posts, and thus can be safely deleted."
+msgstr "В цьому блозі записи відсутні, його можна видалити."
+
+msgid "Deadline is for planning purposes only. It will not publish the post automatically, but will highlight the post in the calendar if it is not published in time."
+msgstr "Встановлення терміну публікації використовується лише для планування. Запис автоматично не публікується, а лише виділяється у календарі після того, як спливе термін публікації."
+
+msgid "The post <b>%s</b> will be permanently deleted without the ability to recover. Delete?"
+msgstr "Запис «<b>%s</b>» буде видалений без можливості відновлення. Видалити??"
+
+msgid "Delete posts"
+msgstr "Видалити записи"
+
+msgid "Selected posts will be permanently deleted without the ability to recover. Delete?"
+msgstr "Выбранные записи будут удалены без возможности восстановления. Удалить?"
+
+msgid "Move posts"
+msgstr "Перемістити записи"
+
+msgid "Cron is working properly. Latest execution time: %s"
+msgstr "CRON для відкладеної публікації записів увімкнений і працює. Час останнього запуску: <strong>%s</strong>"
+
+msgid "Scheduled publication requires CRON to be properly setup for Webasyst Blog app, which is not the case for this installation. Setup cron for the Blog app with the following command (<a href=\"http://www.webasyst.com/ru/framework/docs/server/cron/\" target=\"_blank\">cron setup instructions</a>):<br /><br /> <strong class=\"cron-command\">%s</strong>"
+msgstr "Для роботи запланованої публікації необхідно налаштувати CRON, що дозволить додатку «Блог» виконувати дії за розкладом без участі користувача. Інструкція для CRON (<a href=\"http://www.webasyst.ru/developers/docs/tips/cron/\" target=\"_blank\">документація з налаштування</a>):<br /><br /> <strong class=\"cron-command\">%s</strong>"
+
+msgid "Blog not found"
+msgstr "Блог не знайдено"
+
+msgid "%s settings"
+msgstr "Налаштування %s"
+
+msgid "Blog name must not be empty"
+msgstr "Назва блогу не повинна бути пустою"
+
+msgid "Isn't allowed comment to this post"
+msgstr "Цей запис не можна коментувати"
+
+msgid "Comment not found"
+msgstr "Коментар не знайдений"
+
+msgid "Posts by %s"
+msgstr "Записи автора %s"
+
+msgid "Plugin settings page"
+msgstr "Сторінка налаштування плагінів"
+
+msgid "Adding new post"
+msgstr "Додавання нового запису"
+
+msgid "%s ago"
+msgstr "%s назад"
+
+msgid "in %s"
+msgstr "через %s"
+
+msgid "Can't find corresponding blog"
+msgstr "Не вдалося знайти відповідний блог"
+
+msgid "Can't find corresponding post"
+msgstr "Не вдалося знайти відповідний запис"
+
+msgid "Files with extensions %s are allowed only."
+msgstr "Дозволені імена файлів лише з наступними розширеннями: %s."
+
+msgid "File could not bet saved due to the insufficient file write permissions for the %s folder."
+msgstr "Не вдалося зберегти файл через недостатні права на перезапис теки %s."
+
+msgid "Failed to upload file %s."
+msgstr "Не вдалося завантажити файл %s."
+
+msgid "Blog settings page"
+msgstr "Сторінка налаштування блогу"
+
+msgid "%subject% URL must not be empty"
+msgstr "Адреса %subject% не повинна бути пустою"
+
+msgid "%subject% URL is in use. Please enter another URL"
+msgstr "Адреса %subject% вже використовується. Введіть іншу адресу"
+
+msgid "%subject% URL is invalid"
+msgstr "Адреса %subject% введена некоректно"
+
+msgid "Can create new blogs"
+msgstr "Може створювати нові блоги"
+
+msgid "No access"
+msgstr "Доступ заборонено"
+
+msgid "Read only"
+msgstr "Лише читання"
+
+msgid "Read and publish new posts"
+msgstr "Читання і публікація нових записів"
+
+msgid "Full access"
+msgstr "Повний доступ"
+
+msgid "Published blogs & URLs"
+msgstr "Опубліковані блоги і адреси"
+
+msgid "All blogs. Plain URLs (%s)"
+msgstr "Всі блоги. Прості адреси (%s)"
+
+msgid "<br />Post URLs: <strong>%s</strong>, e.g. %s<br />Blog post list URLs: <strong>%s</strong>, e.g. %s"
+msgstr "<br />Адреси записів: <strong>%s</strong>, наприклад, %s<br />Адреси блогів: <strong>%s</strong>, наприклад, %s"
+
+msgid "All blogs. Hierarchical URLs (%s)"
+msgstr "Всі блоги. Ієрархічні адреси (%s)"
+
+msgid "One blog"
+msgstr "Один блог"
+
+msgid "Post URLs: <strong>%s</strong>"
+msgstr "Адреси записів: <strong>%s</strong>"
+
+msgid "Returns blog info by <em>blog_id</em> as an array with the following structure: (<em>\"id\"</em>, <em>\"url\"</em>, <em>\"name\"</em>, <em>\"status\"</em>, <em>\"icon\"</em>, <em>\"qty\"</em>, <em>\"color\"</em>, <em>\"sort\"</em>, <em>\"icon_url\"</em>, <em>\"icon_html\"</em>, <em>\"link\"</em>)"
+msgstr "Повертає інформацію про блог по <em>blog_id</em> у вигляді масиву з наступною структурою: (<em>\"id\"</em>, <em>\"url\"</em>, <em>\"name\"</em>, <em>\"status\"</em>, <em>\"icon\"</em>, <em>\"qty\"</em>, <em>\"color\"</em>, <em>\"sort\"</em>, <em>\"icon_url\"</em>, <em>\"icon_html\"</em>, <em>\"link\"</em>)"
+
+msgid "Returns the array of all public blogs. Each blog is an array presenting the blog data"
+msgstr "Повертає масив всіх відкритих блогів. Кожен блог є масивом, що містить дані блогу"
+
+msgid "Returns the array of all posts by <em>blog_id</em>. If <em>blog_id</em> is <em>null</em>, the array of all public posts is returned. Optional parameter <em>number_of_posts</em> limits the number of elements returned"
+msgstr "Повертає масив всіх записів по <em>blog_id</em>. Якщо<em>blog_id</em> дорівнює <em>null</em>, то повертається масив всіх відкритих записів. Необов’язковий параметр <em>number_of_posts</em> використовується для обмеження коількості елементів, що повертаються"
+
+msgid "Posts"
+msgstr "Записи"
+
+msgid "Blog URL is in use. Please enter another URL"
+msgstr "Ця адреса блогу вже використовується. Введіть іншу адресу"
+
+msgid "Incorrect format"
+msgstr "Некоректнйи формат"
+
+msgid "Returns post info by <em>post_id</em> as an array with the following structure: (<em>\"id\"</em>, <em>\"contact_id\"</em>, <em>\"contact_name\"</em>, <em>\"datetime\"</em>, <em>\"title\"</em>, <em>\"text\"</em>, <em>\"status\"</em>, <em>\"url\"</em>, <em>\"blog_id\"</em>, <em>\"comments_allowed\"</em>, <em>\"user\"</em>, <em>\"comment_datetime\"</em>, <em>\"comment_count\"</em>, <em>\"comment_str_translate\"</em>, <em>\"comment_new_count\"</em>, <em>\"plugins\"</em>, <em>\"icon\"</em>, <em>\"color\"</em>, <em>\"blog_status\"</em>, <em>\"blog_url\"</em>, <em>\"blog_name\"</em>, <em>\"link\"</em>)"
+msgstr "Повертає інформацію про запис по <em>post_id</em> у вигляді масиву з наступною структурою: (<em>\"id\"</em>, <em>\"contact_id\"</em>, <em>\"contact_name\"</em>, <em>\"datetime\"</em>, <em>\"title\"</em>, <em>\"text\"</em>, <em>\"status\"</em>, <em>\"url\"</em>, <em>\"blog_id\"</em>, <em>\"comments_allowed\"</em>, <em>\"user\"</em>, <em>\"comment_datetime\"</em>, <em>\"comment_count\"</em>, <em>\"comment_str_translate\"</em>, <em>\"comment_new_count\"</em>, <em>\"plugins\"</em>, <em>\"icon\"</em>, <em>\"color\"</em>, <em>\"blog_status\"</em>, <em>\"blog_url\"</em>, <em>\"blog_name\"</em>, <em>\"link\"</em>)"
+
+msgid "Error"
+msgstr "Помилка"
+
+msgid "The requested resource is not available."
+msgstr "Ця сторінка недоступна."
+
+msgid "Sign up"
+msgstr "Реєстрація"
+
+msgid "Login"
+msgstr "Вхід"
+
+msgid "Subscribe"
+msgstr "Підписатись"
+
+msgid "Powered by Webasyst"
+msgstr "Працює на основі Webasyst"
+
+msgid "Guest"
+msgstr "Гість"
+
+msgid "Your name"
+msgstr "Ваше ім’я"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Website"
+msgstr "Сайт"
+
+msgid "log out"
+msgstr "вийти"
+
+msgid "Comment"
+msgstr "Коментар"
+
+msgid "Comments for non published posts are disabled"
+msgstr "Коментарі до записів-чернеток вимкнені"
+
+msgid "Edit blog layout in your <a href=\"%s\">Webasyst backend</a> using “Site” app."
+msgstr "Оформлення блогу налаштовується <a href=\"%s\">в бекенді</a> за допомогою додатку «Сайт»."
+
+msgid "Loading..."
+msgstr "Завантаження..."
+
+msgid "Image will be uploaded into"
+msgstr "Зображення буде завантажене до"
+
+msgid "Post sub-URL format (%s)"
+msgstr "Формат адрес сторінок записів (%s)"
+
+msgid "Post URL only"
+msgstr "Лише адреса запису"
+
+msgid "e.g."
+msgstr "наприклад"
+
+msgid "Year/post URL"
+msgstr "Рік/Адреса запису"
+
+msgid "Year/month/post URL"
+msgstr "Рік/Місяць/Адреса запису"
+
+msgid "Year/month/date/post URL"
+msgstr "Рік/Місяць/День/Адреса запису"
+
+msgid "My overdue post drafts"
+msgstr "Мої прострочені чернетки"
+
+msgid "posts with overdue publication deadline"
+msgstr "записи з простроченим терміном публікації"
+
+msgid "New posts published by other users"
+msgstr "Нові записи інших користувачів"
+
+msgid "Count new comments on my posts only"
+msgstr "Враховувати лише коментарі до моїх записів"
+
+msgid "Setup in the <a href=\"%s\">Blog app settlement settings</a> within the Site app"
+msgstr "Формат налаштовується в <a href=\"%s\">налаштуваннях поселення блогу</a> в середині додатку «Сайт»"
+
+msgid "Invalid data"
+msgstr "Невірні дані"
+
+msgid "New comments"
+msgstr "Нові коментарі"
+
+msgid "Can edit pages"
+msgstr "Може редагувати сторінки"
+
+msgid "Protect comment submit form with CAPTCHA"
+msgstr "Захист форми додавання коментаря <em>капчею</em> (CAPTCHA)"
+
+msgid "Invalid captcha code"
+msgstr "Невірний код CAPTCHA"
+
+msgid "Invalid auth provider"
+msgstr "Невірний провайдер авторизації"
+
+msgid "Invalid auth provider data"
+msgstr "Невірні дані провайдера авторизації"
+
+msgid "Plugin %s is installed and working."
+msgstr "Плагін «%s» встановлений і працює."
+
+msgid "No configuration options are available for this plugin."
+msgstr "Цей плагін не надає можливості зміни налаштувань."
+
+msgid "Plugin %s settings"
+msgstr "Налаштування плагіну «%s»"
+
+msgid "Syntax error at post template"
+msgstr "Помилка синтаксису запису"
+
+msgid "Confirm the blog for publishing this post"
+msgstr "Підтвердіть вибір блогу"
+
+msgid "Comments author"
+msgstr "Автор коментарів"
+
+msgid "Posts author"
+msgstr "Автор статей"
+
+msgid "Thank you!"
+msgstr "Спасибі!"
+
+msgid "You have successfully signed up."
+msgstr "Ви успішно зареєструвались."
+
+msgid "Only registered users can add comments"
+msgstr "Лише зареєстровані користувачі можуть коментувати"
+
+msgid "If enabled, all commentators will be authorized and synced with the Contacts app"
+msgstr "Для користувачів, що лишають коментарі, будуть створюватись записи в додатку «Контакти»"
+
+msgid "Returns post info by <em>post_id</em> as an array with the following structure: (<em>\"id\"</em>, <em>\"contact_id\"</em>, <em>\"contact_name\"</em>, <em>\"datetime\"</em>, <em>\"title\"</em>, <em>\"text\"</em>, <em>\"status\"</em>, <em>\"url\"</em>, <em>\"blog_id\"</em>, <em>\"comments_allowed\"</em>, <em>\"user\"</em>, <em>\"comment_count\"</em>, <em>\"comment_new_count\"</em>, <em>\"plugins\"</em>, <em>\"icon\"</em>, <em>\"color\"</em>, <em>\"blog_status\"</em>, <em>\"blog_url\"</em>, <em>\"blog_name\"</em>, <em>\"link\"</em>)"
+msgstr "Повертає інформацію про запис по <em>post_id</em> у вигляді масиву з наступною структурою: (<em>\"id\"</em>, <em>\"contact_id\"</em>, <em>\"contact_name\"</em>, <em>\"datetime\"</em>, <em>\"title\"</em>, <em>\"text\"</em>, <em>\"status\"</em>, <em>\"url\"</em>, <em>\"blog_id\"</em>, <em>\"comments_allowed\"</em>, <em>\"user\"</em>, <em>\"comment_count\"</em>, <em>\"comment_new_count\"</em>, <em>\"plugins\"</em>, <em>\"icon\"</em>, <em>\"color\"</em>, <em>\"blog_status\"</em>, <em>\"blog_url\"</em>, <em>\"blog_name\"</em>, <em>\"link\"</em>)"
+
+msgid "To add a comment please <a href=\"%s\">sign up</a> or <a href=\"%s\">login</a>"
+msgstr "Для того, щоб залишити коментар, будь ласка, <a href=\"%s\">зареєструйтесь</a> або <a href=\"%s\">авторизуйтесь</a>"
+
+msgid "Logout"
+msgstr "Вийти"
+
+msgid "Search posts"
+msgstr "Знайти запис"
+
+msgid "Posts of this blog are not visible in the public frontend because there are no routing rules for the Blog app in your website settings. Use Site app (Routing section) to settle Blog app on your website and to start publishing."
+msgstr "Записи в цьому блозі невидимі для користувачів фронтенду, тому що для додатку «Блог» не задані достатні правила маршрутизації. Поселіть «Блог» в налаштуваннях маршрутизації додатку «Сайт», щоб розпочати публікувати записи нового блогу."
+
+msgid "Apps"
+msgstr "Додатки"
+
+msgid "Cancel"
+msgstr "Відміна"
+
+msgid "input_maxlength"
+msgstr "input_maxlength"
+
+msgid "Latest blog posts"
+msgstr "Останні записи блогу"
+
+msgid "Latest comments of all blog posts"
+msgstr "Останні коментарі до всіх записів"
+
+msgid "We are using <a href=\"http://www.webasyst.com/apps/blog/\">Webasyst Blog</a>"
+msgstr "Ми використовуємо <a href=\"http://www.webasyst.com/ru/apps/blog/\">Webasyst Блог</a>"
+
+msgid "Tags"
+msgstr "Теги"
+
+msgid "More"
+msgstr "Ще"
+
+msgid "Имя"
+msgstr "Ім’я"
+
+msgid "выйти"
+msgstr "вийти"
+
+msgid "no posts"
+msgstr "записи відсутні"
+
+msgid "We are using <a href=\"http://www.webasyst.com/store/app/blog/\">Webasyst Blog</a>"
+msgstr "Ми використовуємо <a href=\"http://www.webasyst.ru/store/app/blog/\">Webasyst Блог</a>"
+
+msgid "We are using <a href=\"http://www.webasyst.com/store/app/blog/\" target=\"_blank\">Webasyst Blog</a>"
+msgstr "Ми використовуємо <a href=\"http://www.webasyst.ru/store/app/blog/\" target=\"_blank\">Webasyst Блог</a>"
+
+msgid "There are no posts in this view."
+msgstr "Записи відсутні."
+
+msgid "My drafts"
+msgstr "Мої чернетки"
+
+msgid "all drafts"
+msgstr "всі чернетки"
+
+msgid "my drafts"
+msgstr "мої чернетки"
+
+msgid "All blogs"
+msgstr "Всі блоги"
+
+msgid "My posts only"
+msgstr "Мої записи"
+
+msgid "There are no comments in this view."
+msgstr "Коментарі відсутні."
+
+msgid "Loading next %d comment..."
+msgid_plural "Loading next %d comments..."
+msgstr[0] "Завантаження наступного %d коментаря…"
+msgstr[1] "Завантаження наступних %d коментарів…"
+msgstr[2] "Завантаження наступних %d коментарів…"
+
+msgid "Browse for new plugins"
+msgstr "Пошук плагінів"
+
+msgid "Use Installer to install new plugins from the Webasyst Store"
+msgstr "Встановлюйте плагіни з магазину Webasyst за допомогою додатку «Інсталер»"
+
+msgid "Meta"
+msgstr "Мета"
+
+msgid "Title"
+msgstr "Заголовок"
+
+msgid "Meta Keywords"
+msgstr "Meta Keywords"
+
+msgid "Meta Description"
+msgstr "Meta Description"
+
+msgid "No meta parameters are defined for this blog post."
+msgstr "Для цього запису мета-параметры не задані."
+
+msgid "Edit meta"
+msgstr "Редагувати"
+
+msgid "Post title"
+msgstr "Заголовок"
+
+msgid "Post cut (Continue reading &rarr;)"
+msgstr "Кат (Читати далі &rarr;)"
+
+msgid "My personal settings"
+msgstr "Особисті налаштування"
+
+msgid "Deadlines"
+msgstr "Дедлайни"
+
+msgid "Remind me about my scheduled posts"
+msgstr "Нагадувати мені про мої заплановані публікації"
+
+msgid "When publication is overdue"
+msgstr "Коли публікація прострочена"
+
+msgid "1 day before publication deadline"
+msgstr "За 1 день до запланованої публікації"
+
+msgid "2 days before publication deadline"
+msgstr "За 2 дні до запланованої публікації"
+
+msgid "3 days before publication deadline"
+msgstr "За 3 дні до запланованої публікації"
+
+msgid "A week before publication deadline"
+msgstr "За тиждень до запланованої публікації"
+
+msgid "Reminders require CRON to be properly setup for the Blog app, which is not the case for this installation. Setup cron for the Blog app with the following command (<a href=\"http://www.webasyst.com/ru/framework/docs/server/cron/\" target=\"_blank\">cron setup instructions</a>):<br /><br /> <strong class=\"cron-command\">%s</strong>"
+msgstr "Для роботи нагадувань необхідно налаштувати CRON, що дозволить додатку «Блог» виконувати дії за розкладом без участі користувача. Команда для CRON (<a href=\"http://www.webasyst.ru/developers/docs/tips/cron/\" target=\"_blank\">документація з налаштування</a>):<br /><br /> <strong class=\"cron-command\">%s</strong>"
+
+msgid "Recommended range is from 10 to 25"
+msgstr "Рекомендований діапазон: от 10 до 25"
+
+msgid "Author’s email address"
+msgstr "Email автора запису"
+
+msgid "%s for your blog posts"
+msgstr "для ваших записів: %s"
+
+msgid "No author tag"
+msgstr "Не вказуватитег author"
+
+msgid "Post cut"
+msgstr "Кат"
+
+msgid "As specified"
+msgstr "Вказати явно"
+
+msgid "of %d post"
+msgid_plural "of %d posts"
+msgstr[0] "з %d запису"
+msgstr[1] "з %d записів"
+msgstr[2] "з %d записів"
+
+msgid "Notifications"
+msgstr "Сповіщення"
+
+msgid "in %d day"
+msgid_plural "in %d days"
+msgstr[0] "через %d день"
+msgstr[1] "за %d дні"
+msgstr[2] "за %d днів"
+
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] "хвилину"
+msgstr[1] "хвилини"
+msgstr[2] "хвилин"
+
+msgid "You have following posts scheduled for publication in the <strong>%s</strong> blog:"
+msgstr "У вас є записи, заплановані до публікації в блозі «<strong>%s</strong>»:"
+
+msgid "right now"
+msgstr "прямо зараз"
+
+msgid "today"
+msgstr "сьогодні"
+
+msgid "Scheduled blog posts"
+msgstr "Заплановані публікації в блозі"
+
+msgid "Reminders will be sent to your <strong class=\"cron-command\">%s</strong> email address once a day. Cron for reminders is working properly. Latest execution time: %s"
+msgstr "Нагадування будуть відправлятись вам поштою за адресою <strong class=\"cron-command\">%s</strong> не частіше, ніж раз на день. CRON, необхідний для роботи нагадувань, увімкнений і працює. Час останнього запуску: <strong>%s</strong>"
+
+msgid "You have blog posts scheduled for publication on the %s blog:"
+msgstr "У вас є записи, заплановані до публікації в блозі «%s»:"
+
+msgid "Hello and welcome to your new blog!<br> Start by writing your first post."
+msgstr "Ласкаво просимо до вашого нового блогу!<br> Почніть зі створення запису."
+
+msgid "Public blog URL"
+msgstr "Адреса блога"
+
+msgid "A URL to view all posts of this blog on your public website."
+msgstr "Адрес, по которому на сайте можно посмотреть список всех записей этого блога."
+
+msgid "<a href=\"http://www.webasyst.com/store/app/blog/\">Blogging platform</a> by Webasyst"
+msgstr "<a href=\"http://www.webasyst.ru/store/app/blog/\">Движок блога</a> — Webasyst"
+
+msgid "Welcome to your new blog!"
+msgstr "Ласкаво просимо до вашого нового блогу!"
+
+msgid "Start by writing a post in your <a href=\"%s\">blog backend</a>."
+msgstr "Почніть зі створення запису в <a href=\"%s\">бекенді блогу</a>."
+
+msgid "published blog post"
+msgstr "опублікував запис"
+
+msgid "unpublished blog post"
+msgstr "відмінив публікацію запису"
+
+msgid "edited blog post"
+msgstr "відредагував запис"
+
+msgid "deleted blog post"
+msgstr "видалив запис"
+
+msgid "added comment to blog post"
+msgstr "додав коментар до"
+
+msgid "deleted comment to blog post"
+msgstr "видалив коментар до запису"
+
+msgid "restored comment to blog post"
+msgstr "відновив коментар до запису"
+
+msgid "created a new blog"
+msgstr "створив новий блог"
+
+msgid "deleted blog"
+msgstr "видалив блог"
+
+msgid "modified blog settings"
+msgstr "змінив налаштування блогу"
+
+msgid "Homepage META Keywords"
+msgstr "META Keywords головної сторінки"
+
+msgid "Homepage META Description"
+msgstr "META Description головної сторінки"
+
+msgid "RSS feed title"
+msgstr "Заголовок RSS-стрічки"
+
+msgid "Follow %s"
+msgstr "Читати %s"
+
+msgid "Facebook"
+msgstr "Facebook"
+
+msgid "Twitter"
+msgstr "Twitter"
+
+msgid "VK"
+msgstr "VK"
+
+msgid "Comment to an unpublished post (not visible anymore)"
+msgstr "Коментар до запису, знятого з публікації"
+
+msgid "My account"
+msgstr "Особистий кабінет"
+
+msgid "My profile"
+msgstr "Мій профіль"
+
+msgid "Start by <a href=\"%s\">writing a post</a> in your blog backend."
+msgstr "Почніть зі <a href=\"%s\">створення запису</a> в бекенді блогу."
+
+msgid "Core content loaded according to the requested resource: a blog post, post stream, a page, etc."
+msgstr "Основний вміст, завантажений у відповідності до запиту користувача: запис блогу, потік записів, сторінка і т.ін."
+
+msgid "0 for published, 1 for deleted"
+msgstr "0 для опублікованих, 1 для видалених"
+
+msgid "Upload"
+msgstr "Завантажити"
+
+msgid "Select"
+msgstr "Обрати"
+
+msgid "Insert"
+msgstr "Вставити"
+
+msgid "This blog is not visible on your sites now, because there were no routing rules added for Blog app with this particular blog. To make this blog visible on your site, create a route using the form below or using <a href=\"%s\">Site app</a> routing settings."
+msgstr "Цей блог не видний на сайті, тому що для нього не задані правила маршрутизації. Щоб опублікувати блог на сайті, додайте правило маршрутизації за допомогою форми нижче або в розділі «<a href=\"%s\">Структура</a>» в додатку «Сайт»."
+
+msgid "Specify the public URL for this new blog on your site:"
+msgstr "Введіть адресу для цього блогу на сайті:"
+
+msgid "Do not publish this blog on the site just yet"
+msgstr "Поки не публікувати цей блог на сайті"
+
+msgid "Blog settings"
+msgstr "Налаштування блогу"
+
+msgid "Photo album"
+msgstr "Фотоальбом"
+
+msgid "Start by <a href=\"%s\">writing your first post</a>."
+msgstr "Почніть зі <a href=\"%s\">створення запису</a>."
+
+msgid "Start by <a href=\"%s\">writing a post</a> or <a href=\"%s\">importing posts</a><br> from your existing blog."
+msgstr "Почніть зі <a href=\"%s\">створення запису</a> або з <a href=\"%s\">імпорту записів</a><br> з вашого блогу, що вже існує."
+
+msgid "Or enter image URL (image will be scaled to 16x16px)"
+msgstr "Або введіть адресу зображення (зображення буде автоматично зменшене до 16х16 пікселів)"
+
+msgid "Live preview is not available for private and not published blogs."
+msgstr "Попередній перегляд недоступний для закритих і неопублікованих блогів."
+
+msgid "Mirror mode"
+msgstr "Режим паралельного редагування"
+
+msgid "Visual"
+msgstr "Візуальный редактор"
+
+msgid "Photo Album"
+msgstr "Фотоальбом"
+
+msgid "Attach photo album"
+msgstr "Прикріпити фотоальбом"
+
+msgid "(no name)"
+msgstr "(без назви)"
+
+msgid "private album"
+msgstr "закритий альбом"
+
+msgid "Photos from the selected album will be automatically embedded after the post content. Photos descriptions and sort order will be defined by Photos app."
+msgstr "Фотографії  з обраного альбому будуть автоматично додані після вмісту запису. Описи і порядок сортування фотографій визначається додатком «Фото»."
+
+msgid "Post URL"
+msgstr "Адреса запису"
+
+msgid "Replace with the direct link to this album"
+msgstr "Замінити прямим посиланням на фотоальбом"
+
+msgid "Great for photo galleries. Blog post will be published in the blog on a regular basis (in both post stream and RSS), but the main post title link will lead to the album page directly (Photos app)."
+msgstr "Вміст запису буде опублікований в загальній стрічці і в RSS як зазвичай, однак основне посилання на запис буде замінене прямим посиланням на обраний фотоальбом у фотогалереї (в поселенні додатку «Фото»)."
+
+msgid "Select from Photos app"
+msgstr "Обрати з «Фото»"
+
+msgid "Total photos selected:"
+msgstr "Обрано фотографій:"
+
+msgid "Photo storage"
+msgstr "Сховище фотографій"
+
+msgid "Folder"
+msgstr "Тека"
+
+msgid "Photos app"
+msgstr "Додаток «Фото»"
+
+msgid "Save error"
+msgstr "Помилка збереження"
+
+msgid "No files to upload!"
+msgstr "Не обраний жоден файл для завантаження!"
+
+msgid "Photos from the attached album will be displayed here."
+msgstr "Тут будуть показані фотографії з прикріпленого фотоальбому."
+
+msgid "Select Webasyst default captcha or Google reCAPTCHA"
+msgstr "Оберіть стандартну CAPTCHA від Webasyst або reCAPTCHA від Google"
+
+msgid "post"
+msgid_plural "posts"
+msgstr[0] "запис"
+msgstr[1] "записи"
+msgstr[2] "записів"
+
+msgid "If you leave this page now, the import process is likely to be interrupted. Leave the page?"
+msgstr "Якщо ви зараз покинете цю сторінку, процес імпорту, ймовірно, буде перервано. Залишити сторінку?"
+
+msgid "Manage posts"
+msgstr "Керувати записами"
+
+msgid "Homepage &lt;title&gt;"
+msgstr "&lt;Назва&gt; головної сторінки"
+
+msgid "Post URL format <u>%s</u> and <u>%s</u> for blog URL"
+msgstr "Формат URL запису <u>%s</u> та <u>%s</u> для URL блогу"
+
+msgid "We are using <a href=\"http://www.webasyst.com/apps/photos/\">Webasyst Blog</a>"
+msgstr "Ми використовуємо <а href=\"https://www.webasyst.ru/store/app/blog/\">Блог Webasyst</а>"
+
+msgid "Читать дальше →"
+msgstr "Читати далі →"
+
+msgid "Reminders will be sent to your <strong class=\"cron-command\">%s</strong> email address. Cron for reminders is working properly. Latest execution time: %s"
+msgstr "Нагадування будуть відправлятись вам поштою за адресою <strong class=\"cron-command\">%s</strong> не частіше, ніж раз на день. CRON, необхідний для роботи нагадувань, увімкнений і працює. Час останнього запуску: <strong>%s</strong>"
+
+msgid "Blog address must not be empty."
+msgstr "Адреса блогу не може бути порожньою."
+
+msgid "Post address must not be empty."
+msgstr "Адреса запису не може бути порожньою."
+
+msgid "This post address is already in use. Please enter another address."
+msgstr "Ця адреса запису вже використовується. Введіть іншу адресу."
+
+msgid "Blog address is invalid."
+msgstr "Неприпустима адреса блогу."
+
+msgid "Post address is invalid."
+msgstr "Неприпустима адреса запису."

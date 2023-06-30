@@ -1,0 +1,172 @@
+{strip}
+
+<div class="s-home-shops">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 default-color"><h5>[`Our shops`]</h5></div>
+      <div class="col-md-12">
+        <div id="s-home-shops" class="owl-carousel owl-theme">
+          <div class="item">
+            <a href="#">
+              <div class="s-home-shops-item-location">
+                <i class="icon-location-pin"></i>
+                <span>[`Moscow`]</span>
+              </div>
+              <div class="s-home-shops-item-contacts">
+                <dl class="row">
+                  <dt class="col-sm-3 col-xs-3">[`Address`]</dt>
+                  <dd class="col-sm-9 col-xs-9">[`60-letiya Oktyabrya, d. 9`]</dd>
+                  <dt class="col-sm-3 col-xs-3">[`Phone`]</dt>
+                  <dd class="col-sm-9 col-xs-9">+7 (496) 104-64-67</dd>
+                </dl>
+              </div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <div class="s-home-shops-item-location">
+                <i class="icon-location-pin"></i>
+                <span>[`Moscow`]</span>
+              </div>
+              <div class="s-home-shops-item-contacts">
+                <dl class="row">
+                  <dt class="col-sm-3 col-xs-3">[`Address`]</dt>
+                  <dd class="col-sm-9 col-xs-9">[`Pervomayskaya street, 34/16`]</dd>
+                  <dt class="col-sm-3 col-xs-3">[`Phone`]</dt>
+                  <dd class="col-sm-9 col-xs-9">+7 (496) 104-64-67</dd>
+                </dl>
+              </div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <div class="s-home-shops-item-location">
+                <i class="icon-location-pin"></i>
+                <span>[`Tver`]</span>
+              </div>
+              <div class="s-home-shops-item-contacts">
+                <dl class="row">
+                  <dt class="col-sm-3 col-xs-3">[`Address`]</dt>
+                  <dd class="col-sm-9 col-xs-9">[`Dokuchaeva street, 18/7`]</dd>
+                  <dt class="col-sm-3 col-xs-3">[`Phone`]</dt>
+                  <dd class="col-sm-9 col-xs-9">+7 (496) 104-64-67</dd>
+                </dl>
+              </div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <div class="s-home-shops-item-location">
+                <i class="icon-location-pin"></i>
+                <span>[`Jaroslavl`]</span>
+              </div>
+              <div class="s-home-shops-item-contacts">
+                <dl class="row">
+                  <dt class="col-sm-3 col-xs-3">[`Address`]</dt>
+                  <dd class="col-sm-9 col-xs-9">[`5-I Tericka street`]</dd>
+                  <dt class="col-sm-3 col-xs-3">[`Phone`]</dt>
+                  <dd class="col-sm-9 col-xs-9">+7 (496) 104-64-67</dd>
+                </dl>
+              </div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <div class="s-home-shops-item-location">
+                <i class="icon-location-pin"></i>
+                <span>[`Jaroslavl`]</span>
+              </div>
+              <div class="s-home-shops-item-contacts">
+                <dl class="row">
+                  <dt class="col-sm-3 col-xs-3">[`Address`]</dt>
+                  <dd class="col-sm-9 col-xs-9">[`5-I Tericka street`]</dd>
+                  <dt class="col-sm-3 col-xs-3">[`Phone`]</dt>
+                  <dd class="col-sm-9 col-xs-9">+7 (496) 104-64-67</dd>
+                </dl>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="s-home-shops-allmaps col-md-12 text-center p-t-3">
+        <a href="{if !empty($theme_settings.contacts_page)}/{$theme_settings.contacts_page}/{else}#{/if}" class="btn btn-default"><i class="fa-lg icon-map"></i>[`All shops on map`]</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+
+<script>
+    var hrefImages = "{$wa_parent_theme_url}plugins/jquery.waitforimages.min.js?v{$wa_theme_version}",
+    hrefOwl = "{$wa_parent_theme_url}plugins/owlcarousel/owl.carousel.min.js?v{$wa_theme_version}",
+    shopsSlider = $('#s-home-shops'),
+    shopsSliderItem = shopsSlider.find('.item'),
+    shopsAllmaps = $('.s-home-shops-allmaps'),
+    loaderIntro = '<div class="landing landing-slider"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div>';
+
+    if (!$.fn.waitForImages) { $.getScript(hrefImages); }
+    (!$.fn.owlCarousel) ? $.getScript(hrefOwl, initSlider) : initSlider();
+
+    function initSlider() {
+
+      var $this = shopsSlider;
+
+      $this.append(loaderIntro);
+
+      $this.waitForImages({
+
+        finished: function () {
+
+          $this.find('.landing-slider').remove();
+
+          var autoplay = $this.data('autoplay'),
+          autoplaySpeed = $this.data('autoplayspeed'),
+          autoplayHoverPause = $this.data('autoplayhoverpause'),
+          loop = $this.data('loop'),
+          navigation = $this.data('navigation'),
+          pagination = $this.data('pagination'),
+          animateOut = $this.data('animout');
+
+          $this.owlCarousel({
+            margin: 18,
+            autoplay: autoplay || false,
+            autoplaySpeed: autoplaySpeed || 0,
+            autoplayHoverPause: autoplayHoverPause || false,
+            loop: loop || false,
+            nav: navigation || false,
+            dots: pagination || false,
+
+            navText: [
+              "<i class='fa fa-angle-left fa-2x'></i>",
+              "<i class='fa fa-angle-right fa-2x'></i>"
+            ],
+            responsive:{
+              0:{
+                items:1
+              },
+              600:{
+                items:2
+              },
+              1024:{
+                items:3
+              },
+              1025:{
+                items:4
+              }
+            }
+          });
+
+          $this.removeClass('preload');
+
+        },
+
+        waitForAll: true
+      });
+
+      shopsSliderItem.matchHeight();
+
+    }
+</script>
+
+{/strip}

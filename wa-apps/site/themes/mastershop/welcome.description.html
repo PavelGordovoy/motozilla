@@ -1,0 +1,16 @@
+{strip}
+{$title_welcome = $theme_settings.homepage_welcome_title}
+{$text_welcome = $theme_settings.homepage_welcome_text}
+{if $title_welcome}
+    {if $theme_settings.static_var_smarty}{eval var=$title_welcome assign='title_welcome'}{/if}
+    <div class="items-list__head">
+        <div class="h1 head-decor">
+            {$title_welcome}
+        </div>
+    </div>
+{/if}
+{if $text_welcome}
+    {if $theme_settings.static_var_smarty}{eval var=$text_welcome assign='text_welcome'}{/if}
+    {$text_welcome}
+{/if}
+{/strip}

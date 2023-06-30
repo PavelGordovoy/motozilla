@@ -1,0 +1,54 @@
+{strip}
+{if  isset($action) && $action == 'brand' && isset($categories) && !empty($categories)}
+    {$category.subcategories = $categories}
+{/if}
+{if isset($category.subcategories) && !empty($category.subcategories)}
+    {if !empty($theme_settings.subcategories_sidebar_icons)}
+        {if class_exists('shopSkcatimagePlugin')}
+            {$cat_images = shopSkcatimageHelper::getImages()}
+        {elseif class_exists('shopWmimageincatPlugin')}
+            {$cat_images = shopWmimageincatPlugin::getCategoryImageObj()}
+        {/if}
+    {/if}
+
+    {$is_retina = $theme_settings.categories_menu_images_retina && class_exists('shopSkcatimagePlugin') && !empty($cat_images)}
+    {$is_lazy = $theme_settings.categories_menu_images_lazy && !empty($cat_images)}
+
+    <div class="sidebar-wrap">
+        <div class="sidebar-wrap__head">[`Select section`]</div>
+        <div class="sidebar_subcategories js-categories-list" data-retina="{$is_retina}" data-lazy="{$is_lazy}">
+            {foreach $category.subcategories as $sc}
+                {if $theme_settings.is_subcategories_sidebar_count_products && $theme_settings.subcategories_count_products_with_subs}
+                    {$sc.count = $wa->shop->productsCount("category/`$sc.id`")}
+                {/if}
+                {$is_category = isset($sc.filter) || isset($sc.sort_products) || isset($sc.count)}
+                <a class="sidebar_subcategories__link menu-hover" href="{$sc.url}">
+                    {if !empty($theme_settings.subcategories_sidebar_icons)}
+                        {if $is_category && !empty($cat_images[$sc.id].icon)}
+                            {$icon = $cat_images[$sc.id].icon}
+                        {else if !empty($sc.icon)}
+                            {$icon = $sc.icon}
+                        {else}
+                            {$icon = null}
+                        {/if}
+
+                        {if $icon}
+                            <span class="sidebar_subcategories__icon">
+                                {if $is_lazy}
+                                    <img class="js-categories-item-image" alt="{$sc.name}" src="{$wa_theme_url}img/lazy-image.png" data-src="{$icon}" />
+                                {else}
+                                    <img class="js-categories-item-image" alt="{$sc.name}" src="{$icon}" />
+                                {/if}
+                            </span>
+                        {/if}
+                    {/if}
+
+                    <span class="sidebar_subcategories__title">
+                        {$sc.name|escape}{if $theme_settings.is_subcategories_sidebar_count_products && !empty($sc.count)}<span class="sidebar_subcategories__count bs-color">{$sc.count}</span>{/if}
+                    </span>
+                </a>
+            {/foreach}
+        </div>
+    </div>
+{/if}
+{/strip}

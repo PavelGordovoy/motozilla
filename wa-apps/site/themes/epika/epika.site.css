@@ -1,0 +1,18 @@
+.cd-dropdown-wrapper .menulogo {
+    border: 2px solid white;
+    border-radius: 50%;
+    top: -2px;
+}
+
+.shop-info p {
+    line-height:22px;
+    padding:20px;
+}
+
+
+.shop-info p:first-letter {
+    font-size:24px;
+    margin:bottom:-2px;
+    display:inline-block;
+    position:relative;
+}

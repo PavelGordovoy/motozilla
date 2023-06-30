@@ -1,0 +1,14 @@
+{* HINT: for the rest of footer links, please see index.html <!-- FOOTER --> section *}
+
+
+
+<!-- plugin hook: 'frontend_footer' -->
+{* @event frontend_footer.%plugin_id% *}
+{foreach $frontend_footer as $_}{$_}{/foreach}
+
+<div{if count($currencies) == 1} class="poweredby"{/if} role="complementary">
+    [`<a href="http://www.shop-script.com/">Ecommerce software</a> by Webasyst`]
+</div>
+
+<div class="dialog">
+</div>

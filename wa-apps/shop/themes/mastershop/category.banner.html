@@ -1,0 +1,22 @@
+{strip}
+{$banner_link = ""}{if isset($category.params.category_banner_url)}{$banner_link = $category.params.category_banner_url}{/if}
+{if isset($skImages[$category.id].banner)}
+    {$category_banner = $skImages[$category.id].banner}
+{else if isset($Wmimages[$category.id].banner)}
+    {$category_banner = $Wmimages[$category.id].banner}
+{/if}
+
+{if isset($category_banner) && !empty($category_banner)}
+    {$is_retina = $theme_settings.categories_list_images_retina && !empty($skImages)}
+    {$is_lazy = $theme_settings.categories_list_images_lazy}
+    <div class="js-categories-list" data-retina="{$is_retina}" data-lazy="{$is_lazy}">
+        {if !empty($banner_link)}<a href="{$banner_link}">{/if}
+        {if $is_lazy}
+            <img class="js-categories-item-image category-banner" src="{$wa_theme_url}img/lazy-image.png" data-src="{$category_banner}" alt="{$category.name|escape}" />
+        {else}
+            <img class="js-categories-item-image category-banner" src="{$category_banner}" alt="{$category.name|escape}" />
+        {/if}
+        {if !empty($banner_link)}</a>{/if}
+    </div>
+{/if}
+{/strip}

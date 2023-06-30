@@ -1,0 +1,157 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"Project-Id-Version: Webasyst Photos Public Gallery plugin 1.1.0.2 UA translation v 1.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 3.0\n"
+
+msgid "User votes"
+msgstr "Голоси користувачів"
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "%d vote"
+msgid_plural "%d votes"
+msgstr[0] "%d голос"
+msgstr[1] "%d голоса"
+msgstr[2] "%d голосів"
+
+msgid "Stop upload"
+msgstr "Зупинити завантаження"
+
+msgid "Files uploaded with errors"
+msgstr "Файли, завантажені з помилками"
+
+msgid "Photos have been successfully uploaded"
+msgstr "Фотографії завантажено"
+
+msgid "Failed to upload. Most probably, there were not enough memory to create thumbnails."
+msgstr "Не вдалося завантажити. Швидше за все, для створення ескізів не вистачає пам&#39;яті."
+
+msgid "My uploads"
+msgstr "Мої завантаження"
+
+msgid "To upload a photo, either <a href=\"%s\">sign up</a> or authorize using one of the services listed below."
+msgstr "Аби завантажити фото, <a href=\"%s\">зареєструйтесь</a> або авторизуйтесь, використовуючи один із зазначених нижче сервісів."
+
+msgid "To upload a photo, either <a href=\"%s\">create an account</a> or <a href=\"%s\">sign in</a> as a registered user."
+msgstr "Аби завантажити фото, <a href=\"%s\">створіть акаунт</a> або <a href=\"%s\">авторизуйтесь</a> із використанням одного із зазначених нижче сервісів."
+
+msgid "Upload images"
+msgstr "Завантажити зображення"
+
+msgid "or drag them here to start upload"
+msgstr "або перетягніть зображення сюди, аби розпочати завантаження"
+
+msgid "Photo has been declined by the administrator"
+msgstr "Фотографію було відхилено адміністратором"
+
+msgid "Pending moderation"
+msgstr "Очікують на модерацію"
+
+msgid "Show more photos"
+msgstr "Показати більше фотографій"
+
+msgid "Loading"
+msgstr "Завантаження"
+
+msgid "Empty result"
+msgstr "Порожній результат"
+
+msgid "Upload complete! <a href=\"#\">Reload page</a> to view your photos."
+msgstr "Завантаження завершено! <a href=\"#\">Оновіть сторінку</a> для перегляду фотографій."
+
+msgid "Files with extensions *.gif, *.jpg, *.jpeg, *.png are allowed only."
+msgstr "Допускаються тільки файли з розширеннями .gif, .jpg, .jpeg, .png."
+
+msgid "Rate"
+msgstr "Оцінка"
+
+msgid "Rate this photo:"
+msgstr "Оцініть фото:"
+
+msgid "cancel my vote"
+msgstr "скасувати мій голос"
+
+msgid "Declined"
+msgstr "Відхилено"
+
+msgid "Approve photo"
+msgstr "Одобрити фото"
+
+msgid "Decline"
+msgstr "Відхилити"
+
+msgid "Approve"
+msgstr "Одобрити"
+
+msgid "My vote:"
+msgstr "Мій голос:"
+
+msgid "Minimal photo size (px)"
+msgstr "Мінімальний розмір фото (в пікселях)"
+
+msgid "Limits the minimum width and height for photos uploaded in the frontend (in pixels)"
+msgstr "Обмежує мінімальну ширину і висоту фотографії, завантаженої через веб-інтерфейс (в пікселях)"
+
+msgid "Maximum photo size (px)"
+msgstr "Максимальний розмір фото (в пікселях)"
+
+msgid "Limits the maximum width and height for photos uploaded in the frontend (in pixels)"
+msgstr "Обмежує мінімальну ширину і висоту фотографії, завантаженої через фронтенд (в пікселях)"
+
+msgid "Assign tags on upload"
+msgstr "Призначити теги при завантаженні"
+
+msgid "Automatically assign listed tags for all photos uploaded in the frontend"
+msgstr "Автоматично присвоїти перераховані теги для усіх фотографій, завантажених через фронтенд"
+
+msgid "Moderation"
+msgstr "Модерація"
+
+msgid "Define if photos uploaded in the frontend needs to be moderated in the backend or not. In case moderation is disabled, all photos will automatically appear in the frontend after upload"
+msgstr "Визначити, чи має бути промодеровано у бекенді фотографії, надіслані через фронтенд. У разі, якщо модерацію вимкнено, усі фотографії автоматично з&#39;являться у фронтенді після завантаження"
+
+msgid "Yes"
+msgstr "Так"
+
+msgid "No"
+msgstr "Ні"
+
+msgid "Self photo voting"
+msgstr "Голосування за власні фото"
+
+msgid "Author can vote for self uploaded photos"
+msgstr "Автор може голосувати завантажені ним фотографії"
+
+msgid "Public Gallery"
+msgstr "Публічна галерея"
+
+msgid "Enables the ability to upload and vote for photos in the app frontend"
+msgstr "Дає можливість викладати фото і голосувати за них у фронтенді додатку «Фото»"
+
+msgid "Unknown photo"
+msgstr "Невідоме фото"
+
+msgid "You may not vote for your own photos"
+msgstr "Ви не можете голосувати за власні фото"
+
+msgid "Please %ssign in%s to be able to vote for photos"
+msgstr "Будь ласка, %увійдіть%s, аби мати можливість голосувати за фотографії"
+
+msgid "To upload a photo, either <a href=\"#\">sign up</a> or authorize using one of services listed below"
+msgstr "Аби завантажити фото, <a href=\"#\">зареєструйтесь</a> або авторизуйтесь, використовуючи один із зазначених нижче сервісів"
+
+msgid "My vote: "
+msgstr "Мій голос: "
+
+msgid "Please sign in to be able to vote for photos"
+msgstr "Будь ласка, увійдіть, аби мати можливість голосувати за фотографії"

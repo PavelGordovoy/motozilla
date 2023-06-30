@@ -1,0 +1,19 @@
+{$plugin = waRequest::get('plugin')}
+{$show = waRequest::get('show')}
+{$module = waRequest::get('module')}
+{$status = waRequest::get('status')}
+{$level = waRequest::get('level')}
+<div class="block js-drop-block">
+	<ul class="menu-v">
+		<li id="tracker-link"{if $plugin == 'tracker' && (($module == 'tasks' && !$status && $level != 5) || $module == 'task')} class="selected"{/if}><a href="{$backend_url}?plugin=tracker&module=tasks&action=add" class="count"><i class="icon16 add"></i></a> <a href="{$backend_url}?plugin=tracker&module=tasks"><h5 class="heading top-padded"><span style="color: red; " class="unread">{$new_unread_count}</span> <b>Трекер задач</b></h5></a></li>
+	</ul>
+	<ul class="menu-v with-icons collapsible t-groups-list ui-sortable">
+		<li id="tracker-link-level-5" style="margin-bottom: 10px;"{if $plugin == 'tracker' && $module == 'tasks' && !$status && $level == 5} class="selected"{/if}><a href="{$backend_url}?plugin=tracker&module=tasks&level=5"><i class="icon16 exclamation-red"></i>Срочно</a></li>
+		
+		<li id="tracker-link-status-new"{if $plugin == 'tracker' && $module == 'tasks' && $status == 'new'} class="selected"{/if}><a href="{$backend_url}?plugin=tracker&module=tasks&status=new"><i class="icon16 status-green-tiny"></i>Новые</a></li>
+		<li id="tracker-link-status-checking"{if $plugin == 'tracker' && $module == 'tasks' && $status == 'checking'} class="selected"{/if}><a href="{$backend_url}?plugin=tracker&module=tasks&status=checking"><i class="icon16 status-yellow-tiny"></i>На рассмотрении</a></li>
+		<li id="tracker-link-status-processing"{if $plugin == 'tracker' && $module == 'tasks' && $status == 'processing'} class="selected"{/if}><a href="{$backend_url}?plugin=tracker&module=tasks&status=processing"><i class="icon16 progress"></i>В процессе</a></li>
+		<li id="tracker-link-status-deleted"{if $plugin == 'tracker' && $module == 'tasks' && $status == 'deleted'} class="selected"{/if}><a href="{$backend_url}?plugin=tracker&module=tasks&status=deleted"><i class="icon16 no"></i>Отклонено</a></li>
+		<li id="tracker-link-status-done"{if $plugin == 'tracker' && $module == 'tasks' && $status == 'done'} class="selected"{/if}><a href="{$backend_url}?plugin=tracker&module=tasks&status=done"><i class="icon16 yes"></i>Выполнено</a></li>
+	</ul>
+</div>

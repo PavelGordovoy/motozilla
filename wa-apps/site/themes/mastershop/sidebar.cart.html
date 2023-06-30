@@ -1,0 +1,63 @@
+{strip}
+{if $wa->shop}
+    {$items = $wa->shop->cart->items()}
+    <div class="js-sidebar-cart sidebar-cart{if count($items) == 0} hide{/if} sidebar-wrap" data-url="{$wa->getUrl('shop/frontend/cart')}">
+        <div class="sidebar-wrap__head">
+            [`Products in cart`]
+        </div>
+        {* шаблон для динамического отображения товаров после добавления в корзину*}
+        <div class="js-sidebar-cart-template display-none cart-mini__product">
+            <div class="js-sidebar-cart-template-img cart-mini__product-img"></div>
+            <div class="cart-mini__product-info">
+                <span class="js-sidebar-cart-template-link"></span>
+                <div class="cart-mini__product-price">
+                    <span class="js-sidebar-cart-price"></span>
+                    <span class="hint nowrap"> x <span class="js-sidebar-cart-quantity"></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="js-sidebar-cart-items">
+            {if count($items)}
+                {foreach $items as $item}
+                    <div class="js-sidebar-cart-item cart-mini__product" data-id="{$item.id}" data-product-id="{$item.product_id}">
+                        <div class="cart-mini__product-img">
+                            <a href="{$wa->shop->productUrl($item.product)}" title="{$item.product.name|escape}">
+                                {$default_image = "`$wa_theme_url`img/dummy48.png"}
+                                {if !empty($theme_settings.default_image)}
+                                    {$default_image = strtok($theme_settings.default_image, "?")}
+                                    {$default_image = "`$wa_parent_theme_url``$default_image`"}
+                                {/if}
+                                {$wa->shop->productImgHtml($item.product, '50', ['default' => $default_image])}
+                            </a>
+                        </div>
+                        <div class="cart-mini__product-info">
+                            <a href="{$wa->shop->productUrl($item.product)}">{$item.product.name|escape}</a>
+                            <div class="cart-mini__product-price">
+                                {$text_zero_price = $theme_settings.product_zero_price_text}
+                                {if $text_zero_price && $item.price == 0}
+                                    {$text_zero_price}
+                                {else}
+                                    {shop_currency_html($item.price, true)}
+                                {/if}
+                                <span class="hint nowrap"> x <span class="js-sidebar-cart-quantity">{$item.quantity}</span></span>
+                            </div>
+                        </div>
+                    </div>
+                {/foreach}
+            {/if}
+        </div>
+
+        {if method_exists($wa->shop, 'checkout')}
+            {$cartUrl = $wa->shop->checkout()->cartUrl()}
+        {else}
+            {$cartUrl = $wa->getUrl('shop/frontend/cart')}
+        {/if}
+        <div class="cart-mini__buttons">
+            <a class="cart-mini__checkout show-all ac-color" href="{$cartUrl}">
+                [`Edit the order`]
+                <i class="button-more fal fa-long-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+{/if}
+{/strip}

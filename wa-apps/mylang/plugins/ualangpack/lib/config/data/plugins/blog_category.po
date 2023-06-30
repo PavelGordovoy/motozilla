@@ -1,0 +1,77 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Webasyst Blog Category plugin 1.2.42631 UA Translation v 0.1\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: /wa-apps/blog/plugins/category/templates/actions/backend/BackendSidebar.html:6
+#: /wa-apps/blog/plugins/category/templates/actions/backend/ToolbarBackend.html:2
+#: /wa-apps/blog/plugins/category/lib/config/plugin.php:4
+msgid "Categories"
+msgstr "Категорії"
+
+#: /wa-apps/blog/plugins/category/templates/actions/backend/BackendSidebar.html:21
+#: /wa-apps/blog/plugins/category/templates/actions/backend/ToolbarBackend.html:18
+#: /wa-apps/blog/plugins/category/templates/actions/backend/ToolbarBackend.html:16
+msgid "Add at least one category in the <a href=\"%s\">plugin settings</a>"
+msgstr "Додайте хоча б одну категорію у <a href=\"%s\">налаштуваннях плагіна</a>"
+
+#: /wa-apps/blog/plugins/category/templates/actions/settings/Settings.html:19
+#: /wa-apps/blog/plugins/category/templates/actions/backend/BackendSettings.html:24
+msgid "Category list"
+msgstr "Список категорій"
+
+#: /wa-apps/blog/plugins/category/templates/actions/settings/Settings.html:25
+#: /wa-apps/blog/plugins/category/templates/actions/backend/BackendSettings.html:30
+msgid "Name"
+msgstr "Назва"
+
+#: /wa-apps/blog/plugins/category/templates/actions/settings/Settings.html:26
+#: /wa-apps/blog/plugins/category/templates/actions/backend/BackendSettings.html:31
+msgid "Frontend URL"
+msgstr "URL-адреса у фронтенді"
+
+#: /wa-apps/blog/plugins/category/templates/actions/settings/Settings.html:34
+#: /wa-apps/blog/plugins/category/templates/actions/backend/BackendSettings.html:39
+msgid "Add a category"
+msgstr "Додати категорію"
+
+#: /wa-apps/blog/plugins/category/templates/actions/settings/Settings.html:63
+#: /wa-apps/blog/plugins/category/templates/actions/backend/BackendSettings.html:67
+msgid "Edit"
+msgstr "Редагувати"
+
+#: /wa-apps/blog/plugins/category/templates/actions/settings/Settings.html:64
+#: /wa-apps/blog/plugins/category/templates/actions/backend/BackendSettings.html:69
+msgid "Delete"
+msgstr "Видалити"
+
+#: /wa-apps/blog/plugins/category/templates/actions/settings/Settings.html:71
+#: /wa-apps/blog/plugins/category/templates/actions/backend/BackendSettings.html:79
+msgid "When done editing, click \"Save\" to apply changes."
+msgstr "Після завершення редагування не забудьте натиснути кнопку «Зберегти»."
+
+#: /wa-apps/blog/plugins/category/templates/actions/settings/Settings.html:73
+#: /wa-apps/blog/plugins/category/templates/actions/backend/BackendSettings.html:76
+msgid "Save"
+msgstr "Зберегти"
+
+#: /wa-apps/blog/plugins/category/lib/config/plugin.php:5
+msgid "Posts filtering by category"
+msgstr "Фільтрація записів за категоріями"
+
+#: /wa-apps/blog/plugins/category/lib/blogCategory.plugin.php:45
+#: /wa-apps/blog/plugins/category/lib/blogCategory.plugin.php:57
+msgid "not found"
+msgstr "не знайдено"
+
+#: /wa-apps/blog/plugins/category/lib/config/plugin.php:4
+msgid "Category"
+msgstr "Категорія"

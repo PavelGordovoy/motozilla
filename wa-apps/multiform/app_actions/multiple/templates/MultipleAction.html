@@ -1,0 +1,37 @@
+<script src="{$action.url}js/javascript.js?v={$wa->version()}"></script>
+<link rel="stylesheet" href="{$action.url}css/styles.css?v={$wa->version()}"></link>
+{if $action.id !== 'multiple'}
+
+<div class="sidebar left250px" style="padding: 20px 0 0 0;">
+    <div class="s-inner-sidebar act-multiple" data-parent-id="{$action.id}">
+        <ul class="menu-v stack with-icons">
+            {foreach $form_actions as $fa}
+            {if !empty($fa.autoexecute) && ($fa.autoexecute == '1' || !empty($fa.fields.auto_execute))}{$autoexecute = 1}{else}{$autoexecute = 0}{/if}
+            <li data-id="{$fa.id}"{if !$fa.status} class="not-visible"{/if}>
+                <i class="icon-custom s-action-status lightbulb{if !$fa.status}-off{/if}" title="[`Change status`]" data-value="{$fa.status}" onclick="$.form_actions.changeActionStatus($(this));"></i>
+                <a href="#/multiple/edit/{$fa.id}/" class="js-action-act-mult{if $autoexecute} s-autoexecute-badge{/if}">
+                   <i class="icon16 action-icon" style="background:{if !empty($fa.fields.custom_color)}{$fa.fields.custom_color|escape}{else}#ff0000{/if}"></i> {if !empty($fa.fields.custom_name)}{$fa.fields.custom_name|escape}{else}{$fa.name|escape}{/if}
+                </a>
+            </li>
+            {foreachelse}
+            <li class="grey skip-sort" style="line-height: 1.5;">[`No any actions. Create the chain of the actions`]</li>
+            {/foreach}
+            <li class="skip-sort">
+                <a href="#/multiple/showAction/{$action.id}/" title="[`add action`]" class="js-action-act-mult"><i class="icon16 add"></i> [`add action`]</a>
+                <select class="actions-select" data-placeholder="* * * [`Select action`] * * *" style="width: 250px;">
+                    <option value=""></option>
+                    {foreach $actions as $act_id => $act}
+                    <option value="{$act_id|escape}">{$act.name|escape}</option>
+                    {/foreach}
+                </select>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="content left250px blank bordered-left block double-padded s-actions-block-multiple">
+    <h1>Новый</h1>
+</div>
+<div class="clear-both"></div>
+{else}
+<i class="icon16 info"></i> [`Save action to see more settings`]
+{/if}

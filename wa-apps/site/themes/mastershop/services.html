@@ -1,0 +1,58 @@
+{strip}
+{if (!isset($wa_parent_theme_url) || !$wa_parent_theme_url)}
+    {$parent_theme_url = $wa_theme_url}
+{else}
+    {$parent_theme_url = $wa_parent_theme_url}
+{/if}
+
+{$count_services = 0}
+{if !empty($theme_settings.service_title_1)}
+    {$count_services = $count_services+1}
+{/if}
+{if !empty($theme_settings.service_title_2)}
+    {$count_services = $count_services+1}
+{/if}
+{if !empty($theme_settings.service_title_3)}
+    {$count_services = $count_services+1}
+{/if}
+{if !empty($theme_settings.service_title_4)}
+    {$count_services = $count_services+1}
+{/if}
+
+{function name=view_service link="" title="" image="" icon="" description=""}
+    {if $theme_settings.static_var_smarty}
+        {if $title}{eval var=$title assign='title'}{/if}
+        {if $link}{eval var=$link assign='link'}{/if}
+        {if $icon}{eval var=$icon assign='icon'}{/if}
+        {if $description}{eval var=$description assign='description'}{/if}
+    {/if}
+    {if $title}
+        {if $link}<a href="{$link}" class="bullets_el{if $is_popup_link} js-page-popup{/if}">{else}<span class="bullets_el">{/if}
+            <span class="bullets_icon bs-color">
+                {if $icon}
+                    {$icon}
+                {else if $image}
+                    <img alt="{$title}" src="{$parent_theme_url}{$image}" />
+                {/if}
+            </span>
+            <span class="bullets_content">
+                <span class="bullets_title">{$title}</span>
+                <span class="bullets_text">{$description}</span>
+            </span>
+        {if $link}</a>{else}</span>{/if}
+    {/if}
+{/function}
+
+{if $count_services > 0}
+    <div class="bullets bullets--cols-{$count_services}">
+        <div class="l-wrapper">
+            <div class="bullets__inner">
+                {view_service link=$theme_settings.service_link_1 is_popup_link=$theme_settings.service_link_1_popup title=$theme_settings.service_title_1 image=$theme_settings.service_image_1 icon=$theme_settings.service_icon_1 description=$theme_settings.service_body_1}
+                {view_service link=$theme_settings.service_link_2 is_popup_link=$theme_settings.service_link_2_popup title=$theme_settings.service_title_2 image=$theme_settings.service_image_2 icon=$theme_settings.service_icon_2 description=$theme_settings.service_body_2}
+                {view_service link=$theme_settings.service_link_3 is_popup_link=$theme_settings.service_link_3_popup title=$theme_settings.service_title_3 image=$theme_settings.service_image_3 icon=$theme_settings.service_icon_3 description=$theme_settings.service_body_3}
+                {view_service link=$theme_settings.service_link_4 is_popup_link=$theme_settings.service_link_4_popup title=$theme_settings.service_title_4 image=$theme_settings.service_image_4 icon=$theme_settings.service_icon_4 description=$theme_settings.service_body_4}
+            </div>
+        </div>
+    </div>
+{/if}
+{/strip}

@@ -1,0 +1,135 @@
+{strip}
+{if class_exists('blogSkimagePlugin')}
+    {$sk_image = blogSkimageHelper::getImages($post.id, 'page')}
+{/if}
+
+{$is_schema_org = $theme_settings.schema_org_active}
+<div {if $is_schema_org} itemscope itemtype="http://schema.org/BlogPosting"{/if}>
+    {if $is_schema_org}
+        <link itemprop="mainEntityOfPage" href="{$wa->currentUrl(false, true)}" />
+        <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+            {if $wa->shop}<meta itemprop="name" content="{$wa->shop->settings('name')}">{/if}
+            {if $theme_settings.schema_org_contact_image}
+                <meta itemprop="logo" content="{$wa->domainUrl()}{$wa_theme_url}{$theme_settings.schema_org_contact_image}?v{$wa_theme_version}">
+            {/if}
+        </span>
+    {/if}
+    <article role="main" id="post-{$post.id}">
+        {if !$wa->isMobile() && $theme_settings.blog_main_menu_button_head && !$theme_settings.blog_sidebar_left}
+            <div class="content-head">
+                {* main menu *}
+                {include file="`$wa_parent_theme_path`/vertical.main.menu.html" is_close=true}
+                <div class="content-head__title">
+                    {include file="./breadcrumbs.html"}
+                    <h1>
+                        <span{if $is_schema_org} itemprop="headline"{/if}>{$post.title}</span>
+                        {* @event prepare_posts_frontend.%plugin_id%.post_title *}
+                        {if !empty($post.plugins.post_title)}
+                            {foreach $post.plugins.post_title as $plugin => $output}{$output}{/foreach}
+                        {/if}
+                    </h1>
+                </div>
+            </div>
+        {else}
+            {include file="./breadcrumbs.html"}
+            <h1>
+                <span{if $is_schema_org} itemprop="headline"{/if}>{$post.title}</span>
+                {* @event prepare_posts_frontend.%plugin_id%.post_title *}
+                {if !empty($post.plugins.post_title)}
+                    {foreach $post.plugins.post_title as $plugin => $output}{$output}{/foreach}
+                {/if}
+            </h1>
+        {/if}
+
+        <div class="post post--one">
+            <div class="post__credentials">
+                {if $post.contact_id}
+                    <span class="post_author"{if $is_schema_org} itemprop="author" itemscope itemtype="http://schema.org/Person"{/if}>
+                        <a href="{$post.user.posts_link}"{if $is_schema_org} itemprop="url"{/if}>
+                            {if isset($post.user.photo_url_20)}<img src="{$post.user.photo_url_20}" class="post_userpic" alt="">{/if}
+                            <span class="post_username" {if $is_schema_org} itemprop="name"{/if}>{$post.user.name}</span>
+                        </a>
+                    </span>
+                {else}
+                    <span class="post_author"{if $is_schema_org} itemprop="author" itemscope itemtype="http://schema.org/Person"{/if}>
+                        {if isset($post.user.photo_url_20)}<img src="{$post.user.photo_url_20}" class="post_userpic" alt="">{/if}
+                        <span class="post_username" {if $is_schema_org} itemprop="name"{/if}>{$post.user.name}</span>
+                    </span>
+                {/if}
+                {if $is_schema_org}
+                    <meta itemprop="dateModified" content="{$post.datetime|date_format:'Y-m-d'}" />
+                    <meta itemprop="datePublished" content="{$post.datetime|date_format:'Y-m-d\TH:i'}">
+                {/if}
+
+                {*
+                    <a href="ADD_YOUR_GOOGLE_PLUS_PROFILE_URL_HERE" rel="author"><i class="icon16 google"></i></a>
+                *}
+
+                <span class="post__date" title="{$post.datetime|wa_datetime}">{$post.datetime|wa_datetime:"humandate"}</span>
+
+                {if $theme_settings.blog_post_share_code}
+                    <div class="post__share">{$theme_settings.blog_post_share_code}</div>
+                {/if}
+            </div>
+
+            {* @event prepare_posts_frontend.%plugin_id%.before *}
+            {if !empty($post.plugins.before)}
+                <div class="text_before">
+                    {foreach $post.plugins.before as $plugin => $output}{$output}{/foreach}
+                </div>
+            {/if}
+
+            <div class="post-one__text" {if $is_schema_org} itemprop="articleBody"{/if}>
+                {if isset($sk_image) && !empty($sk_image)}
+                    <div class="post__img post__img--one">
+                        <img{if $is_schema_org} itemprop="image"{/if} class="" src="{$sk_image}" alt="{$post.title}">
+                    </div>
+                {/if}
+
+                {$post.text}
+            </div>
+
+            {if $post.album_id && $post.album.id && $post.album.photos}
+                {include 'post.album.html' album=$post.album inline}
+            {/if}
+
+            {* @event prepare_posts_frontend.%plugin_id%.after *}
+            {if !empty($post.plugins.after)}
+                <div class="text_after">
+                    {foreach $post.plugins.after as $plugin => $output}{$output}{/foreach}
+                </div>
+            {/if}
+
+            {*
+            <div class="share">
+                COULD BE A GOOD PLACE FOR SHARE BUTTONS
+            </div>
+            *}
+        </div>
+    </article>
+    {if !empty($post.products_list) && $wa->shop}
+        <section class="post-products">
+            {$themePath = $wa->shop->themePath('mastershop')}
+            {$list_title = $theme_settings.blog_post_products_list}{if !empty($post.products_list_title)}{$list_title = $post.products_list_title}{/if}
+            {$list_view = $theme_settings.blog_post_products_view}{if !empty($post.products_list_view)}{$list_view = $post.products_list_view}{/if}
+            {include file="`$themePath`products.set.html" is_owl_carousel=$theme_settings.blog_post_products_tile_carousel list_title=$list_title list_id=$post.products_list list_view=$list_view}
+        </section>
+    {/if}
+    {if $show_comments && $post.comments_allowed}
+        <div class="post__comments">
+            {* @event frontend_post.%plugin_id%.footer *}
+            {foreach $frontend_post as $plugin => $output}
+                {if !empty($output.footer)}{$output.footer}{/if}
+            {/foreach}
+
+            {if $show_comments && $post.comments_allowed}
+                {if $post.status eq blogPostModel::STATUS_PUBLISHED}
+                    {include 'comments.html' inline}
+                {else}
+                    <h4>[`Comments for non published posts are disabled`]</h4>
+                {/if}
+            {/if}
+        </div>
+    {/if}
+</div>
+{/strip}

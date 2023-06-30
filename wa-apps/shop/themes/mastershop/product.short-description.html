@@ -1,0 +1,104 @@
+{strip}
+{if $wa->get('cart')}
+    {$product.features = $product->features}
+    {$products = [$product.id => $product->data]}
+    {$features =  $wa->shop->features($products)}
+{/if}
+{$features_list = $features}
+{if !empty($sku_features)}{$features_list = $sku_features}{/if}
+
+{$product_features_list = $product.features}
+{if !empty($product.skus[$product.sku_id].features)}{$product_features_list = $product.skus[$product.sku_id].features}{/if}
+
+{if $wa->isMobile()}
+    {$is_full_description = strpos($theme_settings.product_main_description_mobile, 'description') !== false && $product.description}
+    {$is_full_features =  strpos($theme_settings.product_main_description_mobile, 'features') !== false && $product.features}
+{else}
+    {$is_full_description = strpos($theme_settings.product_main_description_desktop, 'description') !== false && $product.description}
+    {$is_full_features =  strpos($theme_settings.product_main_description_desktop, 'features') !== false && $product.features}
+{/if}
+
+{$is_summary = ($product.summary && $theme_settings.product_card_short_description)}
+{$is_short_features = !empty($product_features_list) && !empty($theme_settings.product_card_short_features)}
+
+{if $is_summary || $is_short_features}
+    <div class="product-card__short-description">
+        {if $is_summary}
+            {$product_summary = $product.summary}
+            {if $theme_settings.product_card_short_description_strip_tags}{$product_summary = $product_summary|strip_tags}{/if}
+            {$product_summary_limit = (int)$theme_settings.product_card_short_description_limit}
+            {if $product_summary_limit}{$product_summary = $product_summary|truncate:$product_summary_limit}{/if}
+            <div class="product-card__summary">
+                {$product_summary}
+                {if $is_full_description  &&  !$wa->get('cart')}
+                    <div class="product-card__read-more">
+                        <span class="read-more js-move-to-tab bs-color" data-tab-content="product-description">[`Full description`]</span>
+                    </div>
+                {/if}
+            </div>
+        {/if}
+        {if $is_short_features}
+            <div data-short="1" class="product-card__features js-product-features">
+                {if !empty($theme_settings.product_short_features_aliases)}
+                    {$features_aliases_list = ","|explode:$theme_settings.product_short_features_aliases}
+                {/if}
+                {$product_features_list_short = []}
+                {$index = 1}
+                {foreach $product_features_list as $f_code => $f_value}
+                    {if isset($features_list[$f_code].type) &&  $features_list[$f_code].type != 'divider'}
+                        {if $theme_settings.product_card_features_count && $index > $theme_settings.product_card_features_count}{break}{/if}
+                        {if !empty($features_aliases_list) && !in_array($f_code, $features_aliases_list)}{continue}{/if}
+                        {$product_features_list_short[$f_code] = $product_features_list[$f_code]}
+                        {$index = $index + 1}
+                    {/if}
+                {/foreach}
+
+                {if count($product_features_list_short) > 0}
+                    <table class="product_features">
+                        {foreach $product_features_list_short as $f_code => $f_value}
+                            {if !isset($features_list[$f_code]) && isset($features_list["`$f_code`.0"])}
+                                {$features_list[$f_code] = $features_list["`$f_code`.0"]}
+                                {$features_list[$f_code].name = $features_list[$f_code].name|replace:'.0':''}
+                            {/if}
+                            <tr class="product_features-item ">
+                                <td class="product_features-title">
+                                    <span>{$features_list[$f_code].name|escape}</span>
+                                </td>
+                                <td class="product_features-value">
+                                    {if $features_list[$f_code].type != 'divider'}
+                                        {if is_array($f_value)}
+                                            {if $features_list[$f_code].type == 'color'}
+                                                <span class="product_features__colors-short">{implode(' ', $f_value)}</span>
+                                            {else}
+                                                {implode(', ', $f_value)}
+                                            {/if}
+                                        {else}
+                                            {if $features_list[$f_code].type == 'color'}
+                                                <span class="product_features__colors-short">{$f_value}</span>
+                                            {else}
+                                                {$f_value}
+                                            {/if}
+                                        {/if}
+                                    {/if}
+                                </td>
+                            </tr>
+                        {/foreach}
+                    </table>
+                {/if}
+
+                {if count($product_features_list) > count($product_features_list_short) && !$wa->get('cart') && $is_full_features}
+                    <div class="product-card__read-more">
+                        <span class="read-more js-move-to-tab bs-color" data-tab-content="product-options">[`All specifications`]</span>
+                    </div>
+                {/if}
+            </div>
+        {/if}
+    </div>
+{/if}
+
+{$wa->block("ms.product.short.description.custom")}
+
+<!-- plugin hook: 'frontend_product.menu' -->
+{* @event frontend_product.%plugin_id%.menu *}
+{foreach $frontend_product as $_}{$_.menu}{/foreach}
+{/strip}

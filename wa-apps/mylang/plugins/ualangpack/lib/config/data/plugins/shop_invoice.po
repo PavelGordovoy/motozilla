@@ -1,0 +1,167 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Webasyst Shop-Script Invoice plugin 1.0.2.4 UA Translation v 1.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/PrintformDisplay.html:4
+msgid "Invoice"
+msgstr "Рахунок-фактура"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/PrintformDisplay.html:16
+msgid "Edit"
+msgstr "Редагувати"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/PrintformDisplay.html:17
+msgid "Edit before print"
+msgstr "Редагувати перед друком"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/PrintformDisplay.html:18
+msgid "OK"
+msgstr "ОК"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:19
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:66
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:78
+msgid "Phone"
+msgstr "Телефон"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:20
+msgid "Fax"
+msgstr "Факс"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:35
+msgid "INVOICE"
+msgstr "РАХУНОК-ФАКТУРА"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:39
+msgid "DATE:"
+msgstr "ДАТА:"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:43
+msgid "INVOICE #"
+msgstr "РАХУНОК-ФАКТУРА №"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:47
+msgid "Customer ID"
+msgstr "Ідентифікатор клієнта"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:61
+msgid "BILL TO:"
+msgstr "АДРЕСА ПЛАТНИКА:"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:62
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:74
+msgid "Name"
+msgstr "Ім&#39;я"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:63
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:75
+msgid "Company name"
+msgstr "Назва компанії"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:64
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:76
+msgid "Street address"
+msgstr "Номер будинку (та квартири)"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:65
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:77
+msgid "City, St, ZIP"
+msgstr "Місто, вулиця, індекс"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:73
+msgid "SHIP TO (if different):"
+msgstr "АДРЕСА ДОСТАВКИ (якщо відрізняється):"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:89
+msgid "SALESPERSON"
+msgstr "ПРОДАВЕЦЬ"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:90
+msgid "P.O. #"
+msgstr "Абонентська скринька №"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:91
+msgid "SHIP DATE"
+msgstr "ДАТА ВІДВАНТАЖЕННЯ"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:92
+msgid "SHIP VIA"
+msgstr "СПОСІБ ДОСТАВКИ"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:93
+msgid "F.O.B."
+msgstr "F.O.B."
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:94
+msgid "TERMS"
+msgstr "УМОВИ"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:120
+msgid "ITEM #"
+msgstr "ПУНКТ №"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:121
+msgid "DESCRIPTION"
+msgstr "ОПИС"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:122
+msgid "QTY"
+msgstr "КІЛЬКІСТЬ"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:123
+msgid "UNIT PRICE"
+msgstr "ЦІНА ЗА ОДИНИЦЮ"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:124
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:168
+msgid "TOTAL"
+msgstr "СУМА"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:141
+msgid "Other Comments or Special Instructions"
+msgstr "Інші коментарі або спеціальні інструкції"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:148
+msgid "SUBTOTAL"
+msgstr "ПРОМІЖНИЙ ПІДСУМОК"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:152
+msgid "TAX RATE"
+msgstr "ПОДАТКОВА СТАВКА"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:156
+msgid "TAX"
+msgstr "ПОДАТОК"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:160
+msgid "SHIPPING"
+msgstr "ДОСТАВКА"
+
+#: /wa-apps/shop/plugins/invoice/templates/actions/printform/template.html:164
+msgid "DISCOUNT"
+msgstr "ЗНИЖКА"
+
+#: /wa-apps/shop/plugins/invoice/lib/shopInvoicePlugin.class.php:68
+#: /wa-apps/shop/plugins/invoice/lib/shopInvoicePlugin.class.php:62
+msgid "File isn't an image"
+msgstr "Файл не є зображенням"
+
+#: /wa-apps/shop/plugins/invoice/lib/shopInvoicePlugin.class.php:75
+#: /wa-apps/shop/plugins/invoice/lib/shopInvoicePlugin.class.php:69
+msgid "File could not be saved due to the insufficient file write permissions for the %s folder."
+msgstr "Файл не вдалося зберегти через недостатні права запису до папки %s."
+
+#: /wa-apps/shop/plugins/invoice/lib/shopInvoicePlugin.class.php:78
+#: /wa-apps/shop/plugins/invoice/lib/shopInvoicePlugin.class.php:72
+msgid "Failed to upload file."
+msgstr "Не вдалося завантажити файл."

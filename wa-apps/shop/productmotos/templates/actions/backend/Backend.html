@@ -1,0 +1,28 @@
+<div class="block double-padded">
+    <h1>[`Motos`]</h1>
+    <br>
+    <table class="zebra">
+        <thead>
+            <tr class="header">
+                <th>{_w('Name')}</th>
+                <th>[`Image`]</th>
+                <th>{_w('Summary')}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {foreach $motos as $b}
+            <tr>
+                <td>
+                    <a href="#/moto/{$b.id}/">{$b.name|escape}</a>
+                </td>
+                <td>
+                    {if $b.image}
+                        <img style="max-width: 200px" src="{$wa_url}wa-data/public/shop/motos/{$b.id}/{$b.id}{$b.image}">
+                    {/if}
+                </td>
+                <td>{$b.summary|escape}</td>
+            </tr>
+        {/foreach}
+        </tbody>
+    </table>
+</div>

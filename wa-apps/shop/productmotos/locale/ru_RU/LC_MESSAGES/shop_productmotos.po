@@ -1,0 +1,166 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: shop/plugins/productmotos\n"
+"POT-Creation-Date: 2013-03-10 12:19+0400\n"
+"PO-Revision-Date: \n"
+"Last-Translator: shop/plugins/motos\n"
+"Language-Team: shop/plugins/motos\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)"
+">=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: /wa-apps/shop/plugins/motos/templates/actions/settings/Settings.html:7
+msgid "moto feature"
+msgstr "Характеристика"
+
+#: /wa-apps/shop/plugins/motos/templates/actions/settings/Settings.html:15
+msgid "Select the feature you want products to be filtered by"
+msgstr "Выберите характеристику, по которой будет производиться фильтрация товаров"
+
+#: /wa-apps/shop/plugins/motos/templates/actions/settings/Settings.html:21
+msgid "Saved"
+msgstr "Сохранено"
+
+#: /wa-apps/shop/plugins/motos/lib/config/plugin.php:4
+msgid "motos"
+msgstr "Модели"
+
+msgid "Image"
+msgstr "Изображение"
+
+msgid "Product motos"
+msgstr "Модели товаров"
+
+#: /wa-apps/shop/plugins/motos/lib/config/plugin.php:5
+msgid "Storefront’s product filtering by moto (manufacturer). You can upload image and add description for the moto."
+msgstr "Фильтрация товаров по модели на витрине магазина. Вы можете загрузить изображение и добавить описание к модели."
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:32
+msgid "Thumbnail sizes"
+msgstr "Размеры эскизов"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:39
+msgid "Frontend navigation template (frontend_nav)"
+msgstr "Шаблон вывода на витрине в блоке навигации (frontend_nav)"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:48
+msgid "Frontend search results template (frontend_search)"
+msgstr "Шаблон вывода на витрине страницы модели: результаты поиска (frontend_search)"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/backend/BackendEdit.html:59
+msgid "HTML"
+msgstr ""
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/backend/BackendEdit.html:149
+msgid "delete"
+msgstr "удалить"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:57
+msgid "Frontend \"All motos\" template"
+msgstr "Шаблон вывода на витрине страницы со списком всех моделей"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:57
+msgid "Links to categories"
+msgstr "Ссылки на категории"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:59
+msgid "Open category (filter by moto)"
+msgstr "Открыть категорию (с фильтрацией по модели)"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:60
+msgid "Open category (without filters)"
+msgstr "Открыть категорию (без фильтров)"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:61
+msgid "Open moto subpage (filter by selected category)"
+msgstr "Открыть подстраницу модели (фильтрация по категории)"
+
+msgid "Additional description"
+msgstr "Дополнительное описание"
+
+msgid "To display additional description add the following code to the template <b>search.html</b> (where you want, e.g. in the end of it)"
+msgstr "Чтобы вывести дополнительное описание добавьте в нужном месте (например, в самом конце) в шаблон <b>search.html</b> код"
+#: /wa-apps/shop/plugins/productmotos/templates/actions/backend/BackendEdit.html:31
+msgid "Hidden moto"
+msgstr "Скрытая модель"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/backend/BackendEdit.html:31
+msgid "When enabled, this moto will be hidden from the storefront"
+msgstr "Включение этой настройки скроет модель на витрине магазина"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/backend/BackendEdit.html:124
+msgid "Allow product filtering"
+msgstr "Разрешить фильтрацию товаров"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/backend/BackendEdit.html:125
+msgid "Product filtering allows your customers to filter (search) products within this moto by feature values, e.g. by color, size, price"
+msgstr "Фильтрация товаров позволит покупателям подбирать товары этой модели по значениям характеристик, например, по цвету, размеру, цене"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/backend/BackendEdit.html:126
+msgid "Not all themes have support for this feature"
+msgstr "Не все темы дизайна поддерживают эту возможность!"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:57
+msgid "Use meta title for H1"
+msgstr "Использовать заголовок &lt;title&gt; в качестве заголовка H1"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:61
+msgid "If checked H1 on the moto page will be same as meta title"
+msgstr "Если включено, то заголовок H1 на странице модели будет совпадать с заданным для модели заголовком &lt;title&gt;"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:72
+msgid "Don't display"
+msgstr "Не показывать"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:48
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:52
+msgid "Sort by alphabet"
+msgstr "Сортировать модели по алфавиту"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:35
+msgid "Enabled thumbnail sizes"
+msgstr "Разрешённые размеры эскизов"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:55
+msgid "You can sort manually on page"
+msgstr "Вы можете сортировать модели вручную на странице"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:90
+msgid "All motos page title"
+msgstr "Заголовок страницы всех моделей"
+
+msgid "All motos meta description"
+msgstr "Meta description страницы всех моделей"
+
+msgid "All motos meta keywords"
+msgstr "Meta keywords страницы всех моделей"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/backend/BackendEdit.html:174
+msgid "Optional set of custom <em>key=value</em> parameters. Each key=value pair should be on a separate line."
+msgstr "Дополнительные параметры key=value. Каждое значение key=value должно быть на отдельной строке."
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:50
+msgid "Hook"
+msgstr "Хук"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:51
+msgid "What hook to use?"
+msgstr "Какой хук использовать?"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:57
+msgid "Don't use hook (manual)"
+msgstr "Не использовать хуки (вывод моделей вручную)"
+
+#: /wa-apps/shop/plugins/productmotos/templates/actions/settings/Settings.html:75
+msgid "moto page theme template"
+msgstr "Шаблон для страницы модели"
+
+msgid "moto not found"
+msgstr "Модель не найдена"

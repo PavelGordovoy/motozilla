@@ -1,0 +1,104 @@
+{strip}
+{if !empty($filters)}
+    {$getParams = $wa->get(null, array())}
+    {$is_show_clear = false}
+    <div class="filters-selected">
+        {foreach $filters as $fid => $filter}
+            {if $fid == 'price'}
+                {if $wa->get('price_min') || $wa->get('price_max')}
+                    {$v_price_min = (int)$wa->get('price_min')}
+                    {$v_price_max = (int)$wa->get('price_max')}
+                    {if (int)$v_price_min != $filter.min || (int)$v_price_max != $filter.max}
+                        {$is_show_clear = true}
+                        {$c = $wa->shop->currency(true)}
+                        <span class="filters-selected__item js-filter-selected-item">
+                            <span class="filters-selected__title">
+                                [`Price`]:
+                                {if !empty($v_price_min) && $v_price_min != $filter.min} [`from`] {$v_price_min} {/if}
+                                {if !empty($v_price_max) && $v_price_max != $filter.max} [`to`] {$v_price_max} {/if}
+                                {$c.sign}
+                            </span>
+                            <i class="filters-selected__remove js-filter-selected-remove fal fa-times" data-code="price"></i>
+                        </span>
+                    {/if}
+                {/if}
+            {else}
+                {if $filter.type == 'boolean'}
+                    {if $wa->get($filter.code) || $wa->get($filter.code) === '0'}
+                        {$filter_val = ""}
+                        {$filter_val = $wa->get($filter.code)}
+                        {if is_array($filter_val) && isset($filter_val[0])} {$filter_val = $filter_val[0]} {/if}
+                        {if $filter_val === '0' || $filter_val === '1'}
+                            {$is_show_clear = true}
+                            <span class="filters-selected__item js-filter-selected-item">
+                                <span class="filters-selected__title">{$filter.name}: {if $filter_val === '1'}[`Yes`]{else}[`No`]{/if}</span>
+                                <i class="filters-selected__remove js-filter-selected-remove fal fa-times" data-code="{$filter.code}"></i>
+                            </span>
+                        {/if}
+                    {/if}
+                {elseif isset($filter.min) && isset($getParams[$filter.code]) }
+                    {$_v = $wa->get($filter.code)}
+                    {if (isset($_v.min) && !empty($_v.min)) || (isset($_v.max) && !empty($_v.max))}
+                        {$is_show_clear = true}
+                        <span class="filters-selected__item js-filter-selected-item">
+                            <span class="filters-selected__title">
+                                {$filter.name}:
+                                {if $filter.type == 'range.date'}
+                                    {if isset($_v.min) && $_v.min} [`from`] {$_v.min|wa_date}{/if}
+                                    {if isset($_v.max) && $_v.max} [`to`] {$_v.max|wa_date}{/if}
+                                {else}
+                                    {if isset($_v.min) && $_v.min} [`from`] {(float)$_v.min}{/if}
+                                    {if isset($_v.max) && $_v.max} [`to`] {(float)$_v.max}{/if}
+                                {/if}
+                            </span>
+                            <i class="filters-selected__remove js-filter-selected-remove fal fa-times" data-code="{$filter.code}"></i>
+                        </span>
+                    {/if}
+                {elseif $filter.type == 'color'}
+                    {if isset($getParams[$filter.code])}
+                        {$is_show_clear = true}
+                        {$is_first = true}
+                        <span class="filters-selected__item js-filter-selected-item">
+                             <span class="filters-selected__title">
+                                {$filter.name}:
+                                {foreach $filter.values as $v_id => $v}
+                                    {if in_array($v_id, (array)$wa->get($filter.code, array()))}
+                                        {if !$is_first},{/if}{$is_first = false} {$v|strip_tags|trim}
+                                    {/if}
+                                {/foreach}
+                             </span>
+                            <i class="filters-selected__remove js-filter-selected-remove fal fa-times" data-code="{$filter.code}"></i>
+                        </span>
+                    {/if}
+                {else}
+                    {if isset($getParams[$filter.code]) && isset($filter.values) && !empty($filter.values)}
+                        {$is_first = true}
+                        {$is_show_clear = true}
+                        <span class="filters-selected__item js-filter-selected-item">
+                            <span class="filters-selected__title">
+                                {$filter.name}:
+                                {foreach $filter.values as $v_id => $v}
+                                    {if in_array($v_id, (array)$wa->get($filter.code, array()))}
+                                        {if !$is_first},{/if}{$is_first = false}<span> {$v}</span>
+                                    {/if}
+                                {/foreach}
+                            </span>
+                            <i class="filters-selected__remove js-filter-selected-remove fal fa-times" data-code="{$filter.code}"></i>
+                        </span>
+                    {/if}
+                {/if}
+            {/if}
+        {/foreach}
+
+        {if $is_show_clear}
+            {$reset_link = $wa->currentUrl(0,1)}
+            {if isset($category) && class_exists('shopSeofilterViewHelper')}
+                {$reset_link = $wa->shop->categoryUrl($category)}
+            {/if}
+            <a href="{$reset_link}{if $wa->get('sort')}?sort={$wa->get('sort')|escape}&order={$wa->get('order')|escape}{/if}"  class="filters-selected__clear-all link-action">
+                <span class="link-action-icon__title">[`Clear`]</span>
+            </a>
+        {/if}
+    </div>
+{/if}
+{/strip}

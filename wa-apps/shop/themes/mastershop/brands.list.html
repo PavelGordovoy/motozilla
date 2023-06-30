@@ -1,0 +1,67 @@
+{strip}
+{$is_productbrands = $theme_settings.use_brand_plugin == 'productbrands' && class_exists('shopProductbrandsPlugin')}
+{$is_brandspro = $theme_settings.use_brand_plugin == 'brands_pro' && class_exists('shopBrandViewHelper')}
+
+{if $is_productbrands || $is_brandspro}
+    {if $is_productbrands}
+        {$brands = []}
+        {$allBrands = shopProductbrandsPlugin::getBrands()}
+        {if $theme_settings.homepage_brands == 'all'}
+            {$brands = $allBrands}
+        {else}
+            {foreach $allBrands as $b}
+                {if isset($b.params.home) && !empty($b.params.home)}
+                    {$brands[] = $b}
+                {/if}
+            {/foreach}
+        {/if}
+    {else if $is_brandspro}
+        {$brands = shopBrandViewHelper::getAllBrands()}
+    {/if}
+
+    {if count($brands) > 0}
+        {$is_small_margin = (!empty($homepage_content) && strpos($homepage_content, "brands,categories"))}
+        <div class="home-brands js-home-brands{if $is_small_margin} home-brands--margin-s{/if}">
+            <div class="home-brands__head">
+                {if $theme_settings.homepage_brands_head}
+                    <div class="h1 head-decor home-brands__h1">
+                        {$theme_settings.homepage_brands_head}
+                    </div>
+                {/if}
+                {if $theme_settings.homepage_brands_link_title}
+                    <a class="show-all ac-color" href="{$wa->getUrl('shop/frontend/brands')}">
+                        {$theme_settings.homepage_brands_link_title} <i class="button-more fal fa-long-arrow-right"></i>
+                    </a>
+                {/if}
+            </div>
+            <div class="js-home-brands-direction home-brands__direction bs-color"></div>
+            <div class="home-brands-list__outer">
+                <div class="home-brands-list owl-carousel js-home-brands-carousel">
+                    {foreach $brands as $b}
+                        {$url = null}
+                        {$image = null}
+                        {if $is_productbrands}
+                            {$url = $b.url}
+                            {$image = "`$wa_url`wa-data/public/shop/brands/`$b.id`/`$b.id`.150x0`$b.image`"}
+                        {/if}
+                        {if $is_brandspro}
+                            {$url = $b.frontend_url}
+                            {$image = $b.image_url}
+                        {/if}
+                        <div class="js-home-brand-el home-brands-list__el">
+                            <a title="{$b.name|escape}" href="{$url}">
+                                {if $image}
+                                    <img class="owl-lazy" alt="{$b.name|escape}" src="{$wa_theme_url}img/lazy-image.png" data-src="{$image}">
+                                {else}
+                                    {$b.name|escape}
+                                {/if}
+                            </a>
+                        </div>
+                    {/foreach}
+                </div>
+            </div>
+        </div>
+    {/if}
+{/if}
+
+{/strip}

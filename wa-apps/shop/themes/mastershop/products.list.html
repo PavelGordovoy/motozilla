@@ -1,0 +1,32 @@
+{strip}
+{if !empty($list_id)}
+    {$max_limit_products = (int) $theme_settings.homepage_product_list_limit}
+    {if !empty($max_limit_products)}
+        {$products = $wa->shop->productSet( $list_id, 0,  $max_limit_products)}
+    {else}
+        {$products = $wa->shop->productSet( $list_id )}
+    {/if}
+    {if count($products) > 0}
+        {if $wa->shop->cart->total() > 0}{$add2cart_label = '[`Add to cart`]'}{else}{$add2cart_label = '[`Buy`]'}{/if}
+        {$is_tile_mini = (!empty($theme_settings.mobile_preview_product_tile) && $theme_settings.mobile_preview_product_tile == 'mini')}
+        {$is_tile_large = !empty($theme_settings.desktop_preview_product_tile) && $theme_settings.desktop_preview_product_tile == 'large'}
+        <div class="product-list product-list--homepage-{$list_num}{if $is_carousel} js-carousel-products{else} product-list--tile{/if} js-preview-products"{if $is_carousel} data-loop="{$theme_settings.carousel_products_loop}" data-swipe="{$theme_settings.products_carousel_swipe}"{/if}{if !$is_carousel} data-retina="{$wa->shop->config('enable_2x')}" data-image-lazy="1"{/if} data-tile-mini="{$is_tile_mini}" data-tile-large="{$is_tile_large}">
+            {if !empty($list_title) || $is_carousel}
+                <div class="items-list__head">
+                    {if $is_carousel}
+                        <div class="items-list__direction bs-color js-carousel-direction">
+                        </div>
+                    {/if}
+                    <div class="h1 head-decor">{$list_title}</div>
+                </div>
+            {/if}
+            {if $is_carousel}<div class="carousel-products__outer">{/if}
+                <div class="js-products-list{if $is_carousel} carousel-products{/if}">
+                    {include file="product-preview-tile.html" is_carousel=$is_carousel is_random=$theme_settings.homepage_product_list_rand products=$products is_image_lazy=true}
+                </div>
+            {if $is_carousel}</div>{/if}
+
+        </div>
+    {/if}
+{/if}
+{/strip}

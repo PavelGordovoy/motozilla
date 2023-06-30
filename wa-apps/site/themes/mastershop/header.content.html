@@ -1,0 +1,42 @@
+{strip}
+{include file="`$parent_theme_path`/header.top.html"}
+<header class="js-header header{if $theme_settings.is_horizontal_menu == 1 || $wa->isMobile()} header--with-cats{/if}">
+    <div class="l-wrapper">
+        <a href="{$wa_url}" class="header-logo">
+            {if $theme_settings.logo}
+                {$logo_image_m = $theme_settings.logo_mobile}
+                {$logo_image = $theme_settings.logo}
+                <img class="header-logo__image {if $logo_image_m} js-logo-retina{/if}"{if $logo_image_m} data-at2x="{$wa_theme_url}{$logo_image_m}"{/if} src="{$wa_theme_url}{$logo_image}" alt="{$wa->accountName()}" />
+            {else if $theme_settings.logo_icon}
+                <span class="header-logo__icon">{$theme_settings.logo_icon}</span>
+            {/if}
+            {if $theme_settings.logo_text_1 || $theme_settings.logo_text_2}
+                <span class="header-logo__text">{$theme_settings.logo_text_1}
+                    {if $theme_settings.logo_text_2}<span class="header-logo__text-second">{$theme_settings.logo_text_2}</span>{/if}
+                </span>
+            {/if}
+            {if $theme_settings.logo_tagline_text}
+                <span class="header-logo__tagline">{$theme_settings.logo_tagline_text}</span>
+            {/if}
+        </a>
+        <div class="header-content">
+            {* блок с адресом *}
+            {if $theme_settings.display_header_address == 'block'}
+                {$wa->block("`$theme_settings.header_address_block_name`")}
+            {else}
+                {include file="`$parent_theme_path`/header.content.address.html"}
+            {/if}
+
+            {* блок с телефоном *}
+            {if $theme_settings.display_header_contacts == 'block'}
+                {$wa->block("`$theme_settings.header_contacts_block_name`")}
+            {else}
+                {include file="`$parent_theme_path`/header.content.contacts.html"}
+            {/if}
+
+            {include file="`$parent_theme_path`/header.search.html"}
+            {include file="`$parent_theme_path`/header.cart.html" is_popup=$theme_settings.popup_cart}
+        </div>
+    </div>
+</header>
+{/strip}

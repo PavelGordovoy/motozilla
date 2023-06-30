@@ -1,0 +1,125 @@
+<style>
+.s-routing-header { border-bottom: 1px solid #ccc; padding-left: 19px;}
+table.s-settings-apps { margin-top: 10px; }
+table.s-routing #s-routing-addrule { display: none; }
+table.s-routing td.s-url { padding-left: 19px; width: 50%; }
+table.s-routing td.s-url span { color: #aaa; }
+table.s-routing td.s-url span.s-editable-url { color: #000; }
+table.s-routing td.s-url input { width: 100px; }
+table.s-routing td.s-app { vertical-align: middle; padding-top: 10px; min-width: 100px; }
+table.s-routing td.s-app img { float: left; top: 5px; width: 24px; height: 24px; margin-right: 6px; margin-top: -6px; }
+table.s-routing td.s-app select { overflow: hidden; }
+</style>
+<div class="content" id="c-core">
+    <div class="block not-padded c-core-content shadowed" id="content">
+        <div class="block">
+            <h1>[`Selector settings`]</h1>
+            <div class="fields form sidebar" style="width:60%;">
+                <div class="block s-grey-toolbar">
+                    <h4 style="margin-left: 4px; margin-top:2px;">[`Redirects`]</h4>
+                </div>
+                <div class="block s-routing-header">
+                    <a href="#" class="inline-link" id="s-routing-addrule"><i class="icon16 add"></i><b><i>[`New rule`]</i></b></a>
+                </div>
+                <div>
+                    <form action="?module=settings&action=save" method="post" id="selector-settings-form" enctype="multipart/form-data" target="selector-settings-iframe">
+                        {$wa->csrf()}
+                        <input type="hidden" name="action" value="addrule">
+                        <table id="s-rules" class="zebra s-routing">
+                            <tbody>
+                            <tr class="hidden" id="route-new">
+                                <td class="s-app">{html_options name='locale' options=$locales}</td>
+                                <td class="s-url align-left">
+                            <span class="s-domain-url">
+                                <select name="domain">
+                                    {foreach $domains as $domain}
+                                        <option value="{$domain.name}">{$domain.title}</option>
+                                    {/foreach}
+                                </select>
+                            </span>
+                                </td>
+                                <td class="s-app"><input type="text" name="url"/></td>
+                                <td class="s-actions align-center">
+                                    <a href="#" class="s-route-action s-route-submit" title="Submit"><i class="icon16 yes"></i></a>
+                                </td>
+                                <td class="s-actions align-right">
+                                    <a href="#" class="s-route-action s-route-cancel" title="cancel"><i class="icon16 no"></i></a>
+                                </td>
+                                {if $redirect}
+                                {foreach $redirect as $domain_id=>$rule}
+                                {foreach $rule as $locale=>$redirect}
+                            <tr id="route-{$domain_id}-{$locale}" data-domain="{$domain_id}" data-locale="{$locale}">
+                                <td class="s-app">{ifset($locales[$locale],$locale)}</td>
+                                <td class="s-url">
+                                    <span class="s-domain-url">{ifset($domains[$domain_id],$domain_id)}</span>
+                                </td>
+                                <td class="s-app align-left">{$redirect}</td>
+                                {*<td class="s-actions align-center">
+                                    <a href="#" class="s-route-action s-route-settings" title="[`Settings`]"><i class="icon16 settings"></i></a>
+                                </td>*}
+                                <td class="s-actions align-right">
+                                    <a href="#" class="s-routing-delrule" title="[`Remove`]"><i class="icon16 delete"></i></a>
+                                </td>
+                            </tr>
+                            {/foreach}
+                            {/foreach}
+                            {/if}
+                            </tbody></table>
+                    </form>
+                </div>
+            </div>
+            <div class="clear-left"></div>
+            <div class="nohref">
+                <h3>[`Available selectors`]</h3>
+                <pre>{strip}{literal}{$wa->mylang->selectorFlags()}{/literal}<br>
+                    {$wa->mylang->selectorFlags()}<br>
+                    {literal}{$wa->mylang->selector(4)}{/literal}<br>
+                    {$wa->mylang->selector(4)}{/strip}
+                </pre>
+            </div>
+            <iframe style="display:none" name="selector-settings-iframe" id="selector-settings-iframe"></iframe>
+        </div>
+        <div class="clear-left"></div>
+    </div>
+</div>
+
+<script>
+    /*global $*/
+    $('a','.nohref').click(function(e){
+        e.preventDefault();
+    });
+    $('#selector-settings-form').on('submit', function(e) {
+        e.preventDefault();
+        $.post($(this).attr('action'), $(this).serialize(), function() {
+            $.mylang.selectorAction();
+        })
+    });
+
+    $('.s-route-submit').on('click', function() {
+        $('#selector-settings-form').trigger('submit');
+    });
+
+    $('.s-route-cancel').on('click', function() {
+        $('#selector-settings-form').trigger('reset');
+        $('#route-new').hide();
+    });
+
+    $("#s-routing-addrule").on('click', function(e){
+        e.preventDefault();
+        $('#route-new').show();
+    });
+
+    $(".s-routing-delrule").on('click', function(e){
+        if(!confirm(`Delete rule?`)) return;
+        let rule = $(this).closest('tr');
+        e.preventDefault();
+        let fields = {
+            'domain':rule.data('domain'),
+            'locale':rule.data('locale'),
+            'action':'delrule',
+        };
+        $.post($('#selector-settings-form').attr('action'),fields, function(){
+            rule.hide();
+        });
+    });
+</script>

@@ -1,0 +1,24 @@
+<div class="breadcrumbs">
+    <ul>
+        <li>{if $theme_settings.logo_link}<a href="{$theme_settings.logo_link}">{else}<a href="{$wa_app_url}">{/if}[`Home`]</a></li>
+        <li>{$page.name}</li>
+    </ul>
+</div>
+
+<h3>{$page.name}</h3>
+
+{$subpages = $wa->helpdesk->pages($page.id)}
+{if $subpages}
+<ul class="list-page-inline">
+    {foreach $subpages as $p}
+    <li><a href="{$p.url}">{$p.name}</a></li>
+    {if !$p@last}
+    <li>|</li>
+    {/if}
+    {/foreach}
+</ul>
+{/if}
+
+<div class="page-content">
+    {$page.content}
+</div>

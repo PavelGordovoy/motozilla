@@ -1,0 +1,33 @@
+<!-- latest blog posts -->
+<div class="sidebar">
+    <h5 class="title">Найти в блоге</h5>
+    <form method="get" action="{$wa_app_url}" class="search">
+        <div class="search-wrapper">
+            <input type="search" name="query" {if !empty($blog_query)}value="{$blog_query}"{/if} placeholder="[`Search posts`]">
+            <button type="submit"><i class="icon-search"></i></button>
+        </div>
+        <div class="clear-both"></div>
+    </form>
+</div>
+<div class="sidebar">
+    <h5 class="title">[`Latest posts`]</h5>
+    <ul class="sidebar-posts">
+    {foreach $wa->blog->posts() as $post_p name=psgs}
+        {if $smarty.foreach.psgs.iteration <= 6}
+            <li><a href="{$post_p.link}">{$post_p.title}</a></li>
+        {/if}
+    {/foreach}
+    </ul>
+</div>
+
+{if $wa->blog->pages()}
+    <div class="sidebar">
+    {$_links = $wa->photos->pages()}
+        <h5 class="title">[`Blog pages`]</h5>
+        <ul class="sidebar-posts">
+            {foreach $_links as $a}
+                <li><a href="{$a.url}">{$a.name}</a></li>
+            {/foreach}
+        </ul>
+    </div>
+{/if}

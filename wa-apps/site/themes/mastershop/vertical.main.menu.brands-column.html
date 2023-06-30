@@ -1,0 +1,14 @@
+{strip}
+<div class="js-categories-sub brands-v-column">
+    {foreach $brands as $b}
+        {$url = ''}
+        {if $is_productbrands}{$url = $b.url}{/if}
+        {if $is_brandspro}{$url = $b.frontend_url}{/if}
+        <div class="brands-v-column__item">
+            <a class="brands-v-column__link" title="{$b.name|escape}" href="{$url}">
+                {$b.name|escape}
+            </a>
+        </div>
+    {/foreach}
+</div>
+{/strip}

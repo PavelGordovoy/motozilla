@@ -1,0 +1,59 @@
+{strip}
+{$is_form = true}
+{$is_map = true}
+{$phone = $wa->shop->settings('phone')}
+{$phone2 = ""}
+{$phone3 = ""}
+{$email = $wa->shop->settings('email')}
+{$address = 'г. Москва, ул. 8 Марта 115'}
+{$map_code = '<script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9b519a4c2e92dc21face615cf3590c4c38a397289dd78ae8660142312db22093&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script>'}
+{if $wa->isMobile()}
+    {$map_code = '<script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9b519a4c2e92dc21face615cf3590c4c38a397289dd78ae8660142312db22093&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>'}
+{/if}
+
+<div class="contact-page__text">
+    <p>Интернет-магазин {$wa->accountName()} предоставляет широкий ассортимент товаров c более двухсот разделов и 2000 наименований. Мы работаем по всей России, а также по странам СНГ, выполняя самую быструю доставку в любой населенный пункт.</p>
+
+    <ul class="contact-items">
+        <li class="contact-item">
+            <div class="contact-item__icon bs-color"><em class="fa fa-phone icon"></em></div>
+            <div class="contact-item__text">
+                <div class="contact-item__title">[`Phone`]</div>
+                <div class="contact-item__value"><a class="contact-item__phone js-contact-phone" href="tel:{$phone|regex_replace:'/[^0-9\+]+/':''}">{$phone}</a></div>
+                {if !empty($phone2)}<div class="contact-item__value"><a class="contact-item__phone js-contact-phone" href="tel:{$phone2|regex_replace:'/[^0-9\+]+/':''}">{$phone2}</a></div>{/if}
+                {if !empty($phone3)}<div class="contact-item__value"><a class="contact-item__phone js-contact-phone" href="tel:{$phone3|regex_replace:'/[^0-9\+]+/':''}">{$phone3}</a></div>{/if}
+            </div>
+        </li>
+        <li class="contact-item">
+            <div class="contact-item__icon bs-color"><em class="fa fa-map-marker icon"></em></div>
+            <div class="contact-item__text">
+                <div class="contact-item__title">E-mail</div>
+                <div class="contact-item__value">{$email}</div>
+            </div>
+        </li>
+        <li class="contact-item">
+            <div class="contact-item__icon bs-color"><em class="fa fa-envelope"></em></div>
+            <div class="contact-item__text">
+                <div class="contact-item__title">[`Address`]</div>
+                <div class="contact-item__value">{$address}</div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+{if $is_map || $is_form}
+    <div class="contact-page__form-map">
+        {if $is_map}
+            <div class="contact-page__map{if !$is_form} contact-page__map--full{/if}">
+                {$map_code}
+            </div>
+        {/if}
+        {if $is_form}
+            <div class="contact-page__form{if !$is_map} contact-page__form--center{/if}">
+                <div class="contact-page_form-head h2">Обратная связь</div>
+                {$wa->block("site.send_email_form")}
+            </div>
+        {/if}
+    </div>
+{/if}
+{/strip}

@@ -1,0 +1,54 @@
+<ul class="menu-v dropdown">
+{foreach $apps as $app}
+    <li>
+        <a href="?module=editor&slug={$app['id']}">{$app['name']}
+            {if !empty($app['plugins'])||!empty($app['widgets'])}<span class="count"><i class="icon10 rarr overhanging"></i></span>{/if}
+        </a>
+        {if !empty($app['plugins'])||!empty($app['widgets'])}
+            <ul class="menu-v with-icons">
+                {if !empty($app['plugins'])}
+                    {foreach $app['plugins'] as $plugin}
+                        <li><a href="?module=editor&slug={$app['id']}/plugins/{$plugin.id}">{$plugin.name}</a></li>
+                    {/foreach}
+                {/if}
+                {if !empty($app['widgets'])}
+                    <li>[`Widgets`]</li>
+                    {foreach $app['widgets'] as $widget}
+                        <li><a href="?module=editor&slug={$app['id']}/widgets/{$widget.widget}">{$widget.name}</a></li>
+                    {/foreach}
+                {/if}
+            </ul>
+        {/if}
+    </li>
+{/foreach}
+{if $payment}
+    <li>[`Payment`]
+        <span class="count"><i class="icon10 rarr overhanging"></i></span>
+        <ul class="menu-v with-icons">
+            {foreach $payment as $key=>$p}
+                <li><a href="?module=editor&slug=wa-plugins/payment/{$key}">{$p.name}</a></li>
+            {/foreach}
+        </ul>
+    </li>
+{/if}
+{if $shipping}
+    <li>[`Shipping`]
+        <span class="count"><i class="icon10 rarr overhanging"></i></span>
+        <ul class="menu-v with-icons">
+            {foreach $shipping as $key=>$s}
+                <li><a href="?module=editor&slug=wa-plugins/shipping/{$key}">{$s.name}</a></li>
+            {/foreach}
+        </ul>
+    </li>
+{/if}
+{if $widgets}
+    <li>[`Widgets`]
+        <span class="count"><i class="icon10 rarr overhanging"></i></span>
+        <ul class="menu-v with-icons">
+            {foreach $widgets as $key=>$s}
+                <li><a href="?module=editor&slug=wa-widgets/{$key}">{$s.name}</a></li>
+            {/foreach}
+        </ul>
+    </li>
+{/if}
+</ul>

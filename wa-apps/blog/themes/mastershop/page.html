@@ -1,0 +1,19 @@
+{strip}
+{if !$wa->isMobile() && $theme_settings.blog_main_menu_button_head && !$theme_settings.blog_sidebar_left}
+    <div class="content-head">
+        {* main menu *}
+        {include file="`$wa_parent_theme_path`/vertical.main.menu.html" is_close=true}
+        <div class="content-head__title">
+            {include file="./breadcrumbs.html"}
+            <h1>{$page.name}</h1>
+        </div>
+    </div>
+{else}
+    {include file="./breadcrumbs.html"}
+    <h1>{$page.name}</h1>
+{/if}
+
+<div id="page" role="main">
+    {$page.content}
+</div>
+{/strip}

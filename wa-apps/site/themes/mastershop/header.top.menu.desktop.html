@@ -1,0 +1,49 @@
+{strip}
+{if count($_links) > 0}
+    {$count_levels = (int)$theme_settings.header_menu_levels}
+    <div class="js-header-menu-outer header-menu__outer">
+        <ul class="js-header-menu header-menu responsived-before-init{if $wa->isMobile()} hide-mobile{/if}" data-class-el="header-menu__item" data-class-sub-el="header-submenu__item">
+            {foreach $_links as $a}
+                {if !($a.url == $wa_url && $a.name == $wa->accountName()) && !isset($a.top_menu_hide)}
+                    {$is_select = strlen($a.url)>1 && $wa->currentUrl() == $a.url}
+                    {$is_open = $a.url==$wa_app_url && !$wa->globals('isMyAccount') || strlen($a.url)>1 && $wa->currentUrl()|strstr:$a.url}
+                    <li class="js-header-menu-item header-menu__item{if $is_select} selected{/if}">
+                        <a href="{$a.url}"{if !empty($a.target)} target="{$a.target}"{/if}>{$a.name}</a>
+                        {if isset($a.childs) && $a.childs && count($a.childs) && $count_levels > 1}
+                            <i class="header-menu__caret fal fa-angle-down"></i>
+                            <div class="header-submenu-outer js-header-submenu-outer">
+                                <ul class="header-submenu js-header-submenu">
+                                    {foreach $a.childs as $level_2}
+                                        <li class="js-header-submenu-item header-submenu__item{if strlen($level_2.url)>1 && $wa->currentUrl() == $level_2.url} selected{/if}">
+                                            <a href="{$level_2.url}"{if !empty($level_2.target)} target="{$level_2.target}"{/if}>{$level_2.name}</a>
+                                            {if isset($level_2.childs) && $level_2.childs && count($level_2.childs) && $count_levels > 2}
+                                                <div class="header-submenu-outer js-header-submenu-outer">
+                                                    <ul class="header-submenu js-header-submenu">
+                                                        {foreach $level_2.childs as $level_3}
+                                                            <li class="header-submenu__item{if strlen($level_3.url)>1 && $wa->currentUrl() == $level_3.url} selected{/if}">
+                                                                <a href="{$level_3.url}"{if !empty($level_3.target)} target="{$level_3.target}"{/if}>{$level_3.name}</a>
+                                                            </li>
+                                                        {/foreach}
+                                                    </ul>
+                                                </div>
+                                            {/if}
+                                        </li>
+                                    {/foreach}
+                                </ul>
+                            </div>
+                        {/if}
+                    </li>
+                {/if}
+            {/foreach}
+            <li data-type="else" class="js-header-menu-item header-menu__item hide">
+                <span class="link">
+                    [`Else`]
+                </span>
+                <i class="header-menu__caret fal fa-angle-down"></i>
+                <div class="header-submenu-outer js-header-submenu-outer"><ul class="js-header-submenu header-submenu"></ul></div>
+            </li>
+        </ul>
+    </div>
+{/if}
+
+{/strip}

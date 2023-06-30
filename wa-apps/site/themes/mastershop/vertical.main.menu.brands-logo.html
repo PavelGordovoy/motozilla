@@ -1,0 +1,43 @@
+{strip}
+{$count_subitems = count($brands)}
+{$count_cols = 6}
+{if $count_subitems < 13}{$count_cols = 4}{/if}
+{if $count_subitems < 10}{$count_cols = 3}{/if}
+{if $count_subitems < 7}{$count_cols = 2}{/if}
+{if $count_subitems < 3}{$count_cols = 1}{/if}
+
+<div class="js-categories-sub brands-v-logo cols-{$count_cols}">
+    <div class="brands-v-logo__items">
+        {foreach $brands as $b}
+            {$url = null}
+            {$image = null}
+            {if $is_productbrands}
+                {$url = $b.url}
+                {$image = "`$wa_url`wa-data/public/shop/brands/`$b.id`/`$b.id`.107`$b.image`"}
+            {/if}
+            {if $is_brandspro}
+                {$url = $b.frontend_url}
+                {$image = $b.image_url}
+            {/if}
+            <div class="brands-v-logo__item">
+                <a class="brands-v-logo__inner" title="{$b.name|escape}" href="{$url|escape}">
+                    <span class="brands-v-logo__image">
+                        {if $image}
+                            {if $theme_settings.categories_menu_images_lazy}
+                                <img class="js-brand-image" alt="{$b.name|escape}" src="{$wa_theme_url}img/lazy-image.png" data-src="{$image}" />
+                            {else}
+                                <img class="js-brand-image" alt="{$b.name|escape}" src="{$image}" />
+                            {/if}
+                        {else}
+                            {$b.name|escape}
+                        {/if}
+                    </span>
+                    {* <span class="brands-v-logo__title">
+                        {$b.name|escape}<i class="button-more ac-color fal fa-long-arrow-right"></i>
+                    </span> *}
+                </a>
+            </div>
+        {/foreach}
+    </div>
+</div>
+{/strip}

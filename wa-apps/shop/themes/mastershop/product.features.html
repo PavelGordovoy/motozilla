@@ -1,0 +1,53 @@
+{strip}
+{$features_list = $features}
+{if !empty($sku_features)}{$features_list = $sku_features}{/if}
+<div class="js-product-features product-card__features"{if $is_schema_org} data-schema-org="{$is_schema_org}"{/if}>
+    <table class="product_features">
+        {$product_features_list = $product.features}
+        {if !empty($product.skus[$product.sku_id].features)}{$product_features_list = $product.skus[$product.sku_id].features}{/if}
+        {if $theme_settings.use_plugin_seo_filter && class_exists('shopSeofilterViewHelper')}
+            {$product_features_list = shopSeofilterViewHelper::wrapFeatureValues($product_features_list)}
+        {/if}
+
+        {foreach $product_features_list as $f_code => $f_value}
+            {if !empty($features_list[$f_code])}
+                <tr class="product_features-item {if $features_list[$f_code].type == 'divider'} divider{/if}">
+                    <td class="product_features-title">
+                        <span>{$features_list[$f_code].name|escape}</span>
+                    </td>
+
+                    {$_is_good_param = ($f_code|in_array:["weight", "brand", "model", "width", "height", "depth", "color", "manufacturer"])}
+                    {$_itemprop = ""}{if $_is_good_param}{$_itemprop = $f_code}{/if}
+                    {$code_brand = $theme_settings.feature_brand_code}
+                    {if !empty($code_brand) && $code_brand == $f_code}{$_itemprop = "brand"}{/if}
+                    {$code_gtin12 = $theme_settings.schema_org_feature_gtin12}
+                    {if !empty($code_gtin12) && $code_gtin12 == $f_code}{$_itemprop = "gtin12"}{/if}
+                    {$code_gtin13 = $theme_settings.schema_org_feature_gtin13}
+                    {if !empty($code_gtin13) && $code_gtin13 == $f_code}{$_itemprop = "gtin13"}{/if}
+                    {$code_gtin14 = $theme_settings.schema_org_feature_gtin14}
+                    {if !empty($code_gtin14) && $code_gtin14 == $f_code}{$_itemprop = "gtin14"}{/if}
+                    {$code_gtin8 = $theme_settings.schema_org_feature_gtin8}
+                    {if !empty($code_gtin8) && $code_gtin8 == $f_code}{$_itemprop = "gtin8"}{/if}
+                    <td class="product_features-value"{if $is_schema_org && $_itemprop} itemprop="{$_itemprop}"{/if}{if $is_schema_org && $_itemprop == 'brand'} itemscope itemtype="https://schema.org/Brand"{/if}>
+                        {if $features_list[$f_code].type != 'divider'}
+                            {if is_array($f_value)}
+                                {if $features_list[$f_code].type == 'color'}
+                                    {implode('<br /> ', $f_value)}
+                                {else}
+                                    {implode(', ', $f_value)}
+                                {/if}
+                            {else}
+                                {if $is_schema_org && $_itemprop == 'brand'}
+                                    <span itemprop="name">{$f_value}</span>
+                                {else}
+                                    {$f_value}
+                                {/if}
+                            {/if}
+                        {/if}
+                    </td>
+                </tr>
+            {/if}
+        {/foreach}
+    </table>
+</div>
+{/strip}

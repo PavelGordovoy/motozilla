@@ -1,0 +1,216 @@
+{strip}
+
+<div id="s-mainslider" class="preload owl-carousel owl-theme" data-autoplay="true" data-autoplayspeed="{$theme_settings.slider_time}" data-autoplayhoverpause="{$theme_settings.slider_hover_pause}" data-loop="{if $theme_settings.contacts_page && $wa->currentUrl()|strpos:"{$theme_settings.contacts_page}"}false{else}{$theme_settings.slider_loop}{/if}" data-navigation="{$theme_settings.slider_nav}" data-pagination="{$theme_settings.slider_pag}" data-animin="{$theme_settings.slider_anim_in}" data-animOut="{$theme_settings.slider_anim_out}" data-drag="{if $theme_settings.contacts_page && $wa->currentUrl()|strpos:"{$theme_settings.contacts_page}"}false{else}true{/if}"{if !empty($theme_settings.slider_height)} style="height: {$theme_settings.slider_height};"{/if}>
+    {if $theme_settings.contacts_page && $wa->currentUrl()|strpos:"{$theme_settings.contacts_page}"}
+        {if $theme_settings.contacts_map}
+          {$theme_settings.contacts_map}
+        {else}
+            <h4 class="text-center red">Не установлен код карты в настройках сайта!</h4>
+        {/if}
+    {else}
+        {if !empty($_promocards)}
+            {if $theme_settings.homepage_tile_mode == "promos"}
+              {$_promocards = $_promocards|@array_slice:0:-6}
+            {/if}
+            {foreach $_promocards as $slide}
+                <div class="item{if $theme_settings.slider_background_type == 'contain'} s-mainslider-bg-contain{/if}" style="{if $slide.image}background-image: url('{$slide.image}');{/if}{if !empty($theme_settings.slider_height)} height: {$theme_settings.slider_height};{/if}">
+                  <div class="container">
+                    <div class="row">
+                        <div class="s-mainslider-text col-md-12 text-center" {if $slide.color} style="color: {$slide.color};"{/if}>
+                          <h2>{$slide.title|escape}</h2>
+                          <p>{$slide.body|escape}</p>
+                          <div class="s-mainslider-counter">
+                            <p class="s-mainslider-counter-text">[`Until the end of the action remained:`]</p>
+                            <span class="s-mainslider-promo-countdown" data-start="{date('Y-m-d H:i:s')}" data-end="{$slide.countdown_datetime}"></span>
+                          </div>
+                          {if $slide.link != "#" && !$slide.link|strpos:"hide-button"}<a class="btn btn-default btn-lg" href="{$slide.link}">Подробнее</a>{/if}
+                        </div>
+                    </div>
+                  </div>
+                  {if $slide.link != "#"}<a class="s-link" href="{$slide.link}"></a>{/if}
+                </div>
+            {/foreach}
+        {elseif !empty($_products)}
+            {foreach $_products as $product}
+
+                {$_product_image_src = $wa->shop->productImgUrl($product, "0x320@2x")}
+                {$_name = $product.name}
+                {if $product.summary}
+                    {$_name = "`$product.name` — {strip_tags($product.summary)|escape}"}
+                {/if}
+
+                {if !empty($theme_settings.homepage_slider_bg)}
+                    {if !empty($theme_settings.homepage_slider_image_custom_bg)}
+                        {$_slider_bg = "`$wa_parent_theme_url``$theme_settings.homepage_slider_image_custom_bg`"}
+                    {elseif !empty($theme_settings.homepage_slider_bg)}
+                        {$_slider_bg = "`$wa_parent_theme_url``$theme_settings.homepage_slider_image_bg`"}
+                    {/if}
+                {elseif !empty($theme_settings.homepage_slider_color_bg_custom)}
+                    {$_slider_custom_bg = $theme_settings.homepage_slider_color_bg_custom}
+                {elseif !empty($theme_settings.homepage_slider_color_bg)}
+                    {$_slider_color_class = 'bg-'|cat:str_replace('img/themesettings/','',str_replace('.png','',$theme_settings.homepage_slider_color_bg))}
+                {/if}
+
+                <div class="item{if isset($_slider_color_class)} {$_slider_color_class}{/if}" style="{if isset($_slider_bg)}background-image: url('{$_slider_bg}');{/if}{if isset($_slider_custom_bg)}background-color: {$_slider_custom_bg};{/if}" itemscope itemtype ="http://schema.org/Product">
+                  <div class="container">
+                    <div class="row">
+                        <div class="s-mainslider-text col-md-6">
+                          <h2 class="s-mainslider-header" itemprop="name">
+                            <a class="name" href="{$product.frontend_url}" title="{$_name}">{$product.name}</a>
+                          </h2>
+                          <p>{if $product.summary}{strip_tags($product.summary)|truncate:255}{/if}</p>
+                          <div class="s-mainslider-price">{shop_currency_html($product.price)}</div>
+                          <meta itemprop="price" content="{$product.price}">
+                          <meta itemprop="priceCurrency" content="{$wa->shop->primaryCurrency()}">
+                          {if !empty($product.summary)}
+                            <meta itemprop="description" content="{strip_tags($product.summary)}">
+                          {/if}
+                          <a class="btn btn-default btn-md" href="{$product.frontend_url}">Подробнее</a>
+                        </div>
+                        <div class="s-mainslider-image col-md-6 hidden-sm-down">
+                            <a href="{$product.frontend_url}" title="{$_name}" style="background-image: url('{$_product_image_src}');">
+                                {$badge_html = $wa->shop->badgeHtml($product.badge)}
+                                {if !empty($badge_html)}
+                                    <div class="s-badge-wrapper">{$badge_html}</div>
+                                {/if}
+                            </a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            {/foreach}
+        {elseif !empty($_photos)}
+            {foreach $_photos as $photo}
+                  {if !empty($photo.description)}
+                      {assign var="_photo_params" value="|"|explode:$photo.description}
+                  {else}
+                      {$_photo_params = null}
+                  {/if}
+                  <div class="item{if $theme_settings.slider_background_type == 'contain'} s-mainslider-bg-contain{/if}" style="background-image: url('{$photo.thumb_1500.url}');{if !empty($theme_settings.slider_height)} height: {$theme_settings.slider_height};{/if}">
+                    <div class="container">
+                      <div class="row{if empty($theme_settings.slider_width)} s-with-padding{/if}">
+                          <div class="s-mainslider-text{if isset($_photo_params.0) && $_photo_params.0 == 'right'} col-md-offset-6 col-md-6{elseif $_photo_params.0 == 'left'} col-md-6{else} col-md-12 text-center{/if}"{if isset($_photo_params.5)} style="color: {$_photo_params.5};"{/if}>
+                            {if isset($_photo_params.1) && $_photo_params.1 != 'null'}<h2>{$_photo_params.1}</h2>{/if}
+                            {if isset($_photo_params.2) && $_photo_params.2 != 'null'}<p>{$_photo_params.2}</p>{/if}
+                            {if isset($_photo_params.4) && $_photo_params.4 != 'null'}<a class="btn btn-default btn-md" href="{$_photo_params.3}">{if $_photo_params.4}{$_photo_params.4}{else}Подробнее{/if}</a>{/if}
+                          </div>
+                      </div>
+                    </div>
+                    {if isset($_photo_params.3) && $_photo_params.3 != 'null'}<a class="s-link" href="{$_photo_params.3}"></a>{/if}
+                  </div>
+            {/foreach}
+        {/if}
+    {/if}
+</div>
+
+{if !empty($_promocards)}
+    <script>
+        ( function($) {
+            $(".s-mainslider-promo-countdown").each( function() {
+                var $wrapper = $(this),
+                    options = {
+                        $wrapper: $wrapper,
+                        start: $wrapper.data('start').replace(/-/g, '/'),
+                        end: $wrapper.data('end').replace(/-/g, '/')
+                    };
+
+                if (typeof CountDown == "function") {
+                    new CountDown(options);
+                } else {
+                    $wrapper.closest('.s-mainslider-counter-text').remove();
+                    $wrapper.remove();
+                }
+            });
+        })(jQuery);
+    </script>
+{/if}
+
+<script>
+        var hrefImages = "{$wa_parent_theme_url}plugins/jquery.waitforimages.min.js?v{$wa_theme_version}",
+            hrefOwl = "{$wa_parent_theme_url}plugins/owlcarousel/owl.carousel.min.js?v{$wa_theme_version}",
+            mainSlider = $('#s-mainslider'),
+            mainSliderText = $('.s-mainslider-text'),
+            loaderIntro = '<div class="landing landing-slider"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div>';
+
+        if (!$.fn.waitForImages) { $.getScript(hrefImages); }
+        (!$.fn.owlCarousel) ? $.getScript(hrefOwl, initSlider) : initSlider();
+
+        function initSlider() {
+
+            var $this = mainSlider;
+
+            $this.append(loaderIntro);
+
+            $this.waitForImages({
+
+                finished: function () {
+
+                        $this.find('.landing-slider').remove();
+
+                            var autoplay = $this.data('autoplay'),
+                                autoplaySpeed = $this.data('autoplayspeed'),
+                                autoplayHoverPause = $this.data('autoplayhoverpause'),
+                                loop = $this.data('loop'),
+                                navigation = $this.data('navigation'),
+                                pagination = $this.data('pagination'),
+                                drag = $this.data('drag'),
+                                animateOut = $this.data('animout');
+
+                            $this.owlCarousel({
+                                items: 1,
+                                autoplay: autoplay || false,
+                                autoplaySpeed: autoplaySpeed || 0,
+                                autoplayHoverPause: autoplayHoverPause || false,
+                                loop: loop || false,
+                                nav: navigation || false,
+                                dots: pagination || false,
+                                mouseDrag: drag || false,
+                                touchDrag: drag || false,
+                                pullDrag: drag || false,
+                                animateOut: animateOut || 'fadeOut',
+                                navText: [
+                                    "<i class='fa fa-angle-left fa-2x'></i>",
+                                    "<i class='fa fa-angle-right fa-2x'></i>"
+                                ]
+                            });
+
+                        $this.removeClass('preload');
+                        if (mainSliderText.length) {
+                            $this.find('.s-mainslider-text').each(function (index,item) {
+                                var $that = $(this),
+                                parentItem = $that.parents('.item'),
+                                parentHeight = parentItem.height(),
+                                elementHeight = $that.height();
+
+                                $that.css({
+                                    top: (parentHeight / 2 - elementHeight / 2)
+                                });
+
+                            });
+                        }
+
+                    },
+
+               waitForAll: true
+            });
+
+        }
+
+        function centerOverlaySlider() {
+            mainSliderText.each(function () {
+                var $this = $(this),
+                    parentItem = $this.parents('.item'),
+                    parentHeight = parentItem.height(),
+                    elementHeight = $this.height();
+                $this.css({
+                    top: (parentHeight / 2 - elementHeight / 2)
+                });
+            });
+        }
+
+        if (mainSliderText.length) {
+            $(window).resize(centerOverlaySlider);
+        }
+</script>
+
+{/strip}

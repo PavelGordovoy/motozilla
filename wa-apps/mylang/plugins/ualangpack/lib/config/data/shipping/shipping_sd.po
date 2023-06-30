@@ -1,0 +1,236 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst Pickup point 1.0.8.38 plugin UA translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-10-21T23:18:15+03:00\n"
+"PO-Revision-Date: 2020-11-07 10:54+0300\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "Pickup is not available for this address."
+msgstr "Самовивіз для цієї адреси недоступний."
+
+msgid "Weight values above the limit."
+msgstr "Значення ваги перевищує обмеження."
+
+msgid "Size values above the limit."
+msgstr "Розміри перевищують обмеження."
+
+msgid "kg"
+msgstr "кг"
+
+msgid "lbs"
+msgstr "фунти"
+
+msgid "Fill in the required field."
+msgstr "Заповніть необхідне поле."
+
+msgid "At least one working day is required."
+msgstr "Потрібен принаймні один робочий день."
+
+msgid "Invalid date"
+msgstr "Неприпустима дата"
+
+msgid "Invalid time"
+msgstr "Неприпустимий час"
+
+msgid "Additional info"
+msgstr "Додаткова інформація"
+
+msgid "How to reach"
+msgstr "Як дістатися"
+
+msgid "Description"
+msgstr "Опис"
+
+msgid "Upload a photo"
+msgstr "Завантажити фото"
+
+msgid "Photos"
+msgstr "Фото"
+
+msgid "remove"
+msgstr "видалити"
+
+msgid "Basic settings"
+msgstr "Основні параметри"
+
+msgid "Currency"
+msgstr "Валюта"
+
+msgid "Weight dimension unit"
+msgstr "Одиниця виміру ваги"
+
+msgid "Length dimension unit"
+msgstr "Одиниця виміру довжини"
+
+msgid "Service"
+msgstr "Послуга"
+
+msgid "Address"
+msgstr "Адреса"
+
+msgid "Shipping time"
+msgstr "Час доставки"
+
+msgid "hours"
+msgstr "години"
+
+msgid "Time required to deliver ordered items to this pickup point, which is added to the total order ready time."
+msgstr "Час, необхідний, аби доставити замовлені товари у цей пункт самовивозу. Додається до терміну загальної готовності замовлення."
+
+msgid "Storage time"
+msgstr "Термін зберігання"
+
+msgid "days"
+msgstr "дні"
+
+msgid "from"
+msgstr "від"
+
+msgid "to"
+msgstr "до"
+
+msgid "Working time"
+msgstr "Години роботи"
+
+msgid "Time zone"
+msgstr "Часовий пояс"
+
+msgid "Day of the week"
+msgstr "День тижня"
+
+msgid "Works"
+msgstr "Працює"
+
+msgid "Orders for pickup"
+msgstr "Замовлення на самовивіз"
+
+msgid "Values in “%s” column denote the last hour of a pickup point’s workday until which orders are accepted to be ready for pickup by customers on the same day. Orders received after that hour are ready for pickup on the next workday."
+msgstr "Значення у колонці “%s” позначають останню робочу годину пункту самовивозу, до якої приймаються замовлення для видачі на той же день. Замовлення, прийняті після цієї години, будуть готові до видачі наступного робочого дня."
+
+msgid "Extra workdays"
+msgstr "Додаткові робочі дні"
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "Time"
+msgstr "Час"
+
+msgid "Add date"
+msgstr "Додати дату"
+
+msgid "Extra days off"
+msgstr "Додаткові вихідні"
+
+msgid "Shipping cost"
+msgstr "Вартість доставки"
+
+msgid "Minimum order cost for free delivery"
+msgstr "Мінімальна вартість замовлення для безкоштовної доставки"
+
+msgid "Base cost and markups are ignored when free delivery is applied."
+msgstr "Базова вартість і націнки ігноруються при застосуванні безкоштовної доставки."
+
+msgid "Base cost"
+msgstr "Базова вартість"
+
+msgid "Markup for extra order weight"
+msgstr "Націнка за перевищення ваги замовлення"
+
+msgid "Threshold weight"
+msgstr "Поріг ваги"
+
+msgid "Markup for weight"
+msgstr "Націнка за вагу"
+
+msgid "Markup for extra order dimensions"
+msgstr "Розмітка для перевищення розмірів замовлення"
+
+msgid "Threshold length"
+msgstr "Поріг довжини"
+
+msgid "Threshold width"
+msgstr "Поріг ширини"
+
+msgid "Threshold height"
+msgstr "Поріг висоти"
+
+msgid "Markup for order dimensions"
+msgstr "Націнка за розміри замовлення"
+
+msgid "Use data provided by special plugins for comparison with common order dimensions. If no order dimensions data are available, the maximum length, width, and height values of order items are used."
+msgstr "Використовувати дані, надані спеціальними плагінами для порівняння зі стандартними розмірами замовлення. Якщо дані про розміри недоступні, використовуються максимальна довжина, ширина і висота позицій замовлення."
+
+msgid "Availability options"
+msgstr "Параметри доступності"
+
+msgid "Country"
+msgstr "Країна"
+
+msgid "Region"
+msgstr "Регіон"
+
+msgid "Shipping will be restricted to the selected country. Rates defined below will be applied to the entire country."
+msgstr "Доставку буде обмежено обраною країною. Визначені нижче ставки буде застосовано до усієї країни."
+
+msgid "Shipping will be restricted to the selected region."
+msgstr "Доставку буде обмежено обраним регіоном."
+
+msgid "Localities"
+msgstr "Населені пункти"
+
+msgid "Separate localities with a comma"
+msgstr "Розділяйте населені пункти комами (,)"
+
+msgid "Coordinates"
+msgstr "Координати"
+
+msgid "Latitude"
+msgstr "Широта"
+
+msgid "Longitude"
+msgstr "Довгота"
+
+msgid "Use this service to get coordinates:"
+msgstr "Скористатися даним сервісом для отримання координат:"
+
+msgid "Max weight"
+msgstr "Максимальна вага"
+
+msgid "Max length"
+msgstr "Максимальна довжина"
+
+msgid "Max width"
+msgstr "Максимальна ширина"
+
+msgid "Max height"
+msgstr "Максимальна висота"
+
+msgid "cash on receipt"
+msgstr "готівкою при отриманні замовлення"
+
+msgid "card on receipt"
+msgstr "банківською карткою при отриманні замовлення"
+
+msgid "prepayment"
+msgstr "передплата"
+
+msgid "Supported payment types"
+msgstr "Типи оплати, що підтримуються"
+
+msgid "Select payment types which must be supported by a shipping option selected by a customer."
+msgstr "Оберіть варіанти оплати, що мають підтримуватись обраним покупцем варіантом доставки."
+
+msgid "This setting is not used for multi-step checkout."
+msgstr "У поетапному режимі оформлення замовлення це налаштування не використовується."
+
+msgid "Please select a country."
+msgstr "Оберіть, будь ласка, країну."

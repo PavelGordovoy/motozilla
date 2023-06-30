@@ -1,0 +1,65 @@
+<h1>[`Contact fields`]</h1>
+{literal}<style>div[data-mylang]{margin-right:20%}</style>{/literal}
+<form id="s-mylang-form" method="POST" action="?module=contacts&action=save">
+    <table class="zebra single-lined with-x-scroll">
+        <tr class="header">
+            <th>[`Contact fields`]<span class="float-right" id="mylang-widen-all"><i class="icon16 larr"></i><i class="icon16 rarr"></i></span></th>
+            {foreach $locales as $l}
+                <th data-mylang="{$l}">{$l}</th>
+            {/foreach}
+        </tr>
+        {foreach $fields as $key=>$field name=fields}
+            <tr data-id={$key}>
+                <td>
+                    {$field['name']}<br>
+                    <span class="hint">{$key}</span>
+                </td>
+                {foreach $locales as $locale=>$l name=locales}
+                <td data-mylang="{$locale}">
+                    <input tabindex="{$smarty.foreach.locales.index}" type="text" name="mylang[{$key}][{$locale}]" value="{$field['localized_names'][{$locale}]|default:''}" placeholder="{$l}" />
+                </td>
+                {/foreach}
+            </tr>
+            {if $field.subfields|default:false}
+                {foreach $field.subfields as $subkey=>$subfield name=subfields}
+                <tr data-id={$key}>
+                    <td>
+                        <i class="icon16 rarr"></i>{$subfield['name']}<br>
+                        <span class="hint">{$subkey}</span>
+                    </td>
+                    {foreach $locales as $locale=>$l name=locales}
+                    <td data-mylang="{$locale}">
+                        <input tabindex="{$smarty.foreach.locales.index}" type="text" name="mylang[{$key}][fields][{$subkey}][{$locale}]" value="{$subfield['localized_names'][{$locale}]|default:''}" placeholder="{$l}" />
+                    </td>
+                    {/foreach}
+                </tr>
+                {/foreach}
+            {/if}
+        {/foreach}
+    </table>
+    <div class="placeholder"></div>
+    <div>
+        <div class="wa-mylang-save-panel block bordered-top">
+            <input id="wa-design-button" type="submit" class="button green" value="[`Save`]">
+            <em class="hint">Ctrl + S</em>
+            <span id="wa-editor-status" style="margin-left: 20px; display: none;"><i class="icon16 yes"></i> [`Saved`]</span>
+        </div>
+    </div>
+</form>
+<script>
+    $(document).on('change',".s-mylang-select", function() {
+        let $sel = $("select.s-mylang-select");
+        let fields = $("[data-mylang]");
+        fields.hide();
+        let selected = $(this).val();
+        localStorage.setItem('mylang/locale', selected);
+        if ($(this).val() == "ALL")
+            fields.show();
+        else if ($(this).val() != "NONE") {
+            $("[data-mylang=" + selected + "]").show();
+            if ($(this).prev().data("mylang") == selected) {
+                $(this).show();}
+        }
+        $sel.val(localStorage.getItem('mylang/locale'));
+    });
+</script>

@@ -1,0 +1,71 @@
+{strip}
+{if empty($theme_settings.id_page_catalog_contact)}{$theme_settings.id_page_catalog_contact = $wa->globals('id_contact_page')}{/if}
+{$cols = 1}
+{$sidebar_left = false}
+{$sidebar_right = false}
+{$is_mobile = ($wa->isMobile() && ($wa->cookie("is_desktop_for_mobile") != 1 || !$theme_settings.switch_version))}
+{if !$is_mobile}
+    {if $page.id == "cartonestep" || $page.id == "onestep"}
+        {$sidebar_left = $theme_settings.checkout_sidebar_left}
+        {$sidebar_right = $theme_settings.checkout_sidebar_right}
+    {else}
+        {$sidebar_left = $theme_settings.page_catalog_sidebar_left}
+        {$sidebar_right = $theme_settings.page_catalog_sidebar_right}
+    {/if}
+{/if}
+{if $sidebar_left}{$cols = $cols + 1}{/if}
+{if $sidebar_right}{$cols = $cols + 1}{/if}
+
+{if !isset($breadcrumbs) && isset($page_parents) && !empty($page_parents)}
+    {foreach $page_parents as $key => $page_parent}
+        {$url = trim($page_parent['full_url'], "/")}
+        {$breadcrumbs[] = ["name" => $page_parent.name, 'url' => "`$wa_app_url``$page_parent.full_url`"]}
+    {/foreach}
+{/if}
+
+{$content_cols_class_align = ""}
+{if $sidebar_left}{$content_cols_class_align = " flex-align-r"}{/if}
+{if $sidebar_right}{$content_cols_class_align = " flex-align-l"}{/if}
+{if $sidebar_right && $sidebar_left}{$content_cols_class_align = " flex-align-c"}{/if}
+
+{if $page.id == 'brands'}
+    <div class="wrap-content" id="page" role="main">
+        {$page.content}
+    </div>
+{else}
+    <div data-count="{$cols}" class="js-content-cols content-cols cols-{$cols}{$content_cols_class_align}">
+        <div class="content{if $sidebar_left} with-sidebar-l{/if}{if $sidebar_right} with-sidebar-r{/if}">
+            {if !$wa->isMobile() && $theme_settings.page_catalog_main_menu_button_head && !$sidebar_left}
+                <div class="content-head">
+                    {* main menu *}
+                    {include file="`$wa_parent_theme_path`/vertical.main.menu.html" is_close=true}
+                    <div class="content-head__title">
+                        {* breadcrumbs *}
+                        {include file="`$wa_parent_theme_path`/breadcrumbs.html" last=['name' => $page.name, 'url' => $wa->currentUrl(false, true)]}
+                        <h1>{$page.name}</h1>
+                    </div>
+                </div>
+            {else}
+                {* breadcrumbs *}
+                {include file="`$wa_parent_theme_path`/breadcrumbs.html" last=['name' => $page.name, 'url' => $wa->currentUrl(false, true)]}
+                <h1>{$page.name}</h1>
+            {/if}
+            {$id_page_contact = (int) $theme_settings.id_page_catalog_contact}
+
+            {$page_class = null}
+            {if $wa->get('popup')}
+                {$page_class = "js-page-popup-content"}
+            {else if !empty($page.content) && $page.id != $id_page_contact && !isset($page.without_white_bg)}
+                {$page_class = "wrap-content"}
+            {/if}
+            <div{if !empty($page_class)} class="{$page_class}"{/if} id="page" role="main">
+                {if $wa->get('popup')}<h1 itemprop="name" class="page-h1">{$page.name}</h1>{/if}
+                {$page.content}
+            </div>
+        </div>
+        {if $sidebar_left}{include file="./sidebar.left.html" blocks=$sidebar_left inline}{/if}
+        {if $sidebar_right}{include file="./sidebar.right.html" blocks=$sidebar_right inline}{/if}
+    </div>
+{/if}
+{/strip}
+{$wa->globals('isPageTemplate', true)}

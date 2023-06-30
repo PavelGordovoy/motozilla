@@ -1,0 +1,46 @@
+{strip}
+{if $wa->currentUrl() == $wa_app_url && (empty($page.id) && empty($page.content))}
+    <div class="welcome">
+        <h1>[`Welcome to your new site!`]</h1>
+        <p>{sprintf('[`Start by <a href="%s">creating a page</a> in your site backend.`]', $wa_backend_url|cat:'site/#/pages/')}</p>
+    </div>
+{else}
+    {$cols = 1}
+    {$lastBreadcrumbs = null}
+    {$is_sidebar_left = false}
+    {$is_sidebar_right = false}
+    {$is_mobile = ($wa->isMobile() && ($wa->cookie("is_desktop_for_mobile") != 1 || !$theme_settings.switch_version))}
+    {if $wa->globals('isMyAccount')}
+        {$sidebar_left = $theme_settings.profile_sidebar_left}
+        {$sidebar_right = $theme_settings.profile_sidebar_right}
+        {$lastBreadcrumbs = "[s`My profile`]"}
+    {else}
+        {$sidebar_left = $theme_settings.site_sidebar_left}
+        {$sidebar_right = $theme_settings.site_sidebar_right}
+    {/if}
+
+    {if $sidebar_left && !$is_mobile}
+        {$cols = $cols + 1}
+        {$is_sidebar_left = true}
+    {/if}
+    {if $sidebar_right && !$is_mobile}
+        {$cols = $cols + 1}
+        {$is_sidebar_right = true}
+    {/if}
+
+    {$content_cols_class_align = ""}
+    {if $is_sidebar_left}{$content_cols_class_align = " flex-align-r"}{/if}
+    {if $is_sidebar_right}{$content_cols_class_align = " flex-align-l"}{/if}
+    {if $is_sidebar_right && $is_sidebar_left}{$content_cols_class_align = " flex-align-c"}{/if}
+
+    <div data-count="{$cols}" class="js-content-cols content-cols cols-{$cols}{$content_cols_class_align}">
+        <article class="content {if $is_sidebar_left} with-sidebar-l{/if}{if $is_sidebar_right} with-sidebar-r{/if}">
+            {if !isset($page)}{include file="breadcrumbs.html" last=$lastBreadcrumbs inline}{/if}
+            {$content}
+        </article>
+        {* sidebars *}
+        {if $is_sidebar_left}{include file="./sidebar.left.html" blocks=$sidebar_left inline}{/if}
+        {if $is_sidebar_right}{include file="./sidebar.right.html" blocks=$sidebar_right inline}{/if}
+    </div>
+{/if}
+{/strip}

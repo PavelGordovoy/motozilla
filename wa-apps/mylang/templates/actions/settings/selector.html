@@ -1,0 +1,15 @@
+<select id="mylang-language" name="locale" autocomplete="off" onChange="mylang.select(this)">
+        <option selected="selected">[`Change language`]</option>
+    {foreach waLocale::getAll('name') as $language => $lang_name}
+        <option value="{$language}">{$lang_name|escape}</option>
+    {/foreach}
+</select>
+<script>
+var mylang = {
+    root: '{$root}',
+    select: function(el){
+        console.log(mylang.root+'?locale='+el.value);
+        //window.location = mylang.root+mylang.rules[el.value];
+    }
+};
+</script>

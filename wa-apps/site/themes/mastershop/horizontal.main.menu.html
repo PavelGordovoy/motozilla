@@ -1,0 +1,256 @@
+{strip}
+{* selected category *}
+{$selected_category=null}
+{if isset($category)}{$selected_category=$category.id}{/if}
+
+{$res_menu = []}
+
+{* init menu *}
+{$menu = []}
+{if $theme_settings.horizontal_main_menu == 'app-menu' && $wa->menu && (int)$theme_settings.id_app_horizontal_main_menu > 0}
+    {$id_menu = $theme_settings.id_app_horizontal_main_menu}
+    {if $wa->globals("appMenuId`$id_menu`")}
+        {$menu = $wa->globals("appMenuId`$id_menu`")}
+    {else}
+        {$menu = $wa->menu->get($id_menu)}
+        {$wa->globals("appMenuId`$id_menu`", $menu)}
+    {/if}
+{else if $theme_settings.horizontal_main_menu == 'app-menus' && $wa->menus && (int)$theme_settings.id_app_horizontal_main_menu > 0}
+    {$id_menu = $theme_settings.id_app_horizontal_main_menu}
+    {$menu = $wa->menus->getMyMenu($id_menu)}
+    {if !empty($menu)}
+        {$menus_list_with_img_temp = $wa->menus->getMyMenuForeach($id_menu)}{$menus_list_with_img = []}
+        {foreach $menus_list_with_img_temp as $menu_item}
+            {$menus_list_with_img[$menu_item.id] = $menu_item}
+        {/foreach}
+        {foreach $menu as $key => $menu_item}
+            {$menu[$key]['is_menus'] = true}
+        {/foreach}
+    {/if}
+{else if $wa->shop}
+    {if !isset($shop_categories) || empty($shop_categories)}
+        {if $wa->globals('shopCategories')}
+            {$shop_categories = $wa->globals('shopCategories')}
+        {else}
+            {$shop_categories = $wa->shop->categories(0, null, true, true)}
+            {$wa->globals('shopCategories', $shop_categories)}
+        {/if}
+    {/if}
+    {$menu = $shop_categories}
+{/if}
+
+{* Additional menu from pages *}
+{if $theme_settings.horizontal_main_menu_add}
+    {$add_menu_res = []}
+    {if $theme_settings.horizontal_main_menu_add == 'site-pages' && $wa->site}
+        {if $wa->globals("site_pages")}
+            {$add_menu = $wa->globals("site_pages")}
+        {else}
+            {$add_menu =  $wa->site->pages()}
+            {$wa->globals("site_pages", $add_menu)}
+        {/if}
+    {elseif $theme_settings.horizontal_main_menu_add == 'shop-pages' && $wa->shop}
+        {if $wa->globals("shop_pages")}
+            {$add_menu = $wa->globals("shop_pages")}
+        {else}
+            {$add_menu =  $wa->shop->pages()}
+            {$wa->globals("shop_pages", $add_menu)}
+        {/if}
+    {elseif $theme_settings.horizontal_main_menu_add == 'app-menu' && $theme_settings.horizontal_main_menu != 'app-menu' && $wa->menu && (int)$theme_settings.id_app_horizontal_main_menu > 0}
+        {$id_menu = $theme_settings.id_app_horizontal_main_menu}
+        {if $wa->globals("appMenuId`$id_menu`")}
+            {$add_menu = $wa->globals("appMenuId`$id_menu`")}
+        {else}
+            {$add_menu = $wa->menu->get($id_menu)}
+            {$wa->globals("appMenuId`$id_menu`", $add_menu)}
+        {/if}
+    {elseif $theme_settings.horizontal_main_menu_add == 'app-menus' && $theme_settings.horizontal_main_menu != 'app-menus' && $wa->menus && (int)$theme_settings.id_app_horizontal_main_menu > 0}
+        {$id_menu = $theme_settings.id_app_horizontal_main_menu}
+        {$add_menu = $wa->menus->getMyMenu($id_menu)}
+        {if !empty($add_menu)}
+            {$menus_list_with_img_temp = $wa->menus->getMyMenuForeach($id_menu)}{$menus_list_with_img = []}
+            {foreach $menus_list_with_img_temp as $menu_item}
+                {$menus_list_with_img[$menu_item.id] = $menu_item}
+            {/foreach}
+            {foreach $add_menu as $key => $menu_item}
+                {$add_menu[$key]['is_menus'] = true}
+            {/foreach}
+        {/if}
+    {elseif $theme_settings.horizontal_main_menu_add == 'wa-apps'}
+        {if $wa->globals("menuWaApps")}
+            {$add_menu = $wa->globals("menuWaApps")}
+        {else}
+            {$add_menu = $wa->apps()}
+            {$wa->globals("menuWaApps", $add_menu)}
+        {/if}
+    {/if}
+    {if !empty($add_menu)}
+        {if $theme_settings.horizontal_main_menu_add == 'site-pages' || $theme_settings.horizontal_main_menu_add == 'shop-pages'}
+            {$add_ids = ","|explode:$theme_settings.horizontal_main_menu_add_ids}
+            {foreach $add_menu as $item}
+                {if in_array($item.id, $add_ids)}
+                    {$add_menu_res[] = $item}
+                {/if}
+            {/foreach}
+        {else if $theme_settings.horizontal_main_menu_add == 'wa-apps'}
+            {foreach $add_menu as $key => $item}
+                {$add_menu[$key]['id'] = "app-`$key`"}
+            {/foreach}
+            {$add_menu_res = $add_menu}
+        {else}
+            {$add_menu_res = $add_menu}
+        {/if}
+
+        {if $theme_settings.horizontal_main_menu_add_end}
+            {$menu = $menu|@array_merge:$add_menu_res}
+        {else}
+            {$menu = $add_menu_res|@array_merge:$menu}
+        {/if}
+    {/if}
+{/if}
+
+{$res_menu = $menu}
+{if count($res_menu) > 0}
+    {if class_exists('shopSkcatimagePlugin')}
+        {$cat_images = shopSkcatimageHelper::getImages()}
+    {elseif class_exists('shopWmimageincatPlugin')}
+        {$cat_images = shopWmimageincatPlugin::getCategoryImageObj()}
+    {/if}
+    {$is_retina = $theme_settings.categories_menu_images_retina && class_exists('shopSkcatimagePlugin') && !empty($cat_images)}
+    {$is_lazy = $theme_settings.categories_menu_images_lazy}
+
+    {$submenu_type = $theme_settings.horizontal_main_dropdown_submenu_type}
+    {if isset($type) && $type == "else-horizontal"}
+        {* hidden links in ELSE item *}
+        <div class="js-categories-h-else-items categories-h-else-items">
+            {if $submenu_type == "images"}
+                {$subs_file = "horizontal.main.menu.subs-images.html"}
+            {else if $submenu_type == "deployed" || $submenu_type == "deployed_icons"}
+                {$subs_file = "horizontal.main.menu.subs-deployed.html"}
+            {else}
+                {$subs_file = "horizontal.main.menu.subs-dropdown.html"}
+            {/if}
+
+            {if isset($wa_parent_theme_path)}
+                {include file="`$wa_parent_theme_path`/`$subs_file`" categories=$res_menu is_view_data_item_id=true class_item="hide"}
+            {else}
+                {include file="$subs_file" categories=$res_menu is_view_data_item_id=true class_item="hide"}
+            {/if}
+        </div>
+    {else}
+        {* horizontal menu itema *}
+        <div class="categories-h js-categories-h-outer{if $wa->isMobile()} hide-mobile{/if}">
+            <div class="l-wrapper clearfix">
+                <div class="js-categories-h-items categories-h__inner" data-retina="{$is_retina}" data-lazy="{$is_lazy}">
+                    {if $theme_settings.horizontal_main_menu_display_brand && $wa->shop}
+                        {$is_productbrands = $theme_settings.use_brand_plugin == 'productbrands' && class_exists('shopProductbrandsPlugin')}
+                        {$is_brandspro = $theme_settings.use_brand_plugin == 'brands_pro' && class_exists('shopBrandViewHelper')}
+
+                        {if $is_productbrands || $is_brandspro}
+                            {$is_brands_submenu = $theme_settings.horizontal_main_menu_display_brands_list}
+                            {if !empty($is_brands_submenu)}
+                                {$brands = []}
+                                {if $is_productbrands}
+                                    {$brands = shopProductbrandsPlugin::getBrands()}
+                                {else if $is_brandspro}
+                                    {$brands = shopBrandViewHelper::getAllBrands()}
+                                {/if}
+                                {$count_brands = count($brands)}
+                            {/if}
+
+                            {if $theme_settings.test_settings && !empty($wa->cookie('horizontal_main_menu_brand_submenu_type'))}{$theme_settings.horizontal_main_menu_brand_submenu_type = $wa->cookie('horizontal_main_menu_brand_submenu_type')}{/if}
+                            {$brands_type = $theme_settings.horizontal_main_menu_brand_submenu_type}
+                            <div class="categories-h__item js-h-categories-item categories-h__brand{if $brands_type == "column"} pos-r{/if}">
+                                <a class="categories-h__link" href="{$wa->getUrl('shop/frontend/brands')}">
+                                    <span class="categories-h__title bold">[`Brands`]</span>
+                                    {if !empty($count_brands)}<i class="categories-h__caret fal"></i>{/if}
+                                </a>
+                                {if !empty($count_brands)}
+                                    {if $brands_type == "list"}
+                                        {$brands_subs_file="horizontal.main.menu.brands-list.html"}
+                                    {else if $brands_type == "column"}
+                                        {$brands_subs_file="horizontal.main.menu.brands-column.html"}
+                                    {else}
+                                        {$brands_subs_file="horizontal.main.menu.brands-logo.html"}
+                                    {/if}
+
+                                    {if isset($wa_parent_theme_path)}
+                                        {include file="`$wa_parent_theme_path`/`$brands_subs_file`" wrap_class="to-left"}
+                                    {else}
+                                        {include file="`$brands_subs_file`" wrap_class="to-left"}
+                                    {/if}
+                                {/if}
+                            </div>
+                        {/if}
+                    {/if}
+                    <div class="categories-h__menu js-h-categories responsived-before-init">
+                        {foreach $res_menu as $item}
+                            {if !empty($item.params.horizontal_menu_hide)}{continue}{/if}
+                            {$is_category = isset($item.filter) || isset($item.sort_products) || isset($item.count)}
+                            {$is_selected = ($is_category && $selected_category == $item.id) || (!$is_category && strlen($item.url)>1 && $wa->currentUrl() == $item.url)}
+                            {$is_has_submenu = isset($item.childs) && count($item.childs) && ($theme_settings.horizontal_main_menu_levels > 1 || $item.id == 'else')}
+                            {$submenu_type = $theme_settings.horizontal_main_dropdown_submenu_type}
+                            {if isset($item.params.horizontal_submenu_type)}{$submenu_type = $item.params.horizontal_submenu_type}{/if}
+                            {if $submenu_type == "images"}
+                                {$subs_file = "horizontal.main.menu.subs-images.html"}
+                            {else if $submenu_type == "deployed" || $submenu_type == "deployed_icons"}
+                                {$subs_file = "horizontal.main.menu.subs-deployed.html"}
+                            {else}
+                                {$subs_file = "horizontal.main.menu.subs-dropdown.html"}
+                            {/if}
+                            <div data-id="{if $is_category}{$item.id}{else}add-{$item.id}{/if}" class="js-h-categories-item categories-h__item{if $submenu_type == "dropdown"} pos-r{/if}">
+                                <a class="categories-h__link{if $is_selected} selected{/if}" href="{$item.url}"{if !empty($item.target)} target="{$item.target}"{/if}>
+                                    {$is_menus_item = !empty($item['is_menus'])}
+
+                                    {if $theme_settings.horizontal_main_menu_icon_lvl1}
+                                        {if $is_menus_item && !empty($menus_list_with_img[$item.id]['img'])}
+                                            {$icon_name = $menus_list_with_img[$item.id]['img']}
+                                            {$icon = "`$wa_url`wa-data/public/menus/image/`$icon_name`"}
+                                        {else if !empty($cat_images[$item.id].icon) && $is_category}
+                                            {$icon = $cat_images[$item.id].icon}
+                                        {else if !empty($item.icon)}
+                                            {$icon = $item.icon}
+                                        {else}
+                                            {$icon = null}
+                                        {/if}
+
+                                        {if !empty($icon)}
+                                            <span class="categories-h__icon">
+                                                {if $is_lazy}
+                                                    <img class="js-categories-h-image" alt="{$item.name}" src="{$wa_theme_url}img/lazy-image.png" data-src="{$icon}" />
+                                                {else}
+                                                    <img class="js-categories-h-image" alt="{$item.name}" src="{$icon}" />
+                                                {/if}
+                                            </span>
+                                        {/if}
+                                    {/if}
+                                    {$is_badge = (!empty($theme_settings.horizontal_main_menu_badge) && !empty($item.params.badge_text) && !empty($item.params.badge_class))}
+                                     <span class="categories-h__title">
+                                         {$item.name}
+                                         {if $is_badge} <span class="cat-badge cat-badge--{$item.params.badge_class}">{$item.params.badge_text}</span>{/if}
+                                     </span>
+                                    {if $is_has_submenu}<i class="categories-h__caret fal"></i>{/if}
+                                </a>
+                                {if $is_has_submenu}
+                                    {if isset($wa_parent_theme_path)}
+                                        {include file="`$wa_parent_theme_path`/`$subs_file`" categories=$item.childs}
+                                    {else}
+                                        {include file="`$subs_file`" categories=$item.childs}
+                                    {/if}
+                                {/if}
+                            </div>
+                        {/foreach}
+                        {$submenu_type = $theme_settings.horizontal_main_dropdown_submenu_type}
+                        <div data-type="else" class="js-h-categories-item categories-h__item hide{if $submenu_type == "dropdown"} pos-r{/if}">
+                            <span class="categories-h__link">
+                                <span class="categories-h__title link">[`Else`]</span>
+                                <i class="categories-h__caret fal"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {/if}
+{/if}
+{/strip}

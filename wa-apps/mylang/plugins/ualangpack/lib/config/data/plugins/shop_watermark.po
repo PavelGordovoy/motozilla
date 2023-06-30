@@ -1,0 +1,128 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Webasyst Shop Watermark plugin 2.0.0.38266 UA translation v 0.1\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: skeeter.studio <contact@skeeter.studio>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.0.6\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:36
+msgid "Watermark type"
+msgstr "Тип водяного знака"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:39
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:100
+msgid "Text"
+msgstr "Текст"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:41
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:129
+msgid "Image"
+msgstr "Зображення"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:72
+msgid "Preview thumbnail"
+msgstr "Попередній перегляд"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:74
+msgid "Change sample product"
+msgstr "Зразок зміни товару"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:85
+msgid "Rotation"
+msgstr "Обертання"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:88
+msgid "Horizontal"
+msgstr "Горизонтальне"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:89
+msgid "Vertical"
+msgstr "Вертикальне"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:106
+msgid "Color"
+msgstr "Колір"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:113
+msgid "Font size"
+msgstr "Розмір шрифту"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:117
+msgid "Very small"
+msgstr "Дуже маленький"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:118
+msgid "Small"
+msgstr "Невеликий"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:119
+msgid "Medium"
+msgstr "Середній"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:120
+msgid "Large"
+msgstr "Великий"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:121
+msgid "Very large"
+msgstr "Дуже великий"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:140
+msgid "Opacity"
+msgstr "Непрозорість"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:148
+msgid "Overlay mode"
+msgstr "Режим накладання"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:152
+msgid "Thumbnails"
+msgstr "Ескізи"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:152
+msgid "(recommended)"
+msgstr "(рекомендовано)"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:157
+msgid "Only for thumbnails larger than"
+msgstr "Тільки для ескізів більше, ніж"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:163
+msgid "Watermark will be applied to every product thumbnail at the moment of thumbnail generation after the scaling is complete. Original product image will not be modified."
+msgstr "Водяний знак буде застосовуватися до кожного ескізу товару в момент створення ескізів після того, як завершене масштабування. Оригінал зображення товару змінено не буде."
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:169
+msgid "Original image"
+msgstr "Оригінальне зображення"
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:171
+msgid "Watermark will be applied to the original product image at the moment of upload, and thus all custom-sized product thumbnails will contain this watermark automatically. This option is not recommended, because in case you would like to change watermark in the future, you will have to re-upload all product images."
+msgstr "Водяний знак буде застосовано до оригінального зображення товару у момент завантаження — таким чином, усі користувальницькі розміри ескізів товару будуть автоматично містити цей водяний знак. Цю опцію не рекомендовано застосовувати: у разі, якщо ви хочете змінити водяний знак у майбутньому, ви будете вимушені повторно завантажити всі зображення товарів."
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:175
+msgid "<strong>IMPORTANT</strong>: If you already have products with watermark applied to the original image, switching overlay mode to Thumbnails will add double watermarks to all product thumbnails that will be generated in the future. You may want to <a href=\"%s\">re-generate all product image thumbnails</a> after you switch the overlay mode."
+msgstr "<strong>ВАЖЛИВО</strong>: Якщо у вас вже є товари, до зображень яких застосовано водяний знак, зміна режиму накладання на ескізи призведе до подвійного водяного знаку на усіх ескізах товарів, які буде згенеровано в майбутньому. Ви можете захотіти <a href=\"%s\">заново створити усі ескізи зображень товарів</a> після зміни режиму накладання."
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:186
+msgid "Please save watermark settings first to apply changes, and then click Preview again."
+msgstr "Будь ласка, збережіть налаштування водяного знака перед тим, як застосувати зміни, а потім знову натисніть кнопку «Попередній перегляд»."
+
+#: /wa-apps/shop/plugins/watermark/templates/Settings.html:187
+msgid "Upload watermark image using the form below."
+msgstr "Завантажити зображення водяного знаку, використовуючи форму нижче."
+
+#: /wa-apps/shop/plugins/watermark/lib/shopWatermark.plugin.php:245
+msgid "File could not be saved due to the insufficient file write permissions for the %s folder."
+msgstr "Файл не вдалося зберегти через недостатні права запису до папки %s."
+
+#: /wa-apps/shop/plugins/watermark/lib/shopWatermark.plugin.php:249
+#, fuzzy
+msgid "Failed to upload file."
+msgstr "Не вдалося завантажити файл."

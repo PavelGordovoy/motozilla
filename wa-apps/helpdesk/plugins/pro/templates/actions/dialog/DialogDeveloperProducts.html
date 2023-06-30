@@ -1,0 +1,170 @@
+{strip}
+<div class="w-dialog-wrapper w-developer-prod-dialog is-full-screen">
+    <div class="w-dialog-background"></div>
+    <div class="w-dialog-block gray-header compact-header is-animated">
+        <form action="" method="post" id="helpdesk-pro-developer-prod">
+            <header class="w-dialog-header">
+                <h1>[`Developer products`] (id {$developer_id})</h1>
+            </header>
+            <div class="w-dialog-content">
+                <div class="dev-products">
+                    {foreach $products as $slug => $name}
+                        <div class="dev-product">
+                            <input type="text" name="products[name][]" value="{$name|escape}" class="js-product-name" style="margin-right: 10px;" placeholder="[`Product name`]" />
+                            <input type="text" name="products[slug][]" value="{$slug|escape}" class="js-product-slug" placeholder="[`Product slug`]" />
+                            <a href="#" class="js-delete-product" title="[`delete`]"><i class="icon16 delete"></i></a>
+                        </div>
+                    {foreachelse}
+                    <div class="dev-product first">
+                        <input type="text" name="products[name][]" style="margin-right: 10px;" placeholder="[`Product name`]" />
+                        <input type="text" name="products[slug][]" class="js-product-slug" placeholder="[`Product slug`]" />
+                        <a href="#" class="js-delete-product" title="[`delete`]"><i class="icon16 delete"></i></a>
+                    </div>
+                    {/foreach}
+                    <div class="margin-block top">
+                        <ul class="menu-h">
+                            <li>
+                                <a href="#" class="js-add-product" title="[`add product`]"><i class="icon16 add"></i> [`add product`]</a>
+                            </li>
+                            <li>
+                                <a href="#" class="js-load-products" title="[`load products by API`]"><i class="icon16 sync"></i> [`load products by API`]</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <footer class="w-dialog-footer">
+                <div class="margin-block errormsg"></div>
+                <div class="t-actions">
+                    <div class="t-layout">
+                        <div class="t-column left">
+                            <input type="submit" class="button green t-button" value="[`Save`]">
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </form>
+    </div>
+</div>
+<script id="dev-product-template" type="text/template">
+    <div class="dev-product">
+        <input type="text" name="products[name][]" class="js-product-name" style="margin-right: 10px;" placeholder="[`Product name`]" />
+        <input type="text" name="products[slug][]" class="js-product-slug" placeholder="[`Product slug`]" />
+        <a href="#" class="js-delete-product" title="[`delete`]"><i class="icon16 delete"></i></a>
+    </div>
+</script>
+<script type="text/javascript">
+    var helpdeskProDeveloperProducts = (function ($) {
+        helpdeskProDeveloperProducts = function (options) {
+            var that = this;
+
+            that.$form = options.$form;
+            that.$productsBlock = that.$form.find('.dev-products');
+            that.$prodTemplate = $("#dev-product-template");
+            that.$dialog = $(".w-developer-prod-dialog").data('proDialog');
+
+            that.loadTimeout = null;
+
+            that.initClass();
+        };
+
+        helpdeskProDeveloperProducts.prototype.initClass = function () {
+            var that = this;
+
+            /* Добавление продукта */
+            that.$form.on('click', '.js-add-product', function () {
+                that.$productsBlock.find('.js-add-product').closest('.margin-block').before(that.$prodTemplate.html());
+                that.$dialog.resize();
+                return false;
+            });
+
+            /* Удаление продукта */
+            that.$form.on('click', '.js-delete-product', function () {
+                $(this).closest('.dev-product').remove();
+                return false;
+            });
+
+            /* Загрузка продуктов */
+            that.$form.on('click', '.js-load-products', function () {
+                var btn = $(this);
+                if (that.loadTimeout && btn.next("i").length) {
+                    btn.next('i').remove();
+                    clearTimeout(that.loadTimeout);
+                }
+                if (!btn.next("i").length) {
+                    btn.after("<i class='icon16 loading'></i>");
+                    $.post('?plugin=pro&module=developer&action=loadProducts', function (response) {
+                        if (response.status == 'ok') {
+                            var html = $(response.data);
+                            btn.next("i").removeClass('loading').addClass("yes");
+                            /* Все ID товаров, указанные пользователем */
+                            var slugs = {};
+                            that.$form.find(".js-product-slug").each(function () {
+                                let slug = $(this).val();
+                                if (slug !== '')
+                                    slugs[slug] = slug;
+                            });
+                            /* Перебираем спарсенные данные */
+                            var items = html.find('.js-product-item').length ? html.find('.js-product-item') : html.find(".u-item-wrapper");
+                            items.length && items.each(function () {
+                                var item = $(this),
+                                    aHref = item.find('a').attr('href'),
+                                    parts = aHref.split('/'),
+                                    productID = parts[parts.length - 2],
+                                    slug = '',
+                                    name =  item.find('.s-title-block').length ? item.find('.s-title-block a').text() : (item.find('h4').length ? item.find('h4').text() : item.find('h5').text()),
+                                    name = name.trim();
+
+                                if (productID !== '') {
+                                    /* Приложение */
+                                    if (aHref.indexOf('/app/') !== -1) {
+                                        slug = productID;
+                                    }
+                                    /* Тема дизайна */
+                                    else if (aHref.indexOf('/theme/') !== -1) {
+                                        slug = 'site/themes/' + productID;
+                                    }
+                                    /* Плагин */
+                                    else if (aHref.indexOf('/plugin/') !== -1) {
+                                        slug = parts[parts.length - 3] + '/plugins/' + productID;
+                                    }
+                                    /* Виджет */
+                                    else if (aHref.indexOf('/widget/') !== -1) {
+                                        slug = parts[parts.length - 3] + '/widgets/' + productID;
+                                    }
+
+                                    /* Добавление продукта на страницу */
+                                    if (slugs[slug] === undefined) {
+                                        var clone = $(that.$prodTemplate.clone().html());
+                                        clone.find(".js-product-name").val(name).attr('value', name);
+                                        clone.find(".js-product-slug").val(slug).attr('value', slug);
+                                        that.$form.find(".dev-product.first").remove();
+                                        that.$productsBlock.find('.js-add-product').closest('.margin-block').before(clone.prop('outerHTML'));
+                                    }
+                                }
+                            });
+                            that.$dialog.resize();
+                        } else if (typeof response.errors !== 'undefined' && response.errors) {
+                            btn.next("i").removeClass('loading').addClass("no");
+                        }
+                        that.loadTimeout = setTimeout(function () {
+                            btn.next('i').remove();
+                            clearTimeout(that.loadTimeout);
+                        }, 3000);
+                    });
+                }
+                return false;
+            });
+
+        };
+        return helpdeskProDeveloperProducts;
+    })(jQuery);
+    (function ($) {
+        $(function () {
+            new helpdeskProDeveloperProducts({
+                $form: $("#helpdesk-pro-developer-prod")
+            });
+        });
+    })(jQuery);
+</script>
+{/strip}

@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst Team Google Calendar plugin 1.0.22.26 UA translation v 1.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+msgid "Authorization code is canceled or expired"
+msgstr "Код авторизації джерела скасовано або термін його дії сплив"
+
+msgid "Renew authorization code"
+msgstr "Оновити код авторизації"
+
+msgid "Need your attention"
+msgstr "Потребує вашої уваги"
+
+msgid "Another Google account"
+msgstr "Інший акаунт Google"
+
+msgid "To receive Client ID and secret <a href=\"https://console.developers.google.com/\" target=\"_blank\">register an application</a> on the Google Developers Console."
+msgstr "Для отримання ідентифікатора клієнта і секрета <a href=\"https://console.developers.google.com/\" target=\"_blank\">зареєструйте додаток</a> у консолі розробника Google."
+
+msgid "<a href=\"https://support.webasyst.com/16033/team-add-calendar-google/\" target=\"_blank\">Step-by-step manual on connecting with a Google Calendar</a>"
+msgstr "<a href=\"https://support.webasyst.com/16033/team-add-calendar-google/\" target=\"_blank\">Поетапна інструкція по під&#39;єднанню Календаря Google</a>"
+
+msgid "Authorized redirect URI"
+msgstr "Авторизовані URI переадресації"
+
+msgid "URL where a user will return after Google OAuth authorization."
+msgstr "URL, до якого буде повернуто користувача після авторизації Google OAuth."
+
+msgid "Copy specified URL to the appropriate field in your Google application settings."
+msgstr "Скопіюйте вказаний URL до відповідного поля у налаштуваннях додатка Google."
+
+msgid "Unknown calendar"
+msgstr "Невідомий календар"
+
+msgid "Client ID"
+msgstr "Ідентифікатор клієнта"
+
+msgid "Issued by Google for your Web application"
+msgstr "Видається Google для вашого веб-додатка"
+
+msgid "Client secret"
+msgstr "Секрет клієнта"
+
+msgid "Google Calendar"
+msgstr "Календар Google"
+
+msgid "Google Calendar integration"
+msgstr "Інтеграція з календарем Google"
+
+msgid "Session protection validated"
+msgstr "Захист сесії затверджено"
+
+msgid "Code for generating token is not received"
+msgstr "Код для генерації токена не отримано"
+
+msgid "Token is not generated"
+msgstr "Токен не згенеровано"
+
+msgid "Access denied"
+msgstr "Доступ заборонено"
+
+msgid "Plugin not found"
+msgstr "Плагін не знайдено"
+
+msgid "Authorization code is canceled or expired."
+msgstr "Код авторизації скасовано або термін його дії сплив."
+
+msgid "Your attention is required"
+msgstr "Потребує вашої уваги"
+
+msgid "Plugin not found."
+msgstr "Плагін не знайдено."
+
+msgid "Access denied."
+msgstr "Доступ заборонено."
+
+msgid "Session protection validated."
+msgstr "Захист сесії затверджено."
+
+msgid "Token generation code has not been received."
+msgstr "Код генерації токену не отримано."
+
+msgid "Token has not been generated."
+msgstr "Токен не згенеровано."

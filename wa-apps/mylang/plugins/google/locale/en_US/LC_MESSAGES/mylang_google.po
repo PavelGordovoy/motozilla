@@ -1,0 +1,27 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mylang/plugins/google\n"
+"POT-Creation-Date: 2020-01-30 14:35+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: mylang/plugins/google\n"
+"Language-Team: mylang/plugins/google\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: en_US\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Api error. Check the token key and quota."
+msgstr ""
+
+msgid "https://translate.google.com"
+msgstr ""
+
+msgid "API Key"
+msgstr ""
+
+msgid "Get API key"
+msgstr ""

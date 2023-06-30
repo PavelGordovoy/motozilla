@@ -1,0 +1,33 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Webasyst Shop-Script 301 Redirect plugin 1.1.42447 UA translation v 0.1\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: Skeeter Dev\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#: /wa-apps/shop/plugins/redirect/lib/config/settings.php:6
+msgid "Platforms"
+msgstr "Платформи"
+
+#: /wa-apps/shop/plugins/redirect/lib/config/settings.php:15
+msgid "Custom redirect patterns"
+msgstr "Власні налаштування редіректу"
+
+#: /wa-apps/shop/plugins/redirect/lib/config/plugin.php:4
+msgid "301 Redirect"
+msgstr "301 редірект"
+
+#: /wa-apps/shop/plugins/redirect/lib/config/plugin.php:5
+msgid "Helps you migrate to Shop-Script from third-party ecommerce platforms keeping all your product and storefront pages redirected and indexed properly."
+msgstr "Полегшує перехід на Shop-Script зі сторонніх платформ електронної комерції та зберігає сторінки вашого онлайн-магазину перенаправленими та коректно проіндексованими."
+
+#: /wa-apps/shop/plugins/redirect/lib/shopRedirect.plugin.php:117
+msgid "Add rule"
+msgstr "Додати правило"

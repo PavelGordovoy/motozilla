@@ -1,0 +1,90 @@
+{strip}
+{if $wa->get('cart')}
+    {$product.features = $product->features}
+    {$products = [$product.id => $product->data]}
+    {$features =  $wa->shop->features($products)}
+{/if}
+{$features_list = $features}
+{if !empty($sku_features)}{$features_list = $sku_features}{/if}
+
+{$product_skus_features = []}
+{if !empty($product.skus) && count($product.skus) > 1}
+    {foreach $product.skus as $sku_id => $sku}
+        {if !empty($sku.features)}
+            {if $theme_settings.use_plugin_seo_filter && class_exists('shopSeofilterViewHelper')}
+                {$sku.features = shopSeofilterViewHelper::wrapFeatureValues($sku.features)}
+            {/if}
+            {$temp_sku_features = []}
+            {foreach $sku.features as $f_code => $f_value}
+                {capture assign="_sku_features_html"}
+                    {if is_array($f_value)}
+                        {if $features_list[$f_code].type == 'color'}
+                            {implode('<br /> ', $f_value)}
+                        {else}
+                            {implode(', ', $f_value)}
+                        {/if}
+                    {else}
+                        {$f_value}
+                    {/if}
+                {/capture}
+                {$temp_sku_features[$f_code] = $_sku_features_html}
+            {/foreach}
+            {$product_skus_features[$sku_id] = $temp_sku_features}
+        {/if}
+    {/foreach}
+
+    {$schema_itemprops = []}
+    {if $is_schema_org}
+        {$schema_itemprops['weight'] = "weight"}
+        {$schema_itemprops['model'] = "model"}
+        {$schema_itemprops['width'] = "width"}
+        {$schema_itemprops['height'] = "height"}
+        {$schema_itemprops['depth'] = "depth"}
+        {$schema_itemprops['color'] = "color"}
+        {$schema_itemprops['manufacturer'] = "manufacturer"}
+
+        {$code_brand = $theme_settings.feature_brand_code}
+        {if empty($code_brand)}{$code_brand = "brand"}{/if}
+        {$schema_itemprops[$code_brand] = 'brand'}
+
+        {$code_gtin12 = $theme_settings.schema_org_feature_gtin12}
+        {if empty($code_gtin12)}{$code_gtin12 = "gtin12"}{/if}
+        {$schema_itemprops[$code_gtin12] = 'gtin12'}
+
+        {$code_gtin13 = $theme_settings.schema_org_feature_gtin13}
+        {if empty($code_gtin13)}{$code_gtin13 = "gtin13"}{/if}
+        {$schema_itemprops[$code_gtin13] = 'gtin13'}
+
+        {$code_gtin14 = $theme_settings.schema_org_feature_gtin14}
+        {if empty($code_gtin14)}{$code_gtin14 = "gtin14"}{/if}
+        {$schema_itemprops[$code_gtin14] = 'gtin14'}
+
+        {$code_gtin8 = $theme_settings.schema_org_feature_gtin8}
+        {if empty($code_gtin8)}{$code_gtin8 = "gtin8"}{/if}
+        {$schema_itemprops[$code_gtin8] = 'gtin8'}
+    {/if}
+{/if}
+<script>
+    $(function(){
+        new Product('#cart-form{if $is_dialog}-dialog{/if}', {
+            currency: {json_encode($currency_info)}
+            {if count($product.skus) > 1 or $product.sku_type}
+                ,services: {json_encode($sku_services)}
+            {/if}
+            {if $product.sku_type}
+                ,features: {json_encode($sku_features_selectable)}
+            {/if}
+            {if !empty($sku_features) && count($product_skus_features) > 1}
+                ,sku_features: {json_encode($sku_features)}
+                ,product_skus_features: {json_encode($product_skus_features)}
+                ,short_features_count: "{$theme_settings.product_card_features_count}"
+                ,short_features_codes: "{$theme_settings.product_short_features_aliases}"
+                ,schema_itemprops: {json_encode($schema_itemprops)}
+            {/if}
+        });
+        {if $is_select_styler}
+            globalThemeSettings.isFormStylerInit = true;
+        {/if}
+    });
+</script>
+{/strip}

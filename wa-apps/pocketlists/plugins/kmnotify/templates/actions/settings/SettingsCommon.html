@@ -1,0 +1,87 @@
+<h1>[`Your notifications`]</h1>
+
+<form data-kmnotify-settings="common">
+    <div class="events-settings field-group">
+        <table class="zebra">
+            <thead>
+            <tr>
+                <th>[`Event`]</th>
+                {foreach $settings->providers as $provider}
+                    <th>{$provider->getLabel()}</th>
+                {/foreach}
+            </tr>
+            </thead>
+
+            <tbody>
+            {foreach $settings->events as $eventId => $event}
+            <tr>
+                <td>{$event}</td>
+
+                {foreach $settings->providers as $providerId => $provider}
+                <td>
+                    <input type="hidden"
+                           name="events[{$eventId}][{$providerId}]"
+                           value="0"
+                           {if !$provider->isEnabled()}disabled{/if}
+                    />
+                    <input type="checkbox"
+                           name="events[{$eventId}][{$providerId}]"
+                           value="1"
+                           {if !$provider->isEnabled()}disabled{/if}
+                           {if $settings->userSettings->isProviderEnabledForEvent($providerId, $eventId)}checked{/if}
+                    />
+                </td>
+                {/foreach}
+            </tr>
+            {/foreach}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="providers-settings">
+    {foreach $settings->providers as $provider}
+        <!-- {$provider->getIdentifier()} -->
+        <div class="provider-settings field-group">
+            <h3>{$provider->getLabel()} [`settings`]</h3>
+            {$provider->getSettingsHtml()}
+        </div>
+    {/foreach}
+    </div>
+
+    <div class="block padded">
+    <input type="submit" class="button green" value="[`Save`]">
+    </div>
+</form>
+
+<div class="clear-both"></div>
+
+<script>
+    'use strict';
+    (function () {
+        $.pocketlists.setTitle();
+
+        var $form = $('[data-kmnotify-settings="common"]'),
+            data = $form.serialize(),
+            $submit = $form.find('[type="submit"]'),
+            $yes = $('<i class="icon16 yes">');
+
+        $form.on('change', ':input', function () {
+            if (data !== $form.serialize()) {
+                $submit.removeClass('green').addClass('yellow');
+            } else {
+                $submit.removeClass('yellow').addClass('green');
+            }
+        });
+
+        $form.on('submit', function (e) {
+            e.preventDefault();
+
+            $.post('?plugin=kmnotify&module=settings&action=common', $form.serialize(), function (r) {
+                $submit.removeClass('yellow').addClass('green').after($yes);
+                setTimeout(function () {
+                    $yes.remove();
+                }, 5000);
+            })
+        });
+    }());
+</script>

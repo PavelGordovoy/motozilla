@@ -1,0 +1,161 @@
+{$_locale_string = substr($wa->locale()|default:"en", 0, 2)}
+{$_is_ru = false}
+{if $_locale_string === "ru"||$_locale_string === 'uk'}{$_is_ru = true}{/if}
+{include file="templates/actions/tutorial/include.TutorialSidebar.html" inline}
+<div class="block double-padded welcome">
+    <form method="post" action="?action=welcome" id="js-welcome-form">
+        <div class="s-welcome-page">
+            <h1>[`Welcome to My Lang!`]</h1>
+            <p>[`This screen will help you to quickly set MyLang App.`]</p>
+
+            <div class="form fields" style="float: none;">
+                <div class="s-content-with-indent">
+                    {* Locales *}
+                    <div class="s-tutorial-block">
+                        <div class="s-sub-title">
+                            <p>
+                                <b>{if $checked.mainLocale}<i class="icon16 yes"></i>{else}<i class="icon16 no"></i>{/if}
+                                    [`Main language`]:</b> - {if $checked.mainLocale}{$locales[$checked.mainLocale]|default:$checked.mainLocale}{else}[`Not set`]{/if}
+                                <a href="?module=settings">[`Change`]</a><br>
+                                {if $_is_ru}
+                                    Основная локаль не переводится и автоматические переводы её используют как основу для перевода на выбранный язык.<br>
+                                    Дополнительные локали можно добавить позже в разделе «Настройки → Добавить новый язык».
+                                {else}
+                                    Primary locale is not translated and translation plugins use it as source.<br>
+                                    You can add more locales later in “Settings → Currencies” section
+                                {/if}
+                            </p>
+                        </div>
+                        <div class="s-sub-title">
+                            <p><b>{if $checked.locales}<i class="icon16 yes"></i>{else}<i class="icon16 no"></i>{/if} [`Available locales`]</b>
+                                <a href="?module=settings">[`Change`]</a><br>
+                                {if $_is_ru}
+                                    Отмеченнные локали будут обрабатываться на сайте и отображаться в стандартных селекторах.
+                                {else}
+                                    Primary locale is not translated and translation plugins use it as source.<br>
+                                    You can add more locales later in “Settings → Currencies” section
+                                {/if}
+                                {if $checked.locales}
+                                    <ul>
+                                        {foreach $checked.locales as $loc}
+                                            <li>{$locales[$loc]}</li>
+                                        {/foreach}
+                                    </ul>
+                                {else}
+                                    [`Not set`]
+                                {/if}
+                            </p>
+                        </div>
+                    </div>
+                    {* Sites *}
+                    <div class="s-tutorial-block">
+                        <div class="s-sub-title">
+                            <p>{if $checked.sites}<i class="icon16 yes"></i>{else}<i class="icon16 no"></i>{/if}<b>[`Domains`]</b>
+                            {if $_is_ru}
+                                Для указанных сайтов будет работать приложение. На остальных будет показан только селектор(если он включен в теме).
+                            {else}
+                                Mylang App will be used on selected sites. The rest of them will be ignored by app, except the selector(if added to template).
+                            {/if}
+                            {if $checked.sites}
+                                <ul>
+                                    {foreach $checked.sites as $site}
+                                        <li>{$site}</li>
+                                    {/foreach}
+                                </ul>
+                            {/if}
+                            </p>
+                        </div>
+                    </div>
+
+                    {* Structure *}
+                    <div class="s-tutorial-block">
+                        <div class="s-sub-title">
+                            <p>
+                                {if $checked.structure.status}<i class="icon16 yes"></i>{else}<i class="icon16 no"></i>{/if}
+                                <b>
+                                    {if $_is_ru}
+                                        Настройка структуры сайта
+                                    {else}
+                                        Site routing settings
+                                    {/if}
+                                </b>
+                            {if !$checked.structure.status}
+                                <ul>
+                                {foreach $checked.structure.sites as $site}
+                                    <li>{if $site.status}<i class="icon16 yes"></i>{else}<i class="icon16 no"></i>{/if}
+                                        {$site.url} - {$site.message}
+                                    </li>
+                                {/foreach}
+                                </ul>
+                            {/if}
+                            </p>
+                        </div>
+                </div>
+
+                <div class="s-actions-wrapper">
+                    {if empty($_is_complete)}
+                        {$wa->csrf()}
+                        <input type="hidden" name="passed_action" value="welcome">
+                        <input type="submit" class="button green" value="[`Next step`] &rarr;">
+                    {else}
+                        <div style="margin-top: 100px;">
+                            <a class="button green" href="{$actions['products'].href}">[`Next step`] &rarr;</a>
+                        </div>
+                    {/if}
+                </div>
+            </div>
+
+            {if !empty($_is_complete)}
+                <div class="s-tutorial-disabled"></div>
+                <div class="s-tutorial-hint">
+                    <p>
+                        {if $_is_ru}
+                            Выбранные здесь значения можно будет позже изменить в <a href="?action=settings" target="_blank">настройках</a>.
+                        {else}
+                            Values selected here can be changed later in <a href="?action=settings" target="_blank">settings</a>.
+                        {/if}
+                    </p>
+                </div>
+            {/if}
+        </div>
+    </form>
+
+    {capture assign="_loading_html"}
+        <div class="s-loading-wrapper">
+            <div class="s-loading-body">
+                <img class="s-loading-image" src="{$wa_url}wa-apps/shop/img/backend/tutorial/loading.svg" alt="">
+                <div class="s-loading-text">
+                    {if $_is_ru}
+                        Подождите немного,<br>мы добавляем примеры товаров в ваш интернет-магазин.
+                    {else}
+                        Please wait<br>while product examples are being added to your online store.
+                    {/if}
+                </div>
+            </div>
+        </div>
+    {/capture}
+
+    <script>
+        ( function($) {
+            $("#wa").addClass("s-no-level2");
+
+            var $form = $("#js-welcome-form"),
+                html = {$_loading_html|trim|json_encode},
+                is_loading = false;
+
+            $form.on("submit", function() {
+                if (!is_loading) {
+                    is_loading = true;
+                    var $field = $("input[name=\"demo_db\"]:checked");
+                    if ($field.length) {
+                        var value = $field.val();
+                        if (value) {
+                            $("body").append(html);
+                        }
+                    }
+                }
+            });
+
+        })(jQuery);
+    </script>
+</div>

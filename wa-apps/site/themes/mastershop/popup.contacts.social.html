@@ -1,0 +1,35 @@
+{strip}
+<div class="popup-contacts_social">
+    {if !empty($theme_settings.facebook)}
+        <a target="_blank" class="popup-contacts_social-item" href="{$theme_settings.facebook}"><i class="fab fa-facebook-f"></i></a>
+    {/if}
+    {if !empty($theme_settings.twitter)}
+        <a target="_blank" class="popup-contacts_social-item" href="{$theme_settings.twitter}"><i class="fab fa-twitter"></i></a>
+    {/if}
+    {if !empty($theme_settings.vk)}
+        <a target="_blank" class="popup-contacts_social-item" href="{$theme_settings.vk}"><i class="fab fa-vk"></i></a>
+    {/if}
+    {if !empty($theme_settings.odnoclassniki)}
+        <a target="_blank" class="popup-contacts_social-item" href="{$theme_settings.odnoclassniki}"><i class="fab fa-odnoklassniki"></i></a>
+    {/if}
+    {if !empty($theme_settings.instagram)}
+        <a target="_blank" class="popup-contacts_social-item" href="{$theme_settings.instagram}"><i class="fab fa-instagram"></i></a>
+    {/if}
+    {if !empty($theme_settings.youtube)}
+        <a target="_blank" class="popup-contacts_social-item" href="{$theme_settings.youtube}"><i class="fab fa-youtube"></i></a>
+    {/if}
+    {if !empty($theme_settings.whatsapp)}
+        <a target="_blank" class="popup-contacts_social-item" href="{$theme_settings.whatsapp}"><i class="fab fa-whatsapp"></i></a>
+    {/if}
+    {if !empty($theme_settings.telegram)}
+        <a target="_blank" class="popup-contacts_social-item" href="{$theme_settings.telegram}"><i class="fab fa-telegram-plane"></i></a>
+    {/if}
+    {if !empty($theme_settings.viber)}
+        <a target="_blank" class="popup-contacts_social-item" href="{$theme_settings.viber}"><i class="fab fa-viber"></i></a>
+    {/if}
+    {if $theme_settings.rss && $wa->blog}
+        {if !isset($rss)}{$rss=$wa->blog->rssUrl()}{/if}
+        {if $rss}<a target="_blank" class="popup-contacts_social-item" href="{$rss}"><i class="fas fa-rss"></i></a>{/if}
+    {/if}
+</div>
+{/strip}

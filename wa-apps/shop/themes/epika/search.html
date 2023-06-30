@@ -1,0 +1,70 @@
+{if strtolower($wa->server('HTTP_X_REQUESTED_WITH')) == 'xmlhttprequest'}
+{* @event frontend_search.%plugin_id% *}
+{foreach $frontend_search as $_}{$_}{/foreach}
+<div class="autocomplete" id="autocomplete">
+	{if !$products}
+	[`No products were found.`]
+	{else}
+	{include file='list-thumbs-ajax-search.html'}
+	{/if}
+</div>
+
+{else}
+
+
+{$get = waRequest::get('get', 0, 'string')}
+{$viewed = waRequest::cookie('shop_viewed')}
+{$viewed_products = $wa->shop->products("id/$viewed")}
+
+<div class="row category-page">
+	<aside class="category-sidebar">
+		{if $viewed_products}
+		<div class="sidebar">
+			<h3><span>Просмотренные</span></h3>
+			{include file="list-thumbs-mini-vertical-zeus.html" products=$viewed_products}
+		</div>
+		{/if}
+
+		<div class="sidebar">
+			<h3><span>Предложения</span></h3>
+		</div>
+	</aside>
+	<div class="catogery-products-list wish-lists">
+		{if $get}
+
+		{if $get == 'epikafavorites'}
+		{$wa->title("[`Favorites`]")}
+		<div class="category-header">
+			<h1 class="category-name"><i class="icon-heart"></i> [`Favorites`]</h1>
+			<a href="javascript:void(0);" class="fav_clear blue-btn middle-size">[`Clear favorites`] <i class="icon-cancel-circle"></i></a>
+		</div>
+
+		{$epikafavorites = waRequest::cookie('epika_shop_favorites')}
+		{$epikafavorites = $wa->shop->products("id/$epikafavorites")}
+		{include file='list-thumbs-zeus.html' products=$epikafavorites}
+		{/if}
+
+
+		{else}
+
+		<div class="category-header">
+			<h1 class="category-name"><i class="icon-search"></i> [`Search results for`]: <span style="color:#e03829">{$title}</span></h1>
+		</div>
+		<!-- plugin hook: 'frontend_search' -->
+		{* @event frontend_search.%plugin_id% *}
+		{foreach $frontend_search as $_}{$_}{/foreach}
+		{if !$products}
+		[`No products were found.`]
+		{else}
+		<div class="g-product-list">
+			<div id="product-list">
+				{include file='list-thumbs-zeus.html'}
+			</div>
+		</div>
+		{/if}
+
+		{/if}
+	</div>
+</div>
+
+{/if}

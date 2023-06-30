@@ -1,0 +1,59 @@
+{strip}
+{$is_mobile = ($wa->isMobile() && ($wa->cookie("is_desktop_for_mobile") != 1 || !$theme_settings.switch_version))}
+{$subcategories_view = 'no_image'}
+
+{if $is_mobile}
+    {if isset($category.params.mobile_subcategories_view) && !empty($category.params.mobile_subcategories_view)}
+        {$subcategories_view = $category.params.mobile_subcategories_view}
+    {else}
+        {if $products}
+            {$subcategories_view = $theme_settings.mobile_subcategories_view_full_products}
+        {else}
+            {$subcategories_view = $theme_settings.mobile_subcategories_view_empty_products}
+        {/if}
+    {/if}
+{else}
+    {if isset($category.params.subcategories_view) && !empty($category.params.subcategories_view)}
+        {$subcategories_view = $category.params.subcategories_view}
+    {else}
+        {if $products}
+            {$subcategories_view = $theme_settings.subcategories_view_full_products}
+        {else}
+            {$subcategories_view = $theme_settings.subcategories_view_empty_products}
+        {/if}
+    {/if}
+{/if}
+
+{$is_display_badge = $theme_settings.subcategories_badge}
+{$is_subcategory_filter_save = $theme_settings.category_filter_subcategory_save}
+{$subcategory_filter_aliases = $theme_settings.category_filter_aliases_subcategory_save}
+{$is_count_products = $theme_settings.is_subcategories_count_products}
+{$is_count_products_with_subs = $theme_settings.subcategories_count_products_with_subs}
+<div class="js-category-subcategories"{if $is_subcategory_filter_save} data-save-filters="true"{if $subcategory_filter_aliases} data-save-filters-aliases="{$subcategory_filter_aliases}"{/if}{/if}>
+    {if $subcategories_view == 'image'}
+        {include file="categories-tile.html" categories=$category.subcategories}
+    {else if $subcategories_view == 'icon'}
+        {include file="categories-icon.html"  categories=$category.subcategories}
+    {else if $subcategories_view == 'no_image'}
+        {if $categories}
+            {$subcategoriesCount = count($categories)}
+            {$subcategoriesCountCols = 1}
+            {if $subcategoriesCount > 2}{$subcategoriesCountCols = 2}{/if}
+            {if $subcategoriesCount > 4}{$subcategoriesCountCols = 3}{/if}
+            <ul class="subcategories-links cols-{$subcategoriesCountCols}">
+                {foreach $categories as $sc}
+                    {$is_badge = (!empty($is_display_badge) && !empty($sc.params.badge_text) && !empty($sc.params.badge_class))}
+                    {if  !empty($is_count_products) && !empty($is_count_products_with_subs)}
+                        {$sc.count = $wa->shop->productsCount("category/`$sc.id`")}
+                    {/if}
+                    <li class="subcategories-links__item">
+                        <a class="js-category-link" href="{$sc.url}">{$sc.name|escape}</a>
+                        {if !empty($is_count_products) && !empty($sc.count)} <span class="subcategories-links__count bs-color">{$sc.count}</span> {/if}
+                        {if $is_badge} <span class="cat-badge cat-badge--{$sc.params.badge_class}">{$sc.params.badge_text}</span>{/if}
+                    </li>
+                {/foreach}
+            </ul>
+        {/if}
+    {/if}
+</div>
+{/strip}

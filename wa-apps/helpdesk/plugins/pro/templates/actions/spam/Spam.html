@@ -1,0 +1,45 @@
+<div class="block">
+    <h1>[`Spam`]</h1>
+</div>
+<div class="support-content">
+    <div class="s-request">
+        <div class="block double-padded">[`A list of email addresses, new requests from which will be deleted.`]</div>
+    </div>
+    <div class="block double-padded" id='hp-spam-wrapper'>
+        <table class="zebra hp-spam-table" style="max-width:600px;">
+            <thead>
+                <tr>
+                    <th class="min-width"></th>
+                    <th>[`Email address`]</th>
+                    <th class="min-width"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="3" class="align-center">
+                        <form action="" id='hp-spam-form'>
+                            <input type="text" placeholder="[`add spam email`]" />
+                            <input type="submit" name='[`Save`]' />
+                        </form>
+                    </td>
+                </tr>
+                {foreach $emails as $e}
+                    <tr>
+                        <td class="item"></td>
+                        <td><a href="mailto:{$e}" class="js-spam-email" title="[`Write to email`]">{$e}</a></td>
+                        <td><a href="#" class="js-delete-spam" title="[`delete from spam`]"><i class="icon16 delete"></i></a></td>
+                    </tr>
+                {/foreach}
+            </tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript" src="{$plugin_url}js/pro.spam.js"></script>
+<script>
+    (function($) {
+        new helpdeskProSpam({
+            $wrapper: $("#hp-spam-wrapper"),
+            $form: $("#hp-spam-form")
+        });
+    })(jQuery);
+ </script>

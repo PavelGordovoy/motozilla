@@ -1,0 +1,47 @@
+<div>
+    <select class="s-mylang-select" style="float:right">
+        <option value="ALL">ALL</option>
+        {foreach $locales as $l}
+        <option value="{$l}">{$l}</option>
+        {/foreach}
+    </select>
+    {literal}<style>div[data-mylang]{margin-right:20%}</style>{/literal}
+    <form id="s-mylang-feature-form" method="POST" action="?module=shop&action=save">
+        <div class="field">
+            <div class="name">
+                [`Feature name`]
+            </div>
+            {foreach $locales as $l}
+            <div class="value no-shift">
+                <input type="text" name="mylang[feature][{$l}][{$feature.id}][name]" value="{if isset($loc_feature.$l.text)}{$loc_feature.$l.text}{/if}" placeholder="{$l}" data-mylang="{$l}"/>
+            </div>
+            {/foreach}
+            <hr>
+            {if isset($values)}
+                {if $values == "no"}
+                    <span class="hint">[`Save the main value beforehand, to translate it.`]</span>
+                {else}
+                    {foreach $values as $k => $v}
+                    <div class="name">
+                        {if $v}{$v}{else}[`Value`]{/if}
+                    </div>
+                    {foreach $locales as $l}
+                    <div class="value no-shift" data-mylang="{$l}">
+                        <{if $type == "text"}textarea{else}input type="text" {/if} name="mylang[feature_value][{$l}][{$k}][{$type}]" value="{if isset ($loc_values.$l.$k.text)}{$loc_values.$l.$k.text}{/if}" placeholder="{$l}" />
+                    </div>
+                    {/foreach}
+                {/foreach}
+                {/if}
+            {/if}
+        </div>
+        {if $wa->get('showsave')}
+        <div>
+            <div class="wa-mylang-save-panel block bordered-top">
+                <input id="wa-save-button" type="submit" class="button green" value="[`Save`]">
+                <em class="hint">Ctrl + S</em>
+                <span id="wa-editor-status" style="margin-left: 20px; display: none;"><i class="icon16 yes"></i> [`Saved`]</span>
+            </div>
+        </div>
+        {/if}
+    </form>
+</div>

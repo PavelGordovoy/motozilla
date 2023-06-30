@@ -1,0 +1,15 @@
+{strip}
+{$is_mobile = ($wa->isMobile() && ($wa->cookie("is_desktop_for_mobile") != 1 || !$theme_settings.switch_version))}
+<div class="home-photos-description clearfix">
+    {if $theme_settings.homepage_photos && $wa->photos && !$is_mobile}
+        {include file="`$wa_parent_theme_path`/welcome.photos.html" album_id=(int)$theme_settings.homepage_photos_id}
+    {/if}
+    <div class="home-description">
+        {if $theme_settings.display_welcome_description == 'block'}
+            {$wa->block("`$theme_settings.welcome_description_block_name`")}
+        {else}
+            {include file="`$wa_parent_theme_path`/welcome.description.html"}
+        {/if}
+    </div>
+</div>
+{/strip}

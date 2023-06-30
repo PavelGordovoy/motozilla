@@ -1,0 +1,57 @@
+{strip}
+{if !isset($current_blog)}
+    {$globals_blog_id = $wa->globals('blog_id')}
+    {if !is_array($globals_blog_id)}
+        {$current_blog = $wa->blog->blog($wa->globals('blog_id'))}
+    {/if}
+{/if}
+
+{$cols = 1}
+{$sidebar_left = $theme_settings.blog_sidebar_left}
+{$sidebar_right = $theme_settings.blog_sidebar_right}
+{if $sidebar_left}{$cols = $cols + 1}{/if}
+{if $sidebar_right}{$cols = $cols + 1}{/if}
+
+{$content_cols_class_align = ""}
+{if $sidebar_left}{$content_cols_class_align = " flex-align-r"}{/if}
+{if $sidebar_right}{$content_cols_class_align = " flex-align-l"}{/if}
+{if $sidebar_right && $sidebar_left}{$content_cols_class_align = " flex-align-c"}{/if}
+
+<div data-count="{$cols}" class="js-content-cols content-cols cols-{$cols}{$content_cols_class_align}">
+    <div class="content{if $sidebar_left} with-sidebar-l{/if}{if $sidebar_right} with-sidebar-r{/if}">
+        {* @event (frontend_action_default|frontend_action_post|frontend_action_page|frontend_action_error).%plugin_id%.nav_before *}
+        {foreach $frontend_action as $plugin => $output}
+            {if !empty($output.nav_before)}{$output.nav_before}{/if}
+        {/foreach}
+        {if empty($posts) && $wa->currentUrl() == $wa_app_url}
+           <div class="welcome">
+               {include file="./breadcrumbs.html"}
+                <h1>[`Welcome to your new blog!`]</h1>
+                <p>{sprintf('[`Start by <a href="%s">writing a post</a> in your blog backend.`]', $wa_backend_url|cat:'blog/')}</p>
+            </div>
+        {else}
+            {if isset($action) && $action == 'default' && $wa->globals('is_stream') != true}
+                {$title_blog = "[`Blog`]"}{if isset($current_blog)}{$title_blog = $current_blog.name}{/if}
+                {if !$wa->isMobile() && $theme_settings.blog_main_menu_button_head && !$sidebar_left}
+                    <div class="content-head">
+                        {* main menu *}
+                        {include file="`$wa_parent_theme_path`/vertical.main.menu.html" is_close=true}
+                        <div class="content-head__title">
+                            {include file="./breadcrumbs.html"}
+                            <h1>{$title_blog}</h1>
+                        </div>
+                     </div>
+                {else}
+                    {include file="./breadcrumbs.html"}
+                    <h1>{$title_blog}</h1>
+                {/if}
+            {/if}
+
+            {$content}
+        {/if}
+    </div>
+    {* sidebars *}
+    {if $sidebar_left}{include file=".\sidebar.left.html" blocks=$sidebar_left inline}{/if}
+    {if $sidebar_right}{include file=".\sidebar.right.html" blocks=$sidebar_right inline}{/if}
+</div>
+{/strip}

@@ -1,0 +1,30 @@
+{strip}
+{if !isset($widthSlider)}{$widthSlider = 1420}{/if}
+<div class="js-main-slider-el main-slider_el main-slider_el--{$photo.id}">
+    <a class="js-slider-banner-inner slider-banner__inner" href="{$photo.description|escape}">
+        {$class_img = "js-slider-image slider-banner__img"}
+        {if $is_retina}{$class_img = "`$class_img` js-img-retina"}{/if}
+        {if $is_lazy_images && !$is_fist}
+            {$class_img = "`$class_img` owl-lazy"}
+            {$image = $wa->photos->getImgHtml($photo, "`$widthSlider`x0", ["alt" => $photo.name, "class" => $class_img])|replace:"src":"src=`$wa_theme_url`img/lazy-image.png data-src"}
+        {else}
+            {$image = $wa->photos->getImgHtml($photo, "`$widthSlider`x0", ["alt" => $photo.name, "class" => $class_img])}
+        {/if}
+        {$image}
+
+        {if !empty($theme_settings.preload_image_homepage) && !empty($is_fist) && !empty($image)}
+            {$preg_match_image_src = preg_match('/(src=["\'](.*?)["\'])/', $image, $match)}
+            {$split = preg_split('/["\']/', $match[0])}
+            {if !empty($split[1])}
+                {$wa->globals('preload_image', $split[1])}
+            {/if}
+        {/if}
+
+        {if $theme_settings.slider_description && !empty($photo.name)}
+            <div class="slider-banner__content">
+                <div class="slider-banner__title">{$photo.name}</div>
+            </div>
+        {/if}
+    </a>
+</div>
+{/strip}

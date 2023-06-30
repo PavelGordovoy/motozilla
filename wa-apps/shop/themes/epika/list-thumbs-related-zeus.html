@@ -1,0 +1,85 @@
+{$epikafavList = waRequest::cookie('epika_shop_favorites')}
+{assign var=epikafavList value=","|explode:$epikafavList}
+
+{$epikacartList = waRequest::cookie('epika_shop_incart')}
+{assign var=epikacartList value=","|explode:$epikacartList}
+
+{if $wa->shop->cart->total() > 0}{$add2cart_label = '[`Add to cart`]'}{else}{$add2cart_label = '[`Buy`]'}{/if}
+
+<ul class="thumbs product-list zeus">
+    {foreach $products as $p }
+
+    {$epikafavClass = ''}
+    {foreach from=$epikafavList item=i}
+    {if $i == $p.id}
+    {$epikafavClass = 'active'}
+    {/if}
+    {/foreach}
+
+    {$epikacartClass = ''}
+    {foreach from=$epikacartList item=i}
+    {if $i == $p.id}
+    {$epikacartClass = 'active'}
+    {/if}
+    {/foreach}
+
+    {$available = $wa->shop->settings('ignore_stock_count') || $p.count === null || $p.count > 0}
+    <li itemscope itemtype ="http://schema.org/Product" class="prd related zeus">
+        <form class="purchase addtocart" {if $p.sku_count > 1}data-url="{$p.frontend_url}{if strpos($p.frontend_url, '?')}&{else}?{/if}cart=1"{/if} method="post" action="{$wa->getUrl('/frontendCart/add')}">
+            <div class="prd-wrapper" data-product-id="{$p.id}">
+                <div class="image">
+                    <img itemprop="image" class="product-first-img lazy" alt="{$p.name}" data-original="{$wa->shop->productImgUrl($p, '200')}" src="{if $wa->shop->productImgUrl($p, '200')}{if !empty($theme_settings.disable_products_img_lazyload)}{$wa->shop->productImgUrl($p, '200')}{else}{$wa_active_theme_url}img/balls.gif{/if}{else}{$wa_theme_url}assets/img/nophoto.png{/if}">
+                    <img itemprop="image" class="product-thumb-96-img" alt="{$p.name}" src="{if $wa->shop->productImgUrl($p, '96')}{$wa->shop->productImgUrl($p, '96')}{else}{$wa_theme_url}assets/img/nophoto.png{/if}" style="display: none;">
+                    {$_product = $wa->shop->product($p.id)}
+                    {if isset($hide_second_product_image) && !$hide_second_product_image}
+                        {$product_image_ids = array_keys($_product.images)}
+
+                        {if $product_image_ids|@count > 1}
+                            {$second_image = $_product.images[$product_image_ids[1]]}
+                            {$p.image_id = $second_image.id}
+                            {$p.ext = $second_image.ext}
+
+                            <img itemprop="image" class="product-second-img lazy" alt="{$p.name}" data-original="{if $wa->shop->productImgUrl($p, '200')}{if !empty($theme_settings.disable_products_img_lazyload)}{$wa->shop->productImgUrl($p, '200')}{else}{$wa_active_theme_url}img/balls.gif{/if}{else}{$wa_theme_url}assets/img/nophoto.png{/if}" style="display: none;">
+
+                            {$_product = $wa->shop->product($p.id)}
+                            {$product_image_ids = array_keys($_product.images)}
+                            {$second_image = $_product.images[$product_image_ids[0]]}
+                            {$p.image_id = $second_image.id}
+                            {$p.ext = $second_image.ext}
+                        {/if}
+                    {/if}
+
+                    <button class="button {if isset($from_cart) && $from_cart}add-to-inv{else} quick-view quick_view{/if}" data-url="{$p.frontend_url}{if strpos($p.frontend_url, '?')}&{else}?{/if}quick_view=1">{if isset($from_cart) && $from_cart}Добавить в заказ{else}Обзор{/if}</button>
+                </div>
+
+                    <a href="{$p.frontend_url}" title="{$p.name}">
+                        <h5 class="col-xs-12 title">
+                            <span itemprop="name">{$p.name}{if !empty($p.params.gsliderbg)}{$product.params.gsliderbg}{/if}</span>
+                        </h5>
+                    </a>
+
+                    <div class="controls">
+                        <meta itemprop="price" content="{$p.price}">
+                        <meta itemprop="priceCurrency" content="{$wa->shop->primaryCurrency()}">
+                        <input type="hidden" name="product_id" value="{$p.id}">
+                        {$badge_html = $wa->shop->badgeHtml($p.badge)}
+                        <span class="price nowrap">{shop_currency_html($p.price)}</span>
+                    </div>
+
+            </div>
+
+
+        </form>
+    </li>
+    {/foreach}
+</ul>
+
+{if isset($pages_count) && $pages_count > 1}
+    <div class="block {if !empty($theme_settings.pagination) && $theme_settings.pagination == 'lazyloading'}lazyloading-paging{else}paging-nav{/if}"  data-times="2" data-link-text="[`Load more`]" data-loading-str="[`Loading...`]">
+        {wa_pagination total=$pages_count attrs=['class' => "menu-h"]}
+    </div>
+{/if}
+
+
+
+

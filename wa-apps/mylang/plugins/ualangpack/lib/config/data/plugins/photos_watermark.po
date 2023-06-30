@@ -1,0 +1,112 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Webasyst Photos Watermark plugin 1.0.0.32799 UA translation v 0.1\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studo\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: /wa-apps/photos/plugins/watermark/templates/SettingsFileControl.html:4
+msgid "Delete"
+msgstr "Видалити"
+
+#: /wa-apps/photos/plugins/watermark/templates/SettingsFileControl.html:9
+msgid "Watermark image will be permanently deleted. Delete?"
+msgstr "Водяний знак буде видалено остаточно. Видалити?"
+
+#: /wa-apps/photos/plugins/watermark/lib/photosWatermark.plugin.php:89
+msgid "File could not be saved due to the insufficient file write permissions for the %s folder."
+msgstr "Файл не вдалося зберегти через недостатні права запису до папки %s."
+
+#: /wa-apps/photos/plugins/watermark/lib/photosWatermark.plugin.php:91
+msgid "Failed to upload file."
+msgstr "Не вдалося завантажити файл."
+
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:5
+msgid "Opacity"
+msgstr "Непрозорість"
+
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:6
+msgid "0 for full transparency, 1 for no transparency"
+msgstr "0 для повної прозорості, 1 для повної непрозорості"
+
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:11
+msgid "Text"
+msgstr "Текст"
+
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:16
+msgid "Text size"
+msgstr "Розмір тексту"
+
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:20
+msgid "Small"
+msgstr "Невеликий"
+
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:21
+msgid "Medium"
+msgstr "Середній"
+
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:22
+msgid "Large"
+msgstr "Великий"
+
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:26
+msgid "Text color"
+msgstr "Колір тексту"
+
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:27
+msgid "Color value in hex format, e.g. #FFFFFF"
+msgstr "Значення кольору в шістнадцятковому форматі, наприклад, #FFFFFF"
+
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:32
+msgid "Text align"
+msgstr "Вирівнювання тексту"
+
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:36
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:61
+msgid "Top Left"
+msgstr "Зверху ліворуч"
+
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:37
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:62
+msgid "Top Right"
+msgstr "Зверху праворуч"
+
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:38
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:63
+msgid "Bottom Left"
+msgstr "Унизу ліворуч"
+
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:39
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:64
+msgid "Bottom Right"
+msgstr "Унизу праворуч"
+
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:43
+msgid "Text orientation"
+msgstr "Орієнтація тексту"
+
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:47
+msgid "Horizontal"
+msgstr "Горизонтальна"
+
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:48
+msgid "Vertical (recommended)"
+msgstr "Вертикальна (рекомендується)"
+
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:52
+msgid "Image"
+msgstr "Зображення"
+
+#: /wa-apps/photos/plugins/watermark/lib/config/settings.php:57
+msgid "Image align"
+msgstr "Вирівняти зображення"
+
+#: /wa-apps/photos/plugins/watermark/lib/config/plugin.php:4
+msgid "Watermark"
+msgstr "Водяний знак"

@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst Photos Image Effects plugin 1.0.0.17573 UA Translation v 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-06-14 09:49+0300\n"
+"PO-Revision-Date: \n"
+"Language: uk_UA\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: /wa-apps/photos/plugins/imageeffects/templates/PhotoToolbar.html:1
+#: /wa-apps/photos/plugins/imageeffects/templates/PhotoToolbar.html:2
+msgid "Black &amp; White"
+msgstr "Чорно-білий"
+
+#: /wa-apps/photos/plugins/imageeffects/templates/PhotoToolbar.html:2
+#: /wa-apps/photos/plugins/imageeffects/templates/PhotoToolbar.html:1
+msgid "Sepia"
+msgstr "Сепія"
+
+#: /wa-apps/photos/plugins/imageeffects/templates/PhotoToolbar.html:3
+msgid "Contrast"
+msgstr "Контраст"
+
+#: /wa-apps/photos/plugins/imageeffects/templates/PhotoToolbar.html:4
+msgid "Brightness"
+msgstr "Яскравість"
+
+#: /wa-apps/photos/plugins/imageeffects/lib/config/plugin.php:4
+msgid "Image effects"
+msgstr "Ефекти зображень"

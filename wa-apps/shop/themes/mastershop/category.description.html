@@ -1,0 +1,26 @@
+{strip}
+{if $description}
+    {* переопределение настроек краткого описания индивидуально для категории *}
+    {if isset($category.params.max_height_category_desc)}{$theme_settings.max_height_category_desc = $category.params.max_height_category_desc}{/if}
+    {if isset($category.params.max_height_category_desc_mobile)}{$theme_settings.max_height_category_desc_mobile = $category.params.max_height_category_desc_mobile}{/if}
+    {if isset($category.params.is_read_more_description)}{$theme_settings.is_read_more_description = $category.params.is_read_more_description}{/if}
+
+    <div class="category-description moretext-outer js-moretext-outer">
+        {$is_read_more = $theme_settings.is_read_more_description}
+        {if $is_read_more}
+            {$maxHeight = 55}
+            {if $theme_settings.max_height_category_desc}
+                {$maxHeight = $theme_settings.max_height_category_desc}
+            {/if}
+            {if $wa->isMobile() && $theme_settings.max_height_category_desc_mobile}
+                {$maxHeight = $theme_settings.max_height_category_desc_mobile}
+            {/if}
+            <div class="moretext-wrap js-moretext-wrap" data-text-hide="[`Hide`]" data-text-more="[`Read more`]" data-max-height="{$maxHeight}" style="max-height: {$maxHeight}px" >
+                <div class="category-desc moretext-desc js-moretext">{$description}</div>
+            </div>
+        {else}
+            <div class="category-desc">{$description}</div>
+        {/if}
+    </div>
+{/if}
+{/strip}

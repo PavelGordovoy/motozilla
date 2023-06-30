@@ -1,0 +1,16 @@
+
+
+msgid ""
+msgstr "Project-Id-Version: mylang/plugins/google\nReport-Msgid-Bugs-To: \nLast-Translator: mylang/plugins/google\nLanguage-Team: mylang/plugins/google\nMIME-Version: 1.0\nContent-Type: text/plain; charset=utf-8\nContent-Transfer-Encoding: 8bit\nPOT-Creation-Date: 2020-01-29 18:13+0100\nPO-Revision-Date: \nLanguage: \nPlural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2))\nX-Poedit-Language: ru_R\nX-Poedit-SourceCharset: utf-8\nX-Poedit-Basepath: utf-8\nX-Poedit-SearchPath-0: .\nX-Poedit-SearchPath-1: .\n"
+
+msgid "Api error. Check the token key and quota."
+msgstr "Ошибки API. Проверьте ключ и квоты."
+
+msgid "https://translate.google.com"
+msgstr "https://translate.google.com"
+
+msgid "API Key"
+msgstr "Ключ API "
+
+msgid "Get API key"
+msgstr "Получить ключ API "

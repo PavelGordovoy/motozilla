@@ -1,0 +1,55 @@
+{strip}
+{$pages = []}
+{if $theme_settings.footer_links_2 == 'site-pages'}
+    {if $wa->site}{$pages = $wa->site->pages()}{/if}
+{elseif $theme_settings.footer_links_2 == 'shop-pages'}
+    {if $wa->shop}{$pages = $wa->shop->pages()}{/if}
+{elseif $theme_settings.footer_links_2 == 'blog-pages'}
+    {if $wa->blog}{$pages = $wa->blog->pages()}{/if}
+{elseif $theme_settings.footer_links_2 == 'photos-pages'}
+    {if $wa->photos}{$pages = $wa->photos->pages()}{/if}
+{elseif $theme_settings.footer_links_2 == 'hub-pages'}
+    {if $wa->hub}{$pages = $wa->hub->pages()}{/if}
+{elseif $theme_settings.footer_links_2 == 'helpdesk-pages'}
+    {if $wa->helpdesk}{$pages = $wa->helpdesk->pages()}{/if}
+{elseif $theme_settings.footer_links_2 == 'app-menu'}
+    {if $wa->menu && !empty($theme_settings.footer_links_2_id_menu) && (int)$theme_settings.footer_links_2_id_menu > 0}
+        {$pages = $wa->menu->get($theme_settings.footer_links_2_id_menu)}
+    {/if}
+{elseif $theme_settings.footer_links_2 == 'app-menus'}
+    {if $wa->menus && !empty($theme_settings.footer_links_2_id_menu) && (int)$theme_settings.footer_links_2_id_menu > 0}
+        {$pages = $wa->menus->getMyMenu($theme_settings.footer_links_2_id_menu)}
+    {/if}
+{elseif $wa->shop && $theme_settings.footer_links_2 == 'shop'}
+    {if method_exists($wa->shop, 'checkout')}
+        {$cartUrl = $wa->shop->checkout()->cartUrl()}
+    {else}
+        {$cartUrl = $wa->getUrl('shop/frontend/cart')}
+    {/if}
+    {$pages[] = ["url" => $cartUrl, "name" => "[s`Cart`]"]}
+    {$pages[] = ["url" => $wa->myUrl(), "name" => "[`My account`]"]}
+    {$pages[] = ["url" => $wa->getUrl('shop/frontend/checkout'), "name" => "[s`Checkout`]"]}
+{elseif $wa->shop && $theme_settings.footer_links_2 == 'catalog'}
+    {if isset($category)}{$selected_category=$category.id}{else}{$selected_category=null}{/if}
+    {if $wa->globals('shopCategories')}
+        {$pages = $wa->globals('shopCategories')}
+    {else}
+        {$pages = $wa->shop->categories(0, null, true, true)}
+    {/if}
+{elseif $theme_settings.footer_links_2 == 'wa-apps'}
+    {$pages = $wa->apps()}
+{/if}
+
+{if $theme_settings.footer_block_2_title}
+    <div class="footer_head">{$theme_settings.footer_block_2_title}</div>
+{/if}
+{if count($pages)}
+    <ul class="footer_menu">
+        {foreach $pages as $p}
+            {if !isset($p.footer_menu_hide)}
+                <li class="footer_menu-item"><a href="{$p.url}"{if !empty($p.target)} target="{$p.target}"{/if}>{$p.name}</a></li>
+            {/if}
+        {/foreach}
+    </ul>
+{/if}
+{/strip}

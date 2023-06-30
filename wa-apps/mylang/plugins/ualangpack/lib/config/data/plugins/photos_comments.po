@@ -1,0 +1,103 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"Project-Id-Version: Webasyst Photos Comments plugin 1.1.0.2 UA Translation v 1.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 3.0\n"
+
+msgid "comment deleted"
+msgstr "коментар видалено"
+
+msgid "%d comment"
+msgid_plural "%d comments"
+msgstr[0] "%d коментар"
+msgstr[1] "%d коментаря"
+msgstr[2] "%d коментарів"
+
+msgid "delete"
+msgstr "видалити"
+
+msgid "restore"
+msgstr "відновити"
+
+msgid "in reply to"
+msgstr "у відповідь на"
+
+msgid "reply"
+msgstr "відповісти"
+
+msgid "Comments"
+msgstr "Коментарі"
+
+msgid "Add comment"
+msgstr "Додати коментар"
+
+msgid "To add a comment please <a href=\"%s\">sign up</a> or <a href=\"%s\">login</a>"
+msgstr "Аби додати коментар, будь ласка, <a href=\"%s\">зареєструйтесь</a> або <a href=\"%s\">увійдіть</a>"
+
+msgid "Sign up"
+msgstr "Зареєструватися"
+
+msgid "Guest"
+msgstr "Гість"
+
+msgid "Your name"
+msgstr "Ваше ім&#39;я"
+
+msgid "Email"
+msgstr "Електронна пошта"
+
+msgid "Site"
+msgstr "Сайт"
+
+msgid "log out"
+msgstr "вийти"
+
+msgid "Comment"
+msgstr "Коментар"
+
+msgid "Comments setting"
+msgstr "Налаштування коментарів"
+
+msgid "Only registered users can add comments"
+msgstr "Коментувати можуть лише зареєстровані користувачі"
+
+msgid "If enabled, all commentators will be authorized and synced with the Contacts app"
+msgstr "Якщо увімкнено, користувачів, що лишають коментарі, буде авторизовано та збережено у додатку «Контакти»"
+
+msgid "Allows frontend visitors to comment on photos"
+msgstr "Дозволяє користувачам фронтенду коментувати фотографії"
+
+msgid "Name can not be left blank"
+msgstr "Необхідно вказати ім&#39;я"
+
+msgid "Name length should not exceed 255 symbols"
+msgstr "Довжина імені не повинна перевищувати 255 символів"
+
+msgid "Email can not be left blank"
+msgstr "Необхідно вказати email-адресу"
+
+msgid "Email is not valid"
+msgstr "Email-адресу вказано некоректно"
+
+msgid "Site URL is not valid"
+msgstr "Введено невірний URL сайту"
+
+msgid "Invalid captcha code"
+msgstr "Невірний код CAPTCHA"
+
+msgid "Comment text can not be left blank"
+msgstr "Введіть, будь ласка, коментар"
+
+msgid "Comment length should not exceed 4096 symbols"
+msgstr "Коментар не повинен бути довшим 4096 символів"
+
+msgid "Comments plugin"
+msgstr "Плагін для коментарів до фотографій"

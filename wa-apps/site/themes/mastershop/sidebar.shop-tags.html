@@ -1,0 +1,27 @@
+{strip}
+{if $wa->shop}
+    {if class_exists('shopTageditorPlugin')}
+        {$tagcloud = shopTageditorPlugin::tags($wa->shop->tags())}
+    {else}
+        {$tagcloud = $wa->shop->tags()}
+    {/if}
+    {if $tagcloud}
+        {$max_tags = (int)$theme_settings.sidebar_tags_max}
+        {$is_hide_tag = false}
+        <div class="sidebar-wrap">
+            <div class="sidebar-wrap__head">[`Tags`]</div>
+            <div class="js-tags tags tags--sidebar">
+                {foreach $tagcloud as $tag}
+                    {$is_hide_tag = (!empty($is_hide_tag) || ($max_tags > 0 && $tag@iteration > $max_tags))}
+                    <a{if $is_hide_tag} class="js-tag hide"{/if} href="{$wa_app_url}tag/{$tag.uri_name}/">{$tag.name|escape}</a>
+                {/foreach}
+                {if $is_hide_tag}
+                    <div class="tags__more">
+                        <span class="js-show-tags bs-color read-more">[`Show all`]</span>
+                    </div>
+                {/if}
+            </div>
+        </div>
+    {/if}
+{/if}
+{/strip}

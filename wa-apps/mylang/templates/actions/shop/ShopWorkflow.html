@@ -1,0 +1,42 @@
+<div>
+    <span class="align-right float-right"><a href="javascript:void(0)" id="wf_makedefault">[`Set default`]</a></span>
+    <h1>[`Order states`]</h1>
+    <form id="s-mylang-saveall-form" method="POST" action="?module=shop&action=save" data-form="save">
+    <input type="hidden" name="workflowAction" value="1"/>
+    <table class="zebra single-lined">
+        <tr class="header">
+            <th>[`Order state`]</th>
+            {foreach $locales as $l}
+                <th class="short align-right">{$l}</th>
+            {/foreach}
+        </tr>
+        {foreach $states as $id => $state}
+            <tr data-id={$id}>
+                <td>
+                    <i class="{$state.options.icon}"></i> {waLocale::fromArray($state.name)}
+                </td>
+                {foreach $locales as $key=>$l name="locales"}
+                <td><input tabindex="{$smarty.foreach.locales.index}" type="text" name="mylang[state][{$id}][{$key}]" value="{if isset($state.name.$key)}{$state.name.$key}{/if}" placeholder="{$l}" data-mylang="{$l}"/></td>
+                {/foreach}
+            </tr>
+        {/foreach}
+    </table>
+    <div class="placeholder"><div>
+        <div class="wa-mylang-save-panel block bordered-top">
+            <input id="wa-save-button" type="submit" class="button green" value="[`Save`]">
+            <em class="hint">Ctrl + S</em>
+            <span id="wa-editor-status" style="margin-left: 20px; display: none;"><i class="icon16 yes"></i> [`Saved`]</span>
+        </div>
+    </form>
+</div>
+<!--suppress JSUnfilteredForInLoop, JSUnfilteredForInLoop -->
+<script>
+/*global $*/
+var default_workflow = {$default_states|json_encode};
+$('#wf_makedefault').on('click', function(){
+    for (var i in default_workflow) {
+        $('input[name="mylang[state]['+i+'][ru_RU]"]').attr('value', default_workflow[i]['ru_RU']);
+        $('input[name="mylang[state]['+i+'][en_US]"]').attr('value', default_workflow[i]['en_US']);
+    }
+});
+</script>

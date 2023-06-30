@@ -1,0 +1,101 @@
+<div class="checkout" data-url="{$wa->getUrl('/frontend/checkout')}">
+    <h1>Оформление заказа</h1>
+    {if isset($checkout_steps)}
+
+        <ul class="steps">
+            {$current = 'current'}
+            {foreach $checkout_steps as $step_id => $s}
+                <li class="{$current}" style="width: {(100/($checkout_steps|count))|replace:',':'.'}%"><span class="number"><strong>{$s@iteration}</strong><i class="icon-ok-2" style="display: none"></i></span><span class="name">{$s.name}</span></li>
+                {$current = ''}
+            {/foreach}
+        </ul>
+
+        <div class="ep-cart-global">
+            {if true}<div class="tab-content clearfix">{$active_tab_cont = 'active'}{/if}
+            {foreach $checkout_steps as $step_id => $s}
+                {if true}
+                    <div role="tabpanel" class="tab-pane checkout-step step-{$step_id} {$active_tab_cont}" id="tabstep_{$step_id}">{$active_tab_cont = ''}
+                {else}
+                    <div class="checkout-step step-{$step_id}">
+                {/if}
+                    <form class="checkout-form {if $s@last}last{/if}" method="post" action="">
+                        <h2 class="ep-checkout-step-title">
+                            <span>{$s@iteration}.</span> {$s.name}
+                        </h2>
+
+                        {if $s@first && $wa->isAuthEnabled()}
+                            <div class="checkout-step-content auth" {if $checkout_current_step != $step_id}style="display:none"{/if}>
+                                {if !$wa->user()->isAuth()}
+                                    <ul>
+                                        <li class="checkout-new-user {if !$wa->post('wa_auth_login')}active{/if}"><label {if !$wa->post('wa_auth_login')}class="active"{/if}><input name="user_type" type="radio" {if !$wa->post('wa_auth_login')}checked{/if} value="0"> Я новый покупатель</label></li>
+                                        <li class="checkout-login-user {if $wa->post('wa_auth_login')}active{/if}"><label {if $wa->post('wa_auth_login')}class="active"{/if}><input name="user_type" type="radio" {if $wa->post('wa_auth_login')}checked{/if} value="1"> Я постоянный клиент</label></li>
+                                    </ul>
+                                    <div id="login-form"{if !$wa->post('wa_auth_login')} style="display:none"{/if}>
+                                        {include file="`$wa_parent_theme_path`/login.html" without_form=true}
+                                    </div>
+                                    <script type="text/javascript">
+                                        $(function () {
+                                            $("#login-form input").attr('disabled', 'disabled');
+                                            $("input[name='user_type']").change(function () {
+                                                if ($("input[name='user_type']:checked").val() == '1') {
+                                                    $("#login-form input").removeAttr('disabled');
+                                                    $(this).closest('div.auth').next(".checkout-step-content").hide();
+                                                    $("input[type=submit]:last").hide();
+                                                    $("#login-form").show();
+                                                } else {
+                                                    $("#login-form input").attr('disabled', 'disabled');
+                                                    $("#login-form").hide();
+                                                    $(this).closest('div.auth').next(".checkout-step-content").show();
+                                                    $("input[type=submit]:last").show();
+                                                }
+                                            });
+                                            {if $checkout_current_step == $step_id}
+                                                $("input[name='user_type']").change();
+                                            {/if}
+                                        });
+                                    </script>
+                                {else}
+                                    <div class="ep-chekout-user-info">
+                                        <div class="ep-avatar"><img src="{$wa->user()->getPhoto(50)}"><a href="?logout" data-toggle="tooltip" data-placement="left" title="Выйти"><i class="icon-logout"></i></a></div>
+                                        <div class="black"><p>{sprintf("[`You are currently authorized as <strong>%s</strong>. Please verify or update your contact information using the form below. Your existing contact info will be automatically updated.`]", $wa->user('name'))}</p></div>
+                                    </div>
+                                {/if}
+                            </div>
+                        {/if}
+
+                        <div class="checkout-step-content" style="{if $wa->isAuthEnabled() && $s@first}margin-top: {if $step_id == 'contactinfo'}0;{else}-23px;{/if}{/if}{if $checkout_current_step != $step_id || $wa->post('wa_auth_login')} display:none;{/if}">
+                            {if $checkout_current_step == $step_id}
+                                {if in_array($step_id,['contactinfo', 'shipping', 'payment', 'confirmation'])}
+                                    {include file="checkout.`$step_id`.html"}
+                                {else}
+                                    {$s.content}
+                                {/if}
+                            {else}
+                                <div class="checkout-content" data-step-id="{$step_id}"></div>
+                            {/if}
+                            <input type="hidden" name="step" value="{$step_id}">
+                            {if $s@last}
+                                <div class="text-right full-size">
+                                    <input type="submit" class="button blue-btn checkout-sbmt half-page-size" value="[`Place order`]">
+                                </div>
+                            {else}
+                                <button type="submit" class="button checkout-sbmt">Далее <i class="icon-right"></i></button>
+                            {/if}
+                        </div>
+                    </form>
+                </div>
+            {/foreach}
+
+    {if true}</div>{/if}
+
+    {else}
+        <div class="checkout-step">
+            {include file="checkout.`$checkout_current_step`.html"}
+        </div>
+    {/if}
+
+
+
+    <div class="ep-cart-mini">
+    </div>
+</div>

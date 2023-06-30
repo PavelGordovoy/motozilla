@@ -1,0 +1,271 @@
+{strip}
+
+<nav class="s-nav-wrapper">
+
+    {* SIDEBAR BANNER *}
+    {if !empty($theme_settings.sidebar_banner) || !empty($category.params.sidebar_banner)}
+        {if !empty($category.params.sidebar_banner)}
+            {if !empty($category.params.sidebar_banner_link)}<a class="s-sidebar-banner-link" href="{$category.params.sidebar_banner_link}">{/if}
+                <img class="s-sidebar-banner" src="{$category.params.sidebar_banner}" alt="">
+            {if !empty($category.params.sidebar_banner_link)}</a>{/if}
+        {else}
+            {if !empty($theme_settings.sidebar_banner_link)}<a class="s-sidebar-banner-link" href="{$theme_settings.sidebar_banner_link}">{/if}
+                <img class="s-sidebar-banner" src="{$wa_theme_url}{$theme_settings.sidebar_banner}?v{$wa_theme_version}" alt="">
+            {if !empty($theme_settings.sidebar_banner_link)}</a>{/if}
+        {/if}
+    {/if}
+
+    {* Display user area links *}
+    {$_is_presonal_area = ( $wa->globals("isMyAccount") || !empty($my_nav_selected) || !empty($frontend_my_nav) )}
+    {if $_is_presonal_area}
+
+        {if $wa->user()->isAuth()}
+            <ul class="s-sidebar-profile-pages">
+                {foreach $wa->myNav(false) as $nav}{$nav}{/foreach}
+                <li>
+                    <a href="?logout">[`Logout`]</a>
+                </li>
+            </ul>
+        {/if}
+    {/if}
+
+    {* Display pages list *}
+    {if isset($page)}
+        {if isset($page.parent_subpages)}
+          {$parent = $wa->shop->page($page.parent_id)}
+          {$subpages = $wa->shop->pages($page.parent_id)}
+        {else}
+          {$subpages = $wa->shop->pages($page.id)}
+        {/if}
+
+        {if isset($page.parent_subpages)}
+        <ul class="s-sidebar-subpages">
+          <li><a href="{$wa_app_url}{$parent.full_url}">{$parent.name}</a></li>
+          {foreach $subpages as $p}
+            {if $p.id == $page.id}
+              <li class="default-bg"><span>{$p.name}</span></li>
+            {else}
+              <li><a href="{$p.url}">{$p.name}</a></li>
+            {/if}
+          {/foreach}
+        </ul>
+        {else}
+        <ul class="s-sidebar-subpages">
+          <li class="default-bg"><span>{$page.name}</span></li>
+            {foreach $subpages as $p}
+              <li><a href="{$p.url}">{$p.name}</a></li>
+            {/foreach}
+        </ul>
+        {/if}
+    {/if}
+
+    {* Categories navigation *}
+    {if !empty($theme_settings.sidebar_categories_show)}
+        {if isset($category)}{$selected_category=$category.id}{else}{$selected_category=null}{/if}
+        {$categories = $wa->shop->categories(0, 1, true)}
+        <ul class="s-sidebar-categories">
+        {foreach $categories as $cat}
+    
+            {$selected_child = false}
+            {foreach $cat.childs as $child}
+                {if $selected_category == $child.id}
+                    {$selected_child = true}
+                {/if}
+            {/foreach}
+    
+            <li class="s-sidebar-categories-main{if $selected_category == $cat.id || $selected_child} is-selected{/if}">
+                <a href="{$cat.url}"><span{if $selected_category == $cat.id || $selected_child} class="default-bg"{/if}>{$cat.name}{if count($cat.childs)} <i class="fa fa-angle-down" aria-hidden="true" data-toggle="collapse" data-target="#s-sidebar-subcategory-{$cat.id}" aria-expanded="{if $selected_category == $cat.id || $selected_child}true{else}false{/if}" aria-controls="s-sidebar-subcategory-{$cat.id}" role="button"></i>{/if}</span></a>
+                {if count($cat.childs)}
+                    <ul id="s-sidebar-subcategory-{$cat.id}" class="collapse{if $selected_category == $cat.id || $selected_child} in{/if}">
+                    {foreach $cat.childs as $child}
+                        <li class="{if $selected_category == $child.id}is-selected{/if}">
+                            <a href="{$child.url}"><span>{$child.name}</span></a>
+                        </li>
+                    {/foreach}
+                    </ul>
+                {/if}
+            </li>
+        {/foreach}
+        </ul>
+    {/if}
+
+    {* Show subcategories navigation *}
+    {if !empty($category) && !empty($theme_settings.sidebar_subcategories_show)}
+        {$_catalogs = $category.subcategories}
+        {if !empty($_catalogs) && $category.depth >= 1}
+            <div class="s-sidebar-subcategories-wrapper">
+                <div class="s-sidebar-subcategories-header default-bg" data-toggle="collapse" data-target="#s-sidebar-subcategories" aria-expanded="{if !empty($theme_settings.sidebar_subcategories)}true{else}false{/if}">[`Subcategories`] <i class="fa fa-angle-{if !empty($theme_settings.sidebar_subcategories)}up{else}down{/if} default-color" aria-hidden="true"></i></div>
+                <ul id="s-sidebar-subcategories" class="s-sidebar-subcategories collapse{if !empty($theme_settings.sidebar_subcategories)} in{/if}">
+                    {foreach $_catalogs as $cat_item}
+                        <li>
+                            <a href="{$cat_item.url}">{$cat_item.name}</a>
+                        </li>
+                    {/foreach}
+                </ul>
+            </div>
+        {/if}
+    {/if}
+
+    {* Display category filters *}
+    {if !empty($category) && !empty($filters)}
+        {include file="./category.filters.html" inline}
+    {/if}
+
+    {$_hook_frontend_sidebar_section = false}
+    {foreach $frontend_nav as $plugin => $output}
+        {if !empty($output)}
+            {$_hook_frontend_sidebar_section = true}
+        {/if}
+    {/foreach}
+
+    {foreach $frontend_nav as $_key => $_}
+        <div role="tablist" class="s-widget hidden-xs-down">
+            <div class="s-widget-header default-bg" role="tab" data-toggle="collapse" data-target="#s-widget-{$_key}" aria-expanded="{if !empty($theme_settings.sidebar_plugins)}true{else}false{/if}">
+                <span>{if substr($_key, -7) == '-plugin'}{$wa->pluginName(substr($_key, 0, -7))}{else}[`More`]{/if}</span><i class="fa fa-lg fa-angle-{if !empty($theme_settings.sidebar_plugins)}up{else}down{/if} default-color"></i>
+            </div>
+            <div class="s-widget-body collapse{if !empty($theme_settings.sidebar_plugins)} in{/if}" id="s-widget-{$_key}">
+                {$_}
+            </div>
+        </div>
+    {/foreach}
+
+    {$tagcloud = $wa->shop->tags()}
+    {if $tagcloud && $wa->app() == 'shop'}
+        <div class="s-widget s-widget-tags hidden-xs-down" role="tablist">
+            <div class="s-widget-header default-bg" role="tab" data-toggle="collapse" data-target="#s-widget-tags" aria-expanded="{if !empty($theme_settings.sidebar_tags)}true{else}false{/if}"><span>[`Tags`]</span><i class="fa fa-lg fa-angle-{if !empty($theme_settings.sidebar_tags)}up{else}down{/if} default-color"></i></div>
+            <div class="s-widget-body collapse{if !empty($theme_settings.sidebar_tags)} in{/if}" id="s-widget-tags">
+                <div class="s-widget-wrapper">
+                    {foreach $tagcloud as $tag}
+                        <a class="label default-color" href="{$wa_app_url}tag/{$tag.uri_name}/">{$tag.name|escape}</a>
+                    {/foreach}
+                </div>
+            </div>
+        </div>
+    {/if}
+
+    {if $theme_settings.show_social}
+    <div class="s-sidebar-social p-y-1 hidden-sm-down">
+	    {if !empty($theme_settings.facebook_likebox_code)}
+		    <div class="likebox">
+				  {$theme_settings.facebook_likebox_code}
+			  </div>
+		  {/if}
+    	{if !empty($theme_settings.twitter_timeline_code)}
+    		<div class="likebox">
+    			{$theme_settings.twitter_timeline_code}
+    		</div>
+    	{/if}
+  		{if !empty($theme_settings.vk_widget_code)}
+  			<div class="likebox">
+  				{$theme_settings.vk_widget_code}
+  			</div>
+  		{/if}
+    </div>
+    {/if}
+
+</nav>
+
+{literal}
+    <script>
+        ( function($) {
+
+            new ProductsFilter({
+                $wrapper: $("#s-category-filters")
+            })
+
+
+            function collapseCookie() {
+
+                $(".s-sidebar-block .collapse").on('shown.bs.collapse', function () {
+
+                    var collapseIn = $.cookie('collapse_in');
+                    collapseIn = (collapseIn) ? collapseIn.split(',') : [];
+
+                    var collapseIn_id = $(this).attr('id'),
+                        index = $.inArray( collapseIn_id + '', collapseIn);
+
+                    if (index != -1) {
+                        collapseIn.splice(index, 1)
+                    }
+
+                    if (collapseIn.length > 0) {
+                        $.cookie('collapse_in', collapseIn.join(','), { expires: 30, path: '/'});
+                    } else {
+                        $.cookie('collapse_in', null, {path: '/'});
+                    }
+
+                    var collapseOut = $.cookie('collapse_out');
+                    collapseOut = (collapseOut) ? collapseOut.split(',') : [];
+
+                    var collapseOut_id = $(this).attr('id'),
+                        index = $.inArray( collapseOut_id + '', collapseOut);
+
+                    if (index == -1) {
+                        collapseOut.push(collapseOut_id);
+                        $.cookie('collapse_out', collapseOut.join(','), { expires: 30, path: '/'});
+                    }
+
+                });
+
+                $(".s-sidebar-block .collapse").on('hidden.bs.collapse', function () {
+
+                    var collapseOut = $.cookie('collapse_out');
+                    collapseOut = (collapseOut) ? collapseOut.split(',') : [];
+
+                    var collapseOut_id = $(this).attr('id'),
+                        index = $.inArray( collapseOut_id + '', collapseOut);
+
+                    if (index != -1) {
+                        collapseOut.splice(index, 1)
+                    }
+
+                    if (collapseOut.length > 0) {
+                        $.cookie('collapse_out', collapseOut.join(','), { expires: 5, path: '/'});
+                    } else {
+                        $.cookie('collapse_out', null, {path: '/'});
+                    }
+
+                    var collapseIn = $.cookie('collapse_in');
+                    collapseIn = (collapseIn) ? collapseIn.split(',') : [];
+
+                    var collapseIn_id = $(this).attr('id'),
+                        index = $.inArray( collapseIn_id + '', collapseIn);
+
+                    if (index == -1) {
+                        collapseIn.push(collapseIn_id);
+                        $.cookie('collapse_in', collapseIn.join(','), { expires: 5, path: '/'});
+                    }
+
+                });
+
+                var collapseIn = $.cookie('collapse_in');
+                $elements = (collapseIn) ? collapseIn.split(',') : [];
+
+                for ( var i=0; i < $elements.length; i++ ) {
+
+                    var $element = $('body').find("#"+$elements[i]);
+                    $element.removeClass('in').collapse('hide');
+
+                }
+
+                var collapseOut = $.cookie('collapse_out');
+                $elements = (collapseOut) ? collapseOut.split(',') : [];
+
+                for ( var i=0; i < $elements.length; i++ ) {
+
+                    var $element = $('body').find("#"+$elements[i]);
+                    $element.addClass('in').collapse('show');
+
+                }
+
+            }
+
+            if ($('.s-sidebar-block .collapse').length) {
+                collapseCookie();
+            }
+
+        })(jQuery);
+    </script>
+{/literal}
+
+{/strip}

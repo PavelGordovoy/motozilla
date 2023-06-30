@@ -1,0 +1,152 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: contacts/plugins/shopssendpulse\n"
+"POT-Creation-Date: 2013-03-12 07:14+0400\n"
+"PO-Revision-Date: \n"
+"Last-Translator: contacts/plugins/shopssendpulse\n"
+"Language-Team: contacts/plugins/shopssendpulse\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"Language: en_US\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Sync with SendPulse"
+msgstr ""
+
+msgid "ID"
+msgstr ""
+
+msgid "ID for REST API"
+msgstr ""
+
+msgid "Secret key"
+msgstr ""
+
+msgid "Secret Key for REST API"
+msgstr ""
+
+msgid "Address books for sync"
+msgstr ""
+
+msgid "SendPulse"
+msgstr ""
+
+msgid "Import/export emails to/from SendPulse"
+msgstr ""
+
+msgid "Book not found"
+msgstr ""
+
+msgid "Export to SendPulse"
+msgstr ""
+
+msgid "Categories for export"
+msgstr ""
+
+msgid "Import from SendPulse"
+msgstr ""
+
+msgid "Books for import"
+msgstr ""
+
+msgid "SendPulse settings"
+msgstr ""
+
+msgid "Import"
+msgstr ""
+
+msgid "Export"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "cancel"
+msgstr ""
+
+msgid "To automatically export customers, you need to configure the CRON, to do this, add the job:"
+msgstr ""
+
+msgid "Contact fields for export"
+msgstr ""
+
+msgid "Check all"
+msgstr ""
+
+msgid "Uncheck all"
+msgstr ""
+
+msgid "Completed"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+
+msgid "Could not connect to api, check your ID and SECRET"
+msgstr ""
+
+
+
+msgid "Name"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Job title"
+msgstr ""
+
+msgid "Company"
+msgstr ""
+
+msgid "Gender"
+msgstr ""
+
+msgid "Phone"
+msgstr ""
+
+msgid "Im clients"
+msgstr ""
+
+msgid "Address"
+msgstr ""
+
+msgid "Site"
+msgstr ""
+
+msgid "Birthday"
+msgstr ""
+
+msgid "Locale"
+msgstr ""
+
+msgid "Timezone"
+msgstr ""
+
+msgid "Social networks"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Site"
+msgstr ""
+
+msgid "Phones"
+msgstr ""
+
+
+
+
+
+
+
+
+
+

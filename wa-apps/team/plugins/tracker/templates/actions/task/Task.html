@@ -1,0 +1,356 @@
+{strip}
+<div>
+<header class="t-content-header ui breadcrumb">
+	<h1 style="margin-bottom: 10px;">
+	<a class="section" href="?plugin=tracker&module=tasks">Задачи</a>
+	<i class="right angle icon divider"></i>
+	{if $task}<div class="active section">{$task['title']|escape:'html'}</div>{else}Не найдено{/if}
+	{if teamTrackerAccess::canAddTask()}
+		<a href="?plugin=tracker&module=tasks&action=add"><i class="icon16 add router-loading-indicator"></i></a>
+	{/if}
+	</h1>
+</header>
+
+{if $task}
+<div class="ui {teamTrackerPlugin::$status_semantic_ui_class[$task['status']]} message level-{$task['level']} {if $task['expired']}expired{/if}">
+	<span data-level="{$task['level']}" data-color="{teamTrackerPlugin::$level_semantic_ui_class[$task['level']]}" data-label="{teamTrackerPlugin::$level[$task['level']]}" id="tracker-task-level" href="?plugin=tracker&module=tasks&level={$task['level']}" class="ui {teamTrackerPlugin::$level_semantic_ui_class[$task['level']]} ribbon label">{teamTrackerPlugin::$level[$task['level']]}</span>
+	<span id="tracker-task-title" class="header" style="display: inline;">{if $task['status'] == 'deleted'}<s>{/if}{$task['title']|escape:'html'}{if $task['status'] == 'deleted'}</s>{/if}</span>
+	<div style="float: right; margin-right: -5px;" class="ui {teamTrackerPlugin::$level_semantic_ui_class[$task['level']]} label">
+		<i class="calendar icon"></i> {if $task['expired']}<s>{/if}До {$task['until_date']|wa_date:'humandate'} {ifempty($task['until_time'])}{if $task['expired']}</s>{/if}
+	</div>
+	<div style="margin-top: 10px;" class="small">для {if $task['type'] == 'contact'}&nbsp;<a data-contributor-type="contact" data-contributor="{$task['contributor_contact_id']}" id="tracker-task-contributor" href="u/{$task['contributor_contact']->get('login')}/"><img class="ui avatar image" src="{$task['contributor_contact']->getPhoto()}"/>{else}<a data-contributor-type="group" data-contributor="{$task['contributor_group_id']}" id="tracker-task-contributor" href="group/{$task['contributor_group_id']}/">{/if} <b>{$task['name']}</b></a> от &nbsp;<a href="u/{$task['manager_contact']->get('login')}/"><img class="ui avatar image" src="{$task['manager_contact']->getPhoto()}"/> <b>{$task['manager_name']}</b></a> {$task['date']|wa_date:'humandatetime'}</div>
+	<div class="ui mini steps">
+		<div class="{if $task['status'] == 'new'}active{else}disabled{/if} step">
+			<i class="sticky note icon"></i>
+			<div class="content">
+				<div class="title">Новый</div>
+			</div>
+		</div>
+		<div class="{if $task['status'] == 'checking'}active{else}disabled{/if} step">
+			<i class="unhide icon"></i>
+			<div class="content">
+				<div class="title">На рассмотрении</div>
+			</div>
+		</div>
+		{if $task['status'] == 'deleted'}
+		<div class="active step">
+			<i class="remove icon red"></i>
+			<div class="content">
+				<div class="title">Отклонено</div>
+			</div>
+		</div>
+		{else}
+		<div class="{if $task['status'] == 'processing'}active{else}disabled{/if} step">
+			<i class="wait icon"></i>
+			<div class="content">
+				<div class="title">В процессе</div>
+			</div>
+		</div>
+		<div class="{if $task['status'] == 'done'}active{else}disabled{/if} step">
+			<i class="checkmark icon{if $task['status'] == 'done'} green{/if}"></i>
+			<div class="content">
+				<div class="title">Выполнено</div>
+			</div>
+		</div>
+		{/if}
+	</div>
+</div>
+<div style="white-space: pre-wrap;" id="tracker-task-text" class="ui big message">
+	{$task['text']|escape:'html'}
+</div>
+{if teamTrackerAccess::canEditTask($task['id']) || teamTrackerAccess::canDeleteTask($task['id'])}
+<select style="display: none;" id="tracker-levels">
+	{foreach teamTrackerPlugin::$level as $level => $label}
+	<option data-color="{teamTrackerPlugin::$level_semantic_ui_class[$level]}" value="{$level}">{$label}</option>
+	{/foreach}
+</select>
+<select style="display: none;" id="tracker-contributors">
+	{if teamTrackerAccess::canAddTaskFor('group')}
+	<option disabled>Группы</option>
+	{foreach teamHelper::getVisibleGroups() as $group}
+	{if teamTrackerAccess::canAddTaskFor($group['id'])}<option value="group-{$group['id']}">{$group['name']|escape:'html'}</option>{/if}
+	{/foreach}
+	{/if}
+	{if teamTrackerAccess::canAddTaskFor('location')}
+	<option disabled>Офисы</option>
+	{foreach teamHelper::getVisibleLocations() as $location}
+	{if teamTrackerAccess::canAddTaskFor($location['id'])}<option value="group-{$location['id']}">{$location['name']|escape:'html'}</option>{/if}
+	{/foreach}
+	{/if}
+	{if teamTrackerAccess::canAddTaskFor('contact')}
+	<option disabled>Пользователи</option>
+	{foreach teamHelper::getUsers(false) as $user}
+	<option value="contact-{$user['id']}">{$user['name']|escape:'html'}</option>
+	{/foreach}
+	{/if}
+</select>
+
+<div data-id="{$task['id']}" style="margin-right: 10px;" class="ui buttons">
+	{if teamTrackerAccess::canEditTask($task['id'])}<button id="tracker-task-edit" class="ui blue button"><i class="edit icon"></i> Редактировать</button>{/if}
+	{if teamTrackerAccess::canDeleteTask($task['id'])}<button id="tracker-task-delete" class="ui red button"><i class="trash icon"></i> Удалить</button>{/if}
+</div>
+{/if}
+{if teamTrackerAccess::canChangeStatus($task['id'])}
+<div data-id="{$task['id']}" class="ui buttons">
+	<button data-status="new" class="tracker-task-status ui disabled button"><i class="sticky note icon"></i> Новый</button>
+	<button data-status="checking" class="tracker-task-status ui {if !in_array($task['status'], array('deleted', 'checking', 'processing', 'done'))}positive{/if} {if $task['status'] != 'new'}disabled{/if} button"><i class="unhide icon"></i> К рассмотрению</button>
+	<button data-status="processing" class="tracker-task-status ui {if !in_array($task['status'], array('deleted', 'processing', 'done'))}positive{/if} {if $task['status'] != 'checking'}disabled{/if} button"><i class="wait icon"></i> В процессе</button>
+	<button data-status="done" class="tracker-task-status ui {if !in_array($task['status'], array('deleted'))}positive{/if} {if $task['status'] != 'processing'}disabled{/if} button"><i class="checkmark icon"></i> Выполнено</button>
+</div>
+<div data-id="{$task['id']}" style="margin-left: 10px;" class="ui buttons">
+	<button data-status="deleted" class="tracker-task-status ui {if $task['status'] == 'deleted' || $task['status'] == 'done'}disabled{/if} {if $task['status'] != 'done'}negative{/if} button"><i class="remove icon"></i> Отклонить</button>
+</div>
+{/if}
+
+<h3 style="margin-top: 20px;" class="ui horizontal divider header">Обсуждения</h3>
+{if teamTrackerAccess::canCommentTask($task['id'])}<form data-id="{$task['id']}" method="post" action="?plugin=tracker&module=task&action=comment" id="tracker-task-comment-form" style="margin-top: 20px;" class="ui reply form">
+	<input type="hidden" name="task_id" value="{$task['id']}"/>
+	<div class="field"><textarea id="tracker-task-comment-textarea" name="text" style="width: 98%; min-height: 100px; height: 100px;"></textarea></div>
+	<button class="ui blue button"><i class="reply icon"></i> Отправить</button>
+</form>{/if}
+{if count($discussions) > 0}
+<div class="tracker-task-comments ui comments">
+{foreach $discussions as $element}
+{if $element['type'] == 'comment' && empty($element['parent_comment_id'])}
+	<div id="tracker-comment-{$element['id']}" class="comment">
+		<a href="u/{$element['contact']->get('login')}/" class="avatar">
+			<img src="{$element['contact']->getPhoto()}">
+		</a>
+		<div class="content">
+			<a href="u/{$element['contact']->get('login')}/" class="author">{$element['contact']->get('name')}</a>
+			<div class="metadata">
+				<span class="date">{$element['date']|wa_datetime:'humandatetime'}</span>
+			</div>
+			<div class="text">
+				{$element['text']|escape:'html'}
+			</div>
+			<div class="actions" data-id="{$element['id']}">
+				<a class="reply">Ответить</a>
+				{if $element['contact_id'] == $wa->userId() || teamHelper::hasRights('tracker.delete_any_comment')}<a class="delete">Удалить</a>{/if}
+			</div>
+			{if $element['has_replies']}
+			{$replies = teamTrackerCommentsModel::getReplies($element['id'])}
+			{if count($replies)}
+			<div style="padding-left: 0; margin-left: 0; margin-bottom: -10px;" class="comments">
+			{foreach $replies as $reply}
+				<div id="tracker-comment-{$reply['id']}" class="comment">
+					<a href="u/{$reply['contact']->get('login')}/" class="avatar">
+						<img src="{$reply['contact']->getPhoto()}">
+					</a>
+					<div class="content">
+						<a href="u/{$reply['contact']->get('login')}/" class="author">{$reply['contact']->get('name')}</a>
+						<div class="metadata">
+							<span class="date">{$reply['date']|wa_datetime:'humandatetime'}</span>
+						</div>
+						<div class="text">
+							{$reply['text']|escape:'html'}
+						</div>
+						<div class="actions" data-id="{$reply['id']}">
+							<a class="reply-for-reply" data-parent="{$element['id']}" data-firstname="{$reply['contact']->get('firstname')}">Ответить</a>
+							{if $reply['contact_id'] == $wa->userId() || teamHelper::hasRights('tracker.delete_any_comment')}<a class="delete">Удалить</a>{/if}
+						</div>
+					</div>
+				</div>
+			{/foreach}
+			</div>
+			<div style="padding-left: 0;" id="tracker-reply-form-{$element['id']}" class="tracker-comment-reply ui reply form"><div class="field"><input id="tracker-reply-input-{$element['id']}" type="text" placeholder="Напишите ответ..."></div> <button data-id="{$element['id']}" class="ui mini blue button send-reply"><i class="reply icon"></i> Ответить</button></div>
+			{/if}
+			{/if}
+		</div>
+	</div>
+{elseif $element['type'] == 'log'}
+</div>
+<h4 class="ui horizontal divider header">
+	<img class="ui avatar image" src="{$element['contact']->getPhoto()}"/>
+	&nbsp;
+	{if $element['before_status'] != $element['after_status']}
+	Статус задачи изменен на "<b>{teamTrackerPlugin::$status[$element['after_status']]}</b>"
+	{elseif $element['before_level'] != $element['after_level']}
+	Уровень задачи {if $element['after_level'] > $element['before_level']}повышен{else}понижен{/if} до <b>{teamTrackerPlugin::$level[$element['after_level']]}</b>
+	{/if}
+	<div class="small">{$element['date']|wa_datetime:'humandatetime'}</div>
+</h4>
+<div class="tracker-task-comments ui comments">
+{/if}
+{/foreach}
+</div>
+{/if}
+{else}
+	<p>Задача не найдена. Вероятно, она была удалена без возможности восстановления, либо Вы не имеете доступа к ее просмотру.</p>
+{/if}
+</div>
+{/strip}
+<script type="text/javascript">
+	(function($) {
+		"use strict";
+		
+		$.team.setTitle('{$title|escape}');
+		$('#tracker-task-comment-form').submit(function() {
+			let form = this;
+			if($('#tracker-task-comment-textarea').val().length >= 3) {
+				$.post($(this).attr('action'), $(this).serialize(), function(data) {
+					if(data.status == 'ok') {
+						if(!$('.ui.comments').length)
+							$(form).after($('<div class="tracker-task-comments ui comments"/>'));
+					
+						$('.ui.comments:first').prepend($('<div id="tracker-comment-' + data.data.id + '" class="comment"/>').append('<a class="avatar"><img src="' + data.data.avatar + '"></a>').append($('<div class="content"/>').append($('<a class="author"/>').text(data.data.name)).append('<div class="metadata">Только что</div>').append($('<div class="text"/>').text(data.data.text)).append('<div class="actions" data-id="' + data.data.id + '"><a class="reply">Ответить</a> <a class="delete">Удалить</a></div>')));
+						$('#tracker-task-comment-textarea').val('');
+					} else if(data.status == 'fail')
+						alert(data.errors[0][0]);
+				}, 'json');
+			} else {
+				$('#tracker-task-comment-textarea').parent().addClass('error');
+				alert('Минимум 3 символа!');
+				$('#tracker-task-comment-textarea').focus().keyup(function() {
+					if($(this).val().length >= 3)
+						$(this).parent().removeClass('error');
+				});
+			}
+			return false;
+		});
+		
+		$('#tracker-task-edit').click(function() {
+			let dat = this;
+		
+			let text_wrapper = $('#tracker-task-text');
+			let text = text_wrapper.text();
+			text_wrapper.html('<form class="ui form"><div class="field"><textarea id="tracker-task-text-textarea" style="width: 98%;"></textarea></div></form>');
+			$('#tracker-task-text-backup').val(text);
+			$('#tracker-task-text-textarea').focus().val(text);
+			
+			let title_wrapper = $('#tracker-task-title');
+			let title = title_wrapper.text();
+			title_wrapper.html($('<input id="tracker-task-title-input"/>').val(title).attr('data-backup', title));
+			
+			let contributor = $('#tracker-task-contributor');
+			contributor.hide().after($('<select id="tracker-task-contributor-select"/>').html($('#tracker-contributors').html()));
+			$('#tracker-task-contributor-select option').each(function() {
+				if($(this).val() == (contributor.data('contributor-type') + '-' + contributor.data('contributor')))
+					$(this).attr('selected', true);
+			});
+			
+			let level = $('#tracker-task-level');
+			level.html($('<select id="tracker-task-level-select"/>').html($('#tracker-levels').html()));
+			$('#tracker-task-level-select option').each(function() {
+				if($(this).val() == level.data('level'))
+					$(this).attr('selected', true);
+			});
+			$('#tracker-task-level-select').change(function() {
+				let color = $(this).find('option:selected').data('color');
+				$(this).parent().attr('class', 'ui ribbon label ' + color);
+			});
+			
+			$(this).parent().hide().after('<div id="tracker-edit-buttons" style="margin-right: 10px;" class="ui buttons"><button id="tracker-task-edit-save" class="ui green button"><i class="save icon"></i> Сохранить</button><div class="or" data-text="или"></div><button id="tracker-task-edit-cancel" class="ui button">Отмена</button></div>');
+			
+			$('#tracker-task-edit-cancel').click(function() {
+				text_wrapper.text(text);
+				title_wrapper.text(title);
+				$('#tracker-task-contributor-select').remove();
+				contributor.show();
+				level.html(level.data('label')).attr('class', 'ui ribbon label ' + level.data('color'));
+				
+				$('#tracker-edit-buttons').remove();
+				$(dat).parent().show();
+			});
+			
+			$('#tracker-task-edit-save').click(function() {
+				$.post('?plugin=tracker&module=task&action=edit&id=' + $(dat).parent().data('id'), {
+					text: $('#tracker-task-text-textarea').val(),
+					title: $('#tracker-task-title-input').val(),
+					contributor: $('#tracker-task-contributor-select').val(),
+					level: $('#tracker-task-level-select').val(),
+				}, function(data) {
+					if(data.status == 'ok')
+						location.reload();
+					else if(data.status == 'fail')
+						alert(data.errors[0][0]['message']);
+				});
+			});
+		});
+		
+		$('#tracker-task-delete').click(function() {
+			if(confirm('Вы действительно хотите удалить эту задачу? Это действия нельзя отменить'))
+				$.post('?plugin=tracker&module=task&action=delete&id=' + $(this).parent().data('id'), function(data) {
+					if(data.status == 'ok')
+						location.href = '?plugin=tracker&module=tasks';
+					else if(data.status == 'fail')
+						alert(data.errors[0][0]);
+				});
+		});
+		
+		$.fn.event = function(events, selector, handler) {
+			return this.off(events, selector).on(events, selector, handler);
+		};
+		
+		$(document).event('click', '.tracker-task-comments a.reply', function(e) {
+			let task_id = $('#tracker-task-comment-form').data('id'), comment_id = $(this).parent().data('id');
+			
+			if(!$('#tracker-reply-form-' + comment_id).length)
+				$(this).parent().after($('<div id="tracker-reply-form-' + comment_id + '" class="tracker-comment-reply ui reply form"><div class="field"><input id="tracker-reply-input-' + comment_id + '" type="text" placeholder="Напишите ответ..."/></div> <button data-id="' + comment_id + '" class="ui mini blue button send-reply"><i class="reply icon"></i> Ответить</button></div>'));
+			$('#tracker-reply-input-' + comment_id).focus();
+			e.preventDefault();
+		});
+		
+		$(document).event('click', '.tracker-task-comments a.reply-for-reply', function(e) {
+			let comment_id = $(this).data('parent'), firstname = $(this).data('firstname');
+			
+			$('#tracker-reply-input-' + comment_id).val(firstname + ', ').focus();
+			e.preventDefault();
+		});
+		
+		$(document).event('click', '.tracker-comment-reply .send-reply', function() {
+			let task_id = $('#tracker-task-comment-form').data('id'), comment_id = $(this).data('id'), input = $('#tracker-reply-input-' + comment_id), dat = this;
+			
+			if(input.val().length >= 3) {
+				$.post($('#tracker-task-comment-form').attr('action'), {
+					task_id: task_id,
+					parent_id: comment_id,
+					text: input.val()
+				}, function(data) {
+					if(!$(dat).closest('.comment').find('.comments').length)
+						$(dat).parent().before($('<div style="padding-left: 0; margin-left: 0; margin-bottom: -10px;" class="comments"/>'));
+					
+					$(dat).closest('.comment').find('.comments').append($('<div id="tracker-comment-' + data.data.id + '" class="comment"/>').append('<a class="avatar"><img src="' + data.data.avatar + '"></a>').append($('<div class="content"/>').append($('<a class="author"/>').text(data.data.name)).append('<div class="metadata">Только что</div>').append($('<div class="text"/>').text(data.data.text)).append('<div class="actions" data-id="' + data.data.id + '"><a class="reply-for-reply" data-parent="' + comment_id + '" data-firstname="' + data.data.firstname + '">Ответить</a><a class="delete">Удалить</a></div>')));
+					input.val('');
+				}, 'json');
+			} else {
+				$(input).parent().addClass('error');
+				alert('Минимум 3 символа!');
+				$(input).focus().keyup(function() {
+					if($(this).val().length >= 3)
+						$(this).parent().removeClass('error');
+				});
+			}
+		});
+		
+		$(document).event('click', '.tracker-task-comments a.delete', function(e) {
+			let task_id = $('#tracker-task-comment-form').data('id'), comment_id = $(this).parent().data('id');
+			
+			if(confirm('Вы уверены, что хотите удалить этот комментарий?'))
+				$.post('?plugin=tracker&module=task&action=deleteComment', {
+					task_id: task_id,
+					comment_id: comment_id
+				}, function(data) {
+					if($('#tracker-comment-' + comment_id).closest('.comments').find('.comment').length == 1)
+						$('#tracker-comment-' + comment_id).closest('.comments').remove();
+					else
+						$('#tracker-comment-' + comment_id).remove();
+				}, 'json');
+			e.preventDefault();
+		});
+		
+		$('.tracker-task-status').click(function() {
+			let id = $(this).parent().data('id'), status = $(this).data('status');
+			
+			$.post('?plugin=tracker&module=task&action=changeStatus', {
+				id: id,
+				status: status
+			}, function(data) {
+				if(data.status == 'ok')
+					location.reload();
+				else if(data.status == 'fail')
+					alert(data.errors[0][0]);
+			});
+		});
+	})(jQuery);
+</script>

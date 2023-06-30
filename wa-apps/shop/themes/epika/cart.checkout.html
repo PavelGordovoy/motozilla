@@ -1,0 +1,77 @@
+{if $cart.count}
+
+<div class="fl-cart-in cart-content">
+    <ul>
+        {$sub_total = 0}
+        {foreach $cart.items as $item}
+        <li class="fly-in-cart-item cart-item" data-id="{$item.id}">
+            <div class="item-thumb" data-th="Фото">
+                <a href="{$wa->shop->productUrl($item.product)}" title="{$item.product.name|escape}">{$wa->shop->productImgHtml($item.product, '60x0', ['default' => "`$wa_theme_url`assets/img/nophoto.png"])}</a>
+            </div>
+
+            <div class="item-name">
+                <a href="{$wa->shop->productUrl($item.product)}" class="bold">
+                    {$item.product.name|escape|truncate:60}
+                    <span class="item-price">
+                        <span class="sku">{if $item.sku_name && $item.sku_name != $item.product.name}{$item.sku_name|escape}{/if}</span>
+                    </span>
+                </a>
+
+                {if !empty($item.services)}
+                <!-- services -->
+
+                    <div class="col w15 services">
+                        {foreach $item.services as $service_id => $s}
+                            <!-- one option -->
+
+                            {if !empty($s.id)}
+                                 <span class="ep-checkout-var">+ {$s.name|escape} - {if $s.price && !isset($s.variants)}(+{shop_currency_html($s.price, $s.currency)}){/if}
+                                {if isset($s.variants)}
+                                    {foreach $s.variants as $variant_id => $v}
+                                        {if $s.variant_id == $variant_id} {$v.name|escape} (+{shop_currency($v.price, $s.currency)}){/if}
+                                    {/foreach}
+                                {/if}
+                                </span>
+                            {/if}
+
+                        {/foreach}
+                    </div>
+
+                {/if}
+
+                <div class="item-qty">
+                    <span>{$item.quantity} шт.</span>
+                    <span class="item-total">{shop_currency_html($item.full_price, true)}</span>
+                </div>
+            </div>
+
+        </li>
+        {$sub_total = $sub_total + $item.full_price}
+        {/foreach}
+    </ul>
+
+    <div class="total">
+        <span class="t-subtotal">Всего <strong class="cart-subtotal">{shop_currency_html($sub_total, true)}</strong></span>
+        <span class="t-discount">Скидка <strong class="cart-discount">{if $discount > 0}&minus; {/if}{shop_currency_html($discount, true)}</strong></span>
+
+        {if shopDiscounts::isEnabled('coupons')}
+            <div {if !$coupon_code}style="display: none;"{/if} id="apply-coupon-code">
+            [`Coupon code`]:
+            <input type="text" name="coupon_code" value="{$coupon_code|escape}"> <input type="submit" value="[`Apply`]" class="blue-btn cart-coupon-btn">
+            {if $coupon_code && empty($coupon_discount)}
+                <div class="errormsg">[`Invalid coupon code`]</div>
+            {/if}
+            </div>
+        {/if}
+
+        <span class="t-total">Итого <strong class="cart-total">{shop_currency_html($cart.total, true)}</strong></span>
+        <a class="checkout-open-cart">Редактировать заказ</a>
+    </div>
+</div>
+
+{else}
+<div class="cart your-cart-is-empty">
+    <h1><i class="icon-s-cart"></i>[`Shopping cart`]</h1>
+    <p>[`Your shopping cart is empty.`]</p>
+</div>
+{/if}

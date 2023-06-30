@@ -1,0 +1,133 @@
+{strip}
+
+{function name="get_cloned_fields" cloned_fields=[] sections=[] form_fields=[]}
+    {foreach $sections as $section}
+        {if (isset($cloned_fields[$section.id]))}
+            * * *{if !empty($show_section_details)} [`Beginning of the`] {$section.title} #{$section.id} {else} {/if}* * *[br]
+            {foreach $cloned_fields[$section.id] as $fields}
+                {$section_cloned_fields = []}
+                {if isset($fields._)}
+                    {$section_cloned_fields = $fields._}
+                {/if}
+
+                {call name="get_records" form_fields=array_intersect_key($form_fields, $section.all_childs) record_fields=$fields cloned_fields=$section_cloned_fields}
+
+                {if !$fields@last}
+                    - - - - - -[br]
+                {/if}
+            {/foreach}
+            * * *{if !empty($show_section_details)} [`End of the`] {$section.title} #{$section.id} {else} {/if}* * *[br]
+        {/if}
+    {/foreach}
+{/function}
+
+{function name="get_records" form_fields=[] record_fields=[] cloned_fields=[]}
+    {$private_field_access = multiformHelper::privateFieldAccess($form)}
+    {$active_section = 0}
+    {$opened_sections = []}
+
+    {foreach $form_fields as $key => $form_field}
+        {$field_id = $form_field.id}
+
+        {* Если секция закончилась *}
+        {if empty($form_field['additional']['section'])}{$active_section = 0}{/if}
+
+        {* Закрываем секцию в секции и проверяем наличие дублированных полей *}
+        {if ($opened_sections && !empty($form_field['additional']['section']) && $active_section !== (int) $form_field['additional']['section'])}
+            {$section = array_pop($opened_sections)}
+            {get_cloned_fields cloned_fields=$cloned_fields sections=[$section] form_fields=$form_fields}
+        {/if}
+        {* Если поле не принадлежит ни одной секции, значит можно закрывать все секции от начала до конца *}
+        {if ($opened_sections && empty($form_field['additional']['section']))}
+            {get_cloned_fields cloned_fields=$cloned_fields sections=$opened_sections form_fields=$form_fields}
+            {$opened_sections = []}
+        {/if}
+        {if ($form_field['type'] == 'section')}
+            {$opened_sections[] = $form_field}
+        {/if}
+        {if (!empty($form_field['additional']['section']) || $form_field['type'] == 'section')}
+            {if $form_field['type'] == 'section'}
+                {$active_section = (int) $key}
+            {else}
+                {$active_section = (int) $form_field['additional']['section']}
+            {/if}
+        {/if}
+
+        {if !isset($record_fields[$field_id]) || (isset($record_fields[$field_id]) && $record_fields[$field_id] == '') || ($form_field['private'] && !$private_field_access) || ($form_field.hidden && empty($show_hidden)) || $form_field.type == 'button'}{continue}{/if}
+        {$r = $record_fields[$field_id]}
+        {if $form_field.type == 'checkbox' || $form_field.type == 'table_grid'}
+            {if !empty($form_field.option_fields)}
+                {if $form_field.type == 'checkbox'}
+                    {$form_field.title|escape}:[br]
+                    {foreach $form_field.option_fields as $of}
+                        {if isset($r[$of.id])}
+                            [space][space]- {if !empty($r[$of.id])}{$r[$of.id]|escape}{/if}[br]
+                        {/if}
+                    {/foreach}
+                {else}
+                    {foreach $form_field.option_fields.statement as $of2}
+                        {if !empty($form_field.options.customize_statement_keys)}{$of2.key|escape}{else}{$of2.value|escape}{/if}: {if !empty($r[$of2.id])}{$r[$of2.id]|escape}{/if}[br]
+                    {/foreach}
+                    {continue}
+                {/if}
+            {/if}
+        {elseif $form_field.type == 'formula'}
+            {$form_field.title|escape}:[space]
+            {if is_array($r)}
+                {foreach $r as $checked_field => $fail_field}
+                    [`Checked value not equal to user value.`][br]
+                    [space][space]- [`User value`] = {$fail_field|escape}[br]
+                    [space][space]- [`Checked value`] = {$checked_field|escape}[br]
+                {/foreach}
+            {else}
+                {$r|escape}[br]
+            {/if}
+        {else}
+            {$form_field.title|escape}:[space]
+            {if $form_field.type == 'email'}
+                <{$r|escape}>[br]
+            {elseif $form_field.type == 'file'}
+                [br]
+                {foreach $r as $file}
+                    [space][space]- {$file.filename|escape} [br]
+                {/foreach}
+            {elseif $form_field.type == 'radio'}
+                {if is_array($r)}
+                    {foreach $r as $option_id => $r1}
+                        {$r1|escape}[br]
+                        {break}
+                    {/foreach}
+                {else}
+                    {$r|escape}[br]
+                {/if}
+            {elseif is_array($r)}
+                {foreach $r as $r1}
+                    {$r1|escape}[br]
+                    {break}
+                {/foreach}
+            {else}
+                {$r|escape}[br]
+            {/if}
+        {/if}
+    {/foreach}
+
+    {if ($opened_sections)}
+        {get_cloned_fields cloned_fields=$cloned_fields sections=$opened_sections form_fields=$form_fields}
+    {/if}
+{/function}
+
+[`Record ID`]: {multiformHelper::formatRecordId($record.id, $form)}[br][br]
+
+{if !empty($record.fields) || !empty($record.cloned_fields)}
+
+    {* Вывод записей формы *}
+    {get_records form_fields=$form.fields record_fields=$record.fields cloned_fields=$record.cloned_fields}
+
+    {if !empty($record.fields[0])}
+        {foreach $record.fields[0] as $cp_ext => $cp}
+            {if !empty($custom_params[$cp_ext])}{$custom_params[$cp_ext]|escape}{else}{$cp_ext|escape}{/if}: {$cp|escape}[br]
+        {/foreach}
+    {/if}
+{/if}
+
+{/strip}

@@ -1,0 +1,157 @@
+{strip}
+
+<link rel="stylesheet" type="text/css" href="{$plugin_url}js/colorpicker/css/colorpicker.css">
+<script src="{$plugin_url}js/colorpicker/js/colorpicker.js"></script>
+
+<div class="w-dialog-wrapper w-constructor-dialog is-full-screen">
+    <div class="w-dialog-background"></div>
+    <div class="w-dialog-block gray-header compact-header is-animated">
+        <form action="" method="post">
+            {if !empty($field)}
+                <header class="w-dialog-header">
+                    <h1>{$field.name|escape}{if !empty($field.params.name.value)} <span class="grey no-bold" style="font-size: 14px;">({$field.params.name.value|escape})</span>{/if}</h1>
+                </header>
+
+                <div class="w-dialog-content">
+                    <div class="fields">
+                        {if $field.type !== 'additional'}
+                            <div class="field">
+                                <div class="name">[`Output places`]</div>
+                                <div class="value">
+                                    {$output_places = ['before_name' => "[`Before contact name`]", 'after_name' => '[`After contact name`]',
+                                    'before_tabs' => '[`Before contact tabs`]', 'after_tabs' => '[`After contact tabs`]', 'bottom' => '[`At the bottom of contact profile`]',
+                                    'after_request_id' => '[`After request ID`]']}
+
+                                    {foreach $output_places as $k => $v}
+                                        <div class="margin-block bottom semi">
+                                            <label><input type="radio" name="fields[output]"{if (!empty($field.params.output) && $field.params.output == $k) || (empty($field.params.output) && $k == 'after_name')} checked{/if} value="{$k}" /> {$v}</label>
+                                        </div>
+                                    {/foreach}
+                                </div>
+                            </div>
+                        {/if}
+                        <div class="field">
+                            <div class="name">[`Field name`]</div>
+                            <div class="value">
+                                {$show_name = !empty($field.params.name.show) || !isset($field.params.name.show)}
+                                <label>
+                                    <input type="checkbox" name="fields[name][show]"{if $show_name} checked{/if} value="1" class="js-show-name" />
+                                    [`Show`]
+                                </label>
+                                <div class="margin-block top"{if !$show_name}style="display: none"{/if}>
+                                    <div class="color-icon" title='[`change color`]' data-color="{if !empty($field.params.name.color)}{$field.params.name.color|escape}{else}aaaaaa{/if}"></div>
+                                    <input type="hidden" name="fields[name][color]" value='{if !empty($field.params.name.color)}{$field.params.name.color|escape}{else}aaaaaa{/if}'>
+                                    <div class="cell-block">
+                                        <input type="text" name="fields[name][value]" style="width:230px"  placeholder="[`Your own name of the field`]" value="{if !empty($field.params.name.value)}{$field.params.name.value|escape}{/if}" />
+                                    </div>
+                                </div>
+
+                                <input type="hidden" name="fields[background]" value='{if !empty($field.params.background)}{$field.params.background|escape}{else}f3f3ee{/if}'>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="name">[`Font`]</div>
+                            <div class="value">
+                                <div class="color-icon" title='[`change color`]' data-color="{if !empty($field.params.font.color)}{$field.params.font.color|escape}{else}000000{/if}"></div>
+                                <input type="hidden" name="fields[font][color]" value='{if !empty($field.params.font.color)}{$field.params.font.color|escape}{else}000000{/if}'>
+                                <div class="cell-block">
+                                    {$font_family = ["'Helvetica Neue', 'Liberation Sans', Arial, sans-serif" => "Helvetica",
+                                    "Arial,sans-serif" => "Arial", "'Comic Sans MS',cursive,sans-serif" => "Comic Sans MS",
+                                    "'Courier New',Courier,monospace" => "Courier New", "Georgia,serif" => "Georgia",
+                                    "'Lucida Sans Unicode','Lucida Grande',sans-serif" => "Lucida Sans", "'Palatino Linotype','Book Antiqua',Palatino,serif" => "Palantino Linotype",
+                                    "Tahoma,sans-serif" => "Tahoma", "'Times New Roman',Times,serif" => "Times New Romans", "'Trebuchet MS',sans-serif" => "Trebuchet MS",
+                                    "Verdana,sans-serif" => "Verdana"]}
+                                    <select name="fields[font][family]">
+                                        <option value="'Helvetica Neue', 'Liberation Sans', Arial, sans-serif"{if empty($field.params.font.family)} selected{/if}>[`Font family`]</option>
+                                        {foreach $font_family as $k => $v}
+                                            <option {if (!empty($field.params.font.family) && $field.params.font.family == $k)} selected{/if} value="{$k}">{$v}</option>
+                                        {/foreach}
+                                    </select>
+                                </div>
+                                {$font_size = ['8px' => '8px', '10px' => '10px', '12px' => '12px', '14px' => '14px', '16px' => '16px', '18px' => '18px',
+                                '20px' => '20px', '22px' => '22px', '26px' => '26px', '30px' => '30px']}
+                                <div class="cell-block">
+                                    <select name="fields[font][size]">
+                                        <option value="12px"{if empty($field.params.font.size)} selected{/if}>[`Font size`]</option>
+                                        {foreach $font_size as $k => $v}
+                                            <option {if (!empty($field.params.font.size) && $field.params.font.size == $k)} selected{/if} value="{$k}">{$v}</option>
+                                        {/foreach}
+                                    </select>
+                                </div>
+                                {$font_style = ['normal' => '[`Normal`]', 'bold' => '[`Bold`]', 'italic' => '[`Italic`]', 'bolditalic' => '[`Bold/Italic`]']}
+                                <div class="cell-block">
+                                    <select name="fields[font][style]">
+                                        <option value="normal"{if empty($field.params.font.style)} selected{/if}>[`Font style`]</option>
+                                        {foreach $font_style as $k => $v}
+                                            <option {if (!empty($field.params.font.style) && $field.params.font.style == $k)} selected{/if} value="{$k}">{$v}</option>
+                                        {/foreach}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="name">[`Background`]</div>
+                            <div class="value">
+                                <div class="color-icon" title='[`change color`]' data-color="{if !empty($field.params.background)}{$field.params.background|escape}{else}f3f3ee{/if}"></div>
+                                <input type="hidden" name="fields[background]" value='{if !empty($field.params.background)}{$field.params.background|escape}{else}f3f3ee{/if}'>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="name">[`Border`]</div>
+                            <div class="value">
+                                <div class="color-icon" title='[`change color`]' data-color="{if !empty($field.params.border.color)}{$field.params.border.color|escape}{else}000000{/if}"></div>
+                                <input type="hidden" name="fields[border][color]" value='{if !empty($field.params.border.color)}{$field.params.border.color|escape}{else}000000{/if}'>
+                                {$border_size = ['1px' => '1px', '2px' => '2px', '3px' => '3px', '4px' => '4px', '5px' => '5px', '6px' => '6px',
+                                '7px' => '7px', '8px' => '8px', '9px' => '9px', '10px' => '10px']}
+                                <div class="cell-block">
+                                    <select name="fields[border][size]">
+                                        <option value="0"{if empty($field.params.border.size)} selected{/if}>[`Border size`]</option>
+                                        {foreach $border_size as $k => $v}
+                                            <option {if (!empty($field.params.border.size) && $field.params.border.size == $k)} selected{/if} value="{$k}">{$v}</option>
+                                        {/foreach}
+                                    </select>
+                                </div>
+                                {$border_style = ['solid' => '[`Solid`]', 'dotted' => '[`Dotted`]', 'dashed' => '[`Dashed`]', 'double' => '[`Double`]']}
+                                <div class="cell-block">
+                                    <select name="fields[border][style]">
+                                        <option value="solid"{if empty($field.params.border.style)} selected{/if}>[`Border style`]</option>
+                                        {foreach $border_style as $k => $v}
+                                            <option {if (!empty($field.params.border.style) && $field.params.border.style == $k)} selected{/if} value="{$k}">{$v}</option>
+                                        {/foreach}
+                                    </select>
+                                </div>
+                                <div class="cell-block">
+                                    {$border_radius = ['2px' => '2px', '5px' => '5px', '8px' => '8px', '10px' => '10px', '15px' => '15px',
+                                    '20px' => '20px', '25px' => '25px', '30px' => '30px', '50px' => '50px']}
+                                    <select name="fields[border][radius]">
+                                        <option value="0"{if empty($field.params.border.radius)} selected{/if}>[`Border radius`]</option>
+                                        {foreach $border_radius as $k => $v}
+                                            <option {if (!empty($field.params.border.radius) && $field.params.border.radius == $k)} selected{/if} value="{$k}">{$v}</option>
+                                        {/foreach}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="w-dialog-footer">
+                    <div class="margin-block errormsg"></div>
+                    <div class="t-actions">
+                        <div class="t-layout">
+                            <div class="t-column left">
+                                <input type="submit" class="button green t-button" value="[`Save`]">
+                                <span style="margin: 0 4px;">[`or`]</span>
+                                <a class="js-close-dialog" href="javascript:void(0);">[`cancel`]</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            {else}
+                [`Field not found`]
+            {/if}
+            <input type="hidden" name="type" value="{$field.type}">
+        </form>
+    </div>
+</div>
+
+{/strip}

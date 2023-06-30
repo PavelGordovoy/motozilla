@@ -1,0 +1,55 @@
+{strip}
+{$is_schema_org = $theme_settings.schema_org_active}
+{$phone = $theme_settings.phone}
+{if $phone && $theme_settings.static_var_smarty}
+    {eval var=$phone assign='phone'}
+{/if}
+{if $wa->shop && empty($phone)}{$phone = $wa->shop->settings('phone')}{/if}
+{$phone_2 = $theme_settings.phone_2}
+{$phone_3 = $theme_settings.phone_3}
+{$email = $theme_settings.email}
+{if $email &&  $theme_settings.static_var_smarty}
+    {eval var=$email assign='email'}
+{/if}
+{if $wa->shop && empty($email)}
+    {$email = $wa->shop->settings('email')}
+{/if}
+{$address = $theme_settings.address}
+{$timetable = $theme_settings.timetable}
+<div class="footer-contacts_info">
+    {if $phone}
+    <span class="footer-contacts_item">
+        {if $is_schema_org}<meta itemprop="telephone" content="{$phone|regex_replace:'/[^0-9\+]+/':''}">{/if}
+        <a class="footer-contacts__phone js-contact-phone" href="tel:{$phone|regex_replace:'/[^0-9\+]+/':''}">{$phone}</a>
+    </span>
+    {/if}
+    {if $phone_2}
+        {if $theme_settings.static_var_smarty}{eval var=$phone_2 assign='phone_2'}{/if}
+        <span class="footer-contacts_item">
+            {if $is_schema_org}<meta itemprop="telephone" content="{$phone_2|regex_replace:'/[^0-9\+]+/':''}">{/if}
+            <a class="footer-contacts__phone js-contact-phone" href="tel:{$phone_2|regex_replace:'/[^0-9\+]+/':''}">{$phone_2}</a>
+        </span>
+    {/if}
+    {if $phone_3}
+	    {if $theme_settings.static_var_smarty}{eval var=$phone_3 assign='phone_3'}{/if}
+        <span class="footer-contacts_item">
+            {if $is_schema_org}<meta itemprop="telephone" content="{$phone_3|regex_replace:'/[^0-9\+]+/':''}">{/if}
+            <a class="footer-contacts__phone js-contact-phone" href="tel:{$phone_3|regex_replace:'/[^0-9\+]+/':''}">{$phone_3}</a>
+        </span>
+    {/if}
+    {if $address}
+        {if $theme_settings.static_var_smarty}{eval var=$address assign='address'}{/if}
+        <span{if $is_schema_org} itemprop="address"{/if} class="footer-contacts_item footer-contacts_item--address">{$address}</span>
+    {/if}
+    {if $email}
+        <span class="footer-contacts_item">
+            {if $is_schema_org}<meta itemprop="email" content="{$email}">{/if}
+            <a href="mailto:{$email}">{$email}</a>
+        </span>
+    {/if}
+    {if $timetable}
+        {if $theme_settings.static_var_smarty}{eval var=$timetable assign='timetable'}{/if}
+        <span class="footer-contacts_item">{$timetable}</span>
+    {/if}
+</div>
+{/strip}

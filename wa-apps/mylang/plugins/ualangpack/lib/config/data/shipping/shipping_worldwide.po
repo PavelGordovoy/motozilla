@@ -1,0 +1,119 @@
+msgid ""
+msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: uk_UA\n"
+"Language-Team: skeeter-studio.ru\n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: \n"
+"POT-Creation-Date: 2015-05-14 15:01+0300\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"Project-Id-Version: Webasyst Worldwide shipping plugin 1.1.4.15 UA translation v1.0\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Shipping service name"
+msgstr "Назва послуги доставки"
+
+msgid "Enter optional shipping service name which will be shown to customers next to this shipping option"
+msgstr "Ввести додатково назву сервісу доставки, яку буде показано клієнтам поруч із цим варіантом доставки"
+
+msgid "Currency"
+msgstr "Валюта"
+
+msgid "Weight dimension unit"
+msgstr "Одиниця виміру ваги"
+
+msgid "kg"
+msgstr "кг"
+
+msgid "lbs"
+msgstr "фунт"
+
+msgid "Store country"
+msgstr "Країна, в якій розташовується ваш інтернет-магазин"
+
+msgid "Select a country within which worldwide shipping should not be available."
+msgstr "Оберіть країну, в якій доставка по всьому світу не повинна бути доступною."
+
+msgid "Delivery rates"
+msgstr "Тарифи доставки"
+
+msgid "Destination"
+msgstr "Територія"
+
+msgid "Same rate for any package weight"
+msgstr "Однакова ставка для будь-якої ваги упаковки"
+
+msgid "Define rates by package weight..."
+msgstr "Визначити тарифи за вагою упаковки..."
+
+msgid "Transit time"
+msgstr "Час проходження"
+
+msgid "No international shipping rates defined yet."
+msgstr "Тарифи на міжнародну доставку поки не визначено."
+
+msgid "Add country"
+msgstr "Додати країну"
+
+msgid "All countries"
+msgstr "Усі країни"
+
+msgid "All European countries"
+msgstr "Усі європейські країни"
+
+msgid "Rest of world"
+msgstr "Усі інші країни"
+
+msgid "Add weight"
+msgstr "Додати вагу"
+
+msgid "Shipping to this region will not be offered."
+msgstr "Доставка в цей регіон не пропонується."
+
+msgid "Same day"
+msgstr "Той же день"
+
+msgid "Next day"
+msgstr "Наступний день"
+
+msgid "2-3 days"
+msgstr "2-3 дні"
+
+msgid "1 week"
+msgstr "1 тиждень"
+
+msgid "2 weeks"
+msgstr "2 тижні"
+
+msgid "2-3 weeks"
+msgstr "2-3 тижні"
+
+msgid "2-4 weeks"
+msgstr "2-4 тижні"
+
+msgid "4-6 weeks"
+msgstr "4-6 тижнів"
+
+msgid "4-8 weeks"
+msgstr "4-8 тижнів"
+
+msgid "2-3 months"
+msgstr "2-3 місяці"
+
+msgid "Undefined"
+msgstr "Не визначено"
+
+msgid "Package weight exceeds maximum allowed weight"
+msgstr "Вага пакунку перевищує максимально допустиму"
+
+msgid "Worldwide"
+msgstr "Міжнародна"
+
+msgid "Reliable international delivery tailored to local conditions."
+msgstr "Надійна міжнародна доставка з урахуванням місцевих умов."

@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+{$html_class_array = []}
+{if !empty($theme_settings.color_scheme)}
+{$_color_scheme_class = str_replace('img/themesettings/','', str_replace(array('.png','.jpg'),'', $theme_settings.color_scheme))}
+{/if}
+
+{if !empty($theme_settings.color_scheme) && !empty($_color_scheme_class)}{$html_class_array[] = $_color_scheme_class}{/if}
+
+{if $wa->globals('isMyAccount')}{$html_class_array[] = 'my'}{/if}
+
+<html{if !empty($html_class_array)} class="{join(' ', $html_class_array)}"{/if} lang="ru">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1{if $wa->isMobile()}, maximum-scale=1, user-scalable=0{/if}" />
+
+    <title>{$wa->title()|escape}</title>
+    <meta name="Keywords" content="{$wa->meta('keywords')|escape}" />
+    <meta name="Description" content="{$wa->meta('description')|escape}" />
+    <meta name="theme-color" content="{$theme_settings.main_color_scheme}">
+
+    {if !empty($canonical)}<link rel="canonical" href="{$canonical}"/>{/if}
+    {if isset($theme_settings.fav_icon)}
+        <link rel="shortcut icon" href="{$wa_theme_url}{$theme_settings.fav_icon}"/>
+    {else}
+        <link rel="shortcut icon" href="/favicon.ico"/>
+    {/if}
+    {if $wa->blog}
+    <!-- rss -->
+    {$rss=$wa->blog->rssUrl()}
+    {if $rss}<link rel="alternate" type="application/rss+xml" title="{$wa->accountName()}" href="{$rss}">{/if}
+    {/if}
+
+    <!--bootstrap -->
+    <link href="{$wa_theme_url}assets/css/bootstrap.min.css?v{$wa_theme_version}" rel="stylesheet" type="text/css"/>
+    <!--epika styles -->
+    <link href="{$wa_theme_url}assets/main/epica-site.css?v{$wa_theme_version}" rel="stylesheet" type="text/css"/>
+    <link href="{$wa_theme_url}epika.site.css?v{$wa_theme_version}" rel="stylesheet" type="text/css"/>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700%7CRoboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+    {if $wa->shop && $wa->shop->currency() == 'RUB'}<link href="{$wa_url}wa-content/font/ruble/arial/fontface.css" rel="stylesheet" type="text/css">{/if}
+    {$wa->css()} {* links active plugins CSS *}
+    <link href="{$wa_theme_url}assets/css/remodal.css?v{$wa_theme_version}" rel="stylesheet" type="text/css"/>
+    <link href="{$wa_theme_url}assets/css/remodal-default-theme.css?v{$wa_theme_version}" rel="stylesheet" type="text/css"/>
+    <link href="{$wa_theme_url}assets/css/navi.css?v{$wa_theme_version}" rel="stylesheet" type="text/css"/>
+    <link href="{$wa_real_theme_url}assets/css/icons.css?v{$wa_theme_version}" rel="stylesheet" type="text/css"/>
+    <link href="{$wa_theme_url}assets/css/animate.css?v{$wa_theme_version}" rel="stylesheet" type="text/css"/>
+    <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>-->
+    <script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery/jquery-1.11.1.min.js?v{$wa_theme_version}" ></script>
+    <script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery/jquery-migrate-1.2.1.min.js?v{$wa_theme_version}" ></script>
+    {$wa->js()} {* links active plugins JS *}
+
+    {include file="`$wa_active_theme_path`/head.html" inline}
+
+    {$wa->head()} {* links Google Analytics tracking code, site's custom JS (defined in Site app settings), and meta data such as Open Graph data *}
+
+    <!--[if lt IE 7]>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js?v{$wa_theme_version}"></script>
+    <![endif]-->
+
+
+    <!--[if lt IE 9]>
+    <script>
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('aside');
+        document.createElement('footer');
+        document.createElement('figure');
+        document.createElement('hgroup');
+        document.createElement('menu');
+    </script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js?v{$wa_theme_version}"></script>
+    <![endif]-->
+
+        <style>
+        .epika .wide_horizontal_menu .cd-dropdown-content > .selected > a { color:white };
+        .epika header .top-line { background: {$theme_settings.alt_color_scheme};}
+        .epika .shop-controls.fixed-pos { background-color:{$theme_settings.alt_color_scheme};}
+        .epika header .search-wrapper button { background: {$theme_settings.alt_color_scheme};}
+        .epika header .top-line .pages li a:after { background-color:{$theme_settings.main_color_scheme};}
+        .epika .navigation { background-color:{$theme_settings.alt_color_scheme};}
+        .epika .navigation .cd-dropdown-trigger { background-color:{$theme_settings.main_color_scheme};}
+        .epika footer { border-top: 4px solid {$theme_settings.main_color_scheme};}
+        .epika header .shop-controls li .badge { background-color:{$theme_settings.main_color_scheme};}
+        .epika footer { background-color: {$theme_settings.alt_color_scheme}}
+        .epika footer .widget ul.inline li.selected a { background-color: {$theme_settings.main_color_scheme};}
+        .epika .button { background-color:{$theme_settings.main_color_scheme};}
+        .epika .lazyloading-paging .menu-h li.loaded a, .lazyloading-paging .menu-h li.selected a { background:{$theme_settings.main_color_scheme}; border-color:{$theme_settings.main_color_scheme}}
+        .epika .flexMenu-popup { background-color: {$theme_settings.alt_color_scheme};}
+        .epika .cd-dropdown.dropdown-is-active { border-bottom-color: {$theme_settings.main_color_scheme}}
+        .epika .dropdown-menu:before { border-color: transparent transparent {$theme_settings.alt_color_scheme} transparent;}
+
+        .epika header .fly-in-cart .fl-cart-title,
+        .epika .cart-body #apply-coupon-code button,
+        .scrollbar .handle,
+        .ui-slider-horizontal .ui-slider-handle,
+        .cd-dropdown-content > .has-children > a.is-active::before, .cd-dropdown-content > .has-children > a.is-active::after
+        { background:{$theme_settings.main_color_scheme}}
+
+        .epika .ui-slider-horizontal .ui-slider-handle:active,
+        .epika .cart-form .options .option.selected
+        {
+        border-color: {$theme_settings.main_color_scheme}
+        }
+
+        @media only screen and (min-width: 1024px) {
+            nav .cd-dropdown-content > li.selected > a {
+               background:{$theme_settings.main_color_scheme};
+            }
+            .wide_horizontal_menu .flexMenu-viewMore .flexMenu-popup a:hover, .wide_horizontal_menu .cd-dropdown-content > li > a:hover {
+                background:{$theme_settings.main_color_scheme} !important;
+            }
+            .wide_horizontal_menu .flexMenu-viewMore > a {
+                    background:{$theme_settings.main_color_scheme} !important;
+                }
+            }
+
+
+        .epika .dropdown-menu,
+        .epika .tags .tag,
+        .epika .tags .tag:after
+        { background-color:{$theme_settings.alt_color_scheme};}
+
+        @media only screen and (min-width: 320px) {
+            .cd-dropdown { background-color:{$theme_settings.alt_color_scheme};}
+        }
+
+        .epika .dropdown-menu li a:hover,
+        .ui-slider-range,
+        .epika footer .widget label.selected,
+        .epika .cart-form .options .option.selected,
+        .epika .tags .tag:hover,
+        .epika .tags .tag:hover:after,
+        .epika .controls button.add-to-cart-btn,
+        .epika .cart-body h1,
+        .epika .show-filter-button,
+        .epika .cd-dropdown h2,
+        .blog .sidebar .search-wrapper button, .site .sidebar .search-wrapper button, .photo .sidebar .search-wrapper button
+        { background-color:{$theme_settings.main_color_scheme};}
+
+        .epika header .fly-in-cart .fly-in-cart-item .item-name a .item-price,
+        .epika header .fly-in-cart .fl-cart-in .total .t-discount,
+        .epika .cart-body .cart-totals .t-discount,
+        .epika .add2cart .price,
+        .epika .tabpanel .nav-tabs li.active a,
+        .epika .product-information section.related h2 span i, .epika .product-information section.related h2 span strong.add-to-cart-btn,
+        .epika .breadcrumbs a:hover,
+        .blog .content section.post h3 a,
+        .epika .remodal .product-info .image-container .go-to-product
+        { color:{$theme_settings.main_color_scheme}}
+
+        @media only screen and (min-width: 1024px) {
+            .cd-dropdown { background-color:white; }
+            .epika .wide_horizontal_menu .cd-dropdown-content > li > a, .epika .navigation ul.pages > li > a {
+                color: {$theme_settings.nav_links_color_scheme};
+             }
+            .epika .wide_horizontal_menu .cd-dropdown-content > li > a .more-cat:before, .epika .wide_horizontal_menu .cd-dropdown-content > li > a .more-cat:after {
+                background: {$theme_settings.nav_links_color_scheme};
+            }
+            .epika .wide_horizontal_menu .cd-dropdown-content > li.flexMenu-viewMore > a {
+                color:white;
+            }
+            .epika .wide_horizontal_menu .cd-dropdown-content > li.selected > a .more-cat:before, .epika .wide_horizontal_menu .cd-dropdown-content > li.selected > a .more-cat:after, .epika .wide_horizontal_menu .cd-dropdown-content > li > a.is-active .more-cat:before, .epika .wide_horizontal_menu .cd-dropdown-content > li > a.is-active .more-cat:after {
+                background: white;
+            }
+            .wide_horizontal_menu .cd-dropdown-content > .has-children > a.is-active { background-color:{$theme_settings.main_color_scheme};}
+            .no-touch .cd-dropdown-content > li:not(.has-children) a:hover,
+            .cd-dropdown-content .cd-dropdown-gallery .cd-dropdown-item,
+            .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item,
+            .cd-dropdown-content .cd-secondary-dropdown > li > a,
+            .cd-dropdown-content .see-all a,
+            .no-touch .cd-dropdown-content .cd-secondary-dropdown a:hover {
+            color:{$theme_settings.main_color_scheme}
+        }
+        .cd-dropdown-content > .has-children > a.is-active {
+        box-shadow: inset 2px 0 0 {$theme_settings.main_color_scheme};
+        color:{$theme_settings.main_color_scheme}
+        }
+        }
+
+        {if !empty($theme_settings.filter_columns) && $theme_settings.filter_columns == 1}
+             .filter-param .group .item {
+                 width: 100% !important;
+             }
+          {else}
+        {/if}
+
+        {if !empty($theme_settings.site_layout_settings) && $theme_settings.site_layout_settings == "box_mode"}
+        header.boxmode, section.navigation.boxmode, main.boxmode, footer.boxmode {
+            max-width: {$theme_settings.site_width}px !important;
+        }
+        {else}
+        {/if}
+        {if !empty($theme_settings.footer_color_topline)} .epika footer { border-color: {$theme_settings.footer_color_topline} } {/if}
+        {if !empty($theme_settings.footer_color_headers)} .epika footer h5 { color: {$theme_settings.footer_color_headers} } {/if}
+        {if !empty($theme_settings.footer_color_links)} .epika footer .widget ul li a, .epika footer .widget label, .epika footer .widget .contact strong, .epika footer .widget .hint, .epika footer p { color: {$theme_settings.footer_color_links} } .epika footer .widget label.selected { color: white }{/if}
+        {if !empty($theme_settings.footer_color_linkshov)} .epika footer .widget ul li a:hover, .epika footer .widget label:hover { color: {$theme_settings.footer_color_linkshov} } .epika footer .widget ul li.selected a:hover, .epika footer .widget label.selected:hover { color: white} {/if}
+        {if !empty($theme_settings.top_bar_color_scheme)} .epika header .top-line { background: {$theme_settings.top_bar_color_scheme} }{/if}
+        {if !empty($theme_settings.top_bar_color_links)} .epika header .top-line .pages li a, header .top-line .btn-group button a, .epika header .top-line .user-login ul.auth li a { color: {$theme_settings.top_bar_color_links} } .epika header .top-line .btn-group button .caret { border-top-color: {$theme_settings.top_bar_color_links} }{/if}
+        {if !empty($theme_settings.bg_color_scheme)} body.epika { background-color: {$theme_settings.bg_color_scheme} }{/if}
+        {if !empty($theme_settings.footer_color_scheme)} .epika footer { background-color: {$theme_settings.footer_color_scheme} }{/if}
+        {if !empty($theme_settings.nav_color_scheme)} .epika .navigation { background-color: {$theme_settings.nav_color_scheme} }{/if}
+
+        {if !empty($theme_settings.body_pattern) && empty($theme_settings.custom_background) && $theme_settings.site_layout_settings == "box_mode" && $theme_settings.body_pattern != "img/backgrounds/themesettings/nophoto.png"}
+            body { background-image: url( {$wa_theme_url}{$theme_settings.body_pattern} ) }
+        {elseif !empty($theme_settings.custom_background) && $theme_settings.site_layout_settings == "box_mode"}
+            body { background-image: url( {$wa_theme_url}{$theme_settings.custom_background} ) }
+        {/if}
+        {if !empty($theme_settings.site_width) } .epika .container { max-width: {$theme_settings.site_width}px !important } {/if}
+        {if empty($theme_settings.disable_bw_effect_not_available_products)} .catalog-item.outofstock img { filter: grayscale(100%); opacity: 0.7; } {/if}
+        {if !empty($theme_settings.fixed_cart_appearance) && $theme_settings.fixed_cart_appearance == "style_1"}.epika footer { padding-bottom: 60px} {/if}
+
+    </style>
+
+</head>
+<body class="epika googlefonts-plugin {if strpos($wa->currentUrl(),'checkout')}epika-scart{/if} {if isset($theme_settings.site_layout_settings) && $theme_settings.site_layout_settings == "box_mode"}boxmode{/if}">
+{$in_comparison = $wa->shop->inComparison()}
+{$cart_total = $wa->shop->cart->total()}
+{$cart_count = $wa->shop->cart->count()}
+{$in_wishlist = waRequest::cookie('epika_shop_favorites')} {if $in_wishlist} {assign var=in_wishlist value=","|explode:$in_wishlist} {$in_wishlist_count = count($in_wishlist)} {else} {$in_wishlist_count = 0} {/if}
+{if !$wa->isMobile()}
+    <div style="display:none" class="comparison-preview">
+        <div class="wrap">
+            <div class="container-fluid">
+                <ul class="products">
+                    {if $wa->shop->compare()}
+
+                    {$products_in_compare = $wa->shop->compare()}
+                    {foreach $products_in_compare as $p}
+                    <li class="comare-item" data-product-id="{$p.id}">
+                        <div class="image">
+                            <a class="image-link" href="{$wa->getUrl('/frontend/product/', ['product_url' => $p.url])}">
+                                {$wa->shop->productImgHtml($p, '96x96', ['itemprop' => 'image', 'default' => "`$wa_theme_url`img/dummy96.png", 'title' => $p.name|cat:' ':strip_tags($p.summary)|escape])}
+                                <i class="remove icon-cancel-circle"></i>
+                            </a>
+                        </div>
+                        <div class="meta">
+                            <div>
+                                <a class="name-link" href="{$wa->getUrl('/frontend/product/', ['product_url' => $p.url])}"><span class="name" itemprop="name">{$p.name}</span></a>
+                                <span class="price nowrap">{wa_currency_html($p.price, $wa->shop->currency())}</span>
+                            </div>
+                        </div>
+                    </li>
+                    {/foreach}
+                    {/if}
+                    <li class="compare-control">
+                        <div class="flex fl-center compare-button">
+                            <div>
+                                <a href="{$wa->getUrl('shop/frontend/compare/')}" class="bt-def white"><span>Сравнить</span></a>
+                                <a href="#" class="bt-def white clear-compare"><span>Очистить</span></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{/if}
+
+<header {if isset($theme_settings.site_layout_settings) && $theme_settings.site_layout_settings == "box_mode"}class="boxmode"{/if}>
+    <div class="top-line">
+        <div class="container">
+            <div class="row">
+                <div class="e-space apps">
+                    {if !empty($theme_settings.location_switch)}
+                        {if count($wa->apps())>0 || $wa->isAuthEnabled()}
+                            <div class="btn-group" id="app-change">
+                                <button type="button" class="app-change dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    {foreach $wa->apps() as $a}
+                                        <li{if $a.url==$wa_app_url && !$wa->globals('isMyAccount')} class="selected"{/if}><a href="{$a.url}">{if isset($a.app)}<i class="{if $a.app == 'site'}icon-siteicon{elseif $a.app == 'blog'}icon-blogicon{elseif $a.app == 'photos'}icon-camera{elseif $a.app == 'shop'}icon-shopicon{elseif $a.app == 'hub'}icon-hubicon{/if}"></i>{/if}{$a.name}</a></li>
+                                    {/foreach}
+                                </ul>
+                            </div>
+                        {/if}
+                    {/if}
+                    {if !empty($currencies) && count($currencies) > 1}
+                        <div class="btn-group dropdown-currencies" id="currency-change">
+                            <button type="button" class="currency-change dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                {$currency = $wa->shop->currency()}
+
+                                {foreach $currencies as $c_code => $c}
+                                <li {if $c_code == $currency}class="selected"{/if} data-currency-code="{$c_code}"><a href="#"><img src="{$wa_theme_url}assets/flags/{$c_code}.gif" alt="{$c.title}"> {*$c.title*}{$c_code}</a></li>
+                                {/foreach}
+                            </ul>
+                        </div>
+                    {/if}
+
+                    {$_links = []}
+                    {if !empty($theme_settings.header_links) && $theme_settings.header_links == 'site-pages'}
+                    {if $wa->site}{$_links = $wa->site->pages()}{/if}
+                    {elseif !empty($theme_settings.header_links) && $theme_settings.header_links == 'shop-pages'}
+                    {if $wa->shop}{$_links = $wa->shop->pages()}{/if}
+                    {elseif !empty($theme_settings.header_links) && $theme_settings.header_links == 'blog-pages'}
+                    {if $wa->blog}{$_links = $wa->blog->pages()}{/if}
+                    {elseif !empty($theme_settings.header_links) && $theme_settings.header_links == 'photos-pages'}
+                    {if $wa->photos}{$_links = $wa->photos->pages()}{/if}
+                    {elseif !empty($theme_settings.header_links) && $theme_settings.header_links == 'hub-pages'}
+                    {if $wa->hub}{$_links = $wa->hub->pages()}{/if}
+                    {elseif !empty($theme_settings.header_links) && $theme_settings.header_links != 'none'}
+                    {$_links = $wa->apps()}
+                    {/if}
+
+                    <ul class="pages" style="display: initial;">
+                        {foreach $_links as $a}
+
+                        {if !($a.url == $wa_url && $a.name == $wa->accountName())}
+                        <li{if $a.url==$wa_app_url && !$wa->globals('isMyAccount') || strlen($a.url)>1 && $wa->currentUrl()|strstr:$a.url} class="selected"{/if}><a href="{$a.url}">{if !empty($theme_settings.header_links) && $theme_settings.header_links == "wa-apps" && isset($a.app)}<i class="{if $a.app == 'site'}icon-siteicon{elseif $a.app == 'blog'}icon-blogicon{elseif $a.app == 'photos'}icon-camera{elseif $a.app == 'shop'}icon-shopicon{elseif $a.app == 'hub'}icon-hubicon{/if}"></i>{/if}{$a.name}</a></li>
+                        {/if}
+                        {/foreach}
+                    </ul>
+
+                </div>
+
+                <div class="e-space user-login">
+                    {if $wa->isAuthEnabled()}
+                        <!-- user auth -->
+                        <ul class="auth">
+                            {if $wa->user()->isAuth()}
+                            {if $wa->myUrl()}
+                                <li{if $wa->globals('isMyAccount')} class=""{/if}>
+                                <a href="{$wa->myUrl()}" class="not-visited profile"><i class="icon-user"></i> <span class="name">{$wa->user('name')|truncate:15:"...":true}</span></a>
+                                </li>
+                            {else}
+                                <li>{$wa->user('name')}</li>
+                            {/if}
+                                <li><a href="?logout" class="not-visited log-out"><i class="icon-logout"></i> <span>[s`Log out`]</span></a></li>
+                            {else}
+                                <li><a class="login" href="{$wa->loginUrl()}"><i class="icon-auth"></i> [`Login`]</a></li>
+                                <li><a class="login register" href="{$wa->signupUrl()}"><i class="icon-user"></i> [s`Sign up`]</a></li>
+                            {/if}
+                        </ul>
+                    {/if}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="head-controller {if strpos($wa->currentUrl(),'checkout')}ep-checkout-header{else}row{/if}">
+            <div class="ep-logo">
+                <h2 class="logo">
+                    <a href="{$wa_url}">
+                        {if !empty($theme_settings.logo)}
+                            <img src="{$wa_theme_url}{$theme_settings.logo}?v{$wa_theme_version}" alt="{$wa->accountName()}" id="logo" />
+                        {else}
+                            {$wa->accountName()}
+                        {/if}
+                    </a>
+                </h2>
+            </div>
+            {*if strpos($wa->currentUrl(),'checkout')*}
+            <div class="ep-contact">
+                <ul>
+                    <li class="ep-phone"><i class="icon-phone"></i> <strong>{$wa->shop->settings('phone')}</strong></li>
+                    {if $wh = $wa->shop->settings('workhours')}<li class="ep-worktime"><span class="hint"><i class="icon-clock"></i>{$wh.days_from_to}{if $wh.hours_from && $wh.hours_to} {$wh.hours_from}—{$wh.hours_to}</span></li>{/if}{/if}
+                    <li>{$wa->block("headerContact")}</li>
+                </ul>
+            </div>
+            {*/if*}
+            <div class="ep-search">
+                <form method="get" action="{$wa->getUrl('shop/frontend/search')}" class="search search-form">
+                    <div class="search-wrapper">
+                        <input id="search" type="search" name="query" autocomplete="off" {if !empty($query)}value="{$query}"{/if} placeholder="[s`Find products`]">
+                        <button type="submit">Поиск</button>
+                        {* <span class="search-sample">{sprintf('[`E.g. %s`]', '<a href="'|cat:$wa_app_url:"search/?query=productname":'">productname</a>')} *}
+                        <div class="autocomplete-container"></div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="ep-controls">
+                <div class="row">
+                    <ul class="shop-controls {if !empty($theme_settings.fixed_cart_appearance)}{$theme_settings.fixed_cart_appearance}{/if}">
+                        {if $wa->user()->isAuth()}
+                        {if $wa->myUrl()}
+                        <li class="myacc" {if $wa->globals('isMyAccount')} class=""{/if}>
+                            <a href="{$wa->myUrl()}" class="not-visited profile"><i class="icon-user"></i> <span class="name">{$wa->user('name')|truncate:15:"...":true}</span></a>
+                        </li>
+                        {else}
+                            <li class="myacc">{$wa->user('name')}</li>
+                        {/if}
+                            <li class="logout"><a href="?logout" class="not-visited log-out"><i class="icon-logout"></i> <span>[s`Log out`]</span></a></li>
+                        {else}
+                            <li class="login"><a class="login" href="{$wa->loginUrl()}"><i class="icon-user"></i> <span>[`Login`]</span></a></li>
+                        {/if}
+                        {if empty($theme_settings.disable_comparison)}
+                            <li id="compare-leash" class="compare {if count($in_comparison) > 0 }free{/if}">
+                                <a href="{$wa->getUrl('shop/frontend/compare')}">
+                                    <span class="badge"><strong>{count($in_comparison)}</strong></span>
+                                    <i class="icon-balance-scale"></i>
+                                    <span class="desc">[`Compare`]</span>
+                                </a>
+                            </li>
+                        {/if}
+                        {if empty($theme_settings.disable_favorites)}
+                            <li id="ft_favorites" class="wishlist">
+                                <a href="{$wa->getUrl('shop/frontend/search')}?get=epikafavorites">
+                                    <span class="badge"><strong class="count">{if $in_wishlist_count}{$in_wishlist_count}{else}0{/if}</strong></span>
+                                    <i class="icon-heart"></i>
+                                    <span class="desc">[`Wishlist`]</span>
+                                </a>
+                            </li>
+                        {/if}
+                        <li id="cart" class="cart {if count($in_comparison) > 0 }free{/if}">
+                            <a href="#" data-href="{$wa->getUrl('shop/frontend/cart')}">
+                                <span class="badge cart_count"><strong class="count">{if $cart_count}{$cart_count}{else}0{/if}</strong></span>
+                                <i class="icon-shopicon"></i>
+                                <strong class="cart-total" style="font-size: 0;">{wa_currency_html($cart_total, $wa->shop->currency())}</strong>
+                                <span class="desc">[s`Cart`]</span>
+                                <div class="fly-in-mini-cart" style="display: none">
+                                    <div class="fly-in-cart">
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        {if $wa->isMobile()}
+                        <li class="phone-call">
+                            <a href="tel:{$wa->shop->settings('phone')}">
+                                <i class="icon-phone"></i>
+                                <span class="desc">Позвонить</span>
+                            </a>
+                        </li>
+                        {/if}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        </div>
+</header>
+
+<section class="navigation {if isset($theme_settings.site_layout_settings) && $theme_settings.site_layout_settings == "box_mode"}boxmode{/if}">
+    <h2 style="display: none">Навигация</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                {include file="`$wa_active_theme_path`/navigation.html" inline}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<main {if waRequest::param('app') == 'shop' && waRequest::param('module') == 'frontend' && !waRequest::param('action')}class="ep-white {if isset($theme_settings.site_layout_settings) && $theme_settings.site_layout_settings == "box_mode"}boxmode{/if}"{/if} {if isset($theme_settings.site_layout_settings) && $theme_settings.site_layout_settings == "box_mode"}class="boxmode"{/if}>
+<div class="container {if $wa->globals('isMyAccount')}ep-my-account{/if}">
+    {if $wa->globals('isMyAccount')}
+    {* focused personal accounts navigation *}
+    <aside>
+        <div class="sidebar">
+            <div class="ep-myacc-user-info">
+                <img src="{$wa->user()->getPhoto(90)}">
+                <span class="name">{$wa->user(name)}</span>
+            </div>
+            {$wa->myNav('ep-myacc-nav categories')}
+        </div>
+    </aside>
+
+    {/if}
+    {include file="`$wa_active_theme_path`/main.html" inline}
+</div>
+</main>
+
+<footer {if isset($theme_settings.site_layout_settings) && $theme_settings.site_layout_settings == "box_mode"}class="boxmode"{/if}>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-4">
+                <a href="{$wa_url}" class="logo">
+                    {if !empty($theme_settings.footer_logo)}
+                        <img src="{$wa_theme_url}{$theme_settings.footer_logo}?v{$wa_theme_version}" alt="{$wa->accountName()}" id="footer-logo" />
+                    {else}
+                        <span>{$wa->accountName()}</span>
+                    {/if}
+                </a>
+                {if !empty($theme_settings.footer_note)}
+                <p>
+                    {$theme_settings.footer_note}
+                </p>
+                {/if}
+                <a href="https://[`www.webasyst.com`]/" title="Мы используем Webasyst">
+                    <img src="https://[`www.webasyst.com`]/wa-content/img/dots/all-dots-default-order.png" alt="webasyst" style="border:none;">
+                </a>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2 widget">
+                {if $wa->block("footer1")}
+                    {$wa->block("footer1")}
+                {else}
+                    <h5>[s`Shop`]</h5>
+                    {if $wa->shop}
+                        <ul>
+                            <li><a href="{$wa->getUrl('shop/frontend/cart')}">[s`Cart`]</a></li>
+                            <li><a href="{$wa->getUrl('shop/frontend/checkout')}">[s`Checkout`]</a></li>
+                        </ul>
+                        {$pages = $wa->shop->pages()}
+
+                        {if count($pages)}
+                            <ul class="pages">
+                                {* get selected node (a little magic here): for Site app, due to it's page-only functionality, page heirarchy and ambiguous select highlighe conditions for root app URL we get selected node in 2 foreach's, while for other apps single foreach for pages is ok due to their own content for homepage *}
+                                {$selected_node = null}
+                                {foreach $pages as $p}
+                                {if $wa->currentUrl()|strstr:$p.url && strlen($p.url) >= strlen($selected_node.url)}{$selected_node = $p}{/if}
+                                {/foreach}
+                                {if !$selected_node}{$selected_node.id = null}{/if}
+
+                                {* render *}
+                                {foreach $pages as $p}
+                                {if $p.url != $wa_url} {* exclude root page link to avoid duplicate link which is on the logo/title *}
+                                <li{if $p.id == $selected_node.id} class="selected"{/if}><a href="{$p.url}">{$p.name}</a></li>
+                                {/if}
+                                {/foreach}
+                            </ul>
+                        {/if}
+
+                    {/if}
+                {/if}
+            </div>
+
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-4">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-12 col-md-12 col-lg-6 widget">
+                        {if $wa->block("footer2")}
+                            {$wa->block("footer2")}
+                        {else}
+                        <h5>[`Apps`]</h5>
+                            <ul class="apps inline">
+                                {$_links = []}
+                                {if !empty($theme_settings.footer_apps_links) && $theme_settings.footer_apps_links == 'site-pages'}
+                                {if $wa->site}{$_links = $wa->site->pages()}{/if}
+                                {elseif !empty($theme_settings.footer_apps_links) && $theme_settings.footer_apps_links == 'shop-pages'}
+                                {if $wa->shop}{$_links = $wa->shop->pages()}{/if}
+                                {elseif !empty($theme_settings.footer_apps_links) && $theme_settings.footer_apps_links == 'blog-pages'}
+                                {if $wa->blog}{$_links = $wa->blog->pages()}{/if}
+                                {elseif !empty($theme_settings.footer_apps_links) && $theme_settings.footer_apps_links == 'photos-pages'}
+                                {if $wa->photos}{$_links = $wa->photos->pages()}{/if}
+                                {elseif !empty($theme_settings.footer_apps_links) && $theme_settings.footer_apps_links == 'hub-pages'}
+                                {if $wa->hub}{$_links = $wa->hub->pages()}{/if}
+                                {elseif !empty($theme_settings.footer_apps_links) && $theme_settings.footer_apps_links != 'none'}
+                                {$_links = $wa->apps()}
+                                {/if}
+
+                                {foreach $_links as $a}
+                                {if !($a.url == $wa_url && $a.name == $wa->accountName())}
+                                <li{if $a.url==$wa_app_url && !$wa->globals('isMyAccount') || strlen($a.url)>1 && $wa->currentUrl()|strstr:$a.url} class="selected"{/if}><a href="{$a.url}">{if !empty($theme_settings.header_links) && $theme_settings.header_links == "wa-apps" && isset($a.app)}<i class="{if $a.app == 'site'}icon-siteicon{elseif $a.app == 'blog'}icon-blogicon{elseif $a.app == 'photos'}icon-camera{elseif $a.app == 'shop'}icon-shopicon{elseif $a.app == 'hub'}icon-hubicon{/if}"></i>{/if}{$a.name}</a></li>
+                                {/if}
+                                {/foreach}
+
+                            </ul>
+                        {/if}
+                    </div>
+
+                    <div class="col-xs-6 col-sm-12 col-md-12 col-lg-6 widget">
+                        {if $wa->block("footer3")}
+                        {$wa->block("footer3")}
+                        {else}
+                            {if !empty($currencies) && count($currencies) > 1}
+                            <div class="foot-currency xs-hide">
+                                <h5>[`Currency`]</h5>
+                                <aside class="currency-toggle">
+                                    <div id="currency">
+                                        {$currency = $wa->shop->currency()}
+                                        {foreach $currencies as $c_code => $c}
+                                        <label {if $c_code == $currency}class="selected"{/if}>{$c.title}<input type="radio" value="{$c_code}" {if $c_code == $currency} checked{/if}></label>
+                                        {/foreach}
+                                    </div>
+                                    <script>
+                                        $("#currency input").change(function () {
+                                            var url = location.href;
+                                            if (url.indexOf('?') == -1) {
+                                                url += '?';
+                                            } else {
+                                                url += '&';
+                                            }
+                                            location.href = url + 'currency=' + $(this).val();
+                                        });
+                                    </script>
+                                </aside>
+                            </div>
+                            {/if}
+                        {/if}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 widget">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
+                        {if $wa->block("footer4")}
+                        {$wa->block("footer4")}
+                        {else}
+                            <h5>[s`Contact us`]</h5>
+                            {if $wa->shop}
+                            <ul class="contact">
+                                <li><strong>{$wa->shop->settings('phone')}</strong></li>
+                                <li><a class="mail" href="mailto:{$wa->shop->settings('email')}">{$wa->shop->settings('email')}</a></li>
+                                {if $wh = $wa->shop->settings('workhours')}<li><span class="hint"><i class="icon-clock"></i>{$wh.days_from_to}{if $wh.hours_from && $wh.hours_to} {$wh.hours_from}—{$wh.hours_to}</span></li>{/if}{/if}
+                            </ul>
+                            {/if}
+                        {/if}
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
+                        {if !empty($theme_settings.footer_links)}
+                        <h5>[s`Follow us`]</h5>
+                        <ul class="social inline">
+                            {if $wa->blog && $rss}<li><a class="g-btn-sm" href="{$rss}" title="[s`RSS`]"><i class="icon-rss" aria-hidden="true"></i></a></li>{/if}
+                            {if !empty($theme_settings.facebook)}<li><a class="g-btn-sm" href="{$theme_settings.facebook}" title="[s`Facebook`]"><i class="icon-facebook" aria-hidden="true"></i></a></li>{/if}
+                            {if !empty($theme_settings.vk)}<li><a class="g-btn-sm" href="{$theme_settings.vk}" title="[s`VK`]"><i class="icon-vk" aria-hidden="true"></i></a></li>{/if}
+                            {if !empty($theme_settings.twitter)}<li><a class="g-btn-sm" href="{$theme_settings.twitter}" title="[s`Twitter`]"><i class="icon-twitter" aria-hidden="true"></i></a></li>{/if}
+                            {if !empty($theme_settings.instagram)}<li><a class="g-btn-sm" href="{$theme_settings.instagram}" title="[s`Instagram`]"><i class="icon-instagram" aria-hidden="true"></i></a></li>{/if}
+                            {if !empty($theme_settings.youtube)}<li><a class="g-btn-sm" href="{$theme_settings.youtube}" title="[s`Youtube`]"><i class="icon-youtube-let" aria-hidden="true"></i></a></li>{/if}
+                        </ul>
+                        {/if}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<div data-remodal-id="remodal_quick_view">
+    <button data-remodal-action="close" class="remodal-close remodal_quickview"><i class="icon-cross97"></i></button>
+
+    <button data-remodal-action="prev-product" class="remodal-prev-product remodal_quickview"><i class="icon-angle-left"></i></button>
+    <button data-remodal-action="next-product" class="remodal-next-product remodal_quickview"><i class="icon-angle-right"></i></button>
+
+    <div class="remodal_in"></div>
+    <div class="remodal_in_overlay"></div>
+</div>
+
+<script>
+    {if isset($theme_settings.menu_products_catalog) && $theme_settings.menu_products_catalog == "wide_horizontal_menu"}
+    var menu_aim_delay = 0;
+    {else}
+    var menu_aim_delay = 300;
+    {/if}
+</script>
+
+<script type="text/javascript" src="{$wa_theme_url}assets/js/jquery-ui-1.10.4.min.js?v{$wa_theme_version}" ></script>
+<script type="text/javascript" src="{$wa_theme_url}assets/js/CSSPlugin.min.js?v{$wa_theme_version}" ></script>
+<script type="text/javascript" src="{$wa_theme_url}assets/js/modernizer.js?v{$wa_theme_version}" ></script>
+<script type="text/javascript" src="{$wa_theme_url}assets/js/bootstrap.min.js?v{$wa_theme_version}" ></script>
+<script type="text/javascript" src="{$wa_theme_url}epika.js?v{$wa_theme_version}" ></script>
+<script type="text/javascript" src="{$wa_theme_url}assets/js/remodal.min.js?v{$wa_theme_version}" ></script>
+<script type="text/javascript" src="{$wa_theme_url}assets/js/flexmenu.js?v{$wa_theme_version}" ></script>
+<script type="text/javascript" src="{$wa_theme_url}assets/js/jquery.menu-aim.js?v{$wa_theme_version}" ></script>
+<script type="text/javascript" src="{$wa_theme_url}js/jquery.lazyload.js?v{$wa_theme_version}" ></script>
+<script type="text/javascript" src="{$wa_theme_url}assets/js/sly.min.js?v{$wa_theme_version}"></script>
+<script type="text/javascript" src="{$wa_theme_url}js/jquery.matchHeight-min.js?v{$wa_theme_version}"></script>
+
+
+<!-- js -->
+{$c = $wa->shop->currency(true)}
+{$l = waLocale::getInfo($wa->locale())}
+<script>
+    var currency_info = {json_encode($c)};
+    var locale_info = {json_encode($l)};
+    //var _wa_url = "{$wa_app_url}";
+    var _wa_url = "{$wa->getUrl('shop/frontend')}";
+    {$cat_prd_image = ""}
+    {if isset($theme_settings.cat_prd_image)}{$cat_prd_image = $theme_settings.cat_prd_image}{/if}
+    var _cat_prd_image = "{$cat_prd_image}";
+
+    var menu_on_hover_cursor = false;
+    {if isset($theme_settings.open_compact_menu_by) && !empty($theme_settings.open_compact_menu_by) && $theme_settings.open_compact_menu_by == 'on_hover_cursor' && isset($theme_settings.menu_products_catalog) && $theme_settings.menu_products_catalog == "compact_view"} menu_on_hover_cursor = true; {/if}
+    {if isset($theme_settings.disable_fixed_cart) && !empty($theme_settings.disable_fixed_cart)} var not_fixed_cart = true; {/if}
+    {if isset($theme_settings.disable_products_img_lazyload) && !empty($theme_settings.disable_products_img_lazyload)} var disable_products_img_lazyload = true; {/if}
+    {if isset($theme_settings.shop_viewed_products_limit) && !empty($theme_settings.shop_viewed_products_limit)} var shop_viewed_products_limit = {$theme_settings.shop_viewed_products_limit}; {/if}
+</script>
+
+<script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery-plugins/jquery.cookie.js?v{$wa->version(true)}"></script>
+<script type="text/javascript" src="{$wa_theme_url}js/jquery.bxslider.min.js?v{$wa_theme_version}"></script>
+{if strpos($wa->currentUrl(),'checkout')}
+<link href="{$wa_static_url}wa-content/css/jquery-ui/base/jquery.ui.datepicker.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{$wa_theme_url}js/checkout.js?v{$wa_theme_version}"></script>
+{/if}
+<script type="text/javascript" src="{$wa_theme_url}js/jquery.countdown.min.js?v{$wa_theme_version}"></script>
+<script type="text/javascript" src="{$wa_theme_url}js/cart.js?v{$wa_theme_version}"></script>
+<script type="text/javascript" src="{$wa_theme_url}js/product.js?v{$wa_theme_version}"></script>
+<script type="text/javascript" src="{$wa_theme_url}js/jquery.animateNumber.min.js?v{$wa_theme_version}"></script>
+<script type="text/javascript" src="{$wa_theme_url}js/epika.shop.js?v{$wa_theme_version}"></script>
+
+<script>
+    $(document).ready(function() {
+        $(function() {
+//            $('.cart-container').matchHeight({
+//                target: $('.product-info')
+//            });
+        });
+/*
+        $('ul.tree').flexMenu({
+            linkText:"<button class=''>+</button>",
+            linkTitleAll:"Категории",
+            popupClass:'animated zoomIn'
+        });
+*/
+        var initFMenu = false;
+        function initFlexMenu() {
+            if (MatchMedia("only screen and (min-width: 1024px)") && !initFMenu) {
+                initFMenu = true;
+                $('.navigation ul.pages, .navigation .wide_horizontal_menu ul.cd-dropdown-content').flexMenu({
+                    linkText: "<button class='menu-more'>...</button>",
+                    linkTextAll : 'Страницы',
+                    linkTitle : 'View More',
+                    linkTitleAll: "Страницы",
+                    popupClass: 'animated zoomIn',
+                    showOnHover: false
+                });
+            }
+            if (MatchMedia("only screen and (max-width: 1023px)") && initFMenu) {
+                initFMenu = false;
+                $('.navigation ul.pages, .navigation .wide_horizontal_menu ul.cd-dropdown-content').flexMenu({
+                    'undo' : true
+                });
+            }
+        }
+
+        initFlexMenu();
+        $(window).bind('resize', initFlexMenu);
+
+        $('.apps > .pages').flexMenu({
+            linkText: "<button class='menu-more'>...</button>",
+            linkTextAll : 'Страницы',
+            linkTitle : 'View More',
+            linkTitleAll: "Страницы",
+            popupClass: 'animated zoomIn',
+            showOnHover: false
+        });
+
+        if (typeof search_autocomplete != 'function') {
+            function search_autocomplete( e ){
+                //var element = $(e.target);
+                var form = $('.search-form');
+                var container = $('.autocomplete-container');
+                var query = $('#search').val().trim();
+                if(query.length > 0){
+                    var request = $.ajax({
+                        url: "{$wa->getUrl('shop/frontend/search')}?query="+query,
+                        type: 'get',
+                        cache: false,
+                        dataType: "html"
+                    });
+
+                    request.success(function(response, textStatus) {
+                        container.html(response);
+                        container.addClass('animated fadeInUp show')
+                    });
+
+                    request.fail(function(response, textStatus) {
+                        //alert('error');
+                    });
+                }else{
+                    container.html('');
+                    container.removeClass('animated fadeInUp show')
+                }
+            }
+        }
+
+        $('.search').on('keyup', search_autocomplete);
+
+        $(document).mouseup(function(e) {
+            if (!$(".autocomplete-container").is(e.target) && $(".autocomplete-container").has(e.target).length === 0) {
+                $('.autocomplete-container').html('');
+                $('.autocomplete-container').removeClass('animated fadeInUp show')
+            }
+        });
+    });
+
+
+</script>
+{$wa->block("jivo")}
+</body>
+</html>

@@ -1,0 +1,1224 @@
+msgid ""
+msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: uk_UA\n"
+"Language-Team: skeeter-studio.ru\n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: \n"
+"POT-Creation-Date: 2015-08-17 19:37+0300\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"Project-Id-Version: Webasyst Files 1.1.6.131 UA translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "This is your personal folder. No one but you has access here."
+msgstr "Це ваша особиста папка. Ніхто, крім вас, не має доступу до неї."
+
+msgid "If you need to share files with someone else use folders with common access."
+msgstr "Якщо вам потрібно обмінюватися з кимось файлами, використовуйте папки зі спільним доступом."
+
+msgid "Show more files"
+msgstr "Показати більше файлів"
+
+msgid "Loading"
+msgstr "Завантаження"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "via %s (%s)"
+msgstr "через %s (%s)"
+
+msgid "Source authorization code is canceled or expired"
+msgstr "Код авторизації джерела скасовано або термін його дії сплив"
+
+msgid "Do you really want to clean the trash and delete all files?"
+msgstr "Ви дійсно хочете очистити кошик і видалити файли?"
+
+msgid "Clear trash"
+msgstr "Очистити кошик"
+
+msgid "Sharing settings"
+msgstr "Параметри спільного доступу"
+
+msgid "Share this folder"
+msgstr "Увімкнути спільний доступ до цієї папки"
+
+msgid "Public link"
+msgstr "Публічне посилання"
+
+msgid "Create subfolder"
+msgstr "Створити підпапку"
+
+msgid "Rename"
+msgstr "Перейменувати"
+
+msgid "Send as attachement"
+msgstr "Відправити як вкладення"
+
+msgid "Duplicate"
+msgstr "Дублікат"
+
+msgid "Move"
+msgstr "Перемістити"
+
+msgid "Mark"
+msgstr "Позначити"
+
+msgid "Tags"
+msgstr "Теги"
+
+msgid "Delete"
+msgstr "Видалити"
+
+msgid "Restore"
+msgstr "Відновити"
+
+msgid "Delete permanently"
+msgstr "Видалити назавжди"
+
+msgid "Name"
+msgstr "Назва"
+
+msgid "Updated"
+msgstr "Оновлено"
+
+msgid "Size"
+msgstr "Розмір"
+
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d елемент"
+msgstr[1] "%d елементи"
+msgstr[2] "%d елементів"
+
+msgid "of %d"
+msgstr "з %d"
+
+msgid "Only you can access files in this folder"
+msgstr "Тільки ви можете отримати доступ до файлів у цій папці"
+
+msgid "Only you can access this file"
+msgstr "Тільки ви можете отримати доступ до цього файлу"
+
+msgid "download"
+msgstr "завантажити"
+
+msgid "public link"
+msgstr "публічне посилання"
+
+msgid "Created by %s"
+msgstr "Створено користувачем %s"
+
+msgid "Uploaded by %s"
+msgstr "Завантажено користувачем %s"
+
+msgid "favorites"
+msgstr "обране"
+
+msgid "%d comment"
+msgid_plural "%d comments"
+msgstr[0] "%d коментар"
+msgstr[1] "%d коментарі"
+msgstr[2] ""
+
+msgid "Loading..."
+msgstr "Завантаження..."
+
+msgid "Drop anywhere to upload"
+msgstr "Перетягніть файл у будь-яке місце для завантаження"
+
+msgid "Cron Tasks"
+msgstr "Завдання Cron"
+
+msgid "Without a <tt>cron</tt> job set up for copy task file copy process may complete at slower rate."
+msgstr "Без налаштованого для копіювання файлів завдання <tt>cron</tt> процес копіювання може виконуватися більш повільними темпами."
+
+msgid "Please set up a <tt>cron</tt> job (<a href=\"http://www.webasyst.com/framework/docs/server/cron/\" target=\"_blank\">view instructions</a>) using the command specified below in your web-hosting control panel:"
+msgstr "Налаштуйте завдання <tt>cron</tt> (<a href=\"http://developers.webasyst.ru/docs/installation/tips/cron/\" target=\"_blank\">переглянути інструкції</a>), використовуючи наведену нижче команду у контрольній панелі хостинга:"
+
+msgid "Without a <tt>cron</tt> job set up for external sourceы syncronization task sync process may complete at slower rate."
+msgstr "Без налаштованого для синхонізації із зовнішніми ресурсами завдання <tt>cron</tt> процес синхронізації може виконуватися більш повільними темпами."
+
+msgid "<tt>cron</tt> job is set up properly."
+msgstr "Завдання <tt>cron</tt> налаштоване правильно."
+
+msgid "Upload files"
+msgstr "Завантажити файли"
+
+msgid "All files"
+msgstr "Усі файли"
+
+msgid "Favorites"
+msgstr "Обране"
+
+msgid "New filter"
+msgstr "Новий фільтр"
+
+msgid "Release to create new filter"
+msgstr "Відпустіть, аби створити новий фільтр"
+
+msgid "Search files"
+msgstr "Пошук файлів"
+
+msgid "New storage"
+msgstr "Нове сховище"
+
+msgid "Storage"
+msgstr "Сховище"
+
+msgid "Only you can access files in this storage"
+msgstr "Тільки ви маєте доступ до файлів у цьому сховищі"
+
+msgid "Shared"
+msgstr "Суспільне"
+
+msgid "New source"
+msgstr "Нове джерело"
+
+msgid "Sources"
+msgstr "Джерела"
+
+msgid "Trash"
+msgstr "Кошик"
+
+msgid "Settings"
+msgstr "Налаштування"
+
+msgid "Plugins"
+msgstr "Плагіни"
+
+msgid "Statistics"
+msgstr "Статистика"
+
+msgid "Cron tasks"
+msgstr "Завдання cron"
+
+msgid "Welcome to Files application!"
+msgstr "Ласкаво просимо у додаток Файли!"
+
+msgid "Start uploading files by clicking the link above or by dragging selected files anywhere on this page."
+msgstr "Розпочати завантаження файлів можна, натиснувши на посилання вище або шляхом перетягування обраних файлів у будь-якому місці на цій сторінці."
+
+msgid "Drag some photos anywhere on this page to start upload"
+msgstr "Перетягніть фотографії у будь-яке місце на цій сторінці, аби розпочати завантаження"
+
+msgid "Notifications on new uploaded files"
+msgstr "Повідомлення про нові завантажені файли"
+
+msgid "App icon badge count"
+msgstr "Лічильник на іконці додатку"
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "Create folder"
+msgstr "Створити папку"
+
+msgid "No permissions to create a folder"
+msgstr "Немає прав на створення папки"
+
+msgid "Sync is in process. No changes available until synchronization finish."
+msgstr "Синхронізація у процесі. До кінця синхронізації зміни не дозволені."
+
+msgid "or"
+msgstr "або"
+
+msgid "cancel"
+msgstr "скасувати"
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "Couldn't create folder"
+msgstr "Не вдається створити папку"
+
+msgid "Are you sure you want move folder <strong>\"%s\"</strong> and all files in it to trash?"
+msgstr "Ви впевнені, що хочете перемістити папку <strong>\"%s\"</strong> і всі файли в ній до кошика?"
+
+msgid "Delete folder"
+msgstr "Видалити папку"
+
+msgid "Unmount source"
+msgstr "Відключити джерело"
+
+msgid "Server error"
+msgstr "Помилка сервера"
+
+msgid "Move files"
+msgstr "Перемістити файли"
+
+msgid "Move process may take several minutes."
+msgstr "Процес переміщення може зайняти кілька хвилин."
+
+msgid "Continue in background"
+msgstr "Продовжити у фоновому режимі"
+
+msgid "Cancel the copy process? All files that is not finished will be deleted"
+msgstr "Скасувати процес копіювання? Усі файли, які не закінчені, буде видалено"
+
+msgid "Restore files and folders"
+msgstr "Відновити файли і папки"
+
+msgid "Move files and folders"
+msgstr "Перемістити файли та папки"
+
+msgid "Restore the rest"
+msgstr "Відновити решту"
+
+msgid "Move the rest"
+msgstr "Перемістити решту"
+
+msgid "No permissions to move these files"
+msgstr "Немає дозволу на переміщення цих файлів"
+
+msgid "Cancel"
+msgstr "Скасувати"
+
+msgid "Files from the same place"
+msgstr "Файли з того ж місця"
+
+msgid "Files with the following names already exist in the specified folder"
+msgstr "Файли з такими іменами вже існують у зазначеній папці"
+
+msgid "Replace"
+msgstr "Замінити"
+
+msgid "Skip"
+msgstr "Пропустити"
+
+msgid "Copy files"
+msgstr "Скопіювати файли"
+
+msgid "No permissions to copy these files"
+msgstr "Немає дозволу на копіювання цих файлів"
+
+msgid "Copy process may take several minutes."
+msgstr "Процес копіювання може зайняти кілька хвилин."
+
+msgid "Copy"
+msgstr "Копіювати"
+
+msgid "Select an action to resolve the name conflict:"
+msgstr "Оберіть дію для усунення конфлікту імен:"
+
+msgid "Change upload path"
+msgstr "Змінити шлях завантаження"
+
+msgid "Change"
+msgstr "Змінити"
+
+msgid "Upload to"
+msgstr "Завантажити до"
+
+msgid "сhange"
+msgstr "змінити"
+
+msgid "You have not enough rights to upload files"
+msgstr "У вас недостатньо прав для завантаження файлів"
+
+msgid "Select files"
+msgstr "Оберіть файли"
+
+msgid "or drag files here"
+msgstr "або перетягніть файли сюди"
+
+msgid "Upload files (%d)"
+msgstr "Завантажити файли (%d)"
+
+msgid "Start upload"
+msgstr "Розпочати завантаження"
+
+msgid "Stop upload"
+msgstr "Зупинити завантаження"
+
+msgid "Files uploaded with errors"
+msgstr "Файли, завантажені з помилками"
+
+msgid "File size exceeds the limit"
+msgstr "Розмір файлу перевищує обмеження"
+
+msgid "Not allowed file type"
+msgstr "Такий тип файлу не допускається"
+
+msgid "Max number of files exceeded"
+msgstr "Перевищена максимальна кількість файлів"
+
+msgid "Uploaded bytes exceed file size"
+msgstr "Кількість завантажених байт перевищує розмір файлу"
+
+msgid "Unidentified error"
+msgstr "Невизначена помилка"
+
+msgid "Access rights"
+msgstr "Права доступу"
+
+msgid "Personal"
+msgstr "Особисті"
+
+msgid "Me only"
+msgstr "Тільки я"
+
+msgid "Everyone"
+msgstr "Усі"
+
+msgid "All backend users"
+msgstr "Усі користувачі бекенда"
+
+msgid "Limited"
+msgstr "Обмежено"
+
+msgid "Only certain backend users will be able to access this storage"
+msgstr "Тільки визначеним користувачам бекенда дозволений доступ до цього сховища"
+
+msgid "Full access"
+msgstr "Повний доступ"
+
+msgid "Selected users"
+msgstr "Обрані користувачі"
+
+msgid "There are no user groups in your Webasyst account. Add groups using Contacts app to be able to manage access to storage."
+msgstr "У вашому акаунті Webasyst немає груп користувачів. Додайте групи за допомогою додатку Контакти, аби мати змогу керувати доступом до сховища."
+
+msgid "Start typing user name..."
+msgstr "Почніть вводити ім&#39;я користувача..."
+
+msgid "Click “Save” button below to commit changes."
+msgstr "Натисніть кнопку \"Зберегти\" нижче, аби затвердити зміни."
+
+msgid "Storage name"
+msgstr "Назва сховища"
+
+msgid "Icon"
+msgstr "Іконка"
+
+msgid "Create storage"
+msgstr "Створити сховище"
+
+msgid "Delete storage"
+msgstr "Видалити сховище"
+
+msgid "Share storage"
+msgstr "Поділитися сховищем"
+
+msgid "Delete storage and all files"
+msgstr "Видалити сховище та усі файли"
+
+msgid "This will permanently delete “%s”, and <strong>all %d files and folders</strong>. Are you sure?"
+msgstr "Ця дія видалить “%s”, та <strong>усі %d файли та папки</strong>. Ви впевнені?"
+
+msgid "Create filter"
+msgstr "Створити фільтр"
+
+msgid "Submit"
+msgstr "Відправити"
+
+msgid "Delete filter"
+msgstr "Видалити фільтр"
+
+msgid "Are you sure?"
+msgstr "Ви впевнені?"
+
+msgid "Visibility"
+msgstr "Видимість"
+
+msgid "Filter conditions"
+msgstr "Умови фільтру"
+
+msgid "File name"
+msgstr "Ім&#39;я файлу"
+
+msgid "All storages"
+msgstr "Усі склади"
+
+msgid "File type"
+msgstr "Тип файлу"
+
+msgid "All types"
+msgstr "Усі види"
+
+msgid "Custom file name extension"
+msgstr "Користувальницьке розширення імені файлу"
+
+msgid "enter tags"
+msgstr "введіть теги"
+
+msgid "Source %s"
+msgstr "Джерело %s"
+
+msgid "Provider"
+msgstr "Постачальник"
+
+msgid "Account"
+msgstr "Акаунт"
+
+msgid "Owner"
+msgstr "Власник"
+
+msgid "Mounted"
+msgstr "Встановлено"
+
+msgid "Mount point"
+msgstr "Точка монтування"
+
+msgid "Mount as storage"
+msgstr "Монтувати як сховище"
+
+msgid "Mount as subfolder"
+msgstr "Монтувати як підпапку"
+
+msgid "Mount"
+msgstr "Точка монтування"
+
+msgid "Syncronization process may take several minutes."
+msgstr "Процес синхронізації може зайняти кілька хвилин."
+
+msgid "Do not leave this page untill process finish."
+msgstr "Не залишайте цю сторінку до завершення процесу."
+
+msgid "Renew authorization code"
+msgstr "Оновити код авторизації"
+
+msgid "Authorization code renewal is not possible. You need to unlink the source and connect it again."
+msgstr "Оновлення коду авторизації неможливе. Вам потрібно відключити джерело і знову відключити його."
+
+msgid "Load authorize page"
+msgstr "Завантажити сторінку авторизації"
+
+msgid "Too many requests to external source service. Please try again in a few minutes."
+msgstr "Занадто багато запитів до зовнішнього джерела обслуговування. Будь ласка, спробуйте ще через кілька хвилин."
+
+msgid "Connect new source"
+msgstr "Підключити нове джерело"
+
+msgid "Register application on %s"
+msgstr "Зареєструвати додаток у %s"
+
+msgid "Connect %s account:"
+msgstr "Підключити акаунт %s:"
+
+msgid "specify settings"
+msgstr "вказати параметри"
+
+msgid "Connect"
+msgstr "Підключити"
+
+msgid "You need to install any source plugin before connecting sources."
+msgstr "Перед підключенням джерела вам потрібно встановити плагін будь-якого джерела."
+
+msgid "This will remove source and related folder from application. All files inside your source will remain unchanged."
+msgstr "Це дозволить видалити джерело і відповідні папки з програми. Всі файли всередині вашого джерела залишаться незмінними."
+
+msgid "Unmount"
+msgstr "Відмонтувати"
+
+msgid "Private link"
+msgstr "Приватне посилання"
+
+msgid "File is not visible in the public frontend because there are no routing rules for the Files app in your website settings. Use Site app (“Structure” section) to settle Files app on your website."
+msgstr "Файли не видно у публічній частині сайта, тому що для додатку «Файли» не існує поселення у налаштуваннях сайту. Використовуйте додаток «Сайт» (розділ «Структура»), аби створити поселення на вашому сайті."
+
+msgid "Remove link"
+msgstr "Видалити посилання"
+
+msgid "First "
+msgstr "Перший "
+
+msgid "Probably binary data in this file!"
+msgstr "Можливо, у файлі містяться двійкові дані!"
+
+msgid "You are going to change file extension. This may cause unavailability of file content. Are you sure?"
+msgstr "Ви збираєтеся змінити розширення файлу. Це може призвести до недоступності вмісту файлу. Ви впевнені?"
+
+msgid "Edit share settings"
+msgstr "Зміна параметрів суспільного доступу"
+
+msgid "Share this file"
+msgstr "Поділитися цим файлом"
+
+msgid "Download"
+msgstr "Завантажити"
+
+msgid "Delete file"
+msgstr "Видалити файл"
+
+msgid "Uploaded by"
+msgstr "Завантажено користувачем"
+
+msgid "Uploaded"
+msgstr "Завантажено"
+
+msgid "None"
+msgstr "Немає"
+
+msgid "Add a tag"
+msgstr "Додати тег"
+
+msgid "Saved"
+msgstr "Збережено"
+
+msgid "Popular tags"
+msgstr "Популярні теги"
+
+msgid "Comments"
+msgstr "Коментарі"
+
+msgid "Remove"
+msgstr "Видалити"
+
+msgid "Add comment"
+msgstr "Додати коментар"
+
+msgid "Ctrl+Enter"
+msgstr "Ctrl+Enter"
+
+msgid "Rename file"
+msgstr "Перейменувати файл"
+
+msgid "Rename folder"
+msgstr "Перейменувати папку"
+
+msgid "No permissions to rename this file"
+msgstr "Немає дозволу на перейменування цього файлу"
+
+msgid "File type statistics"
+msgstr "Статистика по типам файлів"
+
+msgid "File extension"
+msgstr "Розширення файлу"
+
+msgid "Files"
+msgstr "Файли"
+
+msgid "Trash summary"
+msgstr "Підсумок по кошику"
+
+msgid "Storage summary"
+msgstr "Підсумок по сховищу"
+
+msgid "Total"
+msgstr "Усього"
+
+msgid "User statistics"
+msgstr "Статистика користувачів"
+
+msgid "User"
+msgstr "Користувач"
+
+msgid "clear"
+msgstr "очистити"
+
+msgid "All delete files"
+msgstr "Видалити усі файли"
+
+msgid "My private files"
+msgstr "Мої особисті файли"
+
+msgid "To:"
+msgstr "До:"
+
+msgid "One email per line or separated by a \";\""
+msgstr "Один email на рядок, або розділяти символом “;”"
+
+msgid "Subject:"
+msgstr "Тема:"
+
+msgid "Text:"
+msgstr "Текст:"
+
+msgid "Attachements:"
+msgstr "Вкладення:"
+
+msgid "File size exeeds the limit set for email messages."
+msgstr "Розмір файлу перевищує ліміт, встановлений для повідомлень електронної пошти."
+
+msgid "Send"
+msgstr "Відправити"
+
+msgid "%d file"
+msgid_plural "%d files"
+msgstr[0] "%d file"
+msgstr[1] "%d files"
+msgstr[2] ""
+
+msgid "Mark the rest"
+msgstr "Позначити решту"
+
+msgid "Mark files"
+msgstr "Позначити файли"
+
+msgid "No permissions to mark this files"
+msgstr "Немає дозволу на позначення цих файлів"
+
+msgid "Assign tags"
+msgstr "Призначити теги"
+
+msgid "Assign"
+msgstr "Призначити"
+
+msgid "Add tag"
+msgstr "Додати тег"
+
+msgid "You need the settlement of Files to create public link. Use <a href=\"%s\">Site</a> to create new settlement."
+msgstr "Аби створити публічне посилання, потрібне поселення для додатку «Файли». Використовуйте додаток <a href=\"%s\">«Сайт»</a> аби створити нове поселення."
+
+msgid "Link to this file"
+msgstr "Посилання на цей файл"
+
+msgid "Link to this folder"
+msgstr "Посилання на цю папку"
+
+msgid "Right now this content is private and can be viewed by authorized backend users only. Enabling public link option will create a secret direct link that you can send to other people so they can access and download this content too."
+msgstr "Зараз цей контент є приватним і може переглядатися тільки уповноваженим користувачем інтерфейсу. Увімкнення публічного посилання створить секретне пряме посилання, яке можна надіслати іншим людям, аби вони також могли відкрити та завантажити цей контент."
+
+msgid "Share file"
+msgstr "Поділитися файлом"
+
+msgid "Share folder"
+msgstr "Поділитися папкою"
+
+msgid "Public link to"
+msgstr "Публічне посилання на"
+
+msgid "Insufficient access rights"
+msgstr "Недостатньо прав доступу"
+
+msgid "Couldn't share folder"
+msgstr "Не вдається поділитися папкою"
+
+msgid "Currenty shared with <strong>%s</strong>"
+msgstr "Наразі у спільному доступі з <strong>%s</strong>"
+
+msgid "Share with the team"
+msgstr "Поділитися з командою"
+
+msgid "Customize"
+msgstr "Налаштувати"
+
+msgid "No permissions to delete these files"
+msgstr "Немає дозволу на видалення файлів"
+
+msgid "Files will be deleted PERMANENTLY without the ability to restore. Are you sure?"
+msgstr "Файли будуть вилучені НАЗАВЖДИ без можливості відновлення. Ви впевнені?"
+
+msgid "Files will be moved to trash. Are you sure?"
+msgstr "Файли будуть переміщені до кошика. Ви впевнені?"
+
+msgid "You don’t have permissions to delete these files."
+msgstr "Ви не маєте дозволу на видалення цих файлів."
+
+msgid "Delete the rest"
+msgstr "Видалити решту"
+
+msgid "%d file will be deleted"
+msgid_plural "%d files will be deleted"
+msgstr[0] "%d файл буде видалено"
+msgstr[1] "%d файли буде видалено"
+msgstr[2] ""
+
+msgid "An error occurred"
+msgstr "Сталася помилка"
+
+msgid "Yes"
+msgstr "Так"
+
+msgid "Empty result"
+msgstr "Порожній результат"
+
+msgid "Couldn't save filter"
+msgstr "Не вдалося зберегти фільтр"
+
+msgid "Couldn't create storage"
+msgstr "Не вдалося створити сховище"
+
+msgid "Frontend type"
+msgstr "Тип фронтенду"
+
+msgid "Published files"
+msgstr "Опубліковані файли"
+
+msgid "WebDav"
+msgstr "WebDav"
+
+msgid "uploaded"
+msgstr "завантажено"
+
+msgid "created new folder"
+msgstr "створив нову папку"
+
+msgid "created new storage"
+msgstr "створив нове сховище"
+
+msgid "renamed"
+msgstr "перейменував"
+
+msgid "moved"
+msgstr "перемістив"
+
+msgid "duplicated"
+msgstr "створив дублікат"
+
+msgid "deleted"
+msgstr "видалив"
+
+msgid "restored"
+msgstr "відновив"
+
+msgid "Text"
+msgstr "Текст"
+
+msgid "Documents"
+msgstr "Документи"
+
+msgid "Images"
+msgstr "Зображення"
+
+msgid "Video"
+msgstr "Відео"
+
+msgid "Audio"
+msgstr "Аудіо"
+
+msgid "eBooks"
+msgstr "електронні книги"
+
+msgid "Off"
+msgstr "Вимкнено"
+
+msgid "My favorite folders only"
+msgstr "Тільки мої обрані папки"
+
+msgid "All folders"
+msgstr "Усі папки"
+
+msgid "New shared files and folders"
+msgstr "Нові спільні файли та папки"
+
+msgid "New uploaded files (favorite folders only)"
+msgstr "Нові завантажені файли (тільки обрані папки)"
+
+msgid "New uploaded files (all folders)"
+msgstr "Нові завантажені файли (усі папки)"
+
+msgid "Can create storage"
+msgstr "Може створити сховище"
+
+msgid "No access"
+msgstr "Немає доступу"
+
+msgid "View only"
+msgstr "Тільки перегляд"
+
+msgid "View and comment"
+msgstr "Перегляд та коментарі"
+
+msgid "Add new files"
+msgstr "Додавати нові файли"
+
+msgid "Common files"
+msgstr "Загальні файли"
+
+msgid "All files have been copied"
+msgstr "Усі файли було скопійовано"
+
+msgid "Files IDs:"
+msgstr "Ідентифікатори файлів:"
+
+msgid "Extension"
+msgstr "Розширення"
+
+msgid "Search results of"
+msgstr "Результати пошуку"
+
+msgid "Unknown"
+msgstr "Невідомо"
+
+msgid "Insufficient file write permissions for folder %s."
+msgstr "Для запису у папку %s недостатньо прав."
+
+msgid "Application"
+msgstr "Додаток"
+
+msgid "B"
+msgstr "Б"
+
+msgid "KB"
+msgstr "КБ"
+
+msgid "MB"
+msgstr "МБ"
+
+msgid "Access denied"
+msgstr "Доступ заборонено"
+
+msgid "Please contact app developer."
+msgstr "Будь ласка, зв&#39;яжіться з розробником програми."
+
+msgid "Deleted contact"
+msgstr "Видалений контакт"
+
+msgid "Page not found"
+msgstr "Сторінку не знайдено"
+
+msgid "Group:"
+msgstr "Група:"
+
+msgid "User %s"
+msgstr "Користувач %s"
+
+msgid "This field is required"
+msgstr "Це поле є обов&#39;язковим"
+
+msgid "There are forbidden characters."
+msgstr "Є заборонені символи."
+
+msgid "Name is not unique. Try to rename."
+msgstr "Назва не є унікальною. Спробуйте змінити її."
+
+msgid "There are no files available to pack"
+msgstr "Немає доступних для архівації файлів"
+
+msgid "No available storages"
+msgstr "Немає доступних сховищ"
+
+msgid "Storage not found"
+msgstr "Сховище не знайдено"
+
+msgid "Access denied to storage"
+msgstr "Доступ до сховища заборонено"
+
+msgid "Folder not found"
+msgstr "Папку не знайдено"
+
+msgid "Saving error"
+msgstr "Помилка при збереженні"
+
+msgid "Excluded from upload because of name conflict."
+msgstr "Виключене з завантаження через конфлікт назв."
+
+msgid "There are a forbidden symbols"
+msgstr "Є заборонені символи"
+
+msgid "Not unique"
+msgstr "Не унікально"
+
+msgid "Incorrect data for saving"
+msgstr "Невірні дані для збереження"
+
+msgid "Source not found"
+msgstr "Джерела не знайдено"
+
+msgid "Can't create storage"
+msgstr "Не вдалося створити сховище"
+
+msgid "Can't create folder"
+msgstr "Не вдалося створити папку"
+
+msgid "Authorize failed"
+msgstr "Авторизація не вдалася"
+
+msgid "Source plugin not found"
+msgstr "Плагін джерел не знайдено"
+
+msgid "All files from remote source have been pulled"
+msgstr "Усі файли з віддаленого джерела були витягнуто"
+
+msgid "Please specify valid email address"
+msgstr "Будь ласка, введіть дійсну адресу електронної пошти"
+
+msgid "Invalid email address"
+msgstr "Неправильна адреса електронної пошти"
+
+msgid "My files"
+msgstr "Мої файли"
+
+msgid "Maximum amount of folders for one copy process is %s."
+msgstr "Максимальна кількість папок для одного процесу копіювання — %s."
+
+msgid "Group %s"
+msgstr "Група %s"
+
+msgid "Load more"
+msgstr "Завантажити ще"
+
+msgid "in copy/move process"
+msgstr "у процесі копіювання/переміщення"
+
+msgid "Info"
+msgstr "Інформація"
+
+msgid "GB"
+msgstr "ГБ"
+
+msgid "added new comment"
+msgstr "додав новий коментар"
+
+msgid "Choose destination folder or storage"
+msgstr "Оберіть папку призначення або сховище"
+
+msgid "Link"
+msgstr "Посилання"
+
+msgid "Meta"
+msgstr "Мета"
+
+msgid "Upload photos"
+msgstr "Завантажити фотографії"
+
+msgid "Document"
+msgstr "Документ"
+
+msgid "Input file name"
+msgstr "Вкажіть назву файлу"
+
+msgid "Read only"
+msgstr "Тільки для читання"
+
+msgid "Read and comment"
+msgstr "Читати і коментувати"
+
+msgid "%d contact"
+msgid_plural "%d contacts"
+msgstr[0] "%d контакт"
+msgstr[1] "%d контакти"
+msgstr[2] ""
+
+msgid "Download File"
+msgstr "Скачати файл"
+
+msgid "Upload datetime"
+msgstr "Час та дата завантаження"
+
+msgid "Update datetime"
+msgstr "Час та дата оновлення"
+
+msgid "Contact isn't exists"
+msgstr "Контакту не існує"
+
+msgid "No permission to create a folder"
+msgstr "Немає прав на створення папки"
+
+msgid "There are no user groups in your Webasyst installation. Add groups in the Contacts app to be able to manage access to storage."
+msgstr "В установці фреймворку Webasyst немає груп користувачів. Додайте групи у додатку «Контакти», аби мати можливість керувати доступом до сховища."
+
+msgid "Groups/users"
+msgstr "Групи/користувачі"
+
+msgid "Access level"
+msgstr "Рівень доступу"
+
+msgid "The insufficient file write permissions for the %s folder."
+msgstr "Не вдалося зберегти файл через недостатні права запису до папки %s."
+
+msgid "Database error"
+msgstr "Помилка бази даних"
+
+msgid "Name is not unique. Try to rename"
+msgstr "Назва не є унікальною. Спробуйте перейменувати"
+
+msgid "Save error"
+msgstr "Помилка збереження"
+
+msgid "Error occurred"
+msgstr "Сталася помилка"
+
+msgid "Select an action to resolve a name conflict"
+msgstr "Оберіть дію для вирішення конфлікту імен"
+
+msgid "Exclude"
+msgstr "Виключити"
+
+msgid "No permissions to move this files"
+msgstr "Немає дозволу на переміщення цих файлів"
+
+msgid "Move rest"
+msgstr "Перемістити решту"
+
+msgid "Field type"
+msgstr "Тип поля"
+
+msgid "Create"
+msgstr "Створити"
+
+msgid "Who already got shared access"
+msgstr "Хто вже отримав спільний доступ"
+
+msgid "Save settings"
+msgstr "Зберегти налаштування"
+
+msgid "Remove all sharings"
+msgstr "Видалити все спільне"
+
+msgid "Couldn't delete sharings"
+msgstr "Не вдалося видалити спільне"
+
+msgid "Couldn't save settings"
+msgstr "Не вдалося зберегти налаштування"
+
+msgid "Search result"
+msgstr "Результат пошуку"
+
+msgid "Excluded cause of name conflict"
+msgstr "Виключено по причині конфлікту імен"
+
+msgid "File is not visible in the public frontend because there are no routing rules for the Files app in your website settings. Use Site app (Routing section) to settle File app on your website."
+msgstr "Файл не відображається в публічному інтерфейсі, тому що немає правил маршрутизації для додатку \"Файли\" у налаштуваннях вашого сайту. Використовуйте додаток \"Сайт\" (розділ структури) для налаштування поселення додатку \"Файли\" на вашому сайті."
+
+msgid "Seems binary data!"
+msgstr "Здається, двійкові дані!"
+
+msgid "Delete the file"
+msgstr "Видалити файл"
+
+msgid "Restore rest"
+msgstr "Відновити решту"
+
+msgid "Choosen groups/users"
+msgstr "Обрані групи/користувачі"
+
+msgid "Color"
+msgstr "Колір"
+
+msgid "This will to delete %s and <strong>all %d files and folders permanently</strong>. Are you sure?"
+msgstr "Будуть видалені %s та<strong>усі%d файли та папки назавжди</strong>. Ви впевнені?"
+
+msgid "No permissions to copy this files"
+msgstr "Немає дозволу на копіювання цих файлів"
+
+msgid "Copying start"
+msgstr "Початок копіювання"
+
+msgid "Upload %d file"
+msgid_plural "Uploaded %d files"
+msgstr[0] "Завантажити %d файл"
+msgstr[1] "Завантажити %d файли"
+msgstr[2] ""
+
+msgid "Storage ID"
+msgstr "Ідентифікатор сховища"
+
+msgid "Storage access type"
+msgstr "Тип доступу до сховища"
+
+msgid "Total size of files"
+msgstr "Загальний розмір файлів"
+
+msgid "Total size"
+msgstr "Загальний розмір"
+
+msgid "Release<br> to create new filter"
+msgstr "Відпустіть<br>аби створити новий фільтр"
+
+msgid "Admin"
+msgstr "Адміністратор"
+
+msgid "Root"
+msgstr "Корінь"
+
+msgid "No permissions to delete this files"
+msgstr "Немає дозволу на видалення цих файлів"
+
+msgid "Delete rest"
+msgstr "Видалити решту"
+
+msgid "Mark rest"
+msgstr "Позначити решту"
+
+msgid "File size exeeds the defined limit for email messages"
+msgstr "Розмір файлу перевищує встановлений ліміт для email-повідомлень"
+
+msgid "Create link"
+msgstr "Створити посилання"
+
+msgid "Limited access"
+msgstr "Обмежений доступ"
+
+msgid "Edit source \"%s\""
+msgstr "Редагувати джерело \"%s\""
+
+msgid "Create source"
+msgstr "Створити джерело"
+
+msgid "Delete source"
+msgstr "Видалити джерело"
+
+msgid "Source name"
+msgstr "Назва джерела"
+
+msgid "Source provider"
+msgstr "Постачальник джерела"
+
+msgid "Source paired with"
+msgstr "Джерело у парі з"
+
+msgid "Select folder to pair"
+msgstr "Оберіть папку для пари"
+
+msgid "Pair"
+msgstr "Пара"
+
+msgid "Save source"
+msgstr "Зберегти джерело"
+
+msgid "Source adapter not found"
+msgstr "Адаптер джерела не знайдено"
+
+msgid "There no source provider plugins"
+msgstr "Немає плагінів постачальника джерел"
+
+msgid "Are you sure clean trash and delete all files?"
+msgstr "Ви впевнені, що потрібно очистити кошик і видалити усі файли?"
+
+msgid "Source settings updated"
+msgstr "Параметри джерела оновлено"
+
+msgid "Create link to this file"
+msgstr "Створити посилання на цей файл"
+
+msgid "Create link to this folder"
+msgstr "Створити посилання на цю папку"
+
+msgid "share"
+msgstr "поділитися"
+
+msgid "Share settings"
+msgstr "Налаштування загального доступу"
+
+msgid "User:"
+msgstr "Користувач:"
+
+msgid "My only"
+msgstr "Тільки мої"
+
+msgid "Copying started"
+msgstr "Копіювання почалося"
+
+msgid "There are no source provider plugins."
+msgstr "Немає плагінів постачальника джерел."
+
+msgid "Search results"
+msgstr "Результати пошуку"
+
+msgid "empty"
+msgstr "порожнє"
+
+msgid "All"
+msgstr "Усі"
+
+msgid "in copying/moving process"
+msgstr "у процесі копіювання/переміщення"
+
+msgid "Without a <tt>cron</tt> job set up for external sources, the synchronization process may complete at a slower rate."
+msgstr "Без налаштованого для синхронізації із зовнішніми ресурсами завдання <tt>cron</tt> процес синхронізації може виконуватися повільніше."
+
+msgid "Synchronization process may take several minutes."
+msgstr "Процес синхронізації може зайняти кілька хвилин."
+
+msgid "change"
+msgstr "змінити"

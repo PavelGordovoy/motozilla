@@ -1,0 +1,16 @@
+{strip}
+<div class="js-categories-sub brands-h-list">
+    <div class="brands-h-list__items">
+        {foreach $brands as $b}
+            {$url = ''}
+            {if $is_productbrands}{$url = $b.url}{/if}
+            {if $is_brandspro}{$url = $b.frontend_url}{/if}
+            <div class="brands-h-list__item">
+                <a class="brands-h-list__title" title="{$b.name|escape}" href="{$url}">
+                    {$b.name|escape}
+                </a>
+            </div>
+        {/foreach}
+    </div>
+</div>
+{/strip}

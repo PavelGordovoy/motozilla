@@ -1,0 +1,83 @@
+{if $cart.count}
+
+<!-- cart title -->
+<div class="fl-cart-title">
+    <span class="items-count"><i class="icon-shopicon"></i> <strong class="count"><span class="items-count-val">{if $cart.count}{$cart.count}{else}0{/if}</span> товаров в Вашей корзине</strong></span>
+    <a href="#" class="fl-cart-remove-all">удалить все</a>
+</div>
+
+<div class="fl-cart-in cart-content">
+    <!-- cart item -->
+    <form method="post" action="{$wa_app_url}cart/">
+        <ul>
+            {$sub_total = 0}
+            {foreach $cart.items as $item}
+            <li class="fly-in-cart-item cart-item" data-id="{$item.id}">
+                <div class="item-thumb" data-th="Фото">
+                    <a href="{$wa->shop->productUrl($item.product)}" title="{$item.product.name|escape}">{$wa->shop->productImgHtml($item.product, '60x0', ['default' => "`$wa_theme_url`assets/img/nophoto.png"])}</a>
+                </div>
+
+                <div class="item-name">
+                    <a href="{$wa->shop->productUrl($item.product)}" class="bold">
+                        {$item.product.name|escape|truncate:60}
+                        <span class="item-price">
+                            <span class="sku">{if $item.sku_name && $item.sku_name != $item.product.name}{$item.sku_name|escape}{/if}</span>
+                            <span class="item-total">{shop_currency_html($item.full_price, true)}</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="item-qty">
+                    <div class="f-group">
+                        <input type="{if $wa->isMobile()}number{else}text{/if}"  name="quantity[{$item.id}]" value="{$item.quantity}" class="qty{if !empty($item.error)} error{/if}">
+                        <button class="qtyminusCart"><i class="icon-minus-lg"></i></button>
+                        <button class="qtyplusCart"><i class="icon-plus-lg"></i></button>
+                    </div>
+                </div>
+
+                <div class="mrev item-price cell">
+                    {shop_currency_html($item.price, true)}
+                </div>
+
+                <div class="mrev item-total item-total-value cell" data-th="Итого">
+                    {shop_currency_html($item.full_price, true)}
+                </div>
+
+                <div class="item-remove" >
+                    <a class="delete" data-id="{$item.product.id}" href="#" title="[`Remove from cart`]"><i class="remove icon-cancel-circle"></i></a>
+                </div>
+            </li>
+            {$sub_total = $sub_total + $item.full_price}
+            {/foreach}
+        </ul>
+
+        <div class="total">
+            <span class="t-subtotal">Всего <strong class="cart-subtotal">{shop_currency_html($sub_total, true)}</strong></span>
+            <span class="t-discount">Скидка <strong class="cart-discount">{if $discount > 0}&minus; {/if}{shop_currency_html($discount, true)}</strong></span>
+
+            {if shopDiscounts::isEnabled('coupons')}
+                <div {if !$coupon_code}style="display: none;"{/if} id="apply-coupon-code">
+                [`Coupon code`]:
+                <input type="text" name="coupon_code" value="{$coupon_code|escape}"> <input type="submit" value="[`Apply`]" class="blue-btn cart-coupon-btn">
+                {if $coupon_code && empty($coupon_discount)}
+                    <div class="errormsg">[`Invalid coupon code`]</div>
+                {/if}
+                </div>
+            {/if}
+
+            <span class="t-total">Итого <strong class="cart-total">{shop_currency_html($cart.total, true)}</strong></span>
+            <input name="checkout" class="button" type="submit" value="[`Proceed to checkout`]">
+        </div>
+    </form>
+</div>
+
+{else}
+<div class="cart your-cart-is-empty">
+    <div class="fl-cart-title">
+        <span class="items-count"><i class="icon-shopicon"></i> <strong class="count">В Корзине 0 товаров</strong></span>
+    </div>
+    <div class="fl-cart-in cart-content">
+        <p>[`Your shopping cart is empty.`]</p>
+    </div>
+</div>
+{/if}

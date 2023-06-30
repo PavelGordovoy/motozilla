@@ -1,0 +1,25 @@
+{strip}
+{$is_schema_org = $theme_settings.schema_org_active}
+
+{$footer_text_about_title = $theme_settings.footer_text_about_title}
+{$footer_text_about = $theme_settings.footer_text_about}
+
+{if $footer_text_about_title}
+    {if $theme_settings.static_var_smarty}{eval var=$footer_text_about_title assign='footer_text_about_title'}{/if}
+    <div class="footer_head">{$footer_text_about_title}</div>
+{/if}
+
+{if $footer_text_about}
+    {if $theme_settings.static_var_smarty}{eval var=$footer_text_about assign='footer_text_about'}{/if}
+    <div{if $is_schema_org} itemprop="description"{/if}>{$footer_text_about}</div>
+{/if}
+<p>
+    &copy; {time()|wa_datetime:"Y"}
+    {if $wa->isMobile() && $theme_settings.switch_version}
+        <br>
+        <span class="js-switch-version-link link">
+            {if $wa->cookie("is_desktop_for_mobile") == 1}[`Mobile version of the site`]{else}[`Full version of site`]{/if}
+        </span>
+    {/if}
+</p>
+{/strip}

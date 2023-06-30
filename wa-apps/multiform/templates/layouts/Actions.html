@@ -1,0 +1,132 @@
+{$create = waRequest::post("create")}
+
+{if !$create}
+    <div class="top-left20 s-ibutton-checkbox{if !empty($action.autoexecute)} has-autoexecute{/if}">
+        <ul class="menu-h">
+            <li><span class="gray" id="s-status-disabled-label">[`Disabled`]</span></li>
+            <li>
+                <input type="checkbox" class="switcher dynamic" data-id="{$action.id}" name="custom_status" value="1"{if !empty($action.status)} checked{/if} />
+            </li>
+            <li><span id="s-status-enabled-label">[`Enabled`]</span></li>
+            <li class="hidden"><i class="icon16 loading"></i></li>
+        </ul>
+    </div>
+{/if}
+
+{if !empty($action.autoexecute) && !$create}
+    {if $action.autoexecute == '2'}
+        <a class="s-auto-execute js-action{if empty($action.fields.auto_execute)} not{/if}" data-value="{if !empty($action.fields.auto_execute)}1{else}0{/if}" data-title="{if empty($action.fields.auto_execute)}[`Action will be executed immediatelly after form successfully submited`]{else}[`Action will be executed by yourself on demand`]{/if}" href="#/edit/autoxecute/{$action.id}/" title='{if !empty($action.fields.auto_execute)}[`Action will be executed immediatelly after form successfully submited`]{else}[`Action will be executed by yourself on demand`]{/if}'>AUTO</a>
+    {else}
+        <div class="s-auto-execute" title='[`Action will be executed immediatelly after form successfully submited`]'>AUTO</div>
+    {/if}
+{/if}
+<h1 class="align-center">
+    {if !$create}
+        <input class='colorpicker fly-save' type="text"  data-id="{$action.id}" name="custom_color" value='{if !empty($action.fields.custom_color)}{$action.fields.custom_color|escape}{else}#ff0000{/if}'/>
+    {/if}
+    {if $create}
+        [`Creating of new action`]
+    {else}
+        <span>{if !empty($action.fields.custom_name)}{$action.fields.custom_name|escape}{else}{$action.name|escape}{/if}</span>
+        <a href="#/edit/actionField/" title="[`Edit`]" class="js-action"><i class="icon16 edit"></i></a>
+        <div class="inline" style="display: none">
+            <input type="text" name="custom_name" style="width: 50%"  value="{if !empty($action.fields.custom_name)}{$action.fields.custom_name|escape}{else}{$action.name|escape}{/if}" />
+            <a href="#/save/actionField/{$action.id}/" class="js-action"><i style="margin: 10px 0 0" class="icon16 disk"></i></a>
+        </div>
+    {/if}
+</h1>
+{if !$create}<a href="#/delete/action/{$action.id}" title="[`delete`]" class="js-action top-right20"><i class="icon16 delete"></i> [`delete`]</a>{/if}
+<h2 class="align-center">"{$action.name|escape}"</h2>
+<div class="margin-block bottom block s-action-description">
+    <span>{if !empty($action.fields.custom_description)}{$action.fields.custom_description|escape}{else}{$action.description}{/if}</span>
+    {if !$create}
+        <a href="#/edit/actionField/" title="[`Edit`]" class="js-action"><i class="icon16 edit"></i></a>
+        <div class="inline" style="display: none">
+            <textarea name="custom_description" style="width: 80%">{if !empty($action.fields.custom_description)}{$action.fields.custom_description|escape}{else}{$action.description}{/if}</textarea>
+            <a href="#/save/actionField/{$action.id}/" class="js-action"><i style="margin: 10px 0 0" class="icon16 disk"></i></a>
+        </div>
+    {/if}
+</div>
+<div class="s-{if empty($action.settings)}{$action_id|replace:'_':'-'}{else}actions-save{/if} {if $create}new-action{else}action-content-{$action.id}{/if}">
+    <form action="{if !empty($action.settings)}?module=actions&action=save{/if}" method="post">
+        <div class="fields">
+            {$wa->csrf()}
+            {if $create}
+                <div class="field">
+                    <div class="name">[`Status`]</div>
+                    <div class="value no-shift s-ibutton-checkbox">
+                        <ul class="menu-h">
+                            <li><span class="gray" id="s-status-disabled-label">[`Disabled`]</span></li>
+                            <li>
+                                <input type="checkbox" class="switcher" name="custom_status" value="1"{if !empty($action.status)} checked{/if} />
+                            </li>
+                            <li><span id="s-status-enabled-label">[`Enabled`]</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="name">[`Action name`]</div>
+                    <div class="value">
+                        <input type="text" name="custom_name" value="{if !empty($action.fields.custom_name)}{$action.fields.custom_name|escape}{/if}" />
+                        <div class="multiform-gap-description">
+                            [`This name will be displayed in the list of actions for the form.`]
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="name">[`Action description`]</div>
+                    <div class="value">
+                        <textarea name="custom_description">{if !empty($action.fields.custom_description)}{$action.fields.custom_description|escape}{/if}</textarea>
+                        <div class="multiform-gap-description">
+                            [`Specify more information about action for yourself`]
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="name">[`Action color`]</div>
+                    <div class="value">
+                        <input class='colorpicker' type="text" name="custom_color" value='{if !empty($action.fields.custom_color)}{$action.fields.custom_color|escape}{else}#ff0000{/if}'/>
+                        <div class="multiform-gap-description">
+                            [`This is the color of action icon`]
+                        </div>
+                    </div>
+                </div>
+                {if !empty($action.autoexecute) && $action.autoexecute !== '1'}
+                    <div class="field">
+                        <div class="name">[`Auto execute`]</div>
+                        <div class="value">
+                            <input type="checkbox" name="auto_execute" {if !empty($action.fields.auto_execute)}checked{/if} value="1" />
+                            <div class="multiform-gap-description">
+                                [`When action should be executed: immediatelly after form successfully submited (auto execute) or on demand`]
+                            </div>
+                        </div>
+                    </div>
+                {/if}
+                <div class="field">
+                    <hr />
+                </div>
+            {else}
+                <div class="field hidden-settings">
+                    <input type="hidden" name="custom_color" value='{if !empty($action.fields.custom_color)}{$action.fields.custom_color|escape}{else}#ff0000{/if}'/>
+                    <input type="hidden" name="custom_name" value="{if !empty($action.fields.custom_name)}{$action.fields.custom_name|escape}{else}{$action.name|escape}{/if}" />
+                    <input type="hidden" name="custom_description" value="{if !empty($action.fields.custom_description)}{$action.fields.custom_description|escape}{else}{$action.description}{/if}" />
+                    <input type="hidden" name="custom_status" value="{if !empty($action.status)}1{else}0{/if}" />
+                    {if !empty($action.autoexecute)}
+                        <input type="hidden" name="auto_execute" value="{if !empty($action.fields.auto_execute)}{$action.fields.auto_execute|escape}{else}0{/if}" />
+                    {/if}
+                </div>
+            {/if}
+            {$content}
+            <div class="field errorfld"><em class="errormsg"></em></div>
+            <div class="field submit-block">
+                {if !empty($action.id)}<input type="hidden" value="{$action.id}" name="action_id" />{/if}
+                <input type="hidden" value="{$action_id}" name="action_code" />
+                <input type="hidden" value="{$form_id}" name="form_id" />
+                <input type="hidden" value="{$parent_id}" name="parent_id" />
+                <input type="submit" value="[`Save`]" class="button green" />
+                <div class="errormsg"></div>
+            </div>
+        </div>
+        <div class="clear-both"></div>
+    </form>
+</div>

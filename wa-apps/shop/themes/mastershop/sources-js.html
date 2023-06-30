@@ -1,0 +1,13 @@
+{strip}
+{if $theme_settings.plugins_shop_js_footer}
+    <!-- plugin hook: 'frontend_head' -->
+    {* @event frontend_head.%plugin_id% *}
+    {foreach $frontend_head as $_}{$_}{/foreach}
+{/if}
+
+{if $theme_settings.min_script_off}
+    <script src="{$wa_active_theme_url}mastershop.shop.js?v{$wa_theme_version}"></script>
+{else}
+    <script src="{$wa_active_theme_url}mastershop.shop.min.js?v{$wa_theme_version}"></script>
+{/if}
+{/strip}

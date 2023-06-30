@@ -1,0 +1,145 @@
+{strip}
+
+
+{$is_schema_org = $theme_settings.schema_org_active}
+{$is_fixed_bottom = $theme_settings.bar_fixed_bottom_desktop}
+{if $wa->isMobile()}{$is_fixed_bottom = $theme_settings.bar_fixed_bottom_mobile}{/if}
+<footer class="footer{if $is_fixed_bottom == 1} footer--padding-b{/if}"{if $is_schema_org} itemscope itemtype="http://schema.org/{$theme_settings.schema_org_contact_entity}"{/if}>
+    {if $is_schema_org}
+        <meta itemprop="name" content="{if $wa->shop}{$wa->shop->settings('name')}{/if}">
+        <meta itemprop="priceRange" content="{$theme_settings.schema_org_contact_price_range|escape}">
+        {if $theme_settings.schema_org_contact_image}<meta itemprop="image" content="{$wa->domainUrl()}{$wa_theme_url}{$theme_settings.schema_org_contact_image}?v{$wa_theme_version}">{/if}
+    {/if}
+    <div class="l-wrapper">
+        <div class="footer-subs-contacts">
+            {include file="`$parent_theme_path`/footer.subscribe.html"}
+            <div class="footer-contacts">
+                {* footer contacts *}
+                {if $theme_settings.display_footer_contacts == 'block'}
+                    {$wa->block("`$theme_settings.footer_contacts_block_name`")}
+                {else}
+                    {include file="`$parent_theme_path`/footer.contacts.html"}
+                {/if}
+
+                {* social *}
+                {if $theme_settings.display_footer_social == 'block'}
+                    {$wa->block("`$theme_settings.footer_social_block_name`")}
+                {else}
+                    {include file="`$parent_theme_path`/footer.social.html"}
+                {/if}
+            </div>
+        </div>
+
+        <div class="footer__links-about clearfix">
+            <div class="footer_links">
+                <div class="footer_links-col">
+                    {if $theme_settings.display_footer_links_1 == 'block'}
+                        {$wa->block("`$theme_settings.footer_links_1_name`")}
+                    {else}
+                        {include file="`$parent_theme_path`/footer.links_block_1.html"}
+                    {/if}
+                </div>
+                <div class="footer_links-col">
+                    {if $theme_settings.display_footer_links_2 == 'block'}
+                        {$wa->block("`$theme_settings.footer_links_2_name`")}
+                    {else}
+                        {include file="`$parent_theme_path`/footer.links_block_2.html"}
+                    {/if}
+
+                    {if  $wa->shop && !empty($theme_settings.dislay_payment_footer)}
+                        {* payments *}
+                        <div class="footer_payments">
+                            {$availabe_options = $wa->shop->payment()}
+                            {$_cnt = 0}
+                            {foreach $availabe_options as $option name=options}
+                                {if $_cnt == 8}{break}{/if}
+                                {if $option.logo}
+                                    <img src="{$option.logo}" alt="{$option.name}">
+                                    {$_cnt = $_cnt + 1}
+                                {/if}
+                            {foreachelse}
+                                &nbsp;
+                            {/foreach}
+                        </div>
+                    {/if}
+                </div>
+                <div class="footer_links-col footer_links-col--сatalog">
+                    {if $theme_settings.display_footer_links_3 == 'block'}
+                        {$wa->block("`$theme_settings.footer_links_3_name`")}
+                    {else}
+                        {include file="`$parent_theme_path`/footer.links_block_3.html"}
+                    {/if}
+
+                    {if $wa_app == 'shop' && (!empty($theme_settings.language_toggle_footer) || !empty($theme_settings.currency_toggle_footer))}
+                        <div class="footer_toggles">
+                            {* languages *}
+                            {if !empty($theme_settings.language_toggle_footer)}
+                                <div class="toggle-lang js-drop-down-list drop-down-list">
+                                    <span class="toggle-lang_title">[`Language`]:</span>
+                                    {$current_language = $wa->locale()}
+                                    <span class="js-drop-down-toggle drop-down-list__toggle">
+                                        {$current_language|regex_replace:"/[a-z_]/":""}
+                                        <span class="drop-down-list__caret"></span>
+                                    </span>
+                                    <div class="js-drop-down-items drop-down-list__items">
+                                        {foreach waLocale::getAll('name') as $language => $lang_name}
+                                            {$language_text = $language|regex_replace:"/[a-z_]/":""}
+                                            {if $wa->locale() == $language}
+                                                <span class="drop-down-list__item selected">{$language_text}</span>
+                                            {else}
+                                                <span class="js-language drop-down-list__item" data-value="{$language}">{$language_text}</span>
+                                            {/if}
+                                        {/foreach}
+                                    </div>
+                                </div>
+                            {/if}
+
+                            {* currency *}
+                            {if  !empty($theme_settings.currency_toggle_footer)}
+                                {$currencies = $wa->shop->currencies()}
+                                {$currency = $wa->shop->currency()}
+                                {if count($currencies) > 1}
+                                    <div class="toggle-lang toggle-lang--footer js-drop-down-list drop-down-list">
+                                        <span  class="toggle-lang_title">[`Currency`]:</span>
+                                        <span class="js-drop-down-toggle drop-down-list__toggle">
+                                            {$currency}
+                                            <span class="drop-down-list__caret"></span>
+                                        </span>
+                                        <div class="js-drop-down-items drop-down-list__items">
+                                            {foreach $currencies as $c_code => $c}
+                                                {if $c_code == $currency}
+                                                    <span class="drop-down-list__item selected">{$c_code}</span>
+                                                {else}
+                                                    <span class="js-currency drop-down-list__item" data-value="{$c_code}">{$c_code}</span>
+                                                {/if}
+                                            {/foreach}
+                                        </div>
+                                    </div>
+                                {/if}
+                            {/if}
+                        </div>
+                    {/if}
+                </div>
+            </div>
+            <div class="footer_text">
+                {if $theme_settings.display_footer_about == "block"}
+                    {$wa->block("`$theme_settings.footer_about_block_name`")}
+                {else}
+                    {include file="`$parent_theme_path`/footer.about.html"}
+                {/if}
+
+                {if $wa_app == "site"}
+                    {if !$theme_settings.hide_links_to_webasyst}
+                        <div class="poweredby" role="complementary">
+                            <span class="dots" title="Webasyst"></span>
+                            [`We are using <a href="http://www.webasyst.com/">Webasyst</a>`]
+                        </div>
+                    {/if}
+                {else}
+                    {include file="`$wa_active_theme_path`/footer.html" inline}
+                {/if}
+            </div>
+        </div>
+    </div>
+</footer>
+{/strip}

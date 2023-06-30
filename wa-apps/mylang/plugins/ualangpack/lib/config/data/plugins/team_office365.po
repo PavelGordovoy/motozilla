@@ -1,0 +1,97 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst Team Outlook.com Calendar plugin 1.1.1.9 UA translation v 1.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+msgid "Authorization code is canceled or expired"
+msgstr "Код авторизації скасовано або термін його дії сплив"
+
+msgid "Renew authorization code"
+msgstr "Оновити код авторизації"
+
+msgid "Need your attention"
+msgstr "Потребує вашої уваги"
+
+msgid "Application ID"
+msgstr "Ідентифікатор додатку"
+
+msgid "Issued by Microsoft for your Web application"
+msgstr "Видається Microsoft для вашого веб-додатку"
+
+msgid "Application secret"
+msgstr "Секрет додатку"
+
+msgid "Outlook.com Calendar"
+msgstr "Календар Outlook.com"
+
+msgid "Microsoft online Outlook calendar integration"
+msgstr "Інтеграція з календарем Microsoft Outlook"
+
+msgid "Session protection validated"
+msgstr "Захист сесії затверджено"
+
+msgid "Code for generating token is not received. Use HTTPS redirect URL for Office365"
+msgstr "Код для генерації токену не отримано. Для Office365 використовуйте URL перенаправлення на HTTPS"
+
+msgid "Code for generating token is not received"
+msgstr "Код для генерації токена не отримано"
+
+msgid "Token is not generated"
+msgstr "Токен не згенеровано"
+
+msgid "Unknown calendar"
+msgstr "Невідомий календар"
+
+msgid "Plugin not found"
+msgstr "Плагін не знайдено"
+
+msgid "Another Microsoft account"
+msgstr "Інший обліковий запис Microsoft"
+
+msgid "To receive Application Id and secret <a href=\"https://apps.dev.microsoft.com/\" target=\"_blank\">register an application</a> on the Microsoft Application Registration portal."
+msgstr "Аби отримати ідентифікатор та секрет додатку, <a href=\"https://apps.dev.microsoft.com/\" target=\"_blank\">зареєструйте додаток</a> на порталі реєстрації додатків Microsoft."
+
+msgid "<a href=\"https://support.webasyst.com/16034/team-add-calendar-microsoft-office-365/\" target=\"_blank\">Step-by-step manual on connecting with a Microsoft Office Online</a>"
+msgstr "<a href=\"https://support.webasyst.com/16034/team-add-calendar-microsoft-office-365/\" target=\"_blank\">Поетапна інструкція з під&#39;єднання до Microsoft Office Online</a>"
+
+msgid "Redirect URI"
+msgstr "URI перенаправлення"
+
+msgid "URL(https) where a user will return after Microsoft Graph authorization."
+msgstr "URL (https), до якого буде повернуто користувача після авторизації Microsoft Graph."
+
+msgid "Copy specified URL to the appropriate field in your Microsoft Graph application settings."
+msgstr "Скопіюйте вказаний URL до відповідного поля у налаштуваннях додатка Microsoft Graph."
+
+msgid "You need HTTPS to connect Microsoft account."
+msgstr "Для підключення облікового запису Microsoft вам потрібен HTTPS."
+
+msgid "Authorization code is canceled or expired."
+msgstr "Код авторизації скасовано або термін його дії сплив."
+
+msgid "Your attention is required."
+msgstr "Потребує вашої уваги."
+
+msgid "Plugin not found."
+msgstr "Плагін не знайдено."
+
+msgid "Session protection validated."
+msgstr "Захист сесії затверджено."
+
+msgid "Token generation code has not been received. Use a HTTPS redirect URL for Office365."
+msgstr "Код генерації токенів не отримано. Використовуйте URL-адресу переспрямування HTTPS для служби Office365."
+
+msgid "Token generation code has not been received."
+msgstr "Код генерації токену не отримано."
+
+msgid "Token has not been generated."
+msgstr "Токен не згенеровано."

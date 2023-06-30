@@ -1,0 +1,51 @@
+{strip}
+{$_links = []}
+
+{if $wa->globals("topMenu")}
+    {$_links = $wa->globals("topMenu")}
+{else}
+    {if $theme_settings.header_links == 'site-pages'}
+        {if $wa->site}{$_links = $wa->site->pages()}{/if}
+    {elseif $theme_settings.header_links == 'shop-pages'}
+        {if $wa->shop}{$_links = $wa->shop->pages()}{/if}
+    {elseif $theme_settings.header_links == 'blog-pages'}
+        {if $wa->blog}{$_links = $wa->blog->pages()}{/if}
+    {elseif $theme_settings.header_links == 'photos-pages'}
+        {if $wa->photos}{$_links = $wa->photos->pages()}{/if}
+    {elseif $theme_settings.header_links == 'hub-pages'}
+        {if $wa->hub}{$_links = $wa->hub->pages()}{/if}
+    {elseif $theme_settings.header_links == 'helpdesk-pages'}
+        {if $wa->helpdesk}{$_links = $wa->helpdesk->pages()}{/if}
+    {elseif $theme_settings.header_links == 'app-menu'}
+        {if $wa->menu && !empty($theme_settings.id_app_header_menu) && (int)$theme_settings.id_app_header_menu > 0}
+            {$_links = $wa->menu->get($theme_settings.id_app_header_menu)}
+        {/if}
+    {elseif $theme_settings.header_links == 'app-menus'}
+        {if $wa->menus && !empty($theme_settings.id_app_header_menu) && (int)$theme_settings.id_app_header_menu > 0}
+            {$_links = $wa->menus->getMyMenu($theme_settings.id_app_header_menu)}
+        {/if}
+    {elseif $theme_settings.header_links == 'wa-apps'}
+        {$_links = $wa->apps()}
+    {/if}
+
+    {if $theme_settings.header_links_apps_items && $theme_settings.header_links != 'wa-apps'}
+        {$apps_pages = $wa->apps()}
+        {foreach $apps_pages as $p}
+            {$_links[] = $p}
+        {/foreach}
+    {/if}
+
+    {if $theme_settings.header_menu_show_homepage}
+        {$array_unshift = $_links|@array_unshift:["name" => "[`Home`]", "url" => $wa_url ]}
+    {/if}
+
+    {$wa->globals("topMenu", $_links)}
+{/if}
+
+{if !empty($is_mobile_menu)}
+    {include file="`$parent_theme_path`/header.top.menu.mobile.html" _links=$_links}
+{else}
+    {include file="`$parent_theme_path`/header.top.menu.desktop.html" _links=$_links}
+{/if}
+
+{/strip}

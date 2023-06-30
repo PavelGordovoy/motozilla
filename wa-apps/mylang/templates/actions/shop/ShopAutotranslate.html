@@ -1,0 +1,194 @@
+{strip}
+    <div>
+        <h1>[`Autotranslate`]</h1>
+    </div>
+    <form id="mylang-autotranslate" method="POST" action="?module=autotranslateShop">
+        {$wa->csrf()}
+        {if $cacheFiles}
+            <details>
+                <summary>[`Cache files`]</summary>
+                <p>
+                    {foreach $cacheFiles as $file}
+                        {$file}
+                        <br>
+                    {/foreach}
+                </p>
+            </details>
+        {/if}
+        <div class="block fields form">
+            <div class="field-group">
+                <div class="field">
+                    <div class="name">[`Source language`]</div>
+                    <div class="value">
+                        <select name="source">
+                            {foreach $locales as $key=>$locale}
+                                <option value="{$key}" {if $key==$main_locale}selected{/if}>{$locale}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="name">[`Target language`]</div>
+                    <div class="value">
+                        <select name="target">
+                            {foreach $locales as $key=>$locale}
+                                <option value="{$key}">{$locale}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="field-group">
+                <div class="field">
+                    <div class="name">[`Providers`]</div>
+                    <div class="value">
+                        <select name="provider">
+                            {foreach $providers as $key=>$p}
+                                <option value="{$key}">{$p.name}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field-group">
+                <div class="field">
+                    <div class="name">[`Items to translate`]</div>
+                    <div class="value">
+                        <h3>[`Categories`]</h3>
+                        <label><input name="params[category][name]" type="checkbox" checked="checked" value="1">[`Name`]</label><br>
+                        <label><input name="params[category][description]" type="checkbox" checked="checked" value="1">
+                            [`Description`]</label><br>
+                        <label><input name="params[category][meta_title]" type="checkbox" checked="checked" value="1">
+                            [`Meta title`]</label><br>
+                        <label><input name="params[category][meta_keywords]" type="checkbox" checked="checked" value="1">
+                            [`Meta keywords`]</label><br>
+                        <label><input name="params[category][meta_description]" type="checkbox" checked="checked"
+                                      value="1">[`Meta description`]</label>
+                        <br><br>
+                        <h3>[`Products`]</h3>
+                        <label><input name="params[product][name]" type="checkbox" checked="checked" value="1">[`Name`]</label><br>
+                        <label><input name="params[product][summary]" type="checkbox" checked="checked" value="1">
+                            [`Summary`]</label><br>
+                        <label><input name="params[product][description]" type="checkbox" checked="checked" value="1">
+                            [`Description`]</label><br>
+                        <label><input name="params[product][meta_title]" type="checkbox" checked="checked" value="1">
+                            [`Meta title`]</label><br>
+                        <label><input name="params[product][meta_keywords]" type="checkbox" checked="checked" value="1">
+                            [`Meta keywords`]</label><br>
+                        <label><input name="params[product][meta_description]" type="checkbox" checked="checked"
+                                      value="1">[`Meta description`]</label>
+                        <br><br>
+                        <label><input name="params[full_list]" type="checkbox" value="1" checked="checked">[`Use full lust`]<br>
+                            <span class="hint">[`Check every product. Slower processing.`]</span>
+                        </label>
+                        <br>
+                        <label>[`Skip N products`] <input class="short" name="params[product_offset]" type="text"
+                                                          value="0">
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field-group">
+                <div class="field">
+                    <div class="value">
+                        <input type="submit" class="button" value="[`Start`]"/>
+                    </div>
+                </div>
+            </div>
+    </form>
+    <div class="field-group">
+        <div class="field">
+            <div class="value">
+                <span class="errormsg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="field-group">
+        <div class="field">
+            <div class="value js-progressbar-container" style="display:none;">
+                <div class="progressbar green float-left" style="width: 70%;">
+                    <div class="progressbar-outer">
+                        <div class="progressbar-inner" style="width: 0;"></div>
+                    </div>
+                </div>
+                <img alt="loading" style="float:left; margin-top:8px;" class="loading"
+                     src="{$wa_static_url}wa-content/img/loading32.gif">
+                <div class="clear"></div>
+                <span class="progressbar-description"></span>
+                <span class="report"></span>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+{/strip}
+<script>
+
+    /*global $*/
+    //validate form
+    var url = $('#mylang-autotranslate').prop('action');
+    var processId = null;
+    var validate = function () {
+        var errormsg = $('.errormsg');
+        errormsg.text();
+        if ($('select[name="source"]').val() == $('select[name="target"]').val()) {
+            errormsg.text("{_w('Source and target language should be different.')}");
+            return false;
+        }
+        if ($("input[name^='params[product]']:checked").length + $("input[name^='params[category]']:checked").length < 1){
+            errormsg.text("{_w('Check at least 1 field to translate.')}");
+            return false;
+        }
+        return true;
+    };
+
+    {literal}
+    $.wa.errorHandler = function () {
+    }; //Не ломать отображение в случае ошибки.
+
+    $('#mylang-autotranslate').on('submit', function (e) {
+        e.preventDefault();
+        if (!validate()) return;
+        $('.js-progressbar-container').show();
+        $('.loading').show();
+        var long = $.longAction();
+        long.start({
+            process_url: url,
+            start: {
+                data: $(this).serialize(),
+            },
+            step: {
+                onProgress: function (r) {
+                    var progress = parseFloat(r.progress.replace(/,/, '.'));
+                    $('.progressbar .progressbar-inner').animate({
+                        'width': progress + '%'
+                    });
+                    $('.progressbar-description').text(r.progress + " " + r.offset + " / " + r.total);
+                    $('.progressbar-hint').text(r.hint);
+                },
+                onReady: function (r) {
+                    $('.progressbar .progressbar-inner').css({
+                        width: '100%'
+                    });
+                    $('.loading').hide();
+                    $('.progressbar').hide();
+                    if (r.error) {
+                        $('.errormsg').text(r.error);
+                        $('.progressbar-description').text('');
+                    } else {
+                        $('.progressbar-description').text('100%');
+                        $.post(url, {processId: processId, cleanup: 1}, function (r) {
+                            if (r.report) {
+                                //показываем отчет пользователю
+                                $('.report').show().html(r.report);
+                            }
+                        }, 'json');
+                    }
+                },
+            }
+        });
+    });
+</script>
+{/literal}

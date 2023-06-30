@@ -1,0 +1,40 @@
+{strip}
+<style>
+    @font-face {
+        font-family: 'PT Sans';
+        {if $is_display_swap}font-display:swap;{/if}
+        font-style: normal;
+        font-weight: 400;
+        src: local('PT Sans'), local('PTSans-Regular'),
+        url('{$wa_real_theme_url}fonts/ptsans/pt-sans-v12-latin-ext_latin_cyrillic-ext_cyrillic-regular.woff2') format('woff2'),
+        url('{$wa_real_theme_url}fonts/ptsans/pt-sans-v12-latin-ext_latin_cyrillic-ext_cyrillic-regular.woff') format('woff');
+    }
+    @font-face {
+        font-family: 'PT Sans';
+        {if $is_display_swap}font-display:swap;{/if}
+        font-style: italic;
+        font-weight: 400;
+        src: local('PT Sans Italic'), local('PTSans-Italic'),
+        url('{$wa_real_theme_url}fonts/ptsans/pt-sans-v12-latin-ext_latin_cyrillic-ext_cyrillic-italic.woff2') format('woff2'),
+        url('{$wa_real_theme_url}fonts/ptsans/pt-sans-v12-latin-ext_latin_cyrillic-ext_cyrillic-italic.woff') format('woff');
+    }
+    @font-face {
+        font-family: 'PT Sans';
+        {if $is_display_swap}font-display:swap;{/if}
+        font-style: normal;
+        font-weight: 700;
+        src: local('PT Sans Bold'), local('PTSans-Bold'),
+        url('{$wa_real_theme_url}fonts/ptsans/pt-sans-v12-latin-ext_latin_cyrillic-ext_cyrillic-700.woff2') format('woff2'),
+        url('{$wa_real_theme_url}fonts/ptsans/pt-sans-v12-latin-ext_latin_cyrillic-ext_cyrillic-700.woff') format('woff');
+    }
+    @font-face {
+        font-family: 'PT Sans';
+        {if $is_display_swap}font-display:swap;{/if}
+        font-style: italic;
+        font-weight: 700;
+        src: local('PT Sans Bold Italic'), local('PTSans-BoldItalic'),
+        url('{$wa_real_theme_url}fonts/ptsans/pt-sans-v12-latin-ext_latin_cyrillic-ext_cyrillic-700italic.woff2') format('woff2'),
+        url('{$wa_real_theme_url}fonts/ptsans/pt-sans-v12-latin-ext_latin_cyrillic-ext_cyrillic-700italic.woff') format('woff');
+    }
+</style>
+{/strip}

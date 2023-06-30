@@ -1,0 +1,19 @@
+{strip}
+{$count_subitems = count($brands)}
+{$count_cols = 4}
+{if $count_subitems < 20}{$count_cols = 2}{/if}
+{if $count_subitems < 8}{$count_cols = 1}{/if}
+
+<div class="js-categories-sub brands-v-list cols-{$count_cols}">
+    {foreach $brands as $b}
+        {$url = ''}
+        {if $is_productbrands}{$url = $b.url}{/if}
+        {if $is_brandspro}{$url = $b.frontend_url}{/if}
+        <div class="brands-v-list__item">
+            <a class="brands-v-list__title" title="{$b.name|escape}" href="{$url}">
+                {$b.name|escape}
+            </a>
+        </div>
+    {/foreach}
+</div>
+{/strip}

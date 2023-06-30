@@ -1,0 +1,2049 @@
+msgid ""
+msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: uk_UA\n"
+"Language-Team: skeeter-studio.ru\n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: \n"
+"POT-Creation-Date: 2012-01-27 11:52+0400\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"Project-Id-Version: Webasyst Mailer 1.0.27.66 UA translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Mailer"
+msgstr "Розсилання"
+
+msgid "Loading..."
+msgstr "Завантаження..."
+
+msgid "Edit template &ldquo;%s&rdquo;"
+msgstr "Редагування шаблону &laquo;%s&raquo;"
+
+msgid "Type here a description for your reference only. It will not be shown to your campaign recipients."
+msgstr "Додайте сюди опис шаблону тільки для вашої власної довідки. Він не буде показуватись отримувачам розсилання."
+
+msgid "Subject"
+msgstr "Тема"
+
+msgid "Description"
+msgstr "Опис"
+
+msgid "Variables"
+msgstr "Змінні"
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "Create"
+msgstr "Створити"
+
+msgid "or"
+msgstr "або"
+
+msgid "more"
+msgstr "ще"
+
+msgid "cancel"
+msgstr "відмінити"
+
+msgid "Unsubscribe"
+msgstr "Відписатись"
+
+msgid "Unsubscribe "
+msgstr "Відписати "
+
+msgid "Unsubscribe contact"
+msgstr "Відписати контакт"
+
+msgid "New template"
+msgstr "Новий шаблон"
+
+msgid "New campaign"
+msgstr "Нова розсилка"
+
+msgid "Design your email from scratch"
+msgstr "Створіть нове повідомлення з чистого листа"
+
+msgid "Or select a template:"
+msgstr "Або оберіть шаблон:"
+
+msgid "No"
+msgstr "Ні"
+
+msgid "Yes"
+msgstr "Так"
+
+msgid "Sending speed:"
+msgstr "Швидкість розсилання:"
+
+msgid "as fast as possible"
+msgstr "якомога швидше"
+
+msgid "send not more than"
+msgstr "надсилати не більше"
+
+msgid "letters per hour"
+msgstr "листів за годину"
+
+msgid "Find among contacts"
+msgstr "Знайти в контактах"
+
+msgid "Add list"
+msgstr "Додати список"
+
+msgid "Add recipients:"
+msgstr "Додати отримувачів:"
+
+msgid "Paste emails here, one email (or Name <email>) per line."
+msgstr "Скопіюйте сюди перелік адрес Email (або Ім&#39;я <email>), по одній на стрічку."
+
+msgid "Add"
+msgstr "Додати"
+
+msgid "Started"
+msgstr "Початок"
+
+msgid "Finished"
+msgstr "Закінчення"
+
+msgid "Sender"
+msgstr "Відправник"
+
+msgid "Recipients"
+msgstr "Отримувачі"
+
+msgid "Opened"
+msgstr "Відкрито"
+
+msgid "Clicked"
+msgstr "Кліки"
+
+msgid "Bounced"
+msgstr "Відмови"
+
+msgid "Unsubscribed"
+msgstr "Відписались"
+
+msgid "Unsubscribed "
+msgstr "Відписався "
+
+msgid "Drafts"
+msgstr "Чернетки"
+
+msgid "Sent"
+msgstr "Надіслано"
+
+msgid "Sent "
+msgstr "Надіслано "
+
+msgid "Sent:"
+msgstr "Надіслано:"
+
+msgid "Templates"
+msgstr "Шаблони"
+
+msgid "Create date"
+msgstr "Дата створення"
+
+msgid "Progress"
+msgstr "Стан"
+
+msgid "<no description>"
+msgstr "<немає опису>"
+
+msgid "<no name>"
+msgstr "<немає імені>"
+
+msgid "List of emails"
+msgstr "Перелік адрес email"
+
+msgid "address"
+msgid_plural "addresses"
+msgstr[0] "адреса"
+msgstr[1] "адреси"
+msgstr[2] "адрес"
+
+msgid "Total unique"
+msgstr "Усього унікальних"
+
+msgid "see the list"
+msgstr "переглянути перелік"
+
+msgid "See the list"
+msgstr "Переглянути перелік"
+
+msgid "Delete"
+msgstr "Видалити"
+
+msgid "In new window"
+msgstr "У новому вікні"
+
+msgid "Letter"
+msgstr "Лист"
+
+msgid "Settings"
+msgstr "Налаштування"
+
+msgid "Send"
+msgstr "Надіслати"
+
+msgid "Saved"
+msgstr "Збережено"
+
+msgid "Delete campaign"
+msgstr "Видалити розсилку"
+
+msgid "This campaign has been successfully deleted."
+msgstr "Цю розсилку було видалено."
+
+msgid "Now sending"
+msgstr "Іде розсилка"
+
+msgid "<no subject>"
+msgstr "<без теми>"
+
+msgid "not written yet"
+msgstr "ще не написано"
+
+msgid "not set yet"
+msgstr "ще не налаштовано"
+
+msgid "not specified yet"
+msgstr "ще не обрано"
+
+msgid "Total selected:"
+msgstr "Усього обрано:"
+
+msgid "&lt;type a subject of your message&gt;"
+msgstr "&lt;вкажіть тему вашого листа&gt;"
+
+msgid "type a subject of your message"
+msgstr "вкажіть тему вашого листа"
+
+msgid "Delete this draft"
+msgstr "Видалити цю чернетку"
+
+msgid "This draft has been deleted."
+msgstr "Чернетку видалено."
+
+msgid "Preparing list of recipients"
+msgstr "Формується перелік отримувачів"
+
+msgid "Unable to prepare recipients list. Another user attempted to start sending this campaign?"
+msgstr "Неможливо підготувати перелік отримувачів. Інший користувач почав цю розсилку?"
+
+msgid "Status:"
+msgstr "Статус:"
+
+msgid "If many of your recipients addresses reside on popular mail services (e.g. @gmail.com, @yahoo.com, and etc.) then too high sending speed may cause banning of your sender server because of spam suspicion and these recipients will not receive your message."
+msgstr "Якщо адреси багатьох ваших отримувачів знаходяться на популярних поштових сервісах (наприклад, @gmail.com, @yahoo.com та інших), то надто велика швидкість надсилання може призвести до блокування вашого сервера відправника з причини підозри на спам, і ці отримувачі не отримають ваше повідомлення."
+
+msgid "Details"
+msgstr "Подробиці"
+
+msgid "Sending report"
+msgstr "Звіт по розсилці"
+
+msgid "%s distinct recipient"
+msgid_plural "%s distinct recipients"
+msgstr[0] "%s унікальний отримувач"
+msgstr[1] "%s унікальні отримувачі"
+msgstr[2] ""
+
+msgid "Total"
+msgstr "Усього"
+
+msgid "Category"
+msgstr "Категорія"
+
+msgid "Flat list"
+msgstr "Перелік адрес"
+
+msgid "Add flat list"
+msgstr "Додати перелік адрес"
+
+msgid "Add countries"
+msgstr "Додати країни"
+
+msgid "Add cities"
+msgstr "Додати міста"
+
+msgid "Recipients:"
+msgstr "Отримувачі:"
+
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d секунда"
+msgstr[1] "%d секунди"
+msgstr[2] ""
+
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d хвилина"
+msgstr[1] "%d хвилини"
+msgstr[2] ""
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d година"
+msgstr[1] "%d години"
+msgstr[2] ""
+
+msgid "Started:"
+msgstr "Початок:"
+
+msgid "Finished:"
+msgstr "Закінчення:"
+
+msgid "Duration:"
+msgstr "Тривалість:"
+
+msgid "Error:"
+msgstr "Помилка:"
+
+msgid "Upload thumbnail"
+msgstr "Завантажити ескіз"
+
+msgid "Change thumbnail"
+msgstr "Змінити ескіз"
+
+msgid "Delete thumbnail"
+msgstr "Видалити ескіз"
+
+msgid "Add a description"
+msgstr "Додати опис"
+
+msgid "edit"
+msgstr "редагувати"
+
+msgid "Import template"
+msgstr "Імпорт шаблону"
+
+msgid "Drag and drop ZIP-archive file here"
+msgstr "Перетягніть архів ZIP сюди"
+
+msgid "choose a file to upload"
+msgstr "оберіть файл для завантаження"
+
+msgid "Server error. Upload directory isn't writable."
+msgstr "Помилка: директорія завантаження недоступна для запису."
+
+msgid "No files were uploaded."
+msgstr "Не завантажено жодного файлу."
+
+msgid "Could not save uploaded file."
+msgstr "Неможливо зберегти завантажений файл."
+
+msgid "File is too large"
+msgstr "Файл занадто великий"
+
+msgid "The upload was cancelled, or server error encountered"
+msgstr "Завантаження було скасовано, або виникла помилка серверу"
+
+msgid "Valid file types: %s."
+msgstr "Припустимі типи файлів: %s."
+
+msgid "File size can not exceed %s MB"
+msgstr "Розмір файлу не має перевищувати %s МБ"
+
+msgid "ZipArchive class not found. Template import is not available on your server."
+msgstr "Класс ZipArchive не знайдено. Імпорт шаблонів на вашому сервері неможливий."
+
+msgid "Cancel"
+msgstr "Відміна"
+
+msgid "Archive (zip) file for template import must contain an html file in the root of archive, and all other files (e.g. images) referred from html file, in the root or in subfolders of your archive file."
+msgstr "Архівний ZIP-файл для імпорту шаблону має включати файл HTML в корені архіву й інші необхідні файли (наприклад, зображення), на які є посилання у файлі HTML, а також у корені або вкладених папках архіву."
+
+msgid "Archive (zip) file for template import must contain an html file in the root of archive."
+msgstr "Архівний ZIP-файл для імпорту шаблону має включати файл HTML в корені архіву."
+
+msgid "Please select html file to import:"
+msgstr "Будь ласка, оберіть файл HTML для імпорту:"
+
+msgid "Return"
+msgstr "Повернутися"
+
+msgid "Delete template"
+msgstr "Видалити шаблон"
+
+msgid "Template &ldquo;%s&rdquo; has been successfully deleted."
+msgstr "Шаблон &laquo;%s&raquo; було видалено."
+
+msgid "File is not an image or is broken."
+msgstr "Файл не є зображенням або у ньому помилка."
+
+msgid "Edit description"
+msgstr "Редагувати опис"
+
+msgid "Unknown"
+msgstr "Невідомо"
+
+msgid "Error importing template."
+msgstr "Помилка імпорту шаблону."
+
+msgid "remove"
+msgstr "видалити"
+
+msgid "TEXT"
+msgstr "ТЕКСТ"
+
+msgid "Search results"
+msgstr "Результати пошуку"
+
+msgid "<strong>%d</strong> campaign found"
+msgid_plural "<strong>%d</strong> campaigns found"
+msgstr[0] "Знайдено <strong>%d</strong> розсилку"
+msgstr[1] "Знайдено <strong>%d</strong> розсилання"
+msgstr[2] ""
+
+msgid "Design editor"
+msgstr "Візуальний редактор"
+
+msgid "Plain-text"
+msgstr "Простий текст"
+
+msgid "This plain-text version of your message is automatically created from HTML version and displayed if recipients have disabled HTML view in their email programs."
+msgstr "Ця текстова версія вашого повідомлення автоматично створюється з HTML-версії і показується отримувачам, якщо у їхніх поштових програмах вимкнено опцію перегляду HTML-повідомлень."
+
+msgid "View recipients"
+msgstr "Показати отримувачів"
+
+msgid "Load next 50"
+msgstr "Показати наступні 50"
+
+msgid "Unable to deliver"
+msgstr "Неможливо доставити"
+
+msgid "Unable to send"
+msgstr "Неможливо надіслати"
+
+msgid "Unknown error"
+msgstr "Невідома помилка"
+
+msgid "Incorrect Email address"
+msgstr "Невірна email-адреса"
+
+msgid "Email address &lt;%s&gt; has been removed from the %s mailing list."
+msgstr "Поштову адресу &lt;%s&gt; видалено із переліку розсилання %s."
+
+msgid "Earlier unsubscribed"
+msgstr "Той, що раніше відписався"
+
+msgid "search by words in subject or text"
+msgstr "знайти по словам у темі або тексті"
+
+msgid "Enable Google Analytics for this campaign"
+msgstr "Увімкнути UTM- мітки (для Яндекс.Метрики або Google Analytics)"
+
+msgid "All contacts"
+msgstr "Усі контакти"
+
+msgid "Select contacts for campaign"
+msgstr "Обрати контакти для розсилання"
+
+msgid "Or select categories:"
+msgstr "Або оберіть категорії:"
+
+msgid "No available categories found."
+msgstr "Не знайдено жодної доступної категорії."
+
+msgid "Add addresses"
+msgstr "Додати адреси"
+
+msgid "No addresses in list."
+msgstr "Не додано жодної адреси."
+
+msgid "Search in contacts or add address"
+msgstr "Знайти серед контактів або додати адресу"
+
+msgid "Or copy/paste:"
+msgstr "Або скопіювати/вставити:"
+
+msgid "Added"
+msgstr "Додано"
+
+msgid "Remaining:"
+msgstr "Залишилось:"
+
+msgid "%ds"
+msgstr "%d сек"
+
+msgid "%dm"
+msgstr "%d хв"
+
+msgid "%dh"
+msgstr "%d год"
+
+msgid "Total %s recipients"
+msgstr "Усього %s отримувачів"
+
+msgid "Recipient selection criteria"
+msgstr "Як були обрані"
+
+msgid "Contacts/categories"
+msgstr "Контакти/категорії"
+
+msgid "Show list:"
+msgstr "Показати перелік:"
+
+msgid "Show list"
+msgstr "Показати перелік"
+
+msgid "All recipients"
+msgstr "Усі отримувачі"
+
+msgid "Delivering error in past campaigns"
+msgstr "Помилка доставки у минулих розсилках"
+
+msgid "Subscribers"
+msgstr "Підписники"
+
+msgid "Campaign"
+msgstr "Розсилка"
+
+msgid "Unsubscribed  "
+msgstr "Відписались "
+
+msgid "No one unsubscribed yet."
+msgstr "Ще ніхто не відписався."
+
+msgid "search by email"
+msgstr "пошук за email"
+
+msgid "Name"
+msgstr "Ім&#39;я"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Unsubscribe date"
+msgstr "Дата відписки"
+
+msgid "Total addresses:"
+msgstr "Усього адрес:"
+
+msgid "Resubscribe"
+msgstr "Підписати знову"
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "No unsubscribers match search criteria."
+msgstr "Жоден контакт не відповідає умовам пошуку."
+
+msgid "Linked to contact"
+msgstr "Пов&#39;язаний з контактом"
+
+msgid "Unsubscriber does not exist."
+msgstr "Відписаної адреси не існує."
+
+msgid "Not sent yet"
+msgstr "Ще не надіслано"
+
+msgid "List is outdated. Click to update."
+msgstr "Перелік застарів. Натисніть, аби оновити."
+
+msgid "Subscribe form"
+msgstr "Форма підписки"
+
+msgid "Thank you for your subscription."
+msgstr "Дякуємо за підписку."
+
+msgid "No subscribers match search criteria."
+msgstr "Жоден контакт не відповідає крітеріям пошуку."
+
+msgid "Subscribe"
+msgstr "Підписатися"
+
+msgid "This field is required."
+msgstr "Це поле є обов&#39;язковим."
+
+msgid "Enabled"
+msgstr "Увімкнено"
+
+msgid "Disabled"
+msgstr "Вимкнено"
+
+msgid "No limit"
+msgstr "Без обмежень"
+
+msgid "Not specified"
+msgstr "Не вказано"
+
+msgid "Eliminate from all subscribers"
+msgstr "Виключити із усіх підписок"
+
+msgid "Eliminate from this subscribers list"
+msgstr "Виключити з цього переліку підписувачів"
+
+msgid "Do you really want to eliminate contact %s from all subscribers?"
+msgid_plural "<span id=\"delete-contact-name-email\"></span>"
+msgstr[0] "Do you really want to eliminate contact %s from all subscribers?"
+msgstr[1] "<span id=\"delete-contact-name-email\"></span>"
+msgstr[2] ""
+
+msgid "Do you really want to eliminate contact %s from this subscribers list?"
+msgid_plural "<span id=\"delete-contact-name-email\"></span>"
+msgstr[0] "Do you really want to eliminate contact %s from this subscribers list?"
+msgstr[1] "<span id=\"delete-contact-name-email\"></span>"
+msgstr[2] ""
+
+msgid "Do not show this question any more"
+msgstr "Більше не показувати це питання"
+
+msgid "NOTE: This contact will not be deleted. It will be only eliminated from all subscription lists."
+msgstr "ПРИМІТКА: Контакт не будет видалено. Його буде тільки виключено з усіх підписок."
+
+msgid "NOTE: This contact will not be deleted. It will be only eliminated from this subscription list."
+msgstr "ПРИМІТКА: Контакт не будет видалено. Його буде тільки виключено з цього переліку розсилання."
+
+msgid "Customize"
+msgstr "Налаштувати"
+
+msgid "Return-path address is used to automatically process bounced emails. We recommend to create a special email address to receive bounces as it allows to obtain a true statistics about your message delivering."
+msgstr "Адреса Return-path використовується для автоматичного отримання і обробки відмов (bounces) поштовим сервером одержувача. Ми рекомендуємо вам створити спеціальну адресу для отримання таких відмов, це дозволить вам отримувати об&#39;єктивну статистику доставки листа у звіті про розсилку."
+
+msgid "Error checking mail:"
+msgstr "Помилка перевірки пошти:"
+
+msgid "Error checking mail transport:"
+msgstr "Помилка перевірки відправника:"
+
+msgid "Bounced by sender mail server"
+msgstr "Відмовлено сервером відправника"
+
+msgid "All bounces"
+msgstr "Усі відмови"
+
+msgid "Do you really want to remove this campaign (you will not be able to undo this action)?"
+msgstr "Ви дійсно хочете видалити розсилку (без можливості відновлення)?"
+
+msgid "Images containing in your message will be unavailable to your recipients."
+msgstr "Зображення, які містить ваше повідомлення, стануть недоступними отримувачам."
+
+msgid "Do you really want to remove this template (you will not be able to undo this action)?"
+msgstr "Ви дійсно хочете видалити шаблон (без можливості відновлення)?"
+
+msgid "Paused"
+msgstr "Зупинено"
+
+msgid "Pause"
+msgstr "Пауза"
+
+msgid "Resume"
+msgstr "Продовжити"
+
+msgid "Sending paused"
+msgstr "Розсилку припинено"
+
+msgid "Error checking Return-path mailbox"
+msgstr "Помилка перевірки адреси Return-path"
+
+msgid "All subscribers"
+msgstr "Усі підписувачі"
+
+msgid "Edit sender"
+msgstr "Редагувати відправника"
+
+msgid "Add a new sender"
+msgstr "Додати нового відправника"
+
+msgid "If you leave this field empty, replies will come to the main sender address specified above."
+msgstr "Якщо ви залишите це поле пустим, відповіді будуть надходити на основну адресу відправника, що вказана вище."
+
+msgid "add a new sender"
+msgstr "додати нового відправника"
+
+msgid "add a new Return-path"
+msgstr "додати новий Return-path"
+
+msgid "Add a new Return-path"
+msgstr "Додати новий Return-path"
+
+msgid "Edit"
+msgstr "Редагувати"
+
+msgid "Edit Return-path"
+msgstr "Редагувати Return-path"
+
+msgid "n/a"
+msgstr "н/д"
+
+msgid "not available"
+msgstr "немає даних"
+
+msgid "Opens can not be counted as your message does not contain images."
+msgstr "Прочитання неможливо підрахувати, тому що ваше повідомлення не містить зображень."
+
+msgid "Error sending campaign:"
+msgstr "Помилка відправки:"
+
+msgid "incomplete data"
+msgstr "неповні дані"
+
+msgid "Unsubscribe URL is located only in your message headers. It does not guarantee an appearance of unsubscribe link in recipient mail program."
+msgstr "Посилання відписки міститься тільки у заголовках вашого листа. Це не гарантує появу посилання відписки у поштовій програмі одержувача."
+
+msgid "Return-path is not customized. This does not allow to track most of potential bounces from recipient mail servers. Only invalid messages bounced by your sender server have been counted."
+msgstr "Return-path не налаштовано. Це не дозволяє відстежити більшість відмов від поштових серверів одержувачів. Пораховано тільки адреси, відкинуті вашим сервером відправника."
+
+msgid "select"
+msgstr "обрати"
+
+msgid "Adding recipients"
+msgstr "Додавання одержувачів"
+
+msgid "Recipients already added:"
+msgstr "Вже додані одержувачі:"
+
+msgid "Delete this sender"
+msgstr "Видалити відправника"
+
+msgid "Do you really want to delete this sender?"
+msgstr "Ви дійсно хочете видалити цього відправника?"
+
+msgid "Invalid Email address"
+msgstr "Неправильна адреса email"
+
+msgid "Email is required"
+msgstr "Поле email обов&#39;язкове"
+
+msgid "Sender Email must be unique"
+msgstr "Email відправника має бути унікальним"
+
+msgid "No entries in this list"
+msgstr "У цьому переліку немає записів"
+
+msgid "You do not have any templates so far."
+msgstr "У вас ще немає жодного шаблону."
+
+msgid "Delete this Return-path"
+msgstr "Видалити цей Return-path"
+
+msgid "Do you really want to delete this Return-path?"
+msgstr "Ви дійсно хочете видалити цей Return-path?"
+
+msgid "* NOTE:"
+msgstr "* ПРИМІТКА:"
+
+msgid "Edit settings"
+msgstr "Редагувати налаштування"
+
+msgid "Categories"
+msgstr "Категорії"
+
+msgid "Additional emails"
+msgstr "Додаткові адреси"
+
+msgid "recount"
+msgstr "перерахувати"
+
+msgid "counting unique recipients"
+msgstr "рахуємо унікальних отримувачів"
+
+msgid "Campaign recipients:"
+msgstr "Отримувачі розсилання:"
+
+msgid "(auto included in All contacts)"
+msgstr "(автоматично включені в Усі контакти)"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Total campaigns:"
+msgstr "Усього розсилок:"
+
+msgid "No campaigns match search criteria."
+msgstr "Жодна розсилка не відповідає умовам пошуку."
+
+msgid "Nothing has been sent yet."
+msgstr "Ще нічого не надсилалось."
+
+msgid "60 messages per minute"
+msgstr "60 повідомлень за хвилину"
+
+msgid "20 messages per minute"
+msgstr "20 повідомлень за хвилину"
+
+msgid "10 messages per minute"
+msgstr "10 повідомлень за хвилину"
+
+msgid "5 messages per minute"
+msgstr "5 повідомлень за хвилину"
+
+msgid "1 message per minute"
+msgstr "1 повідомлення за хвилину"
+
+msgid "Maximum recipients daily limit has been exceeded:"
+msgstr "Перевищено максимально припустимий ліміт отримувачів на день:"
+
+msgid "Maximum recipients limit has been exceeded:"
+msgstr "Перевищено максимально припустимий ліміт отримувачів:"
+
+msgid "Author: can create their own campaigns and send them"
+msgstr "Автор: може створювати розсилання та надсилати їх"
+
+msgid "Inspector: can only view all existing campaigns, but can not edit or send them"
+msgstr "Інспектор: може тільки переглядати існуючі розсилання, але не може редагувати чи надсилати їх"
+
+msgid "NOTE: Limited access does not allow to modify transport settings and manage subscribers."
+msgstr "ПРИМ.: Ограниченный доступ не позволяет модифицировать настройки транспорта и управлять подписчиками."
+
+msgid "IMAP is not supported. Please use POP3."
+msgstr "Протокол IMAP не підтримується. Використовуйте, будь ласка, POP3."
+
+msgid "Server"
+msgstr "Сервер"
+
+msgid "Port"
+msgstr "Порт"
+
+msgid "POP3 Port"
+msgstr "Порт (POP3)"
+
+msgid "Login"
+msgstr "Логін"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Leave blank to keep current password."
+msgstr "Залиште пустим, аби залишити поточний пароль."
+
+msgid "Secure (SSL)"
+msgstr "Безпека (SSL)"
+
+msgid "Transport"
+msgstr "Транспорт"
+
+msgid "php mail() function"
+msgstr "PHP-функція mail()"
+
+msgid "Debug mailer"
+msgstr "Тестовий відправник"
+
+msgid "When this option is selected messages are sent by the default transport specified in the Webasyst framework configuration."
+msgstr "Якщо обрано цей варіант, розсилання будуть надсилатися транспортом за замовчуванням, обраним в конфігурації фреймворка Webasyst."
+
+msgid "Some web-hosting companies allow sending email message by means of this transport only. If it is required to specify additional parameters for the mail() function you can enter them in the provided text field. The default parameters are -f%s."
+msgstr "Деякі хостинг-провайдери дозволяють надсилати електронні повідомлення тільки цим транспортом. Якщо існує необхідність ввести додаткові параметри, їх можна вказати у текстовому полі при виборі варіанту «PHP-функція mail ()». За замовчуванням використовується параметр -f%s."
+
+msgid "This is the web server's system command for sending email in UNIX-like operating systems. The \"Sendmail\" option will allow you to specify a non-standard system command for sending messages if you are an experienced server administrator."
+msgstr "Це системна команда веб-сервера, за допомогою якої виконується відправка повідомлень на UNIX-хостингах. Варіант транспорту “Sendmail” дозволить вам вказати нестандартну системну команду для відправки повідомлень, якщо ви самостійно адмініструєте роботу вашого веб-сервера."
+
+msgid "Special server which is specifically used for sending email messages. You can send newsletters via any SMTP server for which you have connection credentials: host, port, user name, and password. It can be the SMTP server of your web-hosting company or that of a public mail service such as Gmail, Yahoo! Mail, Outlook.com, etc."
+msgstr "Спеціальний поштовий сервер, призначений для надсилання електронної пошти. Ви можете відправляти розсилання через будь-який SMTP-сервер, для підключення до якого у вас є дані: адреса сервера, номер порту, ім&#39;я користувача (логін) і пароль. Це може бути SMTP-сервер вашого хостинг-провайдера або публічного поштового сервісу (Mail.ru, Gmail, Outlook.com та інші)."
+
+msgid "Options"
+msgstr "Параметри"
+
+msgid "Command"
+msgstr "Команда"
+
+msgid "Encryption"
+msgstr "Шифрування"
+
+msgid "Note: mail will be saved in wa-log/mailer/ and will NOT be sent to recipients."
+msgstr "Увага: повідомлення буде збережено у wa-log/mailer/ і не буде надіслано отримувачам."
+
+msgid "None"
+msgstr "Немає"
+
+msgid "Image will be uploaded into"
+msgstr "Зображення буде завантажено до"
+
+msgid "Insert variable"
+msgstr "Вставити змінну"
+
+msgid "Languages"
+msgstr "Мови"
+
+msgid "Language"
+msgstr "Мова"
+
+msgid "not set"
+msgstr "не визначено"
+
+msgid "not set "
+msgstr "не вказані "
+
+msgid "0 recipients"
+msgstr "0 отримувачів"
+
+msgid "Use this source code to embed in your website or blog where you want this signup form to appear."
+msgstr "Вставте цей код на сторінку сайту або у блог — туди, де ви хочете розмістити форму підписки."
+
+msgid "Preview"
+msgstr "Попередній перегляд"
+
+msgid "You have no subscribers so far."
+msgstr "У вас ще немає підписувачів."
+
+msgid "Recipient"
+msgstr "Отримувач"
+
+msgid "Subscriber"
+msgstr "Підписник"
+
+msgid "contact deleted"
+msgstr "контакт видалено"
+
+msgid "total %s"
+msgstr "усього %s"
+
+msgid "Ctrl+S"
+msgstr "Ctrl+S"
+
+msgid "Exceptions"
+msgstr "Виключення"
+
+msgid "All exceptions"
+msgstr "Усі виключення"
+
+msgid "Timeout error during recipient list preparation."
+msgstr "Перевищено ліміт часу на підготовку списку одержувачів."
+
+msgid "Recipient list preparation is in progress."
+msgstr "Триває підготовка списку одержувачів."
+
+msgid "We recommend that you create a dedicated email account for this purpose, and use it merely for receiving and processing these kinds of auto notification messages."
+msgstr "Рекомендуємо для цієї мети завести спеціальну адресу, і не використовувати її для інших цілей, крім отримання і обробки подібних автоматичних повідомлень."
+
+msgid "Specify access parameters for an existing email account that will be used to receive auto notifications from recipients’ mail servers in case of campaign delivery errors."
+msgstr "Вкажіть реквізити доступу до існуючої адреси електронної пошти, на яку будуть приходити автоматичні повідомлення від поштових серверів одержувачів у разі помилки доставки повідомлення."
+
+msgid "UTM tags will be added to all links (URLs) containing in the campaign message. It will allow to track these links visiting in your Google Analytics reports."
+msgstr "До усіх адрес (URL), що містяться в тексті розсилання, буде автоматично додано UTM-мітки, які дозволять засобам веб-аналітики відстежити відкриття сторінок за цими адресами."
+
+msgid "Send to selected recipients (%d)"
+msgstr "Надіслати обраним отримувачам (%d)"
+
+msgid "An error occured while sending the campaign."
+msgstr "Під час відправки розсилання виникла помилка."
+
+msgid "Send test message"
+msgstr "Надіслати тестове повідомлення"
+
+msgid "Send to yourself:"
+msgstr "Надіслати собі:"
+
+msgid "Additional emails:"
+msgstr "Додаткові адреси:"
+
+msgid "Test message has been sent to:"
+msgstr "Тестові листи відправлено на наступні адреси:"
+
+msgid "Send one more test"
+msgstr "Відправити тест ще раз"
+
+msgid "Excepted from this list are unsubscribed contacts and those having delivering errors in previous campaign."
+msgstr "З них будуть виключені ті, хто відписався раніше й ті, хто мав помилки доставки у минулих розсилках."
+
+msgid "We could not count the number of excepted recipients at this point, because a total number of your campaign recipients is too high. However, we will count every exception in the process of sending, and all such contacts will be placed in &ldquo;Exceptions&rdquo; list in the Sending Report."
+msgstr "У зв&#39;язку із великою кількістю одержувачів ми зараз не змогли порахувати точну кількість виключених адрес. Однак усіх виключених одержувачів буде точно визначено у процесі розсилання і внесено до переліку &laquo;Виключення&raquo; у звіті про розсилку."
+
+msgid "Send to contacts having delivering errors anyway"
+msgstr "Все одно надіслати тим, хто мав помилки доставки"
+
+msgid "Use this option only if the reason of delivering errors has been resolved; otherwise recipient mail servers can ban your sending server for spam."
+msgstr "Використовуйте цю опцію тільки після усунення причини помилок доставки повідомлень. В іншому випадку поштові сервери одержувачів можуть помістити ваш сервер відправника до в &laquo;чорного списку&raquo;."
+
+msgid "Excepted from this list are:"
+msgstr "З них буде виключено:"
+
+msgid "Having delivering errors in previous campaign"
+msgstr "Ті, що мали помилки доставки у минулих розсилках"
+
+msgid "Delivering errors"
+msgstr "Помилки доставки"
+
+msgid "search by name or email"
+msgstr "пошук за іменем або email"
+
+msgid "Email addresses in this list have a permanent error returned by recipient mail servers."
+msgstr "У цей список автоматично потрапляють ті адреси, поштовий сервер яких повернув повідомлення про постійну помилку в адресі одержувача."
+
+msgid "These addresses either do not exist, or can not receive your message by any reason."
+msgstr "Такі адреси або не існують, або не можуть отримувати від вас повідомлення."
+
+msgid "Attempts to repeat sending messages to these addresses may cause banning of your sender server."
+msgstr "Спроби повторних розсилок на ці адреси можуть призвести до того, що ваш сервер відправника потрапить до &laquo;чорного списку&raquo;."
+
+msgid "This is the reason to exclude these addresses from the lists of your campaigns recipients."
+msgstr "З цієї причини дані адреси виключаються за замовчуванням зі списків одержувачів ваших розсилок."
+
+msgid "Remove address from this list"
+msgstr "Видалити адресу с цього переліку"
+
+msgid "We recommend you to remove addresses from the list of &ldquo;undeliverable&rdquo; only in case you have resolved issues with delivering errors for these email addresses."
+msgstr "Ми рекомендуємо вам видаляти адресу зі списку &laquo;помилкових&raquo; тільки в тих випадках, коли ви усунули причину неможливості доставки повідомлень до даного адресата."
+
+msgid "No addresses match search criteria."
+msgstr "Жодна адреса не відповідає критеріям пошуку."
+
+msgid "No delivering errors yet."
+msgstr "Помилок доставки ще не було."
+
+msgid "Campaign date"
+msgstr "Дата розсилання"
+
+msgid "Campaign subject"
+msgstr "Тема розсилання"
+
+msgid "We believe that you act on behalf of and for the benefit of this client, or used to unsubscribe for testing purposes."
+msgstr "Ми віримо, що ви дієте від імені та в інтересах даного контакту, або відписка була раніше виконана з метою тестування."
+
+msgid "System Default"
+msgstr "Системний за замовчуванням"
+
+msgid "System default"
+msgstr "Системний за замовчуванням"
+
+msgid "System Default (%s)"
+msgstr "Системний за замовчуванням (%s)"
+
+msgid "To change a template location in this list, simply drag it and drop."
+msgstr "Щоб поміняти місце розташування шаблона у цьому списку, просто перетягніть його."
+
+msgid "Blank"
+msgstr "Чистий аркуш"
+
+msgid "Compose"
+msgstr "Написати"
+
+msgid "No recipients selected."
+msgstr "Не обрано жодного отримувача."
+
+msgid "No message body."
+msgstr "Немає тексту повідомлення."
+
+msgid "No message subject."
+msgstr "Немає теми повідомлення."
+
+msgid "Unsaved changes will be lost if you leave this page now. Are you sure?"
+msgstr "Незбережені зміни будуть втрачені. Піти з цієї сторінки?"
+
+msgid "How recipients were chosen:"
+msgstr "Як було обрано отримувачів:"
+
+msgid "how were chosen"
+msgstr "як було обрано"
+
+msgid "Author"
+msgstr "Автор"
+
+msgid "Encryption requires OpenSSL PHP module to be installed."
+msgstr "Аби увімкнути шифровання, має бути встановлено модуль PHP OpenSSL."
+
+msgid "No <tt>cron</tt> jobs, required for long or scheduled automated mailings, have been set up for your account."
+msgstr "Не налаштовано завдань <tt>cron</tt>, які необхідні для виконання тривалих розсилок."
+
+msgid "Scheduled sending is unavailable (no <tt>cron</tt> jobs set up)!"
+msgstr "Відкладена розсилка неможлива (не налаштовані завдання <tt>cron</tt>)!"
+
+msgid "Without <tt>cron</tt> jobs set up, do not close your browser window after clicking on the “Send” button to complete the email sending process."
+msgstr "Увага! Без налаштування <tt>cron</tt> не закривайте сторінку після натискання на кнопку «Відправити» до завершення відправки."
+
+msgid "Without <tt>cron</tt> jobs set up, do not close your browser window after clicking on the \"Send to selected recipients\" button to complete the email sending process."
+msgstr "Увага! Без налаштування <tt>cron</tt> не закривайте сторінку після натискання на кнопку «Відправити обраним одержувачам» до завершення відправки."
+
+msgid "To ensure that sending is completed without your input, please set up <tt>cron</tt> jobs (<a href=\"%s\" target=\"_blank\">view instructions</a>), with the commands specified below, in your web-hosting control panel:"
+msgstr "Аби розсилка автоматично тривала без вашої участі, необхідно налаштувати завдання <tt>cron</tt> (<a href=\"%s\" target=\"_blank\">інструкція по налаштуванню</a>) із зазначеними нижче командами у контрольній панелі вашого хостингу:"
+
+msgid "http://www.webasyst.com/framework/docs/server/cron/"
+msgstr "http://www.webasyst.ru/developers/docs/tips/cron/"
+
+msgid "This list contains the email addresses of contacts who have clicked on the “unsubscribe” link in a received message. These addresses are automatically excluded from the recipient lists of all future mailings."
+msgstr "У цьому переліку містяться адреси контактів, які відписалися від розсилок за допомогою посилання для відписки. Ці адреси автоматично виключаються з числа одержувачів всіх наступних розсилок."
+
+msgid "Subscribers are the persons who have expressly opted for receiving email messages from you by submitting their email addresses via a subscription form on your website. To collect subscribers' email addresses, publish the form displayed below on your website or blog."
+msgstr "Підписувачі — це ті, хто добровільно виявив бажання отримувати від вас розсилання, відправивши свої електронні адреси через форму підписки на вашому сайті. Для того, аби у вас з&#39;явилися підписувачі, розмістіть наведений нижче код форми підписки на вашому сайті або у блозі."
+
+msgid "Manage templates"
+msgstr "Керування шаблонами"
+
+msgid "Please choose one of these templates to create a new email campaign. If none of the templates suits your needs, click on &ldquo;Blank&rdquo; to compose a new message."
+msgstr "Скористайтеся одним з готових шаблонів для створення тексту розсилання. Якщо жоден шаблон не підійшов, наберіть текст повідомлення з &laquo;чистого аркушу&raquo;."
+
+msgid "Be sure to enter your message subject and text to proceed to recipient selection and message sending steps."
+msgstr "Введіть тему і текст повідомлення. Після цього ви зможете перейти до вибору одержувачів і відправки повідомлення."
+
+msgid "To specify recipients for your campaign, select the desired contact groups provided by the Contacts application or enter additional email addresses."
+msgstr "У якості одержувачів розсилання можуть бути вказані електронні адреси з папки «Контакти», а також додаткові адреси, додані вручну."
+
+msgid "Your contacts may be speaking different languages. You can limit the recipient list by selecting only the desired languages."
+msgstr "Ваші контакти розмовляють різними мовами. Ви можете обмежити перелік одержувачів розсилання, вибравши потрібні мови."
+
+msgid "Categories are groups of contacts which you can freely manage in the Contacts application. In addition to manually created categories, there are also system categories created by other Webasyst applications; e.g., Shop-Script or Blog. Those categories contain contacts added by the corresponding applications: customers of the online store or authors of comments posted in the blog."
+msgstr "Категорії — це групи контактів, які ви можете формувати в меню «Контакти» довільним чином. Крім довільно створених категорій, у «Контактах» є спеціальні категорії, створені іншими програмами, такими як «Магазин» або «Блог» — у цих категоріях містяться контакти, створені у відповідних додатках: покупці магазину, автори коментарів до записів у блозі та інші."
+
+msgid "This option allows selecting contacts who have opted for receiving your email newsletters using a subscription form (see Subscribers section)."
+msgstr "Дозволяє вибрати адреси контактів, які самі підписалися на ваші розсилання за допомогою форми підписки (див. розділ Підписники)."
+
+msgid "Use this field  to manually enter any additional email addresses. If such addresses are not yet contained in the Contacts application, they will be added there as new contacts once the sending of this message is completed."
+msgstr "У цьому полі можна вручну вказати будь-які електронні адреси. Якщо у меню «Контакти» ще немає таких адрес, то вони будуть автоматично додані до нього у вигляді нових контактів відразу після завершення розсилання."
+
+msgid "No one subscribed yet."
+msgstr "Ще ніхто не підписався."
+
+msgid "Design"
+msgstr "Дизайн"
+
+msgid "Search by name or email"
+msgstr "Пошук за іменем або email"
+
+msgid "You can edit subject to advise your recipients this is just a test."
+msgstr "Ви можете змінити тему, для того, аби показати одержувачам, що це тестова відправка."
+
+msgid "Self unsubscribed from %s."
+msgstr "Відписався самостійно у розсилці %s."
+
+msgid "Unsubscribed by administrator."
+msgstr "Відписаний адміністратором."
+
+msgid "You can also %sunsubscribe any address yourself%s."
+msgid_plural "<a href=\"javascript:void(0)\" id=\"unsibscribe-dialog-link\" class=\"inline-link\"><b><i>"
+msgstr[0] "You can also %sunsubscribe any address yourself%s."
+msgstr[1] "<a href=\"javascript:void(0)\" id=\"unsibscribe-dialog-link\" class=\"inline-link\"><b><i>"
+msgstr[2] ""
+
+msgid "N/A"
+msgstr "Немає"
+
+msgid "%s is not writable"
+msgstr "%s недоступний для запису"
+
+msgid "WARNING:"
+msgstr "ПОПЕРЕДЖЕННЯ:"
+
+msgid "Return-path address specified above is not available. Return-path address is used to automatically process bounced emails."
+msgstr "Зазначена адреса Return-path недоступна. Автоматична обробка відмов (bounces) поштовим сервером одержувача буде неможлива."
+
+msgid "Return-path address specified above is not available."
+msgstr "Вказана адреса Return-path недоступна."
+
+msgid "Return-path address is used to automatically process bounced emails."
+msgstr "Адреса Return-path використовується для автоматичного отримання і обробки відмов (bounces) поштовим сервером одержувача."
+
+msgid "Return-path \"%s\" forbidden by sending server."
+msgstr "Return-path \"%s\" заборонений сервером відправника."
+
+msgid "WARNING: Amount of data in the field above can not exceed %d characters."
+msgstr "УВАГА: Обсяг даних у полі додаткових адрес не може перевищувати %d символів."
+
+msgid "Save as a template"
+msgstr "Зберегти як шаблон"
+
+msgid "Create a clone"
+msgstr "Клонувати"
+
+msgid "To create new campaign as a copy of previously sent, navigate to the sent message and click “Create new from this”."
+msgstr "Для створення копії раніше відправленого розсилання, перейдіть до неї, та оберіть пункт «Клонувати»."
+
+msgid "Unsubscribe URL"
+msgstr "URL для відписки"
+
+msgid "In every outgoing message this variable will be replaced with a personal recipient link that can be used to unsubscribe from your future mailings."
+msgstr "У кожному відправленому повідомленні цю змінну буде замінено на персональне посилання для переходу на сторінку керування підписками."
+
+msgid "Following variables will be replaced with recipient's contact data:"
+msgstr "Наступні змінні буде замінено персональними даними одержувача:"
+
+msgid "Export to file (zip)"
+msgstr "Експорт до файлу (zip)"
+
+msgid "You have no routing rules defined for Mailer application."
+msgstr "Для додатку Розсилання не налаштовано правил маршрутизації."
+
+msgid "Unsubscribe links in your message will not work."
+msgstr "Посилання відписки у вашій розсилці не працюватимуть."
+
+msgid "To set up routing rules use %sSite application%s."
+msgid_plural "<a href=\"../site/#/routing/\" target=\"_blank\">"
+msgstr[0] "To set up routing rules use %sSite application%s."
+msgstr[1] "<a href=\"../site/#/routing/\" target=\"_blank\">"
+msgstr[2] ""
+
+msgid "Settings checking passed. Campaign is ready for sending."
+msgstr "Перевірку налаштувань виконано. Повідомлення готове до відправки."
+
+msgid "Scheduled sending"
+msgstr "Відкладене розсилання"
+
+msgid "We will provide final checking and offer you to choose: send now or schedule sending for future date/time."
+msgstr "Ми виконаємо фінальну перевірку та запропонуємо вибір: відправити зараз або налаштувати відкладену розсилку."
+
+msgid "current time is"
+msgstr "поточний час"
+
+msgid "format"
+msgstr "формат"
+
+msgid "Incorrect date/time"
+msgstr "Некоректні дата/час"
+
+msgid "Cron is working properly. Latest execution time: %s"
+msgstr "CRON для відкладеного розсилання включений і працює. Час останнього запуску: %s"
+
+msgid "Sending is scheduled for"
+msgstr "Відправку розсилання заплановано на"
+
+msgid "Schedule"
+msgstr "Запланувати"
+
+msgid "all drafts"
+msgstr "усі чернетки"
+
+msgid "Lists"
+msgstr "Переліки"
+
+msgid "New list"
+msgstr "Новий перелік"
+
+msgid "Forms"
+msgstr "Форми"
+
+msgid "New form"
+msgstr "Нова форма"
+
+msgid "Form name"
+msgstr "Назва форми"
+
+msgid "Confirm subscription"
+msgstr "Підтверждення підписки"
+
+msgid "Delete this form"
+msgstr "Видалити цю форму"
+
+msgid "Choose lists"
+msgstr "Оберіть списки"
+
+msgid "This name appears only for your reference in the form list."
+msgstr "Ця назва показана тільки у вашому переліку форм."
+
+msgid "Add to lists"
+msgstr "Додати до списків"
+
+msgid "Select lists to which new subscriber will be added:"
+msgstr "Вкажіть, в які списки слід додати підписувача:"
+
+msgid "In case no lists selected, subscriber will be added to All subscribers."
+msgstr "Якщо не обрано жодного списку, то підписувача буде додано в «Усі підписувачі»."
+
+msgid "Show list selection in the form"
+msgstr "Показати вибір списків у формі"
+
+msgid "In this case subscribers will be able to select lists themselves."
+msgstr "У цьому випадку підписувач зможе самостійно обрати потрібні йому списки."
+
+msgid "Caption"
+msgstr "Назва"
+
+msgid "Placeholder to show in empty field"
+msgstr "Підказка, якщо поле не заповнене"
+
+msgid "Set up the appearance of the web form as it should be displayed on your website."
+msgstr "Налаштувати відображення веб-форм так, як вони повинні виглядати на вашому сайті."
+
+msgid "Captcha"
+msgstr "CAPTCHA"
+
+msgid "Button"
+msgstr "Кнопка"
+
+msgid "Subscriber lists are useful for a thematic grouping of your subscribers, e.g.: news, special offers, new product release, and etc."
+msgstr "Переліки зручно використовувати для групування підписувачів. Наприклад: новини, спеціальні пропозиції, вихід нових продуктів та ін."
+
+msgid "Forms are required to organize a subscription on your website. Create a form, publish it on your website, and visitor will be able to subscribe themselves."
+msgstr "Форми необхідні для організації підписки на вашому сайті. Створіть форму, опублікуйте її на сайті, і тоді відвідувач матиме можливість підписатися."
+
+msgid "Publishing on external site"
+msgstr "Публікація на зовнішньому сайті"
+
+msgid "To publish the form on your site use this code:"
+msgstr "Для публікації форми на сайті використовуйте цей код:"
+
+msgid "Select at least one subscription subject"
+msgstr "Оберіть хоча б одну тему підписки"
+
+msgid "Subscribers are the persons who have expressly opted for receiving email messages from you by submitting their email addresses via a subscription form on your website. To collect subscribers' email addresses, <a href=\"javascript:void(0)\">create a form</a> and publish it on your website or blog."
+msgstr "Підписувачі — це ті, хто виявив бажання отримувати від вас email-повідомлення, вказавши свою адресу email у формі підписки на вашому сайті. Аби зібрати адреси email, <a href=\"javascript:void(0)\">створіть форму</a> та опублікуйте її на вашому сайті або у блозі."
+
+msgid "form name"
+msgstr "назва форми"
+
+msgid "To collect subscribers' email addresses to this list, enable this list in your subscription form settings."
+msgstr "Аби у вас з&#39;явились підписувачі у цьому переліку, увімкніть цей перелік у налаштуваннях вашої форми підписки."
+
+msgid "Please confirm your subscription"
+msgstr "Підтвердіть, будь ласка, свою підписку"
+
+msgid "To"
+msgstr "Кому"
+
+msgid "Edit field label"
+msgstr "Редагувати підпис поля"
+
+msgid "Edit hint for this field"
+msgstr "Редагувати підказку для цього поля"
+
+msgid "Do you really want to delete this list?"
+msgstr "Ви дійсно хочете видалити цей перелік?"
+
+msgid "Contacts will NOT be deleted."
+msgstr "Контакти НЕ буде видалено."
+
+msgid "Delete list"
+msgstr "Видалити перелік"
+
+msgid "Edit button label"
+msgstr "Редагувати назву кнопки"
+
+msgid "Check and send"
+msgstr "Перевірити та відправити"
+
+msgid "Choose recipients"
+msgstr "Обрати отримувачів"
+
+msgid "Actually sent"
+msgstr "Фактично надіслано"
+
+msgid "Selected recipients"
+msgstr "Обрані отримувачі"
+
+msgid "Read"
+msgstr "Прочитано"
+
+msgid "%s recipient"
+msgid_plural "%s recipients"
+msgstr[0] "%s отримувач"
+msgstr[1] "%s отримувача"
+msgstr[2] ""
+
+msgid "Start"
+msgstr "Старт"
+
+msgid "Finish"
+msgstr "Фініш"
+
+msgid "sending duration"
+msgstr "тривалість розсилання"
+
+msgid "Number of recipients"
+msgstr "Кількість отримувачів"
+
+msgid "per hour"
+msgstr "на годину"
+
+msgid "per minute"
+msgstr "на хвилину"
+
+msgid "Shown"
+msgstr "Показано"
+
+msgid "or select a required period on the chart"
+msgstr "або оберіть потрібний період на графікові"
+
+msgid "selected period"
+msgstr "обраний період"
+
+msgid "24h"
+msgstr "24 год"
+
+msgid "48h"
+msgstr "48 год"
+
+msgid "Opened: "
+msgstr "Усе прочитано: "
+
+msgid "Unsubscribed: "
+msgstr "Відписались: "
+
+msgid "Bounced: "
+msgstr "Відмов: "
+
+msgid "Exceptions: "
+msgstr "Виключень: "
+
+msgid "Sent: "
+msgstr "Надіслано: "
+
+msgid "%s recipient appear in the period selected"
+msgid_plural "%s recipients appear in the period selected"
+msgstr[0] "%s отримувач потрапляє в обраний період"
+msgstr[1] "%s отримувача потрапляє в обраний період"
+msgstr[2] ""
+
+msgid "%s recipient have been selected for this campaign"
+msgid_plural "%s recipients have been selected for this campaign"
+msgstr[0] "Для даного розсилання було обрано %s отримувача"
+msgstr[1] "Для даного розсилання було обрано %s отримувачів"
+msgstr[2] ""
+
+msgid "However, not every one of them was actually included in the mailing list (see %s for details)"
+msgid_plural "<a href=\"#\" rel=\"status=-3,-4\" class=\"show-recipients-link inline-link inline-link-notop\"><b>[`Exceptions`]</b></a>"
+msgstr[0] "Однак не усі вони були включені у перелік розсилання (дивись подробиці у %s )"
+msgstr[1] "<a href=\"#\" rel=\"status=-3,-4\" class=\"show-recipients-link inline-link inline-link-notop\"><b>[`Exceptions`]</b></a>"
+msgstr[2] ""
+
+msgid "Excluded were previously unsubscribed and also those email addresses that have resulted in a permanent error returned by the recipient server in your past mailing campaigns. Those mail boxes either do not exist, or cannot receive your message by any reason. Further attempts to send messages to these addresses may result in blacklisting of your mail server. This is the reason to exclude these addresses from the lists of your campaigns recipients."
+msgstr "Із розсилання були виключені ті користувачі, що раніше відписалися. А також ті адреси, поштовий сервер яких повернув у минулих розсилках повідомлення про постійну помилку у адресі отримувача. Такі адреси або не існують, або не можуть отримувати від вас повідомлення в силу різних причин. Намагання повторних розсилок на ці адреси можуть привести до того, що ваш сервер відправника опиниться у  «чорному списку». З цієї причини вказані адреси за замовчуванням виключаються із переліку отримувачів ваших розсилок."
+
+msgid "Compose letter"
+msgstr "Написати листа"
+
+msgid "Preparing recipient list"
+msgstr "Готуємо список одержувачів"
+
+msgid "Search contacts"
+msgstr "Пошук контактів"
+
+msgid "The type of resource that is sending you traffic, e.g. newsletter."
+msgstr "Тип ресурсу, який створює вам приплив відвідувачів — наприклад, newsletter."
+
+msgid "The type of marketing medium that the link is featured in, e.g. email."
+msgstr "Маркетинговий інструмент, яким є ваша розсилка, наприклад — email."
+
+msgid "The name of your marketing campaign, e.g. your email subject."
+msgstr "Назва вашої маркетингової кампанії, наприклад — тема листа."
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid "Return-path"
+msgstr "Return-path"
+
+msgid "Google Analytics"
+msgstr "Google Analytics"
+
+msgid "Source (utm_source):"
+msgstr "Джерело (utm_source):"
+
+msgid "Medium (utm_medium):"
+msgstr "Канал (utm_medium):"
+
+msgid "Campaign (utm_campaign):"
+msgstr "Кампанія (utm_campaign):"
+
+msgid "Unable to send test messages:"
+msgstr "Неможливо надіслати тестові повідомлення:"
+
+msgid "Drag and drop an image file here (JPG, GIF, PNG)"
+msgstr "Перетягніть сюди файл зображення (JPG, GIF, PNG)"
+
+msgid "Reply-To Email"
+msgstr "Reply-To Email"
+
+msgid "SSL/TLS"
+msgstr "SSL/TLS"
+
+msgid "STARTTLS"
+msgstr "STARTTLS"
+
+msgid "Subscribe date"
+msgstr "Дата підписки"
+
+msgid "Files with extensions %s are allowed only."
+msgstr "Дозволено тільки файли з розширеннями %s."
+
+msgid "<no_name>"
+msgstr "<no_name>"
+
+msgid "Unable to open archive file."
+msgstr "Неможливо відкрити архів."
+
+msgid "Unable to extract template file."
+msgstr "Неможливо витягти файл шаблону."
+
+msgid "SMTP"
+msgstr "SMTP"
+
+msgid "Sendmail"
+msgstr "Sendmail"
+
+msgid "subscribed"
+msgstr "підписався"
+
+msgid "unsubscribed"
+msgstr "відписався"
+
+msgid "Required fields"
+msgstr "Обов&#39;язкові поля"
+
+msgid "Required field"
+msgstr "Обов&#39;язкове поле"
+
+msgid "Server error"
+msgstr "Помилка сервера"
+
+msgid "Reload image"
+msgstr "Оновити зображення"
+
+msgid "Show"
+msgstr "Показувати"
+
+msgid "records"
+msgstr "записів"
+
+msgid "From"
+msgstr "Від"
+
+msgid "Specified"
+msgstr "Вказаний"
+
+msgid "It is recommended to specify an existing email address which you do not check for new mail as the sender's address for such notifications; e.g., noreply@yourdomain.com. This will help minimize the number of redundant requests."
+msgstr "Рекомендовано вказати, як адресу відправника для таких повідомлень, існуючу адресу електронної пошти, яку ви не перевіряєте на нову пошту; наприклад, noreply@yourdomain.com. Це допоможе мінімізувати кількість надлишкових запитів."
+
+msgid "Use source email address if request came by email"
+msgstr "Використовувати електронну адресу джерела, якщо запит надійшов по електронній пошті"
+
+msgid "Text"
+msgstr "Текст"
+
+msgid "Edit form name"
+msgstr "Редагувати назву форми"
+
+msgid "Form view setup"
+msgstr "Налаштування вигляду форми"
+
+msgid "Fields"
+msgstr "Поля"
+
+msgid "Field labels"
+msgstr "Підписи полів"
+
+msgid "Left aligned"
+msgstr "Зліва від поля"
+
+msgid "Top aligned"
+msgstr "Над полем"
+
+msgid "Hide"
+msgstr "Сховати"
+
+msgid "Please enter symbols shown on the image:"
+msgstr "Введіть символи з зображення:"
+
+msgid "Form width (200-600px)"
+msgstr "Ширина форми (200-600 пікселів)"
+
+msgid "After form submission"
+msgstr "Після відправки форми"
+
+msgid "This setting will redirect clients to any specified URL or display any text message after the form is submitted."
+msgstr "Ця установка дозволяє після заповнення форми та відправлення запиту перенаправляти клієнтів на будь-яку вказану статтю або показувати на місці форми повідомлення."
+
+msgid "After successfull submission:"
+msgstr "Після успішного відправлення:"
+
+msgid "Redirect to URL"
+msgstr "Перейти на сторінку"
+
+msgid "Display text instead of the form"
+msgstr "Показати вказаний текст замість форми"
+
+msgid "Thanks for subscribing!"
+msgstr "Дякуємо за підписку!"
+
+msgid "Dear {SUBSCRIBER_NAME}!"
+msgstr "Шановний(на) {SUBSCRIBER_NAME}!"
+
+msgid "Please click the following link to confirm your subscription:"
+msgstr "Перейдіть за посиланням для підтвердження підписки:"
+
+msgid "Thank you!"
+msgstr "Дякуємо!"
+
+msgid "Message will be sent to the subscriber's address. This message contains a special link which must be clicked to confirm the subscription."
+msgstr "Підписувачу буде відправлено повідомлення. У цьому повідомленні міститиметься спеціальне посилання, за яким необхідно перейти для підтвердження підписки."
+
+msgid "Are you sure?"
+msgstr "Ви впевнені?"
+
+msgid "Unsaved changes will be lost if you leave this page now."
+msgstr "Усі незбережені зміни буде втрачено, якщо ви зараз залишите цю сторінку."
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "Cancel schedule"
+msgstr "Відмінити розклад"
+
+msgid "Remove"
+msgstr "Видалити"
+
+msgid "All history"
+msgstr "Увесь період"
+
+msgid "thanks for subscription!"
+msgstr "дякуємо за підписку!"
+
+msgid "Thanks for subscription!"
+msgstr "Дякуємо за підписку!"
+
+msgid "Contacts list"
+msgstr "Перелік контактів"
+
+msgid "Contact list are contact lists."
+msgstr "Перелік контактів — це перелік контактів."
+
+msgid "Campaign recipients"
+msgstr "Отримувачі розсилок"
+
+msgid "campaign"
+msgstr "розсилка"
+
+msgid "status"
+msgstr "статус"
+
+msgid "Bounces"
+msgstr "Відмови"
+
+msgid "Contacts Lists"
+msgstr "Списки контактов"
+
+msgid "Prosearch"
+msgstr "Контакти PRO"
+
+msgid "Subscriber name, if it used in the form.."
+msgstr "Ім&#39;я підписувача, якщо воно використовується у формі."
+
+msgid "URL address to confirm subscription. Click on this link opens \"My subscriptions\" page in the client's Customer Portal."
+msgstr "Адреса підтвердження підписки. Клік на такому посиланні відкриває сторінку «Мої підписки» в особистому кабінеті підписувача."
+
+msgid "My subscriptions"
+msgstr "Мої підписки"
+
+msgid "Thanks for subscribe!"
+msgstr "Дякуємо за підписку!"
+
+msgid "Now you can recieve our awesome emails!"
+msgstr "Тепер ви зможете отримувати наші чудові розсилання!"
+
+msgid "Your subscriptions list have been updated!"
+msgstr "Ваш перелік підписок оновлено!"
+
+msgid "You unsubscribed from all subscriptions"
+msgstr "Ви відписалися від усіх розсилань"
+
+msgid "Subscribe again"
+msgstr "Підписатися знову"
+
+msgid "Unsubscribe from all"
+msgstr "Відписатися від усіх"
+
+msgid "We are using <a href=\"http://www.webasyst.com/\">Webasyst</a>"
+msgstr "Ми використовуємо <a href=\"http://www.webasyst.ru/\">Webasyst</a>"
+
+msgid "Contact lists"
+msgstr "Переліки контактів"
+
+msgid "Contact search"
+msgstr "Пошук серед контактів"
+
+msgid "List"
+msgstr "Перелік"
+
+msgid "Search"
+msgstr "Пошук"
+
+msgid "Choose forms that will add subscribers to this list"
+msgstr "Оберіть форми, через використання яких підписувачі будуть додаватись до цього переліку"
+
+msgid "Subscription forms"
+msgstr "Форми підписки"
+
+msgid "This list is not associated with any subscription form."
+msgstr "Цей перелік не зв&#39;язаний з жодною формою підписки."
+
+msgid "No subscribers in this list."
+msgstr "У цьому переліку немає підписувачів."
+
+msgid "Invalid email format"
+msgstr "Невірний формат email"
+
+msgid "reload"
+msgstr "оновити"
+
+msgid "Send to selected recipients"
+msgstr "Надіслати обраним отримувачам"
+
+msgid "Checking campaign settings and preparing recipient list"
+msgstr "Перевірка налаштувань розсилання та підготовка переліку отримувачів"
+
+msgid "{$g.name}"
+msgstr "{$g.name}"
+
+msgid "{$g.comment}"
+msgstr "{$g.comment}"
+
+msgid "Nothing found. Change search criteria"
+msgstr "Нічого не знайдено. Оновіть критерії пошуку"
+
+msgid "Show recipient list with unique email addresses"
+msgstr "Показати перелік отримувачів з унікальними адресами"
+
+msgid "To select contact lists, first create them in <a href=\"%s\">\"Contacts\"</a> app."
+msgstr "Аби обрати переліки контактів — спочатку створіть їх у додатку <a href=\"%s\">«Контакти»</a>."
+
+msgid "No subscriber lists - create it in \"Subscribers\""
+msgstr "Немає переліків підписувачів — створіть їх у розділі «Підписувачі»"
+
+msgid "You must have access to Contacts app."
+msgstr "Необхідно мати доступ до додатку «Контакти»."
+
+msgid "Your subscription list successfully updated."
+msgstr "Ваш перелік підписувачів успішно оновлено."
+
+msgid "You are unsubscribed from all mailing campaigns."
+msgstr "Ви відписалися від усіх розсилань."
+
+msgid "Select emailing campaigns you would like to participate in:"
+msgstr "Оберіть теми, за якими ви бажаєте отримувати розсилання:"
+
+msgid "Unsubscribe from all mailings"
+msgstr "Відписатися від усіх розсилань"
+
+msgid "Please specify your email in \"Contacts\" app"
+msgstr "Вкажіть свою електронну адресу у додатку «Контакти»"
+
+msgid "Incorrect data"
+msgstr "Невірні дані"
+
+msgid "Apply"
+msgstr "Застосувати"
+
+msgid "sent campaign"
+msgstr "відправив розсилання"
+
+msgid "composed a new campaign"
+msgstr "створив нове розсилання"
+
+msgid "composed a new template"
+msgstr "створив новий шаблон"
+
+msgid "subscribed via form"
+msgstr "підписався через форму"
+
+msgid "subscribed via customer portal"
+msgstr "підписався через особистий кабінет"
+
+msgid "unsubscribed from all mailings"
+msgstr "відписався від усіх розсилань"
+
+msgid "edited subscription list in customer portal"
+msgstr "відредагував перелік підписок у особистому кабінеті"
+
+msgid "scheduled delayed sending"
+msgstr "запланував відкладене розсилання"
+
+msgid "<a target=\"_blank\" href=\"https://www.webasyst.com/crm/support/2024/mailer-dkim/\">What is DKIM</a>"
+msgstr "<a target=\"_blank\" href=\"https://support.webasyst.ru/2023/mailer-dkim/\">Що таке DKIM</a>"
+
+msgid "Please enter sender's email address to use DKIM."
+msgstr "Для використання DKIM вкажіть адресу відправника."
+
+msgid "Add a new TXT record with this public DKIM key to the DNS zone of domain name"
+msgstr "Додайте новий TXT-запис із цим публічним ключем DKIM у DNS-зону домену"
+
+msgid "Host"
+msgstr "Хост"
+
+msgid "Record type"
+msgstr "Тип запису"
+
+msgid "Value"
+msgstr "Значення"
+
+msgid "Open in browser"
+msgstr "Відкрити у браузері"
+
+msgid "Open in browser link"
+msgstr "Посилання для відкриття у браузері"
+
+msgid "This variable will be replaced with a personal recipient link that can be used to view message on browser."
+msgstr "Цю змінну буде замінено на персональне посилання для перегляду повідомлення в браузері."
+
+msgid "Eliminate from subscribers"
+msgstr "Виключити із підписувачів"
+
+msgid "NOTE: This contact will not be deleted. It will be only eliminated from the subscription list."
+msgstr "ПРИМІТКА: Цей контакт не буде видалено. Його буде виключено лише з переліку підписки."
+
+msgid "Do you really want to eliminate contact %s from subscribers?"
+msgid_plural "<span id=\"delete-contact-name-email\"></span>"
+msgstr[0] "Do you really want to eliminate contact %s from subscribers?"
+msgstr[1] "<span id=\"delete-contact-name-email\"></span>"
+msgstr[2] ""
+
+msgid "You need to install openssl php extention to use DKIM"
+msgstr "Аби користуватись DKIM, вам необхідно встановити розширення PHP OpenSSL"
+
+msgid "You need PHP version 5.3 or higher to use DKIM. Your current version is:"
+msgstr "Аби користуватись DKIM, потрібна версія PHP 5.3 або вища. Ваша поточна версія:"
+
+msgid "Subscriptions"
+msgstr "Підписки"
+
+msgid "Not included in any mailing list"
+msgstr "Не включений в жоден перелік розсилань"
+
+msgid "Campaigns"
+msgstr "Розсилання"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Send newsletter in Mailer"
+msgstr "Відправити лист через «Розсилання»"
+
+msgid "Shop customers"
+msgstr "Покупці"
+
+msgid "Unavailable"
+msgstr "Недоступно"
+
+msgid "Awaiting"
+msgstr "Чекають"
+
+msgid "Subscription name"
+msgstr "Назва підписки"
+
+msgid "Email address"
+msgstr "Адреса email"
+
+msgid "Subscription date"
+msgstr "Дата підписки"
+
+msgid "No campaigns were sent to this recipient"
+msgstr "Жодного розсилання цьому отримувачу направлено не було"
+
+msgid "Full name"
+msgstr "Повне ім&#39;я"
+
+msgid "Personal data processing"
+msgstr "Обробка персональних даних"
+
+msgid "---INSERT A LINK HERE!---"
+msgstr "---ВСТАВТЕ СЮДИ ПОСИЛАННЯ НА ДОКУМЕНТ!---"
+
+msgid "I agree to %spersonal data protection policy%s"
+msgstr "Я погоджуюсь із %sполітикою обробки персональних даних%s"
+
+msgid "By submitting this form I agree to %spersonal data protection policy%s"
+msgstr "Натискаючи кнопку підтверждення, я погоджуюсь із %sполітикою обробки персональних даних%s"
+
+msgid "Do not require consent to personal data protection policy"
+msgstr "Не вимагати згоди із політикою обробки персональних даних"
+
+msgid "Show only notice and link to policy"
+msgstr "Показувати тільки підказку із посиланням на політику"
+
+msgid "Show mandatory checkbox, notice, and link"
+msgstr "Пропонувати увімкнути обов&#39;язковий прапорець із підказкою та посиланням"
+
+msgid "Restore original text"
+msgstr "Відновити стандартний текст"
+
+msgid "Show notice"
+msgstr "Показувати повідомлення"
+
+msgid "Please confirm your agreement"
+msgstr "Підтвердіть свою згоду"
+
+msgid "Upload image"
+msgstr "Завантажити зображення"
+
+msgid "Enable Feedback-ID header for GMail FBL Tool"
+msgstr "Увімкнути Feedback-ID header для засобу GMail FBL"
+
+msgid "Feedback-ID:"
+msgstr "Feedback-ID:"
+
+msgid "campaignId:campaignType:SenderId"
+msgstr "campaignId:campaignType:SenderId"
+
+msgid "a:b:c:SenderId"
+msgstr "a:b:c:SenderId"
+
+msgid "Where: a, b, c are optional fields that can be used to embed up to 3 Identifiers (campaign/customer/other)."
+msgstr "Де a, b, c — необов&#39;язкові поля, які можуть бути використані для трьох ідентифікаторів (кампанія/клієнт/інше)."
+
+msgid "SenderId is a mandatory unique Identifier (5–15 characters)."
+msgstr "SenderId — це обов&#39;язковий унікальний ідентифікатор (5–15 символів)."
+
+msgid "Invalid string."
+msgstr "Невірна стрічка."
+
+msgid "Controller supported only when Contacts App with PRO plugin are installed"
+msgstr "Контроллер підтримується тільки коли встановлений додаток «Контакти» із плагіном “PRO”"
+
+msgid "Action supported only when Contacts App is available (with not PRO plugin installed)"
+msgstr "Дія підтримується тільки коли встановлений додаток «Контакти» (без плагіна “PRO”)."
+
+msgid "Action supported only when CRM are installed"
+msgstr "Дія пітримується тільки коли встановлено CRM"
+
+msgid "Action supported only when Contacts App with PRO plugin are installed"
+msgstr "Контроллер підтримується тільки коли встановлений додаток «Контакти» із плагіном “PRO”"
+
+msgid "Segment"
+msgstr "Сегмент"
+
+msgid "CRM segments"
+msgstr "Сегменти CRM"
+
+msgid "CRM Segments"
+msgstr "Сегменти CRM"
+
+msgid "Invalid captcha"
+msgstr "Невірний код CAPTCHA"
+
+msgid "You need to install PHP extention openssl to use DKIM."
+msgstr "Аби користуватись DKIM, вам необхідно встановити розширення PHP OpenSSL."
+
+msgid "These addresses either do not exist, or cannot receive your message by any reason."
+msgstr "Такі адреси або не існують, або не можуть отримувати від вас повідомлення."
+
+msgid "Return-Path"
+msgstr "Return-path"
+
+msgid "add a new Return-Path"
+msgstr "додати новий Return-path"
+
+msgid "Add a new Return-Path"
+msgstr "Додати новий Return-path"
+
+msgid "Return-Path address is used to automatically process bounced emails. We recommend to create a special email address to receive bounces as it allows to obtain a true statistics about your message delivering."
+msgstr "Адреса Return-path використовується для автоматичного отримання і обробки відмов (bounces) поштовим сервером одержувача. Ми рекомендуємо вам створити спеціальну адресу для отримання таких відмов, це дозволить вам отримувати об&#39;єктивну статистику доставки листа у звіті про розсилку."
+
+msgid "Error checking Return-Path mailbox"
+msgstr "Помилка перевірки адреси Return-path"
+
+msgid "Return-Path is not customized. This does not allow to track most of potential bounces from recipient mail servers. Only invalid messages bounced by your sender server have been counted."
+msgstr "Return-path не налаштовано. Це не дозволяє відстежити більшість відмов від поштових серверів одержувачів. Пораховано тільки адреси, відкинуті вашим сервером відправника."
+
+msgid "Message viewing statistics cannot be counted as your message does not contain images."
+msgstr "Статистику переглядів неможливо порахувати, так як у вашому повідомленні немає зображень."
+
+msgid "Return-Path address specified above is not available."
+msgstr "Вказана адреса Return-path недоступна."
+
+msgid "Return-Path address is used to automatically process bounced emails."
+msgstr "Адреса Return-path використовується для автоматичного отримання і обробки відмов (bounces) поштовим сервером одержувача."
+
+msgid "Edit Return-Path"
+msgstr "Редагувати Return-path"
+
+msgid "Delete this Return-Path"
+msgstr "Видалити цей Return-path"
+
+msgid "Do you really want to delete this Return-Path?"
+msgstr "Ви дійсно хочете видалити цей Return-path?"
+
+msgid "Remove from subscribers"
+msgstr "Видалити із підписувачів"
+
+msgid "Remove from all subscribers"
+msgstr "Видалити із усіх підписувачів"
+
+msgid "Remove from this subscribers list"
+msgstr "Видалити із цього переліку підписувачів"
+
+msgid "Action is supported only if Contacts app is available, with no PRO plugin installed."
+msgstr "Дія підтримується, тільки коли встановлений додаток «Контакти» (без плагіна “PRO”)."
+
+msgid "Action is supported only if CRM app is installed."
+msgstr "Дія підтримується тільки коли встановлено додаток CRM."
+
+msgid "Action is supported only if Contacts app and PRO plugin are installed."
+msgstr "Контроллер підтримується тільки коли встановлений додаток «Контакти» із плагіном “PRO”."
+
+msgid "Controller is supported only if Contacts app and PRO plugin are installed."
+msgstr "Контроллер підтримується тільки коли встановлений додаток «Контакти» із плагіном “PRO”."
+
+msgid "Inspector: can only view all existing campaigns, but cannot edit or send them"
+msgstr "Інспектор: може тільки переглядати існуючі розсилання, але не може редагувати чи надсилати їх"
+
+msgid "Form setup"
+msgstr "Налаштування форми"
+
+msgid "Every time you receive a message from an unknown email address which is not yet stored in your Contacts database, an automatic notification will be sent to the sender's address."
+msgstr "Кожного разу, коли ви отримуєте повідомлення з невідомої адреси email, якої ще немає у ваших «Контактах», на цю адресу буде надіслано автоматичне повідомлення."
+
+msgid "This notification contains a special link which must be clicked to confirm the sending of the first request. You may also add extra instructions for your clients to the notification text."
+msgstr "Повідомлення містить спеціальне посилання, за яким необхідно перейти, аби підтвердити надсилання першого запиту. Ви также можете додати інструкції для ваших клієнтів у текст повідомлення."
+
+msgid "Now we are checking campaing settings and preparing recipient list"
+msgstr "Зараз ми перевіряємо налаштування кампанії і готуємо перелік отримувачів"
+
+msgid "Create new from this"
+msgstr "Створити з цього"
+
+msgid "Received campaigns"
+msgstr "Отримані кампанії"
+
+msgid "Subscriber name, if it uses in form."
+msgstr "Ім&#39;я підписувача, якщо воно використовується у формі."
+
+msgid "URL address for not registered clients to confirm their original email. Click on this link opens the request in the client's Customer Portal."
+msgstr "Адреса URL для незареєстрованих клієнтів, аби підтвердити їх оригінальний email. Перехід за цим посиланням відкриє запит клієнта у Центрі замовника."
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "prev"
+msgstr "назад"
+
+msgid "next"
+msgstr "далі"
+
+msgid "Deleted contact #%d"
+msgstr "Видалено контакт #%d"
+
+msgid "System default (%s)"
+msgstr "Системний за замовчуванням (%s)"
+
+msgid "To select CRM segments, first create them in <a href=\"%s\">CRM</a> app."
+msgstr "Аби обрати сегменти CRM, спершу створіть їх у додатку <a href=\"%s\">CRM</a> ."
+
+msgid "Return-Path “%s” forbidden by sending server."
+msgstr "Зворотний шлях \" %s\" заборонено сервером відправника."
+
+msgid "Plugins"
+msgstr "Плагіни"
+
+msgid "Sub-addressing"
+msgstr "Субадресація"
+
+msgid "Disable if your mail server does not support sub-addressing in email addresses, i.e. addresses containing the “+” character."
+msgstr "Вимкніть, якщо ваш поштовий сервер не підтримує субадресацію у email-адресах, тобто адреси, що включають символ “+”."
+
+msgid "no data in mailing log"
+msgstr "у журналі розсилки немає даних"
+
+msgid "Previously unavailable"
+msgstr "Раніше недоступний"
+
+msgid "Previously unsubscribed"
+msgstr "Раніше відписаний"
+
+msgid "Undelivered"
+msgstr "Недоставлені"
+
+msgid "Sending error"
+msgstr "Помилка відправки"
+
+msgid "Waiting for sending"
+msgstr "В очікуванні відправки"
+
+msgid "Delivered"
+msgstr "Доставлено"

@@ -1,0 +1,80 @@
+<link rel="stylesheet" type="text/css" href="{$blog_plugin_url}css/settings.css" />
+<script src="{$blog_plugin_url}js/settings.js" ></script>
+
+<h1>{$plugin_info.name}</h1>
+
+<div class="blog-skimage js-skimage">
+
+    <div class="blog-skimage-settings">
+        <div class="form">
+            <form action="?module=plugins&id={$plugin_id}&action=save" method="post" id="plugins-settings-form" class="js-skimage-settings-form" enctype="multipart/form-data" target="plugins-settings-iframe">
+                {$wa->csrf()}
+                {foreach $settings_controls as $name => $control}
+                <div class="field">
+                    {$control}
+                </div>
+                {/foreach}
+
+            </form>
+            <iframe style="display:none" name="plugins-settings-iframe" id="plugins-settings-iframe"></iframe>
+        </div>
+
+    </div>
+
+    <div class="blog-skimage-groups">
+        <form class="blog-skimage-groups__form js-skimage-groups-form">
+            <table class="blog-skimage-groups__table zebra mode-sales">
+                <thead>
+                    <tr class="blog-skimage-groups__zags white s-header-row">
+                        <th>Наименование</th>
+                        <th>Идентифкатор</th>
+                        <th>Ширина</th>
+                        <th>Высота</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody class="js-skimage-groups-body">
+                    {foreach $groups as $group}
+                    <tr class="blog-skimage-groups__item js-skimage-groups-item s-summary-row" data-iteration="{$group@iteration}">
+                        <td>
+                            <input type="text" name="title[{$group.id}]" value="{$group.title|escape}" data-name="title" data-id="{$group.id}" />
+                            <span class="blog-skimage-groups__error js-error-msg"></span>
+                        </td>
+                        <td>
+                            <input type="text" name="name[{$group.id}]" class="js-skimage-groups-input-id" value="{$group.name|escape}" data-name="name" data-id="{$group.id}" />
+                            <span class="blog-skimage-groups__error js-error-msg"></span>
+                        </td>
+                        <td>
+                            <input type="text" name="width[{$group.id}]" value="{$group.width}" data-name="width" data-id="{$group.id}" /> px.
+                            <span class="blog-skimage-groups__error js-error-msg"></span>
+                        </td>
+                        <td>
+                            <input type="text" name="height[{$group.id}]" value="{$group.height}" data-name="height" data-id="{$group.id}" /> px.
+                            <span class="blog-skimage-groups__error js-error-msg"></span>
+                        </td>
+                        <td class="blog-skimage-groups__actions">
+                            <a href="javascript:void(0)" class="gray inline-link  js-skimage-groups-refresh" title="Обновить эскизы группы изображений">
+                                <i class="icon16 update"></i>
+                            </a>
+                            <span class="small js-skimage-groups-percent"></span>
+                            <a href="javascript:void(0)" class="gray inline-link  js-skimage-groups-delete" title="Удалить группу">
+                                <i class="icon16 delete"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    {/foreach}
+                </tbody>
+            </table>
+        </form>
+        <div class="hint blog-skimage-groups__hint" >Изменения применяются автоматически</div>
+        <div class="blog-skimage-groups__add">
+            <a href="javascript:void(0)" class="inline-link js-skimage-groups-add">
+                <i class="icon16 add"></i><b><i>Добавить категорию</i></b>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    var blogSkimageSettingsInit = new blogSkimageSettings({$blog_skimage_config|json_encode});
+</script>

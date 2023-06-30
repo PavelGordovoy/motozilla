@@ -1,0 +1,9 @@
+{
+  "config": {
+    "vendor-dir": "vendors",
+    "platform-check": false
+  },
+  "require": {
+    "google/cloud-translate": "1.*"
+  }
+}

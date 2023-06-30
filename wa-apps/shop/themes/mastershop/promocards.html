@@ -1,0 +1,83 @@
+{strip}
+{$promoslist = []}
+{if $promo_nums}
+    {$promo_nums = ","|explode:$promo_nums}
+    {if count($promo_nums) > 0}
+        {foreach $promo_nums as $num}
+            {if isset($promocards[$num-1])}
+                {$promoslist[] = $promocards[$num-1]}
+            {/if}
+        {/foreach}
+    {/if}
+{/if}
+
+{function countdown promo=[]}
+    {if !empty($promo.countdown_datetime) && time() <= strtotime($promo.countdown_datetime)}
+        <div class="promocard__countdown">
+            <div data-wrap="1" data-day-text="[`d.`]" class="slider-banner__time js-promo-countdown" data-end="{$promo.countdown_datetime}">
+                <div class="countdown-item">
+                    <span class="countdown-item-count js-countdown-days"></span>
+                    <span class="countdown-item-text">[`d`]</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-item-count js-countdown-hours"></span>
+                    <span class="countdown-item-text">[`h`]</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-item-count js-countdown-minutes"></span>
+                    <span class="countdown-item-text">[`min`]</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-item-count js-countdown-seconds"></span>
+                    <span class="countdown-item-text">[`sec`]</span>
+                </div>
+            </div>
+        </div>
+    {/if}
+{/function}
+
+{if count($promoslist) > 0}
+    {$mod = "even"}{if count($promoslist)%2 == 1}{$mod = "odd"}{/if}
+    <div class="promocards promocards--{$mod}">
+        {foreach $promoslist as $promo}
+            {if $type_view == "img_left"}
+                <div class="promocard">
+                    {if isset($promo.background_color) && !empty($promo.background_color)}{$bg = $promo.background_color}{/if}
+                    {if isset($promo.color) && !empty($promo.color)}{$color = $promo.color}{/if}
+                    <a class="promocard__inner promocard--img" href="{$promo.link|escape}" style="{if isset($color)}color: {$color};{/if} {if isset($bg)}background: {$bg};{/if}">
+                        <div class="promocard__image">
+                            {if $theme_settings.promos_images_lazy}
+                                <img alt="{$promo.title|escape}" class="js-image-lazy" src="{$wa_theme_url}img/lazy-image.png" data-src="{$promo.image}" />
+                            {else}
+                                <img alt="{$promo.title|escape}" src="{$promo.image}" />
+                            {/if}
+                        </div>
+                        <div class="promocard__content">
+                            <div class="promocard__name">
+                                {$promo.title|escape}
+                            </div>
+                            {$body = $promo.body|escape|nl2br}
+                            {if !empty($body)}
+                                <div class="promocard__desc">{$promo.body|escape|nl2br}</div>
+                            {/if}
+                            {countdown promo=$promo}
+                        </div>
+                        <i class="promocard__more fal fa-long-arrow-right"></i>
+                    </a>
+                </div>
+            {else}
+                <div class="promocard">
+                    <a class="promocard__inner promocard--img-bg" href="{$promo.link|escape}">
+                        {countdown promo=$promo}
+                        {if $theme_settings.promos_images_lazy}
+                            <img alt="{$promo.title|escape}" class="js-image-lazy" src="{$wa_theme_url}img/lazy-image.png" data-src="{$promo.image}" />
+                        {else}
+                            <img alt="{$promo.title|escape}" src="{$promo.image}" />
+                        {/if}
+                    </a>
+                </div>
+            {/if}
+        {/foreach}
+    </div>
+{/if}
+{/strip}

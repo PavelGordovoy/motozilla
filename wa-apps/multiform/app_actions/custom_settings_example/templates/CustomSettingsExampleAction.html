@@ -1,0 +1,34 @@
+<script src="{$action.url}js/javascript.js?v={$wa->version()}"></script>
+
+<div class="align-center margin-block">
+    <div>[`Custom settings. Saving process, Javascript, output template should be created by yourself.`]</div>
+    <div>[`You can add any scripts and styles inside your action.`]</div>
+    <div>[`Make sure that all data save into table "multiform_action_form_settings".`]</div>
+    <div>[`Don't forget to save "Action name", "Action description" and "Action color" fields.`]</div>
+</div>
+
+<div class="field">
+    <div class="name">[`My field by field`]</div>
+    <div class="value">
+        <input type="text" class="width50px" name="data[my_field_by_field1]" value="{if !empty($action.fields.my_field_by_field1)}{$action.fields.my_field_by_field1|escape}{/if}" />
+        <input type="text" class="width50px" name="data[my_field_by_field2]" value="{if !empty($action.fields.my_field_by_field2)}{$action.fields.my_field_by_field2|escape}{/if}" />
+        <input type="text" class="width50px" name="data[my_field_by_field3]" value="{if !empty($action.fields.my_field_by_field3)}{$action.fields.my_field_by_field3|escape}{/if}" />
+        <input type="text" class="width50px" name="data[my_field_by_field4]" value="{if !empty($action.fields.my_field_by_field4)}{$action.fields.my_field_by_field4|escape}{/if}" />
+    </div>
+</div>
+<div class="field s-required action-field-my_text_field">
+    <div class="name">[`My text field`]</div>
+    <div class="value">
+        <input type="text" name="data[my_text_field]" value="{if !empty($action.fields.my_text_field)}{$action.fields.my_text_field|escape}{/if}" />
+    </div>
+</div>
+<div class="field action-field-my_textarea_field">
+    <div class="name">[`My textarea field`]</div>
+    <div class="value">
+        <textarea name="data[my_textarea_field]">{if !empty($action.fields.my_textarea_field)}{$action.fields.my_textarea_field|escape}{/if}</textarea>
+        <div class="multiform-gap-description">
+            [`Specify more information about action for yourself`]
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,277 @@
+{literal}
+<style>
+    #moto-edit-form .fields { float: none}
+    #moto-edit-form .fields .field { clear: none}
+    #moto-image-delete { white-space: nowrap}
+    #wa #moto-edit-form .redactor_editor { padding: 10px}
+    #moto-edit-form .redactor_toolbar:after { clear: none}
+    #moto-edit-form .redactor_toolbar li a:hover {color: #fff !important;}
+</style>
+{/literal}
+<div class="block double-padded">
+    <h1>
+        <a href="#/motos/" class="back">← {_w('Back')}</a>
+        <span class="s-moto-name">{$moto.name}</span>
+    </h1>
+
+    <form id="moto-edit-form" enctype="multipart/form-data" method="post" action="?plugin=productmotos&action=save&id={$moto.id}" target="moto-edit-iframe">
+        {$wa->csrf()}
+    <div  class="fields form">
+        <div class="field-group">
+            <div class="field">
+                <div class="name">{_w('Name')}</div>
+                <div class="value">
+                    <input type="text" name="name" value="{$moto.name|escape}">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="name">{_w('URL')}</div>
+                <div class="value">
+                    <input type="text" name="url" value="{$moto.url}" placeholder="{$moto.name|escape}">
+                </div>
+                <div class="value">
+                    <input type="checkbox" name="hidden" value="1" {if $moto.hidden}checked{/if}>
+                    [`Hidden moto`] <span class="hint">[`When enabled, this moto will be hidden from the storefront`]</span>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="name">{_w('Summary')}</div>
+                <div class="value">
+                    <textarea style="height: 40px" name="summary">{$moto.summary}</textarea>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">[`Image`]</div>
+                <div class="value">
+                    {if $moto.image}
+                    <input type="hidden" name="image" value="{$moto.image}">
+                    <div style="width: 50px; text-align: center; display: inline-block">
+                        <img style="max-width: 50px; max-height: 50px" src="{$wa_url}wa-data/public/shop/motos/{$moto.id}/{$moto.id}{$moto.image}"><br>
+                        <a id="moto-image-delete" class="small inline-link" href="#"><i class="icon10 delete"></i>{_w('delete')}</a>
+                    </div>
+                    <script type="text/javascript">
+                        $("#moto-image-delete").click(function () {
+                            var p = $(this).parent();
+                            p.prev().val('');
+                            p.remove();
+                            $("#s-moto-save-button").removeClass('green').addClass('yellow');
+                            return false;
+                        });
+                    </script>
+                    {/if}
+                    <div style="display: inline-block">
+                        <input type="file" name="image_file"><br>
+                        <span class="hint">*.jpg, *.jpeg, *.gif, *.png</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="field-group">
+            <div class="field">
+                <div class="name"><strong class="title">H1</strong></div>
+                <div class="value">
+                    <input type="text" name="h1" value="{$moto.h1|escape}" placeholder="{$moto.name|escape}">
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">[s`<strong class="title">Title</strong>`] <span class="hint">&lt;title&gt;</span></div>
+                <div class="value"><input type="text" name="title" value="{$moto.title|escape}"></div>
+            </div>
+            <div class="field">
+                <div class="name">[s`META Keywords`]</div>
+                <div class="value"><input type="text" name="meta_keywords" value="{$moto.meta_keywords}"></div>
+            </div>
+            <div class="field">
+                <div class="name">[s`META Description`]</div>
+                <div class="value">
+                    <textarea name="meta_description">{$moto.meta_description}</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="field-group">
+            <div class="field">
+                <div class="name">{_w('Description')}
+                    <br><span class="hint">[`HTML`]</span>
+                </div>
+                <div class="value">
+                    <div class="wa-editor-core-wrapper s-editor-core-wrapper" style="display: none">
+                        <ul class="wa-editor-wysiwyg-html-toggle s-wysiwyg-html-toggle">
+                            <li class="selected"><a class="wysiwyg" href="#">{_w('WYSIWYG')}</a></li>
+                            <li><a class="html" href="#">HTML</a></li>
+                        </ul>
+                        <div>
+                            <textarea style="display:none" id="s-moto-description" name="description">{$moto.description|escape}</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field-group">
+            <div class="field">
+                <div class="name">[`Additional description`]</div>
+                <div class="value">
+                    <textarea name="seo_description">{ifset($moto.seo_description)|escape}</textarea><br>
+                    <p>
+                        [`To display additional description add the following code to the template <b>search.html</b> (where you want, e.g. in the end of it)`]:<br>
+                        <b>
+                            &#123;if !empty($moto.seo_description) and $wa-&gt;get('page', 1) == 1&#125;&#123;$moto.seo_description&#125;&#123;/if&#125;
+                        </b>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="name">{_w('Frontend display')}:</div>
+            <div class="value">
+                {_w('Default product sort order')}:
+                <select name="sort_products">
+                    <option value="name ASC" {if $moto.sort_products == 'name ASC'}selected="selected"{/if}>{_w('By name')}</option>
+                    <option value="price DESC"  {if $moto.sort_products == 'price DESC'}selected="selected"{/if}>{_w('Most expensive')}</option>
+                    <option value="price ASC"   {if $moto.sort_products == 'price ASC'}selected="selected"{/if}>{_w('Least expensive')}</option>
+                    <option value="rating DESC" {if $moto.sort_products == 'rating DESC'}selected="selected"{/if}>{_w('Highest rated')}</option>
+                    <option value="rating ASC"  {if $moto.sort_products == 'rating ASC'}selected="selected"{/if}>{_w('Lowest rated')}</option>
+                    <option value="total_sales DESC" {if $moto.sort_products == 'total_sales DESC'}selected="selected"{/if}>{_w('Best sellers')}</option>
+                    <option value="total_sales ASC" {if $moto.sort_products == 'total_sales ASC'}selected="selected"{/if}>{_w('Worst sellers')}</option>
+                    <option value="count DESC" {if $moto.sort_products == 'count DESC'}selected="selected"{/if}>{_w('In stock')}</option>
+                    <option value="create_datetime DESC" {if !$moto.sort_products || $moto.sort_products == 'create_datetime DESC'}selected="selected"{/if}>{_w('Date added')}</option>
+                </select>
+                <label class="small">
+                    <input type="checkbox" name="enable_sorting" {if !empty($moto.enable_sorting)}checked="checked"{/if} value="1"> {_w('Customers can select preferable product sort order')}
+                </label>
+            </div>
+        </div>
+
+        <div class="field-group">
+            <div class="field">
+                <div class="value">
+                    <label>
+                        <input type="checkbox" name="allow_filter" value="1" id="moto-allow-filter" {if $moto.filter}checked{/if}> [`Allow product filtering`]
+                        <span class="hint">[`Product filtering allows your customers to filter (search) products within this moto by feature values, e.g. by color, size, price`]</span><br>
+                        <b>[`Not all themes have support for this feature`]</b>
+                    </label>
+                    <div class="block" id="moto-filter" {if !$moto.filter}style="display:none;"{/if}>
+                    <ul class="menu-v compact small">
+                        {foreach $filter_features as $feature}
+                        <li>
+                            <i class="icon16 sort"></i>
+                            <label><input type="checkbox" name="filter[]" value="{$feature.id}"
+                                {if !empty($feature.checked) || ($feature.id == 'price' && !$moto.filter)}checked="checked"{/if}>
+                                {$feature.name|escape}
+                            </label>
+                        </li>
+                        {/foreach}
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="field-group">
+            <div class="field">
+                <div class="name">{_w('Custom parameters')}</div>
+                <div class="value">
+                    <textarea name="params">{if $moto.params}{foreach $moto.params as $k=>$v}{$k}={$v|escape|cat:"\n"}{/foreach}{/if}</textarea>
+                    <br>
+                    <span class="hint">
+                        [`Optional set of custom <em>key=value</em> parameters. Each key=value pair should be on a separate line.`]
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="field-group">
+            <div class="field">
+                <div class="value">
+                    <input id="s-moto-save-button" type="submit" class="button green" value="{_w('Save')}" /> {_w('or')}
+                    <a href="#/motos/">{_w('cancel')}</a>
+
+                    <span id="moto-form-status" style="display:none; padding-left: 20px">
+                        <i style="vertical-align:middle" class="icon16 yes"></i> {_w('Saved')}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    <iframe id="moto-edit-iframe" name="moto-edit-iframe" style="display: none"></iframe>
+</div>
+
+{$lang = substr($wa->locale(), 0, 2)}
+<script type="text/javascript">
+    $.wa.locale["delete"] = "{_w('delete')}";
+    var wa_url = '{$wa_url}';
+    var wa_app = 'shop';
+
+
+    $('#moto-edit-form .s-editor-core-wrapper').show();
+    $('#s-moto-description').waEditor({
+        lang: "{$lang}",
+        saveButton: '#s-moto-save-button',
+        toolbarFixedBox: false,
+        uploadFields: {
+            '_csrf': "{waRequest::cookie('_csrf', '')}"
+        }
+    });
+
+    $('#moto-allow-filter').change(function () {
+       if ($(this).is(':checked')) {
+           $('#moto-filter').show();
+       } else {
+           $('#moto-filter').hide();
+       }
+    });
+
+    $('#moto-filter ul').sortable({
+        distance: 5,
+        opacity: 0.75,
+        items: 'li',
+        handle: '.sort',
+        cursor: 'move',
+        tolerance: 'pointer'
+    });
+
+
+    $("#moto-edit-form").submit(function () {
+        $('#s-moto-description').waEditor('sync');
+        $("#moto-edit-iframe").one('load', function () {
+            try {
+                var data = $(this).contents().find('body').html();
+                var response = $.parseJSON(data);
+            } catch (e) {
+                alert('Error');
+                return;
+            }
+            if (response.status == 'ok') {
+                if (response.data.image) {
+                    $("#moto-edit-form input:file").replaceWith('<input type="file" name="image_file">');
+                    if ($("#moto-image-delete").length) {
+                        $("#moto-image-delete").parent().find('img').attr('src', response.data.image_url);
+                        $("#moto-edit-form input[name=image]").val(response.data.image);
+                    } else {
+                        $('<input type="hidden" name="image" value="' + response.data.image + '">' +
+                        '<div style="width: 50px; text-align: center; display: inline-block">' +
+                        '<img style="max-width: 50px; max-height: 50px" src="' + response.data.image_url + '"><br>' +
+                        '<a id="moto-image-delete" class="small inline-link" href="#"><i class="icon10 delete"></i>' + $_('delete') + '</a>' +
+                        '</div> ').insertBefore($("#moto-edit-form input:file").parent());
+                        $("#moto-image-delete").click(function () {
+                            var p = $(this).parent();
+                            p.prev().val('');
+                            p.remove();
+                            $("#s-moto-save-button").removeClass('green').addClass('yellow');
+                            return false;
+                        });
+                    }
+                }
+                $("#s-moto-save-button").removeClass('yellow').addClass('green');
+                $("#moto-form-status").fadeIn('slow', function () {
+                    $(this).fadeOut(1000);
+                });
+            }
+        });
+    });
+
+</script>

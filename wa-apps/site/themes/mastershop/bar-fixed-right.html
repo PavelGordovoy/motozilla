@@ -1,0 +1,124 @@
+{strip}
+<div class="js-bar-fixed-right bar-fixed-r">
+    <div class="bar-fixed-r__inner">
+        {if $wa->shop}
+            <div class="bar-fixed-r__list">
+                {* favorites *}
+                {if $theme_settings.favorites_products}
+                    {$favorites_list = $wa->cookie('favorites_list')}
+                    {if $favorites_list && $favorites_list != 'null'}
+                        {$favorites_max_count = (int)$theme_settings.favorites_products_count}
+                        {if empty($favorites_max_count)}{$favorites_max_count = 128}{/if}
+                        {$count_favorites = count(","|explode:$favorites_list)}
+                        {if $count_favorites > $favorites_max_count}
+                            {$count_favorites = $favorites_max_count}
+                        {/if}
+                    {else}
+                        {$count_favorites = 0}
+                    {/if}
+                    <a class="js-preview-favorite bar-fixed-r__item" href="{$wa->getUrl('shop/frontend/search')}?list=favorites">
+                        <span class="bar-fixed-r__icon bs-color">
+                            <i class="fas fa-heart"></i>
+                            <span class="js-favorite-count ac-bg bar-fixed-r__count{if empty($count_favorites)} empty{/if}">{$count_favorites}</span>
+                        </span>
+
+                        <span class="bar-fixed-r__message bs-bg">
+                            <i class="bar-fixed-r__check fal fa-check"></i>
+                            [`Product in favorites`]
+                            <i class="bar-fixed-r__caret"></i>
+                        </span>
+                    </a>
+                {/if}
+
+                {* compare *}
+                {if $theme_settings.compare_products}
+                    {$in_comparison = $wa->shop->inComparison()}
+                    {$url = $wa->getUrl('shop/frontend/compare', ['id' => implode(',', $in_comparison)])}
+                    {if $wa->cookie('shop_compare') == 'null' || !count($in_comparison)}
+                        {$in_comparison = []}
+                        {$url = $wa->getUrl('shop/frontend/compare')}
+                    {/if}
+                    {$countComparison = count($in_comparison)}
+                    <a class="js-preview-compare js-link-compare bar-fixed-r__item" href="{$url}">
+                        <span class="bar-fixed-r__icon bs-color">
+                            <i class="fas fa-copy"></i>
+                            <span class="js-compare-count ac-bg bar-fixed-r__count{if empty($countComparison)} empty{/if}">{$countComparison}</span>
+                        </span>
+
+                        <span class="bar-fixed-r__message bs-bg">
+                            <i class="bar-fixed-r__check fal fa-check"></i>
+                            [`Product in compare`]
+                            <i class="bar-fixed-r__caret"></i>
+                        </span>
+                    </a>
+                {/if}
+
+                {* cart *}
+                {if empty($theme_settings.cart_hide)}
+                    {if method_exists($wa->shop, 'checkout')}
+                        {$cartUrl = $wa->shop->checkout()->cartUrl()}
+                    {else}
+                        {$cartUrl = $wa->getUrl('shop/frontend/cart')}
+                    {/if}
+
+                    {$cart_count = $wa->shop->cart->count()}
+                    <a class="js-cart-preview bar-fixed-r__item{if empty($cart_count)} empty{/if}" data-type="fixed" data-massage="[`Product in cart`]" href="{$cartUrl}">
+                        <span class="bar-fixed-r__icon bs-color">
+                            <i class="fas fa-shopping-basket"></i>
+                            <span class="js-cart-preview-count ac-bg bar-fixed-r__count">{$cart_count}</span>
+                        </span>
+                        <span class="bar-fixed-r__message bs-bg">
+                            <i class="bar-fixed-r__check  fal fa-check"></i>
+                            [`Product in cart`]
+                            <i class="bar-fixed-r__caret"></i>
+                        </span>
+                    </a>
+                {/if}
+            </div>
+
+            {if $wa_app == 'shop'}
+                {if !empty($theme_settings.language_toggle)}
+                    <div class="toggle-lang js-drop-down-list drop-down-list">
+                        {$current_language = $wa->locale()}
+                        <span class="js-drop-down-toggle drop-down-list__toggle">
+                            {$current_language|regex_replace:"/[a-z_]/":""}
+                            <span class="drop-down-list__caret"></span>
+                        </span>
+                        <div class="js-drop-down-items drop-down-list__items">
+                            {foreach waLocale::getAll('name') as $language => $lang_name}
+                                {$language_text = $language|regex_replace:"/[a-z_]/":""}
+                                {if $wa->locale() == $language}
+                                    <span class="drop-down-list__item selected">{$language_text}</span>
+                                {else}
+                                    <span class="js-language drop-down-list__item" data-value="{$language}">{$language_text}</span>
+                                {/if}
+                            {/foreach}
+                        </div>
+                    </div>
+                {/if}
+                {if !empty($theme_settings.currency_toggle)}
+                    {$currencies = $wa->shop->currencies()}
+                    {$currency = $wa->shop->currency()}
+                    {if count($currencies) > 1}
+                        <div class="toggle-lang js-drop-down-list drop-down-list">
+                            <span class="js-drop-down-toggle drop-down-list__toggle">
+                                {$currency}
+                                <span class="drop-down-list__caret"></span>
+                            </span>
+                            <div class="js-drop-down-items drop-down-list__items">
+                                {foreach $currencies as $c_code => $c}
+                                {if $c_code == $currency}
+                                        <span class="drop-down-list__item selected">{$c_code}</span>
+                                    {else}
+                                        <span class="js-currency drop-down-list__item" data-value="{$c_code}">{$c_code}</span>
+                                    {/if}
+                                {/foreach}
+                            </div>
+                        </div>
+                    {/if}
+                {/if}
+            {/if}
+        {/if}
+    </div>
+</div>
+{/strip}

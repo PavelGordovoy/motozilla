@@ -1,0 +1,131 @@
+<section class="article js-assets">
+    <div class="article-body">
+
+        <h1>[`Manage apps`]</h1>
+
+        {if !empty($messages)}
+            {foreach $messages as $message}
+                <h2 class="state-{$message.result}">
+                    {if $message.result == 'success'}
+                        <i class="fas fa-check-circle"></i>
+                    {elseif $message.result == 'fail'}
+                        <i class="fas fa-times-circle"></i>
+                    {/if}
+                    {$message.text|escape}
+                </h2>
+            {/foreach}
+        {/if}
+
+        <table id="i-assets-list" class="i-assets-list">
+
+            <tbody>
+            {* list of available updates *}
+            {foreach $items as $app_id => $app}
+
+                {if empty($app.virtual) || !empty($app.plugins)}
+                    {include file="./Assets.row.html" item=$app item_id=$app_id item_type='app' inline}
+                {/if}
+
+                {if !empty($app.plugins)}
+                    {foreach $app.plugins as $item_id => $plugin}
+                        {include file="./Assets.row.html" item=$plugin item_id=$item_id item_type='plugin' inline}
+                    {/foreach}
+                {/if}
+
+                {if !empty($app.themes)}
+                    {foreach $app.themes as $item_id => $theme}
+                        {if $item_id !='default'}
+                            {include file="./Assets.row.html" item=$theme item_id=$item_id item_type='theme' inline}
+                        {/if}
+                    {/foreach}
+                {/if}
+
+                {if !empty($app.widgets)}
+                    {foreach $app.widgets as $item_id => $widget}
+                        {include file="./Assets.row.html" item=$widget item_id=$item_id item_type='widget' app=$app inline}
+                    {/foreach}
+                {/if}
+
+            {/foreach}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<script type="text/javascript">
+    document.title = {$title|json_encode};
+
+    $('.js-assets-row:not(.i-assets-disabled)').find('.js-switch-remove').show();
+
+    $('.js-remove-item').on('click', function(e) {
+        e.preventDefault();
+
+        const $this = $(this);
+
+        $.waDialog.confirm({
+            title: '[`This will delete the product’s source code and data, without a recovery option. Are you sure?`]',
+            success_button_title: '[`Delete`]',
+            success_button_class: 'danger',
+            cancel_button_title: '[`Cancel`]',
+            cancel_button_class: 'light-gray',
+            onSuccess() {
+              $this.css('pointer-events', 'none');
+              $this.find('.js-remove-item-icon').addClass('hidden');
+              $this.find('.js-remove-item-spinner').removeClass('hidden');
+              $this.closest('.js-switch-remove').siblings('.js-remove-item-form').submit();
+            }
+        });
+    });
+
+    $('.js-switch-item').on('click', function (event) {
+        event.preventDefault();
+
+        const $link = $(this);
+        const $tr = $link.closest('.js-assets-row');
+        const url = $link.data('url');
+        const data = $link.data('data');
+        const type = $link.data('type');
+
+        $link.find('.js-installer-assets-icon').hide();
+        $link.find('.js-installer-assets-spinner').addClass('-active');
+        $link.prop('disabled', true);
+
+        if (!url) {
+            return;
+        }
+
+        $.post(url, data, function (data, textStatus) {
+            $link.prop('disabled', false);
+
+            if (data.status === 'ok') {
+                $tr.toggleClass('i-assets-disabled');
+
+                $link.hide();
+                if (type === 'enable') {
+                    $link.siblings('.js-switch-disable, .js-switch-remove').show();
+                } else {
+                    $link.siblings('.js-switch-enable').show()
+                    $link.siblings('.js-switch-remove').hide();
+                }
+
+                $link.find('.js-installer-assets-icon').show();
+                $link.find('.js-installer-assets-spinner').removeClass('-active');
+
+                return;
+            }
+
+            let message = '';
+
+            if (data.errors) {
+                for (var i = 0; i < data.errors.length; i++) {
+                    message = (message ? (message + ' ') : '') + data.errors[i][0];
+                }
+            } else {
+                message = textStatus;
+            }
+
+            $link.parent().text(message)
+        });
+    });
+    //-->
+</script>

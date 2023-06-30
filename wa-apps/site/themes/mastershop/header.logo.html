@@ -1,0 +1,39 @@
+{strip}
+{$logo_image_type = $theme_settings.logo_image_type}
+<a href="{$wa_url}" class="header-logo">
+    {if $logo_image_type == 'img'}
+        {* logo image *}
+        {$logo_image = $theme_settings.logo}
+        {if !empty($is_mobile) && !empty($theme_settings.logo_mobile)}
+            {$logo_image = $theme_settings.logo_mobile}
+            {$logo_image_retina = null}
+        {else}
+            {$logo_retina = $theme_settings.logo_retina}
+        {/if}
+        {if !empty($logo_image)}
+            <img class="header-logo__image {if !empty($logo_retina)} js-logo-retina{/if}"{if !empty($logo_retina)} data-at2x="{$wa_theme_url}{$logo_retina}"{/if} src="{$wa_theme_url}{$logo_image}" alt="{$wa->accountName()}" />
+        {/if}
+    {else if $logo_image_type == 'svg'}
+        {* logo svg *}
+        {$logo_svg = $theme_settings.logo_svg}
+        {if !empty($is_mobile) && !empty($theme_settings.logo_svg_mobile)}{$logo_svg = $theme_settings.logo_svg_mobile}{/if}
+        {if !empty($logo_svg)}
+            <img class="header-logo__image" src="{$logo_svg}" alt="{$wa->accountName()}" />
+        {/if}
+    {else if $logo_image_type == 'icon'}
+        {* logo icon *}
+        <span class="header-logo__icon">{$theme_settings.logo_icon}</span>
+    {/if}
+
+    {if $is_mobile}{$logo_text_1 = $theme_settings.logo_text_1_mobile}{else}{$logo_text_1 = $theme_settings.logo_text_1}{/if}
+    {if $is_mobile}{$logo_text_2 = $theme_settings.logo_text_2_mobile}{else}{$logo_text_2 = $theme_settings.logo_text_2}{/if}
+    {if !empty($logo_text_1) || !empty($logo_text_2)}
+        <span class="header-logo__text">{$logo_text_1}
+            {if $logo_text_2}<span class="header-logo__text-second">{$logo_text_2}</span>{/if}
+        </span>
+    {/if}
+    {if !empty($is_tagline) && !empty($theme_settings.logo_tagline_text)}
+        <span class="header-logo__tagline">{$theme_settings.logo_tagline_text}</span>
+    {/if}
+</a>
+{/strip}

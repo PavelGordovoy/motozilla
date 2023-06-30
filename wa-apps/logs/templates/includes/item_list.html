@@ -1,0 +1,74 @@
+<ul class="zebra item-list {$mode}">
+    {foreach $items as $item}
+        <li class="item-list-item flexbox">
+            <div class="wide">
+                <div>
+                    {strip}
+                        <a href="?{$item.url}" class="item-open-link{if isset($item.class)} {$item.class}{/if}" title="[`Open`]">
+                            <i class="item-icon {$item.icon_class}" title="{$item.icon_title}"></i>
+
+                            {if $mode == 'directory'}
+                                <span class="rename-part">{$item.name}</span>
+                            {elseif $mode == 'items'}
+                                {if ifset($item.folder, null)}
+                                    <span class="folder">{$item.folder}</span>
+                                {/if}
+
+                                <span class="file{if $item.type != logsItems::ENTRY_ACTION} rename-part{/if}">{$item.name}</span>
+                            {/if}
+                        </a>
+
+
+                    {capture name="markers"}
+                        {if $item.tracked|default:false}
+                            <i class="fas fa-flag tracked-marker{if $item.updated|default:false} tracked-marker-updated{/if}" title="{if $item.updated|default:false}[`Updated tracked file`]{else}[`Tracked file`]{/if}"></i>
+                        {/if}
+
+                        {if $item.published|default:false}
+                            <i class="fas fa-globe published-marker" title="[`Published file`]"></i>
+                        {/if}
+                    {/capture}
+
+                    {$markers = $smarty.capture.markers|trim}
+
+                    {if strlen($markers)}
+                        <span class="item-markers">{$markers}</span>
+                    {/if}
+
+                    <span class="item-actions item-actions-buttons">
+                        {if $item.type == logsItems::ENTRY_FILE}
+                            <span class="item-action">
+                                <a href="?action=download&path={$item.path|escape}" title="[`Download`]" class="item-list-item-download-link"><i class="fas fa-download"></i></a>
+                            </span>
+                        {/if}
+
+                        {if $wa->user()->getRights('logs', 'rename') &&  in_array($item.type, [logsItems::ENTRY_FILE, logsItems::ENTRY_DIRECTORY])}
+                            <span class="item-action logs-action-rename">
+                                <i class="fas fa-edit logs-action-icon" data-path="{$item.path|escape}" title="[`Rename`]"></i>
+                            </span>
+                        {/if}
+
+                        {if in_array($item.type, [logsItems::ENTRY_FILE, logsItems::ENTRY_DIRECTORY]) && $wa->user()->getRights('logs', 'delete_files')}
+                            <span class="item-action logs-action-delete">
+                                <i class="fas fa-trash logs-action-icon" data-path="{$item.path|escape}" title="[`Delete`]"></i>
+                            </span>
+                        {/if}
+                    </span>
+                    {/strip}
+                </div>
+
+                {if isset($item.data.updatetime)}
+                    <div class="item-data-updatetime" title="[`Latest update time`]">{$item.data.updatetime}</div>
+                {/if}
+            </div>
+
+            {if isset($item.data.size)}
+                <div>
+                    {$item.data.size}
+                </div>
+            {/if}
+        </li>
+    {/foreach}
+</ul>
+
+<h3 class="no-logs-message{if $items} hidden{/if}">[`No logs.`]</h3>

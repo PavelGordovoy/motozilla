@@ -1,0 +1,120 @@
+<div class="home-page">
+
+    <div class="row">
+            {$wa->block("homeslider")}
+    </div>
+
+    {if $promocards = $wa->shop->promos()}
+        <section class="promos row">
+            <div class="e-space">
+                <h2><span class="line"><span>Лучшие предложения</span></span></h2>
+                <ul>
+                    {foreach $promocards as $promo}
+                    <li id="s-promo-{$promo.id}">
+                        <a href="{$promo.link|escape}">
+                            <div class="background-color-layer" style="background-color: {$promo.background_color};">
+                                <img class="ep-promo-img" src="{$promo.image}" alt="">
+                            </div>
+                        </a>
+                            <div class="ep-promo-txt">
+                                {if !empty($promo.title)}<h5 style="color: {$promo.background_color};">{$promo.title|escape}</h5>{/if}
+                                {if !empty($promo.countdown_datetime) && time() <= strtotime($promo.countdown_datetime)}
+                                <div class="countdown">
+                                    <span class="js-promo-countdown"
+                                          data-start="{date('Y-m-d H:i:s')}"
+                                          data-end="{$promo.countdown_datetime}">
+                                    </span>
+                                </div>
+                                {/if}
+                                {if !empty($promo.body)}<p style="color: {$promo.color};">{$promo.body}</p>{/if}
+                            </div>
+                    </li>
+                    {/foreach}
+                </ul>
+            </div>
+        </section>
+    {/if}
+
+    <div class="row ep-home-prd-list">
+        <div class="e-space">
+            <h2><span class="line"><span>Новые поступления</span></span></h2>
+            {$products = $wa->shop->productSet("bestsellers")}
+            {if !empty($products)}
+            {include file="list-thumbs-zeus.html" products=$products}
+            {else}
+            {sprintf('[`In your store backend, drag some products into <strong>%s</strong> product list (which is in the left sidebar of the Products screen), and these products will be automatically published here — right on your storefront homepage.`]','promo')}
+            {/if}
+        </div>
+    </div>
+
+    {if $wa->block("shopinfo")}
+        <div class="row shop-info">
+            <div class="e-space">
+                {$wa->block("shopinfo")}
+            </div>
+        </div>
+    {/if}
+
+    {if $latest_posts = $wa->blog->posts()}
+    <div class="row news-box">
+        <div class="e-space">
+            <h2><span class="line"><span>Свежие новости</span></span></h2>
+            <div class="blog-box">
+                {foreach $latest_posts|@array_slice:0:4 as $post}
+                <div class="post">
+                    <div class="in">
+                    <div class="user-meta">
+                        {if $post.user.posts_link}
+                        <a href="{$post.user.posts_link}" class="username">{if isset($post.user.photo_url_20)}<img class="user-pic" src="{$post.user.photo_url_20}" alt="{$post.user.name}">{/if} {$post.user.name}</a>
+                        {else}
+                        <span class="username">{if isset($post.user.photo_url_20)}<img class="user-pic" src="{$post.user.photo_url_20}" alt="{$post.user.name}">{/if} {$post.user.name}</span>
+                        {/if}
+                        <span class="date">{$post.datetime|wa_datetime:"humandate"}</span>
+                    </div>
+
+                    <h3>
+                        <a href="{$post.link}">{$post.title}</a>
+                        {* @event prepare_posts_frontend.%plugin_id%.post_title *}
+                        {if !empty($post.plugins.post_title)}
+                        {foreach $post.plugins.post_title as $plugin => $output}{$output}{/foreach}
+                        {/if}
+                    </h3>
+                    <p>
+                        {$post.text|strip_tags|truncate:200}
+                    </p>
+                    <div class="credentials">
+
+                        {if !empty($post.thumb)}
+                        <div>
+                            <a href="{$post.link}">
+                                <img src="{$post.thumb}" alt="{$post.title}" />
+                            </a>
+                        </div>
+                        {/if}
+                    </div>
+                    </div>
+
+                </div>
+                {/foreach}
+            </div>
+        </div>
+    </div>
+    {/if}
+
+    <div class="row content-box" style="display: none">
+        <div class="e-space banner-box">
+            <div class="col-lg-7 center">
+                <i class="icon-heart"></i>
+                <h3>Вы полюбите эту Тему</h3>
+                <p>Шикарный дизайн, множество настроек, адаптивность и крутые фичи прямо из коробки. Узнай больше об Epika</p>
+                <button class="button">Узать больше</button>
+            </div>
+        </div>
+        <div class="e-space blog-box">
+
+        </div>
+        <div style="33%"><img style="width: 100%" src="http://epika.morbiplay.com/wa-data/public/photos/19/00/19/19.970.jpg" alt="" ></div>
+    </div>
+
+</div>
+

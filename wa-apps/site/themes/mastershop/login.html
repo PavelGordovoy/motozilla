@@ -1,0 +1,9 @@
+{strip}
+<div id="page" class="{if $wa->get('ajax')} js-ajax-form form--mini{/if}" role="main">
+    <h1 class="page-h1">[`Authorization`]</h1>
+    {if !$wa->get('ajax') && empty($without_form)}<div class="wrap-content">{/if}
+    {$wa->authAdapters()}
+    {$wa->loginForm($error, empty($without_form))}
+    {if !$wa->get('ajax') && empty($without_form)}</div>{/if}
+</div>
+{/strip}

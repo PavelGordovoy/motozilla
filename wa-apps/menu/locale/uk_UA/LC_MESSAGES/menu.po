@@ -1,0 +1,188 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: menu\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: menu\n"
+"Language-Team: menu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-10-20 15:31+0200\n"
+"PO-Revision-Date: \n"
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: uk_UA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Extended menu"
+msgstr "Розширене меню"
+
+msgid "This app allows you to create multiply different menus. You can use them at your website frontend."
+msgstr "Ця програма дозволяє створювати різні меню. Ви можете використовувати їх в інтерфейсі веб-сайту."
+
+msgid "If your theme doesn't support this app by default you will need some basics HTML skills."
+msgstr "Якщо ваша тема за замовчуванням не підтримує цю програму, вам знадобляться основні навички HTML."
+
+msgid "The next code can be used to get an array of menu items."
+msgstr "Наступний код можна використовувати для отримання масиву пунктів меню."
+
+msgid "Please note that <code><strong>$menu_id</strong></code> is a concrete menu ID (see \"Examples\" section below)."
+msgstr "Будь ласка, зверніть увагу, що<code><strong>$ menu_id</strong></code> - це конкретний ідентифікатор меню (див. розділ \\ \"Приклади \" нижче)."
+
+msgid "Next step is creating th HTML structure of your menu. The simplest way to do this is <code><a href=\"https://developers.webasyst.com/templates/smarty-plugins/#method-wa_print_tree\" target=\"_blank\">wa_print_tree</a></code> function:"
+msgstr "Наступним кроком є створення HTML-структури вашого меню. Найпростіший спосіб це зробити<code><a href=\"https://developers.webasyst.com/templates/smarty-plugins/#method-wa_print_tree\" target=\"_blank\">wa_print_tree</a></code> функція:"
+
+msgid "It will build folded UL-tags list structure."
+msgstr "Він створить складну структуру списку UL-тегів."
+
+msgid "A little more advanced way is to use Smarty <code><a href=\"https://www.smarty.net/docsv2/en/language.function.foreach.tpl\" target=\"_blank \">foreach</a></code> loops."
+msgstr "Трохи вдосконаленим способом є використання Smarty<code><a href=\"https://www.smarty.net/docsv2/en/language.function.foreach.tpl\" target=\"_blank \">для кожного</a></code> петлі."
+
+msgid "top level items loop"
+msgstr "цикл елементів верхнього рівня"
+
+msgid "render link"
+msgstr "відтворити посилання"
+
+msgid "the item ma have some children"
+msgstr "пункт має кілька дітей"
+
+msgid "second level items loop"
+msgstr "цикл предметів другого рівня"
+
+msgid "here can be some more children: {$child.childs} etc."
+msgstr "тут може бути ще кілька дітей: {$ child.childs} тощо."
+
+msgid "Cache"
+msgstr "Кеш"
+
+msgid "This app uses cache to reduce server load. You can change cache life time at the <a href=\"#/settings/\">settings page</a>."
+msgstr "Ця програма використовує кеш для зменшення навантаження сервера. Ви можете змінити час життя кешу на<a href=\"#/settings/\">сторінки налаштувань</a>."
+
+msgid "File cache is used by default. But you can change cache settings of your Webasyst follow by this guide:"
+msgstr "Кеш файлів використовується за замовчуванням. Але ви можете змінити налаштування кешу вашого Webasyst, дотримуючись цього посібника:"
+
+msgid "https://developers.webasyst.com/features/cache/"
+msgstr "https://developers.webasyst.com/features/cache/"
+
+msgid "Examples"
+msgstr "Приклади"
+
+msgid "You have no menus yet. Please use the link at the left sidebar to create a new one."
+msgstr "У вас ще немає меню. Будь ласка, використовуйте посилання на лівій бічній панелі, щоб створити нове."
+
+msgid "Select menu to render the structure."
+msgstr "Виберіть меню, щоб відтворити структуру."
+
+msgid "Name"
+msgstr "Ім'я"
+
+msgid "Type"
+msgstr "Тип"
+
+msgid "Enabled"
+msgstr "Увімкнено"
+
+msgid "delete"
+msgstr "видалити"
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "This will permanently delete item and all its sub-items without the ability to recover. Are you sure?"
+msgstr "Це призведе до остаточного видалення елемента та всіх його підпунктів без можливості відновлення. Ти впевнений?"
+
+msgid "settings"
+msgstr "налаштування"
+
+msgid "New item"
+msgstr "Новий елемент"
+
+msgid "Select menu item to change settings."
+msgstr "Виберіть пункт меню, щоб змінити налаштування."
+
+msgid "Copied"
+msgstr "Скопійовано"
+
+msgid "Icon"
+msgstr "Піктограма"
+
+msgid "Code"
+msgstr "Код"
+
+msgid "Result"
+msgstr "Результат"
+
+msgid "Menu not found"
+msgstr "Меню не знайдено"
+
+msgid "Settings"
+msgstr "Налаштування"
+
+msgid "Cache lifetime"
+msgstr "Термін служби кешу"
+
+msgid "Menu cache lifetime value (in seconds)."
+msgstr "Значення часу кешування меню (у секундах)."
+
+msgid "Backend menu sorting"
+msgstr "Сортування вихідного меню"
+
+msgid "Refresh page to apply this setting."
+msgstr "Оновити сторінку, щоб застосувати це налаштування."
+
+msgid "Info"
+msgstr "Інформація"
+
+msgid "filter menus"
+msgstr "меню фільтра"
+
+msgid "Add menu"
+msgstr "Додати меню"
+
+msgid "Item not found"
+msgstr "Елемент не знайдено"
+
+msgid "test"
+msgid_plural "tests"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Empty request."
+msgstr "Порожній запит."
+
+msgid "Item couldn't be inserted before itself"
+msgstr "Елемент не можна вставити перед собою"
+
+msgid "Item couldn't be parent of itself"
+msgstr "Елемент не може бути батьком сам по собі"
+
+msgid "Before item couldn't be parent item"
+msgstr "Раніше елемент не міг бути батьківським елементом"
+
+msgid "New menu"
+msgstr "Нове меню"
+
+msgid "New tab"
+msgstr "Нова вкладка"
+
+msgid "Current tab"
+msgstr "Поточна вкладка"
+
+msgid "Parent window"
+msgstr "Вікно батьків"
+
+msgid "Top frame"
+msgstr "Верхня рамка"
+
+msgid "Target"
+msgstr "Цільова"
+
+msgid "Simple link"
+msgstr "Просте посилання"
+
+msgid "Минск"
+msgstr "Мінськ"

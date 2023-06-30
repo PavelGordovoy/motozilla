@@ -1,0 +1,174 @@
+{strip}
+{$settings = $theme_settings_config}
+{$default_theme_settings = $theme_settings}
+{if $settings}
+    {foreach from=$theme_settings key=name item=setting}
+        {$cookieSettings = $wa->cookie($name)}
+        {if $cookieSettings && $cookieSettings != 'null'}
+            {$theme_settings.$name = $cookieSettings}
+        {/if}
+    {/foreach}
+
+    <a id="open-test-settings"  class="setting-button" href="#test-settings">
+        <i class="fa fa-cogs" aria-hidden="true"></i>
+    </a>
+    <div class="popup-content popup-content--settings mfp-hide" id="test-settings">
+        <form method="post" id="settings-form">
+            <div class="clearfix settings-header">
+                <div class="settings-head">[`Settings theme`]</div>
+
+                <div class="settings-save">
+                    <span class="js-clear-test-settings settings-save__clear link-action">[`Clear`]</span>
+                    <input type="submit" value="[`Save`]" />
+                </div>
+            </div>
+            <div class="settings_link-all">
+                [`The entire list of settings can be viewed`] <a class="ac-color bold" target="_blank" href="http://mastershop.skilbe.ru/wa-data/public/site/presentation/all_settings.png">[`at the link`]</a>
+            </div>
+            {$demo_settings_array = [
+                "color_scheme" => true,
+                "button_type" => true,
+                "base_bg_color" => true,
+                "base_bg_font_color" => true,
+                "base_font_color" => true,
+                "ac_bg_color" => true,
+                "ac_bg_color" => true,
+                "ac_bg_color_font" => true,
+                "ac_font_color" => true,
+                "font" => true,
+                "header_fixed_desktop" => true,
+                "bar_fixed_bottom_desktop" => true,
+                "bar_fixed_right_desktop" => true,
+                "is_horizontal_menu" => true,
+                "horizontal_main_menu_brand_submenu_type" => true,
+                "vertical_main_menu_brand_submenu_type" => true,
+                "homepage_sidebar_left" => true,
+                "homepage_sidebar_right" => true,
+                "homepage_slider_over_content" => true,
+                "homepage_main_menu_left_of_slider" => true,
+                "categories_mainpage_design" => true,
+                "product_gallery_previews" => true,
+                "product_card_type_main_content_desktop" => true,
+                "product_card_type_main_content_mobile" => true,
+                "show_product_discount" => true,
+                "show_product_badge_saving" => true,
+                "product_tile_display_fastorder" => true,
+                "cart_add_action_desktop" => true
+            ]}
+
+            {foreach $demo_settings_array as $key => $value}
+                {if isset($settings[$key])}
+                    {$setting = $settings[$key]}
+                    {$name = $key}
+                    {$show_setting = false}
+
+                    {if $setting.control_type == 'color' || $setting.control_type == 'radio' || $setting.control_type == 'select' || $setting.control_type == 'image_select' || $setting.control_type == 'checkbox' || $setting.control_type == 'group_divider' || $key == "homepage_sidebar_left" || $key == "homepage_sidebar_right"}
+                        {if !empty($demo_settings_array[$name])}
+                            {$show_setting = true}
+                        {/if}
+                    {/if}
+                    {if $show_setting}
+                        {if $name == 'color_scheme'}
+                            <div class="h3 bs-color">[`Decor`]</div>
+                        {else if $name == 'header_fixed_desktop'}
+                            <div class="h3 bs-color">[`Fixed panel`]</div>
+                        {else if $name == 'is_horizontal_menu'}
+                            <div class="h3 bs-color">[`Horizontal menu`]</div>
+                        {else if $name == 'vertical_main_menu_brand_submenu_type'}
+                            <div class="h3 bs-color">[`Vertical menu`]</div>
+                        {else if $name == 'homepage_sidebar_left'}
+                            <div class="h3 bs-color">[`Main page`]</div>
+                        {else if $name == 'product_gallery_previews'}
+                            <div class="h3 bs-color">[`Product page`]</div>
+                        {else if $name == 'product_tile_display_fastorder'}
+                            <div class="h3 bs-color">[`Product preview type of tile`]</div>
+                        {else if $name == 'cart_add_action'}
+                            <div class="h3 bs-color">[`Cart`]</div>
+                        {/if}
+                        {if $setting.control_type == 'checkbox'}
+                            <div class="setting-title">{$setting.name}</div>
+                            <div class="settings-list">
+                                <label>
+                                    <input type="checkbox" name="{$name}" value="1" {if $theme_settings[$name] == 1}checked{/if}>
+                                    [`Enable`]
+                                </label>
+                            </div>
+                        {elseif $key == "homepage_sidebar_left" || $key == "homepage_sidebar_right"}
+                            {if $key == "homepage_sidebar_right"}
+                                {$setting.value = "services,news,promo2,products2,pages_shop,photos,views,promo1,shop_plugins,shop_tags,products1"}
+                            {/if}
+                            <div class="setting-title">{$setting.name}</div>
+                            <div class="settings-list">
+                                <div class="settings__el">
+                                    <label class="label">
+                                        <input type="radio" name="{$key}" value="{$setting.value}" {if $theme_settings[$name] == $setting.value}checked{/if}>
+                                        <span class="label-text">[`Display`]</span>
+                                    </label>
+                                </div>
+                                <div class="settings__el">
+                                    <label class="label">
+                                        <input type="radio" name="{$key}" value="none" {if empty($theme_settings[$name]) || $theme_settings[$name] == "none"}checked{/if}>
+                                        <span class="label-text">[`Hide`]</span>
+                                    </label>
+                                </div>
+                            </div>
+                        {else}
+                            <div class="setting-title">{$setting.name}</div>
+                            <div class="settings-list">
+                                {if $setting.control_type == 'radio'}
+                                    {foreach from=$setting.options key=key item=option}
+                                        {if !$key|strstr:'_google_'}
+                                            <div class="settings__el">
+                                                <label class="label">
+                                                    <input type="radio" name="{$name}" value="{$key}" {if $theme_settings[$name] == $key}checked{/if}>
+                                                    <span class="label-text">{$option.name}</span>
+                                                </label>
+                                            </div>
+                                        {/if}
+                                    {/foreach}
+                                {elseif $setting.control_type == 'select'}
+                                    {foreach from=$setting.options key=key item=option}
+                                        {if !$key|strstr:'_google_'}
+                                            <div class="settings__el">
+                                                <label class="label">
+                                                    <input type="radio" name="{$name}" value="{$key}" {if $theme_settings[$name] == $key}checked{/if}>
+                                                    <span class="label-text">{$option}</span>
+                                                </label>
+                                            </div>
+                                        {/if}
+                                    {/foreach}
+                                {elseif $setting.control_type == 'color'}
+                                    <div class="settings__el">
+                                        <input data-empty="{empty($theme_settings[$name])}" class="js-color settings__el-color" type="text" id="setting_{$name}" name="{$name}" value="{if empty($theme_settings[$name])}#ffffff{else}{$theme_settings[$name]}{/if}" />
+                                        <span data-id="setting_{$name}" class="js-color-clear settings-clear icon-before">[`Clear`]</span>
+                                    </div>
+                                {elseif $setting.control_type == 'image_select'}
+                                    {foreach from=$setting.options key=key item=option}
+                                        {$html_class = str_replace('img/themesettings/','',str_replace('.png','',$key))}
+                                        {$is_active = ($theme_settings[$name] == $html_class)}
+                                        <div class="js-select-setting-color settings__el settings__el--color{if !empty($is_active)} selected{/if}" data-value="{$html_class}">
+                                                <img src="{$wa_theme_url}{$key}" alt="">
+                                        </div>
+                                    {/foreach}
+                                    <input class="js-setting-color" name="{$name}" value="{if isset($theme_settings[$name])}{$theme_settings[$name]}{/if}" type="hidden" />
+                                {/if}
+                            </div>
+                        {/if}
+                    {/if}
+                {/if}
+            {/foreach}
+            <div class="settings_link-all">
+                [`The entire list of settings can be viewed`] <a class="ac-color bold" target="_blank" href="http://mastershop.skilbe.ru/wa-data/public/site/presentation/all_settings.png">[`at the link`]</a>
+            </div>
+            <div class="clearfix settings-footer">
+                <a href="https://www.webasyst.ru/store/theme/mastershop/" target="_blank" class="button button--acc buy-theme">[`Buy theme`]</a>
+
+                <div class="settings-save">
+                    <span class="js-clear-test-settings settings-save__clear link-action">[`Clear`]</span>
+                    <input type="submit" value="[`Save`]" />
+                </div>
+            </div>
+        </form>
+    </div>
+{/if}
+{/strip}

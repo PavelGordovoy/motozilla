@@ -1,0 +1,55 @@
+{strip}
+
+{* BREADCRUMBS *}
+{$_breadcrumbs = []}
+{if empty($breadcrumbs)}{$breadcrumbs = []}{/if}
+{$_is_main_page = ( $wa->currentUrl() == $wa_app_url )}
+{$_is_personal_area = ( $wa->currentUrl() == $wa->getUrl('/frontend/my') )}
+ 
+{if !($_is_main_page || $_is_personal_area)}
+    {$_breadcrumbs[] = [
+        "url" => $wa_app_url,
+        "name" =>  "[`Home`]"]
+    }
+    {$_breadcrumbs = array_merge($_breadcrumbs,$breadcrumbs)}
+{/if}
+ 
+{if !empty($_breadcrumbs)}
+    <div class="col-xs-12">
+        <div class="s-breadcrumbs-wrapper">
+            <ul class="s-breadcrumbs-block" itemprop="breadcrumb">
+                {foreach $_breadcrumbs as $breadcrumb}
+                    {if !empty($breadcrumb)}
+                        <li class="s-breadcrumb-item">
+                            <a class="s-breadcrumb-link" href="{$breadcrumb.url}">{$breadcrumb.name|escape}</a>{if !$breadcrumb@last}<span class="separator">-</span>{/if}
+                        </li>
+                    {/if}
+                {/foreach}
+                {if $action=='product' && empty($error_code)}
+                    <li class="s-breadcrumb-item">
+                        <span class="separator">-</span><span class="s-breadcrumb-link">{$product.name|escape}</span>
+                    </li>
+                {/if}
+                {if $action=='category' && empty($error_code)}
+                    <li class="s-breadcrumb-item">
+                        <span class="separator">-</span><span class="s-breadcrumb-link">{$category.name|escape}</span>
+                    </li>
+                {/if}
+                {if $action=='page' && empty($error_code)}
+                    <li class="s-breadcrumb-item">
+                        <span class="separator">-</span><span class="s-breadcrumb-link">{$page.name|escape}</span>
+                    </li>
+                {/if}
+                {if $action=='brand' && empty($error_code)}
+                    <li class="s-breadcrumb-item">
+                        <span class="separator">-</span><span class="s-breadcrumb-link">{$brand.name|escape}</span>
+                    </li>
+                {/if}
+            </ul>
+        </div>
+    </div>
+    
+    <div class="clearfix"></div>
+{/if}
+ 
+{/strip}

@@ -1,0 +1,148 @@
+<div class="content" id="c-core">
+    <div class="block not-padded c-core-content shadowed" id="content">
+        <div class="block">
+            <h1><a href="#/langpack/">[`Language packs`]</a>
+            {if $selected}
+                -> {$packs.$selected.name|escape}
+                {/if}
+            </h1>
+            <span class="float-right"><a href="#" id="langpack-create"><i class="icon16 stack"></i>[`For developers`]</a></span>
+            {if $selected}
+                <table class="zebra">
+                    <thead>
+                        <tr>
+                            <th>[`Name`]</th>
+                            <th>[`Version`]</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {foreach $data.apps as $app=>$slug}
+                            <tr data-id="{$app}">
+                                <td>{$slug.name|escape|default:$app}</td>
+                                <td>
+                                    <strong>{$slug.version}</strong>
+                                    {if !$slug.status}
+                                        <span class="hint">[`Your current version is`] {$slug.installed_version}</span>
+                                    {/if}
+                                </td>
+                                <td><i class="icon16 yes"></i></td>
+                            </tr>
+                            {foreach ['plugins', 'widgets', 'payment', 'shipping'] as $key}
+                                {if isset($slug[$key])}
+                                    {foreach $slug[$key] as $pkey=>$plugin}
+                                        <tr data-id="{$app}/{$key}/{$pkey}">
+                                            <td><i class="icon16 export"></i>{$plugin.name|default:$pkey|escape}</td>
+                                            <td>
+                                                <strong>{$plugin.version}</strong>
+                                                {if !$plugin.status}
+                                                    <span class="hint">[`Your current version is`] {$plugin.installed_version}</span>
+                                                {/if}
+                                            </td>
+                                            <td><i class="icon16 yes"></i></td>
+                                        </tr>
+                                    {/foreach}
+                                {/if}
+                            {/foreach}
+                        {/foreach}
+                    </tbody>
+                </table>
+            {else}
+                {if $packs}
+                    <table class="zebra">
+                        <thead>
+                        <tr>
+                            <th>[`Name`]</th>
+                            <th>[`Language`]</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            {foreach $packs as $pack}
+                            <tr data-id="{$pack.id}">
+                                <td><a href="#/langpack/{$pack.id}">{$pack.name|escape}({$pack.id|default:''})</a><b>{$pack.version|escape}</b></td>
+                                <td>{$locales[$pack.language]|default:$pack.language|escape}</td>
+                                <td>
+                                    <button class="button green langpack-install">[`Install`]</button>
+                                </td>
+                            </tr>
+                            {/foreach}
+                        </tbody>
+                    </table>
+                {else}
+                    <h3>[`There are no language packs installed.`]</h3><br>
+                    <p>
+                        <!--Load only langpacks-->
+                        <a href="{$wa_backend_url}installer/store/app/mylang/plugins/">[`Install new plugins from the Webasyst Store using the Installer app`].</a>
+                    </p>
+                {/if}
+            {/if}
+            <p><a href="#" id="showplugins">[`Show other plugins`]</a></p>
+            <div id="plugins"></div>
+            <div class="clear-left"></div>
+        </div>
+    </div>
+</div>
+
+<div class="width500px height250px hidden" id="dialog-langpack-create">
+    {$wa->csrf()}
+    <p>[`Select locale to generate export files:`]</p>
+    {html_options name="locale" options=$locales}
+    <div class="clear-both"><p></p></div>
+    <div id="langpack-ready"></div>
+</div>
+
+<div class="width500px height250px hidden" id="dialog-langpack-install">
+    {$wa->csrf()}
+    <p>[`By default langpack will replace all supported:`]</p>
+    {*<label><input type="checkbox" name="langpack-installmissing" value="1"/>[`Only missing`]</label> TODO:*}
+    <div id="langpack-install-ready"></div>
+    <div class="clear-both"><p></p></div>
+</div>
+
+<script>
+    /*global $*/
+    $.langpack = {
+        install:function(id) {
+            $.post('?module=backend&action=install_langpack', { 'langpack':id}, function (request) {
+                $('#langpack-install-ready').html(request.data);
+                }, 'json');
+        },
+    };
+
+    $('#langpack-create').on('click', function(e){
+        e.preventDefault();
+        $('#dialog-langpack-create').waDialog({
+            'title':"[`Create data for langpack`]",
+            'buttons': '<input type="submit" class="button green" id="langpack-create-button"/ value="[`Create pack`]"><button class="button cancel red float-right">[`Close`]</button>',
+            onSubmit: function (d) {
+                e.preventDefault();
+                var fields = $(this).serialize();
+                $.post('?module=backend&action=create_langpack', fields, function (request) {
+                    $('#langpack-ready').html(request.data.stat);
+                }, 'json');
+                return false;
+            }
+        });
+    });
+    $('.langpack-install').on('click', function(e) {
+        e.preventDefault();
+        var langpack = $(this).closest('tr').data('id');
+        $('#dialog-langpack-install').waDialog({
+            'title': "[`Install langpack`]",
+            'buttons': '<input type="submit" class="button green" id="langpack-create-button"/ value="[`Install`]"><button class="button cancel red float-right">[`Close`]</button>',
+            onSubmit: function (d) {
+                e.preventDefault();
+                $.langpack.install(langpack);
+                setTimeout(function() {
+                    d.trigger('close');
+                }, 2000);
+                return false;
+            }
+        });
+    });
+    $('#showplugins').on('click', function(e){
+        e.preventDefault();
+        $('#plugins').load(backend_url+'installer/?module=plugins&action=view&slug=mylang');
+    });
+</script>

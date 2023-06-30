@@ -1,0 +1,27 @@
+{strip}
+{if method_exists($wa->shop, 'checkout')}
+    {$cartUrl = $wa->shop->checkout()->cartUrl()}
+{else}
+    {$cartUrl = $wa->getUrl('shop/frontend/cart')}
+{/if}
+
+<div id="popup-addcart" class="popup-content popup-addcart mfp-hide">
+    <div class="popup-addcart__head">
+        [`Product added to cart!`]
+    </div>
+
+    <div class="popup-addcart__product">
+        <div class="popup-addcart__image js-popup-addcart-image"></div>
+        <div class="popup-addcart__content">
+            <div class="popup-addcart__name js-popup-addcart-name"></div>
+            <span class="popup-addcart__price js-popup-addcart-price"></span>
+            <span class="popup-addcart__count js-popup-addcart-count"></span>
+        </div>
+    </div>
+
+    <div class="popup-addcart__buttons">
+        <span class="link-action popup-addcart__continue js-close-popup-addcart">[`Continue shopping`]</span>
+        <a class="popup-addcart__checkout button" href="{$cartUrl}">[`Checkout`]</a>
+    </div>
+</div>
+{/strip}

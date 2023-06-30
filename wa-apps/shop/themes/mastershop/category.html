@@ -1,0 +1,133 @@
+{strip}
+{$cols = 1}
+{$sidebar_left = false}
+{$sidebar_right = false}
+{$is_mobile = ($wa->isMobile() && ($wa->cookie("is_desktop_for_mobile") != 1 || !$theme_settings.switch_version))}
+
+{if !$is_mobile}
+    {if !$products && empty($filters)}
+        {$sidebar_left = $theme_settings.category_empty_sidebar_left}
+        {$sidebar_right = $theme_settings.category_empty_sidebar_right}
+    {else}
+        {$sidebar_left = $theme_settings.category_sidebar_left}
+        {$sidebar_right = $theme_settings.category_sidebar_right}
+    {/if}
+
+    {if $sidebar_left == 'shop_filters' && empty($filters)}{$sidebar_left = null}{/if}
+    {if $sidebar_right == 'shop_filters' && empty($filters)}{$sidebar_right = null}{/if}
+
+    {* переопределение настроек сайдбара индивидуально для категории *}
+    {if isset($category.params.category_sidebar_left)}{$sidebar_left = $category.params.category_sidebar_left}{/if}
+    {if isset($category.params.category_sidebar_right)}{$sidebar_right = $category.params.category_sidebar_right}{/if}
+{/if}
+
+{if $sidebar_left}{$cols = $cols + 1}{/if}
+{if $sidebar_right}{$cols = $cols + 1}{/if}
+
+{$content_cols_class_align = ""}
+{if $sidebar_left}{$content_cols_class_align = " flex-align-r"}{/if}
+{if $sidebar_right}{$content_cols_class_align = " flex-align-l"}{/if}
+{if $sidebar_right && $sidebar_left}{$content_cols_class_align = " flex-align-c"}{/if}
+
+{* categories images *}
+{if class_exists('shopSkcatimagePlugin')}
+    {$skImages = shopSkcatimageHelper::getImages()}
+{elseif class_exists('shopWmimageincatPlugin')}
+    {$Wmimages = shopWmimageincatPlugin::getCategoryImageObj()}
+{/if}
+{$is_select_count_pages = $theme_settings.select_count_pages}
+{$category_name = $category.name|escape}{if !empty($category.params.h1)}{$category_name = $category.params.h1|escape}{/if}
+<div data-count="{$cols}" class="js-content-cols content-cols cols-{$cols}{$content_cols_class_align}">
+    <div class="content {if $sidebar_left} with-sidebar-l{/if}{if $sidebar_right} with-sidebar-r{/if}">
+        {$is_main_menu_button = !$wa->isMobile() && $theme_settings.category_main_menu_button_head}
+        {if !$products && empty($filters)}{$is_main_menu_button = !$wa->isMobile() && $theme_settings.category_empty_main_menu_button_head}{/if}
+        {* переопределение настроек кнопки на каталог в загаловке индивидуально для категории *}
+        {if isset($category.params.category_main_menu_button_head)}{$is_main_menu_button = !$wa->isMobile() && $category.params.category_main_menu_button_head}{/if}
+
+        {if $is_main_menu_button && !$sidebar_left}
+            <div class="content-head">
+                {* main menu *}
+                {include file="`$wa_parent_theme_path`/vertical.main.menu.html" is_close=true}
+                <div class="content-head__title">
+                    {* breadcrumbs *}
+                    {include file="`$wa_parent_theme_path`/breadcrumbs.html" is_category_subcategories=$theme_settings.breadcrumbs_subcategories last=['name' => $category_name, 'url' => $wa->currentUrl(false, true)] inline}
+
+                    {* title *}
+                    <h1 class="category-name">{$category_name}</h1>
+                </div>
+            </div>
+        {else}
+            {* breadcrumbs *}
+            {include file="`$wa_parent_theme_path`/breadcrumbs.html" is_category_subcategories=$theme_settings.breadcrumbs_subcategories last=['name' => $category_name, 'url' => $wa->currentUrl(false, true)] inline}
+            <h1 class="category-name">{$category_name}</h1>
+        {/if}
+
+        <!-- plugin hook: 'frontend_category' -->
+        {* @event frontend_category.%plugin_id% *}
+        {foreach $frontend_category as $_}{$_}{/foreach}
+
+        {* banner *}
+        {include file="./category.banner.html" inline}
+
+        {* description *}
+        {if !$theme_settings.is_category_desc_bottom && (empty($theme_settings.is_category_desc_first_page) || (!empty($theme_settings.is_category_desc_first_page) && $wa->get("page") == 1 || empty($wa->get("page"))))}
+            {include file="./category.description.html" description=$category.description inline}
+        {/if}
+
+        {* subcategories *}
+        {include file="./category.subcategories.html" categories=$category.subcategories inline}
+
+
+        {* filter *}
+        {if $theme_settings.test_settings && !empty($wa->cookie('horizontal_filter'))}{$theme_settings.horizontal_filter = $wa->cookie('horizontal_filter')}{/if}
+        {if $theme_settings.horizontal_filter == 1}
+            {include file="./horizontal.filter.html" categories=$category.subcategories inline}
+        {/if}
+
+        {if !empty($filters)}
+            <div class="m-filters-open{if $wa->isMobile()} show-mobile{/if} js-btn-open-filter">
+                <i class="m-filters-open__icon far fa-sliders-h"></i>
+                [`Selection by parameters`]
+                <i class="m-filters-open__caret fal fa-chevron-right"></i>
+            </div>
+        {/if}
+
+        <div id="product-list" >
+            {if !$products}
+                {* selected filters *}
+                {if $theme_settings.filter_selected}{include file="category.select-filters.html"}{/if}
+
+                {if !empty($filters)}
+                    [`No products were found.`]
+                {else if empty($category.subcategories)}
+                    [`This category does not contain any products.`]
+                {/if}
+            {else}
+                {* переопределение настроек вида превью товаров индивидуально для категории *}
+                {if isset($category.params.mobile_product_preview_type_default)}{$theme_settings.mobile_product_preview_type_default = $category.params.mobile_product_preview_type_default}{/if}
+                {if isset($category.params.mobile_preview_product_switch)}{$theme_settings.mobile_preview_product_switch = $category.params.mobile_preview_product_switch}{/if}
+                {if isset($category.params.desktop_product_preview_type_default)}{$theme_settings.desktop_product_preview_type_default = $category.params.desktop_product_preview_type_default}{/if}
+                {if isset($category.params.desktop_preview_product_switch)}{$theme_settings.desktop_preview_product_switch = $category.params.desktop_preview_product_switch}{/if}
+
+                {if $is_mobile}
+                    {$product_preview_view = $theme_settings.mobile_product_preview_type_default}
+                    {$switch_view = $theme_settings.mobile_preview_product_switch}
+                {else}
+                    {$product_preview_view = $theme_settings.desktop_product_preview_type_default}
+                    {$switch_view = $theme_settings.desktop_preview_product_switch}
+                {/if}
+                {include file='list-thumbs.html' is_category=true is_select_count_pages=$is_select_count_pages switch_view=$switch_view product_preview_view=$product_preview_view sorting=!empty($category.params.enable_sorting )}
+            {/if}
+        </div>
+
+        {* description *}
+        {if $theme_settings.is_category_desc_bottom && (empty($theme_settings.is_category_desc_first_page) || (!empty($theme_settings.is_category_desc_first_page) && $wa->get("page") == 1 || empty($wa->get("page"))))}
+            {include file="./category.description.html" description=$category.description inline}
+        {/if}
+    </div>
+
+    {* sidebars *}
+    {if $sidebar_left}{include file="./sidebar.left.html" blocks=$sidebar_left inline}{/if}
+    {if $sidebar_right}{include file="./sidebar.right.html" blocks=$sidebar_right inline}{/if}
+</div>
+{/strip}

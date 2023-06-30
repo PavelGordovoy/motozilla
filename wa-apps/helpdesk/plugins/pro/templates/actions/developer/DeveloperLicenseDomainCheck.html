@@ -1,0 +1,50 @@
+{function name='build_product'}
+    <tr>
+        <td>{if isset($products[$product.product])}{$products[$product.product]|escape}{else}{$product.product|escape}{/if}</td>
+        <td>{$product.create_datetime|wa_date:'humandatetime'}</td>
+        <td>{$product.inst_datetime|wa_date:'humandatetime'}</td>
+        <td><a href="javascript:void(0)" class="js-order-check" data-order-id="{$product.order_id}" data-domain="{$wa->post('domain')|escape}" data-product="{$wa->post('product')|escape}">{$product.order_id}</a></td>
+        <td>{if $product.leasing}<i class="icon16 status-green"></i>{/if}</td>
+    </tr>
+{/function}
+
+{if !empty($all_data.is_cloud)}<div class="margin-block"><i class="icon16 globe-small"></i> [`Cloud website`]</div>{/if}
+
+{if !empty($all_data)}
+    {foreach $all_data.developer as $k => $data}
+
+        {if $all_data.developer|count > 1}
+            <div class="block bold">
+                [`Developer ID`]: {$developer_ids[$k]}
+            </div>
+        {/if}
+
+        {if $data.status !== 'ok' || empty($data.data)}
+            <div class="block attention">
+                [`Licenses not found`]
+            </div>
+        {elseif !empty($data.data)}
+            <table class="zebra">
+                <thead>
+                    <tr>
+                        <th>[`Product`]</th>
+                        <th>[`Create datetime`]</th>
+                        <th>[`Install datetime`]</th>
+                        <th>[`Order number`]</th>
+                        <th class='min-width'>[`Leasing`]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {if isset($data.data[0])}
+                        {foreach $data.data as $d}
+                            {build_product product=$d}
+                        {/foreach}
+                    {else}
+                        {build_product product=$data.data}
+                    {/if}
+                </tbody>
+            </table>
+        {/if}
+
+    {/foreach}
+{/if}

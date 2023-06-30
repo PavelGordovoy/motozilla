@@ -1,0 +1,1460 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst Installer 2.4.2.651 UA translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-05-11 17:22+0400\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Plugin <a href=\"%s\">%s</a>"
+msgstr "Плагін «<a href=\"%s\">%s</a>»"
+
+msgid "Theme <a href=\"%s\">%s</a>"
+msgstr "Тема дизайну «<a href=\"%s\">%s</a>»"
+
+msgid "Widget <a href=\"%s\">%s</a>"
+msgstr "Віджет «<a href=\"%s\">%s</a>»"
+
+msgid "Plugin \"<strong>%s</strong>\""
+msgstr "Плагін «<strong>%s</strong>»"
+
+msgid "Paused"
+msgstr "Вимкнений"
+
+msgid "System requirements not met:"
+msgstr "Системні вимоги не виконано:"
+
+msgid "Resume"
+msgstr "Увімкнути"
+
+msgid "Pause"
+msgstr "Вимкнути"
+
+msgid "This will delete application source code and data without the ability to recover. Are you sure?"
+msgstr "Це повністю видалить код і дані додатка без можливості відновлення. Ви впевнені?"
+
+msgid "Delete"
+msgstr "Видалити"
+
+msgid "Application"
+msgstr "Додаток"
+
+msgid "Version"
+msgstr "Версія"
+
+msgid "Assets"
+msgstr "Активи"
+
+msgid "No widgets were found."
+msgstr "Віджети не знайдені."
+
+msgid "Widgets"
+msgstr "Віджети"
+
+msgid "New version!"
+msgstr "Нова версія!"
+
+msgid "Free"
+msgstr "Безкоштовні"
+
+msgid "or"
+msgstr "або"
+
+msgid "%s/mo"
+msgstr "%s/місяць"
+
+msgid "Not licensed"
+msgstr "Немає ліцензії"
+
+msgid "Paid until %s"
+msgstr "Сплачено до %s"
+
+msgid "Licensed"
+msgstr "Ліцензовано"
+
+msgid "Installed"
+msgstr "Встановлено"
+
+msgid "All widgets"
+msgstr "Усі віджети"
+
+msgid "List"
+msgstr "Список"
+
+msgid "Plugin not found"
+msgstr "Плагін не знайдено"
+
+msgid "Renew license"
+msgstr "Продовжити ліцензію"
+
+msgid "License for using %s on <strong>%s</strong> has expired on %s"
+msgstr "Ліцензія на використання «%s» на домені <strong>%s</strong> закінчилася %s"
+
+msgid "Link license"
+msgstr "Підключити ліцензію"
+
+msgid "Installation and usage of %s widget on <strong>%s</strong> is not licensed. Updates are disabled. Buy a new license or link your existing %s widget license to this Webasyst installation."
+msgstr "Установка і використання віджета «%s» на домені <strong>%s </strong> не ліцензована. Можливість установки оновлень відключена. Отримайте ліцензію для продовження використання віджету."
+
+msgid "Install update"
+msgstr "Оновити"
+
+msgid "A newer version of %s <strong>%s</strong> is available for installation (your current version is %s)."
+msgstr "Нова версія %s <strong>%s</strong> доступна для встановлення (зараз встановлена версія %s)."
+
+msgid "View release notes"
+msgstr "Переглянути нотатки оновлення"
+
+msgid "This application cannot be updated"
+msgstr "Додаток не може бути оновлено"
+
+msgid "This widget will be updated automatically when you update %s app."
+msgstr "Віджет буде оновлено автоматично при установці оновлення програми «%s»."
+
+msgid "This is a licensed installation of %s on %s. License is valid through <strong>%s</strong>."
+msgstr "Це ліцензійна установка «%s» на домені %s. Ліцензія дійсна до <strong>%s</strong>."
+
+msgid "Extend license"
+msgstr "Продовжити ліцензію"
+
+msgid "This is a valid licensed installation of %s on <strong>%s</strong>."
+msgstr "Ліцензійна установка «%s» на домені <strong>%s</strong>."
+
+msgid "Buy more licenses"
+msgstr "Купити ще ліцензію"
+
+msgid "Additional licenses are required if you are using %s on more than one domain name (<a href='%s' target='_blank'>one license per domain</a>)."
+msgstr "Придбання додаткових ліцензій потрібно, якщо ви використовуєте «%s» більш ніж на одному доменному імені (<a href=&#39;%s&#39; target=&#39;_blank&#39;>одна ліцензія на домен</a>)."
+
+msgid "http://www.webasyst.com/help/1200/paid-app-licensing/"
+msgstr "http://www.webasyst.ru/help/1199/paid-app-licensing/"
+
+msgid "Write a review"
+msgstr "Написати відгук"
+
+msgid "You have the latest version of %s installed: <strong>%s</strong>"
+msgstr "Встановлена остання версія «%s»: <strong>%s</strong>"
+
+msgid "Buy & Install"
+msgstr "Придбати і встановити"
+
+msgid "%s will be automatically downloaded from Webasyst Store and installed immediately after you make payment."
+msgstr "Завантаження і установка «%s» будуть проведені автоматично відразу після оплати."
+
+msgid "If you already have a license, click the button above to link it to this Webasyst installation."
+msgstr "Якщо у вас вже є придбана ліцензія, натисніть на кнопку вище, щоб підключити ліцензію до цієї установки Webasyst."
+
+msgid "Install"
+msgstr "Встановити"
+
+msgid "%s will be downloaded from Webasyst Store and installed automatically."
+msgstr "Завантаження і установку «%s» буде проведено автоматично."
+
+msgid "This application cannot be installed"
+msgstr "Додаток не може бути встановлено"
+
+msgid "Price"
+msgstr "Ціна"
+
+msgid "License"
+msgstr "Ліцензія"
+
+msgid "Commercial"
+msgstr "Комерційна"
+
+msgid "View"
+msgstr "Переглянути"
+
+msgid "%s end user license agreement"
+msgstr "Ліцензійна угода на використання «%s»"
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "No license"
+msgstr "Без ліцензії"
+
+msgid "Developer"
+msgstr "Розробник"
+
+msgid "Updated"
+msgstr "Оновлено"
+
+msgid "Size"
+msgstr "Розмір"
+
+msgid "B,KB,MB"
+msgstr "Б,КБ,МБ"
+
+msgid "Delete this widget"
+msgstr "Видалити віджет"
+
+msgid "Overview"
+msgstr "Огляд"
+
+msgid "Reviews"
+msgstr "Відгуки"
+
+msgid "Install all updates"
+msgstr "Встановити всі оновлення"
+
+msgid "All apps are up to date."
+msgstr "Встановлено останню версію всіх додатків."
+
+msgid "Webasyst Framework version <strong>%s</strong>"
+msgstr "Версія Webasyst - <strong>%s</ strong>"
+
+msgid "Preparing"
+msgstr "Підготовка до встановлення"
+
+msgid "Creating backup"
+msgstr "Резервне копіювання"
+
+msgid "Downloading new version"
+msgstr "Завантаження нової версії"
+
+msgid "Extracting downloaded files"
+msgstr "Розпакування файлів"
+
+msgid "Replacing files"
+msgstr "Заміна файлів оновленими"
+
+msgid "Cleaning up"
+msgstr "Видалення тимчасових файлів"
+
+msgid "Update"
+msgstr "Оновити"
+
+msgid "Resuming"
+msgstr "Поновлення"
+
+msgid "Standing by"
+msgstr "Очікування"
+
+msgid "Error occurred"
+msgstr "Виникла помилка"
+
+msgid "\"%s\""
+msgstr "«%s»"
+
+msgid "An error occurred during installation"
+msgstr "При установці сталася помилка"
+
+msgid "Finalizing the installation and redirecting back to the app..."
+msgstr "Завершення установки і перенаправлення назад в додаток ..."
+
+msgid "Gathering information about available updates..."
+msgstr "Збір інформації про доступні оновлення ..."
+
+msgid "Applications were successfully installed"
+msgstr "Додатки успішно встановлено"
+
+msgid "Installation completed"
+msgstr "Установка завершена"
+
+msgid "Download installation log"
+msgstr "Завантажити журнал установки"
+
+msgid "Current version"
+msgstr "Поточна версія"
+
+msgid "New version"
+msgstr "Нова версія"
+
+msgid "Installing the application"
+msgid_plural "Installing applications"
+msgstr[0] "Установка додатку"
+msgstr[1] "Установка додатків"
+msgstr[2] "Установка додатків"
+
+msgid "application successfully installed"
+msgid_plural "applications successfully installed"
+msgstr[0] "додаток успішно встановлено"
+msgstr[1] "додатки успішно встановлено"
+msgstr[2] "додатків успішно встановлено"
+
+msgid "application failed to install"
+msgid_plural "applications failed to install"
+msgstr[0] "додаток не встановлено"
+msgstr[1] "додатки не встановлено"
+msgstr[2] "додатків не встановлено"
+
+msgid "Theme \"<strong>%s</strong>\""
+msgstr "Тема дизайну «<strong>%s</strong>»"
+
+msgid "Widget \"<strong>%s</strong>\""
+msgstr "Віджет «<strong>%s</strong>»"
+
+msgid "Your current version is %s."
+msgstr "Встановлена версія: %s."
+
+msgid "more"
+msgstr "ще"
+
+msgid "To get the update, you need to have separate %s app license for every individual domain the app is used on: %s"
+msgstr "Для отримання оновлення необхідно мати окрему ліцензію додатку «%s»  для кожного домену, на якому цей додаток використовується: %s"
+
+msgid "License for this app is either expired or not valid for this domain (%s)"
+msgstr "Ліцензія для цього додатку або закінчилася, або недійсна для даного домена (%s)"
+
+msgid "Get license"
+msgstr "Отримати ліцензію"
+
+msgid "Apps by %s"
+msgstr "Додатки, розроблені %s"
+
+msgid "Recommended apps"
+msgstr "Рекомендовані додатки"
+
+msgid "See all"
+msgstr "Дивитись усі"
+
+msgid "Recommended themes"
+msgstr "Рекомендовані теми дизайну"
+
+msgid "Recommended plugins"
+msgstr "Рекомендовані плагіни"
+
+msgid "Recommended widgets"
+msgstr "Рекомендовані віджети"
+
+msgid "Featured"
+msgstr "Рекомендуємо"
+
+msgid "All themes"
+msgstr "Усі теми"
+
+msgid "Application not found"
+msgstr "Додаток не знайдено"
+
+msgid "Installation and usage of %s theme on <strong>%s</strong> is not licensed. Updates are disabled. Buy a new license or link your existing %s theme license to this Webasyst installation."
+msgstr "Установка і використання теми дизайну «%s» на домені <strong>%s </strong> не ліцензована. Можливість установки оновлень відключено. Купіть нову ліцензію або підключіть придбану раніше ліцензію теми дизайну «%s» до цієї установки Webasyst."
+
+msgid "View theme demo"
+msgstr "Подивитися демо-сайт теми дизайну"
+
+msgid "Delete this theme"
+msgstr "Видалити цю тему"
+
+msgid "Most popular"
+msgstr "Найпопулярніші"
+
+msgid "Paid"
+msgstr "Платні"
+
+msgid "Newest"
+msgstr "Найновіші"
+
+msgid "by %s"
+msgstr "розроблено %s"
+
+msgid "Universal themes"
+msgstr "Універсальні теми"
+
+msgid "No design theme enabled apps installed."
+msgstr "Не встановлено жодного додатку з підтримкою тем оформлення."
+
+msgid "No design themes were found."
+msgstr "Не знайдено жодної теми дизайну."
+
+msgid "Design themes are downloaded from webasyst.com website and installed in a single click."
+msgstr "Теми оформлення завантажуються з сайту webasyst.com і встановлюються одним кліком миші."
+
+msgid "Themes"
+msgstr "Теми дизайну"
+
+msgid "Theme “%s” is installed, but not used by any apps. To start using this theme, apply it in your Site app's Routing settings."
+msgstr "Тема  «%s» встановлена, але не використовується жодним додатком. Щоб підключити цю тему оформлення, виберіть її в налаштуваннях маршрутизації додатку «Сайт»."
+
+msgid "Theme %s is now in use on"
+msgstr "Тема «%s» використовується за адресою"
+
+msgid "Installed design themes"
+msgstr "Встановлені теми дизайну"
+
+msgid "No thumbnail available"
+msgstr "Попередній перегляд недоступний"
+
+msgid "In use"
+msgstr "Використовується"
+
+msgid "Not in use"
+msgstr "Не використовується"
+
+msgid "Get new themes from Webasyst Store"
+msgstr "Отримайте нові теми дизайну з магазину Webasyst"
+
+msgid "Install theme \"%s\" for the %s app?"
+msgstr "Встановити тему «%s» для додатку %s?"
+
+msgid "All"
+msgstr "Усі"
+
+msgid "Search"
+msgstr "Пошук"
+
+msgid "Plugins"
+msgstr "Плагіни"
+
+msgid "Filter by category"
+msgstr "Категорії"
+
+msgid "No plugin enabled apps are installed."
+msgstr "Не встановлено жодного додатку з підтримкою плагінів."
+
+msgid "No plugins were found."
+msgstr "Не знайдено жодного плагіну."
+
+msgid "All plugins"
+msgstr "Усі плагіни"
+
+msgid "Installation and usage of %s plugin on <strong>%s</strong> is not licensed. Updates are disabled. Buy a new license or link your existing %s plugin license to this Webasyst installation."
+msgstr "Установка і використання плагіна «%s» на домені <strong>%s</strong> не ліцензована. Можливість установки оновлень відключена. Купіть нову ліцензію або підключіть придбану раніше ліцензію плагіна «%s» до цієї установки Webasyst."
+
+msgid "Delete this plugin"
+msgstr "Видалити цей плагін"
+
+msgid "Popular plugins"
+msgstr "Популярні плагіни"
+
+msgid "The following list of plugins is automatically updated from the Webasyst Store. Click on a plugin to install."
+msgstr "Клікніть по плагінові, щоб автоматично завантажити та встановити його з магазину Webasyst."
+
+msgid "Or browse for all plugins in <a href=\"%s\">Installer</a> app."
+msgstr "Або перегляньте всі плагіни у додатку «<a href=\"%s\">Інсталлер</a>»."
+
+msgid "Install \"%s\" plugin?"
+msgstr "Встановити плагін «%s»?"
+
+msgid "Buy"
+msgstr "Придбати"
+
+msgid "Company name"
+msgstr "Назва компанії"
+
+msgid "Website address"
+msgstr "Адреса сайту"
+
+msgid "Default Webasyst interface language"
+msgstr "Мова інтерфейсу Вебасиста за замовчуванням"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Main account administrative email where system notification will be sent."
+msgstr "Основна електронна адреса адміністратора, на яку відправлятимуться системні повідомлення."
+
+msgid "Sender"
+msgstr "Відправник"
+
+msgid "Reply-To address for system email notifications sent by Webasyst."
+msgstr "Цю електронну адресу буде вказано в якості зворотної адреси в системних email-повідомленнях, що відправляються Вебасістом."
+
+msgid "User authentication"
+msgstr "Авторизація користувачів"
+
+msgid "Allow \"Remember me\" option in Webasyst authorization form"
+msgstr "Можна включити «Запам&#39;ятати мене» при вході в Вебасіст"
+
+msgid "Authorization form background image"
+msgstr "Фон форми авторизації"
+
+msgid "Delete authorization form background image?"
+msgstr "Видалити фонове зображення форми авторизації?"
+
+msgid "File not found"
+msgstr "Файл не знайдено"
+
+msgid ""
+"Stretch to fil\n"
+"screen\""
+msgstr "Розтягніть, аби заповнити екран"
+
+msgid "Localization"
+msgstr "Локалізація"
+
+msgid "Gettext (recommended)"
+msgstr "Gettext (рекомендується)"
+
+msgid "Developer mode"
+msgstr "Режим відладки (debug mode)"
+
+msgid "Recommended while development"
+msgstr "Режим відладки вимикає кешування і вмикає детальне відображення повідомлень про помилки. Рекомендується увімкнути при розробці додатків"
+
+msgid "Clear cache"
+msgstr "Очистити кеш"
+
+msgid "Webasyst version"
+msgstr "Версія Вебасиста"
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "Recommended"
+msgstr "Рекомендуємо"
+
+msgid "Best new apps"
+msgstr "Кращі нові додатки"
+
+msgid "Top Free & Paid"
+msgstr "Лідери продажу і завантажень"
+
+msgid "Apps"
+msgstr "Додатки"
+
+msgid "Your account status enables you to install %s for free!"
+msgstr "Статус вашого аккаунту дозволяє встановити «% s» безкоштовно!"
+
+msgid "All apps"
+msgstr "Усі додатки"
+
+msgid "or "
+msgstr "або "
+
+msgid "buy permanent license"
+msgstr "купити постійну ліцензію"
+
+msgid "Permanent license saves you money on your monthly bills (your monthly payment will be reduced by %s)."
+msgstr "Постійна ліцензія дозволяє заощадити на щомісячних платежах за хостинг (платіж зменшиться на %s)."
+
+msgid "Installation and usage of %s app on <strong>%s</strong> is not licensed. Updates are disabled. Buy a new license or link your existing %s license to this Webasyst installation."
+msgstr "Установка і використання «%s» на домені <strong>%s</strong> не ліцензовано. Можливість установки оновлень відключена. Придбайте нову ліцензію або підключіть придбану раніше ліцензію «%s» до цієї установки Webasyst."
+
+msgid "%s will be downloaded from Webasyst Store and installed for free. Once installed, you will be able either to pay for the app on a monthly basis or to buy a permanent license."
+msgstr "«%s» буде завантажено та встановлено безкоштовно. Після установки ви зможете користуватися додатком, оплачуючи вартість оренди щомісяця, або купивши постійну ліцензію."
+
+msgid "Demo"
+msgstr "Демо"
+
+msgid "Website"
+msgstr "Сайт"
+
+msgid "Delete this app"
+msgstr "Видалити цей додаток"
+
+msgid "Plugins for apps"
+msgstr "Плагіни для додатків"
+
+msgid "Manage apps"
+msgstr "Встановлено"
+
+msgid "Updates"
+msgstr "Оновлення"
+
+msgid "Settings"
+msgstr "Налаштування"
+
+msgid "Application plugin %s has been deleted"
+msgid_plural "Applications plugins %s have been deleted"
+msgstr[0] "Плагін для додатку «%s» видалено"
+msgstr[1] "Плагіни для додатків «%s» видалено"
+msgstr[2] "Плагінів для додатків «%s» видалено"
+
+msgid "Application theme %s has been deleted"
+msgid_plural "Applications themes %s have been deleted"
+msgstr[0] "Тему дизайну для додатку «%s» видалено"
+msgstr[1] "Теми дизайну для додатків «%s» видалені"
+msgstr[2] "Тем дизайну для додатків «%s» видалено"
+
+msgid "Application widget %s has been deleted"
+msgid_plural "Applications widgets %s have been deleted"
+msgstr[0] "Віджет для додатку «%s» відалено"
+msgstr[1] "Віджети для додатків «%s» видалено"
+msgstr[2] "Віджетів для додатків «%s» видалено"
+
+msgid "Unable to delete application's themes (developer version is on)"
+msgstr "Тему оформлення не видалено: у директорії є папка з назвою .svn або .git"
+
+msgid "Unable to delete application's plugins (developer version is on)"
+msgstr "Плагін не видалено: у директорії є папка з назвою .svn або .git"
+
+msgid "Unable to delete application's widgets (developer version is on)"
+msgstr "Віджет не видалено: у директорії є папка з назвою .svn або .git"
+
+msgid "Can not delete system application's themes \"%s\""
+msgstr "Неможливо видалити теми системних додатків «%s»"
+
+msgid "Can not delete system application's plugins \"%s\""
+msgstr "Неможливо видалити плагін «%s»"
+
+msgid "Can not delete system application's widgets \"%s\""
+msgstr "Неможливо видалити віджети системного додатку «%s»"
+
+msgid "Can not delete inbuilt application's widgets \"%s\""
+msgstr "Неможливо видалити вбудовані віджети додатку «%s»"
+
+msgid "Application themes not found"
+msgstr "Теми оформлення додатку не знайдено"
+
+msgid "Application plugins not found"
+msgstr "Плагіни додатку не знайдено"
+
+msgid "Installer"
+msgstr "Інсталлер"
+
+msgid "Webasyst Framework"
+msgstr "Фреймворк Вебасист"
+
+msgid "Widget not found"
+msgstr "Віджет не знайдено"
+
+msgid "Unable to install application (developer version is on)"
+msgstr "Неможливо встановити додаток (увімкнено режим розробки)"
+
+msgid "Please select items for update"
+msgstr "Оберіть продукти для оновлення"
+
+msgid "Update is already in progress. Please wait while previous update session is finished before starting update session again."
+msgstr "Оновлення вже запущено і ще не завершено. Будь ласка, дочекайтеся закінчення попереднього сеансу оновлення, перш ніж запускати його заново."
+
+msgid "Theme not found"
+msgstr "Тему не знайдено"
+
+msgid "Cache cleared"
+msgstr "Кеш очищено"
+
+msgid "But with errors:"
+msgstr "З помилками:"
+
+msgid "Settings saved"
+msgstr "Налаштування збережено"
+
+msgid "Image uploaded"
+msgstr "Зображення завантажене"
+
+msgid "Image deleted"
+msgstr "Фонове зображення видалено"
+
+msgid "Application \"%s\""
+msgstr "Додаток «%s»"
+
+msgid "Application %s has been deleted"
+msgid_plural "Applications %s have been deleted"
+msgstr[0] "Додаток «%s» видалено"
+msgstr[1] "Додатки «%s» видалено"
+msgstr[2] "Додатків «%s» видалено"
+
+msgid "Unable to delete application (developer version is on)"
+msgstr "Додаток не видалено: у директорії є папка з назвою .svn або .git"
+
+msgid "Can not delete system application \"%s\""
+msgstr "Неможливо видалити системний додаток «%s»"
+
+msgid "Application is disabled"
+msgstr "Додаток вимкнено"
+
+msgid "Application is enabled"
+msgstr "Додаток увімкнено"
+
+msgid "App can not be updated due to unresolved conflicts:"
+msgstr "Додаток не може бути оновлено у зв&#39;язку з невирішеними конфліктами:"
+
+msgid "Applications"
+msgstr "Додатки"
+
+msgid "Your website, blog or company URL (will be displayed as a link below the company name in the top left corner)."
+msgstr "Адреса вашого сайту або блогу (буде відображатися у вигляді посилання під назвою компанії в лівому верхньому кутові)."
+
+msgid "Login only"
+msgstr "Тільки логін"
+
+msgid "Login or email"
+msgstr "Логін або email"
+
+msgid "Stretch to fill entire screen"
+msgstr "Розтягнути зображення на весь екран"
+
+msgid "Update all"
+msgstr "Встановити усі оновлення"
+
+msgid "Update now"
+msgstr "Оновити"
+
+msgid "Latest version"
+msgstr "Остання версія"
+
+msgid "Updates are not available for this application."
+msgstr "Оновлення для цього додатку недоступні."
+
+msgid "View installation log"
+msgstr "Подивитися журнал установки"
+
+msgid "Please install updates for the proper verification requirements"
+msgstr "Встановіть оновлення для відповідності системним вимогам"
+
+msgid "extension %s has %s version but should be %s %s"
+msgstr "потрібна версія розширення «%1$s» %3$s %4$s (поточна версія — %2$s)"
+
+msgid "extension %s has %s version but recomended is %s %s"
+msgstr "рекомендується версія розширення «%1$s» %3$s %4$s (поточна версія — %2$s)"
+
+msgid "extension %s not loaded"
+msgstr "розширення «%s» не завантажене"
+
+msgid "PHP has version %s but should be %s %s"
+msgstr "Потрібна версія PHP %2$s %3$s, поточна версія %1$s"
+
+msgid "%s has %s version but should be %s %s"
+msgstr "Потрібні «%1$s» версії %3$s %4$s (поточна версія — %2$s)"
+
+msgid "%s has %s version but recomended is %s %s"
+msgstr "Рекомендовані «%1$s» версії %3$s %4$s (поточна версія — %2$s)"
+
+msgid "%s not installed"
+msgstr "Додаток «%s» не встановлено"
+
+msgid "%s should be writeable"
+msgstr "Файли (папки) %s повинні бути доступні для запису"
+
+msgid "%s is writeable"
+msgstr "Файли (папки) %s доступні для запису"
+
+msgid "server module loaded"
+msgstr "серверний модуль завантажено"
+
+msgid "server module not loaded"
+msgstr "серверний модуль не завантажено"
+
+msgid "not Apache server"
+msgstr "не Apache-сервер"
+
+msgid "CGI PHP mode"
+msgstr "PHP запущений в режимі CGI"
+
+msgid "PHP version"
+msgstr "Версія PHP"
+
+msgid "PHP extension %s"
+msgstr "Розширення PHP: %s"
+
+msgid "PHP setting %s"
+msgstr "Налаштування PHP: %s"
+
+msgid "Version of %s"
+msgstr "%s, версія"
+
+msgid "Files access rights"
+msgstr "Права доступу до файлів і директорій"
+
+msgid "Files checksum"
+msgstr "Контрольна сума файлів"
+
+msgid "Server module %s"
+msgstr "Модуль сервера: %s"
+
+msgid "Server software version"
+msgstr "Версія програмного забезпечення сервера"
+
+msgid "setting has value %s but should be %s"
+msgstr "необхідне значення %s (поточне значення — %s)"
+
+msgid "setting has value %s but recommended %s"
+msgstr "некомендоване значення %s (поточне значення — %s)"
+
+msgid "Application list is downloaded from webasyst.com website. Every application is installed in a single \"Install\" button click."
+msgstr "Список додатків, доступних для встановлення, завантажується з сайту webasyst.com. Встановлення програм виконується одним кліком по кнопці «Встановити»."
+
+msgid "All applications"
+msgstr "Усі додатки"
+
+msgid "Application will be downloaded from Webasyst server and added into your installation."
+msgstr "Додаток буде завантажено з сервера Вебасиста і встановлено автоматично."
+
+msgid "Update to version %s is available."
+msgstr "Доступне оновлення до версії %s."
+
+msgid "Application  %s has been installed"
+msgid_plural "Applications  %s have been installed"
+msgstr[0] "Додаток «%s» встановлено"
+msgstr[1] "Додатки «%s» встановлено"
+msgstr[2] "Додатків «%s» встановлено"
+
+msgid "<"
+msgstr "<"
+
+msgid "<="
+msgstr "<="
+
+msgid "="
+msgstr "="
+
+msgid ">"
+msgstr ">"
+
+msgid ">="
+msgstr ">="
+
+msgid "App plugin can not be installed due to unresolved conflicts:"
+msgstr "Плагін не може бути встановлено у зв&#39;язку з невирішеними конфліктами:"
+
+msgid "This will delete application plugin source code and data without the ability to recover. Are you sure?"
+msgstr "Це повністю видалить код і дані розширення без можливості відновлення. Ви впевнені?"
+
+msgid "There are no available plugins for the application"
+msgstr "Для цього додатку немає доступних плагінів"
+
+msgid "App theme can not be installed"
+msgstr "Тему оформлення не може бути встановлено"
+
+msgid "This will delete application theme code and data without the ability to recover. Are you sure?"
+msgstr "Це повністю видалить код і дані теми без можливості відновлення. Ви впевнені?"
+
+msgid "There are no available themes for the the application"
+msgstr "Для цього додатку немає доступних тем дизайну"
+
+msgid "Nothing to update"
+msgstr "Немає оновлень, доступних для встановлення"
+
+msgid "Updates are not available for this item."
+msgstr "Немає оновлень для обраного продукту."
+
+msgid "Checkup"
+msgstr "Перевірка"
+
+msgid "Plugins list is downloaded from webasyst.com website. Every plugin is installed in a single \"Install\" button click."
+msgstr "Список плагінів завантажується з сайту webasyst.com. Інсталяція починається автоматично при натисканні на кнопку «Встановити»."
+
+msgid "No applications with support for themes"
+msgstr "Не встановлено жодного додатку, що підтримує теми дизайну"
+
+msgid "Themes list is downloaded from webasyst.com website. Every application is installed in a single \"Install\" button click."
+msgstr "Список тем оформлення завантажується з сайту webasyst.com. Установка тем виконується автоматично при натисканні на кнопку «Встановити»."
+
+msgid "No applications with support for plugins"
+msgstr "Не встановлено жодного додатку, що підтримує плагіни"
+
+msgid "License expired or invalid"
+msgstr "Термін дії ліцензії закінчився, або ліцензія є недійсною"
+
+msgid "License is invalid"
+msgstr "Ліцензія недійсна"
+
+msgid "This application is not available for purchase"
+msgstr "Цей додаток недоступний для покупки"
+
+msgid "Buy for"
+msgstr "Придбати за"
+
+msgid "Payware"
+msgstr "Платний додаток"
+
+msgid "Correct license"
+msgstr "Вірний номер ліцензії"
+
+msgid "Renew for"
+msgstr "Продовжити на"
+
+msgid "Installer & system"
+msgstr "Інсталлер і ядро фреймворка"
+
+msgid "Plugins are downloaded from webasyst.com website and installed in a single click."
+msgstr "Плагіни завантажуються з сайту webasyst.com і встановлюються одним кліком."
+
+msgid "Design theme can not be installed"
+msgstr "Встановлення теми дизайну неможливе"
+
+msgid "This will delete this design theme templates and files without the ability to recover. Are you sure?"
+msgstr "Шаблони цієї теми дизайну буде видалено без можливості відновлення. Видалити?"
+
+msgid "No design themes are available for this application."
+msgstr "Для цього додатку немає доступних тем дизайну."
+
+msgid "This theme is not available for purchase"
+msgstr "Тема дизайну недоступна для придбання"
+
+msgid "Setup routing"
+msgstr "Налаштувати маршрутизацію"
+
+msgid "By app"
+msgstr "За додатком"
+
+msgid "By type"
+msgstr "За типом"
+
+msgid "Plugin \"%s\""
+msgstr "Плагін «%s»"
+
+msgid "Theme \"%s\""
+msgstr "Тема дизайну «%s»"
+
+msgid "Payment"
+msgstr "Платіжні системи"
+
+msgid "Shipping"
+msgstr "Доставка"
+
+msgid "SMS"
+msgstr "SMS"
+
+msgid "Update cannot be installed:"
+msgstr "Оновлення не може бути встановлено:"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Installed version"
+msgstr "Встановлена версія"
+
+msgid "Installation and usage of the %s app on <strong>%s</strong> is not licensed. Updates are disabled. License your installation by clicking the button above."
+msgstr "Встановлення і використання додатка «%s» на домені <strong>%s</strong> не ліцензоване. Можливість встановлення оновлень відключено. Отримайте ліцензію для продовження використання програми."
+
+msgid "for rent, first 30 days free"
+msgstr "в оренду, перші 30 днів безкоштовно"
+
+msgid "Webasyst License"
+msgstr "Ліцензія Webasyst"
+
+msgid "Installation and usage of the %s plugin on <strong>%s</strong> is not licensed. Updates are disabled. License your installation by clicking the button above."
+msgstr "Установка і використання плагіна «%s» на домені <strong>%s</strong> не ліцензовані. Можливість установки оновлень відключена. Отримайте ліцензію для продовження використання плагіна."
+
+msgid "All colors"
+msgstr "Усі кольори"
+
+msgid "Installation and usage of the %s theme on <strong>%s</strong> is not licensed. Updates are disabled. License your installation by clicking the button above."
+msgstr "Установка і використання теми дизайну «%s» на домені <strong>%s</strong>  не ліцензовані. Можливість установки оновлень відключено. Отримайте ліцензію для продовження використання теми."
+
+msgid "Editor’s choice"
+msgstr "Вибір редакції"
+
+msgid "Unable to update application (developer version is on)"
+msgstr "Неможливо оновити додаток (режим розробки)"
+
+msgid "Open"
+msgstr "Відкрити"
+
+msgid "Info"
+msgstr "Інформація"
+
+msgid "Plugin"
+msgstr "Плагін"
+
+msgid "Theme"
+msgstr "Тема"
+
+msgid "New!"
+msgstr "Новинка!"
+
+msgid "Popular!"
+msgstr "Хіт!"
+
+msgid "New themes from Webasyst Store"
+msgstr "Нові теми дизайну з магазину Webasyst"
+
+msgid "No widget enabled apps are installed."
+msgstr "Не встановлено жодного додатку з віджетами."
+
+msgid "Webasyst framework"
+msgstr "Фреймворк Webasyst"
+
+msgid "Actions"
+msgstr "Дії"
+
+msgid "Active"
+msgstr "Активні"
+
+msgid "Filter by app and type"
+msgstr "Фільтрувати за додатком і типом"
+
+msgid "This will delete the widget’s source code and settings without the recovery option. Delete the widget?"
+msgstr "Вихідний код віджету та його налаштування будуть видалені без можливості відновлення. Видалити віджет?"
+
+msgid "This will delete the design theme’s source code and settings without the recovery option. Delete the theme?"
+msgstr "Вихідний код теми дизайну та її налаштування будуть видалені без можливості відновлення. Видалити тему дизайну?"
+
+msgid "Proceed to theme settings →"
+msgstr "Перейти до налаштувань теми дизайну →"
+
+msgid "System settings"
+msgstr "Системні налаштування"
+
+msgid "Install <a href=\"%sinstaller/#/apps/site/\">Site app</a> to change system settings."
+msgstr "Встановіть <a href=\"%sinstaller/#/apps/site/\">додаток «Сайт»</a>, аби змінити системні налаштування."
+
+msgid "<a href=\"%s\">Change system settings in Site app</a>."
+msgstr "<a href=\"%s\">Змінюйте системні налаштування у додатку «Сайт»</a>."
+
+msgid "This will delete the plugin’s source code and settings without the recovery option. Delete the plugin?"
+msgstr "Вихідний код плагіну та його налаштування будуть видалені без можливості відновлення. Видалити плагін?"
+
+msgid "This will delete the app’s source code and settings without the recovery option. Delete the app?"
+msgstr "Вихідний код додатку та його налаштування будуть видалені без можливості відновлення. Видалити додаток?"
+
+msgid "Item installed"
+msgstr "Встановлено продукт"
+
+msgid "Item disabled"
+msgstr "Вимкнено продукт"
+
+msgid "Item updated"
+msgstr "Оновлено продукт"
+
+msgid "Item enabled"
+msgstr "Увімкнено продукт"
+
+msgid "Item uninstalled"
+msgstr "Видалено продукт"
+
+msgid "Expired %s"
+msgstr "Закінчилася %s"
+
+msgid "Expires %s"
+msgstr "Закінчується %s"
+
+msgid "Subscription for updates expired on <strong style='white-space:nowrap;'>%s</strong>"
+msgstr "Підписка на оновлення закінчилася <strong style=&#39;white-space:nowrap;&#39;>%s</strong>"
+
+msgid "Extend subscription for updates"
+msgstr "Подовжити підписку на оновлення"
+
+msgid "App’s hosted license is expired. To continue using the app, extend its hosted license."
+msgstr "Ліцензія додатку закінчилася. Аби продовжити користування продуктом, подовжіть підписку."
+
+msgid "Pay for app’s hosted license"
+msgstr "Оплатити підписку на ліцензію додатку"
+
+msgid "Subscription for updates is valid until <strong style='white-space:nowrap;'>%s</strong>."
+msgstr "Підписка на оновлення дійсна по <strong style=&#39;white-space:nowrap;&#39;>%s</strong>."
+
+msgid "App’s hosted license has been paid until <strong style='white-space:nowrap;'>%s</strong>."
+msgstr "Ліцензію додатку було оплачено по <strong style=&#39;white-space:nowrap;&#39;>%s</strong>."
+
+msgid "This theme cannot be updated"
+msgstr "Цю тему дизайну не може бути оновлено"
+
+msgid "This theme cannot be installed"
+msgstr "Цю тему дизайну не може бути встановлено"
+
+msgid "This widget cannot be updated"
+msgstr "Цей віджет не може бути оновлено"
+
+msgid "This widget cannot be installed"
+msgstr "Цей віджет не може бути встановлено"
+
+msgid "This plugin cannot be updated"
+msgstr "Цей плагін не може бути оновлено"
+
+msgid "This plugin cannot be installed"
+msgstr "Цей плагін не може бути встановлено"
+
+msgid "<a href=\"%s\">Change system settings in Settings app</a>."
+msgstr "<a href=\"%s\">Системні налаштування можна змінити у додатку «Налаштування»</a>."
+
+msgid "License for this app is either expired or not valid for this domain"
+msgstr "Ліцензія на цей додаток або закінчилася, або недійсна для цього домена"
+
+msgid "Application plugin %s has been deleted', 'Applications plugins %s have been deleted"
+msgstr "Плагін %s було видалено&#39;, &#39;Плагіни %s були видалені"
+
+msgid "Application theme %s has been deleted', 'Applications themes %s have been deleted"
+msgstr "Тему дизайну %s було видалено&#39;, &#39;Плагіни %s були видалені"
+
+msgid "Add a DKIM signature to outgoing email messages to confirm your ownership of the sender’s email address."
+msgstr "Додайте підпис DKIM для вихідних email-повідомлень, аби підтвердити належність email-адреси вам."
+
+msgid "Enter an email address in “Sender” field to use DKIM."
+msgstr "Для використання DKIM вкажіть адресу відправника."
+
+msgid "You need to install openssl php extention to use DKIM"
+msgstr "Аби користуватись DKIM, вам необхідно встановити розширення PHP OpenSSL"
+
+msgid "You need PHP version 5.3 or higher to use DKIM. Your current version is:"
+msgstr "Аби користуватись DKIM, потрібна версія PHP 5.3 або вища. Ваша поточна версія:"
+
+msgid "Add a new <b>TXT record</b> with this public DKIM key to the DNS zone of domain name"
+msgstr "Додайте новий <b>TXT-запис</b> із цим публічним ключем DKIM у DNS-зону домену"
+
+msgid "Host "
+msgstr "Хост "
+
+msgid "Domain"
+msgstr "Доменне ім&#39;я"
+
+msgid "Record type"
+msgstr "Тип запису"
+
+msgid "Value"
+msgstr "Значення"
+
+msgid "Stretch to fil"
+msgstr "Розтягнути, щоб заповнити екран"
+
+msgid "Captcha"
+msgstr "CAPTCHA"
+
+msgid "Webasyst Captcha"
+msgstr "CAPTCHA Webasyst"
+
+msgid "Google reCAPTCHA"
+msgstr "reCAPTCHA від Google"
+
+msgid "Site Key"
+msgstr "Ключ сайта"
+
+msgid "Secret"
+msgstr "Секрет"
+
+msgid "Get site key and secret for your website"
+msgstr "Отримати ключ та секрет для вашого веб-сайту"
+
+msgid "Invisible mode"
+msgstr "Невидимий режим"
+
+msgid "Selected captcha type will be used throughout your storefront wherever applicable."
+msgstr "Обраний тип капчі буде використано в усіх місцях вітрини, що підходять."
+
+msgid "Extension openssl is not installed"
+msgstr "Розширення OpenSSL не встановлено"
+
+msgid "Failed to create DKIM signature"
+msgstr "Не вдалось створити підпис DKIM"
+
+msgid "App %s installed"
+msgstr "Додаток «%s» встановлено"
+
+msgid "Plugin %s installed"
+msgstr "Плагін «%s» встановлено"
+
+msgid "Widget %s installed"
+msgstr "Віджет «%s» встановлено"
+
+msgid "Theme %s installed"
+msgstr "Тему дизайну «%s» встановлено"
+
+msgid "App %s updated"
+msgstr "Додаток «%s» оновлено"
+
+msgid "Plugin %s updated"
+msgstr "Плагін «%s» оновлено"
+
+msgid "Widget %s updated"
+msgstr "Віджет «%s» оновлено"
+
+msgid "Theme %s updated"
+msgstr "Тему «%s» оновлено"
+
+msgid "App %s enabled"
+msgstr "Додаток %s увімкнено"
+
+msgid "Plugin %s enabled"
+msgstr "Плагін %s увімкнено"
+
+msgid "Widget %s enabled"
+msgstr "Віджет %s увімкнено"
+
+msgid "Theme %s enabled"
+msgstr "Тему %s увімкнено"
+
+msgid "App %s disabled"
+msgstr "Додаток %s вимкнено"
+
+msgid "Plugin %s disabled"
+msgstr "Плагін %s вимкнено"
+
+msgid "Widget %s disabled"
+msgstr "Віджет %s вимкнено"
+
+msgid "Theme %s disabled"
+msgstr "Тему %s вимкнено"
+
+msgid "App %s uninstalled"
+msgstr "Додаток %s видалено"
+
+msgid "Plugin %s uninstalled"
+msgstr "Плагін %s видалено"
+
+msgid "Widget %s uninstalled"
+msgstr "Віджет %s видалено"
+
+msgid "Theme %s uninstalled"
+msgstr "Тему дизайну %s видалено"
+
+msgid "for plugin"
+msgstr "для плагіну"
+
+msgid "for widget"
+msgstr "для віджету"
+
+msgid "for theme"
+msgstr "для теми"
+
+msgid "for app"
+msgstr "для додатку"
+
+msgid "Your review"
+msgstr "Ваш огляд"
+
+msgid "What you like or dislike about this product"
+msgstr "Що вам подобається або не подобається у цьому продукті"
+
+msgid "optional"
+msgstr "необов&#39;язково"
+
+msgid "You are currently signed into Webasyst as <span class=\"js-customer-center-user-name\"></span>"
+msgstr "Наразі ви увійшли до Webasyst як <span class=\"js-customer-center-user-name\"></span>"
+
+msgid "If you want to add a review as another customer, please <a class=\"js-customer-center-logout-link\">sign out</a>."
+msgstr "Якщо ви хочете залишити огляд за іншого користувача, будь ласка, <a class=\"js-customer-center-logout-link\">вийдіть з акаунту</a>."
+
+msgid "Add a review"
+msgstr "Залишити відгук"
+
+msgid "Sign in required"
+msgstr "Необхідно увійти"
+
+msgid "To add a review, <a class=\"js-customer-center-login-link\">log into Customer Center</a>"
+msgstr "Аби залишити огляд, <a class=\"js-customer-center-login-link\">увійдіть до Центру замовника</a>"
+
+msgid "Your review has been added, thank you!"
+msgstr "Ваш огляд додано, дякуємо!"
+
+msgid "Add a rate"
+msgstr "Поставити оцінку"
+
+msgid "Add a rate and a review"
+msgstr "Поставити оцінку та залишити відгук"
+
+msgid "Change rate"
+msgstr "Змінити оцінку"
+
+msgid "Change rate and review"
+msgstr "Змінити оцінку та огляд"
+
+msgid "Your rates"
+msgstr "Ваші оцінки"
+
+msgid "Failed to get the URL of the remote Store"
+msgstr "Не вдалося отримати URL віддаленого магазину"
+
+msgid "Do you confirm the installation?"
+msgstr "Підтверджуєте установку?"
+
+msgid "close"
+msgstr "закрити"
+
+msgid "Unable to install product (developer version is on)"
+msgstr "Неможливо видалити продукт (увімкнено режим розробки)"
+
+msgid "Unable to update product (developer version is on)"
+msgstr "Неможливо оновити продукт (режим розробки)"
+
+msgid "Value of PHP configuration parameter %s: %s. Required value: %s."
+msgstr "Значення параметру конфігурації PHP %s: %s. Необхідне значення: %s."
+
+msgid "Value of PHP configuration parameter %s: %s. Recommended value: %s."
+msgstr "Значення параметру конфігурації PHP %s: %s. Рекомендоване значення: %s."
+
+msgid "<a target=\"_blank\" href=\"https://support.webasyst.com/2024/mailer-dkim/\">What is DKIM</a>"
+msgstr "<a target=\"_blank\" href=\"https://support.webasyst.com/2024/mailer-dkim/\">Що таке DKIM</a>"
+
+msgid "Email transport"
+msgstr "Транспорт email"
+
+msgid "php mail() function"
+msgstr "PHP-функція mail()"
+
+msgid "Debug mailer"
+msgstr "Тестовий відправник"
+
+msgid "When this option is selected messages are sent by the default transport specified in the Webasyst framework configuration."
+msgstr "Якщо обрано цей варіант, розсилання будуть надсилатися транспортом за замовчуванням, обраним в конфігурації фреймворка Webasyst."
+
+msgid "Some web-hosting companies allow sending email message by means of this transport only. If it is required to specify additional parameters for the mail() function you can enter them in the provided text field. The default parameters are -f%s."
+msgstr "Деякі хостинг-провайдери дозволяють надсилати електронні повідомлення тільки цим транспортом. Якщо існує необхідність ввести додаткові параметри, їх можна вказати у текстовому полі при виборі варіанту «PHP-функція mail ()». За замовчуванням використовується параметр -f%s."
+
+msgid "This is the web server's system command for sending email in UNIX-like operating systems. The \"Sendmail\" option will allow you to specify a non-standard system command for sending messages if you are an experienced server administrator."
+msgstr "Це системна команда веб-сервера, за допомогою якої виконується відправка повідомлень на UNIX-хостингах. Варіант транспорту “Sendmail” дозволить вам вказати нестандартну системну команду для відправки повідомлень, якщо ви самостійно адмініструєте роботу вашого веб-сервера."
+
+msgid "Special server which is specifically used for sending email messages. You can send newsletters via any SMTP server for which you have connection credentials: host, port, user name, and password. It can be the SMTP server of your web-hosting company or that of a public mail service such as Gmail, Yahoo! Mail, Outlook.com, etc."
+msgstr "Спеціальний поштовий сервер, призначений для надсилання електронної пошти. Ви можете відправляти розсилання через будь-який SMTP-сервер, для підключення до якого у вас є дані: адреса сервера, номер порту, ім&#39;я користувача (логін) і пароль. Це може бути SMTP-сервер вашого хостинг-провайдера або публічного поштового сервісу (Mail.ru, Gmail, Outlook.com та інші)."
+
+msgid "Options"
+msgstr "Параметри"
+
+msgid "Command"
+msgstr "Команда"
+
+msgid "Encryption"
+msgstr "Шифрування"
+
+msgid "Note: mail will be saved in wa-log/mailer/ and will NOT be sent to recipients."
+msgstr "Увага: повідомлення буде збережено у wa-log/mailer/ і не буде надіслано отримувачам."
+
+msgid "None"
+msgstr "Немає"
+
+msgid "Home"
+msgstr "Додому"
+
+msgid "New "
+msgstr "Нові "
+
+msgid "Top-chart"
+msgstr "Топ-чарт"
+
+msgid "Developers"
+msgstr "Розробники"
+
+msgid "PHP extension %s is required"
+msgstr "Необхідне розширення PHP %s"
+
+msgid "This will delete the product’s source code and data, without a recovery option. Are you sure?"
+msgstr "При цьому вихідний код продукту і дані буде видалено без можливості відновлення. Ви впевнені?"
+
+msgid "Unrated products"
+msgstr "Продукти без оцінки"
+
+msgid "Rated products"
+msgstr "Оцінені продукти"
+
+msgid "Contact the developer"
+msgstr "Зв'язатися із розробником"
+
+msgid "Your rate has been added, thank you!"
+msgstr "Вашу оцінку додано, дякуємо!"
+
+msgid "Non-rated products"
+msgstr "Неоцінені продукти"
+
+msgid "A .git or .svn directory has been detected. To ignore the developer mode, add option 'installer_in_developer_mode' => true to wa-config/config.php file."
+msgstr "Знайдено директорію .git або .svn. Аби ігнорувати режим розробника, додайте опцію 'installer_in_developer_mode' => true до файлу wa-config/config.php."
+
+msgid "Unable to install the product (developer mode is on)."
+msgstr "Неможливо встановити продукт (увімкнено режим розробки)."
+
+msgid "Unable to update the product (developer mode is on)."
+msgstr "Неможливо оновити продукт (увімкнено режим розробки)."
+
+msgid "Unable to delete the app (developer mode is on)."
+msgstr "Неможливо видалити продукт (увімкнено режим розробки)."
+
+msgid "My licenses"
+msgstr "Мої ліцензії"
+
+msgid "License is either expired or not valid for this installation"
+msgstr "Ліцензія або закінчилася, або недійсна для цієї інсталяції"
+
+msgid "Not connected with a Webasyst ID contact."
+msgstr "Не пов'язано із контактом Webasyst ID."
+
+msgid "Product installation is allowed only to users with admin access to Installer app."
+msgstr "Інсталяція продукту дозволена лише користувачам із доступом адміністратора до програми «Інсталер»."
+
+msgid "License binding is allowed only to users with admin access to Installer app."
+msgstr "Прив'язка ліцензій дозволяється лише користувачам із доступом адміністратора до програми «Інсталер»."
+
+msgid "System error"
+msgstr "Системна помилка"
+
+msgid "Unknown error while trying to get licenses."
+msgstr "Невідома помилка під час спроби отримати ліцензії."
+
+msgid "Invalid license ID"
+msgstr "Неприпустимий ідентифікатор ліцензії"
+
+msgid "License not found."
+msgstr "Ліцензію не знайдено."
+
+msgid "License binding not available."
+msgstr "Прив'язка ліцензії недоступна."
+
+msgid "Unknown error while trying to bind the license."
+msgstr "Невідома помилка під час спроби прив'язати ліцензію."
+
+msgid "Plugin <a href=\"%s\">%s</a> (id %s)"
+msgstr "Плагін <a href=\"%s\">%s</a> (id %s)"
+
+msgid "Theme <a href=\"%s\">%s</a> (id %s)"
+msgstr "Тема <a href=\"%s\">%s</a> (id %s)"
+
+msgid "Widget <a href=\"%s\">%s</a> (id %s)"
+msgstr "Віджет <a href=\"%s\">%s</a> (id %s)"
+
+msgid "Product"
+msgstr "Товар"
+
+msgid "Order ID"
+msgstr "Ідентифікатор замовлення"
+
+msgid "reset filters"
+msgstr "скинути фільтри"
+
+msgid "Total rows:"
+msgstr "Усього рядків:"
+
+msgid "Plugin <a href=\"%s\">%s</a> (%s)"
+msgstr "Плагін <a href=\"%s\">%s</a> (%s)"
+
+msgid "Theme <a href=\"%s\">%s</a> (%s)"
+msgstr "Тема дизайна<a href=\"%s\">%s</a> (%s)"
+
+msgid "Widget <a href=\"%s\">%s</a> (%s)"
+msgstr "Віджет <a href=\"%s\">%s</a> (%s)"
+
+msgid "Rate plugin"
+msgstr "Оцінити плагін"
+
+msgid "Rate widget"
+msgstr "Оцінити віджет"
+
+msgid "Rate theme"
+msgstr "Оцінити тему дизайну"
+
+msgid "Rate app"
+msgstr "Оцінити додаток"
+
+msgid "beta version"
+msgstr "бета-версія"
+
+msgid "Installer ID"
+msgstr "ID Інсталера"
+
+msgid "View ..."
+msgstr "Переглянути ..."
+
+msgid "copy"
+msgstr "копіювати"
+
+msgid "Show navigation"
+msgstr "Показати навігацію"
+
+msgid "Products whose beta testing is enabled for this backend:"
+msgstr "Продукти, бета-тестування яких увімкнено для цього бекенда:"
+
+msgid "disconnect"
+msgstr "від'єднати"
+
+msgid "Confirm disconnection from the beta testing of this product"
+msgstr "Підтвердьте відключення від бета-тестування цього продукту"
+
+msgid "Beta test confirm"
+msgstr "Підтверждення бета-тесту"
+
+msgid "Beta test notice"
+msgstr "Нотатки бета-тесту"
+
+msgid "Beta test"
+msgstr "Бета-тест"
+
+msgid "Disconnect"
+msgstr "Від'єднати"
+
+msgid "Cancel"
+msgstr "Скасувати"
+
+msgid "Can’t disconnect."
+msgstr "Не вдається від'єднати."
+
+msgid "Installation has been successfully completed"
+msgstr "Встановлення успішно завершено"

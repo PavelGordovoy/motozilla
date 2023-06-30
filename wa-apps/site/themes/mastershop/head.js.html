@@ -1,0 +1,61 @@
+{strip}
+{$is_mobile = ($wa->isMobile() && ($wa->cookie("is_desktop_for_mobile") != 1 || !$theme_settings.switch_version))}
+{$msgAddToCompare = null}
+{$msgAddToFavorite = null}
+{$count_favorites = (int)$theme_settings.favorites_products_count}
+{if empty($count_favorites)}{$count_favorites = 128}{/if}
+{$count_viewed = (int)$theme_settings.viewed_products_count}
+{if empty($count_viewed)}{$count_viewed = 64}{/if}
+
+{$current_currency = null}
+{if $wa->shop}
+    {* global variables for scripts *}
+    {$current_currency = $wa->shop->currency(true)}
+    {$current_locale = waLocale::getinfo($wa->locale())}
+    {$sign_html = $current_currency['sign_html']}{if empty($sign_html)}{$sign_html = $current_currency['sign']}{/if}
+    {$sign_position = $current_currency['sign_position']}{if empty($sign_position)}{$sign_position = 1}{/if}
+    {$sign_delim = $current_currency['sign_delim']}{if empty($sign_delim)}{$sign_delim = ' '}{/if}
+    {$currency_info = [
+        'code'          => $current_currency['code'],
+        'sign'          => $current_currency['sign'],
+        'sign_html'     => $sign_html,
+        'sign_position' => $sign_position,
+        'sign_delim'    => $sign_delim,
+        'decimal_point' => $current_locale['decimal_point'],
+        'frac_digits'   => $current_locale['frac_digits'],
+        'thousands_sep' => $current_locale['thousands_sep']
+    ]
+    }
+
+    {$in_comparison = $wa->shop->inComparison()}
+    {$urlCompare = $wa->getUrl('shop/frontend/compare', ['id' => implode(',', $in_comparison)])}
+    {$msgAddToCompare = "[`Product in compare`]"}
+
+    {$favoriteUrl = "`$wa->getUrl('shop/frontend/search')`?list=favorites"}
+    {$msgAddToFavorite = "<a href=`$favoriteUrl`>[`Product in favorites`]</a>"}
+{/if}
+{$is_mainpage = ($wa->currentUrl(false, true) == $wa_app_url || $wa->currentUrl(false, true) == "/")}
+{$isFormStylerInit = (!empty($theme_settings.form_styler_full) || empty($action) || (!empty($action) && !$is_mainpage && !in_array($action, ['category', 'product', 'brand', 'brands', 'search'])))}
+<script>
+    var globalThemeSettings = {
+        isMobile: {(int)($is_mobile)},
+        isFormStylerInit: {(int)(!empty($isFormStylerInit))},
+        isLocationSelect: {(int)($wa_app == 'shop' && !empty($theme_settings.language_toggle))},
+        isCurrencySelect: {(int)($wa_app == 'shop' && !empty($theme_settings.currency_toggle))},
+        isDisplayFontAwesome: {(int)(!empty($is_icons_hidden))},
+        show_product_in_basket: {(int)$theme_settings.show_product_in_basket},
+        isSeoFilterBlockedOPtions: {(int)$theme_settings.use_seo_filter_blocked_options},
+        currency: {json_encode($currency_info)},
+        isFixedHeader: {(int)($theme_settings.header_fixed_desktop == 1 && !$is_mobile)},
+        isFixedHeaderMobile: {(int)($theme_settings.header_fixed_mobile == 1 && $is_mobile)},
+        isHorizontalMainMenu: {(int)($theme_settings.is_horizontal_menu == 1 && !$is_mobile)},
+        isFilters: {(int)(!empty($filters))},
+        isDemoSettings: {(int)($theme_settings.test_settings && !$is_mobile)},
+        isTileGalleryProductPreview: {(int)(($theme_settings.product_tile_gallerytile || $theme_settings.product_list_gallerytile) && !$is_mobile)},
+        msgAddToFavorite: '{$msgAddToFavorite}',
+        msgAddToCompare: '{$msgAddToCompare}',
+        countFavorites: '{$count_favorites}',
+        countViewed: '{$count_viewed}'
+    }
+</script>
+{/strip}

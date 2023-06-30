@@ -1,0 +1,469 @@
+{strip}
+{$text_in_stock = "[`In stock`]"}{if !empty($theme_settings.text_product_in_stock)}{$text_in_stock = $theme_settings.text_product_in_stock}{/if}
+{$text_none_stock = "[`Out of stock`]"}{if !empty($theme_settings.text_product_none_stock)}{$text_none_stock = $theme_settings.text_product_none_stock}{/if}
+{$text_preorder = "[`Pre-order only`]"}{if !empty($theme_settings.text_product_preorder)}{$text_preorder = $theme_settings.text_product_preorder}{/if}
+{$text_product_not_available_one_sku = "[`This product is not available for purchase`]"}{if !empty($theme_settings.text_product_not_available_one_sku)}{$text_product_not_available_one_sku = $theme_settings.text_product_not_available_one_sku}{/if}
+{$text_none_stock_with_option = "[`Product with the selected option combination is not available for purchase`]"}{if $theme_settings.text_none_stock_with_option}{$text_none_stock_with_option = $theme_settings.text_none_stock_with_option}{/if}
+
+{function getDiscountCartOptions price=null compare_price=null}
+    {if $theme_settings.show_product_discount == 1}
+            {if $compare_price > $price}
+                {$discount = (($compare_price-$price)/$compare_price)*100}
+            {if $theme_settings.show_product_discount_round == "ceil"}
+                {$discount = ceil($discount)}
+            {else if $theme_settings.show_product_discount_round == "floor"}
+                {$discount = floor($discount)}
+            {else}
+                {$discount = round($discount)}
+            {/if}
+        {/if}
+        {$isDiscount = isset($discount) && $discount >= (int)$theme_settings.show_product_discount_minimal && $price > 0}
+        <div data-round="{$theme_settings.show_product_discount_round}" data-minimal="{$theme_settings.show_product_discount_minimal}" class="js-product-discount product-discount product-dialog-options__discount{if !$isDiscount} display-none{/if}">{if $isDiscount}-{$discount}%{/if}</div>
+    {/if}
+{/function}
+
+{if $theme_settings.test_settings && !empty($wa->cookie('cart_add_action_desktop'))}{$theme_settings.cart_add_action_desktop = $wa->cookie('cart_add_action_desktop')}{/if}
+{$is_dialog = $wa->get('cart') || $wa->server('HTTP_X_REQUESTED_WITH') == "XMLHttpRequest"}
+{$is_dialog_select_options = $is_dialog && $wa->get('select-options') && $theme_settings.product_addtocart_mini_dialog}
+{$text_zero_price = $theme_settings.product_zero_price_text}
+{$is_mobile = ($wa->isMobile() && ($wa->cookie("is_desktop_for_mobile") != 1 || !$theme_settings.switch_version))}
+{$is_schema_org = $theme_settings.schema_org_active}
+{$preview_image = $wa->shop->productImgUrl($product, '60')}
+{$text_vendor_code = "[`Vendor code`]"}{if !empty($theme_settings.product_text_vendor_code)}{$text_vendor_code = $theme_settings.product_text_vendor_code}{/if}
+{$is_select_styler = false}
+
+{if $product.sku_type}
+    {$product_available = $product.status}
+{else}
+    {$product_available = false}
+    {if count($product.skus) > 1}
+        {foreach $product.skus as $sku}
+            {$sku_available =  $product.status && $sku.available && ($wa->shop->settings('ignore_stock_count') || $sku.count === null || $sku.count > 0)}
+            {$product_available = $product_available or $sku_available}
+        {/foreach}
+    {else}
+        {$sku = $product.skus[$product.sku_id]}
+        {$product_available = $product.status && $sku.available && ($wa->shop->settings('ignore_stock_count') || $sku.count === null || $sku.count > 0)}
+    {/if}
+{/if}
+
+{$cart_add_action = $theme_settings.cart_add_action_desktop}
+{if $wa->isMobile()}{$cart_add_action = $theme_settings.cart_add_action_mobile}{/if}
+<form id="cart-form{if $is_dialog}-dialog{/if}" class="js-add-to-cart{if $is_dialog} popup-content popup-content--dialog js-product{/if}{if $is_dialog_select_options} popup-content--dialog-options{/if}" method="post" action="{$wa->getUrl('/frontendCart/add')}" data-image="{$preview_image}" data-link="{$product.frontend_url}" data-name="{$product.name|escape}" data-price="{shop_currency_html($product.price)|escape}" data-after-action="{$cart_add_action}" data-sku-url="{!$is_dialog && !empty($theme_settings.product_sku_url)}">
+    {if $is_dialog && !$is_dialog_select_options}
+        <div class="product-card__popup">
+            {include file="product.gallery.html"}
+            <div class="product-card__right {$theme_settings.product_card_bg}-bg">
+    {/if}
+        <div id="product-cart" data-id="{$product.id}" class="product-cart">
+            {if $is_dialog}
+                <div class="product-cart__dialog-head">
+                    {if !$is_dialog_select_options}<a class="product-card__link-product show-all ac-color" href="{$wa->shop->productUrl($product)}">[`Product page`]  <i class="button-more fal fa-long-arrow-right"></i></a>{/if}
+                    <h1><span{if $is_schema_org} itemprop="name"{/if}>{$product.name|escape}</span></h1>
+                </div>
+            {/if}
+            {if $is_dialog_select_options}
+                {$list_right_block_contents = ['actions','options','cart']}
+            {else}
+                {$right_block_contents = $theme_settings.product_right_block}
+                {if $wa->isMobile()}
+                    {$right_block_contents = $theme_settings.product_right_block_mobile}
+                {/if}
+                {if !empty($right_block_contents)}{$list_right_block_contents = ","|explode:$right_block_contents}{/if}
+            {/if}
+
+            {foreach $list_right_block_contents as $right_block_content}
+                {if $right_block_content == 'actions'}
+                    {include file="product.cart.actions.html"}
+                {elseif $right_block_content == 'description'}
+                    {include file="product.short-description.html"}
+                {else if $right_block_content == 'options'}
+                    <div class="product-card__options">
+                        {if $product.sku_type}
+                            <!-- SELECTABLE FEATURES selling mode -->
+                            {$default_sku_features = $product.sku_features}
+                            {$product_available = $product.status}
+                            {if empty($theme_settings.product_select_options)}
+                                <div class="product_options product_options--buttons options">
+                                    {foreach $features_selectable as $f}
+                                        {$is_option_color = ($f.type == 'color')}
+                                        {$is_option_color_title_show_under = ($is_option_color && $theme_settings.product_options_color_title_show == 'under')}
+                                        {$is_option_color_title_show_separately = ($is_option_color && !$is_option_color_title_show_under)}
+                                        <div class="inline-select{if $is_option_color} inline-select--color{/if}{if $is_option_color_title_show_under} inline-select--mb50{/if}">
+                                            {if $theme_settings.product_options_button_title}<div class="product_options__title">{$f.name}:</div>{/if}
+                                            {foreach $f.values as $v_id => $v}
+                                                {if !isset($default_sku_features[$f.id])}{$default_sku_features[$f.id]=$v_id}{/if}
+                                                {if $is_option_color}
+                                                    <a href="#" data-value="{$v_id}" data-color-title="{strip_tags($v)}" class="js-product-color inline-select__color{if $v_id == ifset($default_sku_features[$f.id])} selected{/if}{if $is_option_color_title_show_separately && $v@last} last{/if}" style="{$v->style}">
+                                                        <span class="inline-select__color-check fal"></span>
+                                                        {if $is_option_color_title_show_under}
+                                                            <span class="inline-select__color-title">{strip_tags($v)}</span>
+                                                        {/if}
+                                                    </a>
+                                                {else}
+                                                    <a href="#" data-value="{$v_id}" class="inline-select__item {if $v_id == ifset($default_sku_features[$f.id])} selected{/if}" >{$v}</a>
+                                                {/if}
+                                            {/foreach}
+                                            <input type="hidden" data-feature-id="{$f.id}" class="sku-feature" name="features[{$f.id}]" value="{ifset($default_sku_features[$f.id])}">
+                                            {if $is_option_color_title_show_separately}
+                                                <span class="js-product-selected-color-title inline-select__selected-color-title"></span>
+                                            {/if}
+                                        </div>
+                                    {/foreach}
+                                </div>
+                            {else}
+                                <div class="product_options options">
+                                    {foreach $features_selectable as $f}
+                                        <div class="options-select">
+                                            <div class="product_options__title">{$f.name}:</div>
+                                            <select data-feature-id="{$f.id}" class="sku-feature select-small" name="features[{$f.id}]">
+                                                {foreach $f.values as $v_id => $v}
+                                                    <option value="{$v_id}" {if $v_id == ifset($default_sku_features[$f.id])}selected{/if}>{$v|strip_tags}</option>
+                                                {/foreach}
+                                            </select>
+                                        </div>
+                                    {/foreach}
+                                </div>
+                            {/if}
+                            <!-- list all SKUs for Schema.org markup -->
+                            {if $is_schema_org}
+                                <div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+                                    <meta itemprop="lowPrice" content="{shop_currency_html($product.min_price, null, null, false)}">
+                                    <meta itemprop="highPrice" content="{shop_currency_html($product.max_price, null, null, false)}">
+                                    <meta itemprop="priceCurrency" content="{$wa->shop->currency()}">
+                                    <meta itemprop="offerCount" content="{$product.sku_count}">
+                                    {foreach $product.skus as $sku}
+                                        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                            {$sku_available =  $product.status && $sku.available && ($wa->shop->settings('ignore_stock_count') || $sku.count === null || $sku.count > 0)}
+                                            {if $sku.name}<meta itemprop="name" content="{$sku.name|escape}">{/if}
+                                            <meta itemprop="price" content="{$sku.price}">
+                                            <meta itemprop="priceCurrency" content="{$wa->shop->currency()}">
+                                            {if $sku.sku}<meta itemprop="sku" content="{$sku.sku|escape}">{/if}
+                                            {if (!($sku.count === null) && $sku.count <= 0)}
+                                                <link itemprop="availability" href="http://schema.org/OutOfStock" />
+                                            {else}
+                                                <link itemprop="availability" href="http://schema.org/InStock" />
+                                            {/if}
+                                        </div>
+                                    {/foreach}
+                                </div>
+                            {/if}
+                        {else}
+                            <!-- FLAT SKU LIST selling mode -->
+                            {$product_available = false}
+                            <div{if $is_schema_org} itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer"{/if}>
+                                {if $is_schema_org}
+                                    <meta itemprop="lowPrice" content="{shop_currency_html($product.min_price, null, null, false)}">
+                                    <meta itemprop="highPrice" content="{shop_currency_html($product.max_price, null, null, false)}">
+                                    <meta itemprop="priceCurrency" content="{$wa->shop->currency()}">
+                                    <meta itemprop="offerCount" content="{$product.sku_count}">
+                                {/if}
+                                {if count($product.skus) > 1}
+                                    {* When there is more than one SKU, display selector *}
+                                    {if $theme_settings.product_select_skus}
+                                        <div class="skus">
+                                            {foreach $product.skus as $sku}
+                                                {$sku_available =  $product.status && $sku.available && ($wa->shop->settings('ignore_stock_count') || $sku.count === null || $sku.count > 0)}
+                                                {if $sku_available || $theme_settings.display_skus_not_available != "hide"}
+                                                    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                                        <meta itemprop="price" content="{$sku.price}"/>
+                                                        <meta itemprop="priceCurrency" content="{$product.currency}"/>
+                                                        <meta itemprop="name" content="{$sku.name|escape}"/>
+                                                        {if $sku.sku}<meta itemprop="sku" content="{$sku.sku|escape}">{/if}
+                                                        {if (!($sku.count === null) && $sku.count <= 0)}
+                                                            <link itemprop="availability" href="http://schema.org/OutOfStock" />
+                                                        {else}
+                                                            <link itemprop="availability" href="http://schema.org/InStock" />
+                                                        {/if}
+                                                    </div>
+                                                {/if}
+                                            {/foreach}
+                                            <select class="skus-select" name="sku_id">
+                                                {foreach $product.skus as $sku}
+                                                    {$sku_available =  $product.status && $sku.available && ($wa->shop->settings('ignore_stock_count') || $sku.count === null || $sku.count > 0)}
+                                                    {if $sku_available || $theme_settings.display_skus_not_available != "hide"}
+                                                        <option{if !$sku_available && $theme_settings.display_skus_not_available == 'block'} disabled="true"{/if}{if !$sku_available} data-disabled="1"{/if}{if $sku.id == $product.sku_id} selected="selected"{/if} value="{$sku.id}" data-compare-price="{shop_currency($sku.compare_price, $product.currency, null, 0)}" data-price="{shop_currency($sku.price, $product.currency, null, 0)}"{if $sku.image_id} data-image-id="{$sku.image_id}"{/if}>
+                                                            {$sku.name|escape} {if $sku.sku && empty($theme_settings.show_product_multi_radio_sku_separately)}- {$sku.sku|escape}{/if} ({shop_currency($sku.price, $product.currency)})
+                                                        </option>
+                                                    {/if}
+                                                {/foreach}
+                                            </select>
+                                        </div>
+                                    {else}
+                                        <ul class="skus js-product-skus">
+                                            {$max_count_skus = (int) $theme_settings.product_count_max_skus}
+                                            {$skus_index = 0}
+                                            {foreach $product.skus as $sku}
+                                                {$sku_available =  $product.status && $sku.available && ($wa->shop->settings('ignore_stock_count') || $sku.count === null || $sku.count > 0)}
+                                                {if $sku_available || $theme_settings.display_skus_not_available != "hide"}
+                                                    <li{if $max_count_skus && $skus_index >= $max_count_skus} class="js-product-skus-item hide" {/if}{if $is_schema_org} itemprop="offers" itemscope itemtype="http://schema.org/Offer"{/if}>
+                                                        <label{if !$sku_available && $theme_settings.display_skus_not_available == 'block'} class="disabled"{/if}>
+                                                        <span class="js-radio-styler radio-styler{if $sku.id == $product.sku_id} checked{/if}{if !$sku_available && $theme_settings.display_skus_not_available == 'block'} disabled{/if}">
+                                                            <input class="js-radio-styler-input" name="sku_id" type="radio" value="{$sku.id}"{if !$sku_available && $theme_settings.display_skus_not_available == 'block'} disabled="true"{/if}{if !$sku_available} data-disabled="1"{/if}{if $sku.id == $product.sku_id} checked="checked"{/if} data-compare-price="{shop_currency($sku.compare_price, $product.currency, null, 0)}" data-price="{shop_currency($sku.price, $product.currency, null, 0)}"{if $sku.image_id} data-image-id="{$sku.image_id}"{/if}>
+                                                        </span>
+                                                        <span{if $is_schema_org} itemprop="name"{/if}> {$sku.name|escape}</span>
+                                                        {if $sku.sku}
+                                                            {if empty($theme_settings.show_product_multi_radio_sku_separately)}
+                                                                <span class="hint"{if $is_schema_org} itemprop="sku"{/if}>{$sku.sku|escape}</span>
+                                                            {else if $is_schema_org}
+                                                                <meta itemprop="sku" content="{$sku.sku|escape}">
+                                                            {/if}
+                                                        {/if}
+                                                        {if $is_schema_org}
+                                                            <meta itemprop="price" content="{$sku.price}">
+                                                            <meta itemprop="priceCurrency" content="{$wa->shop->currency()}">
+                                                        {/if}
+                                                        <i class="fal fa-minus"></i>
+                                                        <span class="price tiny nowrap">
+                                                            {if !empty($text_zero_price) && $sku.price == 0}
+                                                                {$text_zero_price}
+                                                            {else}
+                                                                {shop_currency_html($sku.price, $product.currency)}
+                                                            {/if}
+                                                        </span>
+                                                        {if $is_schema_org}
+                                                            {if (!($sku.count === null) && $sku.count <= 0)}
+                                                                <link itemprop="availability" href="http://schema.org/OutOfStock" />
+                                                            {else}
+                                                                <link itemprop="availability" href="http://schema.org/InStock" />
+                                                            {/if}
+                                                        {/if}
+                                                        </label>
+                                                    </li>
+                                                    {$skus_index = $skus_index + 1}
+                                                {/if}
+                                                {$product_available = $product_available or $sku_available}
+                                            {/foreach}
+                                            {if $max_count_skus && $skus_index > $max_count_skus}
+                                                <li><span class="js-product-skus-show bs-color read-more">[`Show all`]</span></li>
+                                            {/if}
+                                        </ul>
+                                    {/if}
+                                {else}
+                                    {* When there is only one SKU, don't display the selector *}
+                                    <div {if $is_schema_org} itemprop="offers" itemscope itemtype="http://schema.org/Offer"{/if}>
+                                        {$sku = $product.skus[$product.sku_id]}
+                                        {if $is_schema_org}
+                                            {if $sku.name}<meta itemprop="name" content="{$sku.name|escape}">{/if}
+                                            <meta itemprop="price" content="{$sku.price}">
+                                            <meta itemprop="priceCurrency" content="{$wa->shop->currency()}">
+                                        {/if}
+                                        {if !$sku.available}
+                                            {if $is_schema_org}<link itemprop="availability" href="http://schema.org/Discontinued" />{/if}
+                                            <p><em class="bold error">{$text_product_not_available_one_sku}</em></p>
+                                        {elseif !$wa->shop->settings('ignore_stock_count') && !($sku.count === null || $sku.count > 0)}
+                                            {if $is_schema_org}<link itemprop="availability" href="http://schema.org/OutOfStock" />{/if}
+                                            {* if !$theme_settings.hide_stock_in_card}
+                                                <div class="stocks"><strong class="stock-none product-stock">{if $wa->shop->settings('ignore_stock_count')}{$text_preorder}{else}{$text_none_stock}{/if}</strong></div>
+                                            {/if *}
+                                        {else}
+                                            {if $is_schema_org}<link itemprop="availability" href="http://schema.org/InStock" />{/if}
+                                        {/if}
+                                        <input name="sku_id" type="hidden" value="{$product.sku_id}">
+                                        {$product_available = $product.status && $sku.available && ($wa->shop->settings('ignore_stock_count') || $sku.count === null || $sku.count > 0)}
+                                    </div>
+                                {/if}
+                            </div>
+                        {/if}
+
+                        {if $services}
+                            <div class="services product-card__services">
+                                {foreach $services as $s}
+                                    <div class="service-{$s.id} services__item">
+                                        <label{if !$product_available} class="disabled"{/if}>
+                                            <span class="js-checkbox-styler checkbox-styler{if !$product_available} disabled{/if}">
+                                                <input class="js-checkbox-styler-input" data-price="{shop_currency($s.price, $s.currency, null, 0)}" {if !$product_available}disabled="disabled"{/if} type="checkbox" name="services[]" value="{$s.id}">
+                                            </span> {$s.name|escape}{if $s.price && !isset($s.variants)}(+<span class="service-price">{shop_currency_html($s.price, $s.currency)}</span>){/if}
+                                        </label>
+                                        {if isset($s.variants)}
+                                            {if $theme_settings.product_service_select_js_styler}{$is_select_styler = true}{/if}
+                                            <select data-variant-id="{$s.variant_id}" class="service-variants select-styler{if !empty($is_select_styler)} js-select{/if}" name="service_variant[{$s.id}]" disabled>
+                                                {foreach $s.variants as $v}
+                                                <option {if $s.variant_id == $v.id}selected{/if} data-price="{shop_currency($v.price, $s.currency, null, 0)}" value="{$v.id}">{$v.name|escape} (+{shop_currency($v.price, $s.currency)})</option>
+                                                {/foreach}
+                                            </select>
+                                        {else}
+                                            <input type="hidden" name="service_variant[{$s.id}]" value="{$s.variant_id}">
+                                        {/if}
+                                    </div>
+                                {/foreach}
+                            </div>
+                        {/if}
+
+                        <div class="product-card__code-stocks">
+                            <div class="product-card__code-stocks-inner">
+                                <!-- stock info -->
+                                {if !$product.sku_type && count($product.skus) == 1 && $sku.available && !$wa->shop->settings('ignore_stock_count') && !($sku.count === null || $sku.count > 0) && !$theme_settings.hide_stock_in_card}
+                                    {* stock none when there is only one SKU, don't display the selector *}
+                                    <div class="stocks product-card__stocks"><strong class="stock-none product-stock">{if $wa->shop->settings('ignore_stock_count')}{$text_preorder}{else}{$text_none_stock}{/if}</strong></div>
+                                {else if ($product_available || count($product.skus) > 1) && !$theme_settings.hide_stock_in_card}
+                                    <div class="stocks product-card__stocks">
+                                        {function name=in_stock n=0 low=5 critical=2}
+                                            {if $n > $low or $n === null}
+                                                <strong class="stock-high product-stock">
+                                                        {$text_in_stock}
+                                                        {if $theme_settings.product_card_stock_count && $n !== null}
+                                                        : {$n} [`unit`]
+                                                        {/if}
+                                                </strong>
+                                            {elseif $n > $critical}
+                                                <strong class="stock-low product-stock">
+                                                    {if $theme_settings.product_card_stock_count && $n !== null}
+                                                        {_w("Only %d left in stock", "Only %d left in stock", $n)}
+                                                    {else}
+                                                        {_w("Only a few items left")}
+                                                    {/if}
+                                                </strong>
+                                            {elseif $n > 0}
+                                                <strong class="stock-critical product-stock">{_w("Only %d left in stock", "Only %d left in stock", $n)}</strong>
+                                            {else}
+                                                {if $wa->shop->settings('ignore_stock_count')}
+                                                    <strong class="stock-preorder product-stock js-stock-preorder">{$text_preorder}</strong>
+                                                {else}
+                                                    <strong class="stock-none product-stock">{$text_none_stock}</strong>
+                                                {/if}
+                                            {/if}
+                                        {/function}
+                                        {foreach $product.skus as $sku}
+                                            <div {if $sku.id != $product.sku_id}style="display:none"{/if} class="js-product-stocks sku-{$sku.id}-stock">
+                                                {if $sku.stock}
+                                                    {$max_stocks = (int)$theme_settings.product_max_stocks}
+                                                    {$is_hide_stock = false}
+                                                    {foreach $stocks as $stock_id => $stock}
+                                                        {$is_hide_stock = !empty($is_hide_stock) || ($max_stocks > 0 && $stock@iteration > $max_stocks)}
+                                                        <span class="{if !empty($is_hide_stock)}js-product-stocks-item hide {/if}stocks__item">
+                                                            {if isset($sku.stock[$stock_id])}
+                                                                {$stock_count = $sku.stock[$stock_id]}
+                                                            {else}
+                                                                {$stock_count = null}
+                                                            {/if}
+                                                            <span class="stocks__item-title">{$stock.name}:</span> {in_stock n=$stock_count low=$stock.low_count critical=$stock.critical_count}
+                                                        </span>
+                                                    {/foreach}
+                                                    {if !empty($is_hide_stock)}
+                                                        <div><span class="js-product-stocks-show bs-color read-more">[`Show all`]</span></div>
+                                                    {/if}
+                                                {else}
+                                                    {in_stock n=$sku.count}
+                                                {/if}
+                                            </div>
+                                        {/foreach}
+                                        {if $product.sku_type}
+                                            <div style="display: none" class="sku-no-stock">
+                                                <strong class="stock-none">{$text_none_stock_with_option}</strong>
+                                            </div>
+                                        {/if}
+                                    </div>
+                                {/if}
+
+                                {if $product.sku_type}
+                                    {if $theme_settings.show_product_multi_sku}
+                                        {foreach $product.skus as $sku}
+                                            <div class="sku-{$sku.id}-product-code js-product-code product-code" {if $sku.id != $product.sku_id}style="display: none"{/if}>
+                                                {if isset($sku.sku) && !empty($sku.sku)}<span class="product-code__text">{$text_vendor_code}:</span> <span>{$sku.sku|escape}</span>{/if}
+                                            </div>
+                                        {/foreach}
+                                    {/if}
+                                {else}
+                                    {if count($product.skus) > 1}
+                                        {if $theme_settings.show_product_multi_radio_sku_separately}
+                                            {foreach $product.skus as $sku}
+                                                <div class="sku-{$sku.id}-product-code js-product-code product-code" {if $sku.id != $product.sku_id}style="display:none"{/if}>
+                                                    {if isset($sku.sku) && !empty($sku.sku)}<span class="product-code__text">{$text_vendor_code}:</span> <span>{$sku.sku|escape}</span>{/if}
+                                                </div>
+                                            {/foreach}
+                                        {/if}
+                                    {else}
+                                        {$sku = $product.skus[$product.sku_id]}
+                                        {if $sku.sku}
+                                            <div class="product-code">
+                                                <span class="product-code__text">{$text_vendor_code}:</span> <span{if $is_schema_org} itemprop="sku"{/if}>{$sku.sku|escape}</span>
+                                            </div>
+                                        {/if}
+                                    {/if}
+                                {/if}
+                            </div>
+
+                            {$is_skoneclick = class_exists('shopSkoneclickHelper') && $theme_settings.fastorder == "skoneclick" && shopSkoneclickHelper::isActive()}
+                            {$is_buy1click = class_exists('shopBuy1clickViewHelper') && $theme_settings.fastorder == "buy1click"}
+                            {$is_quickorder = class_exists('shopQuickorderPlugin') && $theme_settings.fastorder == "quickorder"}
+                            {$is_storequickorder = class_exists('shopStorequickorderPlugin') && $theme_settings.fastorder == "storequickorder"}
+                            {if $theme_settings.fastorder}
+                                <div class="product-card__fastorder">
+                                    {if $is_skoneclick}
+                                        <span class="button-fastorder button-fastorder--skoneclick js-sk-button-fastorder bs-color{if !$product_available} disabled{/if}">
+                                            <span class="button-fastorder__sk-oneclick js-sk-oneclick-open _show" data-type="product" data-product-id="{$product.id}">{$theme_settings.plugin_oneclick_button_text}</span>
+                                        </span>
+                                    {else if $is_buy1click}
+                                        <span class="button-fastorder js-button-fastorder bs-color">{shopBuy1clickViewHelper::getButton($product.id)}</span>
+                                    {else if $is_quickorder}
+                                        {$button_quickorder = shopQuickorderPlugin::button($product, "button")}
+                                        {if $button_quickorder}
+                                            <span class="button-fastorder button-fastorder--quickorder bs-color">{$button_quickorder}</span>
+                                        {/if}
+                                    {else if $is_storequickorder}
+                                        <span class="button-fastorder button-fastorder--storequickorder bs-color">{shopStorequickorderPlugin::product_button()}</span>
+                                    {/if}
+                                </div>
+                            {/if}
+                        </div>
+                        {if !$is_dialog_select_options}{$wa->block("ms.product.options.custom")}{/if}
+                    </div>
+                {else if $right_block_content == 'cart'}
+                    <div class="product-card__prices-add2cart add2cart">
+                        <div class="product-card__prices">
+                            <div class="price"{if !empty($text_zero_price)} data-text="{$text_zero_price}"{/if} data-price="{shop_currency($product.price, null, null, 0)}">
+                                {if !empty($text_zero_price) && $product.price == 0}
+                                    <span class="product-card__zero-prices">{$text_zero_price}</span>
+                                {else}
+                                    {shop_currency_html($product.price)}
+                                {/if}
+                            </div>
+                            <div class="compare-at-price price-compare {if $product.compare_price <= $product.price || $product.price == 0} display-none{/if}" data-compare-price="{shop_currency($product.compare_price, null, null, 0)}">{shop_currency_html($product.compare_price)}</div>
+                        </div>
+
+                        {if $is_dialog && $wa->get('quantity')}
+                            {$quantity_to_cart = (int) $wa->get('quantity')}
+                        {/if}
+                        {if empty($quantity_to_cart)}{$quantity_to_cart = 1}{/if}
+                        <div class="product-card__add2cart">
+                            <div class="product-card__button">
+                                <input type="hidden" name="product_id" value="{$product.id}">
+                                {if empty($theme_settings.cart_hide)}
+                                    <span class="js-qty cart-qty">
+                                        <span data-type="-" class="js-qty-action cart-qty_act">-</span>
+                                        <input type="text" name="quantity" value="{$quantity_to_cart}" class="js-number">
+                                        <span data-type="+" class="js-qty-action cart-qty_act">+</span>
+                                    </span>
+                                    {$show_product_in_cart = $theme_settings.show_product_in_basket && !empty($cart_items_ids) && in_array($product.id, $cart_items_ids)}
+                                    {$title_cart_button = "[`Buy`]"}
+                                    {if $theme_settings.product_button_cart_title}{$title_cart_button = $theme_settings.product_button_cart_title}{/if}
+                                    {$preload_cart_title = $theme_settings.product_button_cart_preorder_title}
+                                    {$is_preload = (count($product.skus) == 1 && $wa->shop->settings('ignore_stock_count') && $sku.count !== null && $sku.count == 0)}
+                                    {$title_cart_preorder_button = $theme_settings.product_button_cart_preorder_title}
+
+                                    <span{if $wa->shop->settings('ignore_stock_count') && $title_cart_preorder_button && count($product.skus) > 1} data-cart-title="{$title_cart_button}" data-cart-preorder-title="{$title_cart_preorder_button}"{/if} class="js-submit-form button add2cart-button button-with-icon{if !$product_available} disabled{/if}{if $show_product_in_cart} added{/if}">
+                                        <i class="js-icon button__icon fas fa-shopping-basket"></i>
+                                        {if $is_preload && !empty($title_cart_preorder_button)}{$title_cart_preorder_button}{else}{$title_cart_button}{/if}
+                                    </span>
+                                {/if}
+                            </div>
+                        </div>
+
+                        {if !$is_dialog_select_options}{$wa->block("ms.product.cart.custom")}{/if}
+
+                        <!-- plugin hook: 'frontend_product.cart' -->
+                        {* @event frontend_product.%plugin_id%.cart *}
+                        {foreach $frontend_product as $_}<span class="product-card__plugin-cart">{$_.cart}</span>{/foreach}
+                    </div>
+                {/if}
+            {/foreach}
+        </div>
+    {if $is_dialog && !$is_dialog_select_options}
+        </div> <!-- .product-card__popup -->
+    </div> <!-- .product-card__right -->
+    {/if}
+
+    {include file="product.cart.js.html" inline}
+</form>
+{/strip}

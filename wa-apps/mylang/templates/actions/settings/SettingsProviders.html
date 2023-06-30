@@ -1,0 +1,46 @@
+<div class="content" id="c-core">
+    <div class="block not-padded c-core-content shadowed" id="content">
+        <div class="block">
+            <h1>[`Providers`]</h1>
+            {if $plugins}
+                <table class="zebra">
+                    <thead>
+                    <tr>
+                        <th>[`Name`]</th>
+                        <th>[`Version`]</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {foreach $plugins as $pack}
+                        <tr data-id="{$pack.id}">
+                            <td><a href="?module=plugins#/{$pack.id}">{$pack.name|escape}({$pack.id|default:''})</a>
+                            </td>
+                            <td><b>{$pack.version|escape}</b></td>
+                            <td></td>
+                        </tr>
+                    {/foreach}
+                    </tbody>
+                </table>
+            {else}
+                <h3>[`There are no translate plugins installed.`]</h3>
+                <br>
+                <p>
+                    <a href="{$wa_backend_url}installer/store/app/mylang/plugins/">[`Install new plugins from the
+                        Webasyst Store using the Installer app`].</a>
+                </p>
+            {/if}
+            <p class="align-center"><a href="#" id="showplugins">[`Show other plugins`]</a></p>
+            <div id="plugins"></div>
+            <div class="clear-left"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    /*global $,backend_url*/
+    $('#showplugins').on('click', function (e) {
+        e.preventDefault();
+        $('#plugins').load(backend_url + 'installer/?module=plugins&action=view&slug=mylang');
+    });
+</script>

@@ -1,0 +1,1338 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst Hub 1.2.7.85 UA translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2014-11-21 05:25+0000\n"
+"PO-Revision-Date: \n"
+"Language: uk_UA\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Authors"
+msgstr "Автори"
+
+msgid "All hubs"
+msgstr "Усі хаби"
+
+msgid "(no name)"
+msgstr "(без назви)"
+
+msgid "Upvotes"
+msgstr "Голоси за"
+
+msgid "Downvotes"
+msgstr "Голоси проти"
+
+msgid "No authors yet."
+msgstr "Ще немає авторів."
+
+msgid "Loading"
+msgstr "Завантаження"
+
+msgid "%d topic"
+msgid_plural "%d topics"
+msgstr[0] "%d тема"
+msgstr[1] "%d теми"
+msgstr[2] "%d тем"
+
+msgid "%d answer"
+msgid_plural "%d answers"
+msgstr[0] "%d відповідь"
+msgstr[1] "%d відповіді"
+msgstr[2] "%d відповідей"
+
+msgid "%d comment"
+msgid_plural "%d comments"
+msgstr[0] "%d коментар"
+msgstr[1] "%d коментарі"
+msgstr[2] "%d коментарів"
+
+msgid "%d author"
+msgid_plural "%d authors"
+msgstr[0] "%d автор"
+msgstr[1] "%d автори"
+msgstr[2] "%d авторів"
+
+msgid "New topic"
+msgstr "Нова тема"
+
+msgid "All topics"
+msgstr "Усі теми"
+
+msgid "All comments"
+msgstr "Усі коментарі"
+
+msgid "Following"
+msgstr "Стеження"
+
+msgid "Comments"
+msgstr "Коментарі"
+
+msgid "New filter"
+msgstr "Новий фільтр"
+
+msgid "Drafts"
+msgstr "Чернетки"
+
+msgid "New category"
+msgstr "Нові категорії"
+
+msgid "Pages"
+msgstr "Сторінки"
+
+msgid "Design"
+msgstr "Дизайн"
+
+msgid "Settings"
+msgstr "Налаштування"
+
+msgid "Plugins"
+msgstr "Плагіни"
+
+msgid "Loading..."
+msgstr "Завантаження..."
+
+msgid "Welcome to your new Hub!"
+msgstr "Ласкаво просимо до вашого нового Хабу!"
+
+msgid "Hub is an app for organizing your knowledge base. Store your articles, answer questions, collect customer feedback and bug reports, discuss various topics — all in one place. A perfect self-help tool for your your customers."
+msgstr "Хаб — це програма для організації бази знань. Зберігайте ваші статті, відповідайте на питання, збирайте відгуки користувачів і звіти про помилки, обговорюйте різні теми — все в одному місці. Ідеальний інструмент самодопомоги для ваших клієнтів."
+
+msgid "Topic types"
+msgstr "Типи тем"
+
+msgid "Select what kind of information you would like to mix and manage in your knowledge hub:"
+msgstr "Оберіть, яку інформацію ви хотіли б бачити у вашій базі знань:"
+
+msgid "You will be able to customize this list later also."
+msgstr "Ви зможете також налаштувати цей список пізніше."
+
+msgid "Start using Hub app"
+msgstr "Почати використовувати додаток «Хаб»"
+
+msgid "or"
+msgstr "або"
+
+msgid "skip this setup"
+msgstr "пропустити ці налаштування"
+
+msgid "Show more comments"
+msgstr "Показати більше коментарів"
+
+msgid "comments"
+msgstr "коментарі"
+
+msgid "of %d"
+msgstr "з %d"
+
+msgid "Add comment"
+msgstr "Додати коментар"
+
+msgid "on topic"
+msgstr "по темі"
+
+msgid "delete"
+msgstr "видалити"
+
+msgid "restore"
+msgstr "відновити"
+
+msgid "Mark as solution"
+msgstr "Позначити як рішення"
+
+msgid "Unmark solution"
+msgstr "Зняти відмітку про рішення"
+
+msgid "comment deleted"
+msgstr "коментар видалено"
+
+msgid "comment restored"
+msgstr "коментар відновлено"
+
+msgid "in reply to"
+msgstr "у відповідь на"
+
+msgid "reply"
+msgstr "відповідь"
+
+msgid "%d vote"
+msgid_plural "%d votes"
+msgstr[0] "%d голос"
+msgstr[1] "%d голоси"
+msgstr[2] "%d голосів"
+
+msgid "Categories"
+msgstr "Категорії"
+
+msgid "Assign and close"
+msgstr "Призначити і закрити"
+
+msgid "close"
+msgstr "закрити"
+
+msgid "Move topics"
+msgstr "Перемістити теми"
+
+msgid "Hub"
+msgstr "Хаб"
+
+msgid "Select hub category"
+msgstr "Оберіть категорію хаба"
+
+msgid "General settings"
+msgstr "Загальні параметри"
+
+msgid "App icon counter"
+msgstr "Лічильник на іконці додатка"
+
+msgid "New topics published by other users"
+msgstr "Нові теми, опубліковані іншими користувачами"
+
+msgid "New comments"
+msgstr "Нові коментарі"
+
+msgid "Count new comments on my posts only"
+msgstr "Враховувати коментарі тільки до моїх постів"
+
+msgid "Notifications"
+msgstr "Повідомлення"
+
+msgid "Email me about new comments on topics I follow"
+msgstr "Надсилати мені по email нові коментарі у темах, за якими я стежу"
+
+msgid "Gravatar"
+msgstr "Gravatar"
+
+msgid "Enable Gravatar userpics"
+msgstr "Використовувати юзерпіки Gravatar"
+
+msgid "In case there were no Gravatar userpic uploaded"
+msgstr "У разі, якщо юзерпік Граватар не завантажено"
+
+msgid "Use default userpic"
+msgstr "Використовувати юзерпік за замовчуванням"
+
+msgid "(mystery-man) a simple, cartoon-style silhouetted outline of a person (does not vary by email hash)"
+msgstr "(людина-загадка) обриси людини у простому, мультяшному стилі (не залежить від хешу електронної пошти)"
+
+msgid "a geometric pattern based on an email hash"
+msgstr "геометричний малюнок на основі хешу електронної пошти"
+
+msgid "a generated 'monster' with different colors, faces, etc"
+msgstr "згенерований «монстр» із різними кольорами, обличчями, тощо"
+
+msgid "generated faces with differing features and backgrounds"
+msgstr "згенеровані обличчя з різними рисами та фонами"
+
+msgid "awesome generated, 8-bit arcade-style pixelated faces"
+msgstr "чудові згенеровані 8-битні піксельні обличчя у аркадному стилі"
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "Delete category"
+msgstr "Видалити категорію"
+
+msgid "Category name"
+msgstr "Назва категорії"
+
+msgid "Category summary"
+msgstr "Опис категорії"
+
+msgid "Frontend URL"
+msgstr "URL-адреса у фронтенді"
+
+msgid "Logo"
+msgstr "Логотип"
+
+msgid "Only PNG and JPEG images are allowed"
+msgstr "Дозволене завантаження тільки файлів з розширенням *.png та *.jpg"
+
+msgid "Category logo will be published on the hub frontend homepage. Logo size depend on design theme you are using. Most design themes will scale the logo down to about 50px wide."
+msgstr "Логотип категорії буде опубліковано на головній сторінці хабу. Розмір логотипу залежить від теми оформлення, яку ви використовуєте. Більшість тем оформлення буде масштабувати логотип до приблизно 50 пікселів в ширину."
+
+msgid "Category type"
+msgstr "Тип категорії"
+
+msgid "Category"
+msgstr "Категорія"
+
+msgid "You’ll be able to manually add new topics and move existing topics into this category."
+msgstr "Ви зможете вручну додавати нові теми і перенести існуючі теми до цієї категорію."
+
+msgid "Filter by topic type"
+msgstr "Фільтрувати за типом теми"
+
+msgid "This category will be automatically filled with topics of the selected type. Topic sort order will be defined by topic type kind."
+msgstr "Дану категорію буде автоматично заповнено темами вибраного типу. Порядок сортування тем буде визначено типом тем."
+
+msgid "Filter by tags"
+msgstr "Фільтрувати за тегами"
+
+msgid "This category will be automatically filled with topics with selected tags."
+msgstr "Дану категорію буде автоматично заповнено темами з вибраними тегами."
+
+msgid "This option is not available because this hub does not have any tags yet."
+msgstr "Цей параметр недоступний, тому що у цьому хабі немає тегів."
+
+msgid "Default view"
+msgstr "Вигляд за замовчуванням"
+
+msgid "Manual"
+msgstr "Керівництво"
+
+msgid "User selectable"
+msgstr "За вибором користувача"
+
+msgid "Newest topics on top"
+msgstr "Нові теми зверху"
+
+msgid "Top rated topics on top"
+msgstr "Найкращі за рейтингом теми зверху"
+
+msgid "Last updated topics on top"
+msgstr "Останні оновлені теми зверху"
+
+msgid "Unanswered topics on top"
+msgstr "Теми без відповіді зверху"
+
+msgid "Manual sort"
+msgstr "Ручне сортування"
+
+msgid "cancel"
+msgstr "відмінити"
+
+msgid "Don't delete topics"
+msgstr "Не видаляти теми"
+
+msgid "All topics will remain in the hub stream, and only the category will be deleted"
+msgstr "Усі теми залишаться в потоці хабу, буде видалено лише категорію"
+
+msgid "Move all topics asigned to this category (%d)"
+msgstr "Перемістити усі теми, призначені до цієї категорії (%d)"
+
+msgid "Select category"
+msgstr "Оберіть категорію"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Delete filter"
+msgstr "Вилучити фільтр"
+
+msgid "Filter name"
+msgstr "Назва фільтра"
+
+msgid "Icon"
+msgstr "Іконка"
+
+msgid "Visibility"
+msgstr "Видимість"
+
+msgid "Only me"
+msgstr "Тільки мені"
+
+msgid "Everybody"
+msgstr "Усім"
+
+msgid "Limit visibility only to the selected user groups"
+msgstr "Обмежити видимість тільки вибраною групою користувачів"
+
+msgid "Filter conditions"
+msgstr "Умови фільтру"
+
+msgid "Tags"
+msgstr "Теги"
+
+msgid "All"
+msgstr "Усі"
+
+msgid "Unanswered only"
+msgstr "Тільки без відповіді"
+
+msgid "Answered only"
+msgstr "Тільки з відповіддю"
+
+msgid "Hubs"
+msgstr "Хаби"
+
+msgid "Delete hub"
+msgstr "Видалити хаб"
+
+msgid "New hub"
+msgstr "Новий хаб"
+
+msgid "Hub name"
+msgstr "Назва хабу"
+
+msgid "Privacy"
+msgstr "Конфіденційність"
+
+msgid "Private"
+msgstr "Приватно"
+
+msgid "Topics are visible to backend users only."
+msgstr "Теми видно тільки користувачам бекенду."
+
+msgid "Public"
+msgstr "Публічно"
+
+msgid "Topics are published on the website:"
+msgstr "Теми опубліковано на вебсайті:"
+
+msgid "This hub is not visible on your sites now, because there were no routing rules added for Hub app with this particular hub. To make this hub visible on your site, <a href=\"%s\">create a route</a> for Hub app and this hub in your Site app routing settings."
+msgstr "Цей хаб наразі не видно на вашому сайті, тому що для додатку «Хаб» не налаштовано правил маршрутизації, пов&#39;язаних з конкретним хабом. Аби зробити цей хаб видимим на вашому сайті, <a href=\"%s\">створіть правило</a> для додатку «Хаб» та цього хабу у налаштуваннях структури сайта."
+
+msgid "Kudos"
+msgstr "Лайки"
+
+msgid "Enable kudos in this hub"
+msgstr "Включити лайки у цьому хабі"
+
+msgid "Kudos are a rating based on user activity in discussions and community, and on how it’s rated by other users."
+msgstr "Лайки — це рейтинг на базі активності користувача у обговореннях та спільноті, а також на основі оцінок іншими користувачами."
+
+msgid "Topic popularity index"
+msgstr "Індекс популярності теми"
+
+msgid "Overall user rating"
+msgstr "Загальний рейтинг користувача"
+
+msgid "Number of views"
+msgstr "Кількість переглядів"
+
+msgid "Number of votes"
+msgstr "Кількість голосів"
+
+msgid "Number of comments"
+msgstr "Кількість коментарів"
+
+msgid "Age (newest topics are most popular)"
+msgstr "Вік (найновіші теми користуються найбільшою популярністю)"
+
+msgid "Popularity index is a combined hidden topic parameter used for sorting topics in categories and search results."
+msgstr "Індекс популярності-це комбінований прихований параметр теми, що використовується для сортування тем у категоріях і результатах пошуку."
+
+msgid "Staff"
+msgstr "Персонал"
+
+msgid "List key users who participate in hub frontend discussions so their topics are marked with special badges."
+msgstr "Перерахуйте ключових користувачів, які беруть участь у публічних обговореннях у хабі, і їх буде відмічено спеціальною позначкою."
+
+msgid "User name"
+msgstr "Ім&#39;я користувача"
+
+msgid "Badge (role)"
+msgstr "Бейдж (роль)"
+
+msgid "Start typing user name..."
+msgstr "Почніть вводити ім&#39;я користувача..."
+
+msgid "Click “Save” button below to commit changes."
+msgstr "Натисніть на кнопку «Зберегти», аби підтвердити зміни."
+
+msgid "Access rights"
+msgstr "Права доступу"
+
+msgid "Access to this hub will be restricted to backend users only. Use Team app to customize user access rights to this hub."
+msgstr "Доступ до цього хабу буде обмежено лише користувачами бекенду. Використовуйте додаток «Команда», аби налаштувати права доступу до цього хабу."
+
+msgid "Hub color marker"
+msgstr "Колір хабу"
+
+msgid "None"
+msgstr "Немає"
+
+msgid "Backend only. All topics of this hub will be marked with the selected color. Recommended if you have multiple hubs."
+msgstr "Тільки бекенд. Усі теми цього хабу буде помічено обраним кольором. Рекомендується, якщо у вас декілька хабів."
+
+msgid "Allowed topic types"
+msgstr "Дозволені типи тем"
+
+msgid "All topic types"
+msgstr "Усі типи тему"
+
+msgid "Selected only"
+msgstr "Тільки обрані"
+
+msgid "The <strong>%d topics</strong> at hub %s. What should be done with these topics?"
+msgstr "У хабі %s <strong>%d тем</strong>. Що потребується зробити із цими темами?"
+
+msgid "Move topics to another topics hub"
+msgstr "Перемістити теми до іншого хабу"
+
+msgid "Delete permanently"
+msgstr "Видалити назавжди"
+
+msgid "Delete topic type"
+msgstr "Видалити тип тем"
+
+msgid "New topic type"
+msgstr "Новий тип теми"
+
+msgid "Type name"
+msgstr "Назва типу"
+
+msgid "Glyph"
+msgstr "Гліф"
+
+msgid "custom glyph"
+msgstr "користувальницький гліф"
+
+msgid "Or enter glyph image URL (image will be scaled to 32x32 px image)"
+msgstr "Або введіть URL-адресу зображення (зображення буде масштабовано до розміру 32х32 пікселі)"
+
+msgid "Functionality"
+msgstr "Функціональність"
+
+msgid "There are <strong>%d topics</strong> with %s type. By deleting this topic type you should either change type for all these topics or delete them."
+msgstr "Існує <strong>%d тем</strong> з типом %s. Видаляючи цей тип тем, ви також або зміните тип усіх цих тем, або видалите їх."
+
+msgid "Change type of these topics to"
+msgstr "Змінити тип цих тем на"
+
+msgid "Delete all %d topics permanently"
+msgstr "Назавжди видалити усі %d теми"
+
+msgid "There are no topics of %s type, so it can be easily deleted."
+msgstr "Не існує тем типу %s, тому його можна легко видалити."
+
+msgid "Voting"
+msgstr "Голосування"
+
+msgid "+1: Users can PLUS topics of this type"
+msgstr "+1: користувачі можуть ПЛЮСУВАТИ теми такого типу"
+
+msgid "-1: Users can MINUS topics of this type"
+msgstr "-1: користувачі можуть МІНУСУВАТИ теми такого типу"
+
+msgid "Commenting"
+msgstr "Коментування"
+
+msgid "Disabled"
+msgstr "Вимкнено"
+
+msgid "Allowed"
+msgstr "Дозволено"
+
+msgid "Badges"
+msgstr "Значки"
+
+msgid "Posts per page"
+msgstr "Записів на сторінці"
+
+msgid "Auto archive"
+msgstr "Автоматична архівація"
+
+msgid "Automatically archive topics after %s days of inactivity"
+msgstr "Автоматично архівувати теми після %s днів неактивності"
+
+msgid "Archived topics are available for viewing only and cannot be commented."
+msgstr "Архівні теми доступні тільки для перегляду і не можуть бути прокоментовані."
+
+msgid "Archived"
+msgstr "Архівовано"
+
+msgid "Commenting on answers"
+msgstr "Коментарі до відповідей"
+
+msgid "Answered"
+msgstr "Відповідь надано"
+
+msgid "Delete topic"
+msgstr "Видалити тему"
+
+msgid "Search topics"
+msgstr "Пошук по темах"
+
+msgid "Select"
+msgstr "Оберіть"
+
+msgid "Move"
+msgstr "Перемістити"
+
+msgid "Selected topics will be permanently deleted. Are you sure?"
+msgstr "Обрані теми буде видалено. Ви впевнені?"
+
+msgid "Cancel"
+msgstr "Відміна"
+
+msgid "Newest"
+msgstr "Найновіші"
+
+msgid "Popular"
+msgstr "Популярні"
+
+msgid "Updated"
+msgstr "Оновлено"
+
+msgid "Archive"
+msgstr "Архів"
+
+msgid "Category settings"
+msgstr "Параметри категорії"
+
+msgid "Customize filter"
+msgstr "Налаштувати фільтр"
+
+msgid "Hub settings"
+msgstr "Налаштування хабу"
+
+msgid "Saved"
+msgstr "Збережено"
+
+msgid "No new replies"
+msgstr "Немає нових відповідей"
+
+msgid "Follow"
+msgstr "Стежити"
+
+msgid "High priority"
+msgstr "Високий пріоритет"
+
+msgid "Low priority"
+msgstr "Низький пріоритет"
+
+msgid "no title"
+msgstr "без назви"
+
+msgid "by %s"
+msgstr "розроблено %s"
+
+msgid "Load more"
+msgstr "Навантаження більше"
+
+msgid "There are no topics in this view."
+msgstr "У цьому огляді немає тем."
+
+msgid "%d topics of %d"
+msgstr "%d тем з %d"
+
+msgid "Are you sure?"
+msgstr "Ви впевнені?"
+
+msgid "Select at least one topic"
+msgstr "Виберіть принаймні одну тему"
+
+msgid "%d new reply"
+msgid_plural "%d new replies"
+msgstr[0] "%d нові відповіді"
+msgstr[1] "%d new replies"
+msgstr[2] "%d нових відповідей"
+
+msgid "%d reply"
+msgid_plural "%d replies"
+msgstr[0] "%d відповідь"
+msgstr[1] "%d відповіді"
+msgstr[2] "%d відповідей"
+
+msgid "Priority"
+msgstr "Пріоритет"
+
+msgid "High"
+msgstr "Високий"
+
+msgid "Low"
+msgstr "Низький"
+
+msgid "Author"
+msgstr "Автор"
+
+msgid "Meta"
+msgstr "Мета"
+
+msgid "No meta parameters are defined for this topic."
+msgstr "Для цієї теми не призначено мета-параметрів."
+
+msgid "Edit meta"
+msgstr "Редагування мета"
+
+msgid "Topic title"
+msgstr "Назва теми"
+
+msgid "Public URL"
+msgstr "Загальнодоступна адреса URL"
+
+msgid "edit"
+msgstr "редагувати"
+
+msgid "Selected hub has no frontend."
+msgstr "У обраному хабі немає фронтенду."
+
+msgid "No tags assigned"
+msgstr "Немає призначених тегів"
+
+msgid "Separate tags with comma (,)."
+msgstr "Розділяйте теги комами (,)."
+
+msgid "Edit"
+msgstr "Редагувати"
+
+msgid "Send a notification about this topic"
+msgstr "Надсилати повідомлення про цю тему"
+
+msgid "Publish"
+msgstr "Опублікувати"
+
+msgid "Save draft"
+msgstr "Зберегти чернетку"
+
+msgid "To"
+msgstr "Для"
+
+msgid "Start typing user or user group name..."
+msgstr "Почніть вводити ім&#39;я користувача або назву групи користувачів..."
+
+msgid "Message"
+msgstr "Повідомлення"
+
+msgid "Cancel and back to editing mode"
+msgstr "Скасувати і повернутися до режиму редагування"
+
+msgid "Publish topic &amp; Send notification"
+msgstr "Опублікувати тему та надіслати повідомлення"
+
+msgid "Unpublish this topic?"
+msgstr "Зняти цю тему з публікації?"
+
+msgid "Unpublish"
+msgstr "Зняти з публікації"
+
+msgid "Title"
+msgstr "Назва"
+
+msgid "Meta description"
+msgstr "Мета опис"
+
+msgid "Meta keywords"
+msgstr "Ключові слова"
+
+msgid "Any changes you made will be lost if you leave."
+msgstr "Будь-які зроблені вами зміни буде втрачено, якщо ви залишите сторінку."
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Topic has been published and notifications have been sent!"
+msgstr "Тему було опубліковано і повідомлення були надіслані!"
+
+msgid "Edit topic"
+msgstr "Редагувати тему"
+
+msgid "Private hub topic"
+msgstr "Приватна тема хабу"
+
+msgid "Not following"
+msgstr "Без стеження"
+
+msgid "No comments yet"
+msgstr "Коментарів поки немає"
+
+msgid "%d follower"
+msgid_plural "%d followers"
+msgstr[0] "%d фоловер"
+msgstr[1] "%d фоловери"
+msgstr[2] "%d фоловерів"
+
+msgid "In just few words, tell us which question you had that this article did not answer?"
+msgstr "Розкажіть нам у декількох словах, на яке ваше питання не відповіла ця стаття?"
+
+msgid "valid answer"
+msgstr "правильна відповідь"
+
+msgid "remove anwsered badge"
+msgstr "видалити позначку «Відповідь надана»"
+
+msgid "Unanswered"
+msgstr "Без відповіді"
+
+msgid "Error when move"
+msgstr "Помилка при переміщенні"
+
+msgid "Error in adding comment"
+msgstr "Помилка під час додавання коментаря"
+
+msgid "Unknown parent comment"
+msgstr "Невідомий батьківський коментар"
+
+msgid "Unknown comment"
+msgstr "Невідомий коментар"
+
+msgid "Error occurs"
+msgstr "Виникає помилка"
+
+msgid "Category not found"
+msgstr "Категорію не знайдено"
+
+msgid "Topic not found"
+msgstr "Тему не знайдено"
+
+msgid "Comment text can not be left blank"
+msgstr "Введіть, будь ласка, коментар"
+
+msgid "My account"
+msgstr "Мій акаунт"
+
+msgid "My profile"
+msgstr "Мій профіль"
+
+msgid "%s follower"
+msgid_plural "%s followers"
+msgstr[0] "%s фоловер"
+msgstr[1] "%s фоловери"
+msgstr[2] "%s фоловерів"
+
+msgid "File could not be saved due to insufficient write permissions for the %s folder."
+msgstr "Файл не вдалося зберегти через недостатні права запису до папки «%s»."
+
+msgid "Failed to upload file %s."
+msgstr "Не вдалося завантажити файл %s."
+
+msgid "Someone suggested on how to improve your article"
+msgstr "Хтось вніс пропозицію щодо покращення вашої статті"
+
+msgid "Error when deleting"
+msgstr "Помилка при видаленні"
+
+msgid "Hub added"
+msgstr "Додано концентратор"
+
+msgid "Hub settings saved"
+msgstr "Налаштування хаба збережено"
+
+msgid "Last updated"
+msgstr "Нещодавно оновлені"
+
+msgid "Most followed"
+msgstr "Найбільше відстежує"
+
+msgid "Most commented"
+msgstr "Найбільш коментовані"
+
+msgid "Page"
+msgstr "Сторінка"
+
+msgid "Articles, guides, how-tos, tutorials and other materials that should be considered as static informational pages authored by a particular user."
+msgstr "Статті, гайди, інструкції, посібники та інші матеріали, які слід розглядати як статичні інформаційні сторінки, створені певним користувачем."
+
+msgid "Forum thread (discussion)"
+msgstr "Гілка форуму (обговорення)"
+
+msgid "A bug report is attached to a specific product version, and has a status"
+msgstr "Звіт про помилку прив&#39;язаний до конкретної версії продукту, і має статус"
+
+msgid "Question & Answers"
+msgstr "Питання та відповіді"
+
+msgid "Questions & Answers. The right topic type for getting user questions answered."
+msgstr "Питання та відповіді. Правильний тип теми для відповідей на питання користувачів."
+
+msgid "Feedback (+/-)"
+msgstr "Зворотній зв&#39;язок (+/-)"
+
+msgid "Ideas, bug reports, thank-yous and other feedback."
+msgstr "Ідеї, повідомлення про помилки, подяки та інші відгуки."
+
+msgid "Custom"
+msgstr "Користувальницький"
+
+msgid "Pending"
+msgstr "В очікуванні"
+
+msgid "Accepted"
+msgstr "Прийнято"
+
+msgid "Confirmed"
+msgstr "Підтверджено"
+
+msgid "Complete"
+msgstr "Виконано"
+
+msgid "Fixed"
+msgstr "Виправлено"
+
+msgid "Rejected"
+msgstr "Відхилено"
+
+msgid "No access"
+msgstr "Немає доступу"
+
+msgid "Read and comment"
+msgstr "Читати і коментувати"
+
+msgid "Read, comment, and publish new articles"
+msgstr "Читати, коментувати і публікувати нові статті"
+
+msgid "Full access"
+msgstr "Повний доступ"
+
+msgid "Homepage title <title>"
+msgstr "<title> головної сторінки"
+
+msgid "Homepage META Keywords"
+msgstr "Домашня сторінка ключові слова"
+
+msgid "Homepage META Description"
+msgstr "Домашня сторінка мета опис"
+
+msgid "Url is in use"
+msgstr "URL вже використовується"
+
+msgid "Article"
+msgstr "Стаття"
+
+msgid "A topic containing detailed description within its content"
+msgstr "Тема, що містить докладний опис"
+
+msgid "Question"
+msgstr "Питання"
+
+msgid "Users can post answers to this topic"
+msgstr "Користувачі можуть залишати відповіді у цій темі"
+
+msgid "Bug report"
+msgstr "Звіт про помилку"
+
+msgid "Idea"
+msgstr "Ідея"
+
+msgid "New idea suggestion"
+msgstr "Нова пропозиція"
+
+msgid "Thank you"
+msgstr "Дякуємо"
+
+msgid "Just a note with a thank you message"
+msgstr "Просто повідомлення з подякою"
+
+msgid "Your question title"
+msgstr "Заголовок вашого питання"
+
+msgid "Basic HTML is allowed: &lt;b&gt;, &lt;i&gt;, &lt;u&gt;, &lt;a&gt;, &lt;pre&gt;, &lt;img&gt;, &lt;blockquote&gt;"
+msgstr "Дозволено базовий HTML: &lt;b&gt;, &lt;i&gt;, &lt;u&gt;, &lt;a&gt;, &lt;pre&gt;, &lt;img&gt;, &lt;blockquote&gt;"
+
+msgid "No category"
+msgstr "Немає категорії"
+
+msgid "Popular tags"
+msgstr "Популярні теги"
+
+msgid "Submit question"
+msgstr "Надіслати запитання"
+
+msgid "Preview"
+msgstr "Попередній перегляд"
+
+msgid "Ask question"
+msgstr "Поставити питання"
+
+msgid "My topics"
+msgstr "Мої теми"
+
+msgid "Ask a question"
+msgstr "Поставити питання"
+
+msgid "Popular topics"
+msgstr "Популярні теми"
+
+msgid "Most recent"
+msgstr "Найсвіжіші"
+
+msgid "Add answer"
+msgstr "Додати відповідь"
+
+msgid "To add a comment please <a href=\"%s\">sign up</a> or <a href=\"%s\">login</a>"
+msgstr "Аби додати коментар, будь ласка, <a href=\"%s\">зареєструйтесь</a> або <a href=\"%s\">увійдіть</a>"
+
+msgid "Your name"
+msgstr "Ваше ім’я"
+
+msgid "log out"
+msgstr "вийти"
+
+msgid "Comment"
+msgstr "Як"
+
+msgid "%d thankyou"
+msgid_plural "%d thankyous"
+msgstr[0] "%d подяка"
+msgstr[1] "%d подяки"
+msgstr[2] "%d подяк"
+
+msgid "Error"
+msgstr "Помилка"
+
+msgid "The requested resource is not available."
+msgstr "Запитаний ресурс недоступний."
+
+msgid "New topics"
+msgstr "Нові теми"
+
+msgid "Last update"
+msgstr "Нещодавно оновлені"
+
+msgid "votes"
+msgstr "голоси"
+
+msgid "newest"
+msgstr "найновіші"
+
+msgid "Answers"
+msgstr "Відповіді"
+
+msgid "asked %s"
+msgstr "запитав %s"
+
+msgid "To add new topic please <a href=\"%s\">sign up</a> or <a href=\"%s\">log in</a>"
+msgstr "Аби додати нову тему, будь ласка, <a href=\"%s\">зареєструйтеся</a> або <a href=\"%s\">увійдіть</a>"
+
+msgid "Your topic title"
+msgstr "Ваш заголовок теми"
+
+msgid "Submit topic"
+msgstr "Відправити тему"
+
+msgid "Topics by %s"
+msgstr "Теми за %s"
+
+msgid "Solution"
+msgstr "Рішення"
+
+msgid "You are about to delete this record. Are you sure?"
+msgstr "Ви збираєтеся видалити цей запис. Ви впевнені?"
+
+msgid "<a href=\"http://www.webasyst.com/store/app/hub/\">Feedback software</a> by Webasyst"
+msgstr "<a href=\"http://www.webasyst.ru/store/app/hub/\">Додаток збору відгуків</a> від Webasyst"
+
+msgid "My answers"
+msgstr "Мої відповіді"
+
+msgid "Hub staff"
+msgstr "Співробітники хабу"
+
+msgid "Welcome to your new hub!"
+msgstr "Ласкаво просимо до вашого нового Хабу!"
+
+msgid "Start by <a href=\"%s\">writing a topic</a>."
+msgstr "Почніть зі <a href=\"%s\">створення теми</a>."
+
+msgid "%d kudo"
+msgid_plural "%d kudos"
+msgstr[0] "%d kudo"
+msgstr[1] "%d kudos"
+msgstr[2] "%d лайків"
+
+msgid "Posted"
+msgstr "Опубліковано"
+
+msgid "New answers will be sent to you by email"
+msgstr "Нові відповіді буде надіслано вам електронною поштою"
+
+msgid "%d more users are following this topic"
+msgstr "На %d більше користувачів стежать за цією темою"
+
+msgid "This topic is in the archive. Posting new comments is disabled."
+msgstr "Ця тема знаходиться в архіві. Розміщення нових коментарів вимкнено."
+
+msgid "Posting new comments is disabled for this topic."
+msgstr "Розміщення нових коментарів у цій темі вимкнено."
+
+msgid "New comments will be sent to you by email"
+msgstr "Нові коментарі буде надіслано вам електронною поштою"
+
+msgid "You are following this topic"
+msgstr "Ви стежите за цією темою"
+
+msgid "Unfollow"
+msgstr "Відписатися"
+
+msgid "To add a comment please <a href=\"%s\">sign up</a> or <a href=\"%s\">log in</a>"
+msgstr "Аби додати коментар, будь ласка, <a href=\"%s\">зареєструйтесь</a> або <a href=\"%s\">увійдіть</a>"
+
+msgid "Was this article helpful?"
+msgstr "Чи була ця стаття корисною?"
+
+msgid "Yes"
+msgstr "Так"
+
+msgid "No"
+msgstr "Ні"
+
+msgid "Thank you."
+msgstr "Дякуємо."
+
+msgid "In just few words, tell us what you did not like about this article?"
+msgstr "У кількох словах, розкажіть, що вам не подобається в цій статті?"
+
+msgid "Send"
+msgstr "Надіслати"
+
+msgid "(missing contact)"
+msgstr "(відсутній контакт)"
+
+msgid "Favorites"
+msgstr "Обране"
+
+msgid "ID"
+msgstr "Ідентифікатор"
+
+msgid "Created"
+msgstr "Створений"
+
+msgid "Unknown topic type"
+msgstr "Невідомий тип теми"
+
+msgid "No badge"
+msgstr "Без бейджика"
+
+msgid "Hi %s,"
+msgstr "Привіт, %s,"
+
+msgid "%s posted a new comment on <a href=\"%s\"><strong>%s</strong></a> topic you are following:"
+msgstr "%s опублікував коментар у темі <a href=\"%s\"><strong>%s</strong></a>, яку ви відслідковуєте:"
+
+msgid "Hi,"
+msgstr "Привіт,"
+
+msgid "Last comments"
+msgstr "Останні коментарі"
+
+msgid "Thank you for your feedback!"
+msgstr "Дякуємо за ваш відгук!"
+
+msgid "popular"
+msgstr "популярні"
+
+msgid "Number of topics in this hub: <strong>%d</strong>. By deleting this hub you can either move topics to another hub or delete them entirely."
+msgstr "Кількість тем у цьому розділі: <strong>%d</strong>. При видаленні цього хабу ви можете перемістити теми до іншого хабу або повністю видалити їх."
+
+msgid "Move topics to another hub"
+msgstr "Перемістити теми до іншого хабу"
+
+msgid "This hub does not contain any topics, so you can safely delete it. No topics will be affected."
+msgstr "Цей хаб не містить будь-яких тем, так що ви можете безпечно видалити його. Ніякі теми не буде порушено."
+
+msgid "Homepage default topic sort order"
+msgstr "Сортування за замовчуванням на головній сторінці"
+
+msgid "Settings successfully updated"
+msgstr "Налаштування успішно оновлено"
+
+msgid "Topics"
+msgstr "Теми"
+
+msgid "+1 vote for user’s topic gives +%s kudos"
+msgstr "+1 за тему користувача додає %s карми"
+
+msgid "+1 vote for user’s answer gives +%s kudos"
+msgstr "+1 голос за відповідь користувача дає %s карми"
+
+msgid "+1 vote for user’s comment gives +%s kudos"
+msgstr "+1 голос за коментар користувача, дає %s карми"
+
+msgid "My personal settings"
+msgstr "Мої особисті настройки"
+
+msgid "New comments on topics I follow"
+msgstr "Нові коментарі у темах, за якими я стежу"
+
+msgid "%d topics, %d answers, and %d comments"
+msgstr "%d тем, %d відповідей, and %d коментарів"
+
+msgid "This hub is not visible on your sites now, because there were no routing rules added for Hub app with this particular hub. To make this hub visible on your site, create a route using the form below or using <a href=\"%s\">Site app</a> routing settings."
+msgstr "Цей хаб наразі не видно на вашому сайті, тому що для додатку «Хаб» не налаштовано правил маршрутизації, пов&#39;язаних з конкретним хабом. Аби зробити цей хаб видимим на вашому сайті, створіть правило, використовуючи форму нижче, або через налаштування структури у додатку <a href=\"%s\">«Сайт»</a>."
+
+msgid "Specify the public URL for this new hub on your site:"
+msgstr "Вкажіть загальнодоступну URL-адресу на вашому сайти для цього нового хабу:"
+
+msgid "Do not publish this hub on the site just yet"
+msgstr "Поки не публікувати цей хаб на сайті"
+
+msgid "Frontend posting"
+msgstr "Публікація у фронтенді"
+
+msgid "Topics of this type can be added by frontend users"
+msgstr "Теми такого типу можуть бути додані користувачами фронтенду"
+
+msgid "support"
+msgstr "підтримка"
+
+msgid "[Incorrect video embed]"
+msgstr "[некоректна вставка відео]"
+
+msgid "published a topic"
+msgstr "опублікував тему"
+
+msgid "unpublished a topic"
+msgstr "зняв темі у публікації"
+
+msgid "modified a published topic"
+msgstr "змінив опубліковану тему"
+
+msgid "added a comment"
+msgstr "додав коментар"
+
+msgid "modified a comment"
+msgstr "змінив коментар"
+
+msgid "deleted a comment"
+msgstr "видалив коментар"
+
+msgid "restored a comment"
+msgstr "відновив коментар"
+
+msgid "Find the answer"
+msgstr "Знайти відповідь"
+
+msgid "All authors"
+msgstr "Усі автори"
+
+msgid "Replies"
+msgstr "Відповіді"
+
+msgid "In progress"
+msgstr "В процесі"
+
+msgid "My replies"
+msgstr "Мої відповіді"
+
+msgid "%s’s replies"
+msgstr "Відповіді %s"
+
+msgid "%s topics on top"
+msgstr "%s тем зверху"
+
+msgid "%s did not post any comments yet."
+msgstr "%s ще не залишав коментарів."
+
+msgid "You can not reply to a removed comment."
+msgstr "Ви не можете відповісти на видалений коментар."
+
+msgid "Delete category logo?"
+msgstr "Видалити логотип категорії?"
+
+msgid "Type selector is disabled since all topics in current view are of the same type."
+msgstr "Селектор типів відключено, так як усі теми в поточному вигляді мають однаковий тип."
+
+msgid "(%s hidden)"
+msgid_plural "<span></span>"
+msgstr[0] "(%s приховано)"
+msgstr[1] "<span></span>"
+msgstr[2] "<span></span>"
+
+msgid "Folder"
+msgstr "Папка"
+
+msgid "Default sort order"
+msgstr "Порядок сортування за замовчуванням"
+
+msgid "Manual sort for topics is not available in dynamic topic lists. If you want to activate the ability to sort topics, create a Folder category first."
+msgstr "Ручне сортування тем недоступне у динамічних списках тем. Якщо ви бажаєте мати змогу сортувати теми, спочатку створіть категорію для тем."
+
+msgid "Manual sort for topics is not available in this view because current sort order is set to <strong>%s</strong>. To activate the ability to sort topics in this category, set current sort order to “Manual sort”."
+msgstr "Ручне сортування тем недоступне в цьому поданні, оскільки поточний порядок сортування встановлено на <strong>%s</strong>. Аби активувати можливість сортування тем у цій категорії, встановіть поточний порядок сортування на \"Ручне сортування\"."
+
+msgid "Normal"
+msgstr "Нормальний"
+
+msgid "Visual"
+msgstr "Візуальний"
+
+msgid "Insert code block"
+msgstr "Вставити блок коду"
+
+msgid "Insert quote"
+msgstr "Вставити цитату"
+
+msgid "Insert"
+msgstr "Вставити"
+
+msgid "Posting new comments has been restricted for this topic."
+msgstr "Розміщення нових коментарів у цій темі обмежено."
+
+msgid "Please complete the initial <a href=\"%s\">setup</a> in app backend."
+msgstr "Виконайте, будь ласка, первинне <a href=\"%s\">налаштування</a> у бекенді додатку."
+
+msgid "Move all %d topics to"
+msgstr "Перемістити усі %d теми до"
+
+msgid "%username%"
+msgstr "%username%"
+
+msgid "Add reply"
+msgstr "Додати відповідь"
+
+msgid "Published"
+msgstr "Опубліковано"
+
+msgid "Stuff as set up in hub settings."
+msgstr "Як встановлено у налаштуваннях хабу."
+
+msgid "Categories of given hub. When $priority_topics is <em>true</em>, list of high-priority topics is returned for each category."
+msgstr "Категорії вказаного хабу. Коли значення $priority_topics — <em>true</em>, для кожної категорії буде повернено перелік тем з високим пріоритетом."
+
+msgid "Classic forum thread with plain comment list sorted chronologically."
+msgstr "Класична гілка форуму з простого списку коментарів, відсортованих у хронологічному порядку."
+
+msgid "Comment author"
+msgstr "Коментар автора"
+
+msgid "Topic author"
+msgstr "Автору теми"
+
+msgid "Upload image"
+msgstr "Завантажити зображення"
+
+msgid "<b>WYSIWYG editor may change your HTML code.</b><br><br>It is necessary for correct text formatting. Smarty code may be broken and outdated HTML tags may be replaced with modern ones.<br><br>Are you sure to switch to WYSIWYG editor?"
+msgstr "<b>Візуальний редактор може змінити ваш код HTML.</b><br><br>Це необхідно для коректного форматування тексту. Код Smarty може бути пошкоджено, а застарілі теги HTML — замінено сучастними.<br><br>Ви впевнені, що бажаєте переключитися на візуальний редактор?"
+
+msgid "Switch"
+msgstr "Переключити"
+
+msgid "Topic “<b>%s</b>” will be permanently deleted without the ability to recover. Delete?"
+msgstr "Тему «<b>%s</b>» буде видалено без можливості відновлення. Видалити?"
+
+msgid "User %s suggests that you improve your topic “<a href=\"%s\"><strong>%s</strong></a>” as follows:"
+msgstr "Користувач %s пропонує покращити тему “<a href=\"%s\"><strong>%s</strong></a>” наступним чином:"
+
+msgid "Custom parameters"
+msgstr "Користувальницькі параметри"
+
+msgid "Uploading..."
+msgstr "Завантаження..."
+
+msgid "Upload"
+msgstr "Завантажити"
+
+msgid "comment"
+msgstr "коментар"
+
+msgid "topics on top"
+msgstr "теми зверху"
+
+msgid "Notify subscribers about this topic"
+msgstr "Повідомити підписувачів про цю тему"
+
+msgid "Publish and notify subscribers"
+msgstr "Опублікувати і повідомити підписувачів"
+
+msgid "%s has posted new topic “<a href=\"%s\"><strong>%s</strong></a>” and invites you to take a look:"
+msgstr "%s створив нову тему“<a href=\"%s\"><strong>%s</strong></a>” та запрошує вас її переглянути:"
+
+msgid "Allowed actions for authorized website visitors"
+msgstr "Дії, дозволені авторизованим користувачам сайту"
+
+msgid "deletion of own topics"
+msgstr "видалення власних тем"
+
+msgid "editing of own topics"
+msgstr "редагування власних тем"

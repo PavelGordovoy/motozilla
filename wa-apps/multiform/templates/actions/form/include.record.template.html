@@ -1,0 +1,281 @@
+{function name="url_filter"}
+    {if !empty($string)}
+        {if multiformHelper::validateUrl($string)}
+            <a href='{$string|escape}' target='_blank'>{$string|escape}</a>
+        {else}
+            {$string|escape}
+        {/if}
+    {/if}
+{/function}
+
+{function name="get_cloned_fields" cloned_fields=[] sections=[] form_fields=[]}
+    {$td_gap_styles = "style='vertical-align:top;color:#000;width:60%;padding:3px 5px;text-align:left;background-color:transparent;'"}
+    {foreach $sections as $section}
+        {if (isset($cloned_fields[$section.id]))}
+            {$section_color = '#ccc'}
+            {if !empty($section.properties.color)}
+               {$section_color = $section.properties.color}
+            {/if}
+            <tr style="background:{$section_color}"><td {$td_styles} colspan="2">{if !empty($show_section_details)}[`Beginning of the`] {$section.title} #{$section.id}{/if}</td></tr>
+            {foreach $cloned_fields[$section.id] as $fields}
+                {$section_cloned_fields = []}
+                {if isset($fields._)}
+                   {$section_cloned_fields = $fields._}
+                {/if}
+
+                {call name="get_records" form_fields=array_intersect_key($form_fields, $section.all_childs) record_fields=$fields cloned_fields=$section_cloned_fields}
+
+                {if !$fields@last}
+                    <tr style="background:#ccc"><td {$td_gap_styles} colspan="2"></td></tr>
+                {/if}
+            {/foreach}
+            <tr style="background:{$section_color}"><td {$td_styles} colspan="2">{if !empty($show_section_details)}[`End of the`] {$section.title} #{$section.id}{/if}</td></tr>
+        {/if}
+    {/foreach}
+{/function}
+
+{function name="get_records" form_fields=[] record_fields=[] cloned_fields=[]}
+    {$private_field_access = multiformHelper::privateFieldAccess($form)}
+    {$active_section = 0}
+    {$opened_sections = []}
+    {foreach $form_fields as $key => $form_field}
+        {$field_id = $form_field.id}
+
+        {* Если секция закончилась *}
+        {if empty($form_field['additional']['section'])}{$active_section = 0}{/if}
+
+        {* Закрываем секцию в секции и проверяем наличие дублированных полей *}
+        {if ($opened_sections && !empty($form_field['additional']['section']) && $active_section !== (int) $form_field['additional']['section'])}
+            {$section = array_pop($opened_sections)}
+            {get_cloned_fields cloned_fields=$cloned_fields sections=[$section] form_fields=$form_fields}
+        {/if}
+        {* Если поле не принадлежит ни одной секции, значит можно закрывать все секции от начала до конца *}
+        {if ($opened_sections && empty($form_field['additional']['section']))}
+            {get_cloned_fields cloned_fields=$cloned_fields sections=$opened_sections form_fields=$form_fields}
+            {$opened_sections = []}
+        {/if}
+        {if ($form_field['type'] == 'section')}
+            {$opened_sections[] = $form_field}
+        {/if}
+        {if (!empty($form_field['additional']['section']) || $form_field['type'] == 'section')}
+            {if $form_field['type'] == 'section'}
+                {$active_section = (int) $key}
+            {else}
+                {$active_section = (int) $form_field['additional']['section']}
+            {/if}
+        {/if}
+
+        {if !isset($record_fields[$field_id]) || (isset($record_fields[$field_id]) && $record_fields[$field_id] == '') || ($form_field['private'] && !$private_field_access) || ($form_field.hidden && empty($show_hidden)) || $form_field.type == 'button'}{continue}{/if}
+        <tr style="background:#{if $c % 2 == 0}fcfcfc{else}f3f3f3{/if}">
+            {$r = $record_fields[$field_id]}
+            {if $form_field.type == 'checkbox' || $form_field.type == 'table_grid'}
+                {if !empty($form_field.option_fields)}
+                    {if $form_field.type == 'checkbox'}
+                        <th {$th_styles}>
+                            {$form_field.title|escape}
+                        </th>
+                        <td {$td_styles}>
+                            <ul style="padding-left: 15px; margin: 0;">
+                                {foreach $form_field.option_fields as $of}
+                                    {if isset($r[$of.id])}
+                                        <li>
+                                            {if $of.image}<img src="{multiformImage::getOptionImage($of.id, $form_field.id, $of.image, '50x50')}" alt="{if !empty($r[$of.id])}{$r[$of.id]|escape}{/if}" /> {/if}
+                                            {if !empty($r[$of.id])}{$r[$of.id]|escape}{/if}
+                                        </li>
+                                    {/if}
+                                {/foreach}
+                            </ul>
+                        </td>
+                    {else}
+                        {foreach $form_field.option_fields.statement as $of2}
+                            {if !$of2@first}<tr style="background:#{if $c % 2 == 0}fcfcfc{else}f3f3f3{/if}">{/if}
+                            <th {$th_styles}>
+                                {if !empty($form_field.options.customize_statement_keys)}{$of2.key|escape}{else}{$of2.value|escape}{/if}
+                            </th>
+                            <td {$td_styles}>
+                                {if $of2.image}<img src="{multiformImage::getOptionImage($of2.id, $form_field.id, $of2.image, '50x50')}" alt="{if !empty($r[$of2.id])}{$r[$of2.id]|escape}{/if}" />{/if}
+                                {if !empty($r[$of2.id])}{$r[$of2.id]|escape}{/if}
+                            </td>
+                            {$c = $c + 1}
+                            </tr>
+                        {/foreach}
+                        {continue}
+                    {/if}
+                {/if}
+            {elseif $form_field.type == 'formula'}
+                <th {$th_styles}>
+                    {$form_field.title|escape}
+                </th>
+                <td {$td_styles}>
+                    {if is_array($r)}
+                        {foreach $r as $checked_field => $fail_field}
+                            <div style='border:1px solid #ff0000;padding:10px;font-weight:bold;'>
+                                [`Checked value not equal to user value.`]
+                            </div>
+                            <div style="margin-top:5px"><span style='color:#aaa;'>[`User value`]:</span> {$fail_field|escape}</div>
+                            <div style="margin-top:5px"><span style='color:#aaa;'>[`Checked value`]:</span> {$checked_field|escape}</div>
+                        {/foreach}
+                    {else}
+                        {$r|escape}
+                    {/if}
+                </td>
+            {else}
+                <th {$th_styles}>
+                    {$form_field.title|escape}
+                </th>
+                <td {$td_styles}>
+                    {if $form_field.type == 'email'}
+                        <a href="mailto:{$r|escape}">{$r|escape}</a>
+                    {elseif $form_field.type == 'file'}
+                        <ul style="padding-left: 15px; margin: 0;">
+                            {foreach $r as $file}
+                                <li>
+                                    {if !isset($is_mail)}
+                                    <a title="[`Download`]" href="{$wa->getUrl('multiform/frontend/downloadFile', ['hash' => $file.hash, 'domain' => $domain], true)}">
+                                        {/if}
+                                        {$file.filename|escape}
+                                        {if !isset($is_mail)}
+                                    </a>
+                                    {/if}
+                                    {if !isset($is_mail)}
+                                        <a href="#/record/deleteFile/" data-hash="{$file.hash}" class="js-action" title="[`Delete file`]"><i class="icon16 no" style="vertical-align: middle;"></i></a>
+                                    {/if}
+                                </li>
+                            {/foreach}
+                        </ul>
+                    {elseif $form_field.type == 'radio'}
+                        {if is_array($r)}
+                            {foreach $r as $option_id => $r1}
+                                {if !empty($form_field.option_fields[$option_id].image)}
+                                    <img src="{multiformImage::getOptionImage($option_id, $form_field.id, $form_field.option_fields[$option_id].image, '50x50')}" alt="{$r1|escape}" />
+                                {/if}
+                                {$r1|escape}
+                                {break}
+                            {/foreach}
+                        {else}
+                            {$r|escape}
+                        {/if}
+                    {elseif $form_field.type == 'hidden'}
+                        {url_filter string=$r}
+                    {elseif is_array($r)}
+                        {foreach $r as $r1}
+                            {url_filter string=$r1}
+                            {break}
+                        {/foreach}
+                    {elseif $form_field.type == 'rating'}
+                        {$r|escape}
+                    {else}
+                        {url_filter string=$r}
+                    {/if}
+                </td>
+            {/if}
+        </tr>
+        {$c = $c + 1}
+    {/foreach}
+
+    {if ($opened_sections)}
+        {get_cloned_fields cloned_fields=$cloned_fields sections=$opened_sections form_fields=$form_fields}
+    {/if}
+{/function}
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr style="background:#fcfcfc">
+        <th colspan="2" style="width:100%;font-weight:bold;font-size:22px;color:#000;padding:0 10px 7px 0;text-align:right">{multiformHelper::formatRecordId($record.id, $form)}</th>
+    </tr>
+    {if !$record.status && empty($hide_infoblocks)}
+    <tr style="background:#fcfcfc">
+        <td colspan="2" style="width:100%;font-weight:bold;font-size:14px;color:#000;padding:0 10px 7px 0;">
+            <div style="border: 1px solid #ff0000;padding:10px;">[`Record is processing or failed. Be carefull about it's data`]</div>
+        </td>
+    </tr>
+    {/if}
+
+    {$c = 0}
+    {$th_styles = "style='vertical-align:top;color:#000;text-align:left;padding:8px 5px;background-color:transparent;'"}
+    {$td_styles = "style='vertical-align:top;color:#000;width:60%;padding:8px 5px;text-align:left;background-color:transparent;'"}
+
+    {if !empty($record.fields) || !empty($record.cloned_fields)}
+
+        {* Вывод записей формы *}
+        {get_records form_fields=$form.fields record_fields=$record.fields cloned_fields=$record.cloned_fields}
+
+        {* Дополнительные параметры, переданные в форму *}
+        {if !empty($record.fields[0])}
+            {foreach $record.fields[0] as $cp_ext => $cp}
+                <tr style="background:#{if $c % 2 == 0}fcfcfc{else}f3f3f3{/if}">
+                    <th {$th_styles}>
+                        {if !empty($custom_params[$cp_ext])}{$custom_params[$cp_ext]|escape}{else}{$cp_ext|escape}{/if}
+                    </th>
+                    <td {$td_styles}>
+                        {url_filter string=$cp}
+                    </td>
+                </tr>
+                {$c = $c + 1}
+            {/foreach}
+        {/if}
+
+   {else}
+        <div class="align-center">[`No records`]</div>
+    {/if}
+
+</table>
+{if empty($hide_infoblocks)}
+    {$contact_rights = $wa->user()->getRights('contacts')}
+    {$infoblock_style="style='border:1px solid #eee;background:#f5f5f5;padding:5px;height:55px;'"}
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr style="background:#fcfcfc">
+            <td style='padding:5px;text-align:center;'>
+                <div style="width: 150px;">
+                    <div {$infoblock_style}>
+                        <div style="font-size:10px;margin-top:5px">[`Created`]</div>
+                        <div style="margin:5px 0;font-weight:bold">{$record.create_datetime|wa_datetime:'humandate'}</div>
+                        <div style="font-size:10px">{$record.create_datetime|wa_datetime:'fulltime'}</div>
+                    </div>
+                    {if !empty($contact_rights['backend'])}
+                        <div style="padding:1px 5px;background:#dedede;font-size:90%;">
+                            {if !empty($contacts[$record.create_contact_id])}
+                                {if !isset($is_mail)}
+                                <a href='{$wa_backend_url}contacts/#/contact/{$record.create_contact_id}' title='{if $contacts[$record.create_contact_id].name}{$contacts[$record.create_contact_id].name|escape}{else}[`No name`]{/if}'>
+                                {/if}
+                                {if $contacts[$record.create_contact_id].name}{$contacts[$record.create_contact_id].name|escape}{else}[`No name`]{/if}
+                                {if !isset($is_mail)}
+                                </a>
+                                {/if}
+                            {else}[`Unknown`]{/if}
+                        </div>
+                    {/if}
+                </div>
+            </td>
+            <td style='padding:5px;text-align:center;'>
+                <div style='width:150px;border:1px solid #eee;background:#f5f5f5;padding:5px;height:68px;'>
+                    <div style="margin:15px 0 10px">[`IP Address`]</div>
+                    <div style="font-weight:bold;margin:10px 0">{$record.ip}</div>
+                </div>
+            </td>
+            {if $record.update_datetime}
+                <td style='padding:5px;text-align:center;'>
+                    <div style="width: 150px;">
+                        <div {$infoblock_style}>
+                            <div style="font-size:10px;margin-top:5px">[`Updated`]</div>
+                            <div style="margin:5px 0;font-weight:bold">{$record.update_datetime|wa_datetime:'humandate'}</div>
+                            <div style="font-size:10px">{$record.update_datetime|wa_datetime:'fulltime'}</div>
+                        </div>
+                        {if !empty($contact_rights['backend'])}
+                            <div style="padding:1px 5px;background:#dedede;font-size:90%;">
+                                {if !empty($contacts[$record.update_contact_id])}
+                                {if !isset($is_mail)}
+                                <a href='{$wa_backend_url}contacts/#/contact/{$record.update_contact_id}' title='{if $contacts[$record.update_contact_id].name}{$contacts[$record.update_contact_id].name|escape}{else}[`No name`]{/if}'>
+                                {/if}
+                                {if $contacts[$record.update_contact_id].name}{$contacts[$record.update_contact_id].name|escape}{else}[`No name`]{/if}
+                                {if !isset($is_mail)}
+                                </a>
+                                {/if}
+                                {elseif $record.update_datetime}[`Unknown`]{/if}
+                            </div>
+                        {/if}
+                    </div>
+                </td>
+            {/if}
+        </tr>
+    </table>
+{/if}

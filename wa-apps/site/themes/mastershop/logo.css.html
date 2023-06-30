@@ -1,0 +1,67 @@
+{strip}
+
+{$logo_wrap_width = '284px'}{if $theme_settings.logo_wrap_width}{$logo_wrap_width = $theme_settings.logo_wrap_width}{/if}
+{$logo_wrap_width_1100 = '230px'}{if $theme_settings.logo_wrap_width_1100}{$logo_wrap_width_1100 = $theme_settings.logo_wrap_width_1100}{/if}
+
+{$logo_img_max_width = '284px'}{if $theme_settings.logo_img_max_width}{$logo_img_max_width = $theme_settings.logo_img_max_width}{/if}
+{$logo_img_max_height = '70px'}{if $theme_settings.logo_img_max_height}{$logo_img_max_height = $theme_settings.logo_img_max_height}{/if}
+{$logo_img_max_width_1100 = '230px'}{if $theme_settings.logo_img_max_width_1100}{$logo_img_max_width_1100 = $theme_settings.logo_img_max_width_1100}{/if}
+{$logo_img_max_height_1100 = '50px'}{if $theme_settings.logo_img_max_height_1100}{$logo_img_max_height_1100 = $theme_settings.logo_img_max_height_1100}{/if}
+
+{$logo_text_size_font = '33px'}{if $theme_settings.logo_text_size_font}{$logo_text_size_font = $theme_settings.logo_text_size_font}{/if}
+{$logo_icon_size_font = '29px'}{if $theme_settings.logo_icon_size_font}{$logo_icon_size_font = $theme_settings.logo_icon_size_font}{/if}
+{$logo_text_size_font_1100 = '28px'}{if $theme_settings.logo_text_size_font_1100}{$logo_text_size_font_1100 = $theme_settings.logo_text_size_font_1100}{/if}
+{$logo_icon_size_font_1100 = '28px'}{if $theme_settings.logo_icon_size_font_1100}{$logo_icon_size_font_1100 = $theme_settings.logo_icon_size_font_1100}{/if}
+<style>
+        @media (min-width: 1101px) {
+            .header-logo{
+                width: {$logo_wrap_width};
+                margin: 0 2% 0 0;
+            }
+
+            .header-content{
+                width: calc(100% - {$logo_wrap_width} - 2%);
+            }
+        }
+
+        @media (max-width: 1100px) and (min-width: 651px) {
+            .header-logo{
+                width: {$logo_wrap_width_1100};
+                margin: 0 2% 0 0;
+            }
+
+            .header-content{
+                width: calc(100% - {$logo_wrap_width_1100} - 2%);
+            }
+        }
+
+        .header-logo img{
+            max-width: {$logo_img_max_width};
+            max-height: {$logo_img_max_height};
+        }
+
+        .header-logo__text{
+            font-size: {$logo_text_size_font};
+        }
+
+        .header-logo__icon{
+            font-size: {$logo_icon_size_font};
+        }
+
+        @media (max-width: 1100px){
+            .header-logo img{
+                max-width: {$logo_img_max_width_1100};
+                max-height: {$logo_img_max_height_1100};
+            }
+
+            .header-logo__text{
+                font-size: {$logo_text_size_font_1100};
+            }
+
+            .header-logo__icon{
+                font-size: {$logo_icon_size_font_1100};
+            }
+        }
+</style>
+
+{/strip}

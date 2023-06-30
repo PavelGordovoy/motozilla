@@ -1,0 +1,25 @@
+{strip}
+{if $theme_settings.info_message && $theme_settings.info_message_text && !$wa->cookie("info_massage_close_`$theme_settings.info_message_id`")}
+    <div class="info-massage js-info-massage" data-id="{$theme_settings.info_message_id}">
+        <div class="info-massage__wrap l-wrapper">
+            <div class="info-massage__content">
+                {if $theme_settings.info_message_icon}
+                    <div class="info-massage__image-block">
+                        <img class="info-massage__img" src="{$wa_theme_url}{$theme_settings.info_message_icon}" />
+                    </div>
+                {/if}
+                <div class="info-massage__text">
+                    {if isset($theme_settings.static_var_smarty) && !empty($theme_settings.static_var_smarty)}
+                        {eval var=$theme_settings.info_message_text}
+                    {else}
+                        {$theme_settings.info_message_text}
+                    {/if}
+                </div>
+            </div>
+        </div>
+        <span class="info-massage__close js-info-message-close">
+            <span class="info-massage__close-name">&times;</span>
+        </span>
+    </div>
+{/if}
+{/strip}

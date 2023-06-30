@@ -1,0 +1,1119 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst Photos 2.0.0.59 UA translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2012-06-27 11:16+0400\n"
+"PO-Revision-Date: \n"
+"Language: uk_UA\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Upload photo"
+msgstr "Завантажити фотографію"
+
+msgid "Show more photos"
+msgstr "Показати більше фотографій"
+
+msgid "Loading"
+msgstr "Завантаження"
+
+msgid "Select photos"
+msgstr "Виберіть фотографії"
+
+msgid "or drag photos here"
+msgstr "або перетягніть сюди фотографії"
+
+msgid "or"
+msgstr "або"
+
+msgid "cancel"
+msgstr "відмінити"
+
+msgid "Access to photos"
+msgstr "Доступ до фотографій"
+
+msgid "Public"
+msgstr "Публічні"
+
+msgid "Photos automatically appear in the public gallery"
+msgstr "Фотографії автоматично з&#39;являться у публічній галереї"
+
+msgid "Private"
+msgstr "Приватна"
+
+msgid "Only authorized users of the Webasyst Photos app can see these photos. Photos can be shared via sending a secure private link, or via embedded into external websites and apps"
+msgstr "Тільки авторизовані користувачі додатку \"Фотографії\" можуть побачити ці фотографії. Фотографії можуть бути поширені за допомогою відправки приватного посилання, або вбудовані в зовнішні веб-сайти і додатки"
+
+msgid "Privacy settings"
+msgstr "Параметри конфіденційності"
+
+msgid "Select user groups you want to have access to these photos:"
+msgstr "Виберіть групи користувачів, яким ви хочете дати доступ до цих фотографій:"
+
+msgid "Uncheck all groups to make photos visible to you only."
+msgstr "Зніміть всі групи, щоб зробити фотографії видимими тільки вам."
+
+msgid "There are no user groups thus you cant't manage access to photos"
+msgstr "Немає груп користувачів — таким чином, ви не можете керувати доступом до фотографій"
+
+msgid "Add to album"
+msgstr "Додати в альбом"
+
+msgid "Don't add to album"
+msgstr "Не додавати в альбом"
+
+msgid "Create new album"
+msgstr "Створити новий альбом"
+
+msgid "Name the album for this upload"
+msgstr "Назва альбому для завантаження"
+
+msgid "Start upload"
+msgstr "Розпочати завантаження"
+
+msgid "Stop upload"
+msgstr "Зупинити завантаження"
+
+msgid "Files uploaded with errors"
+msgstr "Файли завантажено з помилками"
+
+msgid "Failed to upload. Most probably, there were not enough memory to create thumbnails."
+msgstr "Не вдалося завантажити. Швидше за все, не вистачає пам&#39;яті для створення ескізів."
+
+msgid "The album list is empty."
+msgstr "Список альбомів порожній."
+
+msgid "Albums"
+msgstr "Альбоми"
+
+msgid "Private album"
+msgstr "Приватний альбом"
+
+msgid "(no name)"
+msgstr "(без назви)"
+
+msgid "%d photo"
+msgid_plural "%d photos"
+msgstr[0] "%d фотографія"
+msgstr[1] "%d фотографії"
+msgstr[2] "%d фотографій"
+
+msgid "Share"
+msgstr "Поділитися"
+
+msgid "Link / Embed"
+msgstr "Посилання / Розміщення"
+
+msgid "Blog post"
+msgstr "Запис у блозі"
+
+msgid "Organize"
+msgstr "Організувати"
+
+msgid "Stack"
+msgstr "Стек"
+
+msgid "Rate"
+msgstr "Оцінка"
+
+msgid "Assign tags"
+msgstr "Призначити теги"
+
+msgid "Remove from album"
+msgstr "Видалити з альбому"
+
+msgid "Manage access"
+msgstr "Управління доступом"
+
+msgid "Delete photos"
+msgstr "Видалити фотографії"
+
+msgid "Descriptions"
+msgstr "Опис"
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "Hide photos name"
+msgstr "Приховати назву фотографії"
+
+msgid "Select all photos"
+msgstr "Вибрати усі фотографії"
+
+msgid "Unselect all photos"
+msgstr "Відмінити вибір всіх фотографій"
+
+msgid "Photos in this list are sorted <strong>by upload time</strong>. Sort order cannot be set manually here."
+msgstr "Фото у цьому списку сортуються <Strong>за часом завантаження</strong>. Сортування може бути задане вручну."
+
+msgid "Photos in this list are sorted <strong>by rating</strong>. Sort order cannot be set manually here."
+msgstr "Фото у цьому списку сортуються <Strong>за оцінкою</strong>. Сортування може бути задане вручну."
+
+msgid "You do not have sufficient access rights to alter photos sort order in this list."
+msgstr "У вас недостатньо прав доступу, аби змінити порядок сортування фотографій у цьому списку."
+
+msgid "Welcome to your new photo gallery!"
+msgstr "Ласкаво просимо до вашої нової фотогалереї!"
+
+msgid "Start uploading photos by clicking the link above or by dragging selected photos anywhere on this page."
+msgstr "Почніть завантажувати фотографії за допомогою посилання вище, або перетягніть обрані фотографії на довільне місце на цій сторінці."
+
+msgid "Drag some photos anywhere on this page to start upload"
+msgstr "Перетягніть фотографії на довільне місце на цій сторінці, аби розпочати завантаження"
+
+msgid "← Back"
+msgstr "← Назад"
+
+msgid "Public album"
+msgstr "Публічний альбом"
+
+msgid "Album settings"
+msgstr "Налаштування альбому"
+
+msgid "Delete album"
+msgstr "Видалити альбом"
+
+msgid "Public link"
+msgstr "Публічне посилання"
+
+msgid "In this album"
+msgstr "У цьому альбомі"
+
+msgid "Private photo"
+msgstr "Приватне фото"
+
+msgid "This is a key photo for this album"
+msgstr "Це ключове фото для альбому"
+
+msgid "Private photos are not visible in public albums"
+msgstr "Приватні фотографії не відображаються у публічних альбомах"
+
+msgid "add description"
+msgstr "додати опис"
+
+msgid "make key photo"
+msgstr "зробити ключове фото"
+
+msgid "of %d"
+msgstr "з %d"
+
+msgid "There are no photos in this album."
+msgstr "У цьому альбомі немає фотографій."
+
+msgid "Rate photos"
+msgstr "Оцінити фото"
+
+msgid "Cancel"
+msgstr "Відмінити"
+
+msgid "New album"
+msgstr "Новий альбом"
+
+msgid "Album name"
+msgstr "Назва альбому"
+
+msgid "Frontend URL"
+msgstr "URL-адреса фронтенду"
+
+msgid "This album will not be visible in the public gallery because there are no routing rules for the Photos app in your website settings. Use Site app (Routing section) to settle Photos app on your website and to start publishing photos."
+msgstr "Цей альбом не буде видно у публічній галереї, тому що немає правил маршрутизації для додатку «Фотографії» в налаштуваннях сайту. Використовуйте додаток «Сайт» (розділ «Структура»), аби поселити додаток «Фото» на вашому сайті і почати публікувати фотографії."
+
+msgid "Visibility"
+msgstr "Видимість"
+
+msgid "Album is visible in the public gallery"
+msgstr "Альбом видно у публічній галереї"
+
+msgid "Album is visible only to authorized users of the Photos app, or by a private link"
+msgstr "Альбом видно тільки для авторизованих користувачів додатку «Фото», або по приватному посиланню"
+
+msgid "Select user groups you want to have access to this album"
+msgstr "Виберіть групи користувачів, яким ви хочете дати доступ до цього альбому"
+
+msgid "Uncheck all groups to make this album visible to you only"
+msgstr "Зніміть галочки з усіх груп, щоб зробити цей альбом видимим тільки для вас"
+
+msgid "There are no user groups in your Webasyst installation. Add groups in the Contacts app to be able to manage access to photos"
+msgstr "В установці фреймворку Webasyst немає груп користувачів. Додайти групи у програмі «Контакти», аби мати можливість керувати доступом до фотографій"
+
+msgid "Album type"
+msgstr "Тип альбому"
+
+msgid "Album"
+msgstr "Альбом"
+
+msgid "A static album for adding and arranging photos manually."
+msgstr "Статичний альбом для додавання та упорядкування фотографій вручну."
+
+msgid "Filter"
+msgstr "Фільтр"
+
+msgid "A dynamic album based on search criteria, e.g. rating or tags."
+msgstr "Динамічний альбом, заснований на критерії пошуку, наприклад, оцінках або тегах."
+
+msgid "Smart album"
+msgstr "Розумний альбом"
+
+msgid "<strong>%s</strong> album only"
+msgstr "Тільки альбоми <strong>%s</strong>"
+
+msgid "Dynamic albums filter photos only from albums they belong to."
+msgstr "Динамічні альбоми відображують фото тільки з тих альбомів, до яких вони належать."
+
+msgid "Rating"
+msgstr "Оцінка"
+
+msgid "is greater or equal"
+msgstr "більше або дорівнює"
+
+msgid "is lesser or equal"
+msgstr "менше або дорівнює"
+
+msgid "Tags"
+msgstr "Теги"
+
+msgid "Access"
+msgstr "Доступ до"
+
+msgid "public"
+msgstr "публічний"
+
+msgid "private"
+msgstr "приватний"
+
+msgid "Order"
+msgstr "Сортування"
+
+msgid "uploaded"
+msgstr "завантажений"
+
+msgid "top rated"
+msgstr "найкращі за рейтингом"
+
+msgid "Create album"
+msgstr "Створити альбом"
+
+msgid "Uncheck all groups to make this album visible to you only."
+msgstr "Зніміть прапорець з усіх груп, аби зробити цей альбом видимим тільки вам."
+
+msgid "Apply visibility change to all photos of this album"
+msgstr "Застосувати зміни у видимості до всіх фотографій цього альбому"
+
+msgid "Description"
+msgstr "Опис"
+
+msgid "Custom parameters"
+msgstr "Користувальницькі параметри"
+
+msgid "Optional set of custom <em>key=value</em> parameters which can be used within a frontend's theme template as <em>&#123;$album.key&#125;</em>. Each key=value pair should be on a separate line."
+msgstr "Додатковий набір <em>key=value</em> параметрів, які можуть бути використані в шаблоні теми дизайну як <em>&#123;$album.key&#125;</em>. Кожна пара key=value має бути на окремому рядку."
+
+msgid "selected photos"
+msgstr "вибрані фотографії"
+
+msgid "entire album"
+msgstr "увесь альбом"
+
+msgid "all tagged"
+msgstr "усі помічені"
+
+msgid "all rated"
+msgstr "усі оцінені"
+
+msgid "all listed"
+msgstr "усі перераховані"
+
+msgid "Share photos"
+msgstr "Поширити фотографії"
+
+msgid "Link"
+msgstr "Посилання"
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid "Smarty"
+msgstr "Smarty"
+
+msgid "For embedding into other Webasyst apps content."
+msgstr "Для вбудовування в інші додатки Вебасіст."
+
+msgid "Image URLs"
+msgstr "URL-адреса зображення"
+
+msgid "Image URLs of private photos are temporary. Permanent linking (embedding) is not recommended."
+msgstr "URL-адреси приватних фотографій є тимчасовими. Постійне використання посилання (вбудовування) не рекомендується."
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "Delete"
+msgstr "Видалити"
+
+msgid "Delete photo"
+msgstr "Видалити фотографію"
+
+msgid "Photo “%s” will be deleted without the ability to restore. "
+msgstr "Фото \"%s\" будуть видалені без можливості відновлення. "
+
+msgid "Unstack"
+msgstr "Розділити"
+
+msgid "Are your shure?"
+msgstr "Ви впевнені?"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "%d photo will be deleted without the ability to restore."
+msgid_plural "%d photos will be deleted without the ability to restore."
+msgstr[0] "%d фотографію буде видалено без можливості відновлення."
+msgstr[1] "%d фотографії буде видалено без можливості відновлення."
+msgstr[2] ""
+
+msgid "This will unstack %d photo."
+msgid_plural "This will unstack %d photos."
+msgstr[0] "Ця дія роз&#39;єднає %d фотографію."
+msgstr[1] "Ця дія роз&#39;єднає %d фотографії."
+msgstr[2] ""
+
+msgid "Share photo"
+msgstr "Поширити фото"
+
+msgid "Image URL"
+msgstr "URL-адреса зображення"
+
+msgid "Don't delete photos"
+msgstr "Не видаляти фотографії"
+
+msgid "All photos will remain in the photo stream, and only the album will be deleted"
+msgstr "Усі фотографії залишаться у фотопотоці, і тільки альбом буде видалено"
+
+msgid "Delete all photos stored in this album (%d)"
+msgstr "Видалити всі фотографії, що зберігаються в альбомі (%d)"
+
+msgid "Not available for smart albums."
+msgstr "Недоступно для смарт-альбомів."
+
+msgid "Delete sub albums too"
+msgstr "Видалити також вкладені альбоми"
+
+msgid "Visible in the public gallery"
+msgstr "Видно у публічній галереї"
+
+msgid "Visible only to authorized users of the Webasyst Photos app"
+msgstr "Видно тільки авторизованим користувачам додатку Webasyst «Фото»"
+
+msgid "Select user groups you want to have see this album"
+msgstr "Виберіть групи користувачів, яким ви хочете показувати цей альбом"
+
+msgid "No one album exists"
+msgstr "Не існує жодного альбому"
+
+msgid "Settings updated"
+msgstr "Налаштування оновлені"
+
+msgid "Thumbnails"
+msgstr "Ескізи"
+
+msgid "Thumbnails to be created when photo is uploaded"
+msgstr "Ескізи будуть створені при завантаженні фото"
+
+msgid "Square crop"
+msgstr "Квадратне кадрування"
+
+msgid "px"
+msgstr "пікс"
+
+msgid "Max"
+msgstr "Макс"
+
+msgid "Width"
+msgstr "Ширина"
+
+msgid "Height"
+msgstr "Висота"
+
+msgid "auto"
+msgstr "авто"
+
+msgid "delete"
+msgstr "видалити"
+
+msgid "Size"
+msgstr "Розмір"
+
+msgid "Rectangular crop"
+msgstr "Прямокутне кадрування"
+
+msgid "Add"
+msgstr "Додати"
+
+msgid "Custom-sized thumbnails"
+msgstr "Ескізи нестандартного розміру"
+
+msgid "Allow on demand generation of custom-sized thumbnails"
+msgstr "Дозволити генерацію ескізів нестандартного розміру за запитом"
+
+msgid "If enabled, frontend design theme can request Photos app to create custom-sized photo thumbnails on fly (any size in addition to the listed above, including cropped versions)"
+msgstr "Якщо увімкнено, тема дизайну може запитувати у додатку «Фото» створення ескізів нестандартного розміру на вимогу (любого розміру у додаток до наведених вище, у тому числі обрізаних версій)"
+
+msgid "Max thumbnail size"
+msgstr "Максимальний розмір ескізу"
+
+msgid "Limits the maximum thumbnail size that can be created on demand. Must not be less than 970 px."
+msgstr "Обмежує максимальний розмір ескізів, які можуть бути створені на вимогу. Не повинно бути менше, ніж 970 пікселів."
+
+msgid "Sharpen"
+msgstr "Збільшити різкість"
+
+msgid "Apply sharpening filter when creating thumbnails (recommended)"
+msgstr "Застосувати фільтр різкості при створенні ескізів (рекомендується)"
+
+msgid "Thumbnail quality"
+msgstr "Якість мініатюр"
+
+msgid "JPEG compression quality for photo thumbnails. From 0 (min quality, min file size) to 100 (max quality, max file size). 90 is recommended."
+msgstr "Якість JPEG стиснення для ескізів фото. Від 0 (хв., мін. розмір файлу) до 100 (максимальна якість, максимальний розмір файлу). 90 рекомендується."
+
+msgid "Originals"
+msgstr "Оригінали"
+
+msgid "Backup photo originals"
+msgstr "Резервне копіювання оригіналів фото"
+
+msgid "When enabled, every uploaded image file is automatically backed up and stored independently from photo full size version, which is modified when you edit it, e.g. rotate, apply watermarks or image visual effects. Originals are never updated. Pros: you have backups of all uploaded images. Cons: almost twice more disk space is required for storing original images than for storing only full size versions and thumbnails."
+msgstr "Коли цей параметр увімкнено, кожен завантажений файл зображення автоматично архівується і зберігається окремо від повнорозмірного фото, яке змінюється при редагуванні — наприклад, повертанні, застосуванні водяного знаку або візуальних ефектів на зображенні. Оригінали ніколи не змінюються. Плюси: у вас є резервні копії всіх завантажених зображень. Мінуси: для зберігання вихідних зображень потрібно майже в два рази більше місця, ніж для зберігання повнорозмірних версій та ескізів."
+
+msgid "@2x image thumbnail generation"
+msgstr "Формування ескізів @2х"
+
+msgid "Automatic @2x image thumbnail generation (recommended)"
+msgstr "Автоматичне формування ескізів @2х (рекомендується)"
+
+msgid "Enabling this option will allow automatic creation of image thumbnails on-fly for devices with high pixel density displays, e.g. Retina displays. Generating bigger images require more memory resources for image generation, requires more disk space for storing images, but significantly improves user experience on devices with high-end displays"
+msgstr "Включення цієї опції дозволить автоматичне створення мініатюр зображень за вимогою для пристроїв із високою щільністю пікселів — наприклад, дисплеїв Retina. Генерація великих зображень вимагає більше ресурсів пам&#39;яті для генерації зображення, потрібно більше дискового простору для зберігання зображень, але також значно покращується взаємодія із користувачем на пристроях з високоякісними екранами"
+
+msgid "Thumbnail quality @2x"
+msgstr "Якість ескізів @2х"
+
+msgid "JPEG compression quality for photo thumbnails. From 0 (min quality, min file size) to 100 (max quality, max file size). 70 is recommended."
+msgstr "Якість JPEG стиснення для ескізів фото. Від 0 (мінімальна якість, мінімальний розмір файлу) до 100 (максимальна якість, максимальний розмір файлу). Рекомендоване значення — 70."
+
+msgid "Click “Save” button below to apply this change."
+msgstr "Натисніть кнопку \"Зберегти\", аби застосувати ці зміни."
+
+msgid "Rate photo"
+msgstr "Оцініть фото"
+
+msgid "This photo is no longer in current dynamic album"
+msgstr "Ці фото більше не знаходяться в поточному динамічному альбомі"
+
+msgid "Photo is not in album"
+msgstr "Фото не в альбомі"
+
+msgid "Full size"
+msgstr "Повний розмір"
+
+msgid "Normal size"
+msgstr "Нормальний розмір"
+
+msgid "← Previous"
+msgstr "← Назад"
+
+msgid "Next →"
+msgstr "Далі →"
+
+msgid "edit"
+msgstr "редагувати"
+
+msgid "Private link"
+msgstr "Приватне посилання"
+
+msgid "Edit"
+msgstr "Редагувати"
+
+msgid "Left"
+msgstr "Вліво"
+
+msgid "Right"
+msgstr "Вправо"
+
+msgid "Separate tags with comma (,)"
+msgstr "Розділяйте теги комами (,)"
+
+msgid "Popular tags"
+msgstr "Популярні теги"
+
+msgid "uploaded on"
+msgstr "завантажено в"
+
+msgid "Dimensions"
+msgstr "Розміри"
+
+msgid "Original image"
+msgstr "Оригінальне зображення"
+
+msgid "Revert to original"
+msgstr "Повернутися до оригіналу"
+
+msgid "Camera"
+msgstr "Камера"
+
+msgid "ISO"
+msgstr "ISO"
+
+msgid "Shutter"
+msgstr "Затвор"
+
+msgid "Aperture"
+msgstr "Діафрагма"
+
+msgid "Focal length"
+msgstr "Фокусна відстань"
+
+msgid "Taken"
+msgstr "Знято"
+
+msgid "Remove tags"
+msgstr "Видалити теги"
+
+msgid "Private photos selected"
+msgstr "Обрані приватні фото"
+
+msgid "Embed anyway"
+msgstr "Вбудувати у будь-якому випадку"
+
+msgid "Photo downloaded by"
+msgstr "Фото завантажені"
+
+msgid "Upload photos"
+msgstr "Завантажити фотографії"
+
+msgid "Photostream"
+msgstr "Фотопоток"
+
+msgid "Rated"
+msgstr "Оцінені"
+
+msgid "Create an album using the green icon above."
+msgstr "Створіть альбом, використовуючи зелену іконку вгорі."
+
+msgid "Settings"
+msgstr "Параметри"
+
+msgid "Plugins"
+msgstr "Плагіни"
+
+msgid "Apps"
+msgstr "Додатки"
+
+msgid "Photos"
+msgstr "Фото"
+
+msgid "Unsaved changes will be lost if you leave this page now. Are you sure?"
+msgstr "Незбережені зміни будуть втрачені, якщо ви залишите цю сторінку зараз. Ви впевнені?"
+
+msgid "Please select at least one album"
+msgstr "Виберіть, будь ласка, принаймні один альбом"
+
+msgid "add a tag"
+msgstr "додати тег"
+
+msgid "Please select at least one tag"
+msgstr "Виберіть, будь ласка, принаймні один тег"
+
+msgid "Please select at least two photos"
+msgstr "Оберіть, будь ласка, як мінімум дві фотографії"
+
+msgid "Please select at least one photo"
+msgstr "Виберіть, будь ласка, хоча б одну фотографію"
+
+msgid "You don't have sufficient access rights"
+msgstr "У вас недостатньо прав доступу"
+
+msgid "This will reset all changes you applied to the image after upload, and will restore the image to its original. Are you sure?"
+msgstr "Це скине усі зміни, застосовані до зображення і поверне зображення до оригінального стану. Ви впевнені?"
+
+msgid "Themes"
+msgstr "Теми"
+
+msgid "Design"
+msgstr "Дизайн"
+
+msgid "Pages"
+msgstr "Сторінки"
+
+msgid "subtitle"
+msgstr "підзаголовок"
+
+msgid "Edit title..."
+msgstr "Редагувати назву..."
+
+msgid "Saving"
+msgstr "Збереження"
+
+msgid "Saved"
+msgstr "Збережено"
+
+msgid "Upload photos (%d)"
+msgstr "Завантажити фотографії (%d)"
+
+msgid "Empty result"
+msgstr "Порожній результат"
+
+msgid "Files with extensions *.gif, *.jpg, *.jpeg, *.png are allowed only."
+msgstr "Допускаються тільки файли з розширеннями .gif, .jpg, .jpeg, .png."
+
+msgid "clear"
+msgstr "очистити"
+
+msgid "The insufficient file write permissions for the %s folder."
+msgstr "Не вдалося зберегти файл через недостатні права запису до папки %s."
+
+msgid "Incorrect image"
+msgstr "Некоректне зображення"
+
+msgid "Database error"
+msgstr "Помилка бази даних"
+
+msgid "out of %d selected"
+msgid_plural "out of %d selected"
+msgstr[0] "з %d обраної"
+msgstr[1] "з %d обраних"
+msgstr[2] ""
+
+msgid "because you don't have sufficient access rights"
+msgstr "тому що у вас недостатньо прав доступу"
+
+msgid "Save error"
+msgstr "Помилка збереження"
+
+msgid "My account"
+msgstr "Мій акаунт"
+
+msgid "My profile"
+msgstr "Мій профіль"
+
+msgid "Page not found"
+msgstr "Сторінку не знайдено"
+
+msgid "Choose rate"
+msgstr "Обрати оцінку"
+
+msgid "Are you sure to delete photo?"
+msgstr "Ви впевнені, що хочете видалити фотографію?"
+
+msgid "Uploaded %d photo"
+msgid_plural "Uploaded %d photos"
+msgstr[0] "Завантажено %d фотографію"
+msgstr[1] "Завантажено %d фотографії"
+msgstr[2] ""
+
+msgid "Photo not found"
+msgstr "Фото не знайдене"
+
+msgid "Can't move photo"
+msgstr "Неможливо перемістити фото"
+
+msgid "Unknown album"
+msgstr "Невідомий альбом"
+
+msgid "Can't update album: unknown field"
+msgstr "Неможливо оновити альбом: невідоме поле"
+
+msgid "Parent album is private"
+msgstr "Батьківський альбом є приватним"
+
+msgid "Parent album is smart"
+msgstr "Батьківський альбом є розумним"
+
+msgid "URL is in use"
+msgstr "URL-адреса вже використовується"
+
+msgid "Unknown size"
+msgstr "Невідомий розмір"
+
+msgid "Photo doesn't exists"
+msgstr "Фото не існує"
+
+msgid "Access denied"
+msgstr "Доступ заборонено"
+
+msgid "Not choosen any photos"
+msgstr "Не вибрано жодної фотографії"
+
+msgid "Empty photo list"
+msgstr "Порожній список фото"
+
+msgid "Stack is empty"
+msgstr "Стек порожній"
+
+msgid "Unknown photo"
+msgstr "Невідоме фото"
+
+msgid "Tag not found"
+msgstr "Тег не знайдено"
+
+msgid "on"
+msgstr "на"
+
+msgid "All photos"
+msgstr "Всі фотографії"
+
+msgid "Tagged “%s”"
+msgstr "З міткою «%s»"
+
+msgid "Uploaded by"
+msgstr "Завантажені"
+
+msgid "Editors’ choice"
+msgstr "Вибір редакції"
+
+msgid "Can upload photos and create new albums"
+msgstr "Може завантажувати фотографії і створювати нові альбоми"
+
+msgid "Can edit and delete photos and albums uploaded by other users"
+msgstr "Може редагувати і видаляти фотографії та альбоми, завантажені іншими користувачами"
+
+msgid "created a new photo album"
+msgstr "створив новий фотоальбом"
+
+msgid "deleted photo album"
+msgstr "видалив фотоальбом"
+
+msgid "uploaded photos"
+msgstr "завантажив фотографії"
+
+msgid "moved photo to another album"
+msgstr "перемістив фото у інший альбом"
+
+msgid "grouped photos"
+msgstr "згрупував фотографії"
+
+msgid "ungrouped photos"
+msgstr "роз&#39;єднав фото"
+
+msgid "deleted photos"
+msgstr "видалив фотографії"
+
+msgid "rated photos"
+msgstr "оцінив фотографії"
+
+msgid "edited photos"
+msgstr "відредагував фотографії"
+
+msgid "reverted to original photo"
+msgstr "скинув до вихідної фотографії"
+
+msgid "<br>Photo URLs: with prefix 'photo' <strong>/photo/photo_url/</strong>, e.g. /photo/DSC_2051/<br>Album URLs: without prefix 'album' <strong>/&lt;full_path_to_album&gt;/</strong>, e.g. /travel/france/2010/"
+msgstr "<br>URL фото: з префіксом “photo” <strong>/photo/photo_url/</strong>, наприклад: /photo/DSC_2051/<br>URL альбомів: без префіксу “album” <strong>/&lt;повний_шлях_до_альбому&gt;/</strong>, наприклад: /travel/france/2010/"
+
+msgid "<br>Photo URLs: without prefix 'photo' <strong>/photo_url/</strong>, e.g. /DSC_2051/<br>Album URLs: with prefix 'album' <strong>/album/&lt;full_path_to_album&gt;/</strong>, e.g. /album/travel/france/2010/"
+msgstr "<br>URL фото: без префіксу “photo” <strong>/photo_url/</strong>, наприклад: /DSC_2051/<br>URL альбомів: з префіксом “album” <strong>/album/&lt;повний_шлях_до_альбому&gt;/</strong>, наприклад: /album/travel/france/2010/"
+
+msgid "Rendered HTML block of links to albums which current photo belongs to"
+msgstr "HTML-блок з кодом посилань на альбоми, якім належить поточне фото"
+
+msgid "Rendered HTML block of current photo author info"
+msgstr "HTML-блок з інформацією про автора поточного фото"
+
+msgid "URLs"
+msgstr "URL-адреси"
+
+msgid "Without /album/"
+msgstr "Без /album/"
+
+msgid "With /album/"
+msgstr "З /album/"
+
+msgid "Homepage &lt;title&gt;"
+msgstr "&lt;Title&gt; головної сторінки"
+
+msgid "As specified"
+msgstr "Як зазначено"
+
+msgid "Homepage META Keywords"
+msgstr "META Keywords головної сторінки"
+
+msgid "Homepage META Description"
+msgstr "META Description головної сторінки"
+
+msgid "Photo album id. Other elements of <em>$album</em> available in this template are listed below"
+msgstr "ID фотоальбому. Інші елементи з <em>$album</em>, що доступні у цьому шаблоні, перераховані нижче"
+
+msgid "The way to use album custom parameters which can be set for every individual album in its settings (<em>key=value</em> format)"
+msgstr "Спосіб використовувати користувальницькі параметри альбому, які можуть бути налаштовані для кожного альбому окремо (формат <em>key=value</em>)"
+
+msgid "Core content loaded according to the requested resource: an album, a photo, a page, etc."
+msgstr "Основний контент, завантажений за даними запитаного ресурсу: альбом, фото, сторінка і т. д."
+
+msgid "Photo id. Other elements of <em>$photo</em> available in this template are listed below"
+msgstr "ID фотографії. Інші елементи <em>$photo</em>, що доступні у шаблоні, перераховані нижче"
+
+msgid "Conditional! Available only if current context of photo is album. Below are describe keys of this param"
+msgstr "Обумовлений! Доступно тільки, якщо поточний контекст фотографії — альбом. Нижче описано ключі для цього параметру"
+
+msgid "URL of next photo in the photo stream"
+msgstr "URL-адреса наступного фото у фотопотоці"
+
+msgid "Rendered photo stream navigation widget"
+msgstr "Створено віджет навігації по фотострічці"
+
+msgid "Rendered HTML block of current photo tags"
+msgstr "Блок HTML із поточними тегами фото"
+
+msgid "Rendered HTML block of current photo EXIF data"
+msgstr "Блок HTML із даними EXIF поточного фото"
+
+msgid "Available vars are listed in the cheat sheet for photo.html template"
+msgstr "Доступні змінні наведені у шпаргалці для шаблону photo.html"
+
+msgid "Returns the entire album tree as an array (<em>return_html = false</em>) or as an pre-rendered HTML (<em>return_html = true</em>). <em>custom_params = true</em> will include album custom parameters into the output."
+msgstr "Повертає все дерево альбому у вигляді масиву ((<em>return_html = false</em>), або як зформований HTML (<em>return_html = true</em>). <em>custom_params = true</em> включить користувальницькі параметри альбому до виводу."
+
+msgid "Returns sub albums by <em>parent_album_id</em>. If <em>parent_album_id</em> is empty, root albums will be returned."
+msgstr "Повертає вкладені альбоми по <em>parent_album_id</em>. Якщо <em>parent_album_id</em> порожній, будуть повернуті кореневі альбоми."
+
+msgid "Returns photo by id (<em>photo_id</em>) as an array with the following structure: (<em>\"id\"</em>, <em>\"name\"</em>, <em>\"description\"</em>, <em>\"ext\"</em>, <em>\"size\"</em>, <em>\"type\"</em>, <em>\"rate\"</em>, <em>\"width\"</em>, <em>\"height\"</em>, <em>\"contact_id\"</em>, <em>\"upload_datetime\"</em>, <em>\"edit_datetime\"</em>, <em>\"status\"</em>, <em>\"hash\"</em>, <em>\"url\"</em>, <em>\"parent_id\"</em>, <em>\"stack_count\"</em>, <em>\"sort\"</em>, <em>\"thumb_%size%\"</em>). Optional <em>size</em> parameter can be used to fetch particular thumbnail size: should be provided in pixels, or as one of the predefined values: <em>\"big\"</em> for 970, <em>\"middle\"</em> for 750, <em>\"thumbs\"</em> for 200x0, <em>\"crop\"</em> for 96x96"
+msgstr "Повертає фото по ID (<em>photo_id</em>) у вигляді масиву із наступною структурою: (<em>\"id\"</em>, <em>\"name\"</em>, <em>\"description\"</em>, <em>\"ext\"</em>, <em>\"size\"</em>, <em>\"type\"</em>, <em>\"rate\"</em>, <em>\"width\"</em>, <em>\"height\"</em>, <em>\"contact_id\"</em>, <em>\"upload_datetime\"</em>, <em>\"edit_datetime\"</em>, <em>\"status\"</em>, <em>\"hash\"</em>, <em>\"url\"</em>, <em>\"parent_id\"</em>, <em>\"stack_count\"</em>, <em>\"sort\"</em>, <em>\"thumb_%size%\"</em>). Додатковий параметр <em>size</em> можна використати, аби отримати ескіз довільного розміру, він має бути зазначений у пікселях, або як одне із попередньо визначених значень: <em>\"big\"</em> для 970, <em>\"middle\"</em> для 750, <em>\"thumbs\"</em> для 200x0, <em>\"crop\"</em> для 96x96"
+
+msgid "Returns photo list array by search criteria, e.g. <em>\"tag/vacations\"</em>, <em>\"album/12\"</em>, <em>\"id/1,5,7\"</em>. <em>size</em> parameter indicates thumbnail size. <em>limit</em> parameter is MySQL-like: can be either a number (max number of photos to be returned) or a pair of offset, limit (start from and the max number of records to be returned)"
+msgstr "Повертає перелік масиву фото за критеріями пошуку, наприклад: <em>\"tag/vacations\"</em>, <em>\"album/12\"</em>, <em>\"id/1,5,7\"</em>. Параметр <em>size</em> визначає розмір ескізу. Параметр <em>limit</em> схожий на MySQL: він може бути числом (повертається максимальна кількість фото), або парою offset, limit (звідки почати і яку максимальну кількість записів повернути)"
+
+msgid "Returns entire tag list as an array with the following structure: (<em>\"id\"</em>, <em>\"name\"</em>, <em>\"count\"</em>, <em>\"size\"</em>, <em>\"opacity\"</em>)"
+msgstr "Повертає увесь список тегів як масив з наступною структурою: (<em>\"id\"</em>, <em>\"name\"</em>, <em>\"count\"</em>, <em>\"size\"</em>, <em>\"opacity\"</em>)"
+
+msgid "Latest uploaded photos"
+msgstr "Останні завантажені фотографії"
+
+msgid "Start by <a href=\"%s\">uploading photos</a> in your gallery backend."
+msgstr "Почніть із <a href=\"%s\">завантаження фотографій</a> у бекенд галерей."
+
+msgid "Load more"
+msgstr "Показати ще"
+
+msgid "of %d photo"
+msgid_plural "of %d photos"
+msgstr[0] "з %d обраної"
+msgstr[1] "з %d обраних"
+msgstr[2] ""
+
+msgid "Public link:"
+msgstr "Публічне посилання:"
+
+msgid "This photo is private"
+msgstr "Це приватне фото"
+
+msgid "Plugin %s is installed and working."
+msgstr "Плагін %s встановлений і працює."
+
+msgid "No configuration options are available for this plugin."
+msgstr "Цей плагін не надає можливості зміни налаштувань."
+
+msgid "Unknown plugin"
+msgstr "Невідомий плагін"
+
+msgid "No plugins installed"
+msgstr "Немає встановлених плагінів"
+
+msgid "Plugin order defines the order they are executed. Sort plugin list to change the order."
+msgstr "Порядок сортування плагінів налаштовується перетягуванням і визначає порядок їх підключення."
+
+msgid "Loading..."
+msgstr "Завантаження..."
+
+msgid "Static album which allows adding and arranging photos in manually"
+msgstr "Статичний альбом, який дозволяє додавати і організовувати фотографії вручну"
+
+msgid "Dynamic album based on search criteria, e.g. rating, album hierarchy, tags"
+msgstr "Динамічний альбом, заснований на критерії пошуку — наприклад, оцінках, ієрархії альбомів, тегам"
+
+msgid "Optional set of custom <em>key=value</em> parameters which can be used within a frontend's theme template as <em>&#123;$album.key&#125;</em>. Each key=value pair should be on a separate line"
+msgstr "Додатковий набір <em>key=value</em> параметрів, які можуть бути використані у шаблоні теми дизайну як <em>&#123;$album.key&#125;</em>. Кожна пара key=value має бути на окремому рядку"
+
+msgid "Image size"
+msgstr "Розмір зображення"
+
+msgid "This album is private"
+msgstr "Цей альбом є приватним"
+
+msgid "Photo is visible in the public gallery"
+msgstr "Фото видно у публічній галереї"
+
+msgid "Album is visible only to authorized users of the Webasyst Photos app"
+msgstr "Альбом видно тільки зареєстрованим користувачам бекенду додатку Webasyst «Фото»"
+
+msgid "Only authorized users of the Webasyst Photos app can see these photos. Photos can be shared via sending a secure private link, or via embedded into external websites and apps."
+msgstr "Тільки авторизовані користувачі додатку \"Фотографії\" можуть побачити ці фотографії. Фотографії можуть бути поширені за допомогою відправки приватного посилання, або вбудовані у зовнішні веб-сайти і додатки."
+
+msgid "Uncheck all groups to make photos visible to you only"
+msgstr "Зніміть усі прапорці, аби зробити фотографії видимими тільки вам"
+
+msgid "Please select at least two photo"
+msgstr "Оберіть як мінімум два фото, будь ласка"
+
+msgid "Next"
+msgstr "Далі"
+
+msgid "Uploaded by "
+msgstr "Завантажено "
+
+msgid "Rendered html block of links' to album in where is curret photo"
+msgstr "Блок HTML з посиланнями на альбом, в якому знаходиться поточне фото"
+
+msgid "Rendered html block of photo's author info"
+msgstr "Створено блок HTML з інформацією про автора фото"
+
+msgid "Variant 1"
+msgstr "Варіант 1"
+
+msgid "Default"
+msgstr "За замовчуванням"
+
+msgid "Variant 2"
+msgstr "Варіант 2"
+
+msgid "Get single photo by numerical id (photo_id) with specified size (numerical or size name e.g. big, middle, crop)"
+msgstr "Отримати одну фотографію по числовому ідентифікатору (photo_id) з указаним розміром (числом або словом, наприклад, big, middle, crop)"
+
+msgid "Get photos list by search conditions e.g. tag/my_tag, album/12, id/1,5,7"
+msgstr "Отримати список фотографій за умовою пошуку, наприклад: tag/my_tag, album/12, id/1,5,7"
+
+msgid "One or more optional custom params, setted by album settings in backend in key-value format, i.e. available like {$album.key}"
+msgstr "Один або кілька додаткових параметрів, налаштованих у бекенді альбому у форматі key-value, наприклад: available like {$album.key}"
+
+msgid "Core content loaded according to the requested resource: a blog post, post stream, a page, etc."
+msgstr "Основний вміст, завантажений у відповідності до запиту користувача: запис блогу, потік записів, сторінка і т.ін."
+
+msgid "Optional var. Available only if current context of photo is album. Below are describe keys of this param"
+msgstr "Необов&#39;язкова змінна. Доступно тільки, якщо поточний контекст цього фото — альбом. Нижче наведені ключі опису цього параметру"
+
+msgid "Url to next photo"
+msgstr "URL-адреса наступного фото"
+
+msgid "Rendered photo-stream widget"
+msgstr "Віджет фотопотоку"
+
+msgid "Rendered html block of tags"
+msgstr "HTML-блок із тегами"
+
+msgid "Rendered html block of exif info"
+msgstr "Блок HTML із інформацією EXIF"
+
+msgid "Hooks to this page. Below are describe keys of this param"
+msgstr "Хуки до цієї сторінки. Нижче наведені ключі до цього параметру"
+
+msgid "Under photo, in bottom hook"
+msgstr "Під фото, нижній хук"
+
+msgid "See description of vars for photo.html"
+msgstr "Дивіться опис змінних для photo.html"
+
+msgid "Can edit pages"
+msgstr "Може редагувати сторінки"
+
+msgid "Error"
+msgstr "Помилка"
+
+msgid "The requested resource is not available."
+msgstr "Ресурс недоступний."
+
+msgid "Logout"
+msgstr "Вихід"
+
+msgid "Sign up"
+msgstr "Реєстрація"
+
+msgid "Login"
+msgstr "Логін"
+
+msgid "Powered by Webasyst"
+msgstr "Працює на Вебасіст"
+
+msgid "%d of %d selected photos are <strong>private photos</strong>, and they are not recommended for permanent linking (embedding). Private photo URLs may be changed by the Photos app at any time."
+msgstr "%d з %d обраних фото — <strong>приватні</strong>, на них не рекомендується посилатися постійно (або вбудовувати). Приватні URL фотографій можна в любий час змінити у додатку Фото."
+
+msgid "Edit photos description"
+msgstr "Редагувати опис фотографій"
+
+msgid "{$wa->appName()}"
+msgstr "{$wa->appName()}"
+
+msgid "Thank you!"
+msgstr "Дякуємо!"
+
+msgid "You have successfully signed up."
+msgstr "Ви успішно зареєструвались."
+
+msgid "Returns photo list array by search criteria, e.g. <em>\"tag/vacations\"</em>, <em>\"album/12\"</em>, <em>\"id/1,5,7\"</em>"
+msgstr "Повертає масив списку фото по критеріям пошуку, наприклад: <em>\"tag/vacations\"</em>, <em>\"album/12\"</em>, <em>\"id/1,5,7\"</em>"
+
+msgid "Restore"
+msgstr "Відновити"
+
+msgid "We are using <a href=\"http://www.webasyst.com/apps/photos/\">Webasyst Photos</a>"
+msgstr "Ми використовуємо <а href=\"https://www.webasyst.ru/store/app/photos/\">Webasyst Фото</а>"
+
+msgid "More"
+msgstr "Більше"
+
+msgid "We are using <a href=\"http://www.webasyst.com/apps/photos/\" target=\"_blank\">Webasyst Photos</a>"
+msgstr "Ми використовуємо <а href=\"https://www.webasyst.ru/store/app/photos/\" target=\"_blank\">Webasyst Фото</а>"
+
+msgid "We are using <a href=\"http://www.webasyst.com/store/app/photos/\">Webasyst Photos</a>"
+msgstr "Ми використовуємо <а href=\"https://www.webasyst.ru/store/app/photos/\">Webasyst Фото</а>"
+
+msgid "We are using <a href=\"http://www.webasyst.com/store/app/photos/\" target=\"_blank\">Webasyst Photos</a>"
+msgstr "Ми використовуємо <а href=\"https://www.webasyst.ru/store/app/photos/\" target=\"_blank\">Webasyst Фото</а>"
+
+msgid "JPEG compression quality for photo thumbnails. From 0 (min) to 100 (max). 90 is recommended."
+msgstr "Якість стиснення JPEG для ескізів фото. Від 0 (мінімум) до 100 (максимум). Рекомендується 90."
+
+msgid "Browse for new plugins"
+msgstr "Огляд нових плагінів"
+
+msgid "Use Installer to install new plugins from the Webasyst Store"
+msgstr "Використовуйте «Інсталер» для установки нових плагінів з магазину Webasyst"
+
+msgid "<a href=\"http://www.webasyst.com/store/app/photos/\">Photo gallery software</a> by Webasyst"
+msgstr "<а href=\"https://www.webasyst.ru/store/app/photos/\">Додаток фотогалереї</a> на Вебасист"
+
+msgid "Start by uploading photos in your <a href=\"%s\">gallery backend</a>."
+msgstr "Почніть із завантаження фото у <a href=\"%s\">бекенді галерей</a>."
+
+msgid "Photos author"
+msgstr "Автор фотографій"
+
+msgid "Show navigation"
+msgstr "Показати навігацію"
+
+msgid "Upload"
+msgstr "Завантажити"
+
+msgid "Info"
+msgstr "Інформація"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Selected photos"
+msgstr "Обрані фото"
+
+msgid "Selected"
+msgstr "Обрані"
+
+msgid "Keep photos"
+msgstr "Залишити фото"
+
+msgid "Returns photo by id (<em>photo_id</em>) as an array with the following structure: (<em>\"id\"</em>, <em>\"name\"</em>, <em>\"description\"</em>, <em>\"ext\"</em>, <em>\"size\"</em>, <em>\"type\"</em>, <em>\"rate\"</em>, <em>\"width\"</em>, <em>\"height\"</em>, <em>\"contact_id\"</em>, <em>\"upload_datetime\"</em>, <em>\"edit_datetime\"</em>, <em>\"status\"</em>, <em>\"hash\"</em>, <em>\"url\"</em>, <em>\"parent_id\"</em>, <em>\"stack_count\"</em>, <em>\"sort\"</em>, <em>\"thumb_%size%\"</em>). Optional <em>size</em> parameter can be used to fetch particular thumbnail size: should be provided in pixels, or as one of the predefined values: <em>\"big\"</em> for 970, <em>\"middle\"</em> for 750, <em>\"thumbs\"</em> for 300x0, <em>\"crop\"</em> for 96x96"
+msgstr "Повертає фото по ID (<em>photo_id</em>) у вигляді масиву із наступною структурою: (<em>\"id\"</em>, <em>\"name\"</em>, <em>\"description\"</em>, <em>\"ext\"</em>, <em>\"size\"</em>, <em>\"type\"</em>, <em>\"rate\"</em>, <em>\"width\"</em>, <em>\"height\"</em>, <em>\"contact_id\"</em>, <em>\"upload_datetime\"</em>, <em>\"edit_datetime\"</em>, <em>\"status\"</em>, <em>\"hash\"</em>, <em>\"url\"</em>, <em>\"parent_id\"</em>, <em>\"stack_count\"</em>, <em>\"sort\"</em>, <em>\"thumb_%size%\"</em>). Додатковий параметр <em>size</em> можна використати, аби отримати ескіз довільного розміру, він має бути зазначений у пікселях, або як одне із попередньо визначених значень: <em>\"big\"</em> для 970, <em>\"middle\"</em> для 750, <em>\"thumbs\"</em> для 200x0, <em>\"crop\"</em> для 96x96"

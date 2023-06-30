@@ -1,0 +1,49 @@
+{if isset($plugin_id)}
+{if !empty($settings_controls)}
+<h1>{$plugin_info.name}</h1>
+<div class="fields form">
+    <form action="?module=plugins&id={$plugin_id}&action=save" method="post" id="plugins-settings-form" enctype="multipart/form-data">
+        {$wa->csrf()}
+        {foreach $settings_controls as $name => $control}
+        <div class="field">
+            {$control}
+        </div>
+        {/foreach}
+
+        <div class="field">
+            <div class="value submit">
+                <input type="submit" class="button green" value="[`Save`]">
+            </div>
+        </div>
+    </form>
+</div>
+{else}
+<div class="block double-padded align-center gray">
+    <strong>{$plugin_info.name|default:$plugin_id|string_format:'[`Plugin %s is installed`].'}</strong>
+    <br>
+    <br>
+    [`No available settings for plugin`]
+</div>
+{/if}
+{else if $plugins_count > 0}
+[`Unknown plugin`]
+{/if}
+
+<div class="clear-left"></div>
+<script>
+    $(function() {
+    {if $multiform_plugin_status == 'ok'}
+    var s = $('<span><i class="icon16 yes"></i> '+'[`Saved`]'+'<span>');
+            $("#plugins-settings-form input[type='submit']").after(s)
+            s.fadeOut(1500, function() {
+    $(this).remove();
+    });
+    {elseif $multiform_plugin_status == 'fail'}
+    var s = $('<span><i class="icon16 no"></i> '+'[`Cannot save`]'+'<span>');
+            $("#plugins-settings-form input[type='submit']").after(s)
+            s.fadeOut(3000, function() {
+    $(this).remove();
+    });
+    {/if}
+    });
+</script>

@@ -1,0 +1,36 @@
+{if isset($error)}
+    <p class="errormsg">{$error}</p>
+    <script>
+    $('.dialog input[type="submit"]').attr('disabled', true);
+    </script>
+{else}
+    <h1>{$title}</h1>
+    <h2>{if strlen($item.folder)}<span class="gray">{$item.folder}</span>{/if}{$item.name}</h2>
+
+    <input type="hidden" name="path" value="{$path|escape}">
+    <div class="fields width100px">
+
+        {if !empty($item.warnings)}
+            <div class="field">
+                <div class="value">
+                    <ul class="menu-v">
+                        {foreach $item.warnings as $warning}
+                            <li><span class="highlighted"><i class="icon16 exclamation"></i> {$warning|escape}</span></li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+        {/if}
+
+        <div class="field">
+            <div class="name">[`Name`]</div>
+            <div class="value">
+                <input name="name" value="{$item.edit_name|escape}" autocomplete="off">
+            </div>
+        </div>
+        <div class="field">
+            <div class="value errormsg"></div>
+        </div>
+    </div>
+
+{/if}

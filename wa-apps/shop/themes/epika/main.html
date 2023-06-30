@@ -1,0 +1,32 @@
+<!-- plugin hook: 'frontend_header' -->
+{* @event frontend_header.%plugin_id% *}
+{foreach $frontend_header as $_}{$_}{/foreach}            
+
+<div class="content" id="page-content" itemscope itemtype="http://schema.org/{if $action == 'default'}Store{else}WebPage{/if}">
+
+
+
+
+    {$content}
+	
+
+    
+    <div class="clear-both"></div>
+    
+</div>
+
+
+<div class="clear-both"></div>
+
+<div id="dialog" class="dialog">
+    <div class="dialog-background"></div>
+    <div class="dialog-window">
+        <!-- common part -->
+        <div class="cart">
+
+        </div>
+        <!-- /common part -->
+
+    </div>
+</div>
+

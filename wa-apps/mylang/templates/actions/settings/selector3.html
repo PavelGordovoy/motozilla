@@ -1,0 +1,314 @@
+<style>
+#mylang-selector.on #selection-list,
+#language-select-wrap.hover #language-menu:hover #selection-list,
+#language-select-wrap.hover:active #selection-list {
+    display: block;
+}
+#mylang-selector-wrapper {
+    position: relative;
+    border: 1px solid #c6c6c6;
+    background-color: #F9F9F9;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    height: 33px;
+}
+#mylang-selector-wrapper > div {
+    display: inline;
+    padding: 0 6px;
+    border-right: 1px solid #ddd;
+    font-size: 12px;
+    line-height: 31px;
+    color: #5a5a5a;
+}
+.iherb-responsive *,
+.iherb-responsive:after,
+.iherb-responsive:before {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.off.on,
+.on {
+    display: block;
+}
+#selection-list {
+    display: none;
+    height: 470px;
+    margin: auto;
+    width: 684px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#selection-list>div {
+    padding: 10px 23px;
+    height: 470px;
+    width: 684px;
+    margin: auto;
+    background: #fff;
+    border: 1px solid #d3d3d3;
+    position: relative;
+    z-index: -2;
+}
+#selection-list>div #background {
+    width: 684px;
+    height: 470px;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+#selection-list>div #background .stretch {
+    width: 100%;
+    height: 100%;
+}
+#selection-list>div .country-header {
+    text-align: center;
+    margin-top: 30px!important;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+#selection-list>div .country-subheader {
+    font-size: 16px;
+    text-align: center;
+    color: #747474;
+    margin: 10px 0 25px;
+}
+#selection-list>div .country-column {
+    margin: 0 auto 10px;
+    width: 202px;
+    height: 100%;
+    position: relative;
+}
+#selection-list>div .destination-dropdown {
+    margin-left: -8px;
+}
+#selection-list>div .payment-type-container {
+    height: 110px;
+}
+#selection-list>div .country-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+#selection-list>div .country-footer span {
+    font-size: 18px;
+    font-weight: 700;
+    color: #458500;
+}
+#selection-list>div .available-text {
+    color: #747474;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    line-height: 17px;
+}
+.col-xs-8 {
+    width: 33.33333%;
+    float: left;
+}
+.col-xs-offset-8 {
+    margin-left: 33.33333%;
+}
+.col-xs-24 {
+    width: 100%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.hide {
+    display: none;
+}
+.add-close {
+    top: 10px;
+}
+.add-close,
+.popup-container .popup-close {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+.transparency {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+    opacity: .4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500 !important;
+}
+#mylang-selector-wrapper > div.ccl-arrow i {
+    font-size: 10px;
+}
+#mylang-selector-wrapper>div.country-select span,
+.ar #mylang-selector-wrapper>div span:not(.country-select) {
+    display: inline-block
+}
+.icon-checkoutarrow::before {
+    content: "▼";
+}
+</style>
+<div class="iherb-responsive" id="language-select-wrap">
+    <div id="mylang-selector-wrapper" style="pointer-events: all;" data-on="on" onClick="mylang.showSelector()">
+        <div class="country-select">
+            <span class="flag dd-selected-image flag-sprite"><img src="{$wa_url}wa-content/img/country/--.gif"></span>
+        </div>
+        <div class="language-select">
+            <span>{$locale|truncate:2:""|@strtoupper}</span>
+        </div>
+        {if $wa->shop}
+            {$currency = $wa->shop->currency()}
+            <div class="currency-select">
+                <span>{$currency}</span>
+            </div>
+        {/if}
+        <div class="ccl-arrow">
+            <span><i class="icon-checkoutarrow"></i></span>
+        </div>
+    </div>
+    <div id="language-menu">
+    <div id="mylang-selector">
+    <form action="" method="get" >
+        <div id="selection-list">
+            <div>
+                <div class="add-close" onClick="mylang.closeShadow()">
+                    <i class="icon-circlex cc-close">X</i>
+                </div>
+                <div id="background">
+                    <img class="stretch" src="{$wa_static_url}wa-apps/mylang/img/map.png">
+                </div>
+                <h1 class="country-header">
+                    [`Customize Your Shopping Experience!`]
+                </h1>
+                <h2 class="country-subheader">
+                    [`Please select the destination country, language, and currency you prefer.`]
+                </h2>
+                <div class="col-xs-8 no-script-hide destination-dropdown">
+                    <div class="country-column">
+                        <label class="country-label">
+                            [`Select the Destination`]
+                        </label>
+                        <div id="select-country" class="ui fluid search selection dropdown">
+                            <select style="width:100%" name="mylang-country">
+                                    <option value="">--</option> 
+                                {foreach $countries as $c_code => $c}
+                                    <option value="{$c_code}">{$c.name}</option>
+                                {/foreach}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-8 no-script-hide destination-dropdown">
+                    <div class="country-column">
+                        <label class="country-label">
+                            [`Select Your Language`]
+                        </label>
+                        <div id="select-language" class="ui fluid search selection dropdown">
+                            <select id="mylang-language" name="locale" onChange="mylang.select(this)">
+                {foreach waLocale::getAll('name') as $language => $lang_name}
+                    <option value="{$language}" {if $locale == $language}selected="selected"{/if}>{$lang_name|escape}</option>
+                {/foreach}
+            </select>
+                        </div>
+                    </div>
+                </div>
+                {if $wa->shop}
+                <div class="col-xs-8 no-script-hide">
+                    <div class="country-column">
+                        <label class="country-label">
+                            [`Select Your Currency`]
+                        </label>
+                        <div id="select-currency" class="ui fluid search selection dropdown">
+                            {if count($currencies) > 1}
+                            <select name="currency"> 
+                                {foreach $currencies as $c_code => $c}
+                                    <option value="{$c_code}" {if $c_code == $currency} selected{/if}>{$c.title}</option>
+                                {/foreach}
+                            </select>
+                            {/if}
+                            <i class="dropdown-icon icon"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xs-8 destination-dropdown">
+                    <div class="available-text text-center">[`Available Shipping Methods`]</div>
+                    <div class="no-script-hide country-column payments">
+                            <span class="shipping-sprite dhlglobalmail0" title="DHL Global"></span>
+                            <span class="shipping-sprite boxberry0" title="Boxberry"></span>
+                    </div>
+                </div>
+                <div class="col-xs-8 col-xs-offset-8 no-script-hide payment-type-container">
+                    <div class="available-text text-center">[`Available Payment Methods`]</div>
+                    <div class="country-column payments">
+                            <span class="payment-sprite visa"></span>
+                    </div>
+                </div>
+                {/if}
+                <div class="col-xs-24 no-script-show ccl-btn">
+                    <div class="country-column">
+                        <input type="submit" value="{_w('Save Preferences')}" class="save-selection btn btn-primary">
+                    </div>
+                    <div class="country-footer country-us hide"><span class="RU en-US">Free Shipping and Zero Tax For All Orders Over $20.00!</span></div>
+                    <div class="country-footer country-major"><span class="RU en-US">Free Shipping For Orders Over $40.00!</span></div>
+                    <div class="country-footer country-others hide"><span class="RU en-US">Discounted Shipping For All Orders Over $40.00!</span></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div></div>
+</div>
+<div id="transBG" class="transparency hide" onClick="mylang.closeShadow()"></div>
+<script>
+var mylang = {
+    rules: {$rules|json_encode},
+    root: '{$root}',
+    toggle: function(el) { 
+        var div = document.getElementById(el);
+        if (div.style.display === 'none'||(div.offsetWidth === 0 && div.offsetHeight === 0)) div.style.display = 'block';
+        else div.style.display = 'none';
+    },
+    closeShadow: function(){
+        document.getElementById('mylang-selector').className='';
+        mylang.toggle('transBG');
+    },
+    getCountry:function(){
+        var r = new XMLHttpRequest();
+        r.open("GET", "https://freegeoip.net/json/", true);
+        r.send(null);
+        r.onreadystatechange = function () {
+          if (r.readyState != 4 || r.status != 200) return;
+          var data = JSON.parse(r.responseText);
+          return data.country_code.toLowerCase();
+        };
+    },
+    showSelector:function(){
+        let s = document.getElementsByName('mylang-country');
+        if(s[0].value=='') {
+            let country = mylang.getCountry();
+            s[0].value = country;
+        }
+        mylang.toggle('transBG');
+        document.getElementById('mylang-selector').className='on';
+    },
+    select: function(el){
+        if (mylang.rules[el.value].indexOf('//')>-1) {
+            window.location = mylang.rules[el.value];
+        } else {
+            window.location = mylang.root+mylang.rules[el.value];
+        }
+    }
+};
+</script>

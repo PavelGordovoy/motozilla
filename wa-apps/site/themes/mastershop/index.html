@@ -1,0 +1,232 @@
+{strip}
+{$is_icon_font_swap = !empty($theme_settings.load_icon_font_display_swap)}
+{$is_icon_font_include_footer = !empty($theme_settings.load_icon_font_footer)}
+{$is_icons_hidden = ($is_icon_font_include_footer || $is_icon_font_swap)}
+{$is_main_page = ($wa->currentUrl(false, true) == $wa_app_url || $wa->currentUrl(false, true) == "/") && $wa_app == 'shop'}
+{$is_mobile = ($wa->isMobile() && ($wa->cookie("is_desktop_for_mobile") != 1 || !$theme_settings.switch_version))}
+
+{* test settings *}
+{if $theme_settings.test_settings && !empty($wa->cookie('is_horizontal_menu'))}{$theme_settings.is_horizontal_menu = $wa->cookie('is_horizontal_menu')}{/if}
+{if $theme_settings.test_settings && !empty($wa->cookie('button_type'))}{$theme_settings.button_type = $wa->cookie('button_type')}{/if}
+{if $theme_settings.header_fixed_desktop && !empty($wa->cookie('header_fixed_desktop'))}{$theme_settings.header_fixed_desktop = $wa->cookie('header_fixed_desktop')}{/if}
+{if $theme_settings.test_settings && !empty($wa->cookie('bar_fixed_bottom_desktop'))}{$theme_settings.bar_fixed_bottom_desktop = $wa->cookie('bar_fixed_bottom_desktop')}{/if}
+{if $theme_settings.test_settings && !empty($wa->cookie('bar_fixed_right_desktop'))}{$theme_settings.bar_fixed_right_desktop = $wa->cookie('bar_fixed_right_desktop')}{/if}
+{if $theme_settings.test_settings && !empty($wa->cookie('cart_add_action_desktop'))}{$theme_settings.cart_add_action_desktop = $wa->cookie('cart_add_action_desktop')}{/if}
+<!DOCTYPE html>
+<html {if $theme_settings.prefix_language_site} lang="{$theme_settings.prefix_language_site}"{/if}>
+<head prefix="og: http://ogp.me/ns#{if  isset($action) &&  $action == 'product'} product: http://ogp.me/ns/product#{/if}">
+    {if (!isset($wa_parent_theme_path) || !$wa_parent_theme_path)}
+        {$parent_theme_path = $wa_active_theme_path}
+    {else}
+        {$parent_theme_path = $wa_parent_theme_path}
+    {/if}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    {if $wa->isMobile() && $wa->cookie("is_desktop_for_mobile") == 1 && $theme_settings.switch_version}
+        <meta name="viewport" content="width=1280" />
+    {else}
+        <meta name="viewport" content="width=device-width, initial-scale=1{if $wa->isMobile()}, maximum-scale=1, user-scalable=0{/if}" />
+    {/if}
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+
+    <title>{$wa->title()|escape}</title>
+    <meta name="Keywords" content="{$wa->meta('keywords')|escape}" />
+    <meta name="Description" content="{$wa->meta('description')|escape}" />
+
+    {if !empty($wa->globals('preload_image'))}
+        <link rel="preload" as="image" href="{$wa->globals('preload_image')}">
+    {/if}
+
+
+    {if !empty($canonical)}<link rel="canonical" href="{$canonical}"/>{/if}
+    {$wa->block("shop.seo_pagination")}
+
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    {if $wa->blog}
+        <!-- rss -->
+        {$rss=$wa->blog->rssUrl()}
+        {if $rss}<link rel="alternate" type="application/rss+xml" title="{$wa->accountName()}" href="{$rss}">{/if}
+    {/if}
+    {if $theme_settings.min_style_off}
+        <link href="{$wa_theme_url}vendor.min.css?v{$wa_theme_version}" rel="stylesheet"/>
+    {/if}
+    {if !$theme_settings.load_text_font_footer}
+        {include file="`$parent_theme_path`/fonts.html"}
+    {/if}
+    {if !$is_icon_font_include_footer}
+        {include file="`$parent_theme_path`/font-icons.css.html"}
+    {/if}
+
+    {include file="`$parent_theme_path`/colors.css.html"}
+    {if $theme_settings.min_style_off}
+        <link href="{$wa_theme_url}mastershop.css?v{$wa_theme_version}" rel="stylesheet" />
+    {else if !in_array($wa_app, ['shop', 'blog', 'photos', 'helpdesk', 'hub'])}
+        {if $theme_settings.preload_styles_js}
+            <link href="{$wa_theme_url}mastershop.min.css?v{$wa_theme_version}" rel="preload"  as="style" />
+        {/if}
+        <link href="{$wa_theme_url}mastershop.min.css?v{$wa_theme_version}" rel="stylesheet" />
+    {/if}
+
+    {include file="`$parent_theme_path`/head.js.html"}
+
+    {if $theme_settings.preload_styles_js}
+        <link href="{$wa_theme_url}jquery.min.js?v{$wa_theme_version}" rel="preload" as="script" />
+    {/if}
+    <script src="{$wa_theme_url}jquery.min.js?v{$wa_theme_version}"></script>
+
+    {if !$theme_settings.plugins_js_footer}{$wa->js()}{/if}
+    {if !$theme_settings.plugins_css_footer}{$wa->css()}{/if}
+
+    {include file="`$wa_active_theme_path`/head.html" inline}
+    {$wa->head()}
+    {include file="`$parent_theme_path`/add.css.html"}
+    {$wa->block("ms.customs.header.css")}
+    {$wa->block("ms.customs.header.js")}
+    {if $theme_settings.load_custom_styles == 'top'}
+        {if $theme_settings.preload_styles_js}
+            <link href="{$wa_theme_url}mastershop.custom.css?v{$wa_theme_version}" rel="preload" as="style" />
+        {/if}
+        <link href="{$wa_theme_url}mastershop.custom.css?v{$wa_theme_version}" rel="stylesheet"/>
+    {/if}
+    {if $theme_settings.load_custom_js == 'top'}
+        {if $theme_settings.preload_styles_js}
+            <link href="{$wa_theme_url}mastershop.custom.js?v{$wa_theme_version}" rel="preload" as="script" />
+        {/if}
+        <script src="{$wa_theme_url}mastershop.custom.js?v{$wa_theme_version}"></script>
+    {/if}
+</head>
+{$body_class = $wa->globals("body_class")}
+{if $wa->globals("button_type")}{$theme_settings.button_type = $wa->globals("button_type")}{/if}
+{if $theme_settings.button_type == 'radius_slight'}{$body_class = "`$body_class` btn-radius-slight"}{/if}
+{if $theme_settings.button_type == 'no_radius'}{$body_class = "`$body_class` btn-no-radius"}{/if}
+{if $is_icons_hidden}{$body_class = "`$body_class` icons-hidden"}{/if}
+
+<body class="no-touch{if !empty($body_class)} {$body_class}{/if}">
+    {* header *}
+    {include file="`$parent_theme_path`/header.html"}
+
+    <main id="main-content" class="js-content-move maincontent{if !$is_main_page} inner-page{/if}">
+        <div class="l-wrapper clearfix">
+            {include file="`$wa_active_theme_path`/main.html" inline}
+        </div>
+    </main>
+
+    {if ($theme_settings.services_info == 'mainpage' && ($wa->currentUrl(false, true) == $wa_app_url || $wa->currentUrl(false, true) == "/") && $wa_app == 'shop') || $theme_settings.services_info == 'allpage'}
+        {include file="`$parent_theme_path`/services.html"}
+    {/if}
+
+    {* footer *}
+    {include file="`$parent_theme_path`/footer.html"}
+
+    <div class="js-categories-menu-bg categories-menu-bg"></div>
+    <div class="js-header-menu-bg header-menu-bg"></div>
+
+    {if $theme_settings.widget_popup_advert_active && $theme_settings.widget_popup_advert_block_id}
+        {include file="`$parent_theme_path`/popup.advert.html" inline}
+    {/if}
+    {include file="`$parent_theme_path`/popup.contacts.html"}
+    {include file="`$parent_theme_path`/popup.search.html"}
+    {include file="`$parent_theme_path`/popup.auth.html"}
+    {if !$wa->isMobile()}
+        {include file="`$parent_theme_path`/header.top.menu.html" is_mobile_menu=true}
+    {/if}
+    {if !$wa->isMobile()}
+        {include file="`$parent_theme_path`/mobile.main.menu.html"}
+    {/if}
+    {include file="`$parent_theme_path`/mobile.filters.html"}
+    {if $theme_settings.is_horizontal_menu == 1 && !$wa->isMobile()}
+        {include file="`$parent_theme_path`/horizontal.main.menu.html" type='else-horizontal'}
+    {/if}
+
+    {if !$wa->isMobile()}
+        {if $theme_settings.header_fixed_desktop == 1}{include file="`$parent_theme_path`/header.fixed-desktop.html"}{/if}
+        {if $theme_settings.bar_fixed_bottom_desktop == 1}{include file="`$parent_theme_path`/bar-fixed-bottom.html"}{/if}
+        {if $theme_settings.bar_fixed_right_desktop == 1}{include file="`$parent_theme_path`/bar-fixed-right.html"}{/if}
+    {else}
+        {if $theme_settings.bar_fixed_bottom_mobile == 1}{include file="`$parent_theme_path`/bar-fixed-bottom.html"}{/if}
+    {/if}
+
+    {if $theme_settings.button_move_top}<i class="btn-top bs-color fas fa-chevron-up" id="move-to-top"></i>{/if}
+
+    {$is_callb = $wa->shop && $theme_settings.plugin_callback == 'callb' && class_exists('shopCallbPlugin')}
+    {$is_callb}
+    {if $is_callb}{shopCallbPlugin::display()}{/if}
+
+    {$is_sk_ui_slider = false}
+    {$is_sk_callback = $wa->shop && $theme_settings.plugin_callback == 'skcallback' && class_exists('shopSkcallbackHelper') && shopSkcallbackHelper::isActive()}
+    {if !empty($is_sk_callback)}
+        {include file="`$parent_theme_path`/skcallback.html" assign=skcallback_popup}
+        {$is_sk_ui_slider = $skcallback_popup|strpos:"js-sk-callback-slider"}
+        {$skcallback_popup}
+    {/if}
+
+    {$is_sk_oneclick = $wa->shop && class_exists('shopSkoneclickHelper') && shopSkoneclickHelper::isActive()}
+    {if !empty($is_sk_oneclick)}{include file="`$parent_theme_path`/skoneclick.html"}{/if}
+
+
+    {if $theme_settings.test_settings  && !$wa->isMobile()}{include file="`$parent_theme_path`/settings.html"}{/if}
+    {include file="`$parent_theme_path`/edit-button.html"}
+
+    {$cart_add_action = $theme_settings.cart_add_action_desktop}
+    {if $wa->isMobile()}{$cart_add_action = $theme_settings.cart_add_action_mobile}{/if}
+    {if $cart_add_action == 'popup'}
+        {include file="`$parent_theme_path`/cart.add.popup.html"}
+    {else if $cart_add_action == 'fixed'}
+        {$isCartonestepCartWithOrder = class_exists('shopCartonestepPlugin') && !$theme_settings.cartonestep_type_cart_without_order}
+        {if !$isCartonestepCartWithOrder && (!isset($action) || (isset($action) && $action != 'cart' && $action != 'checkout' && $action != 'checkoutone'))}
+            {if !$wa->isMobile()}<div class="js-fixed-cart-outer" data-cart-url="{$wa->getUrl('shop/frontend/cart')}"></div>{/if}
+        {/if}
+    {else if $cart_add_action == 'top'}
+        {include file="`$parent_theme_path`/cart.add.top.html"}
+    {/if}
+    {if $theme_settings.load_text_font_footer}
+        {include file="`$parent_theme_path`/fonts.html"}
+    {/if}
+    {$is_order_page = (!empty($action) && $action == 'order')}
+
+    <script src="{$wa_theme_url}vendor.min.js?v{$wa_theme_version}"></script>
+    {if !empty($filters) || $is_sk_ui_slider || $wa_app == 'hub'}
+        <script src="{$wa_theme_url}jquery.ui.min.js?v{$wa_theme_version}"></script>
+    {/if}
+
+    {if !empty($filters)}
+        {foreach $filters as $_filter}
+            {if !empty($_filter.type) && $_filter.type === "range.date"}
+                {$_lang = substr($wa->locale(), 0, 2)}
+                <link href="{$wa_url}wa-content/css/jquery-ui/base/jquery.ui.datepicker.css?v={$wa->version(true)}" rel="stylesheet" />
+                <script src="{$wa_url}wa-content/js/jquery-ui/jquery.ui.datepicker.min.js?v={$wa->version(true)}"></script>
+                {if $_lang !== "en"}
+                    <script src="{$wa_url}wa-content/js/jquery-ui/i18n/jquery.ui.datepicker-{$wa->locale()}.js"></script>
+                {/if}
+                {break}
+            {/if}
+        {/foreach}
+    {/if}
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--[if lte IE 9]><link href="{$wa_theme_url}ie.css?v{$wa_theme_version}" rel="stylesheet" /><![endif]-->
+
+    {if $theme_settings.min_script_off}
+        <script src="{$wa_theme_url}mastershop.js?v{$wa_theme_version}"></script>
+    {else}
+        <script src="{$wa_theme_url}mastershop.min.js?v{$wa_theme_version}"></script>
+    {/if}
+    {if $theme_settings.plugins_css_footer}{$wa->css()}{/if}
+    {if $theme_settings.plugins_js_footer}{$wa->js()}{/if}
+    {include file="`$wa_active_theme_path`/sources-js.html"}
+    {$wa->block("ms.customs.footer.css")}
+    {$wa->block("ms.customs.footer.js")}
+    {if $theme_settings.load_custom_styles == 'bottom'}
+        <link href="{$wa_theme_url}mastershop.custom.css?v{$wa_theme_version}" rel="stylesheet"/>
+    {/if}
+    {if $theme_settings.load_custom_js == 'bottom'}
+        <script src="{$wa_theme_url}mastershop.custom.js?v{$wa_theme_version}"></script>
+    {/if}
+    {if $is_icon_font_include_footer}
+        {include file="`$parent_theme_path`/font-icons.css.html"}
+    {/if}
+</body>
+</html>
+{/strip}

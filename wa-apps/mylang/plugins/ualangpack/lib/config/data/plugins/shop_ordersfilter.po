@@ -1,0 +1,420 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DemoLLC Filters and export for orders to Excel, CSV, ODS plugin 2021.8.2 UA translation v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter-studio.ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-05-10 10:06+0300\n"
+"PO-Revision-Date: \n"
+"Language: uk_UA\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: utf-8\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Today"
+msgstr "Сьогодні"
+
+msgid "Extra filters"
+msgstr "Додаткові фільтри"
+
+msgid "update"
+msgstr "оновлення"
+
+msgid "creation"
+msgstr "створення"
+
+msgid "delivery[ext]"
+msgstr "доставка[розш]"
+
+msgid "delivery"
+msgstr "доставка"
+
+msgid "delivery asked"
+msgstr "бажана доставка"
+
+msgid "paid"
+msgstr "сплачено"
+
+msgid "Yesterday"
+msgstr "Вчора"
+
+msgid "Tomorrow"
+msgstr "Завтра"
+
+msgid "Configure export fields"
+msgstr "Настроювання полів експорту"
+
+msgid "Filter"
+msgstr "Фільтр"
+
+msgid "Orders list is empty"
+msgstr "Перелік замовлень порожній"
+
+msgid "Export"
+msgstr "Експорт"
+
+msgid "First paid order"
+msgstr "Перше сплачене замовлення"
+
+msgid "Contain"
+msgstr "Містить"
+
+msgid "Starts with"
+msgstr "Починається з"
+
+msgid "Ending with"
+msgstr "Закінчується на"
+
+msgid "Remove profile"
+msgstr "Видалити профіль"
+
+msgid "Profile name"
+msgstr "Назва профілю"
+
+msgid "Comment"
+msgstr "Коментар"
+
+msgid "Export format"
+msgstr "Формат експорту"
+
+msgid "CSV Column separator"
+msgstr "Роздільник колонок у CSV"
+
+msgid "Contacts"
+msgstr "Контакти"
+
+msgid "Order"
+msgstr "Замовлення"
+
+msgid "Product"
+msgstr "Товар"
+
+msgid "Product features"
+msgstr "Характеристики товару"
+
+msgid "Plugins"
+msgstr "Плагіни"
+
+msgid "Contacts fields"
+msgstr "Поля контакту"
+
+msgid "Order fields"
+msgstr "Поля замовлення"
+
+msgid "Order params"
+msgstr "Параметри замовлення"
+
+msgid "Product fields"
+msgstr "Поля товару"
+
+msgid "Plugins fields"
+msgstr "Поля плагінів"
+
+msgid "Select the fields of order which you want to be exported."
+msgstr "Оберіть порядок, у якому ви бажаєте експортувати поля."
+
+msgid "Split product strings"
+msgstr "Розділити рядки товару"
+
+msgid "Replace HTML tags"
+msgstr "Замінити теги HTML"
+
+msgid "Profiles"
+msgstr "Профілі"
+
+msgid "New profile"
+msgstr "Новий профіль"
+
+msgid "Add"
+msgstr "Додати"
+
+msgid "Cancel"
+msgstr "Скасувати"
+
+msgid "Orders filter and export"
+msgstr "Фільтр та експорт замовлень"
+
+msgid "Plugin enabled"
+msgstr "Плагін увімкнено"
+
+msgid "Column separator"
+msgstr "Роздільник колонок"
+
+msgid "Filters"
+msgstr "Фільтри"
+
+msgid "Contact ID"
+msgstr "Ідентифікатор контакту"
+
+msgid "Update date"
+msgstr "Дата оновлення"
+
+msgid "Total without currency"
+msgstr "Разом без грошової одиниці"
+
+msgid "Rate"
+msgstr "Ставка"
+
+msgid "Tax"
+msgstr "Податок"
+
+msgid "First order"
+msgstr "Перше замовлення"
+
+msgid "Shipping price"
+msgstr "Вартість доставки"
+
+msgid "Payment date"
+msgstr "Дата оплати"
+
+msgid "Products no price/no quantity"
+msgstr "Товари без ціни/без якості"
+
+msgid "Products no sku"
+msgstr "Товари без артикулів"
+
+msgid "Item subtotal"
+msgstr "Проміжний підсумок елемента"
+
+msgid "Item stock"
+msgstr "Товарний запас"
+
+msgid "Product_id"
+msgstr "Product_id"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Referer host"
+msgstr "Хост рефереру"
+
+msgid "UTM campaign"
+msgstr "UTM-кампанія"
+
+msgid "Desired date"
+msgstr "Бажана дата"
+
+msgid "Desired date string"
+msgstr "Рядок бажаної дати"
+
+msgid "Desired time"
+msgstr "Бажаний час"
+
+msgid "Delivery date from"
+msgstr "Дата доставки з"
+
+msgid "Delivery date to"
+msgstr "Дата доставки до"
+
+msgid "Product summary"
+msgstr "Опис товару"
+
+msgid "Product url"
+msgstr "URL товару"
+
+msgid "Rating"
+msgstr "Рейтинг"
+
+msgid "Reviews number"
+msgstr "Кількість відгуків"
+
+msgid "Product currency"
+msgstr "Валюта товару"
+
+msgid "Time from"
+msgstr "Час з"
+
+msgid "Time to"
+msgstr "Час до"
+
+msgid "Delivery date"
+msgstr "Дата доставки"
+
+msgid "Delivery time"
+msgstr "Час доставки"
+
+msgid "Agreed"
+msgstr "Погоджено"
+
+msgid "Manager"
+msgstr "Менеджер"
+
+msgid "Reason to cancel"
+msgstr "Причина скасування"
+
+msgid "Reason to refund"
+msgstr "Причина повернення коштів"
+
+msgid "Purchase price"
+msgstr "Закупівельна ціна"
+
+msgid "Export orders"
+msgstr "Експорт замовлень"
+
+msgid "Hide block"
+msgstr "Приховати блок"
+
+msgid "Manager's comment"
+msgstr "Коментар менеджера"
+
+msgid "syrnikHash::combine() needs an equal number of keys + values"
+msgstr "syrnikHash::combine() потребує рівну кількість ключів та значень"
+
+msgid "Invalid Parameter %s, should be dot separated path or array"
+msgstr "Невірний параметр %s, має бути розділений точками шлях або масив"
+
+msgid "Invalid data array to nest"
+msgstr "Недійсний масив даних для гніздування"
+
+msgid "Profile"
+msgstr "Профіль"
+
+msgid "Edit"
+msgstr "Редагувати"
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "Customer extended"
+msgstr "Розширений клієнт"
+
+msgid "Company"
+msgstr "Компанія"
+
+msgid "Export selected"
+msgstr "Експорт обраного"
+
+msgid "Order total"
+msgstr "Сума замовлення"
+
+msgid "from"
+msgstr "від"
+
+msgid "to"
+msgstr "до"
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "Order States"
+msgstr "Статуси замовлень"
+
+msgid "Customize"
+msgstr "Налаштувати"
+
+msgid "Payment options"
+msgstr "Способи оплати"
+
+msgid "Not defined"
+msgstr "Не вказано"
+
+msgid "Shipping options"
+msgstr "Способи доставки"
+
+msgid "Storefronts"
+msgstr "Вітрини"
+
+msgid "Backend"
+msgstr "Бекенд"
+
+msgid "Settings"
+msgstr "Параметри"
+
+msgid "Tracking number"
+msgstr "Ідентифікатор відправлення"
+
+msgid "Shipment tracking number"
+msgstr "Номер відправлення"
+
+msgid "Reset"
+msgstr "Скинути"
+
+msgid "Customer"
+msgstr "Клієнт"
+
+msgid "Products"
+msgstr "Продукти"
+
+msgid "Couriers"
+msgstr "Кур&#39;єри"
+
+msgid "Order ID"
+msgstr "Ідентифікатор замовлення"
+
+msgid "Total"
+msgstr "Всього"
+
+msgid "Currency"
+msgstr "Валюта"
+
+msgid "Discount"
+msgstr "Знижка"
+
+msgid "Shipping address"
+msgstr "Адреси доставки"
+
+msgid "Flat SKU list"
+msgstr "Плаский перелік артикулів"
+
+msgid "Quantity"
+msgstr "Кількість"
+
+msgid "Shipping"
+msgstr "Доставка"
+
+msgid "Payment"
+msgstr "Платіжні системи"
+
+msgid "Courier"
+msgstr "Кур&#39;єр"
+
+msgid "Sales channel"
+msgstr "Канал продажів"
+
+msgid "Country"
+msgstr "Країна"
+
+msgid "Region"
+msgstr "Регіон"
+
+msgid "Shipping estimated"
+msgstr "Розрахунковий час доставки"
+
+msgid "Storefront"
+msgstr "Вітрина"
+
+msgid "Customer name"
+msgstr "Ім&#39;я покупця"
+
+msgid "Phone"
+msgstr "Телефон"
+
+msgid "Product name"
+msgstr "Назва товару"
+
+msgid "Weight"
+msgstr "Вага"
+
+msgid "Coupon"
+msgstr "Купон"
+
+msgid "Paid"
+msgstr "Сплачені"
+
+msgid "Ordersfilter"
+msgstr "Фільтр замовлень"
+
+msgid "Tag editor"
+msgstr "Редактор тегів"
+
+msgid "can save common values for all tags"
+msgstr "може зберегти спільні значення для усіх тегів"
+
+msgid "Name"
+msgstr "Назва"

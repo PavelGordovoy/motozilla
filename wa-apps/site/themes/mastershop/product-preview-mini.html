@@ -1,0 +1,37 @@
+{strip}
+<li class="products-mini__item">
+    <a class="products-mini__link" href="{$p.frontend_url}">
+        <div class="products-mini__image">
+            {$default_image = "`$wa_theme_url`img/dummy96.png"}
+            {if !empty($theme_settings.default_image)}
+                {$default_image = strtok($theme_settings.default_image, "?")}
+                {$default_image = "`$wa_parent_theme_url``$default_image`"}
+            {/if}
+            {$image = $wa->shop->productImgHtml($p, '70x0', ['class' => "js-product-preview-img", 'alt' => $p.name, 'default' => $default_image])}
+            {if isset($is_image_lazy) && !empty($is_image_lazy) && !empty($p.image_id)}
+                {$image = $image|replace:"src":"src=`$wa_theme_url`img/lazy-image.png data-src"}
+            {/if}
+            {$image}
+        </div>
+        <div class="products-mini__content">
+            <div class="products-mini__title"><div class="products-mini__title-inner">{$p.name}</div></div>
+            <div class="products-mini__prices-btn clearfix">
+                <div class="products-mini__prices">
+                    {if $p.compare_price > $p.price && $p.price != 0}
+                        <div class="products-mini__price-compare price-compare">{shop_currency_html($p.compare_price)}</div>
+                    {/if}
+                    <div class="products-mini__price">
+                        {$text_zero_price = $theme_settings.product_zero_price_text}
+                        {if $text_zero_price && $p.price == 0}
+                            <span class="products-mini__zero-text">{$text_zero_price}</span>
+                        {else}
+                            <span class="price">{shop_currency_html($p.price)}</span>
+                        {/if}
+                    </div>
+                </div>
+                <span class="products-mini__btn button-more ac-color fal fa-long-arrow-right"></span>
+            </div>
+        </div>
+    </a>
+</li>
+{/strip}

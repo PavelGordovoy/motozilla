@@ -1,0 +1,28 @@
+{strip}
+{$isButtonSeoRegionsPlugin = ($wa->shop && $theme_settings.use_region_plugin == 'seo_regions' && class_exists('shopRegionsViewHelper'))}
+{$isButtonCitySelectPlugin = ($wa->shop && $theme_settings.use_region_plugin == 'cityselect' && class_exists('shopCityselectPlugin'))}
+{$isButtonRegionsMobile = ($isButtonSeoRegionsPlugin || $isButtonCitySelectPlugin) && $wa->isMobile() && $theme_settings.mobile_region_plugin_button == 'header'}
+{$isButtonRegionsDesktop = ($isButtonSeoRegionsPlugin || $isButtonCitySelectPlugin) && !$wa->isMobile() && $theme_settings.desktop_region_plugin_button == 'header'}
+
+{$address = $theme_settings.address}
+{$map = $theme_settings.iframe_link_map}
+
+<div class="header-address-outer">
+    {if $isButtonRegionsMobile || $isButtonRegionsDesktop}
+        {if $isButtonSeoRegionsPlugin}
+            <div class="header-address__region">{shopRegionsViewHelper::getWindow()}</div>
+        {else if $isButtonCitySelectPlugin}
+            <div class="header-address__region">{shopCityselectPlugin::showCity('0')}</div>
+        {/if}
+    {/if}
+    {if $address}
+        {if $theme_settings.static_var_smarty}{eval var=$address assign='address'}{/if}
+        {if $map}
+            {if $theme_settings.static_var_smarty}{eval var=$map assign='map'}{/if}
+            <span class="header-address __map js-popup-map" data-href="{$map}">{$address}</span>
+        {else}
+            <span class="header-address">{$address}</span>
+        {/if}
+    {/if}
+</div>
+{/strip}

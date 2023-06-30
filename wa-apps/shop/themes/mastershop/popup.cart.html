@@ -1,0 +1,59 @@
+{if method_exists($wa->shop, 'checkout')}
+    {$cartUrl = $wa->shop->checkout()->cartUrl()}
+    {$checkoutUrl = $wa->shop->checkout()->url()}
+{else}
+    {$cartUrl = $wa->getUrl('shop/frontend/cart')}
+    {$checkoutUrl = $wa->getUrl('shop/frontend/checkout')}
+{/if}
+
+{$is_plugin_buy1step_in_cart = class_exists('shopBuy1stepPlugin') && !empty($theme_settings.buy1step_checkout_in_cart)}
+{if $is_plugin_buy1step_in_cart}
+    {$checkoutUrl = $cartUrl}
+{/if}
+
+{if isset($cart.count) && $cart.count > 0}
+    <div id="cart-products">
+        <div class="js-cart-ajax cart-mini" data-url="{$wa->getUrl('shop/frontend/cart')}">
+            {foreach $cart.items as $item}
+                <div class="js-cart-product cart-mini__product" data-product-id="{$item.product_id}" data-id="{$item.id}">
+                    <div class="cart-mini__product-img">
+                        <a href="{$wa->shop->productUrl($item.product)}" title="{$item.product.name|escape}">
+                            {$wa->shop->productImgHtml($item.product, '50', ['default' => $default_image])}
+                        </a>
+                    </div>
+                    <div class="cart-mini__product-info">
+                        <a href="{$wa->shop->productUrl($item.product)}">{$item.product.name|escape}</a>
+                        {if $item.sku_name && $item.sku_name != $item.product.name}
+                        <span class="bs-color"> {$item.sku_name|escape}</span>
+                        {/if}
+                        <div class="cart-mini__product-price js-cart-product-price">
+                            {$text_zero_price = $theme_settings.product_zero_price_text}
+                            {if $text_zero_price && $item.full_price == 0}
+                                {$text_zero_price}
+                            {else}
+                                {shop_currency_html($item.full_price, true)}
+                            {/if}
+                            <span class="cart-mini__count">(&times; {$item.quantity})</span>
+                            <i class="far fa-times cart-mini__remove js-cart-preview-product-delete"></i>
+                        </div>
+                        {if $item.compare_price && $item.price > 0 && $item.compare_price > $item.price}
+                            {$item_total_compare = $item.compare_price*$item.quantity}
+                            {if $theme_settings.cart_display_saved}
+                                <span class="cart-mini__saved">
+                                    {$item_total_saved = $item.full_price - $item_total_compare}
+                                    {shop_currency_html($item_total_saved, true)}
+                                </span>
+                            {/if}
+                        {/if}
+                    </div>
+                </div>
+            {/foreach}
+            <div class="cart-mini__buttons">
+                <a class="cart-mini__checkout show-all ac-color" href="{$checkoutUrl}">
+                    [`Proceed to checkout`]
+                    <i class="button-more fal fa-long-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+{/if}

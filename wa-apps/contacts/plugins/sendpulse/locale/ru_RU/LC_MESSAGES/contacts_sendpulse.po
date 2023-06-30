@@ -1,0 +1,140 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: contacts/plugins/shopssendpulse\n"
+"POT-Creation-Date: 2013-03-12 07:14+0400\n"
+"PO-Revision-Date: \n"
+"Last-Translator: contacts/plugins/shopssendpulse\n"
+"Language-Team: contacts/plugins/shopssendpulse\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"Language: ru\n"
+"X-Generator: Poedit 1.8.9\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Sync with SendPulse"
+msgstr "Синхронизировать с SendPulse"
+
+msgid "ID"
+msgstr "Идентификатор"
+
+msgid "ID for REST API"
+msgstr "Идентификатор для REST API"
+
+msgid "Secret key"
+msgstr "Секретный ключ"
+
+msgid "Secret Key for REST API"
+msgstr "Секретный ключ для REST API"
+
+msgid "Address books for sync"
+msgstr "Адресные книги для синхронизации"
+
+msgid "SendPulse"
+msgstr "SendPulse"
+
+msgid "Import/export emails to/from SendPulse"
+msgstr "Импорт/Экспорт e-mail адреса с/в SendPulse"
+
+msgid "Book not found"
+msgstr "Книга не найдена"
+
+msgid "Export to SendPulse"
+msgstr "Экспортировать в SendPulse"
+
+msgid "Categories for export"
+msgstr "Категории для экспорта"
+
+msgid "Import from SendPulse"
+msgstr "Импортировать из SendPulse"
+
+msgid "Books for import"
+msgstr "Книги для импорта"
+
+msgid "SendPulse settings"
+msgstr "SendPulse настройки"
+
+msgid "Import"
+msgstr "Импорт"
+
+msgid "Export"
+msgstr "Экспорт"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "cancel"
+msgstr "Отмена"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "To automatically export customers, you need to configure the CRON, to do this, add the job:"
+msgstr "Для автоматического экспорта контактов, вам надо настроить CRON службу на сервере, для этого скопируйте команду ниже в ваш планировщик задач:"
+
+msgid "Contact fields for export"
+msgstr "Данные контакта для экспорта"
+
+msgid "Check all"
+msgstr "Выбрать все"
+
+msgid "Uncheck all"
+msgstr "Выбрать все"
+
+msgid "Completed"
+msgstr "Готово"
+
+msgid "Error"
+msgstr "Ошибка"
+
+msgid "Could not connect to api, check your ID and SECRET"
+msgstr "Нет возможности подключиться к API, проверьте ваш ID и SECRET"
+
+msgid "Name"
+msgstr "Имя"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Job title"
+msgstr "Должность"
+
+msgid "Company"
+msgstr "Компания"
+
+msgid "Gender"
+msgstr "Пол"
+
+msgid "Phone"
+msgstr "Телефон"
+
+msgid "Im clients"
+msgstr "ИМ клиенты"
+
+msgid "Address"
+msgstr "Адрес"
+
+msgid "Birthday"
+msgstr "День рождения"
+
+msgid "Locale"
+msgstr "Языковые настройки"
+
+msgid "Timezone"
+msgstr "Временная зона"
+
+msgid "Social networks"
+msgstr "Социальные сети"
+
+msgid "Description"
+msgstr "Описание"
+
+msgid "Site"
+msgstr "Сайт"
+
+msgid "Phones"
+msgstr "Телефоны"

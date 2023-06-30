@@ -1,0 +1,18 @@
+{strip}
+{* mobile cart *}
+{if $wa->shop}
+    {if method_exists($wa->shop, 'checkout')}
+        {$cartUrl = $wa->shop->checkout()->cartUrl()}
+    {else}
+        {$cartUrl = $wa->getUrl('shop/frontend/cart')}
+    {/if}
+    {$cart_total = $wa->shop->cart->total()}
+    {$cart_count = $wa->shop->cart->count()}
+        <a href="{$cartUrl}" class="js-cart-preview m-header-cart{if empty($cart_count)} empty{/if}">
+            <span class="m-header-cart__icon">
+                <i class="fas fa-shopping-basket"></i>
+                <span class="js-cart-preview-count header-cart__count ac-bg">{$cart_count}</span>
+            </span>
+        </a>
+    {/if}
+{/strip}

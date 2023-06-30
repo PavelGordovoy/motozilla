@@ -1,0 +1,97 @@
+{strip}
+{if $theme_settings.show_product_in_basket && !isset($cart_items_ids)}
+    {$cart_items_ids = []}
+    {$cart_items = $wa->shop->cart()->items()}
+    {if count($cart_items) > 0}
+        {foreach $cart_items as $cart_item}
+            {$cart_items_ids[] = $cart_item.product_id}
+        {/foreach}
+    {/if}
+{/if}
+
+{if !isset($ulclass)}{$ulclass = ''}{/if}
+{if empty($product_preview_view)}{$product_preview_view = 'tile'}{/if}
+{if !isset($is_select_count_pages)}{$is_select_count_pages = false}{/if}
+{$is_switch_view = !empty($switch_view)}
+{$is_mobile = ($wa->isMobile() && ($wa->cookie("is_desktop_for_mobile") != 1 || !$theme_settings.switch_version))}
+
+{if (isset($sorting) && !empty($sorting)) || $is_switch_view}
+    <div class="category-panel">
+        {* buttоns switch products view *}
+        {if $is_switch_view}
+            {if $is_mobile}
+                {$is_view_tile = $theme_settings.mobile_preview_product_tile}
+                {$is_view_list = $theme_settings.mobile_preview_product_list}
+                {$is_view_tbl = $theme_settings.mobile_preview_product_tbl}
+            {else}
+                {$is_view_tile = $theme_settings.desktop_preview_product_tile}
+                {$is_view_list = $theme_settings.desktop_preview_product_list}
+                {$is_view_tbl = $theme_settings.desktop_preview_product_tbl}
+            {/if}
+            {$cookieProductPreviewView = $wa->cookie('productPreviewView')}
+            {if $cookieProductPreviewView == 'tile' && $is_view_tile}{$product_preview_view = 'tile'}{/if}
+            {if $cookieProductPreviewView == 'list' && $is_view_list}{$product_preview_view = 'list'}{/if}
+            {if $cookieProductPreviewView == 'tbl' && $is_view_tbl}{$product_preview_view = 'tbl'}{/if}
+            <div class="category-views">
+                {if $is_view_tile}<i data-view="tile" class="js-switch-product-view category-views__item fas fa-th{if $product_preview_view == "tile"} bs-color{/if}"></i>{/if}
+                {if $is_view_list}<i data-view="list" class="js-switch-product-view category-views__item fas fa-th-list{if $product_preview_view == "list"} bs-color{/if}"></i>{/if}
+                {if $is_view_tbl}<i data-view="tbl" class="js-switch-product-view category-views__item fas fa-align-justify{if $product_preview_view == "tbl"} bs-color{/if}"></i>{/if}
+            </div>
+        {/if}
+
+        {* sort category *}
+        {if isset($sorting) && !empty($sorting)}{include file="category.sorting.html"}{/if}
+
+        {* select products per page *}
+        {if !$wa->isMobile() && $is_select_count_pages}
+            {include file="category.per_page.html"}
+        {/if}
+
+        {if isset($is_custom_list) && !empty($is_custom_list)}
+            <span data-list="{$wa->get('list')}"  class="js-clear-user-list link-clear custom-list__clear">[`Clear list`]</span>
+        {/if}
+
+        {if !$wa->isMobile()}
+            <div class="category-panel__info-page">
+                {$current_page = $wa->get('page')}
+                {if $current_page}[`Page`] - {$current_page}{/if}
+            </div>
+        {/if}
+    </div>
+    {* selected filters *}
+    {if $theme_settings.filter_selected}{include file="category.select-filters.html"}{/if}
+{/if}
+
+{$is_image_lazy = $theme_settings.preview_product_images_lazy}
+<div class="product-list product-list--{$product_preview_view}{if isset($class_list)} {$class_list}{/if} js-preview-products" data-retina="{$wa->shop->config('enable_2x')}" data-image-lazy="{$is_image_lazy}" data-loading="{$wa_parent_theme_url}img/loading16.gif">
+    {include file="product-preview-{$product_preview_view}.html" is_category=!empty($is_category) products=$products is_image_lazy=$is_image_lazy inline}
+</div>
+
+{if isset($pages_count) && $pages_count > 1}
+    {$current_page = $wa->get('page')}
+
+    {$is_lazyload = ($theme_settings.pagination_type == 'auto' || $theme_settings.pagination_type == 'auto_after_button')}
+    {$is_button_else = ($theme_settings.pagination_type == 'button' || $theme_settings.pagination_type == 'auto_after_button')}
+    <div class="js-paging-nav paging-nav" data-lazyload="{$is_lazyload}" data-link-text="[`Load more`]" data-loading-str="[`Loading...`]" data-product-view="{$product_preview_view}">
+        {if $is_button_else}
+            {$is_last_page = !empty($current_page) && $current_page >= $pages_count}
+            <div data-after-lazyload="{$is_lazyload}" class="js-paging-load-else{if $is_last_page} disabled{/if} mixed-paging__else bs-color">
+                <span class="link-action">[`Load more`]</span>
+                <i class="mixed-paging__else-icon"></i>
+            </div>
+        {/if}
+        {$pagination_class = "js-pagination pagination"}
+        {if $is_lazyload || $is_button_else}
+            {$pagination_class = "`$pagination_class` js-pagination-ajax"}
+        {/if}
+         {if $theme_settings.use_plugin_seo_filter && class_exists('shopSeofilterViewHelper')}
+            {capture assign=pagination}
+                {wa_pagination total=$pages_count attrs=['class' => $pagination_class]}
+            {/capture}
+            {shopSeofilterViewHelper::paginationDecorate($pagination)}
+         {else}
+            {wa_pagination total=$pages_count attrs=['class' => $pagination_class]}
+         {/if}
+    </div>
+{/if}
+{/strip}

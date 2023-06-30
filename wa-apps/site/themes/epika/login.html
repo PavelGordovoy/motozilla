@@ -1,0 +1,22 @@
+<div class="aux-page ful">
+	<div class="content">
+		<div class="category-header">
+			<h1 class="category-name"><i class="icon-auth"></i> Авторизация</h1>
+		</div>
+		<div id="page" role="main">
+			<div class="epika-auth-form">
+				<h1>[s`Login`]</h1>
+				<div class="line login-cont">
+					<div class="login login-block">
+						{$wa->loginForm($error, empty($without_form))}
+					</div>
+					<div class="or"><span>Или</span></div>
+					<div class="auth-adapeter">
+						<spat class="title">Войти как пользователь</spat>
+						{$wa->authAdapters()}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

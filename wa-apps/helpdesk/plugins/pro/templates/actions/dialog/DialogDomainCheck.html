@@ -1,0 +1,46 @@
+{strip}
+
+<div class="w-dialog-wrapper w-license-dialog is-full-screen">
+    <div class="w-dialog-background"></div>
+    <div class="w-dialog-block gray-header compact-header is-animated">
+        <form action="" method="post">
+            <header class="w-dialog-header">
+                <h1>[`Domain check`]</h1>
+            </header>
+
+            <div class="w-dialog-content">
+                <div class="margin-block">
+                    <input type="text" class='s-required' style="font-size: 1.5em; padding: 5px; width: 95%" name="domain" placeholder="[`Specify domain`]" />
+                </div>
+                <div class="margin-block{if !$developer_id} block attention{/if}">
+                    {if $developer_id}
+                        <select name="product" style="font-size: 1.5em; padding: 5px;">
+                            <option value="">* * * [`Select product`] * * *</option>
+                                {foreach $products as $id => $p}
+                                <option value="{$id}">{$p|escape}</option>
+                                {/foreach}
+                        </select>
+                    {else}
+                        [`Specify developer ID and add your products on settings page`]
+                    {/if}
+                </div>
+                <div class="w-dynamic-content margin-block"></div>
+            </div>
+            <footer class="w-dialog-footer">
+                <div class="margin-block errormsg"></div>
+                <div class="t-actions">
+                    <div class="t-layout">
+                        <div class="t-column left">
+                            <input type="submit" class="button green t-button" value="[`Start checking`]">
+                            <span style="margin: 0 4px;">[`or`]</span>
+                            <a class="js-close-dialog" href="javascript:void(0);">[`cancel`]</a>
+                        </div>
+                    </div>
+
+                </div>
+            </footer>
+        </form>
+    </div>
+</div>
+
+{/strip}

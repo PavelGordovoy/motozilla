@@ -1,0 +1,39 @@
+{if isset($plugin_id)} 
+<div class="contacts-background">
+	<div class="block not-padded c-core-content">
+		<div class="block">
+			<div class="c-actions-wrapper"></div>
+			<h1 class="wa-page-heading">[`SendPulse settings`]</h1>
+		</div>
+		<div id="sendpulse-settings-container" class="tab-content">
+			<form id="sendpulse_settings_form" action="" method="post">
+				<div class="block not-padded contacts-data">
+				    <div class="block double-padded">
+						<div class="fields form">
+						    {foreach $settings_controls as $name => $control}
+							    <div class="field">
+							        {$control}
+							    </div>
+						    {/foreach}            
+						    <div class="field on_save_error">
+						    </div>
+							<div class="field margintop20">
+				                <div class="value submit">
+				                    <input type="submit" class="button green" value="[`Save`]">
+				                    <i class="icon16 loading" style="display: none;"></i>
+				                    <div class="dialog_complete_outer"></div>
+				                </div>
+				            </div>
+						</div>
+					</div>
+				</div>
+			</form>
+			{$wa->csrf()}
+		</div>
+	</div>
+	<div class="clear-left"></div>
+</div>
+{else}
+	[`Unknown plugin`]
+{/if}
+<div class="clear-left"></div>

@@ -1,0 +1,2926 @@
+msgid ""
+msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Language: en_US\n"
+"Language-Team: multiform\n"
+"Last-Translator: multiform\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: \n"
+"POT-Creation-Date: 2016-09-04 19:41+0400\n"
+"Project-Id-Version: multiform\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "of"
+msgstr ""
+
+msgid "Forms"
+msgstr ""
+
+msgid "Records"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "Created"
+msgstr ""
+
+msgid "Created by"
+msgstr ""
+
+msgid "Start"
+msgstr ""
+
+msgid "Stop"
+msgstr ""
+
+msgid "Theme"
+msgstr ""
+
+msgid "Change status"
+msgstr ""
+
+msgid "Duplicate"
+msgstr ""
+
+msgid "Private form"
+msgstr ""
+
+msgid "Has schedule"
+msgstr ""
+
+msgid "Form is hidden according to schedule"
+msgstr ""
+
+msgid "No name"
+msgstr ""
+
+msgid "show records"
+msgstr ""
+
+msgid "edit"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Default theme"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "You havent't created any forms yet. Do it right now!"
+msgstr ""
+
+msgid "Create form"
+msgstr ""
+
+msgid "Untitled form"
+msgstr ""
+
+msgid "Fields"
+msgstr ""
+
+msgid "Form settings"
+msgstr ""
+
+msgid "Conditions"
+msgstr ""
+
+msgid "Notifications"
+msgstr ""
+
+msgid "Share"
+msgstr ""
+
+msgid "Appearance"
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "View form"
+msgstr ""
+
+msgid "Save theme"
+msgstr ""
+
+msgid "Rename"
+msgstr ""
+
+msgid "Use this theme"
+msgstr ""
+
+msgid "Theme is used"
+msgstr ""
+
+msgid "Use !important rule"
+msgstr ""
+
+msgid "https://www.w3.org/TR/CSS2/cascade.html#important-rules"
+msgstr ""
+
+msgid "More info"
+msgstr ""
+
+msgid "Themes"
+msgstr ""
+
+msgid "Create new"
+msgstr ""
+
+msgid "Properties"
+msgstr ""
+
+msgid "Header"
+msgstr ""
+
+msgid "Fonts"
+msgstr ""
+
+msgid "Background"
+msgstr ""
+
+msgid "Borders"
+msgstr ""
+
+msgid "Shadows"
+msgstr ""
+
+msgid "Sizes"
+msgstr ""
+
+msgid "Buttons"
+msgstr ""
+
+msgid "Margin/padding"
+msgstr ""
+
+msgid "Alignment"
+msgstr ""
+
+msgid "Additional"
+msgstr ""
+
+msgid "Web-forms"
+msgstr ""
+
+msgid "My logo"
+msgstr ""
+
+msgid "Text"
+msgstr ""
+
+msgid "Hide logo"
+msgstr ""
+
+msgid "Hide block"
+msgstr ""
+
+msgid "Link to your logo"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Print your text"
+msgstr ""
+
+msgid "Application Web-forms"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Field title"
+msgstr ""
+
+msgid "Field text"
+msgstr ""
+
+msgid "Field description"
+msgstr ""
+
+msgid "Prefix/suffix"
+msgstr ""
+
+msgid "Error blocks"
+msgstr ""
+
+msgid "Button"
+msgstr ""
+
+msgid "Table grid statement"
+msgstr ""
+
+msgid "Table grid column"
+msgstr ""
+
+msgid "Font family"
+msgstr ""
+
+msgid "Google fonts"
+msgstr ""
+
+msgid "Font style"
+msgstr ""
+
+msgid "Normal"
+msgstr ""
+
+msgid "Bold"
+msgstr ""
+
+msgid "Italic"
+msgstr ""
+
+msgid "Bold/Italic"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Page"
+msgstr ""
+
+msgid "Form"
+msgstr ""
+
+msgid "Form description"
+msgstr ""
+
+msgid "Field row"
+msgstr ""
+
+msgid "Field row hover"
+msgstr ""
+
+msgid "Field text focus"
+msgstr ""
+
+msgid "Button hover"
+msgstr ""
+
+msgid "Button block"
+msgstr ""
+
+msgid "Error fields"
+msgstr ""
+
+msgid "Pattern"
+msgstr ""
+
+msgid "Solid color"
+msgstr ""
+
+msgid "Patterns"
+msgstr ""
+
+msgid "Custom pattern"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "Link to your pattern"
+msgstr ""
+
+msgid "Field rows"
+msgstr ""
+
+msgid "Field focus"
+msgstr ""
+
+msgid "Thickness"
+msgstr ""
+
+msgid "Style"
+msgstr ""
+
+msgid "Solid"
+msgstr ""
+
+msgid "Dotted"
+msgstr ""
+
+msgid "Dashed"
+msgstr ""
+
+msgid "Double"
+msgstr ""
+
+msgid "Border radius"
+msgstr ""
+
+msgid "Values"
+msgstr ""
+
+msgid "H-shadow"
+msgstr ""
+
+msgid "V-shadow"
+msgstr ""
+
+msgid "Blur"
+msgstr ""
+
+msgid "Spread"
+msgstr ""
+
+msgid "Inset"
+msgstr ""
+
+msgid "Fixed"
+msgstr ""
+
+msgid "Adaptive"
+msgstr ""
+
+msgid "Width"
+msgstr ""
+
+msgid "Height"
+msgstr ""
+
+msgid "Errors"
+msgstr ""
+
+msgid "Margin"
+msgstr ""
+
+msgid "Top"
+msgstr ""
+
+msgid "Right"
+msgstr ""
+
+msgid "Bottom"
+msgstr ""
+
+msgid "Left"
+msgstr ""
+
+msgid "Padding"
+msgstr ""
+
+msgid "Select"
+msgstr ""
+
+msgid "Center"
+msgstr ""
+
+msgid "Justify"
+msgstr ""
+
+msgid "Table grid"
+msgstr ""
+
+msgid "Rating"
+msgstr ""
+
+msgid "Range slider"
+msgstr ""
+
+msgid "Odd rows"
+msgstr ""
+
+msgid "Even rows"
+msgstr ""
+
+msgid "Highlight"
+msgstr ""
+
+msgid "and"
+msgstr ""
+
+msgid "or"
+msgstr ""
+
+msgid "If"
+msgstr ""
+
+msgid "is"
+msgstr ""
+
+msgid "is not"
+msgstr ""
+
+msgid "contains"
+msgstr ""
+
+msgid "doesn't contain"
+msgstr ""
+
+msgid "begins with"
+msgstr ""
+
+msgid "ends with"
+msgstr ""
+
+msgid "is blank"
+msgstr ""
+
+msgid "is not blank"
+msgstr ""
+
+msgid "is equal to"
+msgstr ""
+
+msgid "is not equal to"
+msgstr ""
+
+msgid "is greater than"
+msgstr ""
+
+msgid "is less than"
+msgstr ""
+
+msgid "is on"
+msgstr ""
+
+msgid "is before"
+msgstr ""
+
+msgid "is after"
+msgstr ""
+
+msgid "is at"
+msgstr ""
+
+msgid "checked"
+msgstr ""
+
+msgid "Add inside condition"
+msgstr ""
+
+msgid "Remove inside condition"
+msgstr ""
+
+msgid "Remove condition"
+msgstr ""
+
+msgid "show"
+msgstr ""
+
+msgid "hide"
+msgstr ""
+
+msgid "Show message"
+msgstr ""
+
+msgid "Redirect"
+msgstr ""
+
+msgid "Send email"
+msgstr ""
+
+msgid "You can use <a href='#/get/templateVars/' class='js-action' title='template vars'>template vars</a>"
+msgstr ""
+
+msgid "Specify website you would like user to redirect after successfully submitted form"
+msgstr ""
+
+msgid "Send to"
+msgstr ""
+
+msgid "Use commas to separate emails"
+msgstr ""
+
+msgid "Enable conditions"
+msgstr ""
+
+msgid "Off"
+msgstr ""
+
+msgid "On"
+msgstr ""
+
+msgid "Field conditions"
+msgstr ""
+
+msgid "Form conditions"
+msgstr ""
+
+msgid "Show or hide fields"
+msgstr ""
+
+msgid "You don't have any conditions"
+msgstr ""
+
+msgid "Add new condition"
+msgstr ""
+
+msgid "After the form is submitted"
+msgstr ""
+
+msgid "You don't have any acceptable fields. First of all <a href='?module=form&action=edit&id={$id}'><i class='icon16 add'></i> create them</a>"
+msgstr ""
+
+msgid "Select field"
+msgstr ""
+
+msgid "Text field"
+msgstr ""
+
+msgid "Textarea"
+msgstr ""
+
+msgid "Number"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Phone"
+msgstr ""
+
+msgid "Date field"
+msgstr ""
+
+msgid "Time"
+msgstr ""
+
+msgid "Checkbox list"
+msgstr ""
+
+msgid "Radio"
+msgstr ""
+
+msgid "File"
+msgstr ""
+
+msgid "HTML-text"
+msgstr ""
+
+msgid "Hidden"
+msgstr ""
+
+msgid "Formula"
+msgstr ""
+
+msgid "Page break"
+msgstr ""
+
+msgid "Email notifications"
+msgstr ""
+
+msgid "Your email"
+msgstr ""
+
+msgid "Use commas to separate emails. Limit: 10 emails"
+msgstr ""
+
+msgid "Reply to"
+msgstr ""
+
+msgid "* * * Select field * * *"
+msgstr ""
+
+msgid "Field"
+msgstr ""
+
+msgid "Create email field"
+msgstr ""
+
+msgid "if you want to reply to user"
+msgstr ""
+
+msgid "Select the email field you want to reply to"
+msgstr ""
+
+msgid "Send emails about"
+msgstr ""
+
+msgid "Email sender"
+msgstr ""
+
+msgid "Sender name (field \"From:\" in your mail box)"
+msgstr ""
+
+msgid "Comments"
+msgstr ""
+
+msgid "Message subject"
+msgstr ""
+
+msgid "You've got new notification"
+msgstr ""
+
+msgid "New comment on record"
+msgstr ""
+
+msgid "Email CC"
+msgstr ""
+
+msgid "Send message copy to email recipients. The list of CCed recipients is visible to all other recipients of the message."
+msgstr ""
+
+msgid "Email BCC"
+msgstr ""
+
+msgid "Send message copy to email recipients. The list of BCCed recipients are not shown to any other recipient's."
+msgstr ""
+
+msgid "Allow attaching files to email notification"
+msgstr ""
+
+msgid "Send emails in plain text"
+msgstr ""
+
+msgid "Customize email template"
+msgstr ""
+
+msgid "Leave it blank, if you want to use default template"
+msgstr ""
+
+msgid "SMS notifications"
+msgstr ""
+
+msgid "Your phone number"
+msgstr ""
+
+msgid "Sender IDs"
+msgstr ""
+
+msgid "Enter Sender IDs to use with this SMS gateway (Sender ID is either your phone number or up-to-11-characters text label). Enter * to use default Sender ID issued for your account by the gateway."
+msgstr ""
+
+msgid "To enable SMS message sending, install and configure sending plugin for your preferred SMS gateway.<br /> <a href=\"%s\">Browse for SMS gateway plugins</a> in Installer app."
+msgstr ""
+
+msgid "Send from"
+msgstr ""
+
+msgid "Default (as configured in SMS gateway)"
+msgstr ""
+
+msgid "Send sms about"
+msgstr ""
+
+msgid "Customize sms template"
+msgstr ""
+
+msgid "Max 300 symbols"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Print"
+msgstr ""
+
+msgid "Your comment"
+msgstr ""
+
+msgid "Your name"
+msgstr ""
+
+msgid "Record does not exist"
+msgstr ""
+
+msgid "Create new record"
+msgstr ""
+
+msgid "Export"
+msgstr ""
+
+msgid "Delete selected"
+msgstr ""
+
+msgid "Delete all"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Change columns"
+msgstr ""
+
+msgid "Updated"
+msgstr ""
+
+msgid "Updated by"
+msgstr ""
+
+msgid "IP"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Download"
+msgstr ""
+
+msgid "Saved"
+msgstr ""
+
+msgid "Processing"
+msgstr ""
+
+msgid "Export all records"
+msgstr ""
+
+msgid "All records will be exported in CSV file. Please, don't close or update webpage"
+msgstr ""
+
+msgid "Please don't close your browser window until export is over."
+msgstr ""
+
+msgid "Start compressing"
+msgstr ""
+
+msgid "cancel"
+msgstr ""
+
+msgid "You don't have any records."
+msgstr ""
+
+msgid "delete"
+msgstr ""
+
+msgid "Activity"
+msgstr ""
+
+msgid "Enable records output"
+msgstr ""
+
+msgid "This is the template of records output. You can show users their data, if it's necessary."
+msgstr ""
+
+msgid "Use the following code in your theme templates: <b style='border: 1px solid #ccc; display: inline-block; padding: 5px;'>&#123;$wa-&gt;multiform-&gtrecordsTemplate({$form.id})&#125;</b>"
+msgstr ""
+
+msgid "Form in popup window"
+msgstr ""
+
+msgid "Button text"
+msgstr ""
+
+msgid "You can use HTML"
+msgstr ""
+
+msgid "Form ID"
+msgstr ""
+
+msgid "Available symbols"
+msgstr ""
+
+msgid "Use this ID to output the form."
+msgstr ""
+
+msgid "Form name"
+msgstr ""
+
+msgid "Only used in admin area"
+msgstr ""
+
+msgid "Form title"
+msgstr ""
+
+msgid "Records ID format"
+msgstr ""
+
+msgid "Code &#123;$record_id&#125; will be replaced by record ID. Do not remove <b>&#123;$record_id&#125;</b>"
+msgstr ""
+
+msgid "Form type"
+msgstr ""
+
+msgid "public"
+msgstr ""
+
+msgid "private"
+msgstr ""
+
+msgid "Private form will be available for authorized users with special access. Use application Contacts to set the rights"
+msgstr ""
+
+msgid "Form CSS class"
+msgstr ""
+
+msgid "Confirmation options"
+msgstr ""
+
+msgid "Your message successfully sent! Your request number is &#123;Request:ID&#125;"
+msgstr ""
+
+msgid "Send confirmation email to user"
+msgstr ""
+
+msgid "if you want to send confirmation message"
+msgstr ""
+
+msgid "Select the email field you want to send the confirmation message."
+msgstr ""
+
+msgid "Sender email"
+msgstr ""
+
+msgid "Sender name"
+msgstr ""
+
+msgid "Specify email address you want the users to send messages when they reply to the confirmation message. If you don't want them to email you, leave it blank."
+msgstr ""
+
+msgid "Subject"
+msgstr ""
+
+msgid "JS Callback after successfully form submission"
+msgstr ""
+
+msgid "Limitation options"
+msgstr ""
+
+msgid "Form submissions"
+msgstr ""
+
+msgid "Unlimited"
+msgstr ""
+
+msgid "Limit to"
+msgstr ""
+
+msgid "submissions"
+msgstr ""
+
+msgid "ever"
+msgstr ""
+
+msgid "every day"
+msgstr ""
+
+msgid "every week"
+msgstr ""
+
+msgid "every month"
+msgstr ""
+
+msgid "The form will stop accepting submissions after collecting that many entries"
+msgstr ""
+
+msgid "Authorized user submissions"
+msgstr ""
+
+msgid "IP limitation"
+msgstr ""
+
+msgid "Allow only one submission per IP"
+msgstr ""
+
+msgid "Form condition after reaching the limit"
+msgstr ""
+
+msgid "Hide form"
+msgstr ""
+
+msgid "Disable form"
+msgstr ""
+
+msgid "Websites limitations"
+msgstr ""
+
+msgid "No limitations"
+msgstr ""
+
+msgid "Limit by domain routes"
+msgstr ""
+
+msgid "Select domain"
+msgstr ""
+
+msgid "Select route"
+msgstr ""
+
+msgid "add domain route"
+msgstr ""
+
+msgid "delete route"
+msgstr ""
+
+msgid "META settings"
+msgstr ""
+
+msgid "META title"
+msgstr ""
+
+msgid "META keywords"
+msgstr ""
+
+msgid "META description"
+msgstr ""
+
+msgid "Spam protection"
+msgstr ""
+
+msgid "Basic protection (captcha)"
+msgstr ""
+
+msgid "Medium protection (need javascript)"
+msgstr ""
+
+msgid "Advanced protection (need javascript + captcha field)"
+msgstr ""
+
+msgid "Form schedule"
+msgstr ""
+
+msgid "Specify form schedule activity"
+msgstr ""
+
+msgid "Server time"
+msgstr ""
+
+msgid "DD"
+msgstr ""
+
+msgid "MM"
+msgstr ""
+
+msgid "YYYY"
+msgstr ""
+
+msgid "HH"
+msgstr ""
+
+msgid "End"
+msgstr ""
+
+msgid "Embed your form"
+msgstr ""
+
+msgid "Embed with Javascript"
+msgstr ""
+
+msgid "Embed with iFrame"
+msgstr ""
+
+msgid "Embed on Webasyst"
+msgstr ""
+
+msgid "Use this code to place your form into other websites."
+msgstr ""
+
+msgid "Fill out my <a href=\"%s\" title=\"%s\">%s</a>."
+msgstr ""
+
+msgid "online form"
+msgstr ""
+
+msgid "Use this iframe code to place your form into pages where <b>JavaScript is unavailable</b>."
+msgstr ""
+
+msgid "iFrame height"
+msgstr ""
+
+msgid "Fill out my"
+msgstr ""
+
+msgid "Use this code to place your form into Webasyst template or page, where Smarty is available."
+msgstr ""
+
+msgid "Share a link"
+msgstr ""
+
+msgid "Permanent link"
+msgstr ""
+
+msgid "Form ID link"
+msgstr ""
+
+msgid "Form description text"
+msgstr ""
+
+msgid "New input"
+msgstr ""
+
+msgid "prefix"
+msgstr ""
+
+msgid "suffix"
+msgstr ""
+
+msgid "Error field"
+msgstr ""
+
+msgid "New textarea"
+msgstr ""
+
+msgid "Some text inside field"
+msgstr ""
+
+msgid "New table grid"
+msgstr ""
+
+msgid "Column1"
+msgstr ""
+
+msgid "Column2"
+msgstr ""
+
+msgid "Column3"
+msgstr ""
+
+msgid "Statement1"
+msgstr ""
+
+msgid "Statement2"
+msgstr ""
+
+msgid "Statement3"
+msgstr ""
+
+msgid "New rating"
+msgstr ""
+
+msgid "New number field"
+msgstr ""
+
+msgid "Send"
+msgstr ""
+
+msgid "Record is processing or failed. Be carefull about it's data"
+msgstr ""
+
+msgid "Checked value not equal to user value."
+msgstr ""
+
+msgid "User value"
+msgstr ""
+
+msgid "Checked value"
+msgstr ""
+
+msgid "Delete file"
+msgstr ""
+
+msgid "IP Address"
+msgstr ""
+
+msgid "Record ID"
+msgstr ""
+
+msgid "Form not found"
+msgstr ""
+
+msgid "This section is intended for creation regular expressions that are used to check in text fields of the form. If You are not good at this - contact the developer. Any errors in regular expressions can affect the application's work."
+msgstr ""
+
+msgid "IMPORTANT! Write regular expressions only between symbols"
+msgstr ""
+
+msgid "More"
+msgstr ""
+
+msgid "info about regular expressions"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "RegExp mask"
+msgstr ""
+
+msgid "Error message"
+msgstr ""
+
+msgid "remove"
+msgstr ""
+
+msgid "Add regexp mask"
+msgstr ""
+
+msgid "Plugins not installed"
+msgstr ""
+
+msgid "Search new plugins"
+msgstr ""
+
+msgid "Use «Installer» to find new plugins"
+msgstr ""
+
+msgid "Plugin %s is installed"
+msgstr ""
+
+msgid "No available settings for plugin"
+msgstr ""
+
+msgid "Unknown plugin"
+msgstr ""
+
+msgid "Cannot save"
+msgstr ""
+
+msgid "Showes"
+msgstr ""
+
+msgid "Show"
+msgstr ""
+
+msgid "per page"
+msgstr ""
+
+msgid "Select all"
+msgstr ""
+
+msgid "Cancel selection"
+msgstr ""
+
+msgid "Download file"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "No records"
+msgstr ""
+
+msgid "This is Demo account. You don't have access to create pages. You can only create Web-forms."
+msgstr ""
+
+msgid "All your data will be deleted in an hour."
+msgstr ""
+
+msgid "Buy"
+msgstr ""
+
+msgid "Buy Web-forms"
+msgstr ""
+
+msgid "Old version records"
+msgstr ""
+
+msgid "Regexp masks"
+msgstr ""
+
+msgid "Loading"
+msgstr ""
+
+msgid "Do you really want to remove form?"
+msgstr ""
+
+msgid "Do you really want to remove this field?"
+msgstr ""
+
+msgid "Do you really want to delete this file?"
+msgstr ""
+
+msgid "Page cannot be loaded"
+msgstr ""
+
+msgid "Adding a new field"
+msgstr ""
+
+msgid "Field cannot be loaded"
+msgstr ""
+
+msgid "Value"
+msgstr ""
+
+msgid "Other"
+msgstr ""
+
+msgid "Fill in the required fields"
+msgstr ""
+
+msgid "Something wrong"
+msgstr ""
+
+msgid "Create <b>private</b> settlement for application Web-forms (Multiform) in %s - Site - Structure and put it above the rest."
+msgstr ""
+
+msgid "prev"
+msgstr ""
+
+msgid "next"
+msgstr ""
+
+msgid "Form removed"
+msgstr ""
+
+msgid "Error. Check log files"
+msgstr ""
+
+msgid "Attention"
+msgstr ""
+
+msgid "If you delete this form, <b>all records</b> with files and data will be <b>removed also</b>. Are you sure?"
+msgstr ""
+
+msgid "Delete anyway"
+msgstr ""
+
+msgid "Saving"
+msgstr ""
+
+msgid "Saving theme"
+msgstr ""
+
+msgid "Theme saved"
+msgstr ""
+
+msgid "Theme not saved. Check log files"
+msgstr ""
+
+msgid "Theme renamed"
+msgstr ""
+
+msgid "Theme not renamed. Check log files"
+msgstr ""
+
+msgid "Theme duplicated"
+msgstr ""
+
+msgid "Theme not duplicated. Check log files"
+msgstr ""
+
+msgid "Theme deleted"
+msgstr ""
+
+msgid "Theme not deleted. Check log files"
+msgstr ""
+
+msgid "Specify theme name"
+msgstr ""
+
+msgid "Specify new theme name"
+msgstr ""
+
+msgid "Are you sure?"
+msgstr ""
+
+msgid "Form themes are global. If you delete this theme, it will be deleted from other forms."
+msgstr ""
+
+msgid "If you just want to change theme for your form, use select field \"Themes\" and button \"Use this theme\""
+msgstr ""
+
+msgid "Pay attention"
+msgstr ""
+
+msgid "Do not forget to save your changes"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Duplicate error"
+msgstr ""
+
+msgid "Do you really want to delete field?"
+msgstr ""
+
+msgid "Press <span class=\"highlighted\">Save</span> to start upload file:"
+msgstr ""
+
+msgid "Upload failed"
+msgstr ""
+
+msgid "Accepted file types: JPG, PNG, GIF"
+msgstr ""
+
+msgid "Loading form..."
+msgstr ""
+
+msgid "Sended successfully!"
+msgstr ""
+
+msgid "Failed!"
+msgstr ""
+
+msgid "Do you really want to delete this record? All files will be removed also."
+msgstr ""
+
+msgid "Removing the record..."
+msgstr ""
+
+msgid "Do you really want to delete this comment?"
+msgstr ""
+
+msgid "Select record"
+msgstr ""
+
+msgid "Do you really want to delete selected records?"
+msgstr ""
+
+msgid "Do you really want to delete all records?"
+msgstr ""
+
+msgid "You don't have any records"
+msgstr ""
+
+msgid "Specify name"
+msgstr ""
+
+msgid "Specify comment"
+msgstr ""
+
+msgid "Send record to email list"
+msgstr ""
+
+msgid "Use commas to separate emails. 10 emails max"
+msgstr ""
+
+msgid "Server error"
+msgstr ""
+
+msgid "Remove records?"
+msgstr ""
+
+msgid "Selected records will be removed totaly. Remove?"
+msgstr ""
+
+msgid "Do you really want to remove record?"
+msgstr ""
+
+msgid "You've got new message: {Request:ID}"
+msgstr ""
+
+msgid "You've got new notification: {Request:ID}"
+msgstr ""
+
+msgid "Access denied"
+msgstr ""
+
+msgid "Record ID is empty"
+msgstr ""
+
+msgid "Hey, where is theme ID?"
+msgstr ""
+
+msgid "Access denied to theme appearance"
+msgstr ""
+
+msgid "Hey, where is form ID?"
+msgstr ""
+
+msgid "Form fields"
+msgstr ""
+
+msgid "Template vars"
+msgstr ""
+
+msgid "close"
+msgstr ""
+
+msgid "Output the name of the field."
+msgstr ""
+
+msgid "E.g, {Field:{$example_field}}"
+msgstr ""
+
+msgid "Output the value of the field."
+msgstr ""
+
+msgid "E.g, {Record:{$example_field}}"
+msgstr ""
+
+msgid "Output the date of the record."
+msgstr ""
+
+msgid "Output all records. Default mail template."
+msgstr ""
+
+msgid "Records ID format."
+msgstr ""
+
+msgid "Output form ID."
+msgstr ""
+
+msgid "Output form name (title)."
+msgstr ""
+
+msgid "Output form description."
+msgstr ""
+
+msgid "Output form url."
+msgstr ""
+
+msgid "Output link to form."
+msgstr ""
+
+msgid "Output contact info from the Contacts."
+msgstr ""
+
+msgid "E.g, {Contact:name}, {Contact:ip}, {Contact:about}, etc."
+msgstr ""
+
+msgid "commented"
+msgstr ""
+
+msgid "My theme"
+msgstr ""
+
+msgid "Cannot upload file."
+msgstr ""
+
+msgid "Trying to add attachment to wrong field"
+msgstr ""
+
+msgid "Uploaded file's size exceeds the upload_max_filesize or post_max_size limit"
+msgstr ""
+
+msgid "Cannot save file \"%s\""
+msgstr ""
+
+msgid "Cannot save file. Check log file for more information."
+msgstr ""
+
+msgid "Email is not valid"
+msgstr ""
+
+msgid "Redirect URL is not valid"
+msgstr ""
+
+msgid "Something wrong. Check log files."
+msgstr ""
+
+msgid "is not valid"
+msgstr ""
+
+msgid "Cannot upload file. Try to upload image"
+msgstr ""
+
+msgid "Option doesn't exist"
+msgstr ""
+
+msgid "Upload only images"
+msgstr ""
+
+msgid "Option ID is empty"
+msgstr ""
+
+msgid "Specify form ID"
+msgstr ""
+
+msgid "Download:"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Files with extensions %s are allowed only."
+msgstr ""
+
+msgid "Field parameters are not existing"
+msgstr ""
+
+msgid "Field type %s is undefined"
+msgstr ""
+
+msgid "Field is undefined"
+msgstr ""
+
+msgid "Field \"Sender\" contains wrong email"
+msgstr ""
+
+msgid "Field \"Reply to\" contains wrong email"
+msgstr ""
+
+msgid "Field \"Redirect\" contains wrong URL"
+msgstr ""
+
+msgid "CSRF Protection"
+msgstr ""
+
+msgid "Specify mask name"
+msgstr ""
+
+msgid "Print regexp mask"
+msgstr ""
+
+msgid "Permission denied"
+msgstr ""
+
+msgid "Plugin settings"
+msgstr ""
+
+msgid "Cannot save settings: unknown plugin"
+msgstr ""
+
+msgid "Plugin settings %s"
+msgstr ""
+
+msgid "Key"
+msgstr ""
+
+msgid "Pre-selected option"
+msgstr ""
+
+msgid "Add image"
+msgstr ""
+
+msgid "Add option"
+msgstr ""
+
+msgid "Delete option"
+msgstr ""
+
+msgid "Import options"
+msgstr ""
+
+msgid "Use new line to specify new option. <br>- If you want to customize keys, you should use symbol '<b>|</b>' as divider."
+msgstr ""
+
+msgid "E.g"
+msgstr ""
+
+msgid "key|First option<br>another key|Second option<br>new key|Third option"
+msgstr ""
+
+msgid "Option keys should be unique"
+msgstr ""
+
+msgid "Options"
+msgstr ""
+
+msgid "New checkbox field"
+msgstr ""
+
+msgid "Valid characters"
+msgstr ""
+
+msgid "CSS class"
+msgstr ""
+
+msgid "Save users data"
+msgstr ""
+
+msgid "Prefix"
+msgstr ""
+
+msgid "Suffix"
+msgstr ""
+
+msgid "Title position"
+msgstr ""
+
+msgid "Hide"
+msgstr ""
+
+msgid "Options layout"
+msgstr ""
+
+msgid "One column"
+msgstr ""
+
+msgid "Two columns"
+msgstr ""
+
+msgid "Three columns"
+msgstr ""
+
+msgid "One by one"
+msgstr ""
+
+msgid "Randomize"
+msgstr ""
+
+msgid "The options will be shuffled each time"
+msgstr ""
+
+msgid "Read only"
+msgstr ""
+
+msgid "Private"
+msgstr ""
+
+msgid "Private fields are shown to users with special access"
+msgstr ""
+
+msgid "Hidden fields not shown to users. They can be edited only in admin page. But you can use the values of hidden fields in frontend"
+msgstr ""
+
+msgid "Customize keys"
+msgstr ""
+
+msgid "Show to user one value, but save in DB another"
+msgstr ""
+
+msgid "Option image size"
+msgstr ""
+
+msgid "Required"
+msgstr ""
+
+msgid "Day"
+msgstr ""
+
+msgid "Month"
+msgstr ""
+
+msgid "Year"
+msgstr ""
+
+msgid "Available characters: d, D, j, l, N, w, S, F, m, M, n, Y, y"
+msgstr ""
+
+msgid "Default value"
+msgstr ""
+
+msgid "New date"
+msgstr ""
+
+msgid "Use current date as default"
+msgstr ""
+
+msgid "In frontend users will see formatted value"
+msgstr ""
+
+msgid "Date field type"
+msgstr ""
+
+msgid "3 fields"
+msgstr ""
+
+msgid "Textfield"
+msgstr ""
+
+msgid "Date format"
+msgstr ""
+
+msgid "Fields separator"
+msgstr ""
+
+msgid "Day field"
+msgstr ""
+
+msgid "Dropdown"
+msgstr ""
+
+msgid "Day field width"
+msgstr ""
+
+msgid "Month field"
+msgstr ""
+
+msgid "Month field width"
+msgstr ""
+
+msgid "Year field"
+msgstr ""
+
+msgid "Year field width"
+msgstr ""
+
+msgid "Year interval"
+msgstr ""
+
+msgid "Enable popup calendar"
+msgstr ""
+
+msgid "Incorrect email"
+msgstr ""
+
+msgid "Value of the field \"%s\" is already exist. Please, specify unique value"
+msgstr ""
+
+msgid "The information entered into this field is unique and has not been submitted previously"
+msgstr ""
+
+msgid "for the field"
+msgstr ""
+
+msgid "New email"
+msgstr ""
+
+msgid "Placeholder"
+msgstr ""
+
+msgid "Predefined value"
+msgstr ""
+
+msgid "Field size"
+msgstr ""
+
+msgid "Small"
+msgstr ""
+
+msgid "Medium"
+msgstr ""
+
+msgid "Large"
+msgstr ""
+
+msgid "Unique (no duplicates)"
+msgstr ""
+
+msgid "Valid extensions"
+msgstr ""
+
+msgid "Maximum file size"
+msgstr ""
+
+msgid "Maximum files count"
+msgstr ""
+
+msgid "Value cannot be more than {$limit['ini_value']}byte (or {$limit['converted']} byte) in your server php.ini"
+msgstr ""
+
+msgid "Value cannot be more than {$limit['ini_value']}B (or {$limit['converted']} byte) in your server php.ini"
+msgstr ""
+
+msgid "select all"
+msgstr ""
+
+msgid "Specify your extensions. Use commas as separators"
+msgstr ""
+
+msgid "If you want to allow upload files of any extension - do not select anything"
+msgstr ""
+
+msgid "Check file size"
+msgstr ""
+
+msgid "Check file extension"
+msgstr ""
+
+msgid "File uploaded"
+msgstr ""
+
+msgid "Cannot save files"
+msgstr ""
+
+msgid "New file field"
+msgstr ""
+
+msgid "Attach file"
+msgstr ""
+
+msgid "You can attach any file, and users will be able to download it"
+msgstr ""
+
+msgid "Attachment"
+msgstr ""
+
+msgid "File name"
+msgstr ""
+
+msgid "Download it!"
+msgstr ""
+
+msgid "Text before attachment"
+msgstr ""
+
+msgid "Text after attachment"
+msgstr ""
+
+msgid "Position of attachment block"
+msgstr ""
+
+msgid "Hide file field"
+msgstr ""
+
+msgid "Users will see only attach field"
+msgstr ""
+
+msgid "Maximum quantity of files"
+msgstr ""
+
+msgid "Maximum size of each file"
+msgstr ""
+
+msgid "Allowed extensions"
+msgstr ""
+
+msgid "Hide file requirements"
+msgstr ""
+
+msgid "Enable formula mode"
+msgstr ""
+
+msgid "Show helper"
+msgstr ""
+
+msgid "For the fields, the result of which is a number, you can use arithmetic operators: <b>+</b>, <b>-</b>, <b>*</b>, <b>/</b>"
+msgstr ""
+
+msgid "For string results you can use <b>~</b> to concatenate results"
+msgstr ""
+
+msgid "Any syntax errors may cause incorrect calculations!"
+msgstr ""
+
+msgid "the result of this fields will be a number (use modifier `string` to change the type of the result)"
+msgstr ""
+
+msgid "the result of this fields will be a string"
+msgstr ""
+
+msgid "Functions"
+msgstr ""
+
+msgid "Show more"
+msgstr ""
+
+msgid "Modifiers"
+msgstr ""
+
+msgid "convert field result to string."
+msgstr ""
+
+msgid "Usage:"
+msgstr ""
+
+msgid "Show the results of calculation to user or not"
+msgstr ""
+
+msgid "Syntax error. Number of opened brackets should be equal to number of closed."
+msgstr ""
+
+msgid "Syntax error. Number of opened braces should be equal to number of closed."
+msgstr ""
+
+msgid "Check, whether the logical expression is correct. If it is correct, then function will return true_value, else - false_value."
+msgstr ""
+
+msgid "Returns TRUE if all its arguments evaluate to TRUE; returns FALSE if one or more arguments evaluate to FALSE."
+msgstr ""
+
+msgid "Returns TRUE if any argument is TRUE; returns FALSE if all arguments are FALSE."
+msgstr ""
+
+msgid "Reverses the value of its argument. Use NOT when you want to make sure a value is not equal to one particular value."
+msgstr ""
+
+msgid "Returns the logical value FALSE."
+msgstr ""
+
+msgid "Returns the logical value TRUE."
+msgstr ""
+
+msgid "Determines if number1 &gt; number2 (greater than)."
+msgstr ""
+
+msgid "Determines if number1 &gt;= number2 (greater than or equal to)."
+msgstr ""
+
+msgid "Determines if number1 &lt; number2 (less than)."
+msgstr ""
+
+msgid "Determines if number1 &lt;= number2 (less than or equal to)."
+msgstr ""
+
+msgid "Determines if number1 == number2 (equal to)."
+msgstr ""
+
+msgid "Determines if number1 != number2 (not equal)."
+msgstr ""
+
+msgid "Determines if number1 !== number2 (not equal value or not equal type)."
+msgstr ""
+
+msgid "Returns the absolute value of a number. The absolute value of a number is the number without its sign."
+msgstr ""
+
+msgid "Returns the arccosine, or inverse cosine, of a number."
+msgstr ""
+
+msgid "Returns the inverse hyperbolic cosine of a number."
+msgstr ""
+
+msgid "Returns the principal value of the arccotangent, or inverse cotangent, of a number."
+msgstr ""
+
+msgid "Returns the inverse hyperbolic cotangent of a number."
+msgstr ""
+
+msgid "Returns the arcsine, or inverse sine, of a number."
+msgstr ""
+
+msgid "Returns the inverse hyperbolic sine of a number."
+msgstr ""
+
+msgid "Returns the arctangent, or inverse tangent, of a number."
+msgstr ""
+
+msgid "Returns the arctangent, or inverse tangent, of the specified x- and y-coordinates."
+msgstr ""
+
+msgid "Returns the inverse hyperbolic tangent of a number."
+msgstr ""
+
+msgid "Returns the average (arithmetic mean) of the arguments."
+msgstr ""
+
+msgid "Calculates the average (arithmetic mean) of the values in the list of arguments."
+msgstr ""
+
+msgid "Returns the cosine of the given angle."
+msgstr ""
+
+msgid "Returns the hyperbolic cosine of a number."
+msgstr ""
+
+msgid "Return the cotangent of an angle specified in radians."
+msgstr ""
+
+msgid "Return the hyperbolic cotangent of a hyperbolic angle."
+msgstr ""
+
+msgid "Returns the cosecant of an angle specified in radians."
+msgstr ""
+
+msgid "Return the hyperbolic cosecant of an angle specified in radians."
+msgstr ""
+
+msgid "Converts a text representation of a number in a given base into a decimal number."
+msgstr ""
+
+msgid "Converts radians into degrees."
+msgstr ""
+
+msgid "Returns e raised to the power of number."
+msgstr ""
+
+msgid "Returns the factorial of a number."
+msgstr ""
+
+msgid "Rounds a number down to the nearest integer."
+msgstr ""
+
+msgid "Returns the natural logarithm of a number."
+msgstr ""
+
+msgid "Returns the logarithm of a number to the base you specify."
+msgstr ""
+
+msgid "Returns the base-10 logarithm of a number."
+msgstr ""
+
+msgid "Returns the largest value in a set of values."
+msgstr ""
+
+msgid "Returns the smallest number in a set of values."
+msgstr ""
+
+msgid "Returns the remainder after number is divided by divisor. The result has the same sign as divisor."
+msgstr ""
+
+msgid "Returns number rounded up to the nearest odd integer."
+msgstr ""
+
+msgid "Returns the number 3.14159265358979, the mathematical constant pi"
+msgstr ""
+
+msgid "Returns the result of a number raised to a power."
+msgstr ""
+
+msgid "Converts degrees to radians."
+msgstr ""
+
+msgid "Round number with precision. ROUND(11.478, -1) = 11.5; ROUND(11.478, -2) = 11.48; ROUND(11.478, 0) = 11; ROUND(11.478, 1) = 20; etc"
+msgstr ""
+
+msgid "Returns the secant of an angle."
+msgstr ""
+
+msgid "Returns the hyperbolic secant of an angle."
+msgstr ""
+
+msgid "Returns the sine of the given angle."
+msgstr ""
+
+msgid "Returns a positive square root."
+msgstr ""
+
+msgid "Returns the square root of (number * pi)."
+msgstr ""
+
+msgid "Returns the tangent of the given angle."
+msgstr ""
+
+msgid "Returns the hyperbolic tangent of a number."
+msgstr ""
+
+msgid "Returns the character specified by a number."
+msgstr ""
+
+msgid "Returns a numeric code for the first character in a text string."
+msgstr ""
+
+msgid "Returns the first character or characters in a text string, based on the number of characters you specify."
+msgstr ""
+
+msgid "Returns the number of characters in a text string."
+msgstr ""
+
+msgid "Converts all uppercase letters in a text string to lowercase."
+msgstr ""
+
+msgid "Returns a Variant (String) containing a specified number of characters from a string."
+msgstr ""
+
+msgid "Searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced."
+msgstr ""
+
+msgid "Returns the last character or characters in a text string, based on the number of characters you specify."
+msgstr ""
+
+msgid "Returns the position of the first occurrence of a specified value in a string."
+msgstr ""
+
+msgid "Remove whitespace from both sides of a string."
+msgstr ""
+
+msgid "Converts text to uppercase."
+msgstr ""
+
+msgid "New formula"
+msgstr ""
+
+msgid "Visibility to user"
+msgstr ""
+
+msgid "Show the field"
+msgstr ""
+
+msgid "Number fields rounding"
+msgstr ""
+
+msgid "Pay attention! Only number fields will be rounded, not the result. For result rounding use function ROUND()"
+msgstr ""
+
+msgid "not round"
+msgstr ""
+
+msgid "0.01"
+msgstr ""
+
+msgid "0.1"
+msgstr ""
+
+msgid "1"
+msgstr ""
+
+msgid "10"
+msgstr ""
+
+msgid "100"
+msgstr ""
+
+msgid "Hidden field"
+msgstr ""
+
+msgid "Current page link"
+msgstr ""
+
+msgid "Referer"
+msgstr ""
+
+msgid "New hidden field"
+msgstr ""
+
+msgid "Visible only in admin area"
+msgstr ""
+
+msgid "New html field"
+msgstr ""
+
+msgid "HTML code"
+msgstr ""
+
+msgid "<p>This is <b>HTML</b> field.</p><p>Use clean markup!</p>"
+msgstr ""
+
+msgid "New textfield"
+msgstr ""
+
+msgid "Maxlength"
+msgstr ""
+
+msgid "For example,"
+msgstr ""
+
+msgid "Only integers would be valid"
+msgstr ""
+
+msgid "Minimum value"
+msgstr ""
+
+msgid "Maximum value"
+msgstr ""
+
+msgid "Step increment/decrement value"
+msgstr ""
+
+msgid "Use slider for the field"
+msgstr ""
+
+msgid "Value must be more than"
+msgstr ""
+
+msgid "Value must be less than"
+msgstr ""
+
+msgid "Value must be a multiple of"
+msgstr ""
+
+msgid "Only integers"
+msgstr ""
+
+msgid "Range"
+msgstr ""
+
+msgid "Min"
+msgstr ""
+
+msgid "Max"
+msgstr ""
+
+msgid "Step"
+msgstr ""
+
+msgid "Print correct phone format"
+msgstr ""
+
+msgid "New phone"
+msgstr ""
+
+msgid "Phone mask"
+msgstr ""
+
+msgid "Use 0 where digits should be."
+msgstr ""
+
+msgid "Examples:"
+msgstr ""
+
+msgid "New radio field"
+msgstr ""
+
+msgid "Allow other"
+msgstr ""
+
+msgid "Add additional input text field as the last choice"
+msgstr ""
+
+msgid "reset"
+msgstr ""
+
+msgid "New rating field"
+msgstr ""
+
+msgid "No predefined value"
+msgstr ""
+
+msgid "2"
+msgstr ""
+
+msgid "3"
+msgstr ""
+
+msgid "4"
+msgstr ""
+
+msgid "5"
+msgstr ""
+
+msgid "New select field"
+msgstr ""
+
+msgid "Pre-selected column"
+msgstr ""
+
+msgid "Statements"
+msgstr ""
+
+msgid "Columns"
+msgstr ""
+
+msgid "New list"
+msgstr ""
+
+msgid "Randomize statements"
+msgstr ""
+
+msgid "Statement options will be shuffled each time"
+msgstr ""
+
+msgid "Randomize columns"
+msgstr ""
+
+msgid "Column options will be shuffled each time"
+msgstr ""
+
+msgid "Statement"
+msgstr ""
+
+msgid "Customize statement keys"
+msgstr ""
+
+msgid "Column"
+msgstr ""
+
+msgid "Customize column keys"
+msgstr ""
+
+msgid "Hour"
+msgstr ""
+
+msgid "Minute"
+msgstr ""
+
+msgid "Second"
+msgstr ""
+
+msgid "SS"
+msgstr ""
+
+msgid "AM/PM"
+msgstr ""
+
+msgid "New time"
+msgstr ""
+
+msgid "Time field type"
+msgstr ""
+
+msgid "Hour field"
+msgstr ""
+
+msgid "Minute field"
+msgstr ""
+
+msgid "Second field"
+msgstr ""
+
+msgid "Time format"
+msgstr ""
+
+msgid "12 hours (am, pm)"
+msgstr ""
+
+msgid "24 hours"
+msgstr ""
+
+msgid "Hidden from user"
+msgstr ""
+
+msgid "Private field"
+msgstr ""
+
+msgid "Parameter"
+msgstr ""
+
+msgid "Captcha field"
+msgstr ""
+
+msgid "Captcha image"
+msgstr ""
+
+msgid "Refresh"
+msgstr ""
+
+msgid "Custom attributes"
+msgstr ""
+
+msgid "add attribute"
+msgstr ""
+
+msgid "Use only construction /pattern/"
+msgstr ""
+
+msgid "Select the mask"
+msgstr ""
+
+msgid "You don't have any masks."
+msgstr ""
+
+msgid "Read more"
+msgstr ""
+
+msgid "Symbolic code"
+msgstr ""
+
+msgid "Regular expression"
+msgstr ""
+
+msgid "Regular expression (pattern)"
+msgstr ""
+
+msgid "Case insensitive"
+msgstr ""
+
+msgid "Mask"
+msgstr ""
+
+msgid "Invalid expression"
+msgstr ""
+
+msgid "Division by zero"
+msgstr ""
+
+msgid "Form has reached submission limit"
+msgstr ""
+
+msgid "Record ID(#)"
+msgstr ""
+
+msgid "You've got new message"
+msgstr ""
+
+msgid "Your message successfully sent! Your request number is {Request:ID}"
+msgstr ""
+
+msgid "Form is not active"
+msgstr ""
+
+msgid "Captcha code is invalid"
+msgstr ""
+
+msgid "Field %s has incorrect value"
+msgstr ""
+
+msgid "Sorry, we have some technical problems"
+msgstr ""
+
+msgid "File \"%s\" is too large"
+msgstr ""
+
+msgid "Maximum filesize is %d byte"
+msgstr ""
+
+msgid "File extension \"%s\" is not permitted"
+msgstr ""
+
+msgid "Create custom web forms (callback, contact form, simple 1-click ordering etc.)"
+msgstr ""
+
+msgid "Print valid email address"
+msgstr ""
+
+msgid "Only digits"
+msgstr ""
+
+msgid "Print only digits"
+msgstr ""
+
+msgid "Can create new forms"
+msgstr ""
+
+msgid "No access"
+msgstr ""
+
+msgid "Can create and use own theme appearances"
+msgstr ""
+
+msgid "Full access"
+msgstr ""
+
+msgid "Access to private fields"
+msgstr ""
+
+msgid "Private access to form without private fields"
+msgstr ""
+
+msgid "Private access to form with private fields"
+msgstr ""
+
+msgid "Only read"
+msgstr ""
+
+msgid "Edit records and add comments"
+msgstr ""
+
+msgid "First option"
+msgstr ""
+
+msgid "Second option"
+msgstr ""
+
+msgid "Third option"
+msgstr ""
+
+msgid "New selection field"
+msgstr ""
+
+msgid "Select option"
+msgstr ""
+
+msgid "New file"
+msgstr ""
+
+msgid "New html"
+msgstr ""
+
+msgid "This is my new form!"
+msgstr ""
+
+msgid "Form with custom HTML"
+msgstr ""
+
+msgid "This field is hidden and is designed specifically for You, as a short instruction. Here is an example of creating form. In order to place it on the website, click on the blue icon above, and You will see a code which can be inserted into any page on the website. That's all, good luck!"
+msgstr ""
+
+msgid "<h2>Order Information</h2>%s Enter data without errors"
+msgstr ""
+
+msgid "Order number"
+msgstr ""
+
+msgid "Product name"
+msgstr ""
+
+msgid "Quantity"
+msgstr ""
+
+msgid "<h2>Delivery</h2>%s Delivery information"
+msgstr ""
+
+msgid "<h2>Payment</h2>%s Choose the best method of payment"
+msgstr ""
+
+msgid "Please select"
+msgstr ""
+
+msgid "Credit card"
+msgstr ""
+
+msgid "Contact info"
+msgstr ""
+
+msgid "First name"
+msgstr ""
+
+msgid "Comment"
+msgstr ""
+
+msgid "Country"
+msgstr ""
+
+msgid "City"
+msgstr ""
+
+msgid "Region"
+msgstr ""
+
+msgid "Payment"
+msgstr ""
+
+msgid "Last record"
+msgstr ""
+
+msgid "records"
+msgstr ""
+
+msgid "Edit group"
+msgstr ""
+
+msgid "No any actions. Create it, make your form alive!"
+msgstr ""
+
+msgid "add action"
+msgstr ""
+
+msgid "Select action"
+msgstr ""
+
+msgid "add group"
+msgstr ""
+
+msgid "Select element"
+msgstr ""
+
+msgid "is "
+msgstr ""
+
+msgid "is not "
+msgstr ""
+
+msgid "Drag fields here"
+msgstr ""
+
+msgid "New records"
+msgstr ""
+
+msgid "New comments"
+msgstr ""
+
+msgid "Search records..."
+msgstr ""
+
+msgid "Everywhere"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Found records:"
+msgstr ""
+
+msgid "Record has cloned values"
+msgstr ""
+
+msgid "Start export"
+msgstr ""
+
+msgid "Use tag &lt;form&gt;"
+msgstr ""
+
+msgid "If you decided to embed webform into some &lt;form&gt; on your website, then disable this option to prevent unexpected behavior of website."
+msgstr ""
+
+msgid "Field name"
+msgstr ""
+
+msgid "Webasyst Captcha"
+msgstr ""
+
+msgid "Google reCAPTCHA"
+msgstr ""
+
+msgid "Site Key"
+msgstr ""
+
+msgid "Secret"
+msgstr ""
+
+msgid "Get Google reCAPTCHA site key and secret for your site on <a href=\"https://www.google.com/recaptcha\" target=\"_blank\">https://www.google.com/recaptcha</a>"
+msgstr ""
+
+msgid "This meta tags belong to the <a href=\"%s\" target=\"_blank\">page</a>"
+msgstr ""
+
+msgid "Beginning of the"
+msgstr ""
+
+msgid "End of the"
+msgstr ""
+
+msgid "Images"
+msgstr ""
+
+msgid "Order price without discount"
+msgstr ""
+
+msgid "Additional field"
+msgstr ""
+
+msgid "Output the name of the field"
+msgstr ""
+
+msgid "Output the value of the field"
+msgstr ""
+
+msgid "etc."
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "Action will be executed immediatelly after form successfully submited"
+msgstr ""
+
+msgid "Action will be executed by yourself on demand"
+msgstr ""
+
+msgid "Creating of new action"
+msgstr ""
+
+msgid "Action name"
+msgstr ""
+
+msgid "This name will be displayed in the list of actions for the form."
+msgstr ""
+
+msgid "Action description"
+msgstr ""
+
+msgid "Specify more information about action for yourself"
+msgstr ""
+
+msgid "Action color"
+msgstr ""
+
+msgid "This is the color of action icon"
+msgstr ""
+
+msgid "Auto execute"
+msgstr ""
+
+msgid "When action should be executed: immediatelly after form successfully submited (auto execute) or on demand"
+msgstr ""
+
+msgid "https://www.webasyst.com/store/app/multiform/"
+msgstr ""
+
+msgid "Plugins"
+msgstr ""
+
+msgid "No result text"
+msgstr ""
+
+msgid "Editing of action group"
+msgstr ""
+
+msgid "Wait, please..."
+msgstr ""
+
+msgid "Actions inside this group WILL NOT BE DELETED, only group will disappear"
+msgstr ""
+
+msgid "Do you really want to delete action?"
+msgstr ""
+
+msgid "Data saved with errors"
+msgstr ""
+
+msgid "Creating of new action group"
+msgstr ""
+
+msgid "New group"
+msgstr ""
+
+msgid "Added files are not valid"
+msgstr ""
+
+msgid "Fix the errors above"
+msgstr ""
+
+msgid "Please, wait, while data is saving"
+msgstr ""
+
+msgid "Files uploading"
+msgstr ""
+
+msgid "Something wrong. Please, reload the page"
+msgstr ""
+
+msgid "Field is required"
+msgstr ""
+
+msgid "All records belonging to the field will be deleted"
+msgstr ""
+
+msgid "Delete section and fields inside"
+msgstr ""
+
+msgid "Section"
+msgstr ""
+
+msgid "Selected"
+msgstr ""
+
+msgid "Action does not exist"
+msgstr ""
+
+msgid "New button"
+msgstr ""
+
+msgid "Onclick action"
+msgstr ""
+
+msgid "Form submit"
+msgstr ""
+
+msgid "Page link"
+msgstr ""
+
+msgid "Open in new tab"
+msgstr ""
+
+msgid "Use default button styles"
+msgstr ""
+
+msgid "Button will have CSS styles as on the tab Appearance"
+msgstr ""
+
+msgid "Use default button block styles"
+msgstr ""
+
+msgid "Button block will have CSS styles as on the tab Appearance"
+msgstr ""
+
+msgid "Field properties"
+msgstr ""
+
+msgid "Block width"
+msgstr ""
+
+msgid "Field width"
+msgstr ""
+
+msgid "No default"
+msgstr ""
+
+msgid "Minimal number of boxes, which user have to select to submit the form"
+msgstr ""
+
+msgid "Maximal number of checked boxes, which user cannot exceed"
+msgstr ""
+
+msgid "Basic"
+msgstr ""
+
+msgid "Show option IDs"
+msgstr ""
+
+msgid "Title width"
+msgstr ""
+
+msgid "Number of checked boxes"
+msgstr ""
+
+msgid "Minimal number of checked boxes"
+msgstr ""
+
+msgid "Maximum number of checked boxes"
+msgstr ""
+
+msgid "Popup calendar"
+msgstr ""
+
+msgid "Value cannot be more than %sbyte (or %s byte) in your server php.ini"
+msgstr ""
+
+msgid "Specify value in bytes."
+msgstr ""
+
+msgid "Value cannot be more than %sB (or %s byte) in your server php.ini"
+msgstr ""
+
+msgid "Button name"
+msgstr ""
+
+msgid "Select files.."
+msgstr ""
+
+msgid "Round number with precision. ROUND(11.478, 0-1) = 11.5; ROUND(11.478, 0-2) = 11.48; ROUND(11.478, 0) = 11; ROUND(11.478, 1) = 20; etc"
+msgstr ""
+
+msgid "Add parameter"
+msgstr ""
+
+msgid "Slider parameters. More info in <a target=\"_blank\" href=\"http://ionden.com/a/plugins/ion.rangeSlider/api.html\">docs</a>"
+msgstr ""
+
+msgid "Star sizes"
+msgstr ""
+
+msgid "Maximum value of additional fields"
+msgstr ""
+
+msgid "add additional field"
+msgstr ""
+
+msgid "remove field"
+msgstr ""
+
+msgid "Allow users to add extra fields"
+msgstr ""
+
+msgid "\"Add button\" text"
+msgstr ""
+
+msgid "\"Remove button\" text"
+msgstr ""
+
+msgid "Maximum times"
+msgstr ""
+
+msgid "Select the color of the section"
+msgstr ""
+
+msgid "Useful for Records tab"
+msgstr ""
+
+msgid "Layout"
+msgstr ""
+
+msgid "Fields layout"
+msgstr ""
+
+msgid "Select how fields inside section will be positioned."
+msgstr ""
+
+msgid "Horizontal"
+msgstr ""
+
+msgid "Vertical"
+msgstr ""
+
+msgid "Automatic mode for horizontal layout"
+msgstr ""
+
+msgid "Automatically change sizes of the elements in the section"
+msgstr ""
+
+msgid "Disable this option, if you want to control the sizes (title width, field width, etc) of each element"
+msgstr ""
+
+msgid "Width of each block"
+msgstr ""
+
+msgid "Width of all fields"
+msgstr ""
+
+msgid "Titles will be calculated depending on fields width"
+msgstr ""
+
+msgid "Size settings"
+msgstr ""
+
+msgid "Section width"
+msgstr ""
+
+msgid "Randomize output"
+msgstr ""
+
+msgid "Use for dropdown fields"
+msgstr ""
+
+msgid "return required"
+msgstr ""
+
+msgid "skip required?"
+msgstr ""
+
+msgid "Drag to sort"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "Auto"
+msgstr ""
+
+msgid "Ooops, you don't have any fields. <a href='#/page/edit' title='Create field'><i class='icon16 add'></i> Create it</a>"
+msgstr ""
+
+msgid "Use regular expression"
+msgstr ""
+
+msgid "Form builder. Create online surveys, form calculators, contact forms, logic forms."
+msgstr ""
+
+msgid "Unknown field"
+msgstr ""
+
+msgid "unknown_code"
+msgstr ""
+
+msgid "Slider line"
+msgstr ""
+
+msgid "Inactive line"
+msgstr ""
+
+msgid "Slider circle"
+msgstr ""
+
+msgid "Slider active value"
+msgstr ""
+
+msgid "Slider active value block"
+msgstr ""
+
+msgid "Slider inactive value"
+msgstr ""
+
+msgid "Slider inactive value block"
+msgstr ""
+
+msgid "Slider grid"
+msgstr ""
+
+msgid "Slider grid value"
+msgstr ""
+
+msgid "Cancel notifications when editing a record in backend"
+msgstr ""
+
+msgid "Page with list of all forms. Link address of form name"
+msgstr ""
+
+msgid "Page of form editing"
+msgstr ""
+
+msgid "Page of form records"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "You don't have access"
+msgstr ""
+
+msgid "No access (Hide tab)"
+msgstr ""
+
+msgid "No access (Readonly)"
+msgstr ""
+
+msgid "Вы получите сообщение на указанные вами контакты, когда товар снова будет в наличии!"
+msgstr ""

@@ -1,0 +1,33 @@
+{strip}
+{$is_schema_org = $theme_settings.schema_org_active}
+{if empty($theme_settings.id_page_site_contact)}{$theme_settings.id_page_site_contact = $wa->globals('id_contact_page')}{/if}
+{if !$wa->isMobile() && $theme_settings.site_main_menu_button_head && !$theme_settings.site_sidebar_left}
+    <div class="content-head">
+        {* main menu *}
+        {include file="vertical.main.menu.html" is_close=true}
+        <div class="content-head__title">
+            {* breadcrumbs *}
+            {include file="breadcrumbs.html" last=['name' => $page.name, 'url' => $wa->currentUrl(false, true)]}
+            <h1 class="page-h1">{$page.name}</h1>
+        </div>
+    </div>
+{else}
+    {* breadcrumbs *}
+    {include file="breadcrumbs.html" last=['name' => $page.name, 'url' => $wa->currentUrl(false, true)]}
+    <h1 class="page-h1">{$page.name}</h1>
+{/if}
+{$id_page_contact = (int) $theme_settings.id_page_site_contact}
+
+{$page_class = null}
+{if $wa->get('popup')}
+    {$page_class = "js-page-popup-content"}
+{else if !empty($page.content) && $page.id != $id_page_contact && !isset($page.without_white_bg)}
+    {$page_class = "wrap-content"}
+{/if}
+
+<div{if !empty($page_class)} class="{$page_class}"{/if} id="page" role="main">
+    {if $wa->get('popup')}<h1 class="page-h1">{$page.name}</h1>{/if}
+
+    {$page.content}
+</div>
+{/strip}

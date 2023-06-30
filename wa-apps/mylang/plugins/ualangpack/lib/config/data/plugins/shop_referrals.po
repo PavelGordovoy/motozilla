@@ -1,0 +1,198 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst Shop-Script Referrals plugin 1.1.5.14 UA translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2014-05-26 08:00+0000\n"
+"PO-Revision-Date: \n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Hi %s,"
+msgstr "Привіт, %s,"
+
+msgid "+%s points have been credited to your affiliate bonus for the order %s paid by a customer you referred!"
+msgstr "+%s балів нараховано на ваш партнерський рахунок за замовлення %s, сплачене залученим вами покупцем!"
+
+msgid "Your current bonus: <strong>%s</strong>"
+msgstr "Ваша поточна кількість бонусів: <strong>%s</strong>"
+
+msgid "Referral program"
+msgstr "Реферальна програма"
+
+msgid "Homepage referral URL"
+msgstr "Реферальне посилання на домашню сторінку"
+
+msgid "Alternatively, you may simply add your unique referral ID <span class=\"bold\">%s</span> to any store URL, and it will be considered as your referral link. Examples:<br> %s"
+msgstr "Крім того, ви можете просто додати ваш унікальний реферальний код <span class=\"bold\">%s</span> , до будь-якої URL-адреси магазину, і вона буде вважатися вашим реферальним посиланням. Приклади:<br> %s"
+
+msgid "Apply for Referral program"
+msgstr "Подати заявку на реферальну програму"
+
+msgid "Referral program <a href=\"%s\" target=\"_blank\">terms and conditions</a>."
+msgstr "<a href=\"%s\" target=\"_blank\">Умови реферальної програми</a>."
+
+msgid "I have read and agree to the <a href=\"%s\" target=\"_blank\">Referral program terms and conditions</a>"
+msgstr "Я прочитав і згоден з <a href=\"%s\" target=\"_blank\">умовами реферальної програми</a>"
+
+msgid "%s: %s points"
+msgstr "%s: %s бонусів"
+
+msgid "%s: %s clicks"
+msgstr "%s: %s кліків"
+
+msgid "Source"
+msgstr "Джерело"
+
+msgid "Clicks"
+msgstr "Кліків"
+
+msgid "Transactions"
+msgstr "Транзакції"
+
+msgid "Conversion"
+msgstr "Конверсія"
+
+msgid "Income"
+msgstr "Дохід"
+
+msgid "(direct)"
+msgstr "(прямий)"
+
+msgid "Last 30 days total"
+msgstr "Усього за останні 30 днів"
+
+msgid "There is no activity for your referral ID yet."
+msgstr "За вашим реферальним посиланням ще немає активності."
+
+msgid "+%s per click"
+msgstr "+%s за клік"
+
+msgid "Referral program plugin is installed."
+msgstr "Плагін реферальної програми встановлено."
+
+msgid "Customize Referral program settings in <a href=\"%s\">Affiliate program settings</a> screen."
+msgstr "Налаштуйте реферальну програму на екрані <a href=\"%s\">параметрів</a>."
+
+msgid "Your customers and referral partners receive bonuses for every friend they refer to make a purchase in your store. Referring is performed via a unique referral link every customer and partner can get in his personal account. Referral program is an effective promotional tool which allows you to increase sales, number of links to your website (which is good for search engine optimization), and to gather a community of partners motivated to promote your website on the Internet."
+msgstr "Ваші клієнти і реферали отримують бонуси за кожного друга, якого вони залучили до здійснення покупки у вашому магазині. Залучення фіксується через унікальне реферальне посилання, яке кожен клієнт і партнер може отримати в своєму особистому кабінеті. Реферальна програма — це ефективний рекламний інструмент, який дозволяє збільшити продажі, кількість посилань на ваш сайт (що добре для пошукової оптимізації) і зібрати спільноту партнерів мотивованих до просування вашого сайту в інтернеті."
+
+msgid "Disabled"
+msgstr "Вимкнено"
+
+msgid "Enabled"
+msgstr "Увімкнено"
+
+msgid "Referral program will not work unless the master Loyalty program is enabled."
+msgstr "Реферальна програма не буде працювати, поки не буде увімкнено основну бонусну програму."
+
+msgid "Credit rate"
+msgstr "Кредитна ставка"
+
+msgid "of order total"
+msgstr "з суми замовлення"
+
+msgid "+1 point per"
+msgstr "+1 бал за"
+
+msgid "worth of orders paid by referrals"
+msgstr "вартість замовлень, сплачених рефералами"
+
+msgid "Cookie"
+msgstr "Куки"
+
+msgid "Save referral cookie for %s days"
+msgstr "Зберегти куки протягом %s днів"
+
+msgid "Set cookie on top-level domain name (*.domain.com)"
+msgstr "Встановити куки на домен верхнього рівня (*.domain.com)"
+
+msgid "Enable this if you have multiple storefronts on subdomains (e.g. store1.domain.com, store2.domain.com), and would like to automatically apply referral cookie for all subdomains. Otherwise simply ignore this option."
+msgstr "Увімкніть цей параметр, якщо у вас кілька магазинів на піддоменах (наприклад, store1.domain.com, store2.domain.com), і ви хочете автоматично застосувати реферальні куки для усіх піддоменів. У іншому випадку просто ігноруйте цей параметр."
+
+msgid "Activity"
+msgstr "Активність"
+
+msgid "Track referral visits (recommended)"
+msgstr "Відстежувати реферальні відвідування (рекомендується)"
+
+msgid "Increases server load, but allows your referral partners to track per visit value and conversions for customers they refer to your online store."
+msgstr "Збільшує навантаження на сервер, але дозволяє вашим реферальним партнерам відстежувати вартість відвідування та конверсію відвідувачів вашого інтернет-магазину у клієнтів."
+
+msgid "Notifications"
+msgstr "Повідомлення"
+
+msgid "Notify referral partners on new bonus credits (on paid orders placed by referred customers)"
+msgstr "Повідомити рефералів про нові бонусні бали (за оплачені замовлення, оформлені клієнтами)"
+
+msgid "Enable to automatically notify your affiliate partners on bonus credits by email. Emails will be sent when a referred customer pays for an order."
+msgstr "Дозволяє автоматично повідомляти рефералів по електронній пошті про нараховані бонусні бали. Листи буде надіслано, коли запрошений клієнт оплачує замовлення."
+
+msgid "Referral program promo"
+msgstr "Промо реферальної програми"
+
+msgid "A brief text advertising your referral program benefits. This promo text will be published in <em>My account &rarr; Affiliate program</em> screen for all your customers who did not sign up for your referral program yet."
+msgstr "Короткий текст з описом основних переваг вашої реферальної програми. Текст промо буде показано у розділі <em>Мій акаунт → Реферальна програма</em> усім клієнтам, які ще не приєдналися до вашої реферальної програми."
+
+msgid "Referral program terms and conditions"
+msgstr "Положення та умови реферальної програми"
+
+msgid "Opens in a new window."
+msgstr "Відкриється у новому вікні."
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "Referrals"
+msgstr "Реферали"
+
+msgid "Referred by"
+msgstr "Залучений користувачем"
+
+msgid "Bonus for referred customer’s order %s %s"
+msgstr "Бонус за замовлення залученого клієнта %s %s"
+
+msgid "Cancel bonus for referred customer’s order %s"
+msgstr "Скасувати бонус за замовлення залученного клієнта %s"
+
+msgid "+%s to your referral bonus"
+msgstr "+%s до вашого реферального бонусу"
+
+msgid "Credits affiliate bonuses for orders paid by referred customers and friends"
+msgstr "Нараховує партнерські бонуси за замовлення, сплачені залученими клієнтами та друзями"
+
+msgid "Referral program allows you to stimulate word of mouth marketing by encouraging your customers and contacts to talk about your online store, to recommend it to friends, and to promote your online store on the web. Referral partners receive bonuses for every friend they refer to make a purchase in your store."
+msgstr "Реферальна програма дозволяє стимулювати маркетинг «із вуст в уста», заохочуючи ваших клієнтів поговорити про ваш інтернет-магазин, рекомендувати його друзям і просувати ваш інтернет-магазин в інтернеті. Реферали отримують бонуси за кожного друга, якого вони залучають до здійснення покупки у вашому магазині."
+
+msgid "Average per visitor earning"
+msgstr "Середній заробіток на відвічувачеві"
+
+msgid "%d visitors"
+msgstr "%d відвідувачів"
+
+msgid "%d transactions by %d visitors"
+msgstr "%d транзакцій, виконаних %d відвідувачами"
+
+msgid "%d transactions"
+msgstr "%d транзакцій"
+
+msgid "Credits affiliate bonuses for all orders paid by referred customers"
+msgstr "Реферальні бонуси, виплачені за усі замовлення, сплачені залученими клієнтами"
+
+msgid "Credits affiliate bonuses for all orders paid by referred customers and friends"
+msgstr "Реферальні бонуси, виплачені за усі замовлення, сплачені залученими клієнтами та друзями"
+
+msgid "Saved"
+msgstr "Збережено"
+
+msgid "Shop customers"
+msgstr "Клієнти магазину"

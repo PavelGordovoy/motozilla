@@ -1,0 +1,53 @@
+.s-header-row th{
+    border: none !important;
+    padding-bottom: 7px !important;
+}
+.s-summary-row{
+    box-shadow: 0 6px 10px -10px #aaaaaa;
+}
+.s-summary-row td{
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    font-size: 120%;
+    border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+.blog-skimage-settings{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.blog-skimage-groups__actions{
+    white-space: nowrap;
+}
+.blog-skimage-groups__actions a{
+    margin-left: 5px;
+}
+.blog-skimage-groups__actions a, .blog-skimage-groups__actions span{
+    display: inline-block !important;
+    vertical-align: middle;
+}
+.blog-skimage-groups__actions .icon16{
+    margin-right: 0;
+}
+.blog-skimage-groups{
+
+}
+.blog-skimage-groups__add{
+    margin-top: 15px;
+}
+.blog-skimage-groups__hint{
+    float: right;
+    margin-top: 10px;
+}
+.blog-skimage-groups__item input.error{
+    color: #000;
+}
+.blog-skimage-groups__error{
+    font-size: 12px;
+    display: block;
+    color: red;
+    margin-top: 5px;
+}
+.blog-skimage-settings .table.zebra input[name*='title']{
+    min-width: 200px !important;
+}

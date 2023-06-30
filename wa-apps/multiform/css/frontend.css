@@ -1,0 +1,429 @@
+/*
+ * @author Gaponov Igor <gapon2401@gmail.com>
+ */
+
+.multiform-popup-overlay { overflow: hidden; }
+
+.mf-colm1 { width: 8.33% }
+.mf-colm2 { width: 16.66% }
+.mf-colm3 { width: 25% }
+.mf-colm4 { width: 33.33% }
+.mf-colm5 { width: 41.66% }
+.mf-colm6 { width: 50% }
+.mf-colm7 { width: 58.33% }
+.mf-colm8 { width: 66.66% }
+.mf-colm9 { width: 75% }
+.mf-colm10 { width: 83.33% }
+.mf-colm11 { width: 91.66% }
+.mf-colm12 { width: 100% }
+
+/* Admin rules */
+.settings-field.type-checkbox .multiform-gap-description { margin-left: 17px; }
+.settings-block input[type='text'], .settings-block textarea { width: 95%; } 
+.settings-block .tab-content, .formula-field textarea, .formula-field .formula-value, .multiform-wrap,
+table.multiform-grid, .multiform-wrap *::after, .multiform-wrap * { -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; }
+
+.multiform-wrap { overflow-x: hidden; overflow-y: auto; font-size: 14px; border: 1px solid #ccc; -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
+.multiform-wrap .multiform-gap-field:after { display: block; clear: both; content: ''; }
+.multiform-wrap .multiform-gap-field.type-hidden  { display: none !important; }
+.multiform-wrap .multiform-errorfld { text-align: center; }
+.multiform-wrap .multiform-errorfld .errormsg {  border: 1px solid #ff0000; margin-left: 0; padding: 10px; display: none; }
+.multiform-wrap input::-webkit-input-placeholder, .multiform-wrap textarea::-webkit-input-placeholder { color: #ccc; }
+.multiform-wrap input::-moz-placeholder, .multiform-wrap textarea::-moz-placeholder { color: #ccc; }
+.multiform-wrap input:-moz-placeholder, .multiform-wrap textarea:-moz-placeholder { color: #ccc; }
+.multiform-wrap input:-ms-input-placeholder, .multiform-wrap textarea:-ms-input-placeholder { color: #ccc; }
+.multiform-wrap input:focus::-webkit-input-placeholder, .multiform-wrap textarea:focus::-webkit-input-placeholder {color: transparent}
+.multiform-wrap input:focus::-moz-placeholder, .multiform-wrap textarea:focus::-moz-placeholder {color: transparent}
+.multiform-wrap input:focus:-moz-placeholder, .multiform-wrap textarea:focus:-moz-placeholder {color: transparent}
+.multiform-wrap input:focus:-ms-input-placeholder, .multiform-wrap textarea:focus:-ms-input-placeholder {color: transparent}
+.multiform-wrap .multiform-submit { padding: 10px }
+
+div.multiform-body { padding: 10px 0; }
+.multiform-body.is-popup { background: 0 none !important; position: relative; overflow: hidden; display: inline-block; vertical-align: middle; }
+.multiform-body.is-popup .multiform-wrap { position: absolute; left: 0; top: 0; visibility: hidden; }
+
+iframe .multiform-overlay { background: none; }
+.multiform-overlay { display: block; height: 100%; width: 100%; bottom: 0; position: fixed; right: 0; z-index: 9999; background: url("img/overlay.png") repeat; }
+.multiform-popup-window .multiform-wrap { background-color: #FFFFFF; border: 1px solid #BCBCBC; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; -webkit-box-shadow: 0 10px 25px 0 #262626; -moz-box-shadow: 0 10px 25px 0 #262626; box-shadow: 0 10px 25px 0 #262626; left: 50%; top: 50%; position: fixed; z-index: 99999; }
+.multiform-popup-link { display: inline-block; vertical-align: baseline; margin: 0 5px; cursor: pointer; }
+.multiform-popup-window .s-close { position: absolute; text-decoration: none; right: 0; top: 0; z-index: 999999; text-align: center; font-size: 22px; line-height: 170%; color: #333; background: none; width: 40px; height: 40px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; }
+.multiform-popup-window .s-close:hover { text-decoration: none; }
+.multiform-popup-window .multiform-wrap, .multiform-overlay { opacity: 0; }
+
+.multiform-header { height: 35px; background: #eee; padding: 5px 10px; width: auto; position: relative; }
+.multiform-header img { display: inline-block; vertical-align: middle; margin-right: 5px; }
+
+.multiform-title { font-size: 1.5em; padding: 10px; text-align: center; }
+.multiform-form-description { padding: 10px; }
+
+.multiform-gap-field { line-height: 1.5; padding: 10px 0; margin-bottom: 5px; }
+.multiform-gap-field:hover, .multiform-gap-value input[type="text"], .multiform-gap-value textarea, .multiform-gap-value input[type="email"], 
+.multiform-gap-value select, .multiform-grid tbody tr:hover th, .multiform-grid tbody tr:hover td { -webkit-transition: all 0.30s ease-in-out; -moz-transition: all 0.30s ease-in-out; -ms-transition: all 0.30s ease-in-out; -o-transition: all 0.30s ease-in-out; outline: none; }
+.multiform-gap-fields { padding: 10px; }
+.multiform-wrap .multiform-gap-value.mf-colm1 { margin-left: 91.66% }
+.multiform-wrap .multiform-gap-value.mf-colm2 { margin-left: 83.33% }
+.multiform-wrap .multiform-gap-value.mf-colm3 { margin-left: 75% }
+.multiform-wrap .multiform-gap-value.mf-colm4 { margin-left: 66.66% }
+.multiform-wrap .multiform-gap-value.mf-colm5 { margin-left: 58.33% }
+.multiform-wrap .multiform-gap-value.mf-colm6 { margin-left: 50% }
+.multiform-wrap .multiform-gap-value.mf-colm7 { margin-left: 41.66% }
+.multiform-wrap .multiform-gap-value.mf-colm8 { margin-left: 33.33% }
+.multiform-wrap .multiform-gap-value.mf-colm9 { margin-left: 25% }
+.multiform-wrap .multiform-gap-value.mf-colm10 { margin-left: 16.66% }
+.multiform-wrap .multiform-gap-value.mf-colm11 { margin-left: 8.33% }
+
+.multiform-gap-value input[type="text"], .multiform-gap-value textarea, .multiform-gap-value input[type="email"], .multiform-gap-value select,
+.multiform-gap-value .multiform-formula span { margin: 0; }
+.multiform-gap-value div { clear: none; }
+
+.multiform-gap-field.pos-top .multiform-gap-name { width: 100%; float: none; }
+.multiform-gap-field.pos-hide .multiform-gap-name, .multiform-gap-field.multiform-hide { display: none; }
+.multiform-gap-field.pos-top .multiform-gap-value, .multiform-gap-field.pos-hide .multiform-gap-value { margin-left: 0; }
+
+.multiform-gap-field.s-required .multiform-gap-name:after { content: '*'; color: #ff0000; margin-left: 3px; }
+.multiform-wrap .errormsg, .multiform-mask-error { font-style: italic; color: #ff0000; }
+.multiform-wrap .multiform-error-field, .multiform-wrap input.multiform-error-field, .multiform-wrap select.multiform-error-field { border: 1px solid #ff0000 !important; background-color: #ffcccc !important; }
+.multiform-gap-value .errormsg { border: 1px solid #ff0000; display: table; margin-top: 10px; padding: 5px; }
+
+.multiform-gap-name { float: left; word-wrap: break-word; font-weight: bold; padding: 5px; }
+.multiform-gap-field.type-checkbox .multiform-gap-value label, .settings-field.type-checkbox label { font-weight: normal; }
+
+.multiform-wrap .multiform-gap-value { overflow: visible; clear: none; padding: 5px; }
+.multiform-gap-value .prefix { display: inline-block; margin-right: 5px; }
+.multiform-gap-value .suffix { display: inline-block; margin-left: 5px; }
+.multiform-attachment-text.before { display: inline; margin-right: 5px; }
+.multiform-attachment-text.after { display: inline; margin-left: 5px; }
+.multiform-attachment a { display: inline; }
+
+.multiform-gap-value input, .multiform-gap-value textarea, .multiform-gap-value .multiform-formula span, .multiform-gap-name,
+.multiform-gap-value select, .multiform-gap-value {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; }
+
+.multiform-gap-value textarea { height: 85px; }
+.multiform-gap-description { font-size: 0.9em; margin-top: 5px; line-height: 1.5; clear: both; }
+.multiform-gap-value textarea, .multiform-gap-value input, .multiform-gap-value select { border: 1px solid #ccc; }
+.multiform-gap-value input[type='radio'], .multiform-gap-value input[type='checkbox'] { border: 0 none; opacity: 1; position: relative; }
+
+/* Date */
+.multiform-gap-value .multiform-datepicker.outside { background: rgba(0, 0, 0, 0) none repeat scroll 0 0; border: 0 none; cursor: pointer; line-height: 0; padding-right: 3px; text-indent: -9999px; width: 20px; outline: none; }
+.multiform-gap-value .multiform-datepicker.multiform-full-date { width: 98%; max-width: 98%; }
+.Zebra_DatePicker.dp_hidden { opacity: 0; visibility: hidden; display: none; }
+.Zebra_DatePicker { z-index: 999999 !important; }
+.Zebra_DatePicker_Icon_Wrapper { display: inline-block !important; }
+.Zebra_DatePicker_Icon_Wrapper .multiform-datepicker.outside { visibility: hidden; }
+.Zebra_DatePicker_Icon { max-width: none; }
+
+/* Field width rules*/
+.multiform-gap-value select.width100px, .multiform-gap-value input.width100px { width: 100px; max-width: 100px; }
+.multiform-gap-value select.width50px, .multiform-gap-value input.width50px { width: 50px; max-width: 50px; }
+.multiform-gap-value select.width30px, .multiform-gap-value input.width30px { width: 30px; max-width: 30px; }
+
+/* Time */
+.multiform-gap-value .multiform-time-field label { display: block; font-size: 0.8em; }
+.multiform-gap-value .multiform-full-time { width: 70px; max-width: 70px; }
+.multiform-gap-value .multiform-time-field > span { float: left; text-align: center; clear: none; }
+.multiform-gap-value .multiform-time-field .time-formats { margin-left: 10px; }
+.multiform-gap-value .multiform-time-field .separator { line-height: 150%; }
+
+/* Options */
+.multiform-gap-field .multiform-gap-option { margin-bottom: 10px; display: inline-block; vertical-align: middle; width: 100%; }
+.multiform-gap-field .multiform-gap-option.two-layout { width: 48%; }
+.multiform-gap-field .multiform-gap-option.three-layout { width: 30%; }
+.multiform-gap-field .multiform-gap-option.line-layout { width: auto; margin: 0 7px 0 0; }
+.multiform-gap-field .multiform-gap-option input { width: inherit; vertical-align: middle; }
+.multiform-gap-field .multiform-gap-option span { margin-left: 5px; vertical-align: middle; }
+.multiform-gap-field .multiform-gap-option label { font-weight: 400; }
+.multiform-gap-field .multiform-gap-option img { vertical-align: middle; margin: 0 5px; display: inline-block; }
+.multiform-gap-field .multiform-gap-option .multiform-other-field { width: 150px; margin-left: 16px; margin-top: 5px; }
+
+/* HTML */
+.multiform-gap-field.type-html img { max-width: 100%; }
+
+/* Table grid */
+.multiform-gap-field.type-table_grid .multiform-gap-value > div { overflow-x: auto; }
+
+table.multiform-grid { border-collapse: collapse; border-spacing: 0; background: #fff; border-color: #dedede; border-style: solid solid none; border-width: 1px 1px medium; width: 100%; margin-bottom: 5px; }
+.multiform-grid thead th, .multiform-grid thead td { background-color: #e6e6e6; }
+.multiform-grid th, .multiform-grid td { border: 0 none; }
+.multiform-grid thead th, .multiform-grid thead td { font-size: 85%; padding: 10px 6px; }
+.multiform-grid tbody tr.odd td, .multiform-grid tbody tr.odd th { background-color: #f5f5f5; }
+.multiform-grid tbody tr:hover th, .multiform-grid tbody tr:hover td, .multiform-grid tbody tr.odd:hover td { background-color: #ffffcf; }
+.multiform-grid td { padding: 4px 6px; text-align: center; vertical-align: middle; position: relative; }
+.multiform-grid td input { position: absolute; left: 0; right: 0; bottom: 0; top: 0; margin: auto; }
+.multiform-grid tr.multiform-error-field td, .multiform-grid tr.multiform-error-field th { background-color: #ff0000 !important; }
+.multiform-grid label { display: inline-block; width: 100%; height: 100%; vertical-align: middle; }
+.multiform-grid tbody th { padding: 8px; text-align: left; }
+.multiform-grid label input { opacity: 1; }
+.multiform-grid td.is-checked:hover .circle-slash { display: block; }
+.multiform-grid .circle-slash { font-size: 16px; z-index: 1; color: #ddd; right: 20%; top: 20%; position: absolute; cursor: pointer; display: none; }
+.multiform-grid .circle-slash:hover { color: #f00; }
+
+/* File */
+.progressbar { width: 33%; padding:7px 7px 6px; margin: 0 2px 20px; margin-right: 10px; border: solid 1px #eee; background:#fff; background-image: -moz-linear-gradient(top, #fff, #eee); background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #eee));background-image: -o-linear-gradient(rgb(255,255,255),rgb(238,238,238)); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#eeeeee')"; -moz-box-shadow: 0 1px 2px #777; -webkit-box-shadow: 0 1px 2px #777; box-shadow: 0 1px 2px #777; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; }
+.progressbar-outer { background: #f7f7f7; border-top: 1px solid #aaa; border-left: 1px solid #bbb; border-bottom: 1px solid #ddd; border-right: 1px solid #ddd; position: relative; height: 30px; -moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2) inset; -webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2) inset; box-shadow:0 1px 2px rgba(0, 0, 0, 0.2) inset; }
+.progressbar-inner { background-color:#aaa; position: absolute; left:0; top:0; width: 75%; height: 30px; -moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.15) inset; -webkit-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.15) inset; box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15) inset; }
+.progressbar.small { padding: 4px 4px 3px; width: 20%; }
+.progressbar.small .progressbar-outer { height: 10px; }
+.progressbar.small .progressbar-inner { height: 10px; background-position: center center; }
+.progressbar.blue .progressbar-inner { background-color:#09e; }
+.progressbar.red .progressbar-inner { background-color:#f55; }
+.progressbar.green .progressbar-inner { background-color:#5c3; }
+.progressbar.yellow .progressbar-inner { background-color:#fc3; }
+
+.multiform-files { margin: 10px 0; }
+.multiform-temp-file { display: table; table-layout: fixed; width: 100%; }
+.multiform-temp-file .multiform-cell { display: table-cell; padding: 5px; word-break: break-all; word-wrap: break-word; }
+.multiform-cell { text-align: right; }
+.multiform-temp-file-name { text-align: left; }
+.multiform-temp-file:nth-child(2n) { background: #fff; }
+.multiform-temp-file:nth-child(2n+1) { background: #f9f9f9; }
+.multiform-temp-file.error { background: #ffcccc; }
+.multiform-temp-file.error .multiform-cell.error { color: #ff0000; }
+.multiform-temp-file .progressbar { width: 90%; margin: 0 auto; float: left; margin-right: 5px; }
+.multiform-temp-file.done .multiform-progress-field { color: green; text-align: center; }
+.multiform-fileinput-button { position: relative; overflow: hidden; display: inline-block; }
+.multiform-fileinput-button span {  background: #eee; padding: 5px; border: 1px solid #ccc; display: block; }
+.multiform-fileinput-button input { position: absolute; top: 0; right: 0; margin: 0; opacity: 0; -ms-filter: 'alpha(opacity=0)'; font-size: 200px !important; direction: ltr; cursor: pointer; }
+@media screen\9 { .multiform-fileinput-button input { filter: alpha(opacity=0); font-size: 100%; height: 100%; } }
+
+.multiform-file-info { font-size: .75em; margin: 5px 0; }
+
+/* Number */
+.multiform-gap-field .rangeslider-block { display: inline-block; margin: 0; }
+.multiform-gap-value .irs--flat .irs-handle>i:first-child { width: 20px; -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; margin-left: -10px; }
+
+/* Rating */
+.multiform-rating > input { display: none; } 
+.multiform-rating > label { margin: 0 5px; float: right; color: #ddd; font-size: 1.25em; clear: none; }
+.multiform-rating > label.small, .multiform-rating a.small { font-size: 1.25em; }
+.multiform-rating > label.medium, .multiform-rating a.medium { font-size: 2.2em; }
+.multiform-rating > label.large, .multiform-rating a.large { font-size: 3em; }
+.multiform-gap-field.pos-top .multiform-rating > label.last, .multiform-gap-field.pos-hide .multiform-rating > label.last { margin-left: 0; }
+.multiform-rating > label:hover { cursor: pointer; }
+.multiform-rating:not(:checked) > label:hover, 
+.multiform-rating:not(:checked) > label:hover ~ label, .multiform-rating .star-full { color: #FFD700;  } 
+.multiform-rating > input:checked + label:hover, 
+.multiform-rating > input:checked ~ label:hover,
+.multiform-rating > label:hover ~ input:checked ~ label, 
+.multiform-rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+.multiform-rating.disabled label .star-full { color: #FFD700 !important;  }
+.multiform-rating.disabled label { color: #ddd !important; opacity: .5; }
+.multiform-rating a {  color: #ddd; float: right; font-size: 1.3em; padding: 5px 10px; text-decoration: none; }
+.multiform-rating a:hover { color: #ff0000; }
+.multiform-rating.multiform-error-field > label, .multiform-rating.multiform-error-field a { color: #aaa } 
+
+/* Captcha */
+.multiform-gap-captcha img { vertical-align: middle; cursor: pointer; display: inline-block; }
+.multiform-gap-captcha input { display: inline-block; }
+
+/* Formula */
+.multiform-formula { display: inline-block; }
+.multiform-formula span { display: inline-block; padding: 5px 10px; width: 100%; border: 1px solid #ccc; font-size: 16px; }
+
+/* Section */
+.multiform-section.l-horiz > .multiform-gap-field { display: inline-block; vertical-align: top; }
+.multiform-section-multiply-icon { width: 1em; vertical-align: middle; margin-right: 5px; }
+.multiform-section-multiply-inner { display: inline-block; }
+.multiform-section-multiply-inner * { cursor: pointer; }
+.multiform-section-multiply-inner:hover span { text-decoration: underline; }
+.multiform-section-multiply[data-action="remove"] { font-size: .9em; color: #ff0000; text-align: right; }
+.multiform-section-multiply[data-action="remove"] svg { fill: #ff0000; }
+
+@font-face {
+  font-family: 'multiform_fonts';
+  src:  url('fonts/multiform_fonts.eot?7mxyfy');
+  src:  url('fonts/multiform_fonts.eot?7mxyfy#iefix') format('embedded-opentype'),
+    url('fonts/multiform_fonts.ttf?7mxyfy') format('truetype'),
+    url('fonts/multiform_fonts.woff?7mxyfy') format('woff'),
+    url('fonts/multiform_fonts.svg?7mxyfy#multiform_fonts') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i.mf { font-family: 'multiform_fonts' !important; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+i.mf.star-empty:before { content: "\e900"; }
+i.mf.star-half:before { content: "\e901"; }
+i.mf.star-full:before { content: "\e902"; }
+i.mf.circle-slash:before { content: "\e903"; }
+i.mf.search:before { content: "\e904"; }
+
+/*** Themes ***/
+/* Fonts */
+.default-theme .multiform-header { font-family: Helvetica, sans-serif; font-size: 14px; font-style: normal; color: #000; }
+.default-theme .multiform-title { font-family: Helvetica, sans-serif; font-size: 22px; font-style: normal; color: #000; }
+.default-theme .multiform-form-description { font-family: Helvetica, sans-serif; font-size: 14px; font-style: normal; color: #000; }
+.default-theme .multiform-gap-name { font-family: Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: bold; color: #000; }
+.default-theme .multiform-gap-value input[type="text"], .default-theme .multiform-gap-value textarea,
+.default-theme .multiform-gap-value input[type="email"], .default-theme .multiform-gap-value select,
+.default-theme .multiform-gap-value .multiform-formula span { font-family: Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; color: #000; }
+.default-theme .multiform-gap-description { font-family: Helvetica, sans-serif; font-size: 14px; font-style: normal; color: #000; }
+.default-theme .multiform-gap-value .prefix, .default-theme .multiform-attachment-text.before,
+.default-theme .multiform-gap-value .suffix, .default-theme .multiform-attachment-text.after { font-family: Helvetica, sans-serif; font-size: 14px; font-style: normal; color: #000; }
+.multiform-wrap.default-theme .errormsg, .default-theme .multiform-mask-error { font-family: Helvetica, sans-serif; font-size: 14px; font-style: italic; color: #ff0000; }
+.default-theme .mf-button { font-family: Helvetica, sans-serif; font-size: 14px; font-style: normal; color: #000; }
+.default-theme .multiform-grid th { font-family: Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: bold; color: #000; }
+.default-theme .multiform-grid thead td { font-family: Helvetica, sans-serif; font-size: 14px; font-style: normal; color: #000; }
+
+/* Background */
+.default-theme .multiform-header { background: #eee; }
+.multiform-wrap.default-theme { background: #fff; }
+.default-theme .multiform-gap-value input[type="text"], .default-theme .multiform-gap-value textarea,
+.default-theme .multiform-gap-value input[type="email"], .default-theme .multiform-gap-value select,
+.default-theme .multiform-gap-value .multiform-formula span { background: #fff; }
+.multiform-wrap.default-theme .errormsg, .default-theme .multiform-mask-error { background: #fff; }
+
+/* Borders */
+.multiform-wrap.default-theme { border-width: 1px; border-style: solid; border-color: #ccc; }
+.default-theme .multiform-gap-value textarea, .default-theme .multiform-gap-value input,
+.default-theme .multiform-gap-value select { border-width: 1px; border-style: solid; border-color: #ccc; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
+.default-theme .multiform-gap-value input[type='radio'], .default-theme .multiform-gap-value input[type='checkbox'] { border-width: 0; }
+.default-theme .multiform-gap-description { border-width: 0; border-style: solid; border-color: #000; }
+.multiform-gap-value textarea, .multiform-gap-value input, .multiform-gap-value select { -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
+.multiform-wrap.default-theme .errormsg, .default-theme .multiform-mask-error { border-width: 1px; border-style: solid; border-color: #ff0000; }
+.default-theme .multiform-gap-value input[type="text"]:focus, .default-theme .multiform-gap-value textarea:focus,
+.default-theme .multiform-gap-value input[type="email"]:focus, .default-theme .multiform-gap-value select:focus { border-width: 1px; border-style: solid; border-color: #99ccff; }
+
+/* Shadows */
+.multiform-wrap.default-theme { -webkit-box-shadow: 0 0 5px #ccc; -moz-box-shadow: 0 0 5px #ccc; box-shadow: 0 0 5px #ccc; }
+.default-theme .multiform-gap-value input[type="text"]:focus, .default-theme .multiform-gap-value textarea:focus,
+.default-theme .multiform-gap-value input[type="email"]:focus, .default-theme .multiform-gap-value select:focus { -webkit-box-shadow: 0 0 5px #99ccff; -moz-box-shadow: 0 0 5px #99ccff; box-shadow: 0 0 5px #99ccff; }
+
+/* Sizes */
+.multiform-wrap.default-theme { max-width: 700px; width: 100%; }
+.default-theme .multiform-header { height: 35px; }
+
+/* Margin/padding */
+.multiform-wrap.default-theme { margin: 0 auto; }
+.default-theme .multiform-header { padding: 5px 10px; }
+.default-theme .multiform-gap-field { padding: 10px 0; margin: 0 0 5px; }
+.default-theme .multiform-gap-field.type-section { padding: 0; margin: 0; }
+.default-theme .multiform-gap-value input[type="text"], .default-theme .multiform-gap-value textarea,
+.default-theme .multiform-gap-value input[type="email"], .default-theme .multiform-gap-value select,
+.default-theme .multiform-gap-value .multiform-formula span { padding: 1px; }
+.default-theme .multiform-gap-description { margin: 5px 0 0 0; }
+.multiform-wrap.default-theme .errormsg, .default-theme .multiform-mask-error { padding: 5px; margin: 10px 0 5px 0; }
+.default-theme .mf-button { padding: 2px 6px; }
+.default-theme .multiform-submit { padding: 10px; }
+
+/* Alignment */
+.default-theme .multiform-header { text-align: left; }
+.default-theme .multiform-title { text-align: center; }
+.default-theme .multiform-form-description { text-align: justify; }
+.default-theme .multiform-submit { text-align: left; }
+
+/* Additional */
+.default-theme .multiform-grid thead th, .default-theme .multiform-grid thead td { background-color: #e6e6e6; }
+.default-theme .multiform-grid tbody tr.odd td, .default-theme .multiform-grid tbody tr.odd th { background-color: #f5f5f5; }
+.default-theme .multiform-grid tbody tr.even td, .default-theme .multiform-grid tbody tr.even th { background-color: #fff; }
+.default-theme .multiform-grid tbody tr:hover th, .default-theme .multiform-grid tbody tr:hover td,
+.default-theme .multiform-grid tbody tr.odd:hover td { background-color: #ffffcf; }
+.default-theme .multiform-rating:not(:checked) > label:hover,
+.default-theme .multiform-rating:not(:checked) > label:hover ~ label,
+.default-theme .multiform-rating .star-full { color: #ffd700; }
+
+/*Icons*/
+i.multiform-broom { text-decoration:none; background-repeat:no-repeat; vertical-align:top; margin-top: 5px; background-image: url("img/broom.png"); height:16px; width:16px; display:inline-block; text-indent:-9999px; }
+i.multiform-loading { text-decoration:none; background-repeat:no-repeat; vertical-align:top; margin-top: 5px; background-image: url("loading16.gif"); height:16px; width:16px; display:inline-block; text-indent:-9999px; }
+
+/* Buttons */
+.multiform-wrap .mf-button:hover { cursor: pointer; }
+a.multiform-button-1,button.multiform-button-1, span.multiform-button-1, .multiform-wrap.multiform-button-1 .mf-button {-moz-box-shadow:inset 0 0 14px -3px #f2fadc !important;-webkit-box-shadow:inset 0 0 14px -3px #f2fadc !important;box-shadow:inset 0 0 14px -3px #f2fadc !important;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#dbe6c4),color-stop(1,#9ba892)) !important;background:-moz-linear-gradient(top,#dbe6c4 5%,#9ba892 100%) !important;background:-webkit-linear-gradient(top,#dbe6c4 5%,#9ba892 100%) !important;background:-o-linear-gradient(top,#dbe6c4 5%,#9ba892 100%) !important;background:-ms-linear-gradient(top,#dbe6c4 5%,#9ba892 100%) !important;background:linear-gradient(to bottom,#dbe6c4 5%,#9ba892 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dbe6c4',endColorstr='#9ba892',GradientType=0) !important;background-color:#dbe6c4 !important;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #b2b8ad !important;display:inline-block;cursor:pointer;color:#757d6f !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none !important;text-shadow:0 1px 0 #ced9bf}
+a.multiform-button-1:hover,button.multiform-button-1:hover, span.multiform-button-1:hover, .multiform-wrap.multiform-button-1 .mf-button:hover{background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#9ba892),color-stop(1,#dbe6c4)) !important;background:-moz-linear-gradient(top,#9ba892 5%,#dbe6c4 100%) !important;background:-webkit-linear-gradient(top,#9ba892 5%,#dbe6c4 100%) !important;background:-o-linear-gradient(top,#9ba892 5%,#dbe6c4 100%) !important;background:-ms-linear-gradient(top,#9ba892 5%,#dbe6c4 100%) !important;background:linear-gradient(to bottom,#9ba892 5%,#dbe6c4 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#9ba892',endColorstr='#dbe6c4',GradientType=0) !important;background-color:#9ba892 !important}
+a.multiform-button-1-flat,button.multiform-button-1-flat, span.multiform-button-1-flat, .multiform-wrap.multiform-button-1-flat .mf-button{background-color:#dbe6c4 !important;-moz-box-shadow:none !important;-webkit-box-shadow:none !important;box-shadow:none !important;-moz-border-radius:0;-webkit-border-radius:0;border-radius:0;border:1px solid #b2b8ad !important;display:inline-block;cursor:pointer;color:#757d6f !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none}
+a.multiform-button-1-flat:hover,button.multiform-button-1-flat:hover, span.multiform-button-1-flat:hover, .multiform-wrap.multiform-button-1-flat .mf-button:hover{background-color:#9ba892 !important}
+a.multiform-button-2,button.multiform-button-2, span.multiform-button-2, .multiform-wrap.multiform-button-2 .mf-button{-moz-box-shadow:inset 0 1px 0 0 #efdcfb !important;-webkit-box-shadow:inset 0 1px 0 0 #efdcfb !important;box-shadow:inset 0 1px 0 0 #efdcfb !important;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#dfbdfa),color-stop(1,#bc80ea)) !important;background:-moz-linear-gradient(top,#dfbdfa 5%,#bc80ea 100%) !important;background:-webkit-linear-gradient(top,#dfbdfa 5%,#bc80ea 100%) !important;background:-o-linear-gradient(top,#dfbdfa 5%,#bc80ea 100%) !important;background:-ms-linear-gradient(top,#dfbdfa 5%,#bc80ea 100%) !important;background:linear-gradient(to bottom,#dfbdfa 5%,#bc80ea 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfbdfa',endColorstr='#bc80ea',GradientType=0) !important;background-color:#dfbdfa !important;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #c584f3 !important;display:inline-block;cursor:pointer;color:#fff !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none !important;text-shadow:0 1px 0 #9752cc}
+a.multiform-button-2:hover,button.multiform-button-2:hover, span.multiform-button-2:hover, .multiform-wrap.multiform-button-2 .mf-button:hover{background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#bc80ea),color-stop(1,#dfbdfa)) !important;background:-moz-linear-gradient(top,#bc80ea 5%,#dfbdfa 100%) !important;background:-webkit-linear-gradient(top,#bc80ea 5%,#dfbdfa 100%) !important;background:-o-linear-gradient(top,#bc80ea 5%,#dfbdfa 100%) !important;background:-ms-linear-gradient(top,#bc80ea 5%,#dfbdfa 100%) !important;background:linear-gradient(to bottom,#bc80ea 5%,#dfbdfa 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc80ea',endColorstr='#dfbdfa',GradientType=0) !important;background-color:#bc80ea !important}
+a.multiform-button-2-flat,button.multiform-button-2-flat, span.multiform-button-2-flat, .multiform-wrap.multiform-button-2-flat .mf-button{background-color:#dfbdfa !important;border:1px solid #c584f3 !important;display:inline-block;cursor:pointer;color:#fff !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none;text-shadow:0 1px 0 #9752cc}
+a.multiform-button-2-flat:hover,button.multiform-button-2-flat:hover, span.multiform-button-2-flat:hover, .multiform-wrap.multiform-button-2-flat .mf-button:hover{background-color:#bc80ea !important}
+a.multiform-button-3,button.multiform-button-3, span.multiform-button-3, .multiform-wrap.multiform-button-3 .mf-button{-moz-box-shadow:inset 0 1px 0 0 #dcecfb !important;-webkit-box-shadow:inset 0 1px 0 0 #dcecfb !important;box-shadow:inset 0 1px 0 0 #dcecfb !important;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#bddbfa),color-stop(1,#80b5ea)) !important;background:-moz-linear-gradient(top,#bddbfa 5%,#80b5ea 100%) !important;background:-webkit-linear-gradient(top,#bddbfa 5%,#80b5ea 100%) !important;background:-o-linear-gradient(top,#bddbfa 5%,#80b5ea 100%) !important;background:-ms-linear-gradient(top,#bddbfa 5%,#80b5ea 100%) !important;background:linear-gradient(to bottom,#bddbfa 5%,#80b5ea 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa',endColorstr='#80b5ea',GradientType=0) !important;background-color:#bddbfa !important;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #84bbf3 !important;display:inline-block;cursor:pointer;color:#fff !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none !important;text-shadow:0 1px 0 #528ecc}
+a.multiform-button-3:hover,button.multiform-button-3:hover, span.multiform-button-3:hover, .multiform-wrap.multiform-button-3 .mf-button:hover{background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#80b5ea),color-stop(1,#bddbfa)) !important;background:-moz-linear-gradient(top,#80b5ea 5%,#bddbfa 100%) !important;background:-webkit-linear-gradient(top,#80b5ea 5%,#bddbfa 100%) !important;background:-o-linear-gradient(top,#80b5ea 5%,#bddbfa 100%) !important;background:-ms-linear-gradient(top,#80b5ea 5%,#bddbfa 100%) !important;background:linear-gradient(to bottom,#80b5ea 5%,#bddbfa 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#80b5ea',endColorstr='#bddbfa',GradientType=0) !important;background-color:#80b5ea !important}
+a.multiform-button-3-flat,button.multiform-button-3-flat, span.multiform-button-3-flat, .multiform-wrap.multiform-button-3-flat .mf-button{background-color:#bddbfa !important;border:1px solid #84bbf3 !important;display:inline-block;cursor:pointer;color:#fff !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none;text-shadow:0 1px 0 #528ecc}
+a.multiform-button-3-flat:hover,button.multiform-button-3-flat:hover, span.multiform-button-3-flat:hover, .multiform-wrap.multiform-button-3-flat .mf-button:hover{background-color:#80b5ea !important}
+a.multiform-button-4,button.multiform-button-4, span.multiform-button-4, .multiform-wrap.multiform-button-4 .mf-button{-moz-box-shadow:inset 0 1px 0 0 #fff !important;-webkit-box-shadow:inset 0 1px 0 0 #fff !important;box-shadow:inset 0 1px 0 0 #fff !important;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#fff),color-stop(1,#f6f6f6)) !important;background:-moz-linear-gradient(top,#fff 5%,#f6f6f6 100%) !important;background:-webkit-linear-gradient(top,#fff 5%,#f6f6f6 100%) !important;background:-o-linear-gradient(top,#fff 5%,#f6f6f6 100%) !important;background:-ms-linear-gradient(top,#fff 5%,#f6f6f6 100%) !important;background:linear-gradient(to bottom,#fff 5%,#f6f6f6 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#f6f6f6',GradientType=0) !important;background-color:#fff !important;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #dcdcdc !important;display:inline-block;cursor:pointer;color:#666 !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none !important;text-shadow:0 1px 0 #fff}
+a.multiform-button-4:hover,button.multiform-button-4:hover, span.multiform-button-4:hover, .multiform-wrap.multiform-button-4 .mf-button:hover{background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#f6f6f6),color-stop(1,#fff)) !important;background:-moz-linear-gradient(top,#f6f6f6 5%,#fff 100%) !important;background:-webkit-linear-gradient(top,#f6f6f6 5%,#fff 100%) !important;background:-o-linear-gradient(top,#f6f6f6 5%,#fff 100%) !important;background:-ms-linear-gradient(top,#f6f6f6 5%,#fff 100%) !important;background:linear-gradient(to bottom,#f6f6f6 5%,#fff 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6',endColorstr='#ffffff',GradientType=0) !important;background-color:#f6f6f6 !important}
+a.multiform-button-4-flat,button.multiform-button-4-flat, span.multiform-button-4-flat, .multiform-wrap.multiform-button-4-flat .mf-button{background-color:#fff !important;border:1px solid #dcdcdc !important;display:inline-block;cursor:pointer;color:#666 !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none}
+a.multiform-button-4-flat:hover,button.multiform-button-4-flat:hover, span.multiform-button-4-flat:hover, .multiform-wrap.multiform-button-4-flat .mf-button:hover{background-color:#f6f6f6 !important}
+a.multiform-button-5,button.multiform-button-5, span.multiform-button-5, .multiform-wrap.multiform-button-5 .mf-button{-moz-box-shadow:inset 0 1px 0 0 #f7c5c0 !important;-webkit-box-shadow:inset 0 1px 0 0 #f7c5c0 !important;box-shadow:inset 0 1px 0 0 #f7c5c0 !important;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#fc8d83),color-stop(1,#e4685d)) !important;background:-moz-linear-gradient(top,#fc8d83 5%,#e4685d 100%) !important;background:-webkit-linear-gradient(top,#fc8d83 5%,#e4685d 100%) !important;background:-o-linear-gradient(top,#fc8d83 5%,#e4685d 100%) !important;background:-ms-linear-gradient(top,#fc8d83 5%,#e4685d 100%) !important;background:linear-gradient(to bottom,#fc8d83 5%,#e4685d 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fc8d83',endColorstr='#e4685d',GradientType=0) !important;background-color:#fc8d83 !important;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #d83526 !important;display:inline-block;cursor:pointer;color:#fff !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none !important;text-shadow:0 1px 0 #b23e35}
+a.multiform-button-5:hover,button.multiform-button-5:hover, span.multiform-button-5:hover, .multiform-wrap.multiform-button-5 .mf-button:hover{background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#e4685d),color-stop(1,#fc8d83)) !important;background:-moz-linear-gradient(top,#e4685d 5%,#fc8d83 100%) !important;background:-webkit-linear-gradient(top,#e4685d 5%,#fc8d83 100%) !important;background:-o-linear-gradient(top,#e4685d 5%,#fc8d83 100%) !important;background:-ms-linear-gradient(top,#e4685d 5%,#fc8d83 100%) !important;background:linear-gradient(to bottom,#e4685d 5%,#fc8d83 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4685d',endColorstr='#fc8d83',GradientType=0) !important;background-color:#e4685d !important}
+a.multiform-button-5-flat,button.multiform-button-5-flat, span.multiform-button-5-flat, .multiform-wrap.multiform-button-5-flat .mf-button{background-color:#fc8d83 !important;border:1px solid #d83526 !important;display:inline-block;cursor:pointer;color:#fff !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none;text-shadow:0 1px 0 #b23e35}
+a.multiform-button-5-flat:hover,button.multiform-button-5-flat:hover, span.multiform-button-5-flat:hover, .multiform-wrap.multiform-button-5-flat .mf-button:hover{background-color:#e4685d !important}
+a.multiform-button-6,button.multiform-button-6, span.multiform-button-6, .multiform-wrap.multiform-button-6 .mf-button{-moz-box-shadow:inset 0 1px 0 0 #bee2f9 !important;-webkit-box-shadow:inset 0 1px 0 0 #bee2f9 !important;box-shadow:inset 0 1px 0 0 #bee2f9 !important;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#63b8ee),color-stop(1,#468ccf)) !important;background:-moz-linear-gradient(top,#63b8ee 5%,#468ccf 100%) !important;background:-webkit-linear-gradient(top,#63b8ee 5%,#468ccf 100%) !important;background:-o-linear-gradient(top,#63b8ee 5%,#468ccf 100%) !important;background:-ms-linear-gradient(top,#63b8ee 5%,#468ccf 100%) !important;background:linear-gradient(to bottom,#63b8ee 5%,#468ccf 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b8ee',endColorstr='#468ccf',GradientType=0) !important;background-color:#63b8ee !important;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #3866a3 !important;display:inline-block;cursor:pointer;color:#14396a !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none !important;text-shadow:0 1px 0 #7cacde}
+a.multiform-button-6:hover,button.multiform-button-6:hover, span.multiform-button-6:hover, .multiform-wrap.multiform-button-6 .mf-button:hover{background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#468ccf),color-stop(1,#63b8ee)) !important;background:-moz-linear-gradient(top,#468ccf 5%,#63b8ee 100%) !important;background:-webkit-linear-gradient(top,#468ccf 5%,#63b8ee 100%) !important;background:-o-linear-gradient(top,#468ccf 5%,#63b8ee 100%) !important;background:-ms-linear-gradient(top,#468ccf 5%,#63b8ee 100%) !important;background:linear-gradient(to bottom,#468ccf 5%,#63b8ee 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf',endColorstr='#63b8ee',GradientType=0) !important;background-color:#468ccf !important}
+a.multiform-button-6-flat,button.multiform-button-6-flat, span.multiform-button-6-flat, .multiform-wrap.multiform-button-6-flat .mf-button{background-color:#63b8ee !important;border:1px solid #3866a3 !important;display:inline-block;cursor:pointer;color:#14396a !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none;text-shadow:0 1px 0 #7cacde}
+a.multiform-button-6-flat:hover,button.multiform-button-6-flat:hover, span.multiform-button-6-flat:hover, .multiform-wrap.multiform-button-6-flat .mf-button:hover{background-color:#468ccf !important}
+a.multiform-button-7,button.multiform-button-7, span.multiform-button-7, .multiform-wrap.multiform-button-7 .mf-button{-moz-box-shadow:inset 0 1px 0 0 #fff6af !important;-webkit-box-shadow:inset 0 1px 0 0 #fff6af !important;box-shadow:inset 0 1px 0 0 #fff6af !important;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#ffec64),color-stop(1,#ffab23)) !important;background:-moz-linear-gradient(top,#ffec64 5%,#ffab23 100%) !important;background:-webkit-linear-gradient(top,#ffec64 5%,#ffab23 100%) !important;background:-o-linear-gradient(top,#ffec64 5%,#ffab23 100%) !important;background:-ms-linear-gradient(top,#ffec64 5%,#ffab23 100%) !important;background:linear-gradient(to bottom,#ffec64 5%,#ffab23 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64',endColorstr='#ffab23',GradientType=0) !important;background-color:#ffec64 !important;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #fa2 !important;display:inline-block;cursor:pointer;color:#333 !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none !important;text-shadow:0 1px 0 #fe6}
+a.multiform-button-7:hover,button.multiform-button-7:hover, span.multiform-button-7:hover, .multiform-wrap.multiform-button-7 .mf-button:hover{background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#ffab23),color-stop(1,#ffec64)) !important;background:-moz-linear-gradient(top,#ffab23 5%,#ffec64 100%) !important;background:-webkit-linear-gradient(top,#ffab23 5%,#ffec64 100%) !important;background:-o-linear-gradient(top,#ffab23 5%,#ffec64 100%) !important;background:-ms-linear-gradient(top,#ffab23 5%,#ffec64 100%) !important;background:linear-gradient(to bottom,#ffab23 5%,#ffec64 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23',endColorstr='#ffec64',GradientType=0) !important;background-color:#ffab23 !important}
+a.multiform-button-7-flat,button.multiform-button-7-flat, span.multiform-button-7-flat, .multiform-wrap.multiform-button-7-flat .mf-button{background-color:#ffec64 !important;border:1px solid #fa2 !important;display:inline-block;cursor:pointer;color:#333 !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none;text-shadow:0 1px 0 #fe6}
+a.multiform-button-7-flat:hover,button.multiform-button-7-flat:hover, span.multiform-button-7-flat:hover, .multiform-wrap.multiform-button-7-flat .mf-button:hover{background-color:#ffab23 !important}
+a.multiform-button-8,button.multiform-button-8, span.multiform-button-8, .multiform-wrap.multiform-button-8 .mf-button{-moz-box-shadow:inset 0 1px 0 0 #a4e271 !important;-webkit-box-shadow:inset 0 1px 0 0 #a4e271 !important;box-shadow:inset 0 1px 0 0 #a4e271 !important;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#89c403),color-stop(1,#77a809)) !important;background:-moz-linear-gradient(top,#89c403 5%,#77a809 100%) !important;background:-webkit-linear-gradient(top,#89c403 5%,#77a809 100%) !important;background:-o-linear-gradient(top,#89c403 5%,#77a809 100%) !important;background:-ms-linear-gradient(top,#89c403 5%,#77a809 100%) !important;background:linear-gradient(to bottom,#89c403 5%,#77a809 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#89c403',endColorstr='#77a809',GradientType=0) !important;background-color:#89c403 !important;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #74b807 !important;display:inline-block;cursor:pointer;color:#fff !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none !important;text-shadow:0 1px 0 #528009}
+a.multiform-button-8:hover,button.multiform-button-8:hover, span.multiform-button-8:hover, .multiform-wrap.multiform-button-8 .mf-button:hover{background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#77a809),color-stop(1,#89c403)) !important;background:-moz-linear-gradient(top,#77a809 5%,#89c403 100%) !important;background:-webkit-linear-gradient(top,#77a809 5%,#89c403 100%) !important;background:-o-linear-gradient(top,#77a809 5%,#89c403 100%) !important;background:-ms-linear-gradient(top,#77a809 5%,#89c403 100%) !important;background:linear-gradient(to bottom,#77a809 5%,#89c403 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77a809',endColorstr='#89c403',GradientType=0) !important;background-color:#77a809 !important}
+a.multiform-button-8-flat,button.multiform-button-8-flat, span.multiform-button-8-flat, .multiform-wrap.multiform-button-8-flat .mf-button{background-color:#89c403 !important;border:1px solid #74b807 !important;display:inline-block;cursor:pointer;color:#fff !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none;text-shadow:0 1px 0 #528009}
+a.multiform-button-8-flat:hover,button.multiform-button-8-flat:hover, span.multiform-button-8-flat:hover, .multiform-wrap.multiform-button-8-flat .mf-button:hover{background-color:#77a809 !important}
+a.multiform-button-9,button.multiform-button-9, span.multiform-button-9, .multiform-wrap.multiform-button-9 .mf-button{-moz-box-shadow:inset 0 1px 0 0 #fff !important;-webkit-box-shadow:inset 0 1px 0 0 #fff !important;box-shadow:inset 0 1px 0 0 #fff !important;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#f9f9f9),color-stop(1,#e9e9e9)) !important;background:-moz-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%) !important;background:-webkit-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%) !important;background:-o-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%) !important;background:-ms-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%) !important;background:linear-gradient(to bottom,#f9f9f9 5%,#e9e9e9 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9',endColorstr='#e9e9e9',GradientType=0) !important;background-color:#f9f9f9 !important;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #dcdcdc !important;display:inline-block;cursor:pointer;color:#666 !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none !important;text-shadow:0 1px 0 #fff}
+a.multiform-button-9:hover,button.multiform-button-9:hover, span.multiform-button-9:hover, .multiform-wrap.multiform-button-9 .mf-button:hover{background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#e9e9e9),color-stop(1,#f9f9f9)) !important;background:-moz-linear-gradient(top,#e9e9e9 5%,#f9f9f9 100%) !important;background:-webkit-linear-gradient(top,#e9e9e9 5%,#f9f9f9 100%) !important;background:-o-linear-gradient(top,#e9e9e9 5%,#f9f9f9 100%) !important;background:-ms-linear-gradient(top,#e9e9e9 5%,#f9f9f9 100%) !important;background:linear-gradient(to bottom,#e9e9e9 5%,#f9f9f9 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9',endColorstr='#f9f9f9',GradientType=0) !important;background-color:#e9e9e9 !important}
+a.multiform-button-9-flat,button.multiform-button-9-flat, span.multiform-button-9-flat, .multiform-wrap.multiform-button-9-flat .mf-button{background-color:#f9f9f9 !important;border:1px solid #dcdcdc !important;display:inline-block;cursor:pointer;color:#666 !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none;text-shadow:0 1px 0 #fff}
+a.multiform-button-9-flat:hover,button.multiform-button-9-flat:hover, span.multiform-button-9-flat:hover, .multiform-wrap.multiform-button-9-flat .mf-button:hover{background-color:#e9e9e9 !important}
+a.multiform-button-10,button.multiform-button-10, span.multiform-button-10, .multiform-wrap.multiform-button-10 .mf-button{-moz-box-shadow:inset 0 1px 0 0 #e184f3 !important;-webkit-box-shadow:inset 0 1px 0 0 #e184f3 !important;box-shadow:inset 0 1px 0 0 #e184f3 !important;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#c123de),color-stop(1,#a20dbd)) !important;background:-moz-linear-gradient(top,#c123de 5%,#a20dbd 100%) !important;background:-webkit-linear-gradient(top,#c123de 5%,#a20dbd 100%) !important;background:-o-linear-gradient(top,#c123de 5%,#a20dbd 100%) !important;background:-ms-linear-gradient(top,#c123de 5%,#a20dbd 100%) !important;background:linear-gradient(to bottom,#c123de 5%,#a20dbd 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c123de',endColorstr='#a20dbd',GradientType=0) !important;background-color:#c123de !important;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #a511c0 !important;display:inline-block;cursor:pointer;color:#fff !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none !important;text-shadow:0 1px 0 #9b14b3}
+a.multiform-button-10:hover,button.multiform-button-10:hover, span.multiform-button-10:hover, .multiform-wrap.multiform-button-10 .mf-button:hover{background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#a20dbd),color-stop(1,#c123de)) !important;background:-moz-linear-gradient(top,#a20dbd 5%,#c123de 100%) !important;background:-webkit-linear-gradient(top,#a20dbd 5%,#c123de 100%) !important;background:-o-linear-gradient(top,#a20dbd 5%,#c123de 100%) !important;background:-ms-linear-gradient(top,#a20dbd 5%,#c123de 100%) !important;background:linear-gradient(to bottom,#a20dbd 5%,#c123de 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a20dbd',endColorstr='#c123de',GradientType=0) !important;background-color:#a20dbd !important}
+a.multiform-button-10-flat,button.multiform-button-10-flat, span.multiform-button-10-flat, .multiform-wrap.multiform-button-10-flat .mf-button{background-color:#c123de !important;border:1px solid #a511c0 !important;display:inline-block;cursor:pointer;color:#fff !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none;text-shadow:0 1px 0 #9b14b3}
+a.multiform-button-10-flat:hover,button.multiform-button-10-flat:hover, span.multiform-button-10-flat:hover, .multiform-wrap.multiform-button-10-flat .mf-button:hover{background-color:#a20dbd !important}
+a.multiform-button-11,button.multiform-button-11, span.multiform-button-11, .multiform-wrap.multiform-button-11 .mf-button{-moz-box-shadow:inset 0 1px 0 0 #97c4fe !important;-webkit-box-shadow:inset 0 1px 0 0 #97c4fe !important;box-shadow:inset 0 1px 0 0 #97c4fe !important;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#3d94f6),color-stop(1,#1e62d0)) !important;background:-moz-linear-gradient(top,#3d94f6 5%,#1e62d0 100%) !important;background:-webkit-linear-gradient(top,#3d94f6 5%,#1e62d0 100%) !important;background:-o-linear-gradient(top,#3d94f6 5%,#1e62d0 100%) !important;background:-ms-linear-gradient(top,#3d94f6 5%,#1e62d0 100%) !important;background:linear-gradient(to bottom,#3d94f6 5%,#1e62d0 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6',endColorstr='#1e62d0',GradientType=0) !important;background-color:#3d94f6 !important;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #337fed !important;display:inline-block;cursor:pointer;color:#fff !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none !important;text-shadow:0 1px 0 #1570cd}
+a.multiform-button-11:hover,button.multiform-button-11:hover, span.multiform-button-11:hover, .multiform-wrap.multiform-button-11 .mf-button:hover{background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#1e62d0),color-stop(1,#3d94f6)) !important;background:-moz-linear-gradient(top,#1e62d0 5%,#3d94f6 100%) !important;background:-webkit-linear-gradient(top,#1e62d0 5%,#3d94f6 100%) !important;background:-o-linear-gradient(top,#1e62d0 5%,#3d94f6 100%) !important;background:-ms-linear-gradient(top,#1e62d0 5%,#3d94f6 100%) !important;background:linear-gradient(to bottom,#1e62d0 5%,#3d94f6 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0',endColorstr='#3d94f6',GradientType=0) !important;background-color:#1e62d0 !important}
+a.multiform-button-11-flat,button.multiform-button-11-flat, span.multiform-button-11-flat, .multiform-wrap.multiform-button-11-flat .mf-button{background-color:#3d94f6 !important;border:1px solid #337fed !important;display:inline-block;cursor:pointer;color:#fff !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none;text-shadow:0 1px 0 #1570cd}
+a.multiform-button-11-flat:hover,button.multiform-button-11-flat:hover, span.multiform-button-11-flat:hover, .multiform-wrap.multiform-button-11-flat .mf-button:hover{background-color:#1e62d0 !important}
+a.multiform-button-12,button.multiform-button-12, span.multiform-button-12, .multiform-wrap.multiform-button-12 .mf-button{-moz-box-shadow:inset 0 1px 0 0 #fbafe3 !important;-webkit-box-shadow:inset 0 1px 0 0 #fbafe3 !important;box-shadow:inset 0 1px 0 0 #fbafe3 !important;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#ff5bb0),color-stop(1,#ef027d)) !important;background:-moz-linear-gradient(top,#ff5bb0 5%,#ef027d 100%) !important;background:-webkit-linear-gradient(top,#ff5bb0 5%,#ef027d 100%) !important;background:-o-linear-gradient(top,#ff5bb0 5%,#ef027d 100%) !important;background:-ms-linear-gradient(top,#ff5bb0 5%,#ef027d 100%) !important;background:linear-gradient(to bottom,#ff5bb0 5%,#ef027d 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bb0',endColorstr='#ef027d',GradientType=0) !important;background-color:#ff5bb0 !important;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #ee1eb5 !important;display:inline-block;cursor:pointer;color:#fff !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none !important;text-shadow:0 1px 0 #c70067}
+a.multiform-button-12:hover,button.multiform-button-12:hover, span.multiform-button-12:hover, .multiform-wrap.multiform-button-12 .mf-button:hover{background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#ef027d),color-stop(1,#ff5bb0)) !important;background:-moz-linear-gradient(top,#ef027d 5%,#ff5bb0 100%) !important;background:-webkit-linear-gradient(top,#ef027d 5%,#ff5bb0 100%) !important;background:-o-linear-gradient(top,#ef027d 5%,#ff5bb0 100%) !important;background:-ms-linear-gradient(top,#ef027d 5%,#ff5bb0 100%) !important;background:linear-gradient(to bottom,#ef027d 5%,#ff5bb0 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ef027d',endColorstr='#ff5bb0',GradientType=0) !important;background-color:#ef027d !important}
+a.multiform-button-12-flat,button.multiform-button-12-flat, span.multiform-button-12-flat, .multiform-wrap.multiform-button-12-flat .mf-button{background-color:#ff5bb0 !important;border:1px solid #ee1eb5 !important;display:inline-block;cursor:pointer;color:#fff !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none;text-shadow:0 1px 0 #c70067}
+a.multiform-button-12-flat:hover,button.multiform-button-12-flat:hover, span.multiform-button-12-flat:hover, .multiform-wrap.multiform-button-12-flat .mf-button:hover{background-color:#ef027d !important}
+a.multiform-button-13,button.multiform-button-13, span.multiform-button-13, .multiform-wrap.multiform-button-13 .mf-button{-moz-box-shadow:inset 0 1px 0 0 #f5978e !important;-webkit-box-shadow:inset 0 1px 0 0 #f5978e !important;box-shadow:inset 0 1px 0 0 #f5978e !important;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#f24537),color-stop(1,#c62d1f)) !important;background:-moz-linear-gradient(top,#f24537 5%,#c62d1f 100%) !important;background:-webkit-linear-gradient(top,#f24537 5%,#c62d1f 100%) !important;background:-o-linear-gradient(top,#f24537 5%,#c62d1f 100%) !important;background:-ms-linear-gradient(top,#f24537 5%,#c62d1f 100%) !important;background:linear-gradient(to bottom,#f24537 5%,#c62d1f 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537',endColorstr='#c62d1f',GradientType=0) !important;background-color:#f24537 !important;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #d02718 !important;display:inline-block;cursor:pointer;color:#fff !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none !important;text-shadow:0 1px 0 #810e05}
+a.multiform-button-13:hover,button.multiform-button-13:hover, span.multiform-button-13:hover, .multiform-wrap.multiform-button-13 .mf-button:hover{background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#c62d1f),color-stop(1,#f24537)) !important;background:-moz-linear-gradient(top,#c62d1f 5%,#f24537 100%) !important;background:-webkit-linear-gradient(top,#c62d1f 5%,#f24537 100%) !important;background:-o-linear-gradient(top,#c62d1f 5%,#f24537 100%) !important;background:-ms-linear-gradient(top,#c62d1f 5%,#f24537 100%) !important;background:linear-gradient(to bottom,#c62d1f 5%,#f24537 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f',endColorstr='#f24537',GradientType=0) !important;background-color:#c62d1f !important}
+a.multiform-button-13-flat,button.multiform-button-13-flat, span.multiform-button-13-flat, .multiform-wrap.multiform-button-13-flat .mf-button{background-color:#f24537 !important;border:1px solid #d02718 !important;display:inline-block;cursor:pointer;color:#fff !important;font-family:Arial;font-size:15px;font-weight:700;padding:6px 24px;text-decoration:none;text-shadow:0 1px 0 #810e05}
+a.multiform-button-13-flat:hover,button.multiform-button-13-flat:hover, span.multiform-button-13-flat:hover, .multiform-wrap.multiform-button-13-flat .mf-button:hover{background-color:#c62d1f !important}
+
+
+@media only screen and (max-width: 760px) {
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-name, .multiform-wrap.default-theme .multiform-gap-name { float: none; width: 100%; margin-bottom: 5px; }   
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-value, .multiform-wrap.default-theme .multiform-gap-value { margin-left: 0; width: 100%; }
+ .multiform-wrap.multiform-adaptive-width .multiform-section.l-horiz > .multiform-gap-field { display: block; width: 100%; }
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-field.type-input .multiform-gap-value input, 
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-field.type-email .multiform-gap-value input,
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-field.type-phone .multiform-gap-value input, 
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-value select,
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-value textarea,
+ .multiform-wrap.default-theme .multiform-gap-field.type-input .multiform-gap-value input, 
+ .multiform-wrap.default-theme .multiform-gap-field.type-email .multiform-gap-value input,
+ .multiform-wrap.default-theme .multiform-gap-field.type-phone .multiform-gap-value input, 
+ .multiform-wrap.default-theme .multiform-gap-value select,
+ .multiform-wrap.default-theme .multiform-gap-value textarea { width: 100%; max-width: 100%; }
+ .multiform-wrap.default-theme .multiform-gap-value select.width50px,  .multiform-wrap.default-theme .multiform-gap-value input.width50px,
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-value select.width50px,  
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-value input.width50px { max-width: 50px; }
+ .multiform-wrap.default-theme .multiform-gap-value select.width30px, .multiform-wrap.default-theme .multiform-gap-value input.width30px,
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-value select.width30px, 
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-value input.width30px { max-width: 30px; }
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-field .rangeslider-block,
+ .multiform-wrap.default-theme .multiform-gap-field .rangeslider-block  { width: 97%; }
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-field.type-input .multiform-gap-value .suffix, 
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-field.type-input .multiform-gap-value .prefix,
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-field.type-email .suffix, 
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-field.type-email .prefix,
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-field.type-phone .suffix, 
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-field.type-phone .prefix,
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-field.type-select .suffix, 
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-field.type-select .prefix,
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-field.type-textarea .suffix, 
+ .multiform-wrap.multiform-adaptive-width .multiform-gap-field.type-textarea .prefix,
+ .multiform-wrap.default-theme .multiform-gap-field.type-input .multiform-gap-value .suffix, 
+ .multiform-wrap.default-theme .multiform-gap-field.type-input .multiform-gap-value .prefix,
+ .multiform-wrap.default-theme .multiform-gap-field.type-email .suffix, 
+ .multiform-wrap.default-theme .multiform-gap-field.type-email .prefix,
+ .multiform-wrap.default-theme .multiform-gap-field.type-phone .suffix, 
+ .multiform-wrap.default-theme .multiform-gap-field.type-phone .prefix,
+ .multiform-wrap.default-theme .multiform-gap-field.type-select .suffix, 
+ .multiform-wrap.default-theme .multiform-gap-field.type-select .prefix,
+ .multiform-wrap.default-theme .multiform-gap-field.type-textarea .suffix, 
+ .multiform-wrap.default-theme .multiform-gap-field.type-textarea .prefix { margin: 0 }
+}
+/* Other theme settings, which break the styles */
+.multiform-gap-field.type-rating input[type=radio].at-stylize-input + .at-stylize-box { display: none; }
+.multiform-gap-value .picker { margin: 0; padding: 0; }
+.multiform-gap-value .picker .picker-handle { display: none; }

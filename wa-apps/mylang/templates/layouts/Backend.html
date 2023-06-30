@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{$wa->locale()}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{$wa->appName()} &mdash; {$wa->accountName()}</title>
+    {$wa->css()}
+    <link type="text/css" rel="stylesheet" href="{$wa_app_static_url}css/mylang.min.css?{$v}">
+    <script type="text/javascript" src="{$wa_url}wa-content/js/jquery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="{$wa_url}wa-content/js/jquery-wa/wa.core.js"></script>
+    <script type="text/javascript" src="{$wa_url}wa-content/js/jquery-plugins/jquery.store.js"></script>
+    <script type="text/javascript" src="{$wa_url}wa-content/js/jquery-plugins/jquery.history.js"></script>
+    {$wa->js()}
+    <script type="text/javascript" src="{$wa_app_static_url}js/mylang_backend.js?{$v}"></script>
+    <script type="text/javascript">
+    $(function() {
+        $.mylang.init({
+            page: '{if $page}{$page}{else}contacts{/if}',
+            debug: {var_export(waSystemConfig::isDebug(),true)}
+        })
+    });
+</script>
+</head>
+<body>
+    <div id="wa" class="s-no-level2">
+    {$wa->header()}
+    <div id="wa-app">
+        <div id="mainmenu">
+            <ul class="tabs">
+                {$rightmost_li_margin = ' style="margin-right: 30px;"'}
+                    <li class="small float-right{if $page=='settings'} selected{else} no-tab{/if}" {$rightmost_li_margin}>
+                        <a href="?module=settings"><i class="icon16 settings"></i>[`Settings`]</a>
+                    </li>
+                    <li class="small float-right{if $page=='plugins'} selected{else} no-tab{/if}">
+                        <a href="?module=plugins">[`Plugins`]</a>
+                    </li>
+                {foreach $apps as $key=>$app}
+                    <li class="{if $page==$key}selected{else}no-tab{/if}">
+                        <a href="?module={$key}">{$app['name']}</a>
+                    </li>
+                {/foreach}
+            </ul>
+        </div>
+        <div id="maincontent">
+            <div class="block">
+                {block name="content"}
+                    {$content|default:'<div id="content"></div>'}
+                {/block}
+            </div>
+        </div>
+    </div><!-- #wa-app -->
+</div><!-- #wa -->
+<script>$.wa.locale = $.extend($.wa.locale, {$strings});</script>
+</body>
+</html>

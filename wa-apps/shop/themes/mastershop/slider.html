@@ -1,0 +1,116 @@
+{strip}
+<div class="slider-outer">
+    {if !empty($theme_settings.test_settings) && !empty($wa->cookie('show_product_discount'))}{$theme_settings.show_product_discount = $wa->cookie('show_product_discount')}{/if}
+    {if !empty($theme_settings.test_settings) && !empty($wa->cookie('show_product_badge_saving'))}{$theme_settings.show_product_badge_saving = $wa->cookie('show_product_badge_saving')}{/if}
+    {if !empty($theme_settings.test_settings) && !empty($wa->cookie('cart_add_action'))}{$theme_settings.cart_add_action = $wa->cookie('cart_add_action')}{/if}
+
+    {$is_retina = $wa->shop->config('enable_2x')}
+    {$is_lazy_images = $theme_settings.homepage_slider_lazy}
+    {$is_mobile = ($wa->isMobile() && ($wa->cookie("is_desktop_for_mobile") != 1 || !$theme_settings.switch_version))}
+    {$slider_type = $theme_settings.homepage_slider}
+    {$slider_content = []}
+
+    {* photo album *}
+    {$album_id = (int)$theme_settings.photos_slider_desktop}{if $wa->isMobile()} {$album_id = (int)$theme_settings.photos_slider_mobile}{/if}
+    {if $album_id && $wa->photos && ($slider_type == "photos" || $slider_type == "mixed")}
+        {$photos = $wa->photos->photos("#/album/`$album_id`")}
+        {foreach $photos as $photo}
+            {$slider_content["photo-`$photo.id`"] = ["type" => "photo", "slide" => $photo]}
+        {/foreach}
+    {/if}
+
+    {* products list *}
+    {if $theme_settings.homepage_product_list_slider && ($slider_type == "products" || $slider_type == "mixed")}
+        {$promoproducts = $wa->shop->productSet($theme_settings.homepage_product_list_slider, null, null, ["params" => "tag_slider", "params" => "tag_slider_url"])}
+        {if count($promoproducts) > 0}
+            {$promoproducts_features = []}
+            {if $theme_settings.slider_product_features}
+                {$promoproducts_features = $wa->shop->features($promoproducts)}
+                {if !empty($theme_settings.product_short_features_aliases)}
+                    {$features_aliases_list = ","|explode:$theme_settings.product_short_features_aliases}
+                {/if}
+            {/if}
+            {foreach $promoproducts as $product}
+                {$slider_content["product-`$product.id`"] = ["type" => "product", "slide" => $product]}
+            {/foreach}
+        {/if}
+    {/if}
+    {function getDiscountSlider price=null compare_price=null}
+        {if $theme_settings.show_product_discount == 1 && $compare_price > $price}
+            {$discount = (($compare_price-$price)/$compare_price)*100}
+            {if $theme_settings.show_product_discount_round == "ceil"}
+                {$discount = ceil($discount)}
+            {else if $theme_settings.show_product_discount_round == "floor"}
+                {$discount = floor($discount)}
+            {else}
+                {$discount = round($discount)}
+            {/if}
+            {if $discount >= (int)$theme_settings.show_product_discount_minimal && $price > 0}
+                <div class="product-discount slider-product__discount">-{$discount}%</div>
+            {/if}
+        {/if}
+    {/function}
+
+    {* promos *}
+    {$slider_promo = $theme_settings.nums_promos_slider_desktop}{if $wa->isMobile()}{$slider_promo = $theme_settings.nums_promos_slider_mobile}{/if}
+    {if $slider_promo && ($slider_type == "promos" || $slider_type == "mixed")}
+        {$promo_nums = ","|explode:$slider_promo}
+        {if count($promo_nums) > 0}
+            {foreach $promo_nums as $num}
+                {if isset($promocards[$num-1])}
+                    {$promoslider[$num] = $promocards[$num-1]}
+                {/if}
+            {/foreach}
+            {if !empty($promoslider)}
+                {foreach $promoslider as $num => $promo}
+                    {$slider_content["promo-`$num`"] = ["type" => "promo", "slide" => $promo]}
+                {/foreach}
+            {/if}
+        {/if}
+    {/if}
+
+    {$slider_content_result = []}
+    {$slider_mixed = $theme_settings.slider_mixed_desktop}{if $wa->isMobile()}{$slider_mixed = $theme_settings.slider_mixed_mobile}{/if}
+    {if $slider_type == "mixed" && !empty($slider_mixed)}
+        {$list_slide = ","|explode:$slider_mixed}
+        {if !empty($list_slide)}
+            {foreach $list_slide as $slide}
+                {if !empty($slider_content[$slide])}
+                    {$slider_content_result[$slide] = $slider_content[$slide]}
+                {/if}
+            {/foreach}
+        {/if}
+    {else}
+        {$slider_content_result = $slider_content}
+    {/if}
+
+    {if count($slider_content_result)}
+        <div class="slider-wrap js-slider-wrap">
+            {$is_pause = !empty($theme_settings.slider_pause)}
+            <div class="js-main-slider owl-carousel main-slider slider-banner" data-lazy="{$is_lazy_images}" data-swipe="{!empty($theme_settings.homepage_slider_swipe)}"{if !empty($is_pause)} data-pause="{$theme_settings.slider_pause}"{/if} data-pages="true">
+                {if !empty($theme_settings.homepage_slider_rand)}{$shuffle = $slider_content_result|shuffle}{/if}
+                {foreach $slider_content_result as $item}
+                    {if $item.type == "product"}
+                        {include file="./slider.product.html" is_fist=$item@first p=$item.slide inline}
+                    {else if $item.type == "photo"}
+                        {include file="./slider.photo.html" is_fist=$item@first photo=$item.slide inline}
+                    {else if $item.type == "promo"}
+                        {include file="./slider.promo.html" is_fist=$item@first promo=$item.slide inline}
+                    {/if}
+                {/foreach}
+            </div>
+            {if count($slider_content_result) > 1}
+                <div class="js-slider-dots bs-color owl-dots">
+                    {foreach $slider_content_result as $item}
+                        <button data-index="{$item@index}" class="js-slider-init-interaction owl-dot{if $item@first} active{/if}"><span></span></button>
+                    {/foreach}
+                </div>
+                <div class="js-slider-nav bs-color owl-nav">
+                    <div data-index="prev" class="owl-prev js-slider-init-interaction"><span class="carousel-prev"></span></div>
+                    <div data-index="next" class="owl-next js-slider-init-interaction"><span class="carousel-next"></span></div>
+                </div>
+            {/if}
+        </div>
+    {/if}
+</div>
+{/strip}

@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Webasyst Files webDAV plugin 1.0.19 plugin UA translation v 0.1\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: /wa-apps/files/plugins/webdav/templates/topBlock.html:2
+msgid "WebDAV server must be secured by a valid SSL certificate to be mapped as a network drive in Windows."
+msgstr "Сервер WebDAV повинен бути забезпечений дійсним сертифікатом SSL, аби підключити його як мережевий диск в Windows."
+
+#: /wa-apps/files/plugins/webdav/templates/topBlock.html:3
+msgid "The WebDAV server settlement must be configured in the website root, if you want to use it with Windows 7 or earlier and/or MS Office 2007 or earlier."
+msgstr "Поселення серверу WebDAV має бути налаштовано у корені вебсайту, якщо ви хочете використовувати його з Windows 7 або більш ранніми версіями та/або MS Office 2007 або більш ранніми."
+
+#: /wa-apps/files/plugins/webdav/templates/settlement.html:13
+msgid "You need the settlement of Files to switch on WebDAV."
+msgstr "Для переходу на WebDAV потрібне поселення додатку «Файли»."
+
+#: /wa-apps/files/plugins/webdav/lib/config/settings.php:8
+msgid "Enable WebDAV"
+msgstr "Увімкнути WebDAV"
+
+#: /wa-apps/files/plugins/webdav/lib/config/settings.php:12
+msgid "Server URL"
+msgstr "URL-адреса сервера"
+
+#: /wa-apps/files/plugins/webdav/lib/config/plugin.php:3
+msgid "WebDAV server"
+msgstr "Сервер WebDAV"
+
+#: /wa-apps/files/plugins/webdav/lib/config/plugin.php:4
+msgid "Provides tools for users to create, change, and move documents on a server"
+msgstr "Надає користувачам інструменти, аби створювати, змінювати та переміщувати документи на сервері"

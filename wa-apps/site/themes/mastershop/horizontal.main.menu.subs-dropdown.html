@@ -1,0 +1,87 @@
+{strip}
+{$is_retina = $theme_settings.categories_menu_images_retina && class_exists('shopSkcatimagePlugin') && !empty($cat_images)}
+{$is_lazy = $theme_settings.categories_menu_images_lazy && !empty($cat_images)}
+<div class="js-categories-sub subcategories-h">
+    <div class="js-subcategories-menu">
+        {foreach $categories as $item_lvl2}
+            {if !empty($item_lvl2['is_menus'])}{$is_menus_item = true}{/if}
+            {if !empty($item_lvl2.params.horizontal_menu_hide)}{continue}{/if}
+            {$is_has_submenu = isset($item_lvl2.childs) && count($item_lvl2.childs) && $theme_settings.horizontal_main_menu_levels > 2}
+            {$is_category = isset($item_lvl2.filter) || isset($item_lvl2.sort_products) || isset($item_lvl2.count)}
+            <div{if isset($is_view_data_item_id)} data-id="{if $is_category}{$item_lvl2.id}{else}add-{$item_lvl2.id}{/if}"{/if} class="subcategories-h__item js-subcategories-item{if isset($class_item)} {$class_item}{/if}">
+                <span class="subcategories-h__item-inner">
+                    {$is_badge = (!empty($theme_settings.horizontal_main_menu_badge) && !empty($item_lvl2.params.badge_text) && !empty($item_lvl2.params.badge_class))}
+                    {$is_selected = ($is_category && $selected_category == $item_lvl2.id) || (!$is_category && strlen($item_lvl2.url)>1 && $wa->currentUrl() == $item_lvl2.url)}
+                    <a class="subcategories-h__link{if $is_has_submenu} with-subs{/if}{if $is_selected} selected{/if}" href="{$item_lvl2.url}"{if !empty($item_lvl2.target)} target="{$item_lvl2.target}"{/if}>
+                         {if $theme_settings.horizontal_main_menu_icon_lvl2}
+                            {if !empty($is_menus_item) && !empty($menus_list_with_img[$item_lvl2.id]['img'])}
+                                {$icon_name = $menus_list_with_img[$item_lvl2.id]['img']}
+                                {$icon = "`$wa_url`wa-data/public/menus/image/`$icon_name`"}
+                            {else if $is_category && !empty($cat_images[$item_lvl2.id].icon)}
+                                {$icon = $cat_images[$item_lvl2.id].icon}
+                            {else if !empty($item_lvl2.icon)}
+                                {$icon = $item_lvl2.icon}
+                            {else}
+                                {$icon = null}
+                            {/if}
+                            {if !empty($icon)}
+                                <span class="subcategories-h__icon">
+                                    {if $is_lazy}
+                                        <img class="js-subcat-image" alt="{$item_lvl2.name}" src="{$wa_theme_url}img/lazy-image.png" data-src="{$icon}" />
+                                    {else}
+                                        <img class="js-subcat-image" alt="{$item_lvl2.name}" src="{$icon}" />
+                                    {/if}
+                                </span>
+                            {/if}
+                         {/if}
+                        <span class="subcategories-h__title">
+                            {$item_lvl2.name}{if $is_badge} <span class="cat-badge cat-badge--{$item_lvl2.params.badge_class}">{$item_lvl2.params.badge_text}</span>{/if}
+                        </span>
+                    </a>
+                    {if $is_has_submenu}<i class="subcategories-h__caret caret fal fa-angle-right"></i>{/if}
+                </span>
+                {if $is_has_submenu}
+                    <div class="subcategories-h js-categories-sub">
+                        {foreach $item_lvl2.childs as $item_lvl3}
+                            {if !empty($item_lvl3.params.horizontal_menu_hide)}{continue}{/if}
+                            <div class="subcategories-h__item">
+                                <span class="subcategories-h__item-inner">
+                                    {$is_badge = (!empty($theme_settings.horizontal_main_menu_badge) && !empty($item_lvl3.params.badge_text) && !empty($item_lvl3.params.badge_class))}
+                                    {$is_category = isset($item_lvl3.filter) || isset($item_lvl3.sort_products) || isset($item_lvl3.count)}
+                                    {$is_selected = ($is_category && $selected_category == $item_lvl3.id) || (!$is_category && strlen($item_lvl3.url)>1 && $wa->currentUrl() == $item_lvl3.url)}
+                                    <a class="subcategories-h__link{if $is_selected} selected{/if}" href="{$item_lvl3.url}"{if !empty($item_lvl3.target)} target="{$item_lvl3.target}"{/if}>
+                                         {if $theme_settings.horizontal_main_menu_icon_lvl3}
+                                            {if !empty($is_menus_item) && !empty($menus_list_with_img[$item_lvl3.id]['img'])}
+                                                {$icon_name = $menus_list_with_img[$item_lvl3.id]['img']}
+                                                {$icon = "`$wa_url`wa-data/public/menus/image/`$icon_name`"}
+                                            {else if $is_category && !empty($cat_images[$item_lvl3.id].icon)}
+                                                {$icon = $cat_images[$item_lvl3.id].icon}
+                                            {else if !empty($item_lvl3.icon)}
+                                                {$icon = $item_lvl3.icon}
+                                            {else}
+                                                {$icon = null}
+                                            {/if}
+                                            {if !empty($icon)}
+                                                <span class="subcategories-h__icon">
+                                                    {if $is_lazy}
+                                                        <img class="js-subcat-image" alt="{$item_lvl3.name}" src="{$wa_theme_url}img/lazy-image.png" data-src="{$icon}" />
+                                                    {else}
+                                                        <img class="js-subcat-image" alt="{$item_lvl3.name}" src="{$icon}" />
+                                                    {/if}
+                                                </span>
+                                            {/if}
+                                         {/if}
+                                        <span class="subcategories-h__title">
+                                            {$item_lvl3.name}{if $is_badge} <span class="cat-badge cat-badge--{$item_lvl3.params.badge_class}">{$item_lvl3.params.badge_text}</span>{/if}
+                                        </span>
+                                    </a>
+                                </span>
+                            </div>
+                        {/foreach}
+                    </div>
+                {/if}
+            </div>
+        {/foreach}
+    </div>
+</div>
+{/strip}

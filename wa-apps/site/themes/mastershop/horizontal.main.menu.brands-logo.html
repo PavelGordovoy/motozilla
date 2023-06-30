@@ -1,0 +1,36 @@
+{strip}
+<div class="js-categories-sub brands-h-logos">
+    <div class="brands-h-logos__items">
+        {foreach $brands as $b}
+            {$url = null}
+            {$image = null}
+            {if $is_productbrands}
+                {$url = $b.url}
+                {$image = "`$wa_url`wa-data/public/shop/brands/`$b.id`/`$b.id`.107`$b.image`"}
+            {/if}
+            {if $is_brandspro}
+                {$url = $b.frontend_url}
+                {$image = $b.image_url}
+            {/if}
+            <div class="brands-h-logos__item">
+                <a class="brands-h-logos__inner" title="{$b.name|escape}" href="{$url}">
+                    <span class="brands-h-logos__image">
+                        {if $image}
+                            {if $theme_settings.categories_menu_images_lazy}
+                                <img class="js-brand-image" alt="{$b.name|escape}" src="{$wa_theme_url}img/lazy-image.png" data-src="{$image}" />
+                            {else}
+                                <img class="js-brand-image" alt="{$b.name|escape}" src="{$image}" />
+                            {/if}
+                        {else}
+                            {$b.name|escape}
+                        {/if}
+                    </span>
+                    {*<span class="brands-h-logos__title">
+                        {$b.name}<i class="brands-h-logos__more ac-color fal fa-long-arrow-right"></i>
+                    </span>*}
+                </a>
+            </div>
+        {/foreach}
+    </div>
+</div>
+{/strip}

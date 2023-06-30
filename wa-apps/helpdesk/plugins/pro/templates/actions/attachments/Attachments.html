@@ -1,0 +1,101 @@
+<div class="block">
+    <h1>[`Attachments`]{if !empty($total_count)} ({$total_count}){/if}</h1>
+</div>
+<div class="support-content">
+    <div class="s-request">
+        <div class="block double-padded">[`A list of all request attachments`]</div>
+    </div>
+
+    <div class="block double-padded" id='hp-attachments-wrapper'>
+        {if !empty($attachments)}
+            <p>
+                [`Total size of all attachments:`] {$total_size}
+            </p>
+            <p>
+                <a href="javascript:void(0)" class="js-index-files">[`Reindex files`]</a>
+                [`or use CRON command:`] <span class="cron-command">{$cron_command}</span>
+            </p>
+            <div class="margin-block bottom">
+                <div class="float-left">
+                    [`Number of files per page`]
+                    <select class="hp-per-page" name="per_page">
+                        {foreach [5, 30, 50, 100, 200, 500] as $page}
+                            <option value="{$page}"{if $items_per_page == $page} selected{/if}>{$page}</option>
+                        {/foreach}
+                    </select>
+                </div>
+                <div class="float-right">
+                    <a href="#" class="js-delete-attachment" title="[`delete attachment`]" data-selected="1">
+                        [`Delete`]
+                        <i class="icon16 delete"></i>
+                        <span class="indicator"></span>
+                    </a>
+                </div>
+                <div class="clear-both"></div>
+            </div>
+            <form id="hp-attachments-form">
+                <table class="zebra">
+                    <thead>
+                    <tr>
+                        <th class="min-width"><input type="checkbox" class="f-checker"></th>
+                        {foreach ['name' => _wp('Name'), 'request_id' => _wp('Request'), 'size' => _wp('Size'), 'updated' => _wp('Request updated')] as $field => $name}
+                            <th class="th-sort" data-field="{$field}" data-direction="{if $order.field == $field && $order.direction == 'DESC'}ASC{else}DESC{/if}" title="[`Sort`]">
+                                {$name}
+                                {if $order.field == $field}
+                                   <i class="icon16 {if $order.direction == 'ASC'}uarr{else}darr{/if}"></i>
+                                {/if}
+                            </th>
+                        {/foreach}
+                        <th class="min-width"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {foreach $attachments as $a}
+                        {$can_be_downloaded = !$a.not_found && !empty($a.link)}
+                        <tr class="attachment-item{if $a.not_found} not-found{/if}" data-size="{$a.size}">
+                            <td><input type="checkbox" name="index[]" value="{$a.link}"></td>
+                            <td>
+                                {if $a.not_found}<i class="icon16 exclamation-red" title="[`File not found`]"></i>{/if}
+                                {if $can_be_downloaded}
+                                <i class="icon16 download" title="[`Download`]"></i>
+                                <a href="{$a.link}" title="[`Download`]">
+                                    {/if}
+                                    {$a.name|escape}
+                                    {if $can_be_downloaded}
+                                </a>
+                                {/if}
+                            </td>
+                            <td>
+                                <a href="#/request/{$a.request_id}/" title="[`Open request`]">{$a.request_id}</a>{if !empty($a.state)} ({$a.state}){/if}
+                            </td>
+                            <td>{$a.human_filesize}</td>
+                            <td>{$a.last_update}</td>
+                            <td>
+                                <a href="#" class="js-delete-attachment" title="[`delete attachment`]" data-id="{$a.link}"><i class="icon16 delete"></i></a>
+                            </td>
+                        </tr>
+                    {/foreach}
+                    </tbody>
+                </table>
+            </form>
+            {if $total_pages_num > 1}
+                <div class="pagination margin-block top">
+                    {include file=$pagination_template total_pages_num=$total_pages_num current_page_num=$current_page_num}
+                </div>
+            {/if}
+        {else}
+            <p class="temp-block">[`Cached files not found`]</p>
+            <a href="javascript:void(0)" class="js-index-files">[`Start indexing files`]</a>
+            [`or use CRON command:`] <span class="cron-command">{$cron_command}</span>
+        {/if}
+    </div>
+</div>
+<script type="text/javascript" src="{$plugin_url}js/pro.attachments.js"></script>
+<script>
+    (function ($) {
+        new helpdeskProAttachments({
+            $wrapper: $("#hp-attachments-wrapper"),
+            $form: $("#hp-attachments-form")
+        });
+    })(jQuery);
+</script>

@@ -1,0 +1,32 @@
+{strip}
+{if method_exists($wa->shop, 'checkout')}
+    {$cartUrl = $wa->shop->checkout()->cartUrl()}
+{else}
+    {$cartUrl = $wa->getUrl('shop/frontend/cart')}
+{/if}
+
+<div id="top-msg-addcart" class="top-msg-addcart">
+    <div class="top-msg-addcart__inner">
+        <div class="top-msg-addcart__product">
+            <div class="top-msg-addcart__image js-top-msg-addcart-image"></div>
+            <div class="top-msg-addcart__content">
+                <div class="top-msg-addcart__head">
+                    [`Product in cart`]
+                </div>
+                <span class="top-msg-addcart__description">
+                    <span class="top-msg-addcart__name js-top-msg-addcart-name"></span>
+                    <span class="top-msg-addcart__price js-top-msg-addcart-price"></span>
+                    <span class="top-msg-addcart__count js-top-msg-addcart-count"></span>
+                </span>
+                <span class="top-msg-addcart__btn">
+                    <a class="top-msg-addcart__checkout button small" href="{$cartUrl}">[`Checkout`]</a>
+                    <span class="js-top-msg-addcart-close top-msg-addcart__close">
+                        <span class="top-msg-addcart__close-icon">×</span>
+                        <span class="top-msg-addcart__close-text">[`Close`]</span>
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+{/strip}

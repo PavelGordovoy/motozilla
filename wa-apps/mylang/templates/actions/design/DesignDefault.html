@@ -1,0 +1,104 @@
+{strip}
+<div>
+    <h1>
+        {if isset($theme)}
+            <a href="#/themes/" class="back">← [`Back`]</a>[`Themes`] - {$theme.name}({$theme.id})
+        {else}
+            [`Themes`]
+        {/if}
+    </h1>
+    <form id="s-mylang-saveall-form" method="POST" action="?module=design&action=save" data-form="save">
+        <input type="hidden" name="app_id" value="{$app}"/>
+    <div>
+    
+    {if !empty($theme)}
+        {if $theme.disabled}
+            <span>[`Theme has no text fields to translate.`]</span>
+        {else}
+            <input type="hidden" name="theme_id" value="{$theme.id}"/>
+            {$current = $wa->locale()}
+            <table class="zebra single-lined">
+                <tr class="header">
+                    <th>[`Theme field`]</th>
+                    {foreach $locales as $l}
+                        <th>[`Value`] - {$l}</th>
+                    {/foreach}
+                </tr>
+                {foreach $theme.settings as $key=>$val}
+                <tr>
+                    <td data-key="{$key}">
+                        {if is_array($val.name)}
+                            {$val.name[$current]|ifset:$val.name['ru_RU']|strip_tags|escape|truncate:200}
+                        {else}
+                            {$val.name|strip_tags|escape|truncate:200}
+                        {/if}
+                    </td>
+                    {foreach $locales as $l}
+                        <td data-locale="{$l}">
+                            {if empty($val) || (is_array($val)&&(strlen(json_encode($val.value)) <= 50 ))}
+                                <input type="text" name="settings[{$key}][{$l}]" value="{if is_array($val.value)}{$val.value[$l]|ifset:$val.value['en_US']|escape}{else}{$val.value|escape}{/if}" placeholder="{$l}" data-mylang="{$l}">
+                            {else}
+                                <textarea name="settings[{$key}][{$l}]">{if is_array($val.value)}{$val.value[$l]|ifset:$val.value['en_US']}{else}{$val.value}{/if}</textarea>
+                            {/if}
+                        </td>
+                    {/foreach}
+                </tr>
+                {/foreach}
+            </table>
+            <hr>
+            <table class="zebra single-lined">
+                {*<tr class="header">
+                    <th>[`Theme field`]</th>
+                    {foreach $locales as $l}
+                        <th>[`Value`] - {$l}</th>
+                    {/foreach}
+                </tr>*}
+                {foreach $localeStrings as $key=>$val}
+                <tr>
+                    <td data-key="{$key}" colspan="2">
+                        <b>{$key|escape}</b>
+                    </td>
+                </tr>
+                    {foreach $locales as $l}
+                        <tr>
+                        <td class="align-right min-width">{$l}</td>
+                        <td data-locale="{$l}">
+                            {if empty($val) || (strlen(json_encode($val[$l]|default:"")) <= 150 )}
+                                <input type="text" class="long" name="locales[{$val.md5}][{$l}]" value="{$val[$l]|default:''|escape}" placeholder="{$l}" data-mylang="{$l}">
+                            {else}
+                                <textarea name="locales[{$val.md5}][{$l}]">{$val[$l]|default:''|escape}</textarea>
+                            {/if}
+                        </td>
+                        </tr>
+                    {/foreach}
+                {/foreach}
+            </table>
+            <div class="placeholder"></div>
+        {/if}
+    {else}
+    <table class="zebra single-lined">
+        <tr class="header">
+            <th>[`Theme name`]</th>
+            <th>[`Theme ID`]</th>
+        </tr>
+        {foreach $themes as $theme}
+        <tr>
+            <td><a href="#/themes/{$theme.id}">{$theme.name}</a></td>
+            <td>{$theme.id}</td>
+        </tr>
+        {/foreach}
+    </table>
+    {/if}
+    </div>
+    <div class="placeholder"></div>
+    <div>
+        <div class="wa-mylang-save-panel block bordered-top">
+            <input id="wa-save-button" type="submit" class="button green" value="[`Save`]">
+            <em class="hint">Ctrl + S</em>
+            <span id="wa-form-status" class="stealth"><i class="icon16 yes"></i> [`Saved`]</span>
+            <span id="wa-form-error" class="stealth"><i class="icon16 no"></i> [`Error`]</span>
+        </div>
+    </div>
+    </form>
+</div>
+{/strip}

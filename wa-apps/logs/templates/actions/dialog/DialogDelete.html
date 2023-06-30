@@ -1,0 +1,51 @@
+<div>
+    {if !empty($error)}
+        <header class="dialog-header">
+            <h1>[`Error`]</h1>
+        </header>
+        <div class="dialog-content">
+            <div class="fields">
+                <div class="field">
+                    <div class="value">
+                        <span class="state-error">{$error}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {else}
+        <header class="dialog-header">
+            <h1>{$title}</h1>
+        </header>
+        <div class="dialog-content">
+            <div class="fields">
+                <div class="field">
+                    <div class="name">[`Path`]</div>
+                    <div class="value">
+                        <strong class="break-all">{if strlen($item.folder)}<span class="gray">{$item.folder}</span>{/if}{$item.name}</strong>
+                    </div>
+                </div>
+
+                {if !empty($item.warnings)}
+                    <div class="field">
+                        <div class="value submit">
+                            <ul class="state-caution">
+                                {foreach $item.warnings as $warning}
+                                    <li><i class="fas fa-exclamation-triangle"></i> {$warning|escape}</li>
+                                {/foreach}
+                            </ul>
+                        </div>
+                    </div>
+                {/if}
+
+                <div class="field">
+                    <div class="value">
+                        <span class="state-error"></span>
+                    </div>
+                </div>
+            </div>
+            <form>
+                <input name="path" type="hidden" value="{$path|escape}">
+            </form>
+        </div>
+    {/if}
+</div>

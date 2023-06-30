@@ -1,0 +1,460 @@
+{* Switcher *}
+<link rel="stylesheet" href="{$wa_url}wa-content/js/jquery-plugins/ibutton/jquery.ibutton.min.css?v={$wa->version()}">
+<script src="{$wa_url}wa-content/js/jquery-plugins/ibutton/jquery.ibutton.min.js"></script>
+
+<link rel="stylesheet" href="{$wa_url}wa-content/js/redactor/2/redactor.css">
+<script src="{$wa_url}wa-content/js/redactor/2/redactor.min.js?v={$wa->version()}"></script>
+{if $lang != 'en'}
+<script src="{$wa_url}wa-content/js/redactor/2/{$lang}.js"></script>
+{/if}
+
+<link rel="stylesheet" href="{$wa_app_static_url}js/datepicker/css/metallic.css">
+<script src="{$wa_app_static_url}js/datepicker/javascript/zebra_datepicker.src.js"></script>
+
+{if $wa->get('addJs')}
+<script src="{$wa_app_static_url}js/form/settings.js"></script>
+{/if}
+
+<div class="block settings-tab">
+    <a href="#/delete/form/{$form.id}" class="corner-right-top js-action"><i class="icon16 delete"></i> [`delete`]</a>
+    <form action="?module=form&action=settingsSave" method="post" id="s-form-settings-save" class="submit-fixed">
+        <div class="fields style-1">
+            <div class="field">
+                <div class="name">[`Activity`]</div>
+                <div class="value no-shift s-ibutton-checkbox">
+                    <ul class="menu-h">
+                        <li><span class="gray s-form-off-label">[`Off`]</span></li>
+                        <li>
+                            <input type="checkbox" class ="s-form-status" name="basic[status]" value="1"{if $form.status} checked{/if} />
+                        </li>
+                        <li><span class="s-form-on-label">[`On`]</span></li>
+                    </ul>
+                    <div class="margin-block s-ibutton-hide"{if !$form.status} style="display: none"{/if}>
+                        <label><input type="checkbox" name="schedule_activity" data-field="schedule" onchange="$.form_settings.changeEventHandler(this)" value="1" {if $form.start || $form.end}checked{/if}/> [`Specify form schedule activity`]</label>
+                        <div class="f-schedule-block margin-block" {if !$form.start && !$form.end}style="display: none"{/if}>
+                             <div class="hint">[`Server time`]: {$smarty.now|wa_datetime:'fulldatetime'}</div>
+                            <div class="bold" style="color: green;">[`Start`]</div>
+                            <div class="schedule-time margin-block">
+                                <span>
+                                    <input type="text" maxlength="2" onkeypress="$.multiform.isValidInput(event, /[0-9]/);" class="schedule-day width30px" name="schedule[start][day]"{if $form.start} value='{$form.start|date_format:"%d"}'{/if} />
+                                           <label>[`DD`]</label>
+                                </span>
+                                <span>
+                                    <input type="text" maxlength="2" onkeypress="$.multiform.isValidInput(event, /[0-9]/);" class="schedule-month width30px" name="schedule[start][month]"{if $form.start} value='{$form.start|date_format:"%m"}'{/if} />
+                                           <label>[`MM`]</label>
+                                </span>
+                                <span>
+                                    <input type="text" maxlength="4" onkeypress="$.multiform.isValidInput(event, /[0-9]/);" class="schedule-year width50px" name="schedule[start][year]"{if $form.start} value='{$form.start|date_format:"%Y"}'{/if} />
+                                           <label>[`YYYY`]</label>
+                                </span>
+                                <input type="text" style="width: 0;min-width: 0;" class="multiform-datepicker outside">
+                                <span style="margin-left: 20px">
+                                    {if $form.start}{$start_hour = $form.start|date_format:"%H"}{else}{$start_hour = 0}{/if}
+                                    <select name="schedule[start][hour]">
+                                        {for $i=0; $i<=24; $i++}
+                                        <option value="{$i}"{if $i == $start_hour} selected{/if}>{"%02d"|sprintf:$i}</option>
+                                        {/for}
+                                    </select>
+                                    <label>[`HH`]</label>
+                                </span>
+                                <span>
+                                    {if $form.start}{$start_minute = $form.start|date_format:"%M"}{else}{$start_minute = 0}{/if}
+                                    <select name="schedule[start][minute]">
+                                        {for $i=0; $i<=60; $i++}
+                                        <option value="{$i}"{if $i == $start_minute} selected{/if}>{"%02d"|sprintf:$i}</option>
+                                        {/for}
+                                    </select>
+                                    <label>[`MM`]</label>
+                                </span>
+                            </div>
+                            <div class="bold" style="color: red; clear: left;">[`End`]</div>
+                            <div class="schedule-time margin-block">
+                                <span>
+                                    <input type="text" maxlength="2" onkeypress="$.multiform.isValidInput(event, /[0-9]/);" class="schedule-day width30px" name="schedule[end][day]"{if $form.end} value='{$form.end|date_format:"%d"}'{/if} />
+                                           <label>[`DD`]</label>
+                                </span>
+                                <span>
+                                    <input type="text" maxlength="2" onkeypress="$.multiform.isValidInput(event, /[0-9]/);" class="schedule-month width30px" name="schedule[end][month]"{if $form.end} value='{$form.end|date_format:"%m"}'{/if} />
+                                           <label>[`MM`]</label>
+                                </span>
+                                <span>
+                                    <input type="text" maxlength="4" onkeypress="$.multiform.isValidInput(event, /[0-9]/);" class="schedule-year width50px" name="schedule[end][year]"{if $form.end} value='{$form.end|date_format:"%Y"}'{/if} />
+                                           <label>[`YYYY`]</label>
+                                </span>
+                                <input type="text" style="width: 0;min-width: 0;" class="multiform-datepicker outside">
+                                <span style="margin-left: 20px">
+                                    {if $form.end}{$end_hour = $form.end|date_format:"%H"}{else}{$end_hour = 0}{/if}
+                                    <select name="schedule[end][hour]">
+                                        {for $i=0; $i<=24; $i++}
+                                        <option value="{$i}"{if $i == $end_hour} selected{/if}>{"%02d"|sprintf:$i}</option>
+                                        {/for}
+                                    </select>
+                                    <label>[`HH`]</label>
+                                </span>
+                                <span>
+                                    {if $form.end}{$end_minute = $form.end|date_format:"%M"}{else}{$end_minute = 0}{/if}
+                                    <select name="schedule[end][minute]">
+                                        {for $i=0; $i<=60; $i++}
+                                        <option value="{$i}"{if $i == $end_minute} selected{/if}>{"%02d"|sprintf:$i}</option>
+                                        {/for}
+                                    </select>
+                                    <label>[`MM`]</label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear-both"></div>
+                </div>
+            <hr>
+            </div>
+            <div class="field">
+                <div class="name">[`Enable records output`]</div>
+                <div class="value no-shift s-ibutton-checkbox">
+                    <ul class="menu-h">
+                        <li><span class="gray s-form-off-label">[`Off`]</span></li>
+                        <li>
+                            <input type="checkbox" class ="s-form-status" name="param[record_output]" value="1"{if !empty($form.record_output)} checked{/if} />
+                        </li>
+                        <li><span class="s-form-on-label">[`On`]</span></li>
+                    </ul>
+                    <div class="margin-block s-ibutton-hide"{if empty($form.record_output)} style="display: none"{/if}>
+                         <div class="margin-block semi bottom hint-help">[`This is the template of records output. You can show users their data, if it's necessary.`]<br>[`Use the following code in your theme templates: <b style='border: 1px solid #ccc; display: inline-block; padding: 5px;'>&#123;$wa-&gt;multiform-&gtrecordsTemplate({$form.id})&#125;</b>`]</div>
+                        <textarea name="param[record_output_template]" class="redactor-editor">{if !empty($form.record_output_template)}{$form.record_output_template|escape}{/if}</textarea>
+                        <div class="margin-block semi top hint-help">[`You can use <a href='#/get/templateVars/' class='js-action' title='template vars'>template vars</a>`]</div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="field">
+                <div class="name">[`Form in popup window`]</div>
+                <div class="value no-shift s-ibutton-checkbox">
+                    <ul class="menu-h" style="display: inline-block">
+                        <li><span class="gray s-form-off-label">[`Off`]</span></li>
+                        <li>
+                            <input type="checkbox" class="s-form-status" name="param[popup]" value="1"{if !empty($form.popup)} checked{/if} />
+                        </li>
+                        <li><span class="s-form-on-label">[`On`]</span></li>
+                    </ul>
+                    <div class="inline-block s-ibutton-hide"{if empty($form.popup)} style="display: none"{/if}>
+                         <div class="margin-block semi bottom">[`Button text`]</div>
+                        <input type="text" name="param[popup_button]" style="width: 500px" value="{if !empty($form.popup_button)}{$form.popup_button|escape}{/if}" />
+                        <div class="margin-block semi top hint-help">[`You can use HTML`]</div>
+                    </div>
+                </div>
+            </div>
+        <hr>
+        </div>
+        <div class="fields width100" style="max-width: 900px">
+            <div class="field">
+                <div class="name">[`Form name`]</div>
+                <div class="value">
+                    <input type="text" maxlength = "255" name="basic[name]" value="{$form.name|escape}" />
+                    <div class="margin-block hint-help">[`Only used in admin area`]</div>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">[`Form ID`]</div>
+                <div class="value">
+                    <input type="text" maxlength = "20" onkeypress="$.multiform.isValidInput(event, /[0-9a-z\-_]/);" name="basic[url]" value="{$form.url|escape}" />
+                    <div class="margin-block hint-help">[`Available symbols`]: <b>[ 0-9, a-z, -, _ ]</b>. <br>[`Use this ID to output the form.`]</div>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">[`Form CSS class`]</div>
+                <div class="value"><input type="text" name="param[css_class]" value="{if !empty($form.css_class)}{$form.css_class|escape}{/if}" /></div>
+            </div>
+            <div class="field">
+                <div class="name">[`Form title`]</div>
+                <div class="value"><input type="text" maxlength = "255" name="basic[title]" value="{$form.title|escape}" /></div>
+            </div>
+            <div class="field">
+                <div class="name">[`Form description`]</div>
+                <div class="value"><textarea name="basic[description]" class="redactor-editor">{$form.description|escape}</textarea></div>
+            </div>
+            <div class="field">
+                <div class="name">[`Records ID format`]</div>
+                <div class="value">
+                    <input type="text"  name="param[record_format]" value="{if !empty($form.record_format)}{$form.record_format|escape}{else}#100&#123;$record_id&#125;{/if}" />
+                    <div class="margin-block hint-help">[`Code &#123;$record_id&#125; will be replaced by record ID. Do not remove <b>&#123;$record_id&#125;</b>`]</div>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">[`Form type`]</div>
+                <div class="value">
+                    <select name="basic[type]">
+                        <option value="1"{if $form.type == '1'} selected{/if}>[`public`]</option>
+                        <option value="0"{if $form.type == '0'} selected{/if}>[`private`]</option>
+                    </select>
+                    <div class="margin-block hint-help">[`Private form will be available for authorized users with special access. Use application Contacts to set the rights`]</div>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">[`Use tag &lt;form&gt;`]</div>
+                <div class="value no-shift s-ibutton-checkbox">
+                    <ul class="menu-h" style="display: inline-block">
+                        <li><span class="gray s-form-off-label">[`Off`]</span></li>
+                        <li>
+                            <input type="checkbox" class="s-form-status" name="param[use_tag_form]" value="1"{if !empty($form.use_tag_form) || !isset($form.use_tag_form)} checked{/if} />
+                        </li>
+                        <li><span class="s-form-on-label">[`On`]</span></li>
+                    </ul>
+                    <div class="margin-block hint-help">[`If you decided to embed webform into some &lt;form&gt; on your website, then disable this option to prevent unexpected behavior of website.`]</div>
+                </div>
+            </div>
+        <hr>
+        </div>
+        <div class="fields style-1">
+            <div class="field cloud-style with-tabs">
+                <div class="name"><a href="#/change/CloudTab/" class="js-action s-confirmation-tab-name" data-tab="confirmation">[`Confirmation options`]</a></div>
+                <div class="name inactive"><a href="#/change/CloudTab/" class="js-action s-limitation-tab-name" data-tab="limitation">[`Limitation options`]</a></div>
+                <div class="name inactive"><a href="#/change/CloudTab/" class="js-action s-meta-tab-name" data-tab="meta">[`META settings`]</a></div>
+                <div class="value">
+                    <div class="s-confirmation-tab f-tab" data-tab="confirmation" style="display: block;">
+                        <div class="margin-block">
+                            <label><input type="radio" onchange="$.form_settings.changeEventHandler(this)" data-field="confirmation" name="param[confirmation]" value="message"{if empty($form.confirmation) || (!empty($form.confirmation) && $form.confirmation == 'message')} checked{/if}/> [`Show message`]</label>
+                            <label style="margin-left: 10px;"><input type="radio" onchange="$.form_settings.changeEventHandler(this)" data-field="confirmation" name="param[confirmation]" value="redirect"{if !empty($form.confirmation) && $form.confirmation == 'redirect'} checked{/if}/> [`Redirect`]</label>
+                        </div>
+                        <div class="f-confirmation-message"{if !empty($form.confirmation) && $form.confirmation !== 'message'} style="display: none"{/if}>
+                             <textarea name="param[callback_text]" class="redactor-editor">{if !empty($form.callback_text)}{$form.callback_text|escape}{else}[`Your message successfully sent! Your request number is &#123;Request:ID&#125;`]{/if}</textarea>
+                            <div class="margin-block hint-help">[`You can use <a href='#/get/templateVars/' class='js-action' title='template vars'>template vars</a>`]</div>
+                        </div>
+                        <div class="f-confirmation-redirect"{if (!empty($form.confirmation) && $form.confirmation !== 'redirect') || !isset($form.confirmation)} style="display: none"{/if}>
+                             <input type="text" name='param[confirmation_redirect]' placeholder="http://yourwebsite.com" value='{if !empty($form.confirmation_redirect)}{$form.confirmation_redirect|escape}{else}http://{/if}' />
+                            <div class="margin-block hint-help">[`Specify website you would like user to redirect after successfully submitted form`]</div>
+                        </div>
+                        <div class="field">
+                            {if multiformHelper::notificationsAccess() > 0}
+                                <label {if multiformHelper::notificationsAccess() < 3} title="[`You don't have access`]"{/if}>
+                                    <input type="checkbox"{if multiformHelper::notificationsAccess() < 3} disabled{/if} onchange="$.form_settings.changeEventHandler(this)" data-field="confirmation-email" name="param[confirmation_email]" value='1'{if !empty($form.confirmation_email)} checked{/if}/>
+                                    [`Send confirmation email to user`]
+                                </label>
+                                <div class="margin-block s-confirmation-email-block info-text"{if empty($form.confirmation_email)} style="display: none;"{/if}>
+                                     <div class="field">
+                                        <div class="name">[`Send to`]</div>
+                                        <div class="value">
+                                            {if $email_fields}
+                                            <select name="param[confirmation_send_to]">
+                                                <option value="0">[`* * * Select field * * *`]</option>
+                                                {foreach $email_fields as $e}
+                                                {if !empty($e.unique_id)}{$email_id = $e.unique_id}{else}{$email_id = $e.id}{/if}
+                                                <option value="{$email_id}"{if !empty($form.confirmation_send_to) && $form.confirmation_send_to == $email_id} selected{/if}>{if $e.title}{$e.title|escape}{else}[`Field`]_{$email_id}{/if}</option>
+                                                {/foreach}
+                                            </select>
+                                            {else}
+                                            <a href="#/page/edit/{$form.id}/" title="[`Create email field`]"><i class="icon16 add"></i> [`Create email field`]</a>, [`if you want to send confirmation message`]
+                                            {/if}
+                                            <div class="margin-block hint-help">[`Select the email field you want to send the confirmation message.`]</div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="name">[`Sender email`]</div>
+                                        <div class="value">
+                                            <input type="text" name='param[confirmation_sender]' class="f-sender-field" value='{if !empty($form.confirmation_sender)}{$form.confirmation_sender|escape}{/if}' />
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="name">[`Sender name`]</div>
+                                        <div class="value">
+                                            <input type="text" name='param[confirmation_sender_name]' value='{if !empty($form.confirmation_sender_name)}{$form.confirmation_sender_name|escape}{/if}' />
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="name">[`Reply to`]</div>
+                                        <div class="value">
+                                            <input type="text" name='param[confirmation_reply_to]' class="f-reply-to-field" value='{if !empty($form.confirmation_reply_to)}{$form.confirmation_reply_to|escape}{/if}' />
+                                            <div class="margin-block hint-help">[`Specify email address you want the users to send messages when they reply to the confirmation message. If you don't want them to email you, leave it blank.`]</div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="name">[`Subject`]</div>
+                                        <div class="value">
+                                            <input type="text" name='param[confirmation_subject]' value='{if !empty($form.confirmation_subject)}{$form.confirmation_subject|escape}{/if}' />
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <textarea name="param[confirmation_message]" class="redactor-editor">{if !empty($form.confirmation_message)}{$form.confirmation_message|escape}{/if}</textarea>
+                                        <div class="margin-block">[`Leave it blank, if you want to use default template`]</div>
+                                        <div class="info-text">[`You can use <a href='#/get/templateVars/' class='js-action' title='template vars'>template vars</a>`]</div>
+                                    </div>
+                                </div>
+                            {/if}
+                        </div>
+                        <div class="field">
+                            <div class="name">[`JS Callback after successfully form submission`]</div>
+                            <div class="value">
+                                <div class="grey" style="line-height: 1.5;">&lt;script&gt;</div>
+                                <textarea name="param[js_callback]">{if !empty($form.js_callback)}{$form.js_callback|escape}{/if}</textarea>
+                                <div class="grey" style="line-height: 1.5;">&lt;/script&gt;</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s-limitation-tab f-tab" data-tab="limitation" style="display: none;">
+                        <div class="field">
+                            <div class="name">[`Form submissions`]</div>
+                            <div class="value">
+                                <div class="margin-block botom"><label><input type="radio" value="" name="param[form_submissions]"{if empty($form.form_submissions)} checked{/if}/> [`Unlimited`]</label></div>
+                                <div>
+                                    <label>
+                                        <input type="radio" value="limit" name="param[form_submissions]"{if !empty($form.form_submissions) && $form.form_submissions == 'limit'} checked{/if} /> [`Limit to`]
+                                               <input type="text" class="width50px" name="param[form_submit_limit]" onkeypress="$.multiform.isValidInput(event, /[0-9]/);"{if !empty($form.form_submit_limit)} value="{$form.form_submit_limit|escape}"{/if}/>
+                                               [`submissions`]
+                                               <select name="param[form_submit_limit_freq]" class="inline-block">
+                                            {$period = ['ever' => "[`ever`]", 'day' => "[`every day`]", 'week' => "[`every week`]", 'month' => "[`every month`]"]}
+                                            {foreach $period as $per_k => $per_v}
+                                            <option value="{$per_k}"{if !empty($form.form_submit_limit_freq) && $form.form_submit_limit_freq == $per_k} selected{/if}>{$per_v}</option>
+                                            {/foreach}
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="margin-block hint-help">[`The form will stop accepting submissions after collecting that many entries`]</div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="name">[`Authorized user submissions`]</div>
+                            <div class="value">
+                                <div class="margin-block bottom"><label><input type="radio" value="" name="param[form_submissions_auth]"{if empty($form.form_submissions_auth)} checked{/if}/> [`Unlimited`]</label></div>
+                                <div>
+                                    <label>
+                                        <input type="radio" value="limit" name="param[form_submissions_auth]"{if !empty($form.form_submissions_auth) && $form.form_submissions_auth == 'limit'} checked{/if} /> [`Limit to`]
+                                               <input type="text" class="width50px" name="param[form_submit_limit_auth]" onkeypress="$.multiform.isValidInput(event, /[0-9]/);"{if !empty($form.form_submit_limit_auth)} value="{$form.form_submit_limit_auth|escape}"{/if}/>
+                                               [`submissions`]
+                                               <select name="param[form_submit_limit_freq_auth]" class="inline-block">
+                                            {$period = ['ever' => "[`ever`]", 'day' => "[`every day`]", 'week' => "[`every week`]", 'month' => "[`every month`]"]}
+                                            {foreach $period as $per_k => $per_v}
+                                            <option value="{$per_k}"{if !empty($form.form_submit_limit_freq_auth) && $form.form_submit_limit_freq_auth == $per_k} selected{/if}>{$per_v}</option>
+                                            {/foreach}
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="margin-block hint-help">[`The form will stop accepting submissions after collecting that many entries`]</div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="name">[`IP limitation`]</div>
+                            <div class="value">
+                                <div class="margin-block bottom">
+                                    <label>
+                                        <input type="checkbox" value="1" name="param[form_submissions_ip]"{if !empty($form.form_submissions_ip)} checked{/if}/> [`Allow only one submission per IP`]
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="name">[`Form condition after reaching the limit`]</div>
+                            <div class="value">
+                                <label><input type="radio" value="hide" name="param[form_after_limit]"{if !empty($form.form_after_limit) && $form.form_after_limit == 'hide'} checked{/if}/> [`Hide form`]</label>
+                                <label><input type="radio" value="disable" name="param[form_after_limit]"{if (!empty($form.form_after_limit) && $form.form_after_limit == 'disable') || empty($form.form_after_limit)} checked{/if}/> [`Disable form`]</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="name">[`Websites limitations`]</div>
+                            <div class="value">
+                                <div class="margin-block bottom"><label><input onchange="$.form_settings.changeEventHandler(this)" id="domain-limit-off" data-field="domain-limitations" name="domain_limitations" value="0" type="radio"{if empty($form.domain_limitations)} checked{/if}/> [`No limitations`]</label></div>
+                                <div><label><input type="radio" onchange="$.form_settings.changeEventHandler(this)" value="1" data-field="domain-limitations" name="domain_limitations"{if !empty($form.domain_limitations)} checked{/if}/> [`Limit by domain routes`]</label></div>
+                                <div class="f-domain-list"{if !empty($form.domain_limitations)} style="display: block"{/if}>
+                                     {$domain_limitations = ['' => '']}
+                                     {if !empty($form.domain_limitations)}{$domain_limitations = $form.domain_limitations}{/if}
+                                     {foreach $domain_limitations as $dom => $rou}
+                                     {foreach $rou as $rou2}
+                                     <div class="domain-limit-row">
+                                        <select name="domain[]" class="s-limit-domains" onchange="$.form_settings.changeEventHandler(this)">
+                                            <option value="">* * * [`Select domain`] * * *</option>
+                                            {foreach $routes as $domain => $route}
+                                            <option value="{$domain|escape}" data-id="{$route@index}"{if $dom == $domain} selected{/if}>{$domain}</option>
+                                            {/foreach}
+                                        </select>
+                                        <select name="route[]" class="s-limit-routes"{if !$rou} style="display: none"{/if}>
+                                                <option value="">* * * [`Select route`] * * *</option>
+                                            {foreach $routes as $domain => $route}
+                                            {foreach $route as $r}
+                                            <option class="domain-{$route@index}" value="{$r|escape}"{if $rou2 == $r} selected{/if}{if $dom && $dom !== $domain} style="display: none;"{/if}>{$r}</option>
+                                            {/foreach}
+                                            {/foreach}
+                                        </select>
+                                        <a href="#/add/formDomainLimit/" title="[`add domain route`]" class="js-action"><i class="icon16 add"></i></a>
+                                        <a href="#/remove/formDomainLimit/" title="[`delete route`]" class="js-action"><i class="icon16 delete"></i></a>
+                                    </div>
+                                    {/foreach}
+                                    {/foreach}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s-meta-tab f-tab" data-tab="meta" style="display: none;">
+                        <p>{sprintf(_w('This meta tags belong to the <a href="%s" target="_blank">page</a>'), $wa->getUrl('multiform/frontend', ['url' => $form.hash, 'domain' => $dom]))}</p>
+                        <div class="field">
+                            <div class="name">[`META title`]</div>
+                            <div class="value">
+                                <input type="text" name="basic[meta_title]" value="{$form.meta_title|escape}" />
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="name">[`META keywords`]</div>
+                            <div class="value">
+                                <input type="text" name="basic[meta_keywords]" value="{$form.meta_keywords|escape}" />
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="name">[`META description`]</div>
+                            <div class="value">
+                                <input type="text" name="basic[meta_description]" value="{$form.meta_description|escape}" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">[`Spam protection`]</div>
+                <div class="value">
+                    <select name="param[captcha]" class="s-captcha-select" onchange="$.form_settings.changeEventHandler(this)">
+                        <option value="basic"{if (!empty($form.captcha) && $form.captcha == 'basic')} selected{/if}>[`Basic protection (captcha)`]</option>
+                        <option value="medium"{if (!empty($form.captcha) && $form.captcha == 'medium') || empty($form.captcha)} selected{/if}>[`Medium protection (need javascript)`]</option>
+                        <option value="advanced"{if (!empty($form.captcha) && $form.captcha == 'advanced')} selected{/if}>[`Advanced protection (need javascript + captcha field)`]</option>
+                    </select>
+                    <div class="inline-block margin-block left s-only-captcha"{if (!empty($form.captcha) && $form.captcha == 'medium') || empty($form.captcha)} style="display: none"{/if}>
+                        [`Field name`]
+                        <input class="width200px" type="text" name='param[captcha_field]' value='{if !isset($form.captcha_field)}[`Captcha field`]{else}{$form.captcha_field|escape}{/if}' />
+                    </div>
+                </div>
+                <div class="captcha-types margin-block top"{if empty($form.captcha) || (!empty($form.captcha) && $form.captcha !== 'advanced')} style="display: none"{/if}>
+                    <div class="value no-shift">
+                        <label>
+                            <input type="radio" name="param[recaptcha]" data-field ="captcha_type" onchange="$.form_settings.changeEventHandler(this)" {if empty($form.recaptcha)}checked{/if} value="0"> [`Webasyst Captcha`]
+                        </label>
+                    </div>
+                    <div class="value no-shift">
+                        <label>
+                            <input type="radio" data-field ="captcha_type" onchange="$.form_settings.changeEventHandler(this)" name="param[recaptcha]" {if !empty($form.recaptcha)}checked{/if} value="1"> [`Google reCAPTCHA`]
+                            <div class="s-recaptcha-fields"{if empty($form.recaptcha)} style="display: none"{/if}>
+                                <div class="field">
+                                    <div class="grey">[`Site Key`]</div>
+                                    <div class="value">
+                                        <input type="text" name="param[recaptcha_sitekey]" value="{ifset($form.recaptcha_sitekey)}">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="grey">[`Secret`]</div>
+                                    <div class="value">
+                                        <input type="text" name="param[recaptcha_secretkey]" value="{ifset($form.recaptcha_secretkey)}">
+                                        <p class="hint">[`Get Google reCAPTCHA site key and secret for your site on <a href="https://www.google.com/recaptcha" target="_blank">https://www.google.com/recaptcha</a>`]</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field submit-block">
+                <input type="hidden" value="{$form.id}" name="id" />
+                <input type="submit" value="[`Save`]" class="button green" />
+                <div class="errormsg"></div>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    $(function () {
+        $.form_settings.initPageSettings();
+    });
+</script>

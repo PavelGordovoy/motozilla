@@ -1,0 +1,213 @@
+<!-- products thumbnail list view -->
+
+
+{$epikafavList = waRequest::cookie('epika_shop_favorites')}
+{assign var=epikafavList value=","|explode:$epikafavList}
+
+
+
+{$epikacartList = waRequest::cookie('epika_shop_incart')}
+{assign var=epikacartList value=","|explode:$epikacartList}
+
+
+{$skus = $wa->shop->skus(array_keys($products))}
+{if $wa->shop->cart->total() > 0}{$add2cart_label = '[`Add to cart`]'}{else}{$add2cart_label = '[`Buy`]'}{/if}
+
+
+{$pr_row_mob = 1}
+{$pr_row_tablet = 2}
+{$pr_row_desktop = 5}
+{if isset($theme_settings.products_row_mob)} {$pr_row_mob = $theme_settings.products_row_mob} {/if}
+{if isset($theme_settings.products_row_tablet)} {$pr_row_tablet = $theme_settings.products_row_tablet} {/if}
+{if isset($theme_settings.products_row_desktop)} {$pr_row_desktop = $theme_settings.products_row_desktop} {/if}
+
+{$pr_row_mob_class = 'mob_one'}
+{if $pr_row_mob == 2} {$pr_row_mob_class = 'mob_two'} {/if}
+
+{$pr_row_tablet_class = 'tab_two'}
+{if $pr_row_tablet == 3} {$pr_row_tablet_class = 'tab_three'} {/if}
+
+{$pr_row_desc_class = 'desc_three'}
+{if $pr_row_desktop == 4} {$pr_row_desc_class = 'desc_four'} {/if}
+{if $pr_row_desktop == 5} {$pr_row_desc_class = 'desc_five'} {/if}
+
+
+{if isset($theme_settings.show_product_buttons) && $theme_settings.show_product_buttons == "always_displayed"}
+    <style>
+        .under-control,  .below-control { opacity:1 !important; }
+    </style>
+{else}
+
+{/if}
+
+<div class="thumbs product-list {$pr_row_mob_class} {$pr_row_tablet_class} {$pr_row_desc_class}">
+    {foreach $products as $p }
+    {$p.skus = $skus[$p.id]}
+    {$epikafavClass = ''}
+    {foreach from=$epikafavList item=i}
+    {if $i == $p.id}
+    {$epikafavClass = 'active'}
+    {/if}
+    {/foreach}
+
+    {$epikacartClass = ''}
+    {foreach from=$epikacartList item=i}
+    {if $i == $p.id}
+    {$epikacartClass = 'active'}
+    {/if}
+    {/foreach}
+
+    {$product = $p}
+    {$p_available = false}
+    {if $product.sku_type}
+    {if $product.count > 1 || $product.count === null}
+    {$p_available = true}
+    {/if}
+    {else}
+    {$p_available = false}
+    {if count($product.skus) > 1}
+    {$sku_available = false}
+    {foreach $product.skus as $sku}
+    {$sku_available =  $product.status && $sku.available && ($sku.count === null || $sku.count > 0)}
+    {$p_available = $p_available or $sku_available}
+    {/foreach}
+
+    {if $product.count > 1 || $product.count === null}
+    {$p_available = true}
+    {/if}
+    {else}
+    {$sku = $product.skus[0]}
+    {$p_available = $product.status && $sku.available && ($sku.count === null || $sku.count > 0)}
+    {/if}
+    {/if}
+
+    <div itemscope itemtype ="http://schema.org/Product" class="prd zeus catalog-item {if $p_available}instock{else}{if $wa->shop->settings('ignore_stock_count')}preorder{else}outofstock{/if}{/if}">
+
+    <form class="purchase addtocart" {if $p.sku_count > 1}data-url="{$p.frontend_url}{if strpos($p.frontend_url, '?')}&{else}?{/if}cart=1"{/if} method="post" action="{$wa->getUrl('/frontendCart/add')}">
+        <input type="hidden" name="product_id" value="{$p.id}">
+        <div class="prd-wrapper" data-product-id="{$p.id}">
+            <a href="{$p.frontend_url}" title="{$p.name}">
+                <h5 class="title">
+                    <span itemprop="name">{if !empty($theme_settings.fixed_products_name_char)}{$p.name|truncate:($theme_settings.fixed_products_name_char)}{else}{$p.name}{/if}</span>
+                </h5>
+            </a>
+
+            {if $p.summary && empty($theme_settings.disable_short_descr)}<span itemprop="description" class="summary">{strip_tags($p.summary)|truncate:50}</span>{/if}
+            <div class="image">
+                <div class="badge-wrapper">
+                    {if $p.compare_price > 0}
+                    {if !empty($theme_settings.sticker_discount)}
+                    <div class="badge discount"><span>-{round(($p.compare_price - $p.price) / ($p.compare_price / 100))}%</span></div>
+                    {/if}
+                    {/if}
+
+                    <a href="{$p.frontend_url}" title="{$p.name}">
+                    <img itemprop="image" class="product-thumb-96-img" alt="{$p.name}" src="{if $wa->shop->productImgUrl($p, '96')}{$wa->shop->productImgUrl($p, '96')}{else}{$wa_theme_url}assets/img/nophoto.png{/if}" style="display: none;">
+                    <img itemprop="image" class="product-first-img lazy" alt="{$p.name}" data-original="{$wa->shop->productImgUrl($p, '262')}" src="{if $wa->shop->productImgUrl($p, '262')}{if !empty($theme_settings.disable_products_img_lazyload)}{$wa->shop->productImgUrl($p, '262')}{else}{$wa_active_theme_url}img/balls.gif{/if}{else}{$wa_theme_url}assets/img/nophoto.png{/if}">
+                    </a>
+                    {$_product = $wa->shop->product($p.id)}
+                    {$product_image_ids = array_keys($_product.images)}
+
+                    {if $product_image_ids|@count > 1}
+                        {$second_image = $_product.images[$product_image_ids[1]]}
+                        {$p.image_id = $second_image.id}
+                        {$p.ext = $second_image.ext}
+                    <a href="{$p.frontend_url}" title="{$p.name}">
+                        <img itemprop="image" class="product-second-img lazy" alt="{$p.name}" data-original="{$wa->shop->productImgUrl($p, '262')}" src="{if $wa->shop->productImgUrl($p, '262')}{if !empty($theme_settings.disable_products_img_lazyload)}{$wa->shop->productImgUrl($p, '262')}{else}{$wa_active_theme_url}img/balls.gif{/if}{else}{$wa_theme_url}assets/img/nophoto.png{/if}" style="display: none;">
+                    </a>
+                        {$_product = $wa->shop->product($p.id)}
+                        {$product_image_ids = array_keys($_product.images)}
+                        {$second_image = $_product.images[$product_image_ids[0]]}
+                        {$p.image_id = $second_image.id}
+                        {$p.ext = $second_image.ext}
+                    {/if}
+
+                </div>
+             <div class="{if isset($theme_settings.product_control_buttons_pos) && $theme_settings.product_control_buttons_pos == "below_image"}below-control{else}under-control{/if}">
+
+
+
+                <div class="controls">
+                    {if empty($theme_settings.disable_comparison)}
+                    <div class="comp-add-to">
+                        {if empty($disable_compare)}
+                        <a data-product="{$p.id}" class="compare round-btn {if $wa->shop->inComparison($p.id)} active{/if}" href="javascript:void(0);" data-toggle="tooltip" title="[`Compare`]">
+                            <i class="icon-balance-scale"></i>
+                        </a>
+                        {/if}
+                    </div>
+                    {/if}
+
+
+                    {if empty($theme_settings.disable_favorites)}
+                    <div class="add-to-wishlist">
+                        <a data-product="{$p.id}" class="wishlist  add-to-wish round-btn {if !empty($epikafavClass)}{$epikafavClass}{/if}" href="javascript:void(0);">
+                            <i class="icon-heart-1" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    {/if}
+
+                    {if empty($theme_settings.disable_quickview)}
+                    <a href="javascript:void(0);" class="quick_view" data-url="{$p.frontend_url}{if strpos($p.frontend_url, '?')}&{else}?{/if}quick_view=1" data-toggle="tooltip" title="Обзор"><i class="icon-eye"></i></a>
+                    {/if}
+                    {if isset($theme_settings.cat_prd_image) && $theme_settings.cat_prd_image == "onclick" && $product_image_ids|@count > 1}
+                    <a class="rotate-image" data-toggle="tooltip" title="Повернуть"><i class="icon-arrows-cw"></i></a>
+                    {/if}
+                    <a data-product="{$p.id}" class="wishlist  mob add-to-wish round-btn {if !empty($epikafavClass)}{$epikafavClass}{/if}" href="javascript:void(0);">
+                        <i class="icon-heart-1" aria-hidden="true"></i>
+                    </a>
+                    <button type="submit" class="add-to-cart-btn">
+                        <i class="icon-basket-alt scart-ctr-basket"></i>
+                        <i class="icon-spin6 animate-spin scart-ctr-spin" style="display: none"></i>
+                        <i class="icon-ok-2 scart-ctr-suc" style="display: none"></i>
+                        {if $theme_settings.add_to_cart_button_category}<span>{$theme_settings.add_to_cart_button_category}</span>{/if}
+                    </button>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div>
+                <div class="prd-control">
+
+                    {if !$p_available} {if $wa->shop->settings('ignore_stock_count')} <span class="stockinfo">[`Pre-order only`]</span> {else} <span class="stockinfo">[`Out of stock`]</span> {/if} {/if}
+
+                    {$badge_html = $wa->shop->badgeHtml($p.badge)}
+
+                    {if $badge_html}
+                        <div class="corner top left">{$badge_html}</div>
+                    {/if}
+
+                </div>
+
+                <span itemprop="offers" class="price nowrap" itemscope itemtype="http://schema.org/Offer" {if $badge_html}style="text-align:right"{/if}>
+                    <meta itemprop="price" content="{$p.price}">
+                    <meta itemprop="priceCurrency" content="{$wa->shop->primaryCurrency()}">
+                    {shop_currency_html($p.price)}
+                    {if $p.compare_price > 0}
+                        <span class="compare-at-price nowrap">
+                            {shop_currency_html($p.compare_price)}
+                        </span>
+                    {/if}
+                </span>
+            </div>
+
+        </div>
+
+    </form>
+    </div>
+    {/foreach}
+</div>
+
+{if isset($pages_count) && $pages_count > 1}
+<div class="pag">
+    <div class="block {if !empty($theme_settings.pagination) && $theme_settings.pagination == 'lazyloading'}lazyloading-paging{else}paging-nav{/if}"  data-times="1"  data-link-text="[`Load more`]" data-loading-str="[`Loading...`]">
+        {wa_pagination total=$pages_count attrs=['class' => "menu-h"]}
+    </div>
+</div>
+{/if}
+
+
+
+

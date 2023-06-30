@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst Team iCalendar plugin 1.1.1.15 UA translation v 1.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
+
+msgid "Import events from file"
+msgstr "Імпортувати події з файлу"
+
+msgid "WebCal subscription URL"
+msgstr "URL підписки WebCal"
+
+msgid "Subscribe"
+msgstr "Підписатися"
+
+msgid "or"
+msgstr "або"
+
+msgid "cancel"
+msgstr "скасувати"
+
+msgid "Empty"
+msgstr "Порожній"
+
+msgid "Choose .ics file"
+msgstr "Оберіть .файл ICS"
+
+msgid "Import from file"
+msgstr "Імпортувати з файлу"
+
+msgid "Calendar"
+msgstr "Календар"
+
+msgid "Import"
+msgstr "Імпорт"
+
+msgid "Can't download by current URL"
+msgstr "Не вдається скачати за поточною URL-адресою"
+
+msgid "No iCalendar found on specified URL"
+msgstr "iCalendar за вказаною URL не знайдено"
+
+msgid "URL is empty string"
+msgstr "URL-адреса є порожнім рядком"
+
+msgid "URL scheme is unknown"
+msgstr "Схема URL-адреси невідома"
+
+msgid "URL host is empty"
+msgstr "Хост URL-адреси порожній"
+
+msgid "RFC 5545 iCalendar specification support for events import via WebCal subscriptions (iCal URL) and uploading local .ics files"
+msgstr "Підтримка специфікації RFC 5545 iCalendar для імпорту подій з підписок WebCal (iCal URL) та завантаження локальних файлів .ics"
+
+msgid "Empty URL."
+msgstr "Порожній URL."
+
+msgid "Unknown URL scheme."
+msgstr "Схема URL-адреси невідома."
+
+msgid "Empty URL host."
+msgstr "Хост URL-адреси порожній."
+
+msgid "Cannot download data from specified URL."
+msgstr "Не вдається завантажити дані зі вказаного URL."
+
+msgid "No iCalendar found at specified URL."
+msgstr "iCalendar за вказаною URL не знайдено."

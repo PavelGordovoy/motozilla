@@ -1,0 +1,37 @@
+{strip}
+<section class="product-card__products">
+    {if $view == 'tile'}
+        {if $is_mobile}
+            {$is_carousel = $theme_settings.product_products_lists_carousel_mobile}
+        {else}
+            {$is_carousel = $theme_settings.product_products_lists_carousel_desktop}
+        {/if}
+        {$is_tile_mini = (!empty($theme_settings.mobile_preview_product_tile) && $theme_settings.mobile_preview_product_tile == 'mini')}
+        <div class="product-list{if $is_carousel} js-carousel-products{else} product-list--tile{/if} js-preview-products"{if $is_carousel} data-loop="{$theme_settings.carousel_products_loop}" data-swipe="{$theme_settings.products_carousel_swipe}"{/if}{if !$is_carousel} data-retina="{$wa->shop->config('enable_2x')}" data-image-lazy="1"{/if} data-tile-mini="{$is_tile_mini}">
+            <div class="items-list__head">
+                {if $is_carousel}<div class="items-list__direction bs-color js-carousel-direction"></div>{/if}
+                <h3>{$title}</h3>
+            </div>
+            {if $is_carousel}<div class="carousel-products__outer">{/if}
+                <div class="js-products-list{if $is_carousel} carousel-products{/if}">
+                    {include file="product-preview-tile.html" is_owl_carousel=$is_carousel products=$products}
+                </div>
+            {if $is_carousel}</div>{/if}
+        </div>
+    {else if $view == 'list'}
+        <div class="product-list">
+            <div class="items-list__head">
+                <h3>{$title}</h3>
+            </div>
+            {include file="product-preview-list.html" products=$products}
+        </div>
+    {else if $view == 'tbl'}
+        <div class="product-list">
+            <div class="items-list__head">
+                <h3>{$title}</h3>
+            </div>
+            {include file="product-preview-tbl.html" products=$products}
+        </div>
+    {/if}
+</section>
+{/strip}

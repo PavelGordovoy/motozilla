@@ -1,0 +1,64 @@
+{if empty($services)}
+    <span>[`Services list is empty. Add <a href="{$wa_backend_url}shop/?action=products#/services/">new</a> to translate it.`]</span>
+{else}
+    <form id="s-mylang-form" method="POST" action="?module=shop&action=save" data-form="save">
+    {if $list}
+        <h1>[`Services`]</h1>
+        <table class="zebra single-lined">
+            <tr class="header">
+                <th>[`Service name`]</th>
+                {foreach $locales as $l}
+                    <th class="short align-right">{$l}</th>
+                {/foreach}
+            </tr>
+            {foreach $services as $s}
+            <tr>
+                <td>
+                    <a href="#/services/{$s.id}">{$s.name}</a>
+                </td>
+                {foreach $locales as $key=>$l}
+                <td class="align-right"><input tabindex="{$key}" type="text" name="mylang[service][{$key}][{$s.id}][name]" value="{if isset($s.locale.$key.text)}{$s.locale.$key.text}{/if}" placeholder="{$l}" data-mylang="{$key}"/></td>
+                {/foreach}
+            </tr>
+            {/foreach}
+        </table>
+    {else}
+    <h1><a href="#/services/" class="back">← [`Back`]</a>[`Service`] - {$services.0.sname|default:'[`Noname`]'}</h1>
+    <form id="s-mylang-service-form" method="POST" action="?module=shop&action=save">
+    <div>
+        {literal}<style>div[data-mylang]{margin-right:20%}</style>{/literal}
+
+            <div class="field">
+                <div class="name">
+                    [`Service name`]
+                </div>
+                <div class="value no-shift">
+                    {foreach $locales as $key=>$l}
+                    <input type="text" name="mylang[service][{$key}][{$services.0.service_id}][name]" value="{if isset($loc_name.$key.text)}{$loc_name.$key.text}{/if}" placeholder="{$l}" data-mylang="{$key}"/><br>
+                    {/foreach}
+                </div>
+            </div>
+            <hr>
+            {foreach $services as $s}
+            <div class="field">
+                <div class="name">
+                    {$s.vname}
+                </div>
+                <div class="value no-shift">
+                    {foreach $locales as $key=>$l}
+                    {$variant = $s.variant_id}
+                    <input type="text" name="mylang[service_value][{$key}][{$s.variant_id}][value]" value="{if isset($loc_values.$key.$variant)}{$loc_values.$key.$variant}{/if}" placeholder="{$l}" data-mylang="{$key}"/><br>
+                    {/foreach}
+                </div>
+            </div>
+            {/foreach}
+    </div>
+    {/if}
+    <div class="placeholder"><div>
+    <div class="wa-mylang-save-panel block bordered-top">
+            <input id="wa-save-button" type="submit" class="button green" value="[`Save`]">
+            <em class="hint">Ctrl + S</em>
+            <span id="wa-editor-status" style="margin-left: 20px; display: none;"><i class="icon16 yes"></i> [`Saved`]</span>
+        </div>
+    </form>
+{/if}

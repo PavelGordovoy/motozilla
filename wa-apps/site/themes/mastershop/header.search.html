@@ -1,0 +1,35 @@
+{strip}
+{if $wa->shop}
+    {$is_use_plugin_search_pro = $theme_settings.plugin_search_pro && class_exists('shopSearchproPluginViewHelper')}
+    <div class="header-search">
+        {if $is_use_plugin_search_pro}
+            <span class="header-search__form">{shopSearchproPluginViewHelper::field()}</span>
+        {else}
+            {if $theme_settings.search_default_sorting}
+                {$sort_default = " "|explode:$theme_settings.search_default_sorting}
+                {if !empty($sort_default[0]) && in_array($sort_default[0], ['name','price','rating','total_sales','stock','create_datetime','stock_worth'])}
+                    {$sort_by = $sort_default[0]}
+                {/if}
+                {if !empty($sort_default[1]) && ($sort_default[1] == "asc" || $sort_default[1] == "desc")}
+                    {$sort_dir = $sort_default[1]}
+                {/if}
+            {/if}
+            {$is_search_page = isset($action) && $action == 'search'}
+            {if $is_search_page}
+                {if $wa->get('sort')}{$sort_by = $wa->get('sort')}{/if}
+                {if $wa->get('order')}{$sort_dir = $wa->get('order')}{/if}
+            {/if}
+            {$search_auto = $theme_settings.search_auto}
+            <form class="js-search-form header-search__form" method="get" action="{$wa->getUrl('shop/frontend/search')}">
+                <input name="query" {if !empty($query)}value="{$query}"{/if} placeholder="[s`Find products`]" class="{if $search_auto}js-search-auto {/if}header-search__field {$theme_settings.header_search_bg}-bg" type="text"{if $search_auto} autocomplete="off"{/if} />
+                {if !empty($sort_dir) && !empty($sort_by)}
+                    <input type="hidden" name="sort" value="{$sort_by}">
+                    <input type="hidden" name="order" value="{$sort_dir}">
+                {/if}
+                <span class="bs-bg icon__submit js-submit-form"><i class="far fa-search"></i></span>
+                {if $search_auto}<div class="search-auto-result js-search-auto-result"></div>{/if}
+            </form>
+        {/if}
+    </div>
+{/if}
+{/strip}

@@ -1,0 +1,81 @@
+{strip}
+
+{if $theme_settings.menu_in_apps == 'site'}
+    {$_pages = $wa->site->pages()}
+{elseif $theme_settings.menu_in_apps == 'blog'}
+    {if $wa->blog}
+        {$_pages = $wa->blog->pages()}
+    {else}
+        {$_pages = $wa->site->pages()}
+    {/if}
+{elseif $theme_settings.menu_in_apps == 'photos'}
+    {if $wa->photos}
+        {$_pages = $wa->photos->pages()}
+    {else}
+        {$_pages = $wa->site->pages()}
+    {/if}
+{elseif $theme_settings.menu_in_apps == 'shop'}
+    {if $wa->shop}
+        {$_pages = $wa->shop->pages()}
+    {else}
+        {$_pages = $wa->site->pages()}
+    {/if}
+{else}
+    {$_pages = $wa->site->pages()}
+{/if}
+
+{if $theme_settings.show_apps == "before" && ($theme_settings.header_style != 'type_3' && isset($mainmenu) || $theme_settings.header_style == 'type_3' && isset($topmenu))}
+
+    {$_links = $wa->apps()}
+
+    {foreach $_links as $a}
+      {if !($a.url == $wa_url && $a.name == $wa->accountName())}
+        <li class="nav-item{if $a.url==$wa_app_url && !$wa->globals('isMyAccount') || strlen($a.url)>1 && $wa->currentUrl()|strstr:$a.url} selected{/if}"><a  class="nav-link" href="{$a.url}">{$a.name}</a></li>
+      {/if}
+    {/foreach}
+
+{/if}
+
+{function renderNavItem page=[]}
+    {$_is_selected = ( strlen($page.url) > 1 && $wa->currentUrl()|strstr:$page.url )}
+
+    {if !isset($page.hiddenall)}
+        {if $theme_settings.header_style == "type_1" || $theme_settings.header_style == "type_2"}
+          <li class="nav-item{if isset($mainmenu) == 1 && (isset($page.mainmenu) || isset($page.topmenu)) || isset($topmenu) == 1 && (!isset($page.topmenu))} hidden{/if}{if !empty($_is_selected)} active{/if}{if !empty($page.childs)} dropdown{/if}">
+              <a class="nav-link" href="{$page.url}">{$page.name}{if !empty($page.childs) && !isset($mobile) && !isset($topmenu)}<i class="fa fa-angle-down" aria-hidden="true"></i>{/if}</a>
+              {if !empty($page.childs) && !isset($mobile)}
+                <ul>
+                  {foreach $page.childs as $subpage}
+                    {renderNavItem page=$subpage}
+                  {/foreach}
+                </ul>
+              {/if}
+          </li>
+        {else}
+          <li class="nav-item{if !empty($_is_selected)} active{/if}">
+              <a class="nav-link" href="{$page.url}">{$page.name}</a>
+          </li>
+        {/if}
+    {/if}
+
+{/function}
+
+{if !empty($_pages)}
+    {foreach $_pages as $page}
+        {renderNavItem page=$page}
+    {/foreach}
+{/if}
+
+{if $theme_settings.show_apps == "after" && ($theme_settings.header_style != 'type_3' && isset($mainmenu) || $theme_settings.header_style == 'type_3' && isset($topmenu))}
+
+    {$_links = $wa->apps()}
+
+    {foreach $_links as $a}
+      {if !($a.url == $wa_url && $a.name == $wa->accountName())}
+        <li class="nav-item{if $a.url==$wa_app_url && !$wa->globals('isMyAccount') || strlen($a.url)>1 && $wa->currentUrl()|strstr:$a.url} selected{/if}"><a  class="nav-link" href="{$a.url}">{$a.name}</a></li>
+      {/if}
+    {/foreach}
+
+{/if}
+
+{/strip}

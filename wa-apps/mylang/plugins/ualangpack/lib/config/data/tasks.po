@@ -1,0 +1,1572 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 1312 Inc. Tasks 2.4.0 UA translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-28 20:34+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter-studio.ru\n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "%s edited a task you are assigned to:"
+msgstr "%s відредагував призначене на вас завдання:"
+
+msgid "%s edited a task you created:"
+msgstr "%s відредагував створене вами завдання:"
+
+msgid "%s edited a task:"
+msgstr "%s відредагував завдання:"
+
+msgid "via Tasks app"
+msgstr "через додаток «Завдання»"
+
+msgid "%s wrote a comment to task you are assigned to:"
+msgstr "%s написав коментар до завдання, на яке вас призначено:"
+
+msgid "%s wrote a comment to task you created:"
+msgstr "%s написав коментар до створеного вами завдання:"
+
+msgid "%s wrote a comment:"
+msgstr "%s написав коментар:"
+
+msgid "Low"
+msgstr "Низький"
+
+msgid "High"
+msgstr "Високий"
+
+msgid "Urgent"
+msgstr "Термінові"
+
+msgid "Files"
+msgstr "Файли"
+
+msgid "User %s sent you your task."
+msgstr "Користувач %s надіслав вам ваше завдання."
+
+msgid "User %s sent you a task."
+msgstr "Користувач %s відправив вам завдання."
+
+msgid "User %s sent a task to %s."
+msgstr "Користувач %s надіслав завдання для %s."
+
+msgid "%d new task"
+msgid_plural "%d new tasks"
+msgstr[0] "%d нове завдання"
+msgstr[1] "%d нових завдання"
+msgstr[2] "%d нових завдань"
+
+msgid "%s sent you a your task"
+msgstr "%s надіслав вам ваше завдання"
+
+msgid "%s sent you a new task"
+msgstr "%s надіслав вам нове завдання"
+
+msgid "%s sent new task to %s"
+msgstr "%s відправив нове завдання для %s"
+
+msgid "%s has just completed a task"
+msgstr "%s щойно виконав завдання"
+
+msgid "Save in my lists"
+msgstr "Зберегти в мої списки"
+
+msgid "Name"
+msgstr "Назва"
+
+msgid "Icon"
+msgstr "Значок"
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "or"
+msgstr "або"
+
+msgid "cancel"
+msgstr "скасувати"
+
+msgid "Edit"
+msgstr "Редагувати"
+
+msgid "Delete"
+msgstr "Видалити"
+
+msgid "Set favorite"
+msgstr "Позначити як обране"
+
+msgid "Double-click to change task priority"
+msgstr "Натисніть двічі, аби змінити пріоритет завдань"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Archived"
+msgstr "Архівовано"
+
+msgid "Add tag"
+msgstr "Додати тег"
+
+msgid "Start typing in search field to find a tag."
+msgstr "Почніть набирати у полі пошуку, аби знайти тег."
+
+msgid "Custom tag..."
+msgstr "Користувальницький тег..."
+
+msgid "Due date"
+msgstr "Термін дії"
+
+msgid "invert"
+msgstr "інвертувати"
+
+msgid "remove link"
+msgstr "видалити посилання"
+
+msgid "Parent task"
+msgstr "Батьківське завдання"
+
+msgid "Child task"
+msgstr "Дочірнє завдання"
+
+msgid "Return"
+msgstr "Повернутися"
+
+msgid "Forward"
+msgstr "Вперед"
+
+msgid "History &amp; Comments"
+msgstr "Історія та коментарі"
+
+msgid "Hide history"
+msgstr "Приховати історію"
+
+msgid "You can't hide high priority task"
+msgstr "Ви не можете приховати пріоритетне завдання"
+
+msgid "You can only hide tasks assigned to you."
+msgstr "Ви можете приховати тільки ті завдання, що покладені на вас."
+
+msgid "Hidden until"
+msgstr "Приховане до"
+
+msgid "Hide"
+msgstr "Приховати"
+
+msgid "Unhide"
+msgstr "Показати"
+
+msgid "Status:"
+msgstr "Статус:"
+
+msgid "Assigned:"
+msgstr "Призначено:"
+
+msgid "Assignment removed"
+msgstr "Призначення видалено"
+
+msgid "There are no comments for this task yet."
+msgstr "До цього завдання ще немає коментарів."
+
+msgid "There are more than %u tags."
+msgstr "Існує більше, ніж %u тегів."
+
+msgid "Create a project first"
+msgstr "Спочатку створіть проект"
+
+msgid "You need to %sadd your first project%s to be able to create tasks."
+msgid_plural "<a href=\"#/settings/project/add/\">"
+msgstr[0] "Ви маєте %sдодати свій перший проект%s, аби мати змогу створювати завдання."
+msgstr[1] "<a href=\"#/settings/project/add/\">"
+msgstr[2] ""
+
+msgid "Can't create list from list"
+msgstr "Неможливо створити перелік з переліку"
+
+msgid "%s of %d"
+msgstr "%s з %d"
+
+msgid "Load more..."
+msgstr "Завантажити ще..."
+
+msgid "Loading..."
+msgstr "Завантаження..."
+
+msgid "%d task"
+msgid_plural "%d tasks"
+msgstr[0] "%d завдання"
+msgstr[1] "%d завдання"
+msgstr[2] ""
+
+msgid "no tasks"
+msgstr "немає завдань"
+
+msgid "Confirm the action"
+msgstr "Підтвердіть дію"
+
+msgid "The task is assigned now to:"
+msgstr "Завдання тепер призначено на:"
+
+msgid "Confirm"
+msgstr "Підтвердити"
+
+msgid "Save comment"
+msgstr "Зберегти коментар"
+
+msgid "Set deadline"
+msgstr "Встановити термін"
+
+msgid "You are about to abandon task editor without saving the task. All unsaved data will be lost. Are you sure?"
+msgstr "Ви збираєтеся покинути редактор завдань без збереження завдання. Всі незбережені зміни буде втрачено. Ви впевнені?"
+
+msgid "You are about to leave the page without saving the task. Are you sure?"
+msgstr "Ви збираєтеся покинути сторінку без збереження завдань. Ви впевнені?"
+
+msgid "There are unsaved task draft."
+msgstr "Є незбережена чернетка завдання."
+
+msgid "Do you want to continue editing?"
+msgstr "Ви хочете продовжити редагування?"
+
+msgid "Input task name"
+msgstr "Введіть назву завдання"
+
+msgid "Input task description"
+msgstr "Введіть опис завдання"
+
+msgid "Click to select files or drag them here"
+msgstr "Оберіть файли або перетягніть їх сюди"
+
+msgid "Assign to"
+msgstr "Призначити на"
+
+msgid "me"
+msgstr "мене"
+
+msgid "Unassigned"
+msgstr "Непризначене"
+
+msgid "Show all"
+msgstr "Показати усі"
+
+msgid "Save task"
+msgstr "Зберегти завдання"
+
+msgid "Create task"
+msgstr "Створити завдання"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "SMS"
+msgstr "СМС"
+
+msgid "More fields"
+msgstr "Більше полів"
+
+msgid "Date is invalid"
+msgstr "Дата є недійсною"
+
+msgid "Filter tasks"
+msgstr "Відфільтрувати завдання"
+
+msgid "Remove from my lists"
+msgstr "Видалити з моїх переліків"
+
+msgid "Priority"
+msgstr "Пріоритет"
+
+msgid "Due"
+msgstr "Термін дії"
+
+msgid "Newest"
+msgstr "Найновіші"
+
+msgid "Oldest"
+msgstr "Найстаріші"
+
+msgid "Done"
+msgstr "Виконано"
+
+msgid "Set priority"
+msgstr "Встановити пріоритет"
+
+msgid "Add"
+msgstr "Додати"
+
+msgid "Forward (%d)"
+msgstr "Вперед (%d)"
+
+msgid "Project"
+msgstr "Проект"
+
+msgid "Do not change"
+msgstr "Не змінювати"
+
+msgid "Forward to"
+msgstr "Вперед до"
+
+msgid "Comment"
+msgstr "Коментар"
+
+msgid "Enter your comment"
+msgstr "Введіть коментар"
+
+msgid "Please click or drop image file here"
+msgstr "Натисніть кнопку або перетягніть файл зображення сюди"
+
+msgid "Add comment"
+msgstr "Додати коментар"
+
+msgid "Tags"
+msgstr "Теги"
+
+msgid "Search tag..."
+msgstr "Пошук тега..."
+
+msgid "No milestone"
+msgstr "Немає етапу"
+
+msgid "All"
+msgstr "Усі"
+
+msgid "Inbox"
+msgstr "Вхідні"
+
+msgid "Outbox"
+msgstr "Вихідні"
+
+msgid "Favorites"
+msgstr "Обране"
+
+msgid "Clear filters"
+msgstr "Очистити фільтри"
+
+msgid "Input your comment"
+msgstr "Введіть коментар"
+
+msgid "Change priority"
+msgstr "Змінити пріоритет"
+
+msgid "Return to"
+msgstr "Повернутися до"
+
+msgid "Assignment"
+msgstr "Призначення"
+
+msgid "Clear assignment"
+msgstr "Очистити призначення"
+
+msgid "Drop anywhere to upload"
+msgstr "Перетягніть на будь-яке місце для завантаження"
+
+msgid "Search"
+msgstr "Пошук"
+
+msgid "Either text or attachment is required to add comment."
+msgstr "Для додавання коментаря введіть текст або додайте вкладення."
+
+msgid "New task"
+msgstr "Нове завдання"
+
+msgid "Hidden"
+msgstr "Приховані"
+
+msgid "Logbook"
+msgstr "Журнал"
+
+msgid "My lists"
+msgstr "Мої списки"
+
+msgid "Scopes"
+msgstr "Огляди"
+
+msgid "Date not set."
+msgstr "Дату не встановлено."
+
+msgid "Scopes are not set."
+msgstr "Огляди не встановлено."
+
+msgid "Team"
+msgstr "Команда"
+
+msgid "Use <b>Contacts app</b> to provide access to Tasks app for your teammates."
+msgstr "Використовуйте додаток <b>«Контакти»</b>, аби забезпечити доступ членам вашої команди до додатку «Завдання»."
+
+msgid "Projects"
+msgstr "Проекти"
+
+msgid "Create a project by clicking the green tiny icon above."
+msgstr "Створіть проект, натиснувши зелений невеличкий значок вище."
+
+msgid "Personal settings"
+msgstr "Персональні налаштування"
+
+msgid "Settings"
+msgstr "Параметри"
+
+msgid "Settings successfully updated"
+msgstr "Налаштування успішно оновлено"
+
+msgid "Archive datetime"
+msgstr "Дата та час архіву"
+
+msgid "Archive this project"
+msgstr "Архівувати цей проект"
+
+msgid "New project"
+msgstr "Новий проект"
+
+msgid "(no name)"
+msgstr "(без назви)"
+
+msgid "Project name"
+msgstr "Назва проекту"
+
+msgid "Color"
+msgstr "Колір"
+
+msgid "Or enter image URL (image will be scaled to 16x16px)"
+msgstr "Або введіть URL-адресу зображення (зображення будуть масштабовано до 16x16 пікселів)"
+
+msgid "Workflow"
+msgstr "Робочий процес"
+
+msgid "Customize..."
+msgstr "Налаштування..."
+
+msgid "Are you sure?"
+msgstr "Ви впевнені?"
+
+msgid "Project ordering"
+msgstr "Порядок у проекті"
+
+msgid "Projects are sorted by name. You can select important projects to show them before everything else. Important projects can be manually reordered via drag-and-drop."
+msgstr "Проекти сортуються за назвою. Ви можете обрати важливі проекти, аби показати їх поперед інших. Важливі проекти можуть бути упорядковані вручну за допомогою перетягування."
+
+msgid "Status name"
+msgstr "Назва статусу"
+
+msgid "Button label"
+msgstr "Напис на кнопці"
+
+msgid "Caption for the button that sends a task into this status"
+msgstr "Текст на кнопці, яка переводить завдання у цей статус"
+
+msgid "Task title style"
+msgstr "Стиль назви завдання"
+
+msgid "Italic"
+msgstr "Курсив"
+
+msgid "Bold"
+msgstr "Жирний"
+
+msgid "Task title color"
+msgstr "Колір назви завдання"
+
+msgid "Button color"
+msgstr "Колір кнопки"
+
+msgid "Do not change assignment"
+msgstr "Не змінювати призначення"
+
+msgid "Assign to user who created the task"
+msgstr "Призначити на користувача, який створив завдання"
+
+msgid "Assign to specific user"
+msgstr "Призначити на конкретного користувача"
+
+msgid "Show assignment selector every time"
+msgstr "Кожного разу показувати селектор призначення"
+
+msgid "Allow to clear assignment"
+msgstr "Дозволити очистити призначення"
+
+msgid "Comment form"
+msgstr "Форма коментаря"
+
+msgid "Show comment form"
+msgstr "Показати форму коментаря"
+
+msgid "Task statuses"
+msgstr "Статуси завдань"
+
+msgid "New status"
+msgstr "Новий статус"
+
+msgid "You have unsaved changes. Are you sure you want to leave?"
+msgstr "У вас є незбережені зміни. Ви впевнені, що хочете піти?"
+
+msgid "Notifications"
+msgstr "Повідомлення"
+
+msgid "Send me notification in case of"
+msgstr "Надіслати мені повідомлення в разі"
+
+msgid "Any action"
+msgstr "Будь-якої дії"
+
+msgid "Assignment only"
+msgstr "Тільки призначення"
+
+msgid "Switch off"
+msgstr "Вимкнути"
+
+msgid "Notify me about next kind of tasks"
+msgstr "Повідомити мене про завдання наступних типів"
+
+msgid "Assigned to me"
+msgstr "Призначені на мене"
+
+msgid "Created by me"
+msgstr "Створені мною"
+
+msgid "Selected projects"
+msgstr "Відібрані проекти"
+
+msgid "Save settings"
+msgstr "Зберегти параметри"
+
+msgid "Show %d archived project"
+msgid_plural "Show %d archived projects"
+msgstr[0] "Показати %d архівований проект"
+msgstr[1] "Показати %d архівованих проекти"
+msgstr[2] ""
+
+msgid "Hide archived project"
+msgid_plural "Hide archived projects"
+msgstr[0] "Приховати архівований проект"
+msgstr[1] "Приховати архівованих проекти"
+msgstr[2] ""
+
+msgid "Show %d archived scope"
+msgid_plural "Show %d archived scopes"
+msgstr[0] "Показати %d архівований огляд"
+msgstr[1] "Показати %d архівованих огляди"
+msgstr[2] ""
+
+msgid "Hide archived scope"
+msgid_plural "Hide archived scopes"
+msgstr[0] "Приховати архівований огляд"
+msgstr[1] "Приховати архівовані огляди"
+msgstr[2] ""
+
+msgid "from"
+msgstr "від"
+
+msgid "to"
+msgstr "до"
+
+msgid "by day"
+msgstr "за днем"
+
+msgid "by month"
+msgstr "за місяцем"
+
+msgid "All time"
+msgstr "Увесь час"
+
+msgid "Select dates..."
+msgstr "Оберіть дати..."
+
+msgid "Last %d day"
+msgid_plural "Last %d days"
+msgstr[0] "Останній %d день"
+msgstr[1] "Останні %d дні"
+msgstr[2] ""
+
+msgid "%d record"
+msgid_plural "%d records"
+msgstr[0] "%d запис"
+msgstr[1] "%d записи"
+msgstr[2] ""
+
+msgid "Scope successfully saved"
+msgstr "Огляд успішно збережено"
+
+msgid "Restore this scope"
+msgstr "Відновити цей огляд"
+
+msgid "Archive this scope"
+msgstr "Архівувати цей огляд"
+
+msgid "New scope"
+msgstr "Новий огляд"
+
+msgid "Description"
+msgstr "Опис"
+
+msgid "A tiny hint describing this scope."
+msgstr "Невеличка підказка, що описує цей огляд."
+
+msgid "Today"
+msgstr "Сьогодні"
+
+msgid "Error Comment ID"
+msgstr "Ідентифікатор коментаря про помилку"
+
+msgid "Select Project"
+msgstr "Оберіть проект"
+
+msgid "Your browser does not support File API!"
+msgstr "Ваш браузер не підтримує API «Файлів»!"
+
+msgid "created a task"
+msgstr "створив завдання"
+
+msgid "edited a task"
+msgstr "відредагував завдання"
+
+msgid "deleted a task"
+msgstr "видалив завдання"
+
+msgid "forwarded a task"
+msgstr "переслав завдання"
+
+msgid "returned a task"
+msgstr "повернув завдання"
+
+msgid "performed action with a task"
+msgstr "виконав дію із завданням"
+
+msgid "commented on a task"
+msgstr "прокоментував завдання"
+
+msgid "edited comment"
+msgstr "відредагував коментар"
+
+msgid "forwarded several tasks"
+msgstr "переслав кілька завдань"
+
+msgid "marked several tasks as done"
+msgstr "помітив кілька завдань як виконані"
+
+msgid "Testing"
+msgstr "Тестування"
+
+msgid "Can manage projects"
+msgstr "Може керувати проектами"
+
+msgid "No access"
+msgstr "Немає доступу"
+
+msgid "View assigned tasks only"
+msgstr "Переглянути тільки призначені завдання"
+
+msgid "Full access"
+msgstr "Повний доступ"
+
+msgid "Normal"
+msgstr "Нормальний"
+
+msgid "%d day left"
+msgid_plural "%d days left"
+msgstr[0] "Залишився %d день"
+msgstr[1] "Залишилось %d дні"
+msgstr[2] ""
+
+msgid "%d day overdue"
+msgid_plural "%d days overdue"
+msgstr[0] "Прострочено на %d день"
+msgstr[1] "Прострочено на %d дні"
+msgstr[2] ""
+
+msgid "%d min"
+msgid_plural "%d mins"
+msgstr[0] "%d хв"
+msgstr[1] "%d хв"
+msgstr[2] ""
+
+msgid "%d hr"
+msgid_plural "%d hrs"
+msgstr[0] "%d год"
+msgstr[1] "%d год"
+msgstr[2] ""
+
+msgid "%d mo"
+msgid_plural "%d mo"
+msgstr[0] "%d міс"
+msgstr[1] "%d міс"
+msgstr[2] ""
+
+msgid "%d yr"
+msgid_plural "%d yrs"
+msgstr[0] "%d рік"
+msgstr[1] "%d роки"
+msgstr[2] ""
+
+msgid "Open"
+msgstr "Відкрито"
+
+msgid "Closed"
+msgstr "Закрито"
+
+msgid "done"
+msgstr "зроблено"
+
+msgid "Just now"
+msgstr "Щойно"
+
+msgid "%d d"
+msgstr "%d д"
+
+msgid "Yesterday"
+msgstr "Вчора"
+
+msgid "Tomorrow"
+msgstr "Завтра"
+
+msgid "ASSIGNED: %d task was assigned to you"
+msgid_plural "ASSIGNED: %d tasks were assigned to you"
+msgstr[0] "ПРИЗНАЧЕНО: на вас призначене %d завдання"
+msgstr[1] "ПРИЗНАЧЕНО: на вас призначено %d завдання"
+msgstr[2] ""
+
+msgid "DONE: %d task was completed"
+msgid_plural "DONE: %d tasks were completed"
+msgstr[0] "ВИКОНАНО: %d завдання було виконано"
+msgstr[1] "ВИКОНАНО: %d завдання було виконано"
+msgstr[2] ""
+
+msgid "NEW: %s %s"
+msgstr "НОВЕ: %s %s"
+
+msgid "ASSIGNED: %s %s"
+msgstr "ПРИЗНАЧЕНО: %s %s"
+
+msgid "DONE: %s was completed"
+msgstr "ВИКОНАНО: %s було завершено"
+
+msgid "EDIT: %s was edited"
+msgstr "ВІДРЕДАГОВАНО: %s було відредаговано"
+
+msgid "Create task from this"
+msgstr "Створити з цього завдання"
+
+msgid "Delete list \"%s\""
+msgstr "Видалити перелік \"%s\""
+
+msgid "Name is required"
+msgstr "Ім&#39;я є обов&#39;язковим"
+
+msgid "Create list"
+msgstr "Створити список"
+
+msgid "Not found"
+msgstr "Не знайдено"
+
+msgid "Access denied"
+msgstr "Доступ заборонено"
+
+msgid "Task not found"
+msgstr "Завдання не знайдено"
+
+msgid "You have not enough rights to view this task"
+msgstr "У вас недостатньо прав для перегляду цього завдання"
+
+msgid "All projects"
+msgstr "Усі проекти"
+
+msgid "All statuses"
+msgstr "Усі статуси"
+
+msgid "All including closed"
+msgstr "Усі, включаючи закриті"
+
+msgid "Any scope"
+msgstr "Будь-який огляд"
+
+msgid "No scope"
+msgstr "Немає огляду"
+
+msgid "Everyone"
+msgstr "Усі"
+
+msgid "Your inbox is empty"
+msgstr "Вхідних немає"
+
+msgid "Inbox automatically collects all tasks assigned to you. No tasks are assigned to you right now :-)"
+msgstr "У вхідних з&#39;являються усі поставлені назначені на вас завдання. Наразі завдань на вас не призначено :-)"
+
+msgid "Your outbox is empty"
+msgstr "Немає вихідних"
+
+msgid "Outbox automatically collects all tasks you’ve created."
+msgstr "У вихідних з&#39;являються усі створені вами завдання."
+
+msgid "Your favorite task list is empty"
+msgstr "Перелік обраних вами завдань порожній"
+
+msgid "To add a task to your personal favorite list, click on a tiny star icon next to task name."
+msgstr "Аби додати завдання до переліку обраних, натисніть на значок зірочки поруч із назвою завдання."
+
+msgid "There are no tasks in this project."
+msgstr "У цьому проекті немає завдань."
+
+msgid "Task list is empty"
+msgstr "Перелік завдань порожній"
+
+msgid "No tasks match your search criteria."
+msgstr "Ніякі завдання не відповідають вашим критеріям пошуку."
+
+msgid "Unable to return task because contact has been deleted. Use forward action instead."
+msgstr "Не вдається повернути завдання, тому що контакт було видалено. Натомість використовуйте дію пересилання."
+
+msgid "Unable to return task because someone modified it."
+msgstr "Неможливо повернути завдання, тому що хтось його змінив."
+
+msgid "File not found"
+msgstr "Файл не знайдено"
+
+msgid "Failed to upload file %s."
+msgstr "Не вдалося завантажити файл %s."
+
+msgid "This field is required."
+msgstr "Це поле є обов&#39;язковим."
+
+msgid "Scope not found"
+msgstr "Огляд не знайдено"
+
+msgid "created"
+msgstr "створив"
+
+msgid "added comment"
+msgstr "додав коментар"
+
+msgid "forwarded"
+msgstr "переслав"
+
+msgid "returned"
+msgstr "повернув"
+
+msgid "edit"
+msgstr "редагувати"
+
+msgid "Milestones"
+msgstr "Віхи"
+
+msgid "Agile"
+msgstr "Agile"
+
+msgid "Logs"
+msgstr "Журнали"
+
+msgid "Empty assignment"
+msgstr "Порожнє призначення"
+
+msgid "New milestone"
+msgstr "Нова віха"
+
+msgid "Milestone successfully saved"
+msgstr "Віху успішно збережено"
+
+msgid "Create milestone"
+msgstr "Створити віху"
+
+msgid "Milestone is closed"
+msgstr "Віху закрито"
+
+msgid "Archive"
+msgstr "Архів"
+
+msgid "Status settings"
+msgstr "Налаштування статусу"
+
+msgid "Add Status"
+msgstr "Додати статус"
+
+msgid "Show %d archived projects"
+msgstr "Показати %d архівних проектів"
+
+msgid "Manage project ordering"
+msgstr "Керувати порядком у проекті"
+
+msgid "[`Show %d archived project`]"
+msgid_plural "[`Show %d archived projects`]"
+msgstr[0] "[`Показати %d архівований проект`]"
+msgstr[1] "[`Показати %d архівованих проекти`]"
+msgstr[2] ""
+
+msgid "unassigned"
+msgstr "непризначені"
+
+msgid "Edit task"
+msgstr "Редагувати завдання"
+
+msgid "Comments"
+msgstr "Коментарі"
+
+msgid "Choose a date"
+msgstr "Оберіть дату"
+
+msgid "Cancel"
+msgstr "Скасувати"
+
+msgid "Choose user"
+msgstr "Обрати користувача"
+
+msgid "A task has been assigned to you."
+msgstr "Завдання було назначене на вас."
+
+msgid "Go to inbox"
+msgstr "Перейти до вхідних"
+
+msgid "%d task has been assigned to you"
+msgid_plural "%d tasks has been assigned to you"
+msgstr[0] "%d завдання було назначене на вас"
+msgstr[1] "%d завдання було назначено на вас"
+msgstr[2] ""
+
+msgid "A task you created has been marked as done."
+msgstr "Створене вами завдання було позначене як виконане."
+
+msgid "Milestone not found"
+msgstr "Віху не знайдено"
+
+msgid "Any milestone"
+msgstr "Будь-яка віха"
+
+msgid "Inbox automatically collects all tasks assigned to you, and is currently empty."
+msgstr "Вхідна скринька автоматично збирає усі призначені на вас завданна, і наразі вона є пустою."
+
+msgid "Your favorites list is empty"
+msgstr "Ваш список обраного порожній"
+
+msgid "No tasks matching your search criteria."
+msgstr "Немає завдань, які відповідають вашим критеріям пошуку."
+
+msgid "Unable to return task because someome modified it."
+msgstr "Неможливо повернути завдання, тому що хтось його змінив."
+
+msgid "New"
+msgstr "Новий"
+
+msgid "%d task has been completed"
+msgid_plural "%d tasks has been completed"
+msgstr[0] "%d завдання було виконано"
+msgstr[1] "%d завдання було виконано"
+msgstr[2] ""
+
+msgid "A task has been assigned to you"
+msgstr "Завдання було призначено на вас"
+
+msgid "The task has been completed"
+msgstr "Задачу було виконано"
+
+msgid "edited"
+msgstr "відредаговано"
+
+msgid "A tiny hint describing this milestone."
+msgstr "Невеличка підказка с описом цієї віхи."
+
+msgid "Enable this when this milestone is not actual anymore."
+msgstr "Увімкнути це, коли віха більше не актуальна."
+
+msgid "<a href=\"%s\">%d new task</a> from %s"
+msgid_plural "<a href=\"%s\">%d new tasks</a> from %s"
+msgstr[0] "<a href=\"%s\">%d нове завдання</a> від %s"
+msgstr[1] "<a href=\"%s\">%d нові завдання</a> від %s"
+msgstr[2] ""
+
+msgid "%s editoed a task you created:"
+msgstr "%s відредагував створене вами завдання:"
+
+msgid "Tasks"
+msgstr "Завдання"
+
+msgid "Scope"
+msgstr "Огляд"
+
+msgid "Create scope"
+msgstr "Створити огляд"
+
+msgid "Scope is closed"
+msgstr "Огляд закрито"
+
+msgid "A task you're assigned to has been updated."
+msgstr "Призначене на вас завдання було оновлене."
+
+msgid "A task you created has been updated."
+msgstr "Створене вами завдання було оновлено."
+
+msgid "A task has been completed"
+msgstr "Завдання виконано"
+
+msgid "A task has been updated"
+msgstr "Завдання оновлено"
+
+msgid "All <strong>%s</strong> in this project will be archived and won't be listed anymore. Are you sure?"
+msgstr "Усі <strong>%s</strong> у цьому проекті буде архівовано та більше не буде показано. Ви впевнені?"
+
+msgid "<a href=\"%s\">%s</a> from %s"
+msgstr "<a href=\"%s\">%s</a> з %s"
+
+msgid "No tasks in %s project"
+msgstr "У проекті %s немає завдань"
+
+msgid "No tasks in %s status"
+msgstr "У статусі %s немає завдань"
+
+msgid "There are currently no tasks in %s status."
+msgstr "У статусі %s наразі немає завдань."
+
+msgid "Edit template"
+msgstr "Редагувати шаблон"
+
+msgid "Readiness"
+msgstr "Готовність"
+
+msgid "To"
+msgstr "Для"
+
+msgid "Add template"
+msgstr "Додати шаблон"
+
+msgid "Create template"
+msgstr "Створити шаблон"
+
+msgid "Access"
+msgstr "Доступ до"
+
+msgid "only me"
+msgstr "тільки для мене"
+
+msgid "all users"
+msgstr "усім користувачам"
+
+msgid "No tasks are assigned to %s right now."
+msgstr "На %s наразі не призначено завдань."
+
+msgid "%s's task list is empty"
+msgstr "Перелік завдань користувача %s порожній"
+
+msgid "More options"
+msgstr "Більше опцій"
+
+msgid "hours"
+msgstr "годин"
+
+msgid "days"
+msgstr "днів"
+
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d день"
+msgstr[1] "%d дні"
+msgstr[2] ""
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d година"
+msgstr[1] "%d години"
+msgstr[2] ""
+
+msgid "%s wrote a comment to a task you are assigned to:"
+msgstr "Користувач %s написав коментар до призначенного вам завдання:"
+
+msgid "%s wrote a comment to a task you created:"
+msgstr "Користувач %s написав коментар до створеного вами завдання:"
+
+msgid "%s sent you your task"
+msgstr "Користувач %s надіслав вам ваше завдання"
+
+msgid "%s sent a new task to %s"
+msgstr "Користувач %s відправив нове завдання для %s"
+
+msgid "Start typing in the search field to find a tag."
+msgstr "Почніть набирати у полі пошуку, аби знайти тег."
+
+msgid "Cannot create a list from another list."
+msgstr "Неможливо створити перелік з переліку."
+
+msgid "Invalid date."
+msgstr "Неприпустима дата."
+
+msgid "Date is not set."
+msgstr "Дату не встановлено."
+
+msgid "Use <strong>app \"%s\"</strong> to provide access to Tasks app for your teammates."
+msgstr "Використовуйте <strong>додаток \"%s\"</strong>, аби надати доступ до додатку «Завдання» вашим колегам."
+
+msgid "unknown status_id=%d"
+msgstr "невідомий status_id=%d"
+
+msgid "Delete list “%s”"
+msgstr "Видалити перелік “%s”"
+
+msgid "A list name is required."
+msgstr "Необхідно вказати назву переліку."
+
+msgid "Hub topic: %s"
+msgstr "Тему хабу: %s"
+
+msgid "Helpdesk request: %s"
+msgstr "Запит у підтримку: %s"
+
+msgid "You do not have sufficient access rights to view this task."
+msgstr "У вас недостатньо прав доступу для перегляду цього завдання."
+
+msgid "Cannot return this task because another user has modified it."
+msgstr "Неможливо повернути це завдання, тому що його змінив інший користувач."
+
+msgid "User %s edited a task you are assigned to:"
+msgstr "Користувач %s відредагував завдання, призначене вам:"
+
+msgid "User %s edited a task you created:"
+msgstr "Користувач %s відредагував створене вами завдання:"
+
+msgid "User %s edited a task:"
+msgstr "Користувач %s відредагував завдання:"
+
+msgid "User %s wrote a comment to a task you are assigned to:"
+msgstr "Користувач %s написав коментар до завдання, яке вам призначено:"
+
+msgid "User %s wrote a comment to a task you created:"
+msgstr "Користувач %s написав коментар до створеного вами завдання:"
+
+msgid "User %s wrote a comment:"
+msgstr "Користувач %s написав коментар:"
+
+msgid "User %s sent you your task"
+msgstr "Користувач %s надіслав вам ваше завдання"
+
+msgid "User %s sent you a new task"
+msgstr "Користувач %s надіслав вам нове завдання"
+
+msgid "User %s sent a new task to user %s"
+msgstr "Користувач %s надіслав нове завдання користувачеві %s"
+
+msgid "User %s has just completed a task"
+msgstr "Користувач %s щойно виконав завдання"
+
+msgid "Task title"
+msgstr "Назва завдання"
+
+msgid "No active work scopes are defined."
+msgstr "Не визначено активні області роботи."
+
+msgid "My preferences"
+msgstr "Мої налаштування"
+
+msgid "Actions"
+msgstr "Дії"
+
+msgid "Highlight color for the main task list and the kanban board."
+msgstr "Колір підсвічування для основного переліку завдань та дошки канбан."
+
+msgid "Logo"
+msgstr "Логотип"
+
+msgid "Image URL to be used as a tiny project icon all around."
+msgstr "URL-адреса зображення, яка усюди буде використовуватися як піктограма проекту."
+
+msgid "Similar to %s"
+msgstr "Таке ж як %s"
+
+msgid "DANGER: Deletion will be permanent with no ability to roll back. Are you sure?"
+msgstr "ОБЕРЕЖНО: Видалення буде виконане назавжди без можливості скасування. Ви впевнені?"
+
+msgid "Watching"
+msgstr "Відслідковування"
+
+msgid "Updates"
+msgstr "Оновлення"
+
+msgid "Kanban"
+msgstr "Канбан"
+
+msgid "My filters"
+msgstr "Мої фільтри"
+
+msgid "%d open / %d closed"
+msgstr "%d відкрито / %d закрито"
+
+msgid "Add a milestone to group tasks into time-based activities such as sprints, releases, or subprojects."
+msgstr "Додайте віху до критичної до часу групи завдань — наприклад, спринти, релізи чи підпроекти."
+
+msgid "Add a project to start creating tasks."
+msgstr "Створіть проект, аби почати ставити завдання."
+
+msgid "Show all tags"
+msgstr "Показати усі теги"
+
+msgid "Menu"
+msgstr "Меню"
+
+msgid "No activity yet"
+msgstr "Ще немає активності"
+
+msgid "This screen will collect and present everything you and your team are doing with tasks."
+msgstr "На цьому екрані буде зібрано та представлено все, що ви та ваши колеги робите із завданнями."
+
+msgid "Restore this milestone"
+msgstr "Відновити цю віху"
+
+msgid "Mark as complete"
+msgstr "Позначити як виконане"
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "A tiny hint describing your teammates what this milestone is all about."
+msgstr "Крихітна підказка для колег, про що ця віха."
+
+msgid "Show unassigned"
+msgstr "Показати непризначене"
+
+msgid "Assigned to %s %s ago"
+msgstr "Призначено на %s %s тому"
+
+msgid "Unassigned task"
+msgstr "Непризначене завдання"
+
+msgid "Filter"
+msgstr "Фільтр"
+
+msgid "Select tasks"
+msgstr "Обрати завдання"
+
+msgid "Remove from my filters"
+msgstr "Видалити з моїх фільтрів"
+
+msgid "Save to my custom filters"
+msgstr "Зберегти до моїх фільтрів"
+
+msgid "Selected tasks"
+msgstr "Обрані завдання"
+
+msgid "Close tasks"
+msgstr "Закрити завдання"
+
+msgid "Set due date"
+msgstr "Вказати термін виконання"
+
+msgid "Delete tasks"
+msgstr "Видалити завдання"
+
+msgid "Tag tasks"
+msgstr "Поставити теги"
+
+msgid "Hide tasks from your inbox for a specific period of time to focus on other important tasks. Your teammates will continue to see your hidden tasks as open and visible."
+msgstr "Приховайте завдання зі своєї папки вхідних на певний період часу, аби зосередитися на інших важливих завданнях. Ваші колеги продовжуватимуть бачити ваші приховані завдання відкритими та видимими."
+
+msgid "Watch"
+msgstr "Слідкувати"
+
+msgid "No due date"
+msgstr "Немає терміну"
+
+msgid "Enter new tag..."
+msgstr "Вкажіть новий тег..."
+
+msgid "Unlink"
+msgstr "Відключити"
+
+msgid "Linked task"
+msgstr "Пов'язане завдання"
+
+msgid "Pin"
+msgstr "Прикріпити"
+
+msgid "Pinned"
+msgstr "Прикріплено"
+
+msgid "DANGER: Task will be deleted without the ability to restore. Delete?"
+msgstr "УВАГА: завдання буде видалене без можливості відновлення. Видалити?"
+
+msgid "Show everyone"
+msgstr "Показати усіх"
+
+msgid "Forward task"
+msgstr "Направити завдання"
+
+msgid "The task is now assigned to:"
+msgstr "Завдання тепер призначене на:"
+
+msgid "Task summary"
+msgstr "Опис завдання"
+
+msgid "Attach files"
+msgstr "Прикріпити файли"
+
+msgid "Return to status"
+msgstr "Повернути до статусу"
+
+msgid "Return task"
+msgstr "Повернути завдання"
+
+msgid "All tags"
+msgstr "Усі теги"
+
+msgid "Find tag"
+msgstr "Знайти тег"
+
+msgid "All done!"
+msgstr "Усе готово!"
+
+msgid "Congratulations! Everything set to be done in this milestone is marked as complete."
+msgstr "Вітаємо! Все, що мало бути зроблено на цій вісі, позначенне як виконане."
+
+msgid "Go to settings"
+msgstr "Перейти до налаштувань"
+
+msgid "Button name"
+msgstr "Назва кнопки"
+
+msgid "Caption on a button that sends a task into this status. Sometimes it matches the status name, but in most cases, it's a verb."
+msgstr "Підпис на кнопці, яка надсилає завдання в цей статус. Іноді він відповідає назві статусу, але в більшості випадків це дієслово."
+
+msgid "Background color"
+msgstr "Колір фону"
+
+msgid "Text color"
+msgstr "Колір тексту"
+
+msgid "Keep the assignee unchanged"
+msgstr "Не змінювати призначеного"
+
+msgid "Assign to the user who created the task"
+msgstr "Призначити на користувача, який створив завдання"
+
+msgid "Force assign to"
+msgstr "Примусово призначити на"
+
+msgid "Allow to select the assignee"
+msgstr "Дозволити обрати призначеного"
+
+msgid "Allow making the task unassigned"
+msgstr "Дозволити помітити завдання як непризначене"
+
+msgid "Below is the global list of all statuses a task can pass through. On a project level, custom workflow can be set up by selecting particular statuses only and skipping the unwanted ones."
+msgstr "Нижче наведено глобальний список усіх статусів, які може пройти завдання. На рівні проекту можна налаштувати власний робочий процес, вибравши лише певні статуси та пропустивши небажані."
+
+msgid "Commit changes by clicking “Save” when done editing."
+msgstr "Після завершення редагування не забудьте натиснути кнопку «Зберегти»."
+
+msgid "My notification preferences"
+msgstr "Мої налаштування повідомлень"
+
+msgid "Notify me on"
+msgstr "Повідомити мене про"
+
+msgid "All updates and comments"
+msgstr "Усі оновлення та коментарі"
+
+msgid "Assignments only"
+msgstr "Тільки призначення"
+
+msgid "Turn off all notifications"
+msgstr "Вимкнути усі повідомлення"
+
+msgid "Which tasks"
+msgstr "Які завдання"
+
+msgid "Tasks assigned to me"
+msgstr "Призначені на мене завдання"
+
+msgid "Tasks created by me"
+msgstr "Створені мною завдання"
+
+msgid "Tasks I’m watching"
+msgstr "Завдання які я відслідковую"
+
+msgid "Tasks from selected projects"
+msgstr "Завдання з обраних проектів"
+
+msgid "Show %d completed milestone"
+msgid_plural "Show %d completed milestones"
+msgstr[0] "Показати %d завершену віху"
+msgstr[1] "Показати %d завершені віхи"
+msgstr[2] ""
+
+msgid "Hide completed milestone"
+msgid_plural "Hide completed milestones"
+msgstr[0] "Приховати завершений етап"
+msgstr[1] "Приховати завершених етапи"
+msgstr[2] ""
+
+msgid "Edit custom filter"
+msgstr "Редагувати власний фільтр"
+
+msgid "Save custom filter"
+msgstr "Зберегти власний фільтр"
+
+msgid "Only you will see this filter in the app navigation."
+msgstr "Цей фільтр у навігації по додатку буде показаний тільки вам."
+
+msgid "On fire!"
+msgstr "У вогні!"
+
+msgid "Doing"
+msgstr "Виконується"
+
+msgid "Start doing"
+msgstr "Почати виконувати"
+
+msgid "To test"
+msgstr "На перевірку"
+
+msgid "Backlog"
+msgstr "Беклог"
+
+msgid "All open"
+msgstr "Усі відкриті"
+
+msgid "All milestones"
+msgstr "Усі етапи"
+
+msgid "All assignees"
+msgstr "Усі призначені"
+
+msgid "Save to my filters"
+msgstr "Зберегти до моїх фільтрів"
+
+msgid "Failed to upload image %s."
+msgstr "Не вдалося завантажити зображення %s."
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "In %d day"
+msgid_plural "In %d days"
+msgstr[0] "Через %d день"
+msgstr[1] "Через %d дні"
+msgstr[2] ""
+
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d день тому"
+msgstr[1] "%d дні тому"
+msgstr[2] ""
+
+msgid "Deleted contact"
+msgstr "Видалений контакт"
+
+msgid "Template"
+msgstr "Шаблон"
+
+msgid "Export"
+msgstr "Експорт"
+
+msgid "Unarchive"
+msgstr "Розархівувати"
+
+msgid "Nobody"
+msgstr "Ніхто"
+
+msgid "Invite"
+msgstr "Запросити"
+
+msgid "Popular tags:"
+msgstr "Популярні теги:"
+
+msgid "Create new tag"
+msgstr "Створити новий тег"
+
+msgid "Minimal access"
+msgstr "Мінімальний доступ"
+
+msgid "Access to all projects"
+msgstr "Доступ до всіх проектів"
+
+msgid "Full access to all projects &amp; settings"
+msgstr "Повний доступ до всіх проектів і налаштувань"
+
+msgid "The user will get an invitation to join your team on Webasyst and to start working on this task."
+msgstr "Користувач отримає запрошення приєднатися до вашої команди на Webasyst і почати працювати над цим завданням."
+
+msgid "Text editor"
+msgstr "Текстовий редактор"
+
+msgid "WYSIWYG"
+msgstr "Візуальний редактор"
+
+msgid "Markdown"
+msgstr "Markdown"
+
+msgid "Join the %s team on Webasyst to start working on the task:"
+msgstr "Приєднуйтесь до команди %s на Webasyst, щоб почати працювати над завданням:"
+
+msgid "Accept invitation"
+msgstr "Прийняти запрошення"
+
+msgid "All senders"
+msgstr "Усі відправники"
+
+msgid "Use projects to organize tasks and manage access rights for your teammates."
+msgstr "Використовуйте проекти для організації завдань і керування правами доступу для ваших товаришів по команді."
+
+msgid "There are no tasks in this project that require your attention at the moment. If you think its by mistake, ask the account admin to check your access rights."
+msgstr "На даний момент у цьому проекті немає завдань, які потребують вашої уваги. Якщо ви вважаєте, що це помилка, попросіть адміністратора облікового запису перевірити ваші права доступу."
+
+msgid "%s %s"
+msgstr "%s %s"
+
+msgid "User %s sent you a task"
+msgstr "Користувач %s надіслав вам завдання"
+
+msgid "User %s sent a task to %s"
+msgstr "Користувач %s надіслав завдання для %s"
+
+msgid "User %s wrote a comment to a task you are assigned to"
+msgstr "Користувач %s написав коментар до завдання, яке вам призначено"
+
+msgid "User %s wrote a comment to a task you created"
+msgstr "Користувач %s написав коментар до створеного вами завдання"
+
+msgid "User %s wrote a comment."
+msgstr "Користувач %s написав коментар."
+
+msgid "User %s edited a task you are assigned to"
+msgstr "Користувач %s відредагував завдання, призначене вам"
+
+msgid "User %s edited a task you created"
+msgstr "Користувач %s відредагував створене вами завдання"
+
+msgid "User %s edited a task"
+msgstr "Користувач %s відредагував завдання"
+
+msgid "Already in our team!"
+msgstr "Вже у нашій команді!"
+
+msgid "This contact was banned"
+msgstr "Цей контакт заблоковано"
+
+msgid "This is a required field."
+msgstr "Це поле є обов'язковим."
+
+msgid "This does not look like a valid email"
+msgstr "Це несхоже на вірний email"
+
+msgid "Invitation token can't created"
+msgstr "Неможливо створити токен запрошення"
+
+msgid "Email not send"
+msgstr "Email не надіслано"
+
+msgid "Status not found"
+msgstr "Статус не знайдено"
+
+msgid "No access to project"
+msgstr "Немає доступу до проекту"
+
+msgid "Contact not found"
+msgstr "Контакт не знайдено"
+
+msgid "You cannot edit task"
+msgstr "Ви не можете редагувати завдання"
+
+msgid "Contact cannot view task"
+msgstr "Контакт не може переглянути завдання"
+
+msgid "Involve %s to the teamwork just by sending a new task."
+msgstr "Залучіть %s до командної роботи, просто надіславши нове завдання."

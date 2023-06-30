@@ -1,0 +1,80 @@
+{strip}
+{if count($categories) > 0}
+    {$is_retina = $theme_settings.categories_list_images_retina && !empty($skImages)}
+    {$is_lazy = $theme_settings.categories_list_images_lazy}
+
+    {if !empty($theme_settings.categories_mainpage_max_subcats)}{$count_max_subcnt = $theme_settings.categories_mainpage_max_subcats}{/if}
+    <div class="categories-list-wrap js-categories-list" data-retina="{$is_retina}" data-lazy="{$is_lazy}">
+        <ul class="categories">
+            {foreach $categories as $cat}
+                <li class="categories-item">
+                    {if !$wa->isMobile()}
+                        {$cat_image = null}
+                        {if !empty($cat.image)}
+                            {$cat_image = $cat.image}
+                        {/if}
+                        {if isset($Wmimages[$cat.id].image)}
+                            {$cat_image = $Wmimages[$cat.id].image}
+                        {/if}
+                        {if isset($skImages[$cat.id].image)}
+                            {$cat_image = $skImages[$cat.id].image}
+                        {/if}
+                        {if !empty($cat.is_menus) && !empty($menus_list_with_img[$cat.id]['img'])}
+                            {$cat_image_name = $menus_list_with_img[$cat.id]['img']}
+                            {$cat_image = "`$wa_url`wa-data/public/menus/image/`$cat_image_name`"}
+                        {/if}
+                        {if !empty($cat_image)}
+                            <a href="{$cat.url}" class="categories-item__image">
+                                {if $theme_settings.categories_list_images_lazy}
+                                    <img src="{$wa_theme_url}img/lazy-image.png" class="js-categories-item-image" data-src="{$cat_image}" alt="{$cat.name|escape}" />
+                                {else}
+                                    <img src="{$cat_image}" class="js-categories-item-image" alt="{$cat.name|escape}" />
+                                {/if}
+                            </a>
+                        {/if}
+                    {/if}
+                    <div class="categories-item__cats">
+                        {$is_badge = (!empty($is_display_badge) && !empty($cat.params.badge_text) && !empty($cat.params.badge_class))}
+                        <div class="categories-item__title">
+                            <a href="{$cat.url}">
+                                {$cat.name}{if $is_badge} <span class="cat-badge cat-badge--{$cat.params.badge_class}">{$cat.params.badge_text}</span>{/if}
+                            </a>
+                        </div>
+                        {$subcategories = []}
+                        {if isset($cat.childs) && count($cat.childs) > 0}
+                            {if $theme_settings.subcategories_mainpage == 'all'}
+                                {$subcategories = $cat.childs}
+                            {else if $theme_settings.subcategories_mainpage == 'param'}
+                                {foreach $cat.childs as $subcat}
+                                    {if isset($subcat.params.home)}
+                                        {$subcategories[] = $subcat}
+                                    {/if}
+                                {/foreach}
+                            {/if}
+                        {/if}
+                        {if count($subcategories) > 0}
+                            <div class="categories-item__subs">
+                                {foreach $subcategories as $subcat}
+                                    {if !empty($count_max_subcnt) && $subcat@iteration > $count_max_subcnt}{break}{/if}
+                                    {$is_badge = (!empty($is_display_badge) && !empty($subcat.params.badge_text) && !empty($subcat.params.badge_class))}
+                                    <div class="categories-item__sub">
+                                        <a href="{$subcat.url}">
+                                            {$subcat.name}{if $is_badge} <span class="cat-badge cat-badge--{$subcat.params.badge_class}">{$subcat.params.badge_text}</span>{/if}
+                                        </a>
+                                    </div>
+                                {/foreach}
+                            </div>
+                        {/if}
+                        {if !empty($theme_settings.categories_mainpage_list_linkall)}{$title_link_to_all = $theme_settings.categories_mainpage_list_linkall}{/if}
+                        {if !empty($title_link_to_all)}
+                            <div class="categories-item__all">
+                                <a class="show-all ac-color" href="{$cat.url}">{$title_link_to_all} <i class="button-more fal fa-long-arrow-right"></i></a>
+                            </div>
+                        {/if}
+                    </div>
+                </li>
+            {/foreach}
+        </ul>
+    </div>
+{/if}
+{/strip}

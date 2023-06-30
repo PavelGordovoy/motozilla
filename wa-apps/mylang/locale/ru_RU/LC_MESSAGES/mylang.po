@@ -1,0 +1,973 @@
+
+
+msgid ""
+msgstr "Content-Transfer-Encoding: 8bit\nContent-Type: text/plain; charset=UTF-8\nLanguage: ru_RU\nLanguage-Team: \nLast-Translator: \nMIME-Version: 1.0\nPO-Revision-Date: 2019-10-02T12:04:53+02:00\nPOT-Creation-Date: 2019-10-02T12:04:53+02:00\nPlural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\nProject-Id-Version: \nReport-Msgid-Bugs-To: \n"
+
+msgid "Export"
+msgstr "Экспорт"
+
+msgid "Import"
+msgstr "Импорт"
+
+msgid "Select locale to edit"
+msgstr "Выберите язык"
+
+msgid "Reload file"
+msgstr "Перечитать файл"
+
+msgid "Loading..."
+msgstr "Загрузка..."
+
+msgid "Compile"
+msgstr "Собрать"
+
+msgid "Translate empty(Yandex)"
+msgstr "Перевести пустые(Яндекс)"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "Saved"
+msgstr "Сохранено"
+
+msgid "Error"
+msgstr "Ошибка"
+
+msgid "prev"
+msgstr "пред"
+
+msgid "next"
+msgstr "след"
+
+msgid "PO-file for locale - "
+msgstr "Файл PO для языка - "
+
+msgid "App doesn\\'t support additional locales."
+msgstr "Приложение не поддерживает дополнительные языки."
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "File to upload should have *.po extension and been created with poedit or other tools."
+msgstr "Расширение файла должно быть *.po. Его можно создать приложением Poedit или другими."
+
+msgid "Select locale to upload"
+msgstr "Выберите язык для загрузки."
+
+msgid "Upload"
+msgstr "Загрузить"
+
+msgid "or"
+msgstr "или"
+
+msgid "Generate mo-file containing all translated strings."
+msgstr "Создать файл mo со всеми переведенными строками."
+
+msgid "Generate"
+msgstr "Создать"
+
+msgid "Rollback to first original mo-file. May contain partial translation."
+msgstr "Откатиться к первому оригинальному mo-файлу. Может содержать частичный перевод."
+
+msgid "Rollback"
+msgstr "Откатиться"
+
+msgid "Scan product to get new strings to translate for all locales."
+msgstr "Просканировать продукт и добавить новые строки по всем языкам."
+
+msgid "Scan new"
+msgstr "Просканировать"
+
+msgid "Completed"
+msgstr "Завершено"
+
+msgid "Plural form"
+msgstr "Множественная форма"
+
+msgid "Choose strings locale"
+msgstr "Выберите язык строк"
+
+msgid "Checkout"
+msgstr "Оформление заказа"
+
+msgid "You have custom steps names available only for 1 language:"
+msgstr "Имена шагов оформления заказа доступны только для одного языка"
+
+msgid "Use default"
+msgstr "Применить исправления"
+
+msgid "Names will be changed to use system translations."
+msgstr "Имена будут изменены для использования системного перевода."
+
+msgid "You have custom fields names available only for 1 language:"
+msgstr "Дополнительные поля контакта созданы только для одного языка"
+
+msgid "change"
+msgstr "изменить"
+
+msgid "You have default checkout settings and all fields use system translations."
+msgstr "Указаны настройки по умолчанию и все поля используют системный перевод."
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Features"
+msgstr "Характеристики"
+
+msgid "Feature name"
+msgstr "Название характеристики"
+
+msgid "Value"
+msgstr "Значение"
+
+msgid "Save the main value beforehand, to translate it."
+msgstr "Сохраните основное значение заранее, для его перевода."
+
+msgid "Services list is empty. Add <a href=\"{$wa_backend_url}shop/?action=products#/services/\">new</a> to translate it."
+msgstr "Список услуг пуст. Добавьте <a href=\"{$wa_backend_url}shop/?action=products#/services/\">новую</a> для перевода."
+
+msgid "Services"
+msgstr "Услуги"
+
+msgid "Service name"
+msgstr "Название услуги"
+
+msgid "Service"
+msgstr "Услуга"
+
+msgid "Noname"
+msgstr "Без имени"
+
+msgid "Tags"
+msgstr "Теги"
+
+msgid "Tag name"
+msgstr "Имя тега"
+
+msgid "Stocks list is empty. Add <a href=\"{$wa_backend_url}shop/?action=settings#/stock/\">new stock</a> to translate it."
+msgstr "Список складов пуст. Добавьте <a href=\"{$wa_backend_url}shop/?action=settings#/stock/\">новый склад</a> для перевода."
+
+msgid "Stocks"
+msgstr "Склады"
+
+msgid "Stock name"
+msgstr "Название склада"
+
+msgid "Contact fields"
+msgstr "Поля контакта"
+
+msgid "General settings"
+msgstr "Общие настройки"
+
+msgid "Selector"
+msgstr "Селектор"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "Domains"
+msgstr "Домены"
+
+msgid "Available locales"
+msgstr "Доступные языки"
+
+msgid "Select additional locales"
+msgstr "Выберите дополнительные локали"
+
+msgid "Add new locale"
+msgstr "Добавить новый язык"
+
+msgid "Main language"
+msgstr "Основной язык"
+
+msgid "New locale"
+msgstr "Новый язык"
+
+msgid "Locale"
+msgstr "Локаль"
+
+msgid "Add"
+msgstr "Добавить"
+
+msgid "close"
+msgstr "закрыть"
+
+msgid "Delete locale"
+msgstr "Удалить язык"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "All data with locale %s will be cleared. Are you sure?"
+msgstr "Все данные для %s будут удалены. Вы уверены?"
+
+msgid "Empty value"
+msgstr "Пустое значение"
+
+msgid "Customize Your Shopping Experience!"
+msgstr "Настройте Свой Опыт Покупок!"
+
+msgid "Please select the destination country, language, and currency you prefer."
+msgstr "Пожалуйста, выберите страну назначения, язык и валюту вы предпочитаете."
+
+msgid "Select the Destination"
+msgstr "Выберите пункт назначения"
+
+msgid "Select Your Language"
+msgstr "Выберите язык"
+
+msgid "Select Your Currency"
+msgstr "Укажите валюту"
+
+msgid "Available Shipping Methods"
+msgstr "Доступные способы доставки"
+
+msgid "Available Payment Methods"
+msgstr "Доступные способы оплаты"
+
+msgid "Save Preferences"
+msgstr "Сохранить настройки"
+
+msgid "Change language"
+msgstr "Изменить язык"
+
+msgid "Selector settings"
+msgstr "Настройки селектора"
+
+msgid "Redirects"
+msgstr "Перенаправления"
+
+msgid "New rule"
+msgstr "Новое правило"
+
+msgid "Remove"
+msgstr "Удалить"
+
+msgid "Plugins"
+msgstr "Плагины"
+
+msgid "Locale is not selected."
+msgstr "Язык не выбран."
+
+msgid "File is not selected."
+msgstr "Файл не выбран."
+
+msgid "All"
+msgstr "Все"
+
+msgid "Translate"
+msgstr "Перевести"
+
+msgid "Description"
+msgstr "Описание"
+
+msgid "Everyone"
+msgstr "Для всех"
+
+msgid "None"
+msgstr "Ни одного"
+
+msgid "You can translate tags in"
+msgstr "Вы можете перевести теги"
+
+msgid "Mylang app"
+msgstr "приложении My Lang"
+
+msgid "Access denied"
+msgstr "Доступ запрещен"
+
+msgid "MO-file restored"
+msgstr "Файл mo восстановлен"
+
+msgid "No backup MO-file"
+msgstr "Нет резервного файла mo."
+
+msgid "Input data error"
+msgstr "Ошибка входных данных"
+
+msgid "Input file error"
+msgstr "Ошибка входящего файла"
+
+msgid "Input file content error"
+msgstr "Ошибка содержания входящего файла"
+
+msgid "Previous file content error"
+msgstr "Ошибки строк исходного файла"
+
+msgid "File not found."
+msgstr "Файл не найден."
+
+msgid "Request strings error"
+msgstr "Ошибка строк запроса"
+
+msgid "Translate empty"
+msgstr "Перевести пустые"
+
+msgid "Yandex Translate"
+msgstr "Яндекс Переводчик"
+
+msgid "Payment"
+msgstr "Плагины оплаты"
+
+msgid "Shipping"
+msgstr "Плагины доставки"
+
+msgid "Google Translate"
+msgstr "Гугл Переводчик"
+
+msgid "Yandex API key"
+msgstr "Ключ API Яндекс"
+
+msgid "Free < 10 millions chars per month. More info..."
+msgstr "Бесплатно < 10 миллионов символов в месяц. Подробнее ..."
+
+msgid "Google API key"
+msgstr "Ключа API Гугл"
+
+msgid "Free trial. More info..."
+msgstr "Бесплатная пробная версия. Подробнее ..."
+
+msgid "Microsoft API key"
+msgstr "Ключ API Майкрософт"
+
+msgid "https://tech.yandex.com/translate/"
+msgstr "https://tech.yandex.ru/translate/"
+
+msgid "Microsoft Translate"
+msgstr "Майкрософт"
+
+msgid "Editor"
+msgstr "Редактор"
+
+msgid "Api error. Check the token key and quota."
+msgstr "Ошибка API. Проверьте токен доступа и квоту."
+
+msgid "Actions"
+msgstr "Действия"
+
+msgid "System keys"
+msgstr "Системные ключи"
+
+msgid "Currency"
+msgstr "Валюта"
+
+msgid "Original"
+msgstr "Исходные"
+
+msgid "Name:"
+msgstr "Название:"
+
+msgid "Region:"
+msgstr "Регион:"
+
+msgid "English"
+msgstr "Английский"
+
+msgid "Usually space or comma"
+msgstr "Обычно пробел или запятая"
+
+msgid "Decimal point"
+msgstr "Десятичный разделитель"
+
+msgid "Usually full stop or comma"
+msgstr "Обычно точка или запятая"
+
+msgid "Fractional digits"
+msgstr "Дробные цифры"
+
+msgid "First day of week"
+msgstr "Первый день недели"
+
+msgid "Edit locale"
+msgstr "Редактировать локаль"
+
+msgid "Update"
+msgstr "Обновить"
+
+msgid "Select currency"
+msgstr "Выберите валюту"
+
+msgid "Empty filename."
+msgstr "Пустое имя файла."
+
+msgid "Thousands separator"
+msgstr "Разделитель тысяч"
+
+msgid "This locale is not installed on the server."
+msgstr "Локаль не установлена на сервере."
+
+msgid "Some transalted strings may display incorrect."
+msgstr "Некоторые переведенные строки могут отображаться некорректно."
+
+msgid "Store settings"
+msgstr "Настройки магазина"
+
+msgid "Search scope"
+msgstr "Область поиска"
+
+msgid "Use full text search."
+msgstr "Использовать полнотекстовый поиск."
+
+msgid "By default search is using translated strings. Check option to use full text search."
+msgstr "По умолчанию поиск производится только по переведенным строкам. Отметьте значение для полнотекстового поиска."
+
+msgid "Promos list is empty. Add <a href=\"{$wa_backend_url}shop/?action=products#/promos/\">new</a> to translate it."
+msgstr "Список промо-карточек пуст. Добавьте <a href=\"{$wa_backend_url}shop/?action=products#/promos/\">новую</a> для перевода."
+
+msgid "Promos"
+msgstr "Промо-карточки"
+
+msgid "Promo title"
+msgstr "Заголовок промо-карточки"
+
+msgid "Promo"
+msgstr "Промо"
+
+msgid "Promo text"
+msgstr "Текст промо-карточки"
+
+msgid "Themes"
+msgstr "Темы"
+
+msgid "Theme has no text fields to translate."
+msgstr "Тема не содержит текстовых полей"
+
+msgid "Theme field"
+msgstr "Поле темы"
+
+msgid "Theme name"
+msgstr "Имя темы"
+
+msgid "Theme ID"
+msgstr "Идентификатор темы"
+
+msgid "Theme %s not found"
+msgstr "Тема %s не найдена"
+
+msgid "Duplicate theme failed"
+msgstr "Копирование темы не удалось"
+
+msgid "Missed theme file(s): %s"
+msgstr "Пропущенный файл(ы): %s"
+
+msgid "Invalid theme slug"
+msgstr "Некорректный путь темы"
+
+msgid "http://www.webasyst.com/framework/docs/site/themes/#%s"
+msgstr "http://www.webasyst.ru/framework/docs/site/themes/#%s"
+
+msgid "Autotranslate"
+msgstr "Автоматический перевод"
+
+msgid "Source language"
+msgstr "Исходный язык"
+
+msgid "Target language"
+msgstr "Конечный язык"
+
+msgid "Providers"
+msgstr "Сервисы перевода"
+
+msgid "No API key"
+msgstr "Нет ключа API"
+
+msgid "Replace old data"
+msgstr "Заменять данные"
+
+msgid "Replace old data with new"
+msgstr "Заменять старые данные новыми"
+
+msgid "All selected fields will be overwritten with new translations data."
+msgstr "Все выбранные поля будут перезаписаны новыми данными."
+
+msgid "Items to translate"
+msgstr "Поля для перевода"
+
+msgid "Categories"
+msgstr "Категории"
+
+msgid "not translated"
+msgstr "не переведено"
+
+msgid "Name"
+msgstr "Наименование"
+
+msgid "Products"
+msgstr "Товары"
+
+msgid "Summary"
+msgstr "Краткое описание"
+
+msgid "Start"
+msgstr "Начать"
+
+msgid "Source and target language should be different."
+msgstr "Исходный и конечный языки должны отличаться."
+
+msgid "Check at least 1 field to translate."
+msgstr "Выберите как минимум 1 поле для перевода"
+
+msgid "Invalid API key"
+msgstr "Неправильный API-ключ"
+
+msgid "Blocked API key"
+msgstr "API-ключ заблокирован"
+
+msgid "Exceeded the daily limit on the amount of translated text"
+msgstr "Превышено суточное ограничение на объем переведенного текста"
+
+msgid "Exceeded the maximum text size"
+msgstr "Превышен максимально допустимый размер текста"
+
+msgid "The text cannot be translated"
+msgstr "Текст не может быть переведен"
+
+msgid "The specified translation direction is not supported"
+msgstr "Заданное направление перевода не поддерживается"
+
+msgid "Unknown error. See logs."
+msgstr "Неизвестная ошибка. Данные записаны в логи."
+
+msgid "Unknown provider"
+msgstr "Неизвестный сервис"
+
+msgid "Translate process is finished."
+msgstr "Процесс перевода закончен."
+
+msgid "Search"
+msgstr "Поиск"
+
+msgid "Cache files"
+msgstr "Файлы кеша"
+
+msgid "Select main provider"
+msgstr "Выбрать основного провайдера"
+
+msgid "Language is empty."
+msgstr "Язык не выбран."
+
+msgid "Empty provider."
+msgstr "Провайдер не выбран"
+
+msgid "Widgets"
+msgstr "Виджеты"
+
+msgid "Add custom text"
+msgstr "Добавить произвольный текст"
+
+msgid "Plural forms"
+msgstr "Множественные формы"
+
+msgid "Original text"
+msgstr "Исходный текст"
+
+msgid "Key text"
+msgstr "Текстовый ключ"
+
+msgid "Key text plural"
+msgstr "Множественная форма"
+
+msgid "ID string"
+msgstr "Перевод"
+
+msgid "plural"
+msgstr "множественная"
+
+msgid "Usage:"
+msgstr "Использование:"
+
+msgid "Delete string?"
+msgstr "Удалить строку?"
+
+msgid "Available selectors"
+msgstr "Доступные селекторы"
+
+msgid "App doesn't support additional locales."
+msgstr "Приложение не поддерживает дополнительные локали"
+
+msgid "[&#96;Key text&#96;] or {_w('Key text')} for apps"
+msgstr "[&#96;Key text&#96;] или {_w('Key text')} для приложений"
+
+msgid "Integrate with Menu app"
+msgstr "Интеграция с приложением Меню"
+
+msgid "Translate menu items"
+msgstr "Переводить элементы меню"
+
+msgid "Thousands sep"
+msgstr "Тысячный разделитель"
+
+msgid "Clean hash strings"
+msgstr "Очистить строки хэша"
+
+msgid "Repair file for md5-hash keys."
+msgstr "Удалить в файле md5-строки"
+
+msgid "Unescape keys"
+msgstr "Убрать экранирование"
+
+msgid "Repair keys."
+msgstr "Исправить излишнее экранирование ключей"
+
+msgid "Fix locales"
+msgstr "Исправить локали"
+
+msgid "Done"
+msgstr "Выполнено."
+
+msgid "Select locale"
+msgstr "Выберите локаль"
+
+msgid "Select items"
+msgstr "Выберите элементы"
+
+msgid "Custom strings"
+msgstr "Пользовательские строки"
+
+msgid "Product name"
+msgstr "Наименование товара"
+
+msgid "SKU name"
+msgstr ""
+
+msgid "SKU code"
+msgstr ""
+
+msgid "Price"
+msgstr "Цена"
+
+msgid "Storefront link"
+msgstr "Ссылка на витрину"
+
+msgid "Order states"
+msgstr "Статусы заказов"
+
+msgid "Set default"
+msgstr "Поставить по умолчанию"
+
+msgid "Theme “%s” is for app “%s”, which is not installed in your Webasyst. Install the app, and upload theme once again."
+msgstr ""
+
+msgid "Invalid theme archive structure (%s). <a href=\"%s\" target=\"_blank\">See help</a> for details"
+msgstr ""
+
+msgid "Order state"
+msgstr "Статус заказа"
+
+msgid "Sign up"
+msgstr ""
+
+msgid "You have default auth settings and all fields use system translations."
+msgstr "Указаны настройки по умолчанию и все поля используют системный перевод."
+
+msgid "File could not be saved due to the insufficient file write permissions for the \"%s\" folder."
+msgstr ""
+
+msgid "Failed to extract files from theme archive (%s). <a href=\"%s\" target=\"_blank\">See help</a> for details"
+msgstr ""
+
+msgid "State"
+msgstr "Статус"
+
+msgid "Language pack"
+msgstr "Языковой пакет"
+
+msgid "MyLang version"
+msgstr "Версия Mylang"
+
+msgid "Language packs"
+msgstr "Языковые пакеты"
+
+msgid "For developers"
+msgstr "Для разработчиков"
+
+msgid "Version"
+msgstr "Версия"
+
+msgid "Your current version is"
+msgstr "Ваша текущая версия"
+
+msgid "Language"
+msgstr "Язык"
+
+msgid "Install"
+msgstr "Установить"
+
+msgid "There are no language packs installed."
+msgstr "Языковых пакетов не установлено."
+
+msgid "Install new plugins from the Webasyst Store using the Installer app"
+msgstr "Установите новые плагины из каталога Webasyst через приложение Инсталлер."
+
+msgid "Show other plugins"
+msgstr "Показать другие плагины"
+
+msgid "Select locale to generate export files:"
+msgstr "Выберите язык для создания файлов экспорта:"
+
+msgid "By default langpack will replace all supported:"
+msgstr "По умолчанию языковой пакет заменит все поддерживаемые:"
+
+msgid "Only missing"
+msgstr "Только отсутствующие "
+
+msgid "Create data for langpack"
+msgstr "Собрать данные для пакета"
+
+msgid "Create pack"
+msgstr "Создать пакет"
+
+msgid "Cancel"
+msgstr "Отменить"
+
+msgid "Install langpack"
+msgstr "Установить языковой пакет"
+
+msgid "%d app"
+msgid_plural "%d apps"
+msgstr[0] "%d приложение"
+msgstr[1] "%d приложения"
+msgstr[2] "%d приложений"
+
+msgid "%d plugin"
+msgid_plural "%d plugins"
+msgstr[0] "%d плагин"
+msgstr[1] "%d плагина"
+msgstr[2] "%d плагинов"
+
+msgid "%d widget"
+msgid_plural "%d widgets"
+msgstr[0] "%d виджет"
+msgstr[1] "%d виджета"
+msgstr[2] "%d виджетов"
+
+msgid "Download"
+msgstr "Скачать"
+
+msgid "Files added:"
+msgstr "Файлов добавлено:"
+
+msgid "Plugin settings page"
+msgstr ""
+
+msgid "Maintenance"
+msgstr "Обслуживание"
+
+msgid "Tables"
+msgstr "Таблицы"
+
+msgid "Optimize"
+msgstr "Оптимизировать"
+
+msgid "All tables are optimized."
+msgstr "Все таблицы оптимизированы."
+
+msgid "Clean data"
+msgstr "Очистить данные"
+
+msgid "Autotranslate cache files"
+msgstr "Файлы кеша автоперевода."
+
+msgid "No files"
+msgstr "Нет файлов"
+
+msgid "Localized data"
+msgstr "Данные перевода"
+
+msgid "Values"
+msgstr "Значения"
+
+msgid "Themes data is removed from datatbase, not from theme files."
+msgstr "Данные темы удалены из таблицы, не из файлов темы."
+
+msgid "%d entry"
+msgid_plural "%d entries"
+msgstr[0] "запись"
+msgstr[1] "записи"
+msgstr[2] "записей"
+
+msgid "No table name"
+msgstr "Нет таблицы"
+
+msgid "Database error"
+msgstr "Ошибка базы данных"
+
+msgid "No filename"
+msgstr "Нет файла"
+
+msgid "No data"
+msgstr "Нет данных"
+
+msgid "Shop"
+msgstr ""
+
+msgid "Category"
+msgstr ""
+
+msgid "Site"
+msgstr ""
+
+msgid "Blog"
+msgstr ""
+
+msgid "Albums"
+msgstr "Альбомы"
+
+msgid "Photo"
+msgstr ""
+
+msgid "Clear"
+msgstr ""
+
+msgid "B,KB,MB,GB"
+msgstr ""
+
+msgid "Clear selected data?"
+msgstr "Очистить выбранные данные?"
+
+msgid "Photos"
+msgstr ""
+
+msgid "Reviews filter"
+msgstr "Фильтр отзывов"
+
+msgid "Disable reviews filter."
+msgstr "Отключить фильтр отзывов."
+
+msgid "By default reviews are filtered by locale."
+msgstr "По умолчанию отзывы выбираются по текущему языку."
+
+msgid "Meta title"
+msgstr "Meta заголовок"
+
+msgid "Meta keywords"
+msgstr "Мeta ключевые слова"
+
+msgid "Meta description"
+msgstr "Meta описание"
+
+msgid "No translate plugins"
+msgstr "Нет плагинов перевода"
+
+msgid "There are no translate plugins installed."
+msgstr "Нет установленных плагинов сервисов перевода"
+
+msgid "Install new plugins from the\n                        Webasyst Store using the Installer app"
+msgstr "Установите новые плагины\n из каталога Webasyst через приложение Инсталлер"
+
+msgid "No translation plugin."
+msgstr "Нет плагинов перевода"
+
+msgid "String"
+msgstr "Строка"
+
+msgid "added a product"
+msgstr "добавлен товар"
+
+msgid "Skip N products"
+msgstr "Пропустить N товаров"
+
+msgid "Skip N products from the start"
+msgstr "Пропустить N товаров с начала"
+
+msgid "Welcome to Shop-Script!"
+msgstr ""
+
+msgid "This screen will help you to quickly launch your new online store."
+msgstr ""
+
+msgid "Select a primary currency"
+msgstr ""
+
+msgid "Select a country"
+msgstr ""
+
+msgid "Other"
+msgstr ""
+
+msgid "No default regional data will be added"
+msgstr ""
+
+msgid "Next step"
+msgstr ""
+
+msgid "Quick start"
+msgstr ""
+
+msgid "of"
+msgstr ""
+
+msgid "Done!"
+msgstr ""
+
+msgid "Close quick start"
+msgstr ""
+
+msgid "Welcome to My Lang!"
+msgstr "Добро пожаловать в MyLang"
+
+msgid "This screen will help you to quickly set MyLang App."
+msgstr "Раздел поможет быстро настроить приложение MyLang"
+
+msgid "Not set"
+msgstr "Не установлено"
+
+msgid "Change"
+msgstr ""
+
+msgid "Example"
+msgstr ""
+
+msgid "Domain"
+msgstr ""
+
+msgid "Url"
+msgstr ""
+
+msgid "Customer"
+msgstr ""
+
+msgid "Store admin"
+msgstr ""
+
+msgid "Featured on homepage"
+msgstr ""
+
+msgid "Bestsellers"
+msgstr ""
+
+msgid "Welcome to MyLang"
+msgstr ""
+
+msgid "Tutorial"
+msgstr ""
+
+msgid "Basic settings"
+msgstr ""
+
+msgid "External plugins"
+msgstr ""
+
+msgid "Empty site"
+msgstr ""
+
+msgid "Site has rules for all locales"
+msgstr ""
+
+msgid "Site has no rules for locales:"
+msgstr ""
+
+msgid "fixed"
+msgstr ""
+
+msgid "Site settings"
+msgstr "Настройки сайта"
+
+msgid "Filter pages"
+msgstr "Фильтр страниц"
+
+msgid "Filter pages by locale"
+msgstr "Фильтровать страницы по локали"
+
+msgid "By default pages are shown as is."
+msgstr "По умолчанию страницы показаны без изменений."

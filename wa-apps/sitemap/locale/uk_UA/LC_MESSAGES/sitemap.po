@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: sitemap\n"
+"POT-Creation-Date: 2022-08-08 17:52+0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: sitemap\n"
+"Language-Team: sitemap\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: uk_UA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Способ оплаты не определен"
+msgstr ""
+
+msgid "%s не назначен ни на одну задачу."
+msgstr ""
+
+msgid "placed an order"
+msgstr ""
+
+msgid "accepted an order for processing"
+msgstr ""
+
+msgid "marked an order as paid"
+msgstr ""
+
+msgid "paid an order"
+msgstr ""
+
+msgid "refunded an order"
+msgstr ""
+
+msgid "edited an order"
+msgstr ""
+
+msgid "deleted an order"
+msgstr ""
+
+msgid "posted an order comment"
+msgstr ""
+
+msgid "sent a message to customer"
+msgstr ""

@@ -1,0 +1,39 @@
+{strip}
+{if $count_images > 1 || $video}
+    {$is_video_last = ($theme_settings.product_gallery_video_sort === 'end')}
+    {$is_dialog = $wa->get('cart')}
+    {$is_popup_video = $theme_settings.product_gallery_video_popup && !$is_dialog}
+    {function video_gallery_previews_item position=null}
+        <div data-id="video" data-video="true" data-position="{$position}" class="{if $is_popup_video} js-gallery-popup-video{else} js-gallery-preview{/if} gallery-previews-b__el gallery-previews-b__el--video{if !$is_video_last && !$is_popup_video} selected{/if}">
+            <a href="{if $is_popup_video}{$video.orig_url}{else}{$video.url}{/if}" class="gallery-previews-b__link gallery-previews-b__link--video">
+                <i class="fas fa-video bs-color"></i>
+            </a>
+        </div>
+    {/function}
+    <div class="gallery-previews-b__outer js-outer">
+        <div class="js-gallery-previews-carousel gallery-previews-b owl-carousel" data-loop="{$theme_settings.product_gallery_previews_carousel_loop}">
+            {$position = 0}
+            {if $video && !$is_video_last}
+                {video_gallery_previews_item position=$position}
+                {$position = $position + 1}
+            {/if}
+            {$popup_image_size = '970'}
+            {if !empty($theme_settings.product_gallery_popup_size_img)}{$popup_image_size = $theme_settings.product_gallery_popup_size_img}{/if}
+            {if $count_images > 1 || ($count_images > 0 && $video)}
+                {foreach $product.images as $image}
+                    <div data-id="{$image.id}" data-position="{$position}" class="js-gallery-preview gallery-previews-b__el{if $image.id == $product.image_id && (!$video || $is_video_last || $is_popup_video)} selected{/if}">
+                        <a id="product-image-{$image.id}" href="{$wa->shop->imgUrl($image, $popup_image_size)}" class="gallery-previews-b__link">
+                            {$wa->shop->imgHtml($image, '55x0')}
+                        </a>
+                    </div>
+                    {$position = $position + 1}
+                {/foreach}
+            {/if}
+            {if $video && $is_video_last}
+                {video_gallery_previews_item position=$position}
+                {$position = $position + 1}
+            {/if}
+        </div>
+    </div>
+{/if}
+{/strip}

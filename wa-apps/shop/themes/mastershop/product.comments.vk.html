@@ -1,0 +1,28 @@
+{strip}
+
+    {$attach = "false"}
+    {if $theme_settings.product_info_comments_vk_photos}
+        {$attach = "photo"}
+    {/if}
+
+    {if $theme_settings.product_info_comments_vk_link}
+        {if $attach !== "false"}{$attach = "`$attach`,link"}{else}{$attach = "link"}{/if}
+    {/if}
+
+    {$limit = 20}
+    {if (int)$theme_settings.product_info_comments_vk_count}
+        {$limit = (int)$theme_settings.product_info_comments_vk_count}
+    {/if}
+
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?158"></script>
+
+    <div id="vk_comments" class="e-product-comments-vk"></div>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            VK.init({ldelim}apiId: {$theme_settings.product_info_comments_vk_app_id}, onlyWidgets: true{rdelim});
+            VK.Widgets.Comments("vk_comments", {ldelim}limit: {$limit}, attach: {if $attach !== "false"}"{$attach}"{else}{$attach}{/if}{rdelim});
+        }
+    </script>
+
+{/strip}

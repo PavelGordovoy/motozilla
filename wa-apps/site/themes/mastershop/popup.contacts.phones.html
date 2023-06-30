@@ -1,0 +1,55 @@
+{strip}
+<div class="popup-contacts_col">
+    {$phone = $theme_settings.phone}
+    {if $phone && $theme_settings.static_var_smarty}{eval var=$phone assign='phone'}{/if}
+    {if $wa->shop && empty($theme_settings.phone)}{$phone = $wa->shop->settings('phone')}{/if}
+    {if $phone}
+        <span class="popup-contacts__phone">
+            {if !empty($theme_settings.phone_title)}<span class="popup-contacts__title">{$theme_settings.phone_title}</span>{/if}
+            <a class="js-contact-phone" href="tel:{$phone|regex_replace:'/[^0-9\+]+/':''}">{$phone}</a>
+
+        </span>
+    {/if}
+
+    {$phone_2 = $theme_settings.phone_2}
+    {if $phone_2}
+        {if $theme_settings.static_var_smarty}{eval var=$phone_2 assign='phone_2'}{/if}
+        <span class="popup-contacts__phone">
+            {if !empty($theme_settings.phone_2_title)}<span class="popup-contacts__title"> {$theme_settings.phone_2_title}</span>{/if}
+            <a class="js-contact-phone" href="tel:{$phone_2|regex_replace:'/[^0-9\+]+/':''}">{$phone_2}</a>
+        </span>
+    {/if}
+
+    {$phone_3 = $theme_settings.phone_3}
+    {if $phone_3}
+        {if $theme_settings.static_var_smarty}{eval var=$phone_3 assign='phone_3'}{/if}
+        <span class="popup-contacts__phone">
+            {if !empty($theme_settings.phone_3_title)}<span class="popup-contacts__title">{$theme_settings.phone_3_title}</span>{/if}
+            <a class="js-contact-phone" href="tel:{$phone_3|regex_replace:'/[^0-9\+]+/':''}">{$phone_3}</a>
+        </span>
+    {/if}
+
+    {* callback button *}
+    {if !empty($theme_settings.plugin_callback)}
+        {$js_class = ''}
+        {if $wa->shop && class_exists('shopSkcallbackHelper') && $theme_settings.plugin_callback == 'skcallback'}
+            {$js_class = 'js-sk-callback-open'}
+        {else if $theme_settings.plugin_callback == 'other' || $theme_settings.plugin_callback == 'callb'}
+            {$js_class = 'js-callback-open'}
+        {/if}
+        <span class="popup-contacts_item">
+            <span class="bs-color popup-callback{if $js_class} {$js_class}{/if}">
+                <i class="popup-callback__icon fas fa-phone"></i>
+                <span class="popup-callback__title">[`Order call`]</span>
+            </span>
+        </span>
+    {/if}
+
+    {* popup social *}
+    {if $theme_settings.display_popup_social == 'block'}
+        {$wa->block("`$theme_settings.popup_social_block_name`")}
+    {else}
+        {include file="`$parent_theme_path`/popup.contacts.social.html"}
+    {/if}
+</div>
+{/strip}

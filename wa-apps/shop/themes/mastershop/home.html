@@ -1,0 +1,204 @@
+{strip}
+{if $theme_settings.test_settings && !empty($wa->cookie('homepage_sidebar_left'))}
+    {$theme_settings.homepage_sidebar_left = $wa->cookie('homepage_sidebar_left')}
+    {if $theme_settings.homepage_sidebar_left == 'none'}{$theme_settings.homepage_sidebar_left = ""}{/if}
+{/if}
+{if $theme_settings.test_settings && !empty($wa->cookie('homepage_sidebar_right'))}
+    {$theme_settings.homepage_sidebar_right = $wa->cookie('homepage_sidebar_right')}
+    {if $theme_settings.homepage_sidebar_right == 'none'}{$theme_settings.homepage_sidebar_right = ""}{/if}
+{/if}
+{if $theme_settings.test_settings && !empty($wa->cookie('homepage_slider_over_content'))}{$theme_settings.homepage_slider_over_content = $wa->cookie('homepage_slider_over_content')}{/if}
+{if $theme_settings.test_settings && !empty($wa->cookie('homepage_main_menu_left_of_slider'))}{$theme_settings.homepage_main_menu_left_of_slider = $wa->cookie('homepage_main_menu_left_of_slider')}{/if}
+
+{$is_mobile = ($wa->isMobile() && ($wa->cookie("is_desktop_for_mobile") != 1 || !$theme_settings.switch_version))}
+
+{$is_homepage_main_menu_left_of_slider = ($theme_settings.homepage_main_menu_left_of_slider == "1" && !$is_mobile)}
+{if $is_homepage_main_menu_left_of_slider}
+    {$theme_settings.homepage_sidebar_right = null}
+    {$theme_settings.homepage_sidebar_left = null}
+    {$theme_settings.homepage_slider_over_content = null}
+{/if}
+
+{$sidebar_left = $theme_settings.homepage_sidebar_left}
+{$sidebar_right = $theme_settings.homepage_sidebar_right}
+{$cols = 1}
+{$is_sidebar_left = false}
+{$is_sidebar_right = false}
+
+{if $sidebar_left && !$is_mobile}
+    {$cols = $cols + 1}
+    {$is_sidebar_left = true}
+{/if}
+{if $sidebar_right && !$is_mobile}
+    {$cols = $cols + 1}
+    {$is_sidebar_right = true}
+{/if}
+
+{$widthSlider = 1420}
+{if ($cols == 2 || $theme_settings.homepage_main_menu_left_of_slider == "1") && !$is_mobile}{$widthSlider = 1124}{/if}
+{if $cols == 3 || $is_mobile}{$widthSlider = 980}{/if}
+
+{if $wa->globals('shopPromos')}
+    {$all_promocards = $wa->globals('shopPromos')}
+{else}
+    {$all_promocards = $wa->shop->promos('link')|array_values}
+    {$wa->globals('shopPromos', $all_promocards)}
+{/if}
+
+{if $wa->globals('shopCategories')}
+    {$all_categories = $wa->globals('shopCategories')}
+{else}
+    {$all_categories = $wa->shop->categories(0, null, true, true)}
+    {$wa->globals('shopCategories', $all_categories)}
+{/if}
+
+{if $theme_settings.show_product_in_basket && !isset($cart_items_ids)}
+    {$cart_items_ids = []}
+    {$cart_items = $wa->shop->cart()->items()}
+    {if count($cart_items) > 0}
+        {foreach $cart_items as $cart_item}
+            {$cart_items_ids[] = $cart_item.product_id}
+        {/foreach}
+    {/if}
+{/if}
+
+{if $is_mobile}
+    {$homepage_content = $theme_settings.homepage_content_mobile}
+{else}
+    {$homepage_content = $theme_settings.homepage_content_desktop}
+{/if}
+{if !empty($homepage_content)}{$list_homepage_content = ","|explode:$homepage_content}{/if}
+
+{if $is_mobile}
+    {$is_products_carousel = $theme_settings.homepage_product_list_carousel_mobile}
+{else}
+    {$is_products_carousel = $theme_settings.homepage_product_list_carousel_desktop}
+{/if}
+
+{$is_homepage_slider_over_content = (!empty($theme_settings.homepage_slider_over_content) && $theme_settings.homepage_slider_over_content != "none")}
+{if $is_homepage_slider_over_content}
+    {include file="./slider.html" promocards=$all_promocards widthSlider=1420}
+{/if}
+
+{$content_cols_class_align = ""}
+{if $is_sidebar_left}{$content_cols_class_align = " flex-align-r"}{/if}
+{if $is_sidebar_right}{$content_cols_class_align = " flex-align-l"}{/if}
+{if $is_sidebar_right && $is_sidebar_left}{$content_cols_class_align = " flex-align-c"}{/if}
+
+<div data-count="{$cols}" class="js-content-cols content-cols cols-{$cols}{$content_cols_class_align}">
+    {if !empty($list_homepage_content)}
+        <div class="content mainpage{if $is_sidebar_left} with-sidebar-l{/if}{if $is_sidebar_right} with-sidebar-r{/if}">
+            {foreach $list_homepage_content as $block}
+                {if $block == 'slider'}
+                    <div class="mainpage__cats-slider{if $is_homepage_main_menu_left_of_slider} cols-2{/if}">
+                        {if $is_homepage_main_menu_left_of_slider}
+                            <div class="mainpage-categories">
+                                {include file="`$wa_parent_theme_path`/vertical.main.menu.html"}
+                            </div>
+                        {/if}
+                        {if !$is_homepage_slider_over_content}
+                            {include file="./slider.html" promocards=$all_promocards inline}
+                        {/if}
+                    </div>
+                {else if $block == 'products1'}
+                    {* products list 1 *}
+                    {include file="./products.list.html" is_carousel=$is_products_carousel list_id=$theme_settings.homepage_product_list_1 list_title=$theme_settings.homepage_product_list_1_title list_num=1 inline}
+                {else if $block == 'products2'}
+                    {* products list 2 *}
+                    {include file="./products.list.html" is_carousel=$is_products_carousel list_id=$theme_settings.homepage_product_list_2 list_title=$theme_settings.homepage_product_list_2_title list_num=2 inline}
+                {else if $block == 'products3'}
+                    {* products list 3 *}
+                    {include file="./products.list.html" is_carousel=$is_products_carousel list_id=$theme_settings.homepage_product_list_3 list_title=$theme_settings.homepage_product_list_3_title list_num=3 inline}
+                {else if $block == 'products4'}
+                    {* products list 4 *}
+                    {include file="./products.list.html" is_carousel=$is_products_carousel list_id=$theme_settings.homepage_product_list_4 list_title=$theme_settings.homepage_product_list_4_title list_num=4 inline}
+                {else if $block == 'products5'}
+                    {* products list 5 *}
+                    {include file="./products.list.html" is_carousel=$is_products_carousel list_id=$theme_settings.homepage_product_list_5 list_title=$theme_settings.homepage_product_list_5_title list_num=5 inline}
+                {else if $block == 'products6'}
+                    {* products list 6 *}
+                    {include file="./products.list.html" is_carousel=$is_products_carousel list_id=$theme_settings.homepage_product_list_6 list_title=$theme_settings.homepage_product_list_6_title list_num=6 inline}
+                {else if $block == 'promos1'}
+                    {* promos list 1 *}
+                    {include file="./promocards.html" promocards=$all_promocards promo_nums=$theme_settings.nums_promos_list type_view=$theme_settings.homepage_promos_view inline}
+                {else if $block == 'promos2'}
+                    {* promos list 2 *}
+                    {include file="./promocards.html" promocards=$all_promocards promo_nums=$theme_settings.nums_promos_list_2 type_view=$theme_settings.homepage_promos_view inline}
+                {else if $block == 'brands'}
+                    {* brands list *}
+                    {include file="brands.list.html"}
+                {else if $block == 'categories'}
+                    {* categories list *}
+                    {$categories_result = []}
+                    {if $theme_settings.categories_mainpage == 'param'}
+                        {foreach $all_categories as $cat}
+                            {if isset($cat.params.home)}
+                                {$categories_result[] = $cat}
+                            {/if}
+                        {/foreach}
+                    {else if $wa->menu && $theme_settings.categories_mainpage == 'app_menu' && !empty($theme_settings.categories_mainpage_app_menu_id)}
+                        {$id_menu = $theme_settings.categories_mainpage_app_menu_id}
+                        {$categories_result = $wa->menu->get($id_menu)}
+                    {else if $wa->menus && $theme_settings.categories_mainpage == 'app_menus' && !empty($theme_settings.categories_mainpage_app_menu_id)}
+                        {$id_menu = $theme_settings.categories_mainpage_app_menu_id}
+                        {$categories_result = $wa->menus->getMyMenu($id_menu)}
+                        {if !empty($categories_result)}
+                            {$menus_list_with_img_temp = $wa->menus->getMyMenuForeach($id_menu)}{$menus_list_with_img = []}
+                            {foreach $menus_list_with_img_temp as $menu_item}
+                                {$menus_list_with_img[$menu_item.id] = $menu_item}
+                            {/foreach}
+                            {foreach $categories_result as $key => $menu_item}
+                                {$categories_result[$key]['is_menus'] = true}
+                            {/foreach}
+                        {/if}
+                    {else}
+                        {$categories_result = $all_categories}
+                    {/if}
+
+                    {if $theme_settings.categories_mainpage != 'app_menu' || empty($theme_settings.categories_mainpage_app_menu_id)}
+                        {if class_exists('shopSkcatimagePlugin')}
+                            {$skImages = shopSkcatimageHelper::getImages()}
+                        {elseif class_exists('shopWmimageincatPlugin')}
+                            {$Wmimages = shopWmimageincatPlugin::getCategoryImageObj()}
+                        {/if}
+                    {/if}
+
+                    {if $theme_settings.test_settings && !empty($wa->cookie('categories_mainpage_design'))}{$theme_settings.categories_mainpage_design = $wa->cookie('categories_mainpage_design')}{/if}
+                    {$is_display_badge = $theme_settings.categories_mainpage_badge}
+                    {if $theme_settings.categories_mainpage_design == 'list'}
+                        {include file="categories-subcats.html" categories=$categories_result}
+                    {else}
+                        {include file="categories-tile.html" categories=$categories_result}
+                    {/if}
+                {else if $block == 'reviews' && (int)$theme_settings.homepage_reviews_count}
+                    {* last reviews *}
+                    {include file="./last-reviews.html"}
+                {else if $block == 'plugin_hook'}
+                    <!-- plugin hook: 'frontend_homepage' -->
+                    {* @event frontend_homepage.%plugin_id% *}
+                    {foreach $frontend_homepage as $_}{$_}{/foreach}
+                {else if $block == 'blog' && $wa->blog}
+                    {* last news *}
+                        {include file="`$wa_parent_theme_path`/last-news.html" blog_id=(int)$theme_settings.homepage_blog_id blog_title=$theme_settings.homepage_blog_title blog_link_title=$theme_settings.homepage_blog_link_title blog_link_more_title=$theme_settings.homepage_blog_link_more_title}
+                {else if $block == 'welcome'}
+                    {* welcome text with photos *}
+                    {include file="`$wa_parent_theme_path`/welcome.html"}
+                {else if $block == 'custom1'}
+                    {if $theme_settings.homepage_custom_1_block_name}{$wa->block("`$theme_settings.homepage_custom_1_block_name`")}{/if}
+                {else if $block == 'custom2'}
+                    {if $theme_settings.homepage_custom_2_block_name}{$wa->block("`$theme_settings.homepage_custom_2_block_name`")}{/if}
+                {else if $block == 'custom3'}
+                    {if $theme_settings.homepage_custom_3_block_name}{$wa->block("`$theme_settings.homepage_custom_3_block_name`")}{/if}
+                {else if $block == 'custom4'}
+                    {if $theme_settings.homepage_custom_4_block_name}{$wa->block("`$theme_settings.homepage_custom_4_block_name`")}{/if}
+                {/if}
+            {/foreach}
+        </div>
+    {/if}
+
+    {* sidebars *}
+    {if $is_sidebar_left}{include file="./sidebar.left.html" blocks=$sidebar_left inline}{/if}
+    {if $is_sidebar_right}{include file="./sidebar.right.html" blocks=$sidebar_right inline}{/if}
+</div>
+
+{/strip}

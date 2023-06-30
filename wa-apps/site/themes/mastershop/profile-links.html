@@ -1,0 +1,66 @@
+{strip}
+{if empty($profile_menu)}{$profile_menu = $theme_settings.profile_menu}{/if}
+{if empty($ul_class)}{$ul_class = null}{/if}
+
+{function profile_links}
+    <ul class="{$ul_class}">
+        {$my_profile_url = '/my/profile/'}
+        <li{if $wa->currentUrl() == $my_profile_url} class="selected"{/if}>
+            <a href="{$my_profile_url}">[s`My profile`]</a>
+        </li>
+        {if $wa->shop}
+            {$my_orders_url = $wa->getUrl('shop/frontend/myOrders')}
+            {if !empty($my_orders_url)}
+                <li{if $wa->currentUrl() == $my_orders_url} class="selected"{/if}>
+                    <a href="{$my_orders_url}">[`My orders`]</a>
+                </li>
+            {/if}
+            {if shopAffiliate::isEnabled()}
+                {$my_affiliate_url = $wa->getUrl('shop/frontend/myAffiliate')}
+                {if !empty($my_affiliate_url)}
+                    <li{if $wa->currentUrl() == $my_affiliate_url} class="selected"{/if}>
+                        <a href="{$my_affiliate_url}">[`Affiliate program`]</a>
+                    </li>
+                {/if}
+            {/if}
+        {/if}
+
+        {if $wa->mailer}
+            {$my_subscriptions_url = $wa->getUrl('mailer/frontend/mySubscriptions')}
+            {if !empty($my_subscriptions_url)}
+                <li{if $wa->currentUrl() == $my_subscriptions_url} class="selected"{/if}>
+                    <a href="{$my_subscriptions_url}">[`My subscriptions`]</a>
+                </li>
+            {/if}
+        {/if}
+        {if $wa->helpdesk}
+            {$my_request_url = $wa->getUrl('helpdesk/frontend/myRequests')}
+            {if !empty($my_request_url)}
+                <li{if $wa->currentUrl() == $my_request_url} class="selected"{/if}>
+                    <a href="{$my_request_url}">[`My requests`]</a>
+                </li>
+            {/if}
+        {/if}
+    </ul>
+{/function}
+
+{if $profile_menu == 'app_menu' && !empty($theme_settings.profile_menu_app_id)}
+    {$profile_menu_id = $theme_settings.profile_menu_app_id}
+    {$profile_menu = $wa->menu->get($theme_settings.profile_menu_app_id)}
+    {if !empty($profile_menu)}
+        <ul class="{$ul_class}">
+            {foreach $profile_menu as $item}
+                <li class="{if strlen($item.url)>1 && $wa->currentUrl() == $item.url} selected{/if}">
+                    <a href="{$item.url}">{$item.name}</a>
+                </li>
+            {/foreach}
+        </ul>
+    {else}
+        {profile_links}
+    {/if}
+{else if $theme_settings.profile_menu == 'my_nav'}
+    {$wa->myNav($ul_class)}
+{else}
+    {profile_links}
+{/if}
+{/strip}

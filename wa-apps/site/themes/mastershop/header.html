@@ -1,0 +1,56 @@
+{strip}
+{$is_mobile = ($wa->isMobile() && ($wa->cookie("is_desktop_for_mobile") != 1 || !$theme_settings.switch_version))}
+
+{* switch mobile / desktop *}
+{include file="`$parent_theme_path`/header.switch-version.html"}
+
+{* top message *}
+{include file="`$parent_theme_path`/info.message.html"}
+<div class="header-outer">
+    {include file="`$parent_theme_path`/header.top.html"}
+
+    {$is_mobile_display_logo = (!$is_mobile || ($is_mobile && $theme_settings.logo_mobile_place != 'header_top'))}
+    <header class="js-header header">
+        <div class="l-wrapper header-inner">
+            {if $is_mobile_display_logo}
+                {include file="`$parent_theme_path`/header.logo.html" is_tagline=true}
+            {/if}
+            <div class="header-content">
+                {* блок с адресом *}
+                {if $theme_settings.display_header_address == 'block'}
+                    {$wa->block("`$theme_settings.header_address_block_name`")}
+                {else}
+                    {include file="`$parent_theme_path`/header.address.html"}
+                {/if}
+
+                {* блок с телефоном *}
+                {if $theme_settings.display_header_contacts == 'block'}
+                    {$wa->block("`$theme_settings.header_contacts_block_name`")}
+                {else}
+                    {include file="`$parent_theme_path`/header.contacts.html"}
+                {/if}
+
+                {include file="`$parent_theme_path`/header.search.html"}
+                {if empty($theme_settings.cart_hide)}
+                    {include file="`$parent_theme_path`/header.cart.html" is_popup=$theme_settings.popup_cart}
+                {/if}
+            </div>
+        </div>
+    </header>
+
+    {* horizontal menu *}
+    {if $theme_settings.is_horizontal_menu == 1 && !$wa->isMobile()}
+        {include file="`$parent_theme_path`/horizontal.main.menu.html" type='horizontal'}
+    {/if}
+
+    {* mobile menu button *}
+    {if $theme_settings.mobile_main_menu_display_under_header}
+        <div data-id="m-categories-menu" class="js-open-mobile-menu m-open-categories{if $wa->isMobile()} show-mobile{/if}">
+            <i class="m-open-categories__icon far fa-bars"></i>
+            {if $theme_settings.mobile_main_menu_title_text}{$theme_settings.mobile_main_menu_title_text}{else}[`Catalog`]{/if}
+            <i class="m-open-categories__caret fal fa-chevron-right"></i>
+        </div>
+    {/if}
+    {if $wa->isMobile()}{include file="`$parent_theme_path`/mobile.main.menu.html"}{/if}
+</div>
+{/strip}

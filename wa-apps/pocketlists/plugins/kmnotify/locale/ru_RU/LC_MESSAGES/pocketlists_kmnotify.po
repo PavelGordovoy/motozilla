@@ -1,0 +1,167 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: pocketlists/plugins/kmnotify\n"
+"POT-Creation-Date: 2019-09-17 23:15+0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: pocketlists/plugins/kmnotify\n"
+"Language-Team: pocketlists/plugins/kmnotify\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: .\n"
+"Language: ru_RU\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/templates/hooks/backend_settings.sidebar_li.html:4
+msgid "Notifications"
+msgstr "Уведомления"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/templates/actions/settings/SettingsCommon.html:1
+msgid "Your notifications"
+msgstr "Ваши уведомления"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/templates/actions/settings/SettingsCommon.html:7
+msgid "Event"
+msgstr "Событие"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/templates/actions/settings/SettingsCommon.html:35
+msgid "Push notification are not enabled in Settings"
+msgstr "Пуш уведомления не включены в Настройках"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/templates/actions/settings/SettingsCommon.html:37
+msgid "Enable push notifications"
+msgstr "Включить пуш уведомления"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/templates/actions/settings/SettingsCommon.html:38
+msgid "Push notification invitation will appear in case if you didn't enabled previously"
+msgstr "Запрос на разрешение пуш уведомлений сейчас отобразиться, если вы этого еще не сделали"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/templates/actions/settings/SettingsCommon.html:42
+msgid "Save"
+msgstr "Сохранить"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Popup/pocketlistsKmnotifyPluginPopupProvider.class.php:50
+msgid "Popup"
+msgstr "Попап"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Push/pocketlistsKmnotifyPluginPushProvider.class.php:65
+msgid "Push"
+msgstr "Пуш"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Push/pocketlistsKmnotifyPluginPushProvider.class.php:89
+msgid "❌️ To-do unassigned from you"
+msgstr "❌️ Задача больше не назначена на вас"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/pocketlistsKmnotifyPluginEventFactory.class.php:20
+msgid "Item assigned to you"
+msgstr "Вам назначили задачу"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/pocketlistsKmnotifyPluginEventFactory.class.php:21
+msgid "Item unassigned from you"
+msgstr "Задача больше не назначена на вас"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/pocketlistsKmnotifyPluginEventFactory.class.php:22
+msgid "Someone competes your item"
+msgstr "Кто-то выполнил вашу задачу"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/pocketlistsKmnotifyPluginEventFactory.class.php:23
+msgid "Someone competes item assigned to you"
+msgstr "Кто-то выполнил назначенную на вас задачу"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/pocketlistsKmnotifyPluginEventFactory.class.php:24
+msgid "Someone increases priority for item assigned to you"
+msgstr "Кто-то увеличил приоритет назначенной на вас задаче"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Popup/pocketlistsKmnotifyPluginPopupProvider.class.php:67
+msgid "➡️ New to-do from %s: %s"
+msgstr "➡️ Новая задача от %s: %s"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Popup/pocketlistsKmnotifyPluginPopupProvider.class.php:71
+msgid "❌️ To-do unassigned from you: %s"
+msgstr "❌️ Задача больше не назначена на вас: %s"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Popup/pocketlistsKmnotifyPluginPopupProvider.class.php:75
+msgid "✅ %s completed the to-do: %s"
+msgstr "✅ %s выполнил задачу: %s"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Popup/pocketlistsKmnotifyPluginPopupProvider.class.php:79
+msgid "☑️ %s completed assigned to you to-do: %s"
+msgstr "☑️ %s выполнил назначенную на вас задачу: %s"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Popup/pocketlistsKmnotifyPluginPopupProvider.class.php:95
+msgid "%s %s increases to-do priority: %s"
+msgstr "%s %s увеличил приоритет задачи: %s"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Push/pocketlistsKmnotifyPluginPushProvider.class.php:83
+msgid "➡️ New to-do from %s"
+msgstr "➡️ Новая задача от %s"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Push/pocketlistsKmnotifyPluginPushProvider.class.php:95
+msgid "✅ %s completed the to-do"
+msgstr "✅ %s выполнил задачу"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Push/pocketlistsKmnotifyPluginPushProvider.class.php:102
+msgid "☑️ %s completed assigned to you to-do"
+msgstr "☑️ %s выполнил назначенную на вас задачу"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Push/pocketlistsKmnotifyPluginPushProvider.class.php:120
+msgid "%s %s increases priority"
+msgstr "%s %s увеличил приоритет задач"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/templates/actions/settings/SettingsCommon.html:40
+msgid "settings"
+msgstr "настройки"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Popup/pocketlistsKmnotifyPluginPopupProvider.class.php:125
+msgid "Show me popup notification examples"
+msgstr "Покажите примеры попап уведомлений"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Popup/pocketlistsKmnotifyPluginPopupProvider.class.php:130
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Popup/pocketlistsKmnotifyPluginPopupProvider.class.php:131
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Popup/pocketlistsKmnotifyPluginPopupProvider.class.php:132
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Popup/pocketlistsKmnotifyPluginPopupProvider.class.php:135
+msgid "user"
+msgstr "пользователь"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Popup/pocketlistsKmnotifyPluginPopupProvider.class.php:130
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Popup/pocketlistsKmnotifyPluginPopupProvider.class.php:131
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Popup/pocketlistsKmnotifyPluginPopupProvider.class.php:132
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Popup/pocketlistsKmnotifyPluginPopupProvider.class.php:135
+msgid "To-do name"
+msgstr "Название задачи"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/pocketlistsKmnotifyPlugin.class.php:148
+msgid "Allow user to change his own notification settings"
+msgstr "Разрешить пользователю менять собственные настройки уведомлений"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/pocketlistsKmnotifyPluginEventFactory.class.php:27
+msgid "Someone left comment to your item"
+msgstr "Кто-то прокомментировал вашу задачу"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/pocketlistsKmnotifyPluginEventFactory.class.php:28
+msgid "Someone left comment to item assigned to you"
+msgstr "Кто-то прокомментировал задачу, назначенную на вас"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Popup/pocketlistsKmnotifyPluginPopupProvider.class.php:101
+msgid "💬 %s left comment to your to-do: %s"
+msgstr "💬 %s прокомментировал вашу задачу: %s"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Popup/pocketlistsKmnotifyPluginPopupProvider.class.php:108
+msgid "💬 %s left comment to assigned to you to-do: %s"
+msgstr "💬 %s прокомментировал назначенную на вас задачу: %s"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Push/pocketlistsKmnotifyPluginPushProvider.class.php:127
+msgid "💬 %s left comment to your to-do"
+msgstr "💬 %s прокомментировал вашу задачу"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Push/pocketlistsKmnotifyPluginPushProvider.class.php:135
+msgid "💬 %s left comment to assigned to you to-do"
+msgstr "💬 %s прокомментировал назначенную на вас задачу"
+
+#: /wa-apps/pocketlists/plugins/kmnotify/lib/classes/Providers/Popup/pocketlistsKmnotifyPluginPopupProvider.class.php:101
+msgid "%s left comment to your to-do: %s"
+msgstr "%s прокомментировал вашу задачу: %s"

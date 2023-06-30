@@ -1,0 +1,41 @@
+<script src="{$wa_app_static_url}js/plugins.js?{$wa->version()}"></script>
+<script>
+    $(function() {
+    $.plugins.init();
+    $.plugins.options.plugins = {json_encode($plugins)};
+    });
+</script>
+<div class="shadowed">
+    <div class="sidebar left200px">
+        <div class="s-plugin-list">
+            <ul id="plugin-list" class="menu-v with-icons">
+                {foreach $plugins as $plugin}
+                <li id="plugin-{$plugin.id}">
+                    <a href="?module=plugins{if empty($plugin.multiform_settings)}#/settings/generic/{$plugin.id}/{else}#/settings/custom/{$plugin.id}/{/if}">
+                        <i class="icon16{if !isset($plugin.img)} plugins{else}" style="background-image: url('{wa_url()}{$plugin.img}');{/if}"></i>{$plugin.name|escape}
+                        {if $plugin.description}
+                        <span class="hint">{$plugin.description|escape}</span>
+                        {/if}
+                    </a>
+                </li>
+                {foreachelse}
+                <li>[`Plugins not installed`]</li>
+                {/foreach}
+            </ul>
+            <div class="block double-padded hr align-center">
+                <p class="hint">
+                    <a href="{$wa_backend_url|cat:'installer/#/plugins/multiform/'}" class="bold">
+                        [`Search new plugins`]
+                    </a>
+                    <br>
+                    <span class="gray">[`Use «Installer» to find new plugins`]</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="content left200px">
+        <div class="block double-padded s-plugin-content" id="multiform-ajax-settings-container">
+            <div class="clear-left"></div>
+        </div>
+    </div>
+</div>

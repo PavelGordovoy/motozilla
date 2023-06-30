@@ -1,0 +1,106 @@
+{strip}
+{if method_exists($wa->shop, 'checkout')}
+    {$cartUrl = $wa->shop->checkout()->cartUrl()}
+    {$checkoutUrl = $wa->shop->checkout()->url()}
+{else}
+    {$cartUrl = $wa->getUrl('shop/frontend/cart')}
+    {$checkoutUrl = $wa->getUrl('shop/frontend/checkout')}
+{/if}
+
+{$is_plugin_buy1step_in_cart = class_exists('shopBuy1stepPlugin') && !empty($theme_settings.buy1step_checkout_in_cart)}
+{if $is_plugin_buy1step_in_cart}
+    {$checkoutUrl = $cartUrl}
+{/if}
+
+{if isset($cart.count) && $cart.count > 0}
+    <div class="js-fixed-cart fixed-cart">
+        <i class="fal fa-times fixed-cart__close js-cart-fixed-close bs-color"></i>
+        <div class="fixed-cart__head bs-bg">
+            [`Products in cart`]
+            {if $cartUrl != $checkoutUrl}
+                <a class="fixed-cart__link-cart show-all" href="{$cartUrl}">
+                    [`To cart`] <i class="button-more fal fa-long-arrow-right"></i>
+                </a>
+            {/if}
+        </div>
+        <div class="js-cart-ajax fixed-cart__items" data-url="{$wa->getUrl('shop/frontend/cart')}">
+            {$total_save = 0}
+            {foreach $cart.items as $item}
+                <div class="js-cart-product fixed-cart__item" data-product-id="{$item.product_id}" data-id="{$item.id}">
+                    <div class="fixed-cart__img">
+                        <a href="{$wa->shop->productUrl($item.product)}" title="{$item.product.name|escape}">
+                            {$wa->shop->productImgHtml($item.product, '50', ['default' => $default_image])}
+                        </a>
+                    </div>
+                    <div class="fixed-cart__info">
+                        <a href="{$wa->shop->productUrl($item.product)}">{$item.product.name|escape}</a>
+                        {if $item.sku_name && $item.sku_name != $item.product.name}
+                            <span class="bs-color"> {$item.sku_name|escape}</span>
+                        {/if}
+                        <div class="fixed-cart__price-outer js-cart-product-price">
+                            <span class="fixed-cart__cart js-qty cart-qty{if !empty($item.error)} error{/if}">
+                                <span data-type="-" class="js-qty-action cart-qty_act">-</span>
+                                <input type="text" name="quantity[{$item.id}]" value="{$item.quantity}" class="js-number qty">
+                                <span data-type="+" class="js-qty-action cart-qty_act">+</span>
+                            </span>
+                            <div class="fixed-cart__prices">
+                                {$text_zero_price = $theme_settings.product_zero_price_text}
+                                <div{if $text_zero_price} data-text="{$text_zero_price}"{/if} class="js-item-total fixed-cart__price" data-price-item="{$item.price}">
+                                    {if $text_zero_price && $item.full_price == 0}
+                                        {$text_zero_price}
+                                    {else}
+                                        {shop_currency_html($item.full_price, true)}
+                                    {/if}
+                                </div>
+                                {if $item.compare_price && $item.price > 0 && $item.compare_price > $item.price}
+                                    <span class="js-item-compare-price price-compare" data-compare-price="{$item.compare_price}">
+                                        {shop_currency_html($item.compare_price, true)}
+                                    </span>
+                                {/if}
+                                {$item_save = 0}
+                                {if $item.compare_price && $item.price > 0 && $item.compare_price > $item.price}
+                                    {$item_total_compare = $item.compare_price*$item.quantity}
+                                    {if $theme_settings.cart_display_saved}
+                                        <span class="js-item-saved-price fixed-cart__saved">
+                                            {$item_total_saved = $item.full_price - $item_total_compare}
+                                            {shop_currency_html($item_total_saved, true)}
+                                        </span>
+                                    {/if}
+                                    {$item_save = $item_total_compare - $item.full_price}
+                                {/if}
+                                {$total_save = $total_save + $item_save}
+                            </div>
+                            <i class="fal fa-times fixed-cart__remove js-cart-preview-product-delete"></i>
+                        </div>
+                    </div>
+
+                </div>
+            {/foreach}
+        </div>
+        <div class="fixed-cart__bottom">
+
+            <div class="fixed-cart__total-outer">
+                <div class="fixed-cart__total-prices">
+                    <div class="fixed-cart__discount">
+                        <span class="fixed-cart__discount-title">[`Discount`]:</span>
+                        <span class="cart-discount">&minus; {shop_currency_html($discount, true)}</span>
+                    </div>
+                    {if $theme_settings.cart_display_saved}
+                        <div class="js-cart-saved-total-outer fixed-cart__saved-total{if empty($total_save)} display-none{/if}">
+                            [`Saved`]: <span class="js-cart-saved-total">{shop_currency_html($total_save)}</span>
+                        </div>
+                    {/if}
+                    <div class="fixed-cart__total">
+                        <span class="fixed-cart__total-amount-text">[`Total`]:</span>
+                        <span class="cart-total">{shop_currency_html($cart.total, true)}</span>
+                    </div>
+                </div>
+                <a class="fixed-cart__checkout button" href="{$checkoutUrl}">
+                    [`Proceed to checkout`]
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="js-cart-fixed-close m-bg"></div>
+{/if}
+{/strip}

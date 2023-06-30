@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE theme PUBLIC "wa-app-theme" "http://www.webasyst.com/wa-content/xml/wa-app-theme.dtd" >
+<theme id="motozilla" app="site" author="Trost" parent_theme_id="shop:techauto" version="1.0.0">
+    <name locale="en_US">Motozilla</name>
+    <name locale="ru_RU">Motozilla</name>
+    <files>
+        <!-- parent resources -->
+        <file path="styles/main.css" parent="1">
+        </file>
+        <file path="scripts/main.js" parent="1">
+        </file>
+        <file path="scripts/global.js" parent="1">
+        </file>
+
+        <!-- parent templates -->
+        <file path="index.html" parent="1">
+        </file>
+        <file path="error.html" parent="1">
+        </file>
+        <!--<file path="signup.html" parent="1">-->
+        <!--</file>-->
+        <!--<file path="login.html" parent="1">-->
+        <!--</file>-->
+        <!--<file path="forgotpassword.html" parent="1">-->
+        <!--</file>-->
+        <!--<file path="my.profile.html" parent="1">-->
+        <!--</file>-->
+        <file path="header.html" parent="1">
+        </file>
+        <file path="page.html" parent="1">
+            <description locale="en_US">Static info page</description>
+            <description locale="ru_RU">Информационная страница</description>
+        </file>
+        <file path="footer.html" parent="1">
+        </file>
+
+        <!-- site resources -->
+
+        <file path="main.html">
+            <description locale="ru_RU">Главный контент сайта</description>
+        </file>
+        <file path="page.welcome.html">
+            <description locale="en_US">Welcome page content</description>
+            <description locale="ru_RU">Контент страницы приветствия</description>
+        </file>
+
+        <!--<file path="head.html">-->
+        <!--<description locale="en_US">Site head instructions</description>-->
+        <!--<description locale="ru_RU">Ресурсы сайта</description>-->
+        <!--</file>-->
+        <!--<file path="header.html">-->
+        <!--<description locale="en_US">App specific header content</description>-->
+        <!--<description locale="ru_RU">Содержимое «шапки» приложения</description>-->
+        <!--</file>-->
+        <!--<file path="my.nav.html">-->
+        <!--</file>-->
+        <!--<file path="sidebar.html">-->
+        <!--<description locale="en_US">Sidebar</description>-->
+        <!--<description locale="ru_RU">Сайдбар</description>-->
+        <!--</file>-->
+    </files>
+
+    <!--<settings>-->
+    <!---->
+    <!--</settings>-->
+
+    <!--<locales>-->
+    <!---->
+    <!--</locales>-->
+</theme>

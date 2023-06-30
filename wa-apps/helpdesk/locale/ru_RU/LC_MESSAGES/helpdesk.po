@@ -1,0 +1,2606 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WebAsyst\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2022-02-07 15:45+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: .\n"
+"Language: ru\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Helpdesk"
+msgstr "Поддержка"
+
+msgid "Support"
+msgstr "Поддержка"
+
+msgid "Request"
+msgstr "Запрос"
+
+msgid "Requests"
+msgstr "Запросы"
+
+msgid "Next"
+msgstr "Продолжить"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "or"
+msgstr "или"
+
+msgid "cancel"
+msgstr "отменить"
+
+msgid "Public"
+msgstr "Общий"
+
+msgid "Personal"
+msgstr "Персональный"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "delete"
+msgstr "удалить"
+
+msgid "Form preview"
+msgstr "Предварительный просмотр формы"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Subject"
+msgstr "Тема"
+
+msgid "Text"
+msgstr "Текст"
+
+msgid "Attach"
+msgstr "Вложение"
+
+msgid "Workflow"
+msgstr "Поток"
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "Available requests"
+msgstr "Доступные запросы"
+
+msgid "all"
+msgstr "все"
+
+msgid "only assigned to this user"
+msgstr "только назначенные пользователю"
+
+msgid "Can add new requests"
+msgstr "Может добавлять новые запросы"
+
+msgid "Users with limited access are not allowed to change application settings, e.g. sources, workflows, and etc."
+msgstr "Пользователи с ограниченным доступом не имеют возможности изменять настройки приложения: источники, потоки и т. д."
+
+msgid "Group:"
+msgstr "Группа:"
+
+msgid "group"
+msgstr "группа"
+
+msgid "Select"
+msgstr "Выбрать"
+
+msgid "&lt;select&gt;"
+msgstr "&lt;выбрать&gt;"
+
+msgid "New request"
+msgstr "Новый запрос"
+
+msgid "&lt;no support requests&gt;"
+msgstr "&lt;нет запросов&gt;"
+
+msgid "Send"
+msgstr "Отправить"
+
+msgid "remove"
+msgstr "удалить"
+
+msgid "yes"
+msgstr "да"
+
+msgid "no"
+msgstr "нет"
+
+msgid "ID"
+msgstr "Номер"
+
+msgid "Sent"
+msgstr "Отправлен"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Status:"
+msgstr "Статус:"
+
+msgid "Request #%s"
+msgstr "Запрос №%s"
+
+msgid "Assigned:"
+msgstr "Назначен:"
+
+msgid "Assigned"
+msgstr "Назначен"
+
+msgid "Advanced search"
+msgstr "Расширенный поиск"
+
+msgid "All requests"
+msgstr "Все запросы"
+
+msgid "My filters"
+msgstr "Мои фильтры"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "Sources"
+msgstr "Источники"
+
+msgid "New"
+msgstr "Новый"
+
+msgid "Forms"
+msgstr "Формы"
+
+msgid "Workflows"
+msgstr "Потоки"
+
+msgid "Create new state"
+msgstr "Добавить новое состояние"
+
+msgid "Are you sure?"
+msgstr "Вы уверены?"
+
+msgid "Event"
+msgstr "Событие"
+
+msgid "Client name"
+msgstr "Имя клиента"
+
+msgid "Attach:"
+msgstr "Прикрепить файл:"
+
+msgid "Display original message"
+msgstr "Показать оригинальное сообщение"
+
+msgid "Hide original message"
+msgstr "Скрыть оригинальное сообщение"
+
+msgid "Client email"
+msgstr "Email клиента"
+
+msgid "Any"
+msgstr "Любой"
+
+msgid "anyone"
+msgstr "кто угодно"
+
+msgid "Source"
+msgstr "Источник"
+
+msgid "State"
+msgstr "Состояние"
+
+msgid "Assigned to"
+msgstr "Назначен"
+
+msgid "Search"
+msgstr "Искать"
+
+msgid "Create"
+msgstr "Создать"
+
+msgid "Publish"
+msgstr "Опубликовать"
+
+msgid "Name"
+msgstr "Имя"
+
+msgid "Name "
+msgstr "Название"
+
+msgid "Type"
+msgstr "Тип"
+
+msgid "New source"
+msgstr "Новый источник"
+
+msgid "Additional request parameters:"
+msgstr "Дополнительные параметры запроса:"
+
+msgid "New state"
+msgstr "Новое состояние"
+
+msgid "New action"
+msgstr "Новое действие"
+
+msgid "Workflow actions available from the state:"
+msgstr "Действия потока доступные из этого состояния:"
+
+msgid "Actions"
+msgstr "Действия"
+
+msgid "Loading..."
+msgstr "Загрузка..."
+
+msgid "<unknown>"
+msgstr "<неизвестный>"
+
+msgid "%ds"
+msgstr "%dс"
+
+msgid "%dm"
+msgstr "%dм"
+
+msgid "%dh %dm"
+msgstr "%dч %dм"
+
+msgid "%dd %dh"
+msgstr "%dд %dч"
+
+msgid "%dd"
+msgstr "%dд"
+
+msgid "%dm %dd"
+msgstr "%dм %dд"
+
+msgid "%dy %dd"
+msgstr "%dг %dд"
+
+msgid "performs action"
+msgstr "выполняет действие"
+
+msgid "year"
+msgstr "год"
+
+msgid "month"
+msgstr "месяц"
+
+msgid "day"
+msgstr "день"
+
+msgid "source"
+msgstr "источник"
+
+msgid "state"
+msgstr "состояние"
+
+msgid "workflow"
+msgstr "поток"
+
+msgid "assigned to"
+msgstr "назначен"
+
+msgid "not assigned"
+msgstr "не назначен"
+
+msgid "assigned to id="
+msgstr "назначен для id="
+
+msgid "client"
+msgstr "клиент"
+
+msgid "<no change>"
+msgstr "<без изменений>"
+
+msgid "none"
+msgstr "нет"
+
+msgid "None"
+msgstr "Нет"
+
+msgid "Available actions"
+msgstr "Доступные действия"
+
+msgid "Request ID"
+msgstr "Номер запроса"
+
+msgid "Action"
+msgstr "Действие"
+
+msgid "Assignment"
+msgstr "Назначение"
+
+msgid "Client"
+msgstr "Клиент"
+
+msgid "Client original name"
+msgstr "Оригинальное имя клиента"
+
+msgid "Client original email"
+msgstr "Оригинальный email клиента"
+
+msgid "Original email subject"
+msgstr "Оригинальная тема письма"
+
+msgid "on"
+msgstr "включен"
+
+msgid "off"
+msgstr "выключен"
+
+msgid "of"
+msgstr "из"
+
+msgid "Workflow and action"
+msgstr "Поток и действие"
+
+msgid "Source name"
+msgstr "Имя источника"
+
+msgid "Server"
+msgstr "Сервер"
+
+msgid "Port"
+msgstr "Порт"
+
+msgid "Login"
+msgstr "Логин"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Leave blank to keep current value unchanged."
+msgstr "Оставьте пустым, чтобы не изменять текущее значение."
+
+msgid "Use SSL"
+msgstr "Использовать SSL"
+
+msgid "Enable spam control"
+msgstr "Включить cпам-контроль"
+
+msgid "Every time you receive a request from an unknown email address that  does not exist in your Contacts database, an automatic confirmation message will be sent to this email address. This message contains a special link for the sender to confirm his/her original request, and may contain additional instructions you wish to provide."
+msgstr "На любое сообщение поступившее с неизвестного адреса, которого нет в вашей базе данных Контактов, будет автоматически отправлен ответный запрос на подтверждение. Этот запрос содержит специальную ссылку, по которой отправитель должен перейти для подтверждения, а также дополнительные инструкции, которые вы, возможно, захотите добавить в текст запроса."
+
+msgid "Confirmation request text:"
+msgstr "Текст запроса на подтверждение:"
+
+msgid "Send a receipt upon receiving new request"
+msgstr "Отправлять квитанцию о получении запроса"
+
+msgid "A receipt message will be sent to the customer to confirm his/her request receiving. It's recommended to specify an estimated response time in this receipt."
+msgstr "Клиенту будет отправлена квитанция — уведомление о регистрации его запроса. В тексте квитанции рекомендуется указать предполагаемое время обработки запроса."
+
+msgid "Receipt text:"
+msgstr "Текст квитанции:"
+
+msgid "If message does not contain an existing request ID in email subject (e.g. [ID:12345]), this messages will be treated as a new request. For this request:"
+msgstr "Если сообщение не содержит в теме письма идентификатор уже существующего запроса (например: [ID:12345]), то такой запрос считается новым. Для новых запросов:"
+
+msgid "Assign to user or group:"
+msgstr "Назначить исполнителем пользователя или группу:"
+
+msgid "If client (sender of this message) is new, then set for him/her this language:"
+msgstr "Если клиент  новый, то установить для него язык:"
+
+msgid "If message contains an ID in email subject, then:"
+msgstr "Если сообщение содержит в теме письма идентификатор уже существующего запроса, то:"
+
+msgid "Thank you!"
+msgstr "Спасибо!"
+
+msgid "Cancel"
+msgstr "Отменить"
+
+msgid "Assign"
+msgstr "Назначить"
+
+msgid "Confirm"
+msgstr "Подтвердить"
+
+msgid "Comment"
+msgstr "Комментарий"
+
+msgid "Accept"
+msgstr "Принять"
+
+msgid "Assign to"
+msgstr "Назначить"
+
+msgid "Nobody"
+msgstr "Никто"
+
+msgid "Message:"
+msgstr "Сообщение:"
+
+msgid "Are you sure to remove this request from database completely?"
+msgstr "Вы уверены, что нужно удалить этот запрос навсегда?"
+
+msgid "Save as a filter"
+msgstr "Сохранить как фильтр"
+
+msgid "Created"
+msgstr "Создан"
+
+msgid "Updated"
+msgstr "Обновлён"
+
+msgid "From"
+msgstr "От кого"
+
+msgid "Requests:"
+msgstr "Запросов:"
+
+msgid "Show %s records on a page"
+msgstr "Показать %s записей на странице"
+
+msgid "Pages"
+msgstr "Страницы"
+
+msgid "next"
+msgstr "след"
+
+msgid "prev"
+msgstr "пред"
+
+msgid "closed"
+msgstr "закрыт"
+
+msgid "open"
+msgstr "открыт"
+
+msgid "Closed"
+msgstr "Закрыт"
+
+msgid "Open"
+msgstr "Открыт"
+
+msgid "Reply"
+msgstr "Ответ"
+
+msgid "&lt;keep current assignment&gt;"
+msgstr "&lt;не менять назначение&gt;"
+
+msgid "wrote:"
+msgstr "написал:"
+
+msgid "Download original email"
+msgstr "Скачать оригинал письма"
+
+msgid "Words"
+msgstr "Слова"
+
+msgid "Request author"
+msgstr "Автор запроса"
+
+msgid "Assigned to request"
+msgstr "Назначен на запрос"
+
+msgid "Actions with request"
+msgstr "Действия с запросом"
+
+msgid "<1 hour"
+msgstr "<1 часа"
+
+msgid "Age"
+msgstr "Возраст"
+
+msgid "Please <a>reload the page</a>."
+msgstr "Пожалуйста, <a>перезагрузите страницу</a>."
+
+msgid "Sent to:"
+msgstr "Отправлено:"
+
+msgid "Transition"
+msgstr "Переход"
+
+msgid "Button"
+msgstr "Кнопка"
+
+msgid "Messages"
+msgstr "Сообщения"
+
+msgid "Allow to add a text message"
+msgstr "Позволять вводить текст"
+
+msgid "Enter a default text here"
+msgstr "Введите текст, который будет появляться по умолчанию"
+
+msgid "Allow to attach files"
+msgstr "Позволять прикреплять файлы"
+
+msgid "Default assignee:"
+msgstr "Исполнитель по умолчанию:"
+
+msgid "Allow to select assignee"
+msgstr "Позволять выбирать исполнителей"
+
+msgid "All"
+msgstr "Все"
+
+msgid "Transfer request to another state"
+msgstr "Перевести запрос в другое состояние"
+
+msgid "State with this name already exists"
+msgstr "Состояние с таким названием уже существует"
+
+msgid "State with this ID already exists"
+msgstr "Состояние с таким ID уже существует"
+
+msgid "Add an action"
+msgstr "Добавить действие"
+
+msgid "Add a new action"
+msgstr "Добавить действие"
+
+msgid "Action with this name already exists"
+msgstr "Действие с таким названием уже существует"
+
+msgid "Action with this ID already exists"
+msgstr "Действие с таким ID уже существует"
+
+msgid "Customizing action"
+msgstr "Настройка действия"
+
+msgid "sec"
+msgstr "сек"
+
+msgid "1 min"
+msgstr "1 минута"
+
+msgid "5 min"
+msgstr "5 минут"
+
+msgid "15 min"
+msgstr "15 минут"
+
+msgid "1 hour"
+msgstr "1 час"
+
+msgid "Encryption requires OpenSSL PHP module to be installed."
+msgstr "Чтобы включить шифрование, необходим модуль PHP OpenSSL."
+
+msgid "Unknown error."
+msgstr "Неизвестная ошибка."
+
+msgid "IMAP is not supported. Please use POP3."
+msgstr "Протокол IMAP не поддерживается. Используйте POP3."
+
+msgid "An error occurred while attempting to connect with specified settings."
+msgstr "При попытке подключиться с указанными параметрами возникла ошибка."
+
+msgid "Form"
+msgstr "Форма"
+
+msgid "Select fields for the form to contain:"
+msgstr "Выберите поля, которые должна содержать форма:"
+
+msgid "First 100 characters of text will be used as request subject."
+msgstr "В качестве темы запроса будут использованы первые 100 символов текста."
+
+msgid "Delete this source"
+msgstr "Удалить этот источник"
+
+msgid "for state &ldquo;%s&rdquo;"
+msgstr "для состояния &ldquo;%s&rdquo;"
+
+msgid "Add existing actions from other states, which are not used in the current state:"
+msgstr "Добавить существующее действие:"
+
+msgid "Delete this action"
+msgstr "Удалить это действие"
+
+msgid "Back to workflow customizing page"
+msgstr "Назад на страницу настройки потока"
+
+msgid "Create a new action"
+msgstr "Создать новое действие"
+
+msgid "This field only allows Latin letters, numbers and underscores."
+msgstr "Это поле допускает только латинские буквы, цифры и символ подчёркивания."
+
+msgid "Reload image"
+msgstr "Обновить картинку"
+
+msgid "ID "
+msgstr "ID"
+
+msgid "Edit state"
+msgstr "Настройка состояния"
+
+msgid "System default (%s)"
+msgstr "Системный по умолчанию (%s)"
+
+msgid "Specified"
+msgstr "Указанный"
+
+msgid "Variables"
+msgstr "Переменные"
+
+msgid "Use source email address"
+msgstr "Использовать в качестве отправителя адрес источника"
+
+msgid "more..."
+msgstr "ещё..."
+
+msgid "Delete this state"
+msgstr "Удалить это состояние"
+
+msgid "ACME LLC"
+msgstr "ООО &quot;Альфа&quot;"
+
+msgid "<no name>"
+msgstr "<без имени>"
+
+msgid "The action will be eliminated only for the state &ldquo;%s&rdquo;. For other states this action will stay available."
+msgstr "Действие будет исключено только для состояния &ldquo;%s&rdquo;. В других состояниях данное действие останется доступным."
+
+msgid "Save new request in state:"
+msgstr "Сохранять новый запрос в состоянии:"
+
+msgid "%sEmail%s will be sent to:"
+msgstr "%sСообщение%s будет отправлено:"
+
+msgid "Assigned user"
+msgstr "Назначенному пользователю"
+
+msgid "%d request"
+msgid_plural "%d requests"
+msgstr[0] "%d запрос"
+msgstr[1] "%d запроса"
+msgstr[2] "%d запросов"
+
+msgid "%s found in this state. These requests will NOT be deleted, but they will stay in unknown state."
+msgstr "Найдено %s в данном состоянии. После удаления состояния запросы сохранятся, но для них будет установлено неопределенное состояние."
+
+msgid "#<strong>%s</strong>"
+msgstr "№<strong>%s</strong>"
+
+msgid "(deleted)"
+msgstr "(удалено)"
+
+msgid "In all cases unspecified (empty cells):"
+msgstr "Во всех неопределённых случаях (пустые клетки):"
+
+msgid "Remove ID in subject and create new request"
+msgstr "Считать запрос новым и очищать ID в теме"
+
+msgid "Ignore message"
+msgstr "Игнорировать сообщение"
+
+msgid "Customizing workflow"
+msgstr "Настройка потока"
+
+msgid "Color"
+msgstr "Цвет"
+
+msgid "Action buttons will be shown in this order on request page."
+msgstr "В данном порядке будут отображаться кнопки действий на странице запроса."
+
+msgid "To change the order simply drag action names in the list."
+msgstr "Для изменения порядка просто перетащите названия действия в списке."
+
+msgid "Bulk operations"
+msgstr "Массовые операции"
+
+msgid "Change state"
+msgstr "Изменить состояние"
+
+msgid "Change assignment"
+msgstr "Изменить назначение"
+
+msgid "Deleted %s request"
+msgid_plural "Deleted %s requests"
+msgstr[0] "Удалён %s запрос"
+msgstr[1] "Удалено %s запроса"
+msgstr[2] "Удалено %s запросов"
+
+msgid "Updated %s request"
+msgid_plural "Updated %s requests"
+msgstr[0] "Изменён %s запрос"
+msgstr[1] "Изменено %s запроса"
+msgstr[2] "Изменено %s запросов"
+
+msgid "%s request cleared assignment"
+msgid_plural "%s requests cleared assignment"
+msgstr[0] "Убрано назначение у %s запроса"
+msgstr[1] "Убрано назначение у %s запросов"
+msgstr[2] "Убрано назначение у %s запросов"
+
+msgid "%1$s request changed assignment to &laquo;%2$s&raquo;"
+msgid_plural "%1$s requests changed assignment to &laquo;%2$s&raquo;"
+msgstr[0] "%1$s запрос изменил назначение на &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s запроса изменили назначение на &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s запросов изменили назначение на &ldquo;%2$s&rdquo;"
+
+msgid "%1$s request changed state to &laquo;%2$s&raquo;"
+msgid_plural "%1$s requests changed state to &laquo;%2$s&raquo;"
+msgstr[0] "%1$s запрос изменил состояние на &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s запроса изменили состояние на &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s запросов изменили состояние на &ldquo;%2$s&rdquo;"
+
+msgid "Selected state will be set for %s requests."
+msgstr "Выбранное состояние будет установлено для %s запросов."
+
+msgid "Selected assignment will be set for %s requests."
+msgstr "Выбранное назначение будет установлено для %s запросов."
+
+msgid "&lt;select an action&gt;"
+msgstr "&lt;выберите действие&gt;"
+
+msgid "This shows how this action's button will look like on request page in backend"
+msgstr "Так будет выглядеть кнопка вызова этого действия на странице запроса в бекенде"
+
+msgid "Not used"
+msgstr "Не используются"
+
+msgid "Common filters"
+msgstr "Общедоступные фильтры"
+
+msgid "Unsaved changes will be lost if you leave this page now."
+msgstr "Несохраненные изменения будут потеряны, если покинуть страницу."
+
+msgid "Navigation pane"
+msgstr "Панель навигации"
+
+msgid "Assignments"
+msgstr "Назначения"
+
+msgid "Request states"
+msgstr "Статусы запросов"
+
+msgid "find by name, email, of phone number"
+msgstr "найти по имени, email или номеру телефона"
+
+msgid "New contact"
+msgstr "Новый контакт"
+
+msgid "Show all fields"
+msgstr "Показать все поля"
+
+msgid "An error occurred while processing your request. Please try again later."
+msgstr "Во время обработки вашего запроса произошла ошибка. Пожалуйста, попробуйте ещё раз."
+
+msgid "Helpdesk is unable to fetch messages from source “%s”:"
+msgstr "Не удалось получить сообщения из источника «%s»:"
+
+msgid "Search in request subject"
+msgstr "Искать в теме запроса"
+
+msgid "Search in request subject and text"
+msgstr "Искать в теме и тексте запроса"
+
+msgid "Search in discussion, comments and response to client"
+msgstr "Искать в ответах и комментариях"
+
+msgid "Cron Job"
+msgstr "Задания CRON"
+
+msgid "No <tt>cron</tt> job required for automated email capture and execution of auto actions in your workflow is set up for your account."
+msgstr "У вас не настроены задания <tt>cron</tt>, которые необходимы для автоматического сбора почты и работы автоматических действий, выполняемых без участия пользователя."
+
+msgid "Without a <tt>cron</tt> job set up, new mail is captured and new requests are received only as long as you keep Helpdesk open in your browser. Auto actions in your workflow are not triggered in this case."
+msgstr "Без настройки <tt>cron</tt> почта забирается из ящиков, только пока приложение «Поддержка» открыто в браузере. Автоматические действия в этом случае не выполняются."
+
+msgid "Please set up a <tt>cron</tt> job (<a href=\"%s\" target=\"_blank\">view instructions</a>) using the command specified below in your web-hosting control panel:"
+msgstr "Настройте задание <tt>cron</tt> (<a href=\"%s\" target=\"_blank\">инструкция по настройке</a>) с указанной ниже командой в контрольной панели вашего хостинга:"
+
+msgid "https://developers.webasyst.com/installation/tips/cron/"
+msgstr "https://developers.webasyst.ru/docs/tips/cron/"
+
+msgid "Last execution time:"
+msgstr "Последнее выполнение:"
+
+msgid "<tt>cron</tt> job is set up properly."
+msgstr "<tt>cron</tt> настроен и работает."
+
+msgid "Will appear in the sidebar in MY FILTERS section and will be available for me only"
+msgstr "Будет отображаться в боковой панели в секции &laquo;МОИ ФИЛЬТРЫ&raquo; и будет доступен только мне"
+
+msgid "Will appear in the main section in sidebar and will be available for all users"
+msgstr "Будет отображаться в боковой панели в главной группе фильтров и будет доступен всем пользователям"
+
+msgid "Personal settings"
+msgstr "Личные настройки"
+
+msgid "Unread"
+msgstr "Непрочитанный"
+
+msgid "Unread "
+msgstr "Непрочитанные"
+
+msgid "All new requests"
+msgstr "Все новые запросы"
+
+msgid "Requests assigned to me personally"
+msgstr "Запросы, назначенные на меня лично"
+
+msgid "Requests assigned to my user group"
+msgstr "Запросы, назначенные на мою группу"
+
+msgid "The following <tt>cron</tt> job command is currently in use (%ssetting up a cron job%s):"
+msgstr "Используется следующая команда настройки задания <tt>cron</tt> (%sинструкции по настройке cron%s):"
+
+msgid "Anonymous"
+msgstr "Анонимно"
+
+msgid "no link to contact"
+msgstr "нет связи с контактом"
+
+msgid "Error delivering messages from:"
+msgstr "Ошибка доставки сообщений из источников:"
+
+msgid "Download error log"
+msgstr "Скачать журнал ошибок"
+
+msgid "When I open the request"
+msgstr "При открытии запроса"
+
+msgid "When I perform any action with the request"
+msgstr "При выполнении мною любого действия с запросом"
+
+msgid "Display counter on the application icon"
+msgstr "Показывать счётчик на иконке приложения"
+
+msgid ":: DELETED ::"
+msgstr ":: УДАЛЁННЫЕ ::"
+
+msgid "Design"
+msgstr "Дизайн"
+
+msgid "Customer portal"
+msgstr "Личный кабинет"
+
+msgid "Customer Portal address:"
+msgstr "Личный кабинет доступен по адресу:"
+
+msgid "Specify what should be displayed as an action executor in Customer Portal:"
+msgstr "Укажите, что отображается в качестве исполнителей действий в личном кабинете клиента:"
+
+msgid "Assigned person name"
+msgstr "Имя назначенного исполнителя"
+
+msgid "Company name:"
+msgstr "Название компании:"
+
+msgid "Other"
+msgstr "Другое"
+
+msgid "On"
+msgstr "Включен"
+
+msgid "Off"
+msgstr "Выключен"
+
+msgid "Change status"
+msgstr "Изменить статус"
+
+msgid "Contact not found"
+msgstr "Контакт не найден"
+
+msgid "%d request has been marked as unread"
+msgid_plural "%d requests have been marked as unread"
+msgstr[0] "%d запрос отмечен как непрочитанный"
+msgstr[1] "%d запроса отмечены как непрочитанные"
+msgstr[2] "%d запросов отмечены как непрочитанные"
+
+msgid "%d request has been marked as read"
+msgid_plural "%d requests have been marked as read"
+msgstr[0] "%d запрос отмечен как прочитанный"
+msgstr[1] "%d запроса отмечены как прочитанные"
+msgstr[2] "%d запросов отмечены как прочитанные"
+
+msgid "My account"
+msgstr "Личный кабинет"
+
+msgid "Request ID "
+msgstr "Номер запроса (ID)"
+
+msgid "Request subject"
+msgstr "Тема запроса"
+
+msgid "Request subject with ID (e.g. [ID:1234]) to identify original request in email replies"
+msgstr "Тема запроса с ID (напр., [ID:1234]) для идентификации оригинального запроса при ответах по email"
+
+msgid "Request text"
+msgstr "Текст запроса"
+
+msgid "Request status (its current state) displayed in the backend"
+msgstr "Статус запроса (его текущее состояние), который отображается в бекенде"
+
+msgid "Request status as configured for Customer Center"
+msgstr "Статус запроса, как он виден в личном кабинете"
+
+msgid "Full request actions history, including the original text. Similar to request page in backend."
+msgstr "Полная история действий с запросом, вместе с оригинальным текстом. Аналогична содержимому страницы запроса в бекенде."
+
+msgid "Request actions history available to customer. Similar to request page in the Customer Portal."
+msgstr "История действий с запросом, которые доступны клиенту. Аналогична содержимому страницы запроса в личном кабинете клиента."
+
+msgid "URL address for not registered clients to confirm their original email. Click on this link opens the request in the client's Customer Portal."
+msgstr "Адрес (URL) по которому незарегистрированные клиенты подтверждают свой электронный адрес. Щелчок по данной ссылке открывает запрос в личном кабинете клиента."
+
+msgid "URL address of backend request page."
+msgstr "Адрес (URL) страницы запроса в бекенде приложения."
+
+msgid "URL address of request page in customer portal."
+msgstr "Адрес (URL) страницы запроса в личном кабинете клиента"
+
+msgid "Name of a person who performs the action"
+msgstr "Имя исполнителя действия"
+
+msgid "Text entered in this action"
+msgstr "Текст, введенный при выполнении этого действия"
+
+msgid "Name of user or group assigned to the request"
+msgstr "Имя пользователя или группы, назначенной на исполнение данного запроса"
+
+msgid "Company name specified in your Installer settings. Also displayed in the left top corner in your backend."
+msgstr "Название компании, которое указано в настройках «Инсталлера». Также отображается в левом верхнем углу в бекенде."
+
+msgid "Send email message"
+msgstr "Отправить email-сообщение"
+
+msgid "Send another email message"
+msgstr "Отправить ещё email-сообщение"
+
+msgid "Author of the request"
+msgstr "Автор запроса"
+
+msgid "To"
+msgstr "Кому"
+
+msgid "My profile"
+msgstr "Мой профиль"
+
+msgid "Contact information successfully updated!"
+msgstr "Контактная информация успешно обновлена."
+
+msgid "Not available"
+msgstr "Недоступно"
+
+msgid "Clients do not see any information associated with this action in their Customer Portal"
+msgstr "Клиент не видит никакой информации, связанной с данным действием, в своем личном кабинете"
+
+msgid "Only personal"
+msgstr "Только собственные"
+
+msgid "Customer can perform the action but cannot see the same actions performed by other users"
+msgstr "Клиент может выполнять действие, но не видит такие же действия, выполненные другими пользователями"
+
+msgid "All available for read only"
+msgstr "Все доступны только для просмотра"
+
+msgid "Clients can see this action record and it's description (except assignments info) in their Customer Portal"
+msgstr "Клиент видит запись о данном действии и его описание (за исключением сведений о назначении) в своем личном кабинете"
+
+msgid "All available for read and action"
+msgstr "Все доступны для просмотра и выполнения"
+
+msgid "Clients can perform this action from their Customer Portal (except assignments if they are set up for the action)"
+msgstr "Клиент может выполнить данное действие в своем личном кабинете (за исключением выполнения назначений, если они установлены для действия)"
+
+msgid "Caption"
+msgstr "Подпись"
+
+msgid "Placeholder to show in empty field"
+msgstr "Подсказка в пустом поле"
+
+msgid "Phone"
+msgstr "Телефон"
+
+msgid "Show"
+msgstr "Показать"
+
+msgid "History"
+msgstr "История"
+
+msgid "Clear"
+msgstr "Очистить"
+
+msgid "All states"
+msgstr "Все состояния"
+
+msgid "ID:"
+msgstr "ИД:"
+
+msgid "Saved"
+msgstr "Сохранено"
+
+msgid "Actions with selected"
+msgstr "Действия с выбранными"
+
+msgid "Workflow &ldquo;%s&rdquo;"
+msgstr "Поток &ldquo;%s&rdquo;"
+
+msgid "Original subject"
+msgstr "Исходная тема"
+
+msgid "Client original phone"
+msgstr "Исходный телефон клиента"
+
+msgid "Captcha"
+msgstr "КАПЧА"
+
+msgid "We are using <a href=\"http://www.webasyst.com/\">Webasyst</a>"
+msgstr "Мы используем <a href=\"http://www.webasyst.ru/\">Webasyst</a>"
+
+msgid "My requests"
+msgstr "Мои запросы"
+
+msgid "View and manage your requests."
+msgstr "Просмотр ваших запросов."
+
+msgid "Your request is confirmed."
+msgstr "Ваш запрос подтверждён."
+
+msgid "Message preview"
+msgstr "Предварительный просмотр сообщения"
+
+msgid "Invalid email"
+msgstr "Email-адрес введен неправильно"
+
+msgid "New filter"
+msgstr "Новый фильтр"
+
+msgid "Add"
+msgstr "Добавить"
+
+msgid "no assignment"
+msgstr "не назначать"
+
+msgid "leave previous assignment"
+msgstr "сохранить ранее назначенного"
+
+msgid "Assignment is required"
+msgstr "Выбор исполнителя обязателен"
+
+msgid "If enabled, requests in this status are available for clients in their Customer Portal."
+msgstr "Если включено, то запросы в данном состоянии видны клиенту в его личном кабинете."
+
+msgid "Name of this state in the Customer Portal:"
+msgstr "Название состояния в личном кабинете:"
+
+msgid "No actions are specified for this state"
+msgstr "Для данного состояния не настроено ни одного действия"
+
+msgid "Error"
+msgstr "Ошибка"
+
+msgid "Page not found"
+msgstr "Страница не найдена"
+
+msgid "Insufficient access rights"
+msgstr "Недостаточные права доступа"
+
+msgid "Internal server error"
+msgstr "Ошибка обработки запроса"
+
+msgid "Details"
+msgstr "Подробно"
+
+msgid "Enable the “Developer mode” option in the Settings app to see the details."
+msgstr "Включите режим отладки (debug mode) в приложении «Инсталлер», чтобы узнать подробности."
+
+msgid "Search by name or email"
+msgstr "Поиск по имени или email"
+
+msgid "Enter characters you see in the image"
+msgstr "Введите символы, изображенные на картинке"
+
+msgid "To publish the form on your site use this code:"
+msgstr "Для публикации формы на сайте используйте этот код:"
+
+msgid "Preview"
+msgstr "Предпросмотр"
+
+msgid "Extended code"
+msgstr "Развернутый код формы"
+
+msgid "Rename"
+msgstr "Переименовать"
+
+msgid "More actions"
+msgstr "Ещё действия"
+
+msgid "Attachments:"
+msgstr "Вложения:"
+
+msgid "Notification preview"
+msgstr "Предварительный просмотр"
+
+msgid "Empty response from server"
+msgstr "Пустой ответ сервера"
+
+msgid "All messages will be sent as blind copies (BCC)."
+msgstr "Все сообщения отправляются как скрытые копии (BCC)."
+
+msgid "Set status:"
+msgstr "Установить статус:"
+
+msgid "and perform action:"
+msgstr "и выполнить действие:"
+
+msgid "Settlement type"
+msgstr "Тип поселения"
+
+msgid "With public frontend"
+msgstr "С публичным фронтендом"
+
+msgid "<br>Includes Customer Portal"
+msgstr "<br>Включает в себя личный кабинет"
+
+msgid "Customer Portal only"
+msgstr "Только личный кабинет"
+
+msgid "All group members (for group assignment)"
+msgstr "Всем членам группы (при групповом назначении)"
+
+msgid "Proceed"
+msgstr "Продолжить"
+
+msgid "Workflow changed from ({OLD_WORKFLOW_ID}) to %s (%s)"
+msgstr "Поток изменён с ({OLD_WORKFLOW_ID}) на %s (%s)"
+
+msgid "Assigned user or all members of assigned group"
+msgstr "Назначенному пользователю или всем членам назначенной группы"
+
+msgid "All members of assigned group"
+msgstr "Всем членам назначенной группы"
+
+msgid "search by request, name, or email"
+msgstr "№ запроса, имя или email"
+
+msgid "Send copy"
+msgstr "Отправить копию"
+
+msgid "Select the state which should be set for newly created requests."
+msgstr "Выберите состояние, в котором будут появляться запросы, созданные с помощью этого источника."
+
+msgid "Your choice will be shown by an arrow in the workflow setup diagram."
+msgstr "Ваш выбор будет показан стрелкой в диаграмме настройки потока. "
+
+msgid "Enable this setting to send your clients automatic request receipt notifications."
+msgstr "Включите эту настройку для отправки клиентам автоматического уведомления о получении запроса."
+
+msgid "This option may be useful for providing estimated response time to your clients."
+msgstr "Это может быть полезным для информирования клиентов о приблизительных сроках обработки запросов."
+
+msgid "It is recommended to specify an existing email address which you do not check for new mail as the sender's address for such notifications; e.g., noreply@yourdomain.com. This will help minimize the number of redundant requests."
+msgstr "В качестве адреса отправителя рекомендуется указать адрес реально существующего, но не проверяемого вами почтового ящика (например, noreply@yourdomain.ru), чтобы ответ клиента на это сообщение не приводил к появлению новых ненужных запросов."
+
+msgid "Form setup"
+msgstr "Настройка формы"
+
+msgid "This source enables you to receive new requests via a web form published in the frontend of any Webasyst app or anywhere on the Internet."
+msgstr "Этот источник позволяет получать новые запросы через веб-форму, опубликованную на любой странице в приложениях Webasyst или где угодно в интернете."
+
+msgid "This title is displayed only in your workflow setup diagram."
+msgstr "Это название отображается только на диаграмме настроек потока."
+
+msgid "The selected state will be automatically set for new requests received via this form."
+msgstr "Это состояние будет автоматически установлено для новых запросов, добавленных через данную форму."
+
+msgid "The selected action will be automatically performed with requests received via this form."
+msgstr "Это действие будет автоматически выполнено с запросами, поступившими через эту форму."
+
+msgid "Language"
+msgstr "Язык"
+
+msgid "Select the user or user group who should be automatically assigned to requests received via this form."
+msgstr "Укажите пользователя или группу пользователей, которые будут автоматически назначаться на запросы, поступившие через эту форму."
+
+msgid "For new clients who send their first request to your helpdesk service, a new contact record will be automatically created in your Contacts app."
+msgstr "Для новых клиентов, впервые отправивших запрос в вашу службу поддержки, будет автоматически создаваться запись в приложении «Контакты»."
+
+msgid "Select the default language for such new clients here."
+msgstr "Выберите язык, который следует устанавливать для таких новых клиентов."
+
+msgid "Set up the appearance of the web form as it should be displayed on your website."
+msgstr "Настройте вид формы так, как она должна отображаться для клиентов на вашем сайте."
+
+msgid "After form submission"
+msgstr "После отправки формы"
+
+msgid "This setting will redirect clients to any specified URL or display any text message after the form is submitted."
+msgstr "Эта настройка позволяет после заполнения формы и отправки запроса перенаправлять клиентов на любую указанную страницу либо показывать на месте формы какое-либо сообщение."
+
+msgid "After form submission:"
+msgstr "После отправки запроса:"
+
+msgid "Redirect to URL"
+msgstr "Перейти на страницу"
+
+msgid "Display text instead of the form"
+msgstr "Показать указанный текст вместо формы"
+
+msgid "Spam control"
+msgstr "Защита от спама"
+
+msgid "Every time you receive a message from an unknown email address which is not yet stored in your Contacts database, an automatic notification will be sent to the sender's address."
+msgstr "На любое сообщение, поступившее с неизвестного адреса, которого нет в вашей базе данных «Контактов», будет автоматически отправлено ответное уведомление."
+
+msgid "This notification contains a special link which must be clicked to confirm the sending of the first request. You may also add extra instructions for your clients to the notification text."
+msgstr "Такое уведомление содержит специальную ссылку, по которой необходимо перейти для подтверждения отправки первого запроса. В текст такого уведомления вы можете добавить дополнительные инструкции для клиентов."
+
+msgid "Confirmation receipt"
+msgstr "Квитанция о регистрации запроса"
+
+msgid "Configure email"
+msgstr "Настройка email"
+
+msgid "This source enables you to receive new requests via any email address."
+msgstr "Этот источник позволяет получать запросы на любой адрес электронной почты."
+
+msgid "Set up the email address from which you would like to receive support requests."
+msgstr "Настройте электронный адрес, через который вы хотите получать запросы."
+
+msgid "Please specify an existing email address; it may be hosted on any mail server; e.g., in a popular mail service such as Gmail, Yahoo!, etc., and must be accessible for connection via POP3 protocol."
+msgstr "Укажите адрес реально существующего почтового ящика; он может размещаться на любом почтовом сервере (включая популярные сервисы Mail.ru, Gmail и др.) и быть доступным по протоколу POP3."
+
+msgid "<strong>IMPORTANT NOTE:</strong> It is recommended that you specify an email account which was specially created for use by the Helpdesk app."
+msgstr "<strong>ВНИМАНИЕ!</strong> Рекомендуется использовать электронный адрес, специально созданный только для работы с приложением «Поддержка»."
+
+msgid "After you configure and save this source, all messages from the specified email account will be downloaded into Helpdesk and will be <strong>deleted from your mail server!</strong>"
+msgstr "После того как вы настроите и сохраните этот источник, все сообщения из указанного почтового ящика будут загружены в «Поддержку» и <strong>удалены с почтового сервера!</strong>"
+
+msgid "Username"
+msgstr "Имя пользователя"
+
+msgid "Incoming server"
+msgstr "Входящий сервер"
+
+msgid "POP3 Port"
+msgstr "Порт POP3"
+
+msgid "Use Secure SSL/TLS Settings"
+msgstr "Использовать SSL/TLS"
+
+msgid "If your mail server supports this option, we recommend using POP3 over SSL/TLS since it provides increased security for your interactions with the remote mail server."
+msgstr "Если ваш почтовый сервер поддерживает эту настройку, мы рекомендуем использовать протокол SSL/TLS, потому что он обеспечивает дополнительную безопасность при передаче данных."
+
+msgid "Please specify how requests received via this email address should be handled."
+msgstr "Укажите, что должно произойти с запросом, полученным на указанный электронный адрес."
+
+msgid "This state will be automatically set for new requests received via this email address."
+msgstr "Это состояние будет автоматически установлено для новых запросов, полученных на данный электронный адрес."
+
+msgid "This action will be automatically performed with requests received via this email address."
+msgstr "Это действие будет автоматически выполняться с запросами, полученными на данный электронный адрес."
+
+msgid "Select a user or a user group who should be automatically assigned to requests received via this email address."
+msgstr "Укажите пользователя или группу пользователей, которые будут автоматически назначаться на запросы, полученные на данный электронный адрес."
+
+msgid "Yes"
+msgstr "Да"
+
+msgid "No"
+msgstr "Нет"
+
+msgid "Disabled"
+msgstr "Отключить"
+
+msgid "Enabled"
+msgstr "Включить"
+
+msgid "Email Reply templates in the Helpdesk by default contain the request ID in their subject; e.g., [ID:12345]."
+msgstr "Шаблоны email-ответов в «Поддержке» по умолчанию настроены так, что в их теме содержится номер запроса (например: [ID:12345])."
+
+msgid "Following replies to these emails sent by your clients and received in Helpdesk can be associated with the corresponding requests."
+msgstr "Ответы ваших клиентов на такие сообщения, будучи доставленными обратно в «Поддержку», могут прикрепляться к соответствующему запросу и автоматически вызывать выполнение какого-либо действия."
+
+msgid "Select an action in the table below that should be performed with such requests; the choice of such an action depends on the current request state and the sender of the reply."
+msgstr "Выбор такого автоматического действия зависит от текущего состояния запроса и отправителя вновь полученного сообщения в соответствии с настройками в приведённой ниже таблице."
+
+msgid "Request is in state:"
+msgstr "Запрос находится в&nbsp;состоянии:"
+
+msgid "Assigned user "
+msgstr "Назначенный пользователь"
+
+msgid "Another user"
+msgstr "Другой пользователь"
+
+msgid "Another contact"
+msgstr "Другой контакт"
+
+msgid "Sender of the message is:"
+msgstr "Отправителем сообщения является:"
+
+msgid "The person that sent you the original request"
+msgstr "Клиент, который отправил первоначальный запрос"
+
+msgid "The user that is currently assigned to handle this request"
+msgstr "Пользователь, в данный момент назначенный на этот запрос"
+
+msgid "Any other user that has access privileges to your Helpdesk app"
+msgstr "Любой другой пользователь, имеющий доступ к приложению «Поддержка»"
+
+msgid "Any other person in your Contacts app"
+msgstr "Любой другой контакт, зарегистрированный в приложении «Контакты»"
+
+msgid "Reply to reply handling"
+msgstr "Обработка ответов на ответы"
+
+msgid "Customer Portal is a personal page available for clients sending requests to your Helpdesk. On this page customers can see all their requests, check status of any request, add a new request, and etc. Clients must log in to your website to access their customer portal."
+msgstr "Личный кабинет приложения «Поддержка» — это персональная страница, доступная каждому клиенту, который отправляет запросы в вашу Поддержку. На этой странице клиент может посмотреть полный список запросов, проверить статус открытых запросов, написать новый запрос и т. д. Для доступа в личный кабинет клиентам потребуется авторизация с помощью email и пароля."
+
+msgid "The selected state will be automatically set for new requests received via customer portal."
+msgstr "Это состояние будет автоматически установлено для новых запросов, добавленных через личный кабинет."
+
+msgid "Select the user or user group who should be automatically assigned to requests received via customer portal."
+msgstr "Укажите пользователя или группу пользователей, которые будут автоматически назначаться на запросы, поступившие через личный кабинет."
+
+msgid "States"
+msgstr "Состояния"
+
+msgid "Specify which statuses (states) are available to the customer. The status names as they appear to the customer may be changed here. For example, if you are discussing a request with your support team, you may choose to display “Processing” at the status seen by the customer in his/her Customer Portal."
+msgstr "Укажите состояния (статусы) запросов, доступные клиентам в их личных кабинетах. Названия статусов, видимые клиентами, могут быть изменены. Например, если вы обсуждаете запрос со своей командой поддержки, вы можете показывать такой запрос в личном кабинете клиента в статусе «В обработке»."
+
+msgid "Specify which actions customized in your workflow are available to the customer. You may hide some internal actions performed by your support team (e.g. adding comments, or forwarding request to experts for discussion). Other actions may be set up as read-only for customers, and you may make certain actions available for the customer to perform."
+msgstr "Укажите, какие из действий, настроенные в вашем потоке, доступные клиентам в их личных кабинетах. Вы можете скрыть некоторые внутренние действия, выполняемые вашей командой поддержки (например, добавление комментариев или пересылка запроса специалистам на обсуждение). Другие действия можно настроить как доступные только для просмотра, либо доступные для выполнения самим клиентом."
+
+msgid "no actions customized for this state"
+msgstr "для данного состояния не настроено ни одного действия"
+
+msgid "Select the initial action for requests"
+msgstr "Выберите первоначальное действие для запроса"
+
+msgid "Select user or group assigned to requests"
+msgstr "Выберите пользователя или группу, назначенную на запрос"
+
+msgid "Select language for new clients"
+msgstr "Выберите язык нового клиента"
+
+msgid "no action"
+msgstr "не выполнять"
+
+msgid "ago"
+msgstr "назад"
+
+msgid "Actor"
+msgstr "Исполнитель"
+
+msgid "Search by users who performed actions with requests"
+msgstr "Поиск по пользователям, которые выполняли действия с запросами"
+
+msgid "No actions with this request."
+msgstr "Ни одного действия с этим запросом."
+
+msgid "via"
+msgstr "ч/з"
+
+msgid "Last action"
+msgstr "Последнее действие"
+
+msgid "Sort by:"
+msgstr "Сортировка:"
+
+msgid "Search by users who have open assignments now"
+msgstr "Поиск по пользователям, которые сейчас назначены на запросы"
+
+msgid "Sorry, the request status has been changed. To continue working with this request you have to refresh the page."
+msgstr "Извините, статус вашего запроса изменился. Для продолжения работы с запросом необходимо обновить страницу."
+
+msgid "Words to search must be %d or more characters each"
+msgstr "Каждое из искомых слов должно быть не короче %d символов"
+
+msgid "Customer contact ID."
+msgstr "Номер клиента (ID)"
+
+msgid "Edit subject"
+msgstr "Редактировать тему"
+
+msgid "Old subject"
+msgstr "Старая тема"
+
+msgid "From:"
+msgstr "От кого:"
+
+msgid "To:"
+msgstr "Кому:"
+
+msgid "Subject:"
+msgstr "Тема:"
+
+msgid "Text:"
+msgstr "Текст:"
+
+msgid "Edit button label"
+msgstr "Редактировать название кнопки"
+
+msgid "Form width (200-600px)"
+msgstr "Ширина формы (200-600 пикселей)"
+
+msgid "The requested resource is not available."
+msgstr "Запрошенный ресурс недоступен."
+
+msgid "Change search conditions"
+msgstr "Изменить условия поиска"
+
+msgid "Icon"
+msgstr "Иконка"
+
+msgid "Access"
+msgstr "Доступ"
+
+msgid "Delete filter"
+msgstr "Удалить фильтр"
+
+msgid "Delete workflow"
+msgstr "Удалить поток"
+
+msgid "Edit workflow"
+msgstr "Редактировать поток"
+
+msgid "New workflow"
+msgstr "Новый поток"
+
+msgid "Request field constructor"
+msgstr "Конструктор полей запроса"
+
+msgid "Name and company fields are always displayed in the heading area on contact page."
+msgstr "Поля имени и название компании всегда отображаются в области заголовка на странице контакта."
+
+msgid "Customize additional heading fields"
+msgstr "Настройте дополнительные поля заголовка"
+
+msgid "Title"
+msgstr "Обращение"
+
+msgid "First name"
+msgstr "Имя"
+
+msgid "Middle name"
+msgstr "Отчество"
+
+msgid "Last name"
+msgstr "Фамилия"
+
+msgid "Job title"
+msgstr "Должность"
+
+msgid "@"
+msgstr ""
+
+msgid "Company"
+msgstr "Компания"
+
+msgid "Contact"
+msgstr "Контакт"
+
+msgid "person"
+msgstr "персона"
+
+msgid "company"
+msgstr "компания"
+
+msgid "disabled"
+msgstr "отключено"
+
+msgid "New field"
+msgstr "Новое поле"
+
+msgid "Delete field"
+msgstr "Удалить поле"
+
+msgid "Checking data in this field"
+msgstr "Проверка данных в этом поле"
+
+msgid "Edit field"
+msgstr "Редактировать поле"
+
+msgid "Field ID"
+msgstr "ID поля"
+
+msgid "Type of field"
+msgstr "Тип поля"
+
+msgid "Menu items"
+msgstr "Элементы меню"
+
+msgid "Enter each new item on new line"
+msgstr "Введите каждый элемент на отдельной строке"
+
+msgid "Applied to"
+msgstr "Применено к"
+
+msgid "Person"
+msgstr "Персона"
+
+msgid "Additional fields are always shown at the top area of contact page. Add here the fields that you access most frequently, e.g. Email, Phone, Address, and etc."
+msgstr "Дополнительные поля всегда показаны в верхней области страницы контакта. Добавьте сюда поля, которые вам часто необходимы, например, Email, Телефон, Адрес."
+
+msgid "List items"
+msgstr "Элементы списка"
+
+msgid "Categories"
+msgstr "Категории"
+
+msgid "Categories help you to arrange questions and answers by themes to simplify navigation and search, e.g.: Common questions, How to.., and etc."
+msgstr "Категории позволяют распределить вопросы и ответы по темам для упрощения навигации и поиска, например: «Общие вопросы», «Вопросы про это...» и т. д."
+
+msgid "New category"
+msgstr "Новая категория"
+
+msgid "Admin"
+msgstr "Админ"
+
+msgid "Questions & Answers"
+msgstr "Вопросы и ответы"
+
+msgid "Icons"
+msgstr "Иконки"
+
+msgid "Delete category"
+msgstr "Удалить категорию"
+
+msgid "New question"
+msgstr "Новый вопрос"
+
+msgid "Delete this question & answer"
+msgstr "Удалить этот вопрос и ответ"
+
+msgid "Add category"
+msgstr "Добавить категорию"
+
+msgid "Sorting:"
+msgstr "Сортировка:"
+
+msgid "newest on top"
+msgstr "новые наверху"
+
+msgid "oldest on top"
+msgstr "старые наверху"
+
+msgid "recently updated on top"
+msgstr "недавно обновленные наверху"
+
+msgid "Mark"
+msgstr "Пометить"
+
+msgid "Notify about actions "
+msgstr "Сообщить о действиях "
+
+msgid "Add fields"
+msgstr "Добавить поля"
+
+msgid "Allows your subscriber to create a password for further authorization on your site and log in to their customer portal. Requires Email field in the form."
+msgstr "Позволяет подписчику придумать пароль для дальнейшей авторизации на вашем сайте и входа в личный кабинет. Необходимо наличие поля для ввода email в этой форме."
+
+msgid "Sign up"
+msgstr "Зарегистрироваться"
+
+msgid "more"
+msgstr "ещё"
+
+msgid "Insert snippet"
+msgstr "Вставить фрагмент"
+
+msgid "for request"
+msgstr "для запроса"
+
+msgid "Field settings"
+msgstr "Настройки поля"
+
+msgid "Field"
+msgstr "Поле"
+
+msgid "Label"
+msgstr "Подпись"
+
+msgid "Label placement"
+msgstr "Размещение подписи"
+
+msgid "Placeholder"
+msgstr "Подсказка"
+
+msgid "Required"
+msgstr "Обязательное"
+
+msgid "Apply"
+msgstr "Применить"
+
+msgid "Search result"
+msgstr "Результаты поиска"
+
+msgid "search"
+msgstr "поиск"
+
+msgid "Left aligned"
+msgstr "Слева от поля"
+
+msgid "Top aligned"
+msgstr "Над полем"
+
+msgid "Do not show"
+msgstr "Не показывать"
+
+msgid "Files with extensions %s are allowed only."
+msgstr "Разрешены поля с расширениями «%s»"
+
+msgid "Main fields"
+msgstr "Главные поля"
+
+msgid "Additional fields"
+msgstr "Дополнительные поля"
+
+msgid "Full name"
+msgstr "Полное имя"
+
+msgid "Add contact fields"
+msgstr "Добавить поля контакта"
+
+msgid "Add request fields"
+msgstr "Добавить поля запроса"
+
+msgid "Text paragraph"
+msgstr "Текст"
+
+msgid "View"
+msgstr "Вид"
+
+msgid "Plain text"
+msgstr "Простой текст"
+
+msgid "Redactor"
+msgstr "Редактор"
+
+msgid "Horizontal rule"
+msgstr "Горизонтальный разделитель"
+
+msgid "Attached files"
+msgstr "Вложенные файлы"
+
+msgid "Field constructor"
+msgstr "Конструктор полей"
+
+msgid "no subject"
+msgstr "нет темы"
+
+msgid "Address labels placement"
+msgstr "Размещение подписей компонентов адреса"
+
+msgid "As a placeholder inside of field input"
+msgstr "В виде подсказки внутри поля"
+
+msgid "select"
+msgstr "выбрать"
+
+msgid "Identification"
+msgstr "Идентификация"
+
+msgid "If enabled we shall search for an existing contact with the same phone number and associate request sent via this form with the contact found."
+msgstr "Если включено, мы будем искать существующий контакт с таким же телефонным номером и связывать запрос, переданный через эту форму, с найденным контактом."
+
+msgid "Attachments"
+msgstr "Вложения"
+
+msgid "Request double opt-in"
+msgstr "Подтверждение запроса клиентом"
+
+msgid "To enable this option, your form must contain Email field."
+msgstr "Для включения этой функции ваша форма должна содержать поле Email."
+
+msgid "After successful submission of this form an automatic notification will be sent to the sender's email address. This notification contains a special link which must be clicked to confirm the sending of the request. You may also add extra instructions for your clients to the notification text."
+msgstr "После отправки формы клиенту будет автоматически отправлено ответное уведомление по электронной почте. Такое уведомление содержит специальную ссылку, по которой необходимо перейти для подтверждения отправки запроса. В текст такого уведомления вы можете добавить дополнительные инструкции для клиентов."
+
+msgid "no status"
+msgstr "нет статуса"
+
+msgid "Forwarding request to workflow"
+msgstr "Передача запроса в поток"
+
+msgid "Delete form"
+msgstr "Удалить форму"
+
+msgid "creates request"
+msgstr "создает запрос"
+
+msgid "Add tag"
+msgstr "Добавить тег"
+
+msgid "Mark as read"
+msgstr "Отметить как прочитанные"
+
+msgid "Mark as unread"
+msgstr "Отметить как непрочитанные"
+
+msgid "Read"
+msgstr "Прочитанный"
+
+msgid "Follow"
+msgstr "Следить"
+
+msgid "Tags"
+msgstr "Теги"
+
+msgid "unmark"
+msgstr "снять метку"
+
+msgid "If enabled, data in this field are available for clients in their Customer portal."
+msgstr "Включите, чтобы сделать это поле доступным в личных кабинетах клиентов."
+
+msgid "I want to receive email notifications on unread requests"
+msgstr "Хочу получать email-уведомления при появлении непрочитанных запросов"
+
+msgid "You got unread requests"
+msgstr "У вас есть непрочитанные запросы"
+
+msgid "This list is the search result:"
+msgstr "Этот список является результатом поиска:"
+
+msgid "Created by"
+msgstr "Создан пользователем"
+
+msgid "Add a filter"
+msgstr "Добавить фильтр"
+
+msgid "Select access level:"
+msgstr "Выберите уровень доступа:"
+
+msgid "After you set \"Follow\" mark, next time someone performs an action with this request it will appear as \"Unread\" for you and you will receive email notification about this action. So you will be able to follow all further activity related to this request."
+msgstr "Если установить этот флажок, то каждый раз, когда с данным запросом будут выполняться какие-либо действия, он будем становиться для вас «непрочитанным» и вы будете получать email-уведомление об этом. Таким образом вы сможете следить за дальнейшими действиями с данным запросом."
+
+msgid "Don't show this message anymore"
+msgstr "Больше не показывать это предупреждение"
+
+msgid "Set mark"
+msgstr "Установить флажок"
+
+msgid "Follow mark"
+msgstr "Флажок «Следить»"
+
+msgid "Additional fields allow you to add a number of multiple parameters to requests content. These parameters essentially depend on a type of product and services you deliver to your customers. For example, if you accept requests to repair household appliances, you may wish to know some manufacturing details, e.g. model name, and etc. Additional fields can be added to the request form to be submitted by your client, or be available on the request page for your Helpdesk app users manipulations."
+msgstr "Дополнительные поля позволяют наполнить запрос произвольным набором уточняющих параметров. Этот набор полей существенно зависит от того, какого рода продукты и услуги вы предоставляете своим клиентам. Например, если вы принимаете запросы на ремонт бытовой техники, то, возможно, вам понадобятся поля, позволяющие указать модель устройства, год выпуска, характер неисправности и т. д. Дополнительные поля можно разместить в форме, через которую клиент отправляет вам запрос, а также на странице выполнения действий с запросом, если эти поля предназначены для заполнения пользователями приложения «Поддержка»."
+
+msgid "Using this form"
+msgstr "Использование формы"
+
+msgid "Available in the Helpdesk backend"
+msgstr "Доступна в бекенде приложения «Поддержка»"
+
+msgid "Allows you to manually create new requests via this form in Helpdesk backend using the “New request” button. This option may be useful when a client cannot send you a request personally; e.g., during a telephone call."
+msgstr "Позволяет добавлять запросы через эту форму в бекенде приложения «Поддержка» с помощью кнопки «Новый запрос», когда клиент не имеет возможности сделать это самостоятельно — например, во время телефонного разговора."
+
+msgid "Available for your clients in their Customer portal for these websites:"
+msgstr "Доступна вашим клиентам в их личных кабинетах на этих сайтах:"
+
+msgid "For further setup up of your Customer Portal use the <a href=\"%s\">Site app</a>"
+msgstr "Для дальнейшей настройки личного кабинета используйте приложение <a href=\"%s\">Сайт</a>"
+
+msgid "This source enables you to receive new requests via a web form published in the frontend of any Webasyst app or anywhere on the Internet. Also this form can be used to add requests directly from your backend (“New request” button), or from your clients customer portals."
+msgstr "Этот источник позволяет получать новые запросы через веб-форму, опубликованную на любой странице в приложениях Webasyst или где угодно в интернете. Форму можно также использовать для добавления запросов непосредственно из бекенда (кнопка «Новый запрос»), либо из личных кабинетов ваших клиентов."
+
+msgid "Deleting this field will not cause a loss of any data."
+msgstr "Удаление этого поля не приведет к потере каких-либо данных."
+
+msgid "Field name"
+msgstr "Название поля"
+
+msgid "Form settings"
+msgstr "Настройка формы"
+
+msgid "This source enables you to receive new requests via a web form published in the frontend of any Webasyst app or anywhere on the Internet. Also this form can be used to add requests directly from your backend (\"New request\" button), or from your clients customer portals."
+msgstr "Этот источник позволяет получать запросы через веб-форму, опубликованную на вашем сайте или где-либо в интернете. С помощью этой формы можно также создавать запросы в бекенде «Поддержки» при нажатии на кнопку «Новый запрос» или клиентами в личном кабинете."
+
+msgid "Available in the Helpdesk backend:"
+msgstr "Доступно в бекенде Поддержки:"
+
+msgid "iframe"
+msgstr ""
+
+msgid "Drop down"
+msgstr "Выпадающий список"
+
+msgid "Access denied"
+msgstr "Доступ запрещен"
+
+msgid "clear previous assignment"
+msgstr "снять назначение"
+
+msgid "keep previous assignment"
+msgstr "не менять прежнее назначение"
+
+msgid "assign user performing this action"
+msgstr "назначить исполнителя данного действия"
+
+msgid "Available states"
+msgstr "Доступные состояния"
+
+msgid "Deleting this field will cause a loss of these data."
+msgstr "Удаление поля приведет к потере этих данных."
+
+msgid "%d request have data in the field:"
+msgid_plural "%d requests have data in the field:"
+msgstr[0] "%d запрос имеет данные в поле"
+msgstr[1] "%d запроса имеют данные в поле"
+msgstr[2] "%d запросов имеют данные в поле"
+
+msgid "Request has been changed"
+msgstr "Запрос изменён"
+
+msgid "Choose new request forms that should be available for clients in their Customer portals:"
+msgstr "Выберите формы создания нового запроса, которые должны быть доступны клиентам в их личных кабинетах:"
+
+msgid "New subject"
+msgstr "Новая тема"
+
+msgid "Old workflow"
+msgstr "Старый поток"
+
+msgid "Routing rules are not defined for Helpdesk app"
+msgstr "Не заданы правила маршрутизации для приложения «Поддержка»"
+
+msgid "No data in the field"
+msgstr "Нет данных в поле"
+
+msgid "Sources, states and actions with requests are customized separately for every workflow."
+msgstr "Источники, состояния и действия с запросами настраиваются отдельно для каждого потока."
+
+msgid "Click to edit subject"
+msgstr "Щелкните для редактирования темы"
+
+msgid "Customize form that appears for users when they perform this action. Choose required fields and set up their properties and location in the form."
+msgstr "Настройте вид формы, которая будет открываться при выполнении данного действия пользователями. Выберите необходимые поля и настройте их свойства и место расположения в форме."
+
+msgid "Search requests that were added via selected sources"
+msgstr "Поиск запросов, которые были добавлены через выбранные источники"
+
+msgid "Search requests that are currently in selected states"
+msgstr "Поиск запросов, которые сейчас находятся в выбранных состояниях"
+
+msgid "Search requests that were ever subjected to selected actions"
+msgstr "Поиск запросов, с которыми когда-либо выполнялись выбранные действия"
+
+msgid "Search requests that have selected tags assigned"
+msgstr "Поиск запросов, для которых установлены выбранные теги"
+
+msgid "No options available"
+msgstr "Нет доступных вариантов"
+
+msgid "Use this form in backend"
+msgstr "Использовать форму в бекенде"
+
+msgid "Use this form in customer portal"
+msgstr "Использовать форму в личном кабинете"
+
+msgid "Use this form on the site"
+msgstr "Использовать форму на сайте"
+
+msgid "Authorized user redirected to the request page in customer portal"
+msgstr "Авторизованный пользователь перенаправляется на страницу запроса в личном кабинете"
+
+msgid "Create date"
+msgstr "Дата создания"
+
+msgid "select form"
+msgstr "выбрать форму"
+
+msgid "Form can be published on any page of the site."
+msgstr "Форму можно опубликовать на любой странице сайта"
+
+msgid "To publish the form on external site use this code:"
+msgstr "Для публикации формы на внешнем сайте используйте следующий код:"
+
+msgid "Send a request for confirmation"
+msgstr "Отправлять запрос для подтверждения"
+
+msgid "If a client is authorized"
+msgstr "Если клиент авторизован"
+
+msgid "No requests."
+msgstr "Нет запросов."
+
+msgid "Redirect to the request page in customer portal"
+msgstr "Перейти на страницу запроса в личном кабинете"
+
+msgid "All tags"
+msgstr "Все теги"
+
+msgid "Select tags for this request"
+msgstr "Выберите теги для этого запроса"
+
+msgid "Visibility"
+msgstr "Видимость"
+
+msgid "Apply visibility change to all questions in category"
+msgstr "Применить видимость ко всем вопросам в этой категории"
+
+msgid "Page URL"
+msgstr "Адрес страницы"
+
+msgid "Summary"
+msgstr "Тема"
+
+msgid "Action text"
+msgstr "Текст запроса"
+
+msgid "Not assigned"
+msgstr "Не назначен"
+
+msgid "Assigned to id="
+msgstr "Назначен для id="
+
+msgid "Visible in the public category"
+msgstr "Видно в публичной части сайта"
+
+msgid "New filter is easy to create using search function. To do so, use <strong>Save as filter</strong> option on the search results page."
+msgstr "Новый фильтр легко сделать с помощью функции поиска. Используйте для этого действие <strong>Сохранить как фильтр</strong> на странице результатов поиска."
+
+msgid "This field is already used"
+msgstr "Это поле уже используется"
+
+msgid "This field is required"
+msgstr "Это поле обязательное"
+
+msgid "no records"
+msgstr "нет записей"
+
+msgid "no categories"
+msgstr "нет разделов"
+
+msgid "This filter displays all requests regardless of their status or assignment. If you do not usually need this full list for your work, simply hide it. Once you need it again, you can turn it on anytime using the “Add filter” option in the left-hand sidebar."
+msgstr "Этот фильтр показывает все запросы независимо от их статуса и назначения. Если вам постоянно не нужен список всех запросов для вашей работы, просто скройте его. При необходимости вы сможете включить его вновь с помощью действия «Добавить фильтр» в левой панели."
+
+msgid "Hide “All requests” filter"
+msgstr "Скрыть фильтр «Все запросы»"
+
+msgid "Please <a href=\"#/faq/category/new\">create a category</a> first, to start adding questions and answers."
+msgstr "Чтобы начать добавлять вопросы и ответы, пожалуйста, <a href=\"#/faq/category/new\">создайте прежде категорию</a>."
+
+msgid "action name"
+msgstr "названия действия"
+
+msgid "Send message"
+msgstr "Отправить сообщение"
+
+msgid "preview"
+msgstr "предпросмотр"
+
+msgid "Questions & Answer"
+msgstr "Вопросы и Ответы"
+
+msgid "Unmark as Follow"
+msgstr "Снять метку «Следить»"
+
+msgid "Mark as Follow"
+msgstr "Поставить метку «Следить»"
+
+msgid "%d request has been marked as Follow"
+msgid_plural "%d requests have been marked as Follow"
+msgstr[0] "%d запрос помечен «Следить»"
+msgstr[1] "%d запроса помечены «Следить»"
+msgstr[2] "%d запросов помечены «Следить»"
+
+msgid "%d request has been removed from the Follow list"
+msgid_plural "%d requests have been removed from the Follow list"
+msgstr[0] "%d запрос удален из списка «Следить»"
+msgstr[1] "%d запроса удалены из списка «Следить»"
+msgstr[2] "%d запросов удалены из списка «Следить»"
+
+msgid "Radio buttons"
+msgstr "Радио-селектор"
+
+msgid "string"
+msgstr "строка"
+
+msgid "number"
+msgstr "число"
+
+msgid "drop down"
+msgstr "выпадающий список"
+
+msgid "This URL is already used"
+msgstr "Указанный URL уже используется"
+
+msgid "After successful submission (if client is not authorized)"
+msgstr "После отправки формы (если клиент не авторизован)"
+
+msgid "This setting will redirect new clients (who are not yet authorized on your site) to any specified URL or display any text message after the form is submitted."
+msgstr "Эта настройка позволяет после отправки запроса перенаправлять новых клиентов, которые не авторизованы на вашем сайте, на любую указанную страницу, либо показывать на месте формы какое-либо сообщение."
+
+msgid "After successful submission (if client is authorized)"
+msgstr "После отправки формы клиенту (если клиент авторизован)"
+
+msgid "For registered clients authorized on your site at the moment of this form submission, you can customize a different behavior."
+msgstr "Для зарегистрированных клиентов, которые в момент отправки формы авторизованы на вашем сайте, вы можете настроить другое поведение."
+
+msgid "Form design"
+msgstr "Настройка формы"
+
+msgid "Use default CSS"
+msgstr "CSS по умолчанию"
+
+msgid "Custom CSS"
+msgstr "Собственный CSS"
+
+msgid "Revert code to default"
+msgstr "Сбросить изменения"
+
+msgid "created a new request"
+msgstr "создал новый запрос"
+
+msgid "performed an action with request"
+msgstr "выполнил действие с запросом"
+
+msgid "What is this?"
+msgstr "Что это?"
+
+msgid "Client (request originator)"
+msgstr "Клиенту (от кого поступил запрос)"
+
+msgid "#%s"
+msgstr "№%s"
+
+msgid "OK"
+msgstr "Закрыть"
+
+msgid "Message sent:"
+msgstr "Отправлено сообщение:"
+
+msgid "Reply by email"
+msgstr "Ответить по email"
+
+msgid "In case a message incoming to this email address contains a request ID in their subject (e.g., [ID:12345-XXXXX]; 12345 is request ID in this sample), then we bind incoming message with this request. However, you can customize special processing for this kind of messages."
+msgstr "В том случае, если на данный адрес поступит письмо, содержащее в своей теме номер запроса (например: [ID:12345-XXXXX], здесь 12345 это номер запроса в данном примере), то мы свяжем поступившее письмо с этим запросом. Однако вы можете настроить особую обработку для таких писем."
+
+msgid "Custom handling"
+msgstr "Пользовательская обработка"
+
+msgid "Default handling"
+msgstr "Обработка по умолчанию"
+
+msgid "Workflow name"
+msgstr "Название потока"
+
+msgid "Mark as \"unread\""
+msgstr "Отмечать как \"непрочитанные\""
+
+msgid "Mark request as \"read\""
+msgstr "Отмечать запрос как \"прочитанный\""
+
+msgid "Selected color will be used to display this state name."
+msgstr "Выбранным цветом будет выводиться название данного состояния."
+
+msgid "Customize button color"
+msgstr "Настроить цвет кнопки"
+
+msgid "After this action is executed"
+msgstr "После выполнения этого действия"
+
+msgid "Leave request in the same state"
+msgstr "Оставить запрос в текущем состоянии"
+
+msgid "Forward request to state"
+msgstr "Переслать запрос в состояние"
+
+msgid "Empty id."
+msgstr "Пустой ID."
+
+msgid "Unknown field:"
+msgstr "Неизвестное поле:"
+
+msgid "Required field"
+msgstr "Обязательное поле"
+
+msgid "Only English alphanumeric, hyphen and underline symbols are allowed"
+msgstr "Допустимы только латинские буквы, цифры, а также дефис и символ подчеркивания"
+
+msgid "This ID is already in use"
+msgstr "Этот ID уже используется"
+
+msgid "Unknown field type:"
+msgstr "Неизвестный тип поля:"
+
+msgid "Start by <a href=\"%s\">filling database of frequently asked questions</a> in your helpdesk backend."
+msgstr "Начните с <a href=\"%s\">заполнения базы часто задаваемых вопросов</a> в бекенде Поддержки."
+
+msgid "default form"
+msgstr "стандартная форма"
+
+msgid "Add new rule"
+msgstr "Добавить новое правило"
+
+msgid "If the sender of the message is"
+msgstr "Если отправителем сообщения является"
+
+msgid "and request state is"
+msgstr "и запрос находится в состоянии"
+
+msgid ", then perform action"
+msgstr ", то выполнить действие"
+
+msgid "Delete rule"
+msgstr "Удалить правило"
+
+msgid "Welcome to new helpdesk section on your site!"
+msgstr "Добро пожаловать в ваш новый раздел поддержки клиентов!"
+
+msgid "All answers on one page"
+msgstr "Все ответы на одной странице"
+
+msgid "Every answer on separate page"
+msgstr "Каждый ответ на отдельной странице"
+
+msgid "FAQ"
+msgstr "ЧАВО"
+
+msgid "Frequently Asked Questions"
+msgstr "Часто задаваемые вопросы"
+
+msgid " Name"
+msgstr "Название"
+
+msgid "Published"
+msgstr "Опубликованный"
+
+msgid "single line text"
+msgstr "одна строка текста"
+
+msgid "WYSIWYG"
+msgstr "Визуальный редактор"
+
+msgid "checkbox"
+msgstr "флажок"
+
+msgid "NOTE: Request will be accepted and shows up in your request lists only after client clicks confirmation link in this message. It's probably a good idea to write about this in the text that appears on your web page after this form submission."
+msgstr "ВНИМАНИЕ: Запрос будет принят и появится в списке запросов только после того, как клиент получит данное сообщение и щелкнет в нем ссылку подтверждения. Возможно, вам следует написать об этом в тексте, который открывается после отправки формы."
+
+msgid "This message template is customized by administrator in workflow settings."
+msgstr "Шаблон этого сообщения настраивается администратором в настройках потока."
+
+msgid "Select a user or a user group who have access to Helpdesk app. Manage users and user groups, and their access rights in <a href=\"%s\">Team</a> app."
+msgstr "Выберите пользователя или группу пользователей, у которых есть доступ к приложению «Поддержка». Редактируйте пользователей, группы пользователей и их права доступа в приложении «<a href=\"%s\">Команда</a>»."
+
+msgid "Request created"
+msgstr "Запрос создан"
+
+msgid "Attention: initial request parameters <a href=\"javascript:void(0);\" class=\"request-params-changed-link\">was changed</a>"
+msgstr "Внимание: первоначальные параметры запроса <a href=\"javascript:void(0);\" class=\"request-params-changed-link\">были изменены</a>"
+
+msgid "Use color of the state %s where this button forwards request"
+msgstr "Использовать цвет состояния \"%s\", в который эта кнопка переводит запрос"
+
+msgid "These are your personal settings. They define rules that cause some requests to be marked as \"unread\" and display them in a dedicated list in the left side navigation panel."
+msgstr "Это ваши персональные настройки. Они позволяют установить правила, по которым запросы будут отмечаться как \"непрочитанные\" и появляться в данном списке в левой навигационной панели."
+
+msgid "Any new action performed on these requests will cause them to be marked as \"unread\""
+msgstr "Любое новое действие, выполненное с такими запросами, будет помечать их как \"непрочитанные\""
+
+msgid "When a user performs this action the request state will be changed to the state you select here. Your choice will be shown by an arrow in the workflow setup diagram."
+msgstr "Выберите состояние, в которое должен перейти запрос при выполнении пользователем данного действия. Ваш выбор будет показан стрелкой на диаграмме настройки потока."
+
+msgid "Value of the field \"%s\""
+msgstr "Значение поля \"%s\""
+
+msgid "Backend"
+msgstr "Бекенд"
+
+msgid "Users can see questions and answers from this category when they reply to client requests"
+msgstr "Пользователи видят вопросы этой категории при подготовке ответов на запросы клиентов"
+
+msgid "Site"
+msgstr "Сайт"
+
+msgid "Category is visible in the public part of your site"
+msgstr "Категория видна в публичной части сайта"
+
+msgid "Users can see this question and answer when they reply to client requests"
+msgstr "Пользователи видят этот вопрос при подготовке ответов на запросы клиентов"
+
+msgid "Unique identifier automatically assigned to each request (e.g. #1001)"
+msgstr "Уникальный идентификатор, автоматически присваиваемый каждому запросу (напр. 1001)"
+
+msgid "Subject of the request"
+msgstr "Тема запроса"
+
+msgid "Request subject followed by the request ID (e.g. Request subject [ID: 1001-XXXXX]). The request ID and hash will associate any reply you receive from the customer with the original request."
+msgstr "Тема запроса с последующим ID запроса (напр., тема [ID:1234-XXXXX]). Такой формат ID с хеш-функцией позволяет идентифицировать оригинальный запрос при последующих ответах по email."
+
+msgid "Text of the original request"
+msgstr "Оригинальный текст запроса"
+
+msgid "Request status (its current state) that the customer sees in Customer Portal"
+msgstr "Статус запроса (его текущее состояние), который клиент видит в личном кабинете"
+
+msgid "Full history of request, including the original message. Similar to the request view in backend."
+msgstr "Полная история действий с запросом, вместе с оригинальным текстом. Аналогична содержимому страницы запроса в бекенде."
+
+msgid "History of request as seen by the customer. Similar to the request view in Customer Portal."
+msgstr "История действий с запросом, которые доступны клиенту. Аналогична содержимому страницы запроса в личном кабинете клиента."
+
+msgid "URL of the request page in the backend"
+msgstr "Адрес (URL) страницы запроса в бекенде приложения"
+
+msgid "URL of the request page in the Customer Portal"
+msgstr "Адрес (URL) страницы запроса в личном кабинете клиента"
+
+msgid "Unique identifier automatically assigned to each customer in Contacts"
+msgstr "Уникальный идентификатор клиента, который автоматически присваивается каждому клиенту в Контактах"
+
+msgid "Primary email for customer"
+msgstr "Главный email-адрес клиента"
+
+msgid "Name of customer in the format First Middle Last"
+msgstr "Имя клиента в формате Имя Отчество Фамилия"
+
+msgid "Full name of person who has performed this action"
+msgstr "Полное имя исполнителя данного действия"
+
+msgid "Company name specified in your Installer settings (also displayed in the top-left corner of your backend)"
+msgstr "Название компании, которое указано в настройках «Инсталлера» (также отображается в левом верхнем углу в бекенде)"
+
+msgid "Insert code block"
+msgstr "Вставить блок кода"
+
+msgid "Insert"
+msgstr "Вставить"
+
+msgid "Mark all as read"
+msgstr "Пометить все как прочитанные"
+
+msgid "Access denied."
+msgstr "Доступ запрещен."
+
+msgid "You have no access rights to this request."
+msgstr "У вас нет прав доступа к этому запросу."
+
+msgid "This action cannot be performed from frontend."
+msgstr "Это действие не может быть выполнено из фронтенда"
+
+msgid "This action cannot be performed by user."
+msgstr "Это действие не может быть выполнено."
+
+msgid "No search results"
+msgstr "Ничего не найдено"
+
+msgid "Find the answer"
+msgstr "Найти ответ"
+
+msgid "Name of client"
+msgstr "Имя клиента"
+
+msgid "Write a brief instruction here that may help users to select this answer when they work on a client's request."
+msgstr "Напишите здесь краткую инструкцию для пользователя, которая поможет ему в выборе данного ответа при работе над запросом."
+
+msgid "Request page constructor"
+msgstr "Конструктор страницы запроса"
+
+msgid "Please specify required data"
+msgstr "Пожалуйста, укажите необходимые данные"
+
+msgid "any"
+msgstr "любой"
+
+msgid "Thank you for sending request to our support team!"
+msgstr "Спасибо за обращение в нашу службу поддержки!"
+
+msgid "show all"
+msgstr "показать все"
+
+msgid "Rotate left"
+msgstr "Повернуть влево"
+
+msgid "Rotate right"
+msgstr "Повернуть вправо"
+
+msgid "No search results."
+msgstr "Ничего не найдено."
+
+msgid "No questions in this category."
+msgstr "Нет вопросов в этой категории."
+
+msgid "Loading"
+msgstr "Загрузка"
+
+msgid "Request fields"
+msgstr "Поля запроса"
+
+msgid "Customer contact fields"
+msgstr "Поля контакта клиента"
+
+msgid "User contact fields"
+msgstr "Поля контакта исполнителя действия"
+
+msgid "Assignee contact fields"
+msgstr "Поля контакта назначенного исполнителя"
+
+msgid "Common fields"
+msgstr "Общие поля"
+
+msgid "Value of customer field \"%s\""
+msgstr "Значение поля контакта клиента \"%s\""
+
+msgid "Value of actor field \"%s\""
+msgstr "Значение поля контакта исполнителя \"%s\""
+
+msgid "Value of assigned user field \"%s\""
+msgstr "Значение поля контакта назначенного исполнителя \"%s\""
+
+msgid "Yes/No"
+msgstr "Да/Нет"
+
+msgid "Customer's name"
+msgstr "Имя клиента"
+
+msgid "9 days ago"
+msgstr "9 дней назад"
+
+msgid "Default"
+msgstr "По умолчанию"
+
+msgid "Blue"
+msgstr "Синий"
+
+msgid "Green"
+msgstr "Зеленый"
+
+msgid "Orange"
+msgstr "Оранжевый"
+
+msgid "Custom"
+msgstr "Собственный"
+
+msgid "We got new request from"
+msgstr "Поступил новый запрос от"
+
+msgid "Number"
+msgstr "Номер"
+
+msgid "Request source"
+msgstr "Источник"
+
+msgid "Edit CSS"
+msgstr "Редактировать CSS"
+
+msgid "Source email address"
+msgstr "Email-адрес источника"
+
+msgid "No states available."
+msgstr "Нет доступных статусов."
+
+msgid "Use Secure STARTTLS Settings"
+msgstr "Использовать настройки STARTTLS"
+
+msgid "If your mail server supports this option, we recommend using POP3 over STARTTLS or SSL/TLS since it provides increased security for your interactions with the remote mail server."
+msgstr "Если ваш почтовый сервер поддерживает эту опцию, мы рекомендуем использовать POP3 через STARTTLS или SSL/TLS, т. к. это обеспечивает большую безопасность при передаче данных."
+
+msgid "draft"
+msgstr "черновик"
+
+msgid "backend"
+msgstr "бекенд"
+
+msgid "site"
+msgstr "сайт"
+
+msgid "<no category>"
+msgstr "<без категории>"
+
+msgid "Comment for users"
+msgstr "Комментарий для пользователей"
+
+msgid "Category"
+msgstr "Категория"
+
+msgid "Write an answer here"
+msgstr "Здесь напишите ответ"
+
+msgid "Specify default values for new request."
+msgstr "Укажите значения по умолчанию для нового запроса."
+
+msgid "select another form"
+msgstr "выбрать другую форму"
+
+msgid "Can add new tags"
+msgstr "Может добавлять новые теги"
+
+msgid "Add a field to the heading area"
+msgstr "Добавить поле в область заголовка запроса"
+
+msgid "NOTE: You can drag and drop fields to change its position in the heading area of request page."
+msgstr "ПРИМЕЧАНИЕ: Вы можете перетащить поля, чтобы поменять их расположение на странице запроса."
+
+msgid "Remove this field from the heading area."
+msgstr "Удалить это поле из области заголовка запроса."
+
+msgid "All available fields are already added."
+msgstr "Все возможные поля уже добавлены."
+
+msgid "There are no records in this category."
+msgstr "В этой категории нет записей."
+
+msgid "Add another recipient"
+msgstr "Добавить еще получателя"
+
+msgid "Edit field settings"
+msgstr "Редактировать настройки поля"
+
+msgid "Remove this field from the form"
+msgstr "Удалить это поле из формы"
+
+msgid "Create custom view"
+msgstr "Создать мой вид"
+
+msgid "Copy CSS from another view"
+msgstr "Скопировать CSS из другого вида"
+
+msgid "Delete custom CSS"
+msgstr "Удалить мой CSS"
+
+msgid "You are using customized version of CSS."
+msgstr "Вы используете модифицированную версию CSS."
+
+msgid "Revoke to default CSS."
+msgstr "Вернуться к стандартному CSS."
+
+msgid "You are using the original version of CSS."
+msgstr "Вы используете стандартную версию CSS."
+
+msgid "Can be assigned to requests"
+msgstr "Может быть назначен на запросы"
+
+msgid "Include attachments"
+msgstr "Включить вложения"
+
+msgid "Customer"
+msgstr "Клиент"
+
+msgid "To setup Customer portal use the <a href=\"%s\">Site app</a>."
+msgstr "Для настройки личного кабинета используйте <a href=\"%s\">приложение Сайт</a>."
+
+msgid "Choose if this action is available for customer (request's originator) in their customer portal."
+msgstr "Настройте доступность данного действия для клиента (отправителя запроса) в его личном кабинете."
+
+msgid "Available for viewing only"
+msgstr "Доступно только для просмотра"
+
+msgid "Available for execution only"
+msgstr "Доступно только для выполнения"
+
+msgid "Available for viewing and execution"
+msgstr "Доступно для просмотра и выполнения"
+
+msgid "Advanced settings"
+msgstr "Расширенные настройки"
+
+msgid "Revoke all access rights for customer"
+msgstr "Аннулировать все права доступа для клиента"
+
+msgid "If you turn on this option, then execution of this action will automatically cause a complete banning of the contact who sent you this request."
+msgstr "Если вы включите этот флаг, то выполнение данного действия вызовет автоматическое отключение доступа для контакта, который отправил вам запрос."
+
+msgid "The contact will not be able to log in to your site and customer portal anymore, and all further requests from this contact will be bounced."
+msgstr "Этот контакт не сможет более войти на ваш сайт или в личный кабинет, а также все будущие запросы от данного контакта будут отвергнуты."
+
+msgid "This option can be used for banning contacts for spam or other illegal actions."
+msgstr "Эта опция может быть использована для блокировки контактов, рассылающих спам или выполняющих иные нелегальные действия."
+
+msgid "To select an action you should select state first (above)."
+msgstr "Чтобы выбрать действие, прежде выберите состояние (выше)."
+
+msgid "Only actions for the selected state (above) are available."
+msgstr "Доступны только действия для выбранного выше состояния."
+
+msgid "Support request"
+msgstr "Отправить запрос"
+
+msgid "Unknown contact"
+msgstr "Неизвестный контакт"
+
+msgid "No request form"
+msgstr "Нет формы запроса"
+
+msgid "Main request form"
+msgstr "Главная форма запроса"
+
+msgid "Others"
+msgstr "Другие"
+
+msgid "This action is not available"
+msgstr "Это действие недоступно"
+
+msgid "1-Click Feedback"
+msgstr "Отклик в 1 клик"
+
+msgid "Add a snippet in your email template that will allow recipient with just one click to select a value for pull down or checkbox field. This field must exist in your Helpdesk app (refer to the Field constructor section) and be available for clients in their customer portals. Recipients will be redirected to their customer portals. This option can be used for quick evaluation of the request reply by your customers."
+msgstr "Вставьте в шаблон сообщения код, который позволит получателю одним щелчком, прямо в тексте полученного сообщения, установить выбранное значение для поля типа «Выпадающее меню» или «Флажок». Такое поле необходимо добавить в «Конструкторе полей» и сделать его доступным клиенту в личном кабинете. Данная опция удобна, например, для быстрой оценки ответа клиентом."
+
+msgid "Available fields"
+msgstr "Доступные поля"
+
+msgid "There are no appropriate fields"
+msgstr "Нет доступных полей для выбора"
+
+msgid "Available values for \"%s\""
+msgstr "Варианты значений для поля \"%s\""
+
+msgid "Auto action"
+msgstr "Автодействие"
+
+msgid "Time-out"
+msgstr "Тайм-аут"
+
+msgid "Action performed by user"
+msgstr "Действие выполняется пользователем"
+
+msgid "Users perform this action manually on the request's page or in their Customer portals."
+msgstr "Пользователь будет вручную выполнять это действие на странице запроса в бекенде или в личном кабинете клиента."
+
+msgid "Action performed automatically"
+msgstr "Действие выполняется автоматически"
+
+msgid "This action will be triggered automatically (by time-out) if no other actions are performed with request during a certain period of time."
+msgstr "Данное действие будет выполнено автоматически, если в течение определенного времени (тайм-аут) с запросом не выполняется никаких других действий."
+
+msgid "Create a new action to be performed by user"
+msgstr "Добавить новое действие, выполняемое пользователем"
+
+msgid "Create a new action to be performed automatically"
+msgstr "Добавить новое действие, выполняемое автоматически"
+
+msgid "d"
+msgstr "д"
+
+msgid "h"
+msgstr "ч"
+
+msgid "days"
+msgstr "дней"
+
+msgid "hours"
+msgstr "часов"
+
+msgid "All sites"
+msgstr "Все сайты"
+
+msgid "Only selected sites"
+msgstr "Только выбранные сайты"
+
+msgid "Helpdesk app is not settled on any site. Use %s app to manage settlements."
+msgstr "Приложение «Поддержка» не поселено ни на одном сайте. Используйте приложение %s для настройки поселений."
+
+msgid "Shown above are only sites where Helpdesk app is settled. Use %s app to manage settlements."
+msgstr "Показаны только те сайты, на которых поселено приложение «Поддержка». Используйте приложение %s для настройки поселений."
+
+msgid "Category URL may contain only letters, digits, and hyphens"
+msgstr "URL категории может содержать только латинские буквы, цифры и дефисы"
+
+msgid "I agree to <a>personal data protection policy</a>"
+msgstr "Я согласен с <a>политикой обработки персональных данных</a>"
+
+msgid "Consent to terms"
+msgstr "Согласие с условиями"
+
+msgid "Terms description"
+msgstr "Описание условий"
+
+msgid "Checked by default"
+msgstr "Отмечено по умолчанию"
+
+msgid "Sidebar"
+msgstr "Боковая панель"
+
+msgid "I agree to <a>{$this->default_link_text}</a>"
+msgstr "Я соглашаюсь с <a>{$this->default_link_text}</a>"
+
+msgid "personal data protection policy"
+msgstr "политика защиты персональных данных"
+
+msgid "---INSERT A LINK HERE!---"
+msgstr "---ВСТАВЬТЕ ССЫЛКУ ЗДЕСЬ!---"
+
+msgid "Refresh CAPTCHA"
+msgstr "Обновить капчу"
+
+msgid "performs bulk operation “%s”"
+msgstr "выполняет массовое действие «%s»"

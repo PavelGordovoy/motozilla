@@ -1,0 +1,30 @@
+{strip}
+{if $wa->shop}
+    {if (!isset($wa_parent_theme_path) || !$wa_parent_theme_path)}
+        {$parent_theme_path = $wa_active_theme_path}
+    {else}
+        {$parent_theme_path = $wa_parent_theme_path}
+    {/if}
+    {$count_last_products = (int) $theme_settings.viewed_products_sidebar_count}
+    {if $theme_settings.viewed_products && $count_last_products > 0}
+        {$viewed_list = $wa->cookie('viewed_list')}
+        {if $viewed_list}
+            {$viewed_list_arr = ","|explode:$viewed_list}
+            {if $viewed_list_arr > $count_last_products}{$viewed_list_arr = array_slice($viewed_list_arr, 0, $count_last_products)}{/if}
+            {$products_result = $wa->shop->products($viewed_list_arr)}
+            {if count($products_result) > 0}
+                {$products_views = []}
+                {foreach $viewed_list_arr as $viewed_product}
+                    {if isset($products_result[$viewed_product])}
+                        {$products_views[] = $products_result[$viewed_product]}
+                    {/if}
+                {/foreach}
+                {if count($products_views) > 0}
+                    {$product_viewed_link = "`$wa->getUrl('shop/frontend/search')`?list=viewed"}
+                    {include file="`$parent_theme_path`/sidebar.products.html"  products=$products_views list_title="[`You watched`]" link_text="[`View all`]" link_url=$product_viewed_link}
+                {/if}
+            {/if}
+        {/if}
+    {/if}
+{/if}
+{/strip}

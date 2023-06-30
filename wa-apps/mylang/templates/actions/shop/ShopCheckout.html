@@ -1,0 +1,47 @@
+<div>
+    <h1>[`Checkout`]</h1>
+    {if isset($checkout['mylang_custom_steps'])}
+        <div>
+            <h3>[`You have custom steps names available only for 1 language:`]</h3>
+            <ul>
+                {foreach $checkout['mylang_custom_steps'] as $step}
+                    <li>{$step} - {$checkout[$step]['name']}</li>
+                {/foreach}
+            </ul>
+        <input type="button" class="button green" id="fixsteps" value="[`Use default`]"/>
+        <span class="hint">[`Names will be changed to use system translations.`]</span>
+        </div>
+        <div class="placeholder"></div>
+    {/if}
+    
+    {if isset($checkout['mylang_custom_fields'])}
+        <div>
+            <h3>[`You have custom fields names available only for 1 language:`]</h3>
+            <ul>
+                {foreach $checkout['mylang_custom_fields'] as $field}
+                    <li>{$field} - {$checkout['contactinfo']['fields'][$field]['localized_names']}
+                    </li>
+                {/foreach}
+            </ul>
+        </div>
+        <input type="button" class="button green" id="fixfields" value="[`Use default`]"/>
+        <span class="hint">[`Names will be changed to use system translations.`]</span>
+    {/if}
+    
+    {if !$modified}
+        <h4><i class="icon16 yes"></i> [`You have default checkout settings and all fields use system translations.`]</h4>
+    {/if}
+</div>
+<script>
+    $('#fixsteps').on('click', function(){
+        $.post('?module=shopjs','action=checkoutFixsteps', function(){
+            $.mylang.checkoutAction();
+        });
+    });
+    
+    $('#fixfields').on('click', function(){
+        $.post('?module=shopjs','action=checkoutFixfields', function(){
+            $.mylang.checkoutAction();
+        });
+    })
+</script>

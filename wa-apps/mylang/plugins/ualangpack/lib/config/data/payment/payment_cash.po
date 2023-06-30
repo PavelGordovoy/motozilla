@@ -1,0 +1,23 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Project-Id-Version: Webasyst Cash plugin 1.0.0.23717 UA translation v0.1\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: /wa-plugins/payment/cash/lib/config/plugin.php:3
+#: //wa-plugins/payment/cash/lib/config/plugin.php:3
+msgid "Cash"
+msgstr "Готівкою"
+
+#: /wa-plugins/payment/cash/lib/config/plugin.php:4
+#: //wa-plugins/payment/cash/lib/config/plugin.php:4
+msgid "Pay in cash upon receipt"
+msgstr "Оплатити готівкою при отриманні"

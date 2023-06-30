@@ -1,0 +1,117 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst Hosting 1.0.5.125 UA translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2020-11-07 08:19+0300\n"
+"Language: uk_UA\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Hosting"
+msgstr "Хостинг"
+
+msgid "Cloud"
+msgstr "Хмара"
+
+msgid "Account"
+msgstr "Акаунт"
+
+msgid "Terms of Service"
+msgstr "Умови надання послуг"
+
+msgid "Domains"
+msgstr "Домени"
+
+msgid "Pricing"
+msgstr "Тарифи"
+
+msgid "Email accounts"
+msgstr "Акаунти email"
+
+msgid "Crontab"
+msgstr "Заплановані завдання (crontab)"
+
+msgid "Connect domain"
+msgstr "Підключення домену"
+
+msgid "Map your .COM domain"
+msgstr "Під&#39;єднати власний домен"
+
+msgid "<strong>Basic reporting.</strong> You are viewing basic version of sales reports. To activate the full version which includes cohort analysis, A/B testing, by-channel sales and profit reporting, ROI and LTV calculation, <a href=\"%s\">upgrade your account</a> to &ldquo;Pro&rdquo; or &ldquo;Premium&rdquo; plan."
+msgstr "<strong>Спрощена звітність.</strong> Ви переглядаєте спрощену версію звітів про продажі. Аби активувати повну версію, яка включає когортний аналіз, A/B-тестування, звітність по каналах продажу та прибутках, підрахунок ROI та LTV, <a href=\"%s\">оновіть свій акаунт</a> до тарифних планів &ldquo;Про&rdquo; або &ldquo;Преміум&rdquo;."
+
+msgid "Site acceleration"
+msgstr "Пришвидшення сайту"
+
+msgid "Custom email templates are disabled in trial accounts. All notifications will use text provided by default. Please upgrade your hosting plan to enjoy full functionality."
+msgstr "Модифікацію шаблонів email-сповіщень вимкнено на пробних акаунтах. Усі сповіщення будуть використовувати текст за замовчуванням. Будь ласка, оновіть свій тарифний план, аби відчути переваги повної функціональності."
+
+msgid "Product cannot be saved. You can have a maximum of %s product SKUs with your pricing plan. To be able to add more products or SKUs, please select another plan."
+msgstr "Не вдається зберегти товар. На поточному тарифі ви можете зберегти максимум %s артикулів. Аби мати змогу додати більше товарів та артикулів, оберіть інший тарифний план, будь ласка."
+
+msgid "Start configuration setup"
+msgstr "Запустити налаштування конфігурації"
+
+msgid "Create a demo store"
+msgstr "Створити демонстраційний магазин"
+
+msgid "Please don’t close your browser window until the process is over."
+msgstr "Будь ласка, не закривайте вікно браузера, поки процес не закінчився."
+
+msgid "Suspended"
+msgstr "Зупинено"
+
+msgid "Extend account"
+msgstr "Подовжити акауни"
+
+msgid "Choose tariff"
+msgstr "Обрати тариф"
+
+msgid "Error"
+msgstr "Помилка"
+
+msgid "Welcome to Webasyst!"
+msgstr "Ласкаво просимо до Webasyst!"
+
+msgid "You can use all functionality free of charge during <strong>7 days</strong> without a confirmation of your email address."
+msgstr "Ви можете користуватися всіма функціями безкоштовно протягом <strong>7 днів</strong> без підтвердження вашої електронної адреси."
+
+msgid "In our message you will also find your login name and password."
+msgstr "У нашому повідомленні ви також знайдете свої логін та пароль для входу."
+
+msgid "Start work"
+msgstr "Почати роботу"
+
+msgid "To continue using Webasyst during <strong>30 days</strong>, please confirm your email address. Just click the confirmation link in the message we have sent you to <strong>%s</strong>."
+msgstr "Аби продовжити використання Webasyst протягом <strong>30 днів</strong>, підтвердьте свою електронну адресу. Просто натисніть посилання підтвердження у повідомленні, яке ми надіслали вам на <strong>%s</strong>."
+
+msgid "Welcome"
+msgstr "Ласкаво просимо"
+
+msgid "close"
+msgstr "закрити"
+
+msgid "Please confirm your email"
+msgstr "Підтвердіть, будь ласка, вашу адресу електронної пошти"
+
+msgid "Please follow this link to confirm your registration:"
+msgstr "Будь ласка, перейдіть за цим посиланням для підтвердження реєстрації:"
+
+msgid "Thank you!"
+msgstr "Дякуємо!"
+
+msgid "..."
+msgstr "..."
+
+msgid "My requests"
+msgstr "Мої запити"

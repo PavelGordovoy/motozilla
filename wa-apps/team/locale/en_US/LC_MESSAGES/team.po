@@ -1,0 +1,1558 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: team\n"
+"POT-Creation-Date: 2022-08-29 09:50+0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: team\n"
+"Language-Team: team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: en_US\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Delete contacts"
+msgstr ""
+
+msgid "Contact deletion cannot be undone."
+msgstr ""
+
+msgid "IMPORTANT NOTE:"
+msgstr ""
+
+msgid "All selected contacts have links to other applications."
+msgstr ""
+
+msgid "Deletion of these contacts is allowed to an Administrator only."
+msgstr ""
+
+msgid "After deletion of these contacts, other applications will refer to non-existent contacts."
+msgstr ""
+
+msgid "Delete anyway"
+msgstr ""
+
+msgid "or"
+msgstr ""
+
+msgid "cancel"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "%d of %d selected contacts shown below have links to other applications."
+msgstr ""
+
+msgid "Delete %d of %d selected"
+msgstr ""
+
+msgid "%d link"
+msgid_plural "%d links"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Online users"
+msgstr ""
+
+msgid "No users online."
+msgstr ""
+
+msgid "Offline"
+msgstr ""
+
+msgid "Last seen"
+msgstr ""
+
+msgid "Online"
+msgstr ""
+
+msgid "Inactive users"
+msgstr ""
+
+msgid "This is a list of users who are no longer members of your team. You have disabled their access to your Webasyst backend."
+msgstr ""
+
+msgid "No inactive users."
+msgstr ""
+
+msgid "Invite new user"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "name@company.com"
+msgstr ""
+
+msgid "Enter an email address to send the new user an invitation with sign-in instructions."
+msgstr ""
+
+msgid "I will enter password on behalf of this user so no invitation will be sent."
+msgstr ""
+
+msgid "Login"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "Confirm password"
+msgstr ""
+
+msgid "Groups"
+msgstr ""
+
+msgid "Locations"
+msgstr ""
+
+msgid "Send"
+msgstr ""
+
+msgid "Add"
+msgstr ""
+
+msgid "No users found."
+msgstr ""
+
+msgid "Invitations"
+msgstr ""
+
+msgid "No invited contacts."
+msgstr ""
+
+msgid "All users"
+msgstr ""
+
+msgid "Name "
+msgstr ""
+
+msgid "Signed up"
+msgstr ""
+
+msgid "Sort by"
+msgstr ""
+
+msgid "No users."
+msgstr ""
+
+msgid "Users"
+msgstr ""
+
+msgid "New user"
+msgstr ""
+
+msgid "Calendar"
+msgstr ""
+
+msgid "Search users"
+msgstr ""
+
+msgid "No groups here"
+msgstr ""
+
+msgid "No locations here"
+msgstr ""
+
+msgid "All contacts"
+msgstr ""
+
+msgid "Access"
+msgstr ""
+
+msgid "API tokens"
+msgstr ""
+
+msgid "Reports"
+msgstr ""
+
+msgid "Plugins"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "me"
+msgstr ""
+
+msgid "Edit access"
+msgstr ""
+
+msgid "The app icon will not be shown in the app menu."
+msgstr ""
+
+msgid "Full admin access to the app and its data."
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Saving"
+msgstr ""
+
+msgid "Saved"
+msgstr ""
+
+msgid "This is your team calendar. Schedule events and user statuses so all your teammates see who is up to on what. Click on a date or drag between dates to add an event."
+msgstr ""
+
+msgid "Previous month"
+msgstr ""
+
+msgid "Next month"
+msgstr ""
+
+msgid "January"
+msgid_plural "January"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "February"
+msgid_plural "February"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "March"
+msgid_plural "March"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "April"
+msgid_plural "April"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "May"
+msgid_plural "May"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "June"
+msgid_plural "June"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "July"
+msgid_plural "July"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "August"
+msgid_plural "August"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "September"
+msgid_plural "September"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "October"
+msgid_plural "October"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "November"
+msgid_plural "November"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "December"
+msgid_plural "December"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Delete this event?"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Event"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "User"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Location"
+msgstr ""
+
+msgid "Start"
+msgstr ""
+
+msgid "When"
+msgstr ""
+
+msgid "End"
+msgstr ""
+
+msgid "Source"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "close"
+msgstr ""
+
+msgid "Event name"
+msgstr ""
+
+msgid "Type description here"
+msgstr ""
+
+msgid "Event location"
+msgstr ""
+
+msgid "Event start"
+msgstr ""
+
+msgid "Event end"
+msgstr ""
+
+msgid "All day"
+msgstr ""
+
+msgid "Label"
+msgstr ""
+
+msgid "Your label"
+msgstr ""
+
+msgid "Preview"
+msgstr ""
+
+msgid "This is how it will look like all around Webasyst"
+msgstr ""
+
+msgid "Create"
+msgstr ""
+
+msgid "Field is empty"
+msgstr ""
+
+msgid "Incorrect date"
+msgstr ""
+
+msgid "Incorrect period"
+msgstr ""
+
+msgid "Empty"
+msgstr ""
+
+msgid "from"
+msgstr ""
+
+msgid "until"
+msgstr ""
+
+msgid "Mon"
+msgstr ""
+
+msgid "Tue"
+msgstr ""
+
+msgid "Wed"
+msgstr ""
+
+msgid "Thu"
+msgstr ""
+
+msgid "Fri"
+msgstr ""
+
+msgid "Sat"
+msgstr ""
+
+msgid "Sun"
+msgstr ""
+
+msgid "more"
+msgstr ""
+
+msgid "days"
+msgstr ""
+
+msgid "Data is broken"
+msgstr ""
+
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "%s's birthday — %s"
+msgstr ""
+
+msgid "Not connected"
+msgstr ""
+
+msgid "Configure"
+msgstr ""
+
+msgid "Personal calendar settings"
+msgstr ""
+
+msgid "unlink"
+msgstr ""
+
+msgid "delete"
+msgstr ""
+
+msgid "No external calendars connected"
+msgstr ""
+
+msgid "Add external calendar"
+msgstr ""
+
+msgid "Edit user"
+msgstr ""
+
+msgid "Change photo"
+msgstr ""
+
+msgid "@"
+msgstr ""
+
+msgid "This user does not belong to any group."
+msgstr ""
+
+msgid "Edit groups"
+msgstr ""
+
+msgid "Access is switched off"
+msgstr ""
+
+msgid "User invitation was sent."
+msgstr ""
+
+msgid "What is Webasyst ID?"
+msgstr ""
+
+msgid "Go to the Webasyst Customer Center"
+msgstr ""
+
+msgid "hide"
+msgstr ""
+
+msgid "Enable sign-in with %s"
+msgstr ""
+
+msgid "show %s weeks"
+msgstr ""
+
+msgid "to"
+msgstr ""
+
+msgid "by day"
+msgstr ""
+
+msgid "by month"
+msgstr ""
+
+msgid "Apply"
+msgstr ""
+
+msgid "All time"
+msgstr ""
+
+msgid "Select dates..."
+msgstr ""
+
+msgid "Last %d day"
+msgid_plural "Last %d days"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "All apps"
+msgstr ""
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Loading..."
+msgstr ""
+
+msgid "No events for this user yet."
+msgstr ""
+
+msgid "change password"
+msgstr ""
+
+msgid "The same password is used to access personal account and backend."
+msgstr ""
+
+msgid "New password"
+msgstr ""
+
+msgid "Sign-in with Webasyst ID"
+msgstr ""
+
+msgid "Disconnect"
+msgstr ""
+
+msgid "Connect your Webasyst ID account and sign into the backend securely with no extra passwords."
+msgstr ""
+
+msgid "How does it work?"
+msgstr ""
+
+msgid "Backend"
+msgstr ""
+
+msgid "Administrator"
+msgstr ""
+
+msgid "This access level is inherited from groups. To change it, please adjust group settings or edit group membership for this user."
+msgstr ""
+
+msgid "You cannot revoke administrative access level for yourself. Only another Administrator can do this."
+msgstr ""
+
+msgid "No access"
+msgstr ""
+
+msgid "Limited access"
+msgstr ""
+
+msgid "Confirm access change"
+msgstr ""
+
+msgid "Cannot set &ldquo;No access&rdquo; because some access rights are inherited from groups. To revoke access rights, edit group settings or group membership for this user."
+msgstr ""
+
+msgid "Invitation sent"
+msgstr ""
+
+msgid "expires"
+msgstr ""
+
+msgid "Login name is required to access your account backend."
+msgstr ""
+
+msgid "E.g., john, agent07, etc."
+msgstr ""
+
+msgid "change login"
+msgstr ""
+
+msgid "Belongs to groups"
+msgstr ""
+
+msgid "&lt;no name&gt;"
+msgstr ""
+
+msgid "&lt;none&gt;"
+msgstr ""
+
+msgid "customize groups"
+msgstr ""
+
+msgid "Access rights"
+msgstr ""
+
+msgid "Backend access rights are customized for every app separately and result from a combination of personal and group access rights."
+msgstr ""
+
+msgid "Disable this contact?"
+msgstr ""
+
+msgid "Block contact"
+msgstr ""
+
+msgid "Enable this contact?"
+msgstr ""
+
+msgid "Unblock contact"
+msgstr ""
+
+msgid "Optional comment about the reason for blocking"
+msgstr ""
+
+msgid "Block"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "never logged in"
+msgstr ""
+
+msgid "last login:"
+msgstr ""
+
+msgid "Create date"
+msgstr ""
+
+msgid "Client id"
+msgstr ""
+
+msgid "Scope"
+msgstr ""
+
+msgid "Last use date"
+msgstr ""
+
+msgid "Expires"
+msgstr ""
+
+msgid "Remove token"
+msgstr ""
+
+msgid "Customer portal"
+msgstr ""
+
+msgid "Available"
+msgstr ""
+
+msgid "Not available"
+msgstr ""
+
+msgid "Customer portal is a part of your site available for registered clients and containing their personal data. To access their customer portals, your clients must log in with an email address and a password."
+msgstr ""
+
+msgid "Manage <a href=\"%s\" class=\"no-underline\">personal portal settings</a> in Site app."
+msgstr ""
+
+msgid "Email address changes history"
+msgstr ""
+
+msgid "Passwords do not match."
+msgstr ""
+
+msgid "Login is required."
+msgstr ""
+
+msgid "The user will not be able to send API requests using this token."
+msgstr ""
+
+msgid "Webasyst ID account <span class=\"bold\">%s</span> is connected."
+msgstr ""
+
+msgid "%sSign-in with Webasyst ID%s is connected."
+msgstr ""
+
+msgid "%sSign-in with Webasyst ID%s is not connected."
+msgstr ""
+
+msgid "ID"
+msgstr ""
+
+msgid "Added"
+msgstr ""
+
+msgid "Method"
+msgstr ""
+
+msgid "map"
+msgstr ""
+
+msgid "other"
+msgstr ""
+
+msgid "which?"
+msgstr ""
+
+msgid "Add another"
+msgstr ""
+
+msgid "required"
+msgstr ""
+
+msgid "year"
+msgstr ""
+
+msgid "Incorrect email address format."
+msgstr ""
+
+msgid "Incorrect URL format."
+msgstr ""
+
+msgid "Must be a number."
+msgstr ""
+
+msgid "no name"
+msgstr ""
+
+msgid "This is a required field."
+msgstr ""
+
+msgid "At least one of these fields must be completed."
+msgstr ""
+
+msgid "Connect external calendar"
+msgstr ""
+
+msgid "Inner calendars"
+msgstr ""
+
+msgid "External calendars"
+msgstr ""
+
+msgid "External calendar"
+msgstr ""
+
+msgid "Integration levels"
+msgstr ""
+
+msgid "Load authorize page"
+msgstr ""
+
+msgid "Connect & import events"
+msgstr ""
+
+msgid "Import events"
+msgstr ""
+
+msgid "You need to install any calendar plugin before connecting external calendars."
+msgstr ""
+
+msgid "Use <a class=\"js-edit-group inline-link\" href=\"%s\"><b><i>Plugins</i></b></a> section to install plugin you need."
+msgstr ""
+
+msgid "Register application on %s"
+msgstr ""
+
+msgid "Connect %s account:"
+msgstr ""
+
+msgid "External calendar type"
+msgstr ""
+
+msgid "specify settings"
+msgstr ""
+
+msgid "Continue"
+msgstr ""
+
+msgid "Delete this calendar?"
+msgstr ""
+
+msgid "This calendar is empty. No events will be deleted."
+msgstr ""
+
+msgid "%d event in this calendar will be deleted"
+msgid_plural "%d events in this calendar will be deleted"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "%d connection to external calendars will be deleted"
+msgid_plural "%d connections to external calendars will be deleted"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Confirm calendar unlinking"
+msgstr ""
+
+msgid "Also delete all events imported from this calendar "
+msgstr ""
+
+msgid "%d event"
+msgid_plural "%d events"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Are you sure to unlink \"%s\"?"
+msgstr ""
+
+msgid "Are you sure to delete \"%s\"?"
+msgstr ""
+
+msgid "Edit calendar"
+msgstr ""
+
+msgid "New calendar"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Calendar name"
+msgstr ""
+
+msgid "Style"
+msgstr ""
+
+msgid "Background color"
+msgstr ""
+
+msgid "Font color"
+msgstr ""
+
+msgid "Selected user groups only"
+msgstr ""
+
+msgid "Select user groups which you want to be able to control events in this calendar:"
+msgstr ""
+
+msgid "This group does not have access to Team app."
+msgstr ""
+
+msgid "There are no user groups in your Webasyst installation."
+msgstr ""
+
+msgid "Add groups to be able to manage access to calendars."
+msgstr ""
+
+msgid "Default status"
+msgstr ""
+
+msgid "Default label for adding a user status in this calendar"
+msgstr ""
+
+msgid "Customize group access rights using the <a class=\"js-edit-group inline-link\" href=\"%s\"><b><i>Manage group</i></b></a> mode."
+msgstr ""
+
+msgid "unlink calendar"
+msgstr ""
+
+msgid "Minimal access"
+msgstr ""
+
+msgid "Full access"
+msgstr ""
+
+msgid "Remove"
+msgstr ""
+
+msgid "Welcome to the team!"
+msgstr ""
+
+msgid "Webasyst is a great way for teams to work together online and share access to apps and data. Enter your teammates email addresses, and Webasyst will automatically create user accounts and send invitations."
+msgstr ""
+
+msgid "Add more people"
+msgstr ""
+
+msgid "Send invitations"
+msgstr ""
+
+msgid "add teammates manually later"
+msgstr ""
+
+msgid "<em>Full access</em> means the freedom of using all functions available in all installed apps. <em>Minimal access</em> limits the range of available functions only to viewing and editing personal profile in Team app. Later on you will be able to set up personal access rights to individual apps for each user."
+msgstr ""
+
+msgid "Invalid email address"
+msgstr ""
+
+msgid "You can sign in with a login name and a password or use a different Webasyst ID account."
+msgstr ""
+
+msgid "Failed to get Webasyst ID account data from the Webasyst resource server."
+msgstr ""
+
+msgid "Webasyst ID account %s is already connected to a backend user."
+msgstr ""
+
+msgid "Sign up as a new user"
+msgstr ""
+
+msgid "Please specify login and password to create new backend user."
+msgstr ""
+
+msgid "Password (again)"
+msgstr ""
+
+msgid "Save and proceed"
+msgstr ""
+
+msgid "What is it?"
+msgstr ""
+
+msgid "Sign in with %s"
+msgstr ""
+
+msgid "Manage group"
+msgstr ""
+
+msgid "Add group description"
+msgstr ""
+
+msgid "No users in this group."
+msgstr ""
+
+msgid "To add a user to %s, either use <a class=\"js-edit-group inline-link\" href=\"%s\"><b><i>Manage group</i></b></a> mode, or drag a user to this group in the sidebar."
+msgstr ""
+
+msgid "To add a user to %s, use <a class=\"inline-link\"><b><i><a class=\"js-edit-group\" href=\"%s\">Manage group</a></i></b></a> mode."
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Access level selected for this group will be applied to all its members."
+msgstr ""
+
+msgid "To extend access rights of individual users within the group, edit their personal access settings."
+msgstr ""
+
+msgid "Delete this group?"
+msgstr ""
+
+msgid "No users will be deleted."
+msgstr ""
+
+msgid "Add to group"
+msgstr ""
+
+msgid "Remove from group"
+msgstr ""
+
+msgid "Manage access"
+msgstr ""
+
+msgid "Edit group"
+msgstr ""
+
+msgid "Delete group"
+msgstr ""
+
+msgid "Find and add user"
+msgstr ""
+
+msgid "Users in this group"
+msgstr ""
+
+msgid "Others users"
+msgstr ""
+
+msgid "All users in this group."
+msgstr ""
+
+msgid "User added"
+msgstr ""
+
+msgid "Already in group"
+msgstr ""
+
+msgid "New group"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "Group"
+msgstr ""
+
+msgid "Location "
+msgstr ""
+
+msgid "Icon"
+msgstr ""
+
+msgid "Address"
+msgstr ""
+
+msgid "Specified address not found on map"
+msgstr ""
+
+msgid "Group name is mandatory."
+msgstr ""
+
+msgid "Address is needed"
+msgstr ""
+
+msgid "To connect an external calendar:"
+msgstr ""
+
+msgid "Open your user profile."
+msgstr ""
+
+msgid "Under the calendar, click <strong>“Personal calendar settings”</strong>."
+msgstr ""
+
+msgid "Select <strong>“Add external calendar”</strong>."
+msgstr ""
+
+msgid "Select <strong>“%s”</strong> and confirm your choice."
+msgstr ""
+
+msgid "Complete settings fields using provided hints and save the changes."
+msgstr ""
+
+msgid "Connect your %s now"
+msgstr ""
+
+msgid "Unknown user"
+msgstr ""
+
+msgid "No API tokens."
+msgstr ""
+
+msgid "Calendars"
+msgstr ""
+
+msgid "Add calendar"
+msgstr ""
+
+msgid "User name format"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Expires in"
+msgstr ""
+
+msgid "Send again"
+msgstr ""
+
+msgid "Link to invitation"
+msgstr ""
+
+msgid "Sending"
+msgstr ""
+
+msgid "Sent"
+msgstr ""
+
+msgid "Copied"
+msgstr ""
+
+msgid "By email"
+msgstr ""
+
+msgid "By link"
+msgstr ""
+
+msgid "Enter login name & password"
+msgstr ""
+
+msgid "Enter a login name and a password for this user without sending an invitation."
+msgstr ""
+
+msgid "First name"
+msgstr ""
+
+msgid "Last name"
+msgstr ""
+
+msgid "If neither first name nor last name are specified then the invitation date will be used as a temporary name."
+msgstr ""
+
+msgid "The user will access"
+msgstr ""
+
+msgid "Create link"
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+msgid "Done"
+msgstr ""
+
+msgid "Creating an<span class=\"desktop-and-tablet-only\"> invitation</span>"
+msgstr ""
+
+msgid "Alphabetically"
+msgstr ""
+
+msgid "By signup date"
+msgstr ""
+
+msgid "never"
+msgstr ""
+
+msgid "Show navigation"
+msgstr ""
+
+msgid "Invite"
+msgstr ""
+
+msgid "Add group"
+msgstr ""
+
+msgid "Add location"
+msgstr ""
+
+msgid "Access inherited from user groups."
+msgstr ""
+
+msgid "Access granted for the user individually."
+msgstr ""
+
+msgid "Status will be displayed next to the user name in various apps."
+msgstr ""
+
+msgid "Events are visible in calendars only."
+msgstr ""
+
+msgid "Webasyst ID is connected"
+msgstr ""
+
+msgid "Last sign-in"
+msgstr ""
+
+msgid "Connect Webasyst ID"
+msgstr ""
+
+msgid "Sign into your Webasyst backend with 2-factor authentication (2FA) and get convenient access to all Webasyst services and mobile apps."
+msgstr ""
+
+msgid "Webasyst ID is not connected"
+msgstr ""
+
+msgid "User %s has not connected Webasyst ID yet. Secure sign-in option with 2-factor authentication (2FA) for your Webasyst backend and access to all Webasyst services and mobile apps will become available only when Webasyst ID is connected."
+msgstr ""
+
+msgid "Email instructions"
+msgstr ""
+
+msgid "Email again"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "OK"
+msgstr ""
+
+msgid "%sEnable sign-in with Webasyst ID%s so that your teammates can use all Webasyst services and mobile apps and can enable secure sign-in with 2-factor authentication (2FA)."
+msgstr ""
+
+msgid "Contacts"
+msgstr ""
+
+msgid "email"
+msgstr ""
+
+msgid "no data"
+msgstr ""
+
+msgid "phone"
+msgstr ""
+
+msgid "More details"
+msgstr ""
+
+msgid "CRM"
+msgstr ""
+
+msgid "Auto"
+msgstr ""
+
+msgid "Contact info"
+msgstr ""
+
+msgid "Upload or drag & drop a photo"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "Select all"
+msgstr ""
+
+msgid "Unselect"
+msgstr ""
+
+msgid "Choose file"
+msgstr ""
+
+msgid "The cover can show 8 photos at most. To change the order of photos drag them in the list."
+msgstr ""
+
+msgid "Not an image or invalid image:"
+msgstr ""
+
+msgid "Nothing selected"
+msgstr ""
+
+msgid "Remove selected"
+msgstr ""
+
+msgid "Required parameter is missing."
+msgstr ""
+
+msgid "Change password"
+msgstr ""
+
+msgid "Change login name"
+msgstr ""
+
+msgid "Customize groups"
+msgstr ""
+
+msgid "Unblock"
+msgstr ""
+
+msgid "Color"
+msgstr ""
+
+msgid "Custom color"
+msgstr ""
+
+msgid "Custom icon"
+msgstr ""
+
+msgid "Customize group access rights using the <a class=\"js-edit-group inline-link\" href=\"%s\">Manage group</a> mode."
+msgstr ""
+
+msgid "Add teammates manually later"
+msgstr ""
+
+msgid "Change"
+msgstr ""
+
+msgid "Set up members"
+msgstr ""
+
+msgid "You can also drag a user to this group in the sidebar."
+msgstr ""
+
+msgid "To add a user to <span class=\"bold\">%s</span>, use the <a href=\"%s\">Manage group</a> mode."
+msgstr ""
+
+msgid "To add a user to %s, use <a href=\"%s\">Manage group</a> mode."
+msgstr ""
+
+msgid "Office location. E.g., 100 5th Avenue, New York."
+msgstr ""
+
+msgid "Status & event calendars"
+msgstr ""
+
+msgid "Map in user profiles"
+msgstr ""
+
+msgid "Online map settings"
+msgstr ""
+
+msgid "Can be used to display online maps on user and office-viewing pages."
+msgstr ""
+
+msgid "Check your key first of all <a href=\"{$wa_app_url}settings/\">here</a>"
+msgstr ""
+
+msgid "Google map error, probably key in settings is invalid."
+msgstr ""
+
+msgid "All calendars"
+msgstr ""
+
+msgid "Birthday"
+msgstr ""
+
+msgid "Total:"
+msgstr ""
+
+msgid "Folders:"
+msgstr ""
+
+msgid "Files:"
+msgstr ""
+
+msgid "prev"
+msgstr ""
+
+msgid "next"
+msgstr ""
+
+msgid "%s - Uninstalled"
+msgstr ""
+
+msgid "Uninstalled or not existed plugin"
+msgstr ""
+
+msgid "Plugin not found"
+msgstr ""
+
+msgid "Already in our team!"
+msgstr ""
+
+msgid "This contact was banned."
+msgstr ""
+
+msgid "This does not look like a valid email address."
+msgstr ""
+
+msgid "This does not look like a valid phone number."
+msgstr ""
+
+msgid "This installation is not connected to Webasyst ID."
+msgstr ""
+
+msgid "Invitation token cannot be created."
+msgstr ""
+
+msgid "Access denied"
+msgstr ""
+
+msgid "Unknown action"
+msgstr ""
+
+msgid "The token was not transferred."
+msgstr ""
+
+msgid "You cannot delete yourself."
+msgstr ""
+
+msgid "Only Administrator can delete backend users."
+msgstr ""
+
+msgid "You need full access to Team app to be able to delete contacts."
+msgstr ""
+
+msgid "Only Administrator can delete contacts that have links to other applications."
+msgstr ""
+
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "%d contact has been deleted"
+msgid_plural "%d contacts have been deleted"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Today"
+msgstr ""
+
+msgid "Tomorrow"
+msgstr ""
+
+msgid "Yesterday"
+msgstr ""
+
+msgid "Name is required"
+msgstr ""
+
+msgid "A login name is required."
+msgstr ""
+
+msgid "Invalid login name."
+msgstr ""
+
+msgid "This login is already set for another user"
+msgstr ""
+
+msgid "Specified password is too long."
+msgstr ""
+
+msgid "Password must not be empty."
+msgstr ""
+
+msgid "This login name is already being used by user %s."
+msgstr ""
+
+msgid "Authorization with Webasyst ID has failed, try to log in with a login name and a password."
+msgstr ""
+
+msgid "deleted contact_id="
+msgstr ""
+
+msgid "Reason for blocking:"
+msgstr ""
+
+msgid "Access disabled by %1$s, %2$s"
+msgstr ""
+
+msgid "Not added"
+msgstr ""
+
+msgid "Not allowed MIME type. Supported types are gif, jpg (jpeg), png."
+msgstr ""
+
+msgid "External calendar not found"
+msgstr ""
+
+msgid "Authorize failed"
+msgstr ""
+
+msgid "External calendar plugin not found"
+msgstr ""
+
+msgid "Calendar not found"
+msgstr ""
+
+msgid "Not enabled level of integration"
+msgstr ""
+
+msgid "Group not found"
+msgstr ""
+
+msgid "Plugin settings page"
+msgstr ""
+
+msgid "Administrators"
+msgstr ""
+
+msgid "My office"
+msgstr ""
+
+msgid "Remote"
+msgstr ""
+
+msgid "%d contact"
+msgid_plural "%d contacts"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "<span class=\"activity-action gray\">added</span> %s <span class=\"activity-action gray\">to group</span> %s"
+msgstr ""
+
+msgid "<span class=\"activity-action gray\">removed</span> %s <span class=\"activity-action gray\">from group</span> %s"
+msgstr ""
+
+msgid "deleted"
+msgstr ""
+
+msgid "\"%s\""
+msgstr ""
+
+msgid "Deleted contact"
+msgstr ""
+
+msgid "has deleted"
+msgstr ""
+
+msgid "has deleted contacts"
+msgstr ""
+
+msgid "has deleted contact"
+msgstr ""
+
+msgid "%s and %s more"
+msgstr ""
+
+msgid "Contact with id = %s doesn't exist"
+msgstr ""
+
+msgid "Can edit self contact info"
+msgstr ""
+
+msgid "Can add users"
+msgstr ""
+
+msgid "Can add groups"
+msgstr ""
+
+msgid "View only"
+msgstr ""
+
+msgid "Edit users data"
+msgstr ""
+
+msgid "Can manage users in groups"
+msgstr ""
+
+msgid "Can manage groups"
+msgstr ""
+
+msgid "Can edit events in calendars"
+msgstr ""
+
+msgid "granted backend access rights"
+msgstr ""
+
+msgid "revoked backend access rights"
+msgstr ""
+
+msgid "deleted contact"
+msgstr ""
+
+msgid "edited contact"
+msgstr ""
+
+msgid "invited"
+msgstr ""
+
+msgid "created group"
+msgstr ""
+
+msgid "changed group"
+msgstr ""
+
+msgid "deleted group"
+msgstr ""
+
+msgid "created event"
+msgstr ""
+
+msgid "changed event"
+msgstr ""
+
+msgid "deleted event"
+msgstr ""
+
+msgid "created calendar"
+msgstr ""
+
+msgid "changed calendar"
+msgstr ""
+
+msgid "deleted calendar"
+msgstr ""
+
+msgid "Timeline"
+msgstr ""
+
+msgid "User access"
+msgstr ""
+
+msgid "Stats"
+msgstr ""
+
+msgid ":status until :till_end_date"
+msgstr ""
+
+msgid ":status from :from_start_date until :until_end_date"
+msgstr ""
+
+msgid "Import only"
+msgstr ""
+
+msgid "All entries available in an external calendar will be imported into your Webasyst account. No data will be exported from Webasyst to an external calendar."
+msgstr ""
+
+msgid "Import + export of changes and deletions"
+msgstr ""
+
+msgid "All entries available in an external calendar will be imported into your Webasyst account. From Webasyst to an external calendar will be exported only your changes and deletions; newly added entries will not be exported to an external calendar."
+msgstr ""
+
+msgid "Full data synchronization"
+msgstr ""
+
+msgid "All entries available in an external calendar will be imported into your Webasyst account. From Webasyst to an external calendar will be exported newly added entries as well as your changes and deletions."
+msgstr ""

@@ -1,0 +1,113 @@
+{*
+* @author Gaponov Igor <gapon2401@gmail.com>
+    *}
+
+{if $forms}
+    <div class="page-settings align-center block">
+        <span class='inline-block'><b class='highlight'>{$items_per_page*($current_page_num -1) + 1}-{count($forms)+$items_per_page*($current_page_num-1)}</b> [`of`] <b class='highlight'>{$forms_count}</b></span>
+        {if $forms_count > 10}
+            <div class='paging-count'>
+                <form method="post" action="{$wa->currentUrl(0,1)}">
+                    {$wa->csrf()}
+                    <select id="paginator" name="items_per_page" onchange="$(this).closest('form').submit()">
+                        <option value="10" {if $items_per_page == 10}selected="selected"{/if}>10</option>
+                        <option value="20" {if $items_per_page == 20}selected="selected"{/if}>20</option>
+                        <option value="50" {if $items_per_page == 50}selected="selected"{/if}>50</option>
+                        <option value="100" {if $items_per_page == 100}selected="selected"{/if}>100</option>
+                        <option value="500" {if $items_per_page == 500}selected="selected"{/if}>500</option>
+                    </select>
+                </form>
+            </div>
+        {/if}
+    </div>
+    {if $total_pages_num > 1}
+        <div class="pagination align-center">
+            {include file="./../../pagination.html" total_pages_num = $total_pages_num current_page_num= $current_page_num module=backend}
+        </div>
+    {/if}
+
+    {$contact_rights = $wa->user()->getRights('contacts')}
+    {$limited_rights = $wa->user()->getRights('multiform', 'backend')}
+
+    <table class="zebra black">
+        <tr>
+            <th class='min-width'></th>
+            <th onclick='$.backend.orderByAction($(this), "name")' class="sort-field{if !empty($sort) && $sort.field == 'name'} active{/if}">[`Forms`]{if !empty($sort) && $sort.field == 'name'} <i class="icon16 {if $sort.direction == 'asc'}uarr{else}darr{/if}"></i>{/if}</th>
+            <th onclick='$.backend.orderByAction($(this), "count")' class="sort-field{if !empty($sort) && $sort.field == 'count'} active{/if}">[`Records`]{if !empty($sort) && $sort.field == 'count'} <i class="icon16 {if $sort.direction == 'asc'}uarr{else}darr{/if}"></i>{/if}</th>
+            <th>[`Actions`]</th>
+            <th onclick='$.backend.orderByAction($(this), "create_datetime")' class="sort-field{if !empty($sort) && $sort.field == 'create_datetime'} active{/if}">[`Created`]{if !empty($sort) && $sort.field == 'create_datetime'} <i class="icon16 {if $sort.direction == 'asc'}uarr{else}darr{/if}"></i>{/if}</th>
+            <th onclick='$.backend.orderByAction($(this), "last_record")' class="sort-field{if !empty($sort) && $sort.field == 'last_record'} active{/if}">[`Last record`]{if !empty($sort) && $sort.field == 'last_record'} <i class="icon16 {if $sort.direction == 'asc'}uarr{else}darr{/if}"></i>{/if}</th>
+            {if !empty($contact_rights['backend'])}
+                <th onclick='$.backend.orderByAction($(this), "create_by")' class="sort-field{if !empty($sort) && $sort.field == 'create_by'} active{/if}">[`Created by`]{if !empty($sort) && $sort.field == 'create_by'} <i class="icon16 {if $sort.direction == 'asc'}uarr{else}darr{/if}"></i>{/if}</th>
+            {/if}
+            <th onclick='$.backend.orderByAction($(this), "start")' class="sort-field{if !empty($sort) && $sort.field == 'start'} active{/if}">[`Start`]{if !empty($sort) && $sort.field == 'start'} <i class="icon16 {if $sort.direction == 'asc'}uarr{else}darr{/if}"></i>{/if}</th>
+            <th onclick='$.backend.orderByAction($(this), "end")' class="sort-field{if !empty($sort) && $sort.field == 'end'} active{/if}">[`Stop`]{if !empty($sort) && $sort.field == 'end'} <i class="icon16 {if $sort.direction == 'asc'}uarr{else}darr{/if}"></i>{/if}</th>
+            {if $wa->user()->getRights('multiform', 'appearance') || $wa->user()->isAdmin('multiform')}
+                <th>[`Theme`]</th>
+            {/if}
+            <th class='min-width'></th>
+        </tr>
+        {foreach $forms as $f}
+
+            {if multiformHelper::hasFullFormAccess($f)}{$has_access = 1}{else}{$has_access = 0}{/if}
+            <tr data-id="{$f.id}">
+                <td>{if $has_access}<a href="#/change/status/{$f.id}" class='js-action' title='[`Change status`]' data-type="formStatus"><i class="icon-custom lightbulb{if !$f.status}-off{/if}"></i></a>{/if}</td>
+                <td>
+                    {if $has_access}
+                        <a href="#/copy/form/{$f.id}" class='js-action' title='[`Duplicate`]'><i class="icon-custom copy"></i></a>
+                    {/if}
+                    {$form_name_link = $f.id}
+                    {if ($limited_rights == '1' && !empty($f.has_record_access) && empty($f.has_edit_access))
+                        || ($limited_rights == '1' && !empty($f.has_record_access) && !empty($settings['backend-form-name-link']) && $settings['backend-form-name-link'] == 'records')
+                        || ($has_access && !empty($settings['backend-form-name-link']) && $settings['backend-form-name-link'] == 'records')
+                    }
+                        {$form_name_link = "`$form_name_link`#/page/records/`$f.id`/"}
+                    {/if}
+                    <a href="?module=form&action=edit&id={$form_name_link}" title='{$f.name|escape}'{if !empty($f.unviewed_records)} style="font-weight: 600"{/if}>
+                        {if !$f.type}<i class="icon16 lock" title='[`Private form`]'></i> {/if}
+                        {if $f.start && $f.start|wa_datetime:'U' > $smarty.now}<i class="icon16 clock" title='[`Has schedule`]'></i> {/if}
+                        {if $f.end && $f.end|wa_datetime:'U' < $smarty.now}<i class="icon16 exclamation-red" title='[`Form is hidden according to schedule`]'></i> {/if}
+                        {if $f.name}{$f.name|escape}{else}[`No name`]{/if}
+                        {if !empty($f.unviewed_records)}<span class="indicator">{$f.unviewed_records|escape}</span>{/if}
+                    </a>
+                </td>
+                <td>{$f.count}</td>
+                <td>
+                    {if ($limited_rights == '1' && !empty($f.has_record_access)) || $has_access}<a href="?module=form&action=edit&id={$f.id}#/page/records/{$f.id}/" title='[`records`]'><i class="icon16 view-table"></i> [`records`]</a>{/if}
+                    {if ($limited_rights == '1' && !empty($f.has_edit_access)) || $has_access}| <a href="?module=form&action=edit&id={$f.id}" title='[`edit`]'><i class="icon16 edit"></i> [`edit`]</a>{/if}
+                </td>
+                <td>{if $f.create_datetime}{$f.create_datetime|wa_datetime:'date'}<br><span class="small">{$f.create_datetime|wa_datetime:'fulltime'}</span>{/if}</td>
+                <td>{if $f.last_record}{$f.last_record|wa_datetime:'date'}<br><span class="small">{$f.last_record|wa_datetime:'fulltime'}</span>{/if}</td>
+                {if !empty($contact_rights['backend'])}
+                    <td>{if !empty($contacts[$f.create_contact_id])}<a href='{$wa_backend_url}contacts/#/contact/{$f.create_contact_id}'>{if $contacts[$f.create_contact_id].name}{$contacts[$f.create_contact_id].name|escape}{else}[`No name`]{/if}</a>{else}[`Unknown`]{/if}</td>
+                {/if}
+                <td class="align-center">{if $f.start}{$f.start|wa_datetime:'date'}<br><span class="small">{$f.start|wa_datetime:'fulltime'}</span>{/if}</td>
+                <td class="align-center">{if $f.end}{$f.end|wa_datetime:'date'}<br><span class="small">{$f.end|wa_datetime:'fulltime'}</span>{/if}</td>
+                {if $wa->user()->getRights('multiform', 'appearance') || $wa->user()->isAdmin('multiform')}
+                    <td>
+                        <select onchange="$.backend.changeTheme(this)">
+                            <option value="0">[`Default theme`]</option>
+                            {if !empty($themes)}
+                                {foreach $themes as $theme}
+                                    <option value="{$theme.id}"{if !empty($f.theme_id) && $f.theme_id == $theme.id} selected{/if}>{$theme.name|escape}</option>
+                                {/foreach}
+                            {/if}
+                        </select>
+                    </td>
+                {/if}
+                <td>{if $has_access}<a href="#/delete/form/{$f.id}" class="js-action" title='[`Delete`]'><i class="icon16 delete"></i></a>{/if}</td>
+            </tr>
+        {/foreach}
+    </table>
+{else}
+    <div class="big-arrow"><img src="{$wa_app_static_url}img/big-arrow.png" /></div>
+    <p class='align-center'>[`You havent't created any forms yet. Do it right now!`]</p>
+    {if $wa->userRights("create") || $wa->userRights("backend") > 1}
+        <p class='align-center'><a href="?module=form&action=edit" title='[`Create form`]'><i class="icon16 add"></i> [`Create form`]</a></p>
+    {/if}
+{/if}
+ <script>
+    $(function() {
+        $.backend.init();
+    });
+</script>

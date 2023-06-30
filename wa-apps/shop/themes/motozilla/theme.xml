@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE theme PUBLIC "wa-app-theme" "http://www.webasyst.com/wa-content/xml/wa-app-theme.dtd">
+<theme id="motozilla" system="0" vendor="Trost" author="Trost" app="shop" version="1.0" edition="1">
+  <name locale="en_US">Motozilla</name>
+  <name locale="ru_RU">Motozilla</name>
+  <description locale="en_US">Our own Motozilla design</description>
+  <description locale="ru_RU">Наш собственный дизайн Motozilla</description>
+  <files>
+    <file path="index.html" parent="1">
+        </file>
+<!--    <file path="epika.site.css" parent="1">-->
+<!--        </file>-->
+<!--    <file path="js/epika.shop.js" parent="1">-->
+<!--        </file>-->
+<!--    <file path="head.html">-->
+<!--      <description locale="en_US">Shop-Script's &lt;head&gt; instructions</description>-->
+<!--      <description locale="en_US">Блок &lt;head&gt; приложения Shop-Script</description>-->
+<!--    </file>-->
+<!--    <file path="header.html" custom="0" modified="1">-->
+<!--      <description locale="en_US">App specific header content</description>-->
+<!--      <description locale="ru_RU"/>-->
+<!--    </file>-->
+<!--    <file path="main.html">-->
+<!--      <description locale="en_US">Main storefront layout and navigation</description>-->
+<!--      <description locale="ru_RU">Основное макет вывода содержимого и навигации в интернет-магазине</description>-->
+<!--    </file>-->
+<!--    <file path="footer.html" custom="0" modified="1">-->
+<!--      <description locale="en_US">App specific footer content</description>-->
+<!--      <description locale="ru_RU"/>-->
+<!--    </file>-->
+<!--      <file path="category.html" custom="0" modified="1">-->
+<!--        <description locale="en_US">Wrapper for a category page</description>-->
+<!--        <description locale="ru_RU"/>-->
+<!--      </file>-->
+<!--      <file path="list-thumbs-zeus.html">-->
+<!--        <description locale="en_US">Product list thumbnail view</description>-->
+<!--        <description locale="ru_RU">Список товаров</description>-->
+<!--      </file>-->
+<!--      <file path="list-thumbs-mini-vertical-zeus.html">-->
+<!--        <description locale="en_US">Product list thumbnail view</description>-->
+<!--        <description locale="ru_RU">Список просмотренных товаров</description>-->
+<!--      </file>-->
+<!--      <file path="list-thumbs-mini.html" parent="1">-->
+<!--        <description locale="en_US">Recommended product list (mini thumbnails)</description>-->
+<!--        <description locale="ru_RU">Список рекомендуемых товаров (маленькими эскизами)</description>-->
+<!--      </file>-->
+<!--      <file path="product.html" custom="0" modified="1">-->
+<!--        <description locale="en_US">Dedicated product page</description>-->
+<!--        <description locale="ru_RU"/>-->
+<!--      </file>-->
+<!--      <file path="product.cart.html">-->
+<!--        <description locale="en_US">Product add to cart block</description>-->
+<!--        <description locale="ru_RU">Блок добавления товара в корзину</description>-->
+<!--      </file>-->
+<!--      <file path="product.js" parent="1">-->
+<!--        <description locale="en_US">Product page JS</description>-->
+<!--        <description locale="ru_RU">JS-скрипты страницы товара</description>-->
+<!--      </file>-->
+<!--      <file path="product.page.html">-->
+<!--        <description locale="en_US">Product static subpage content</description>-->
+<!--        <description locale="ru_RU">Информационная подстраница товара</description>-->
+<!--      </file>-->
+<!--      <file path="review.html">-->
+<!--        <description locale="en_US">A single product review template</description>-->
+<!--        <description locale="ru_RU">Шаблон вывода одного отзыва о товаре</description>-->
+<!--      </file>-->
+<!--      <file path="reviews.html">-->
+<!--        <description locale="en_US">Product review list</description>-->
+<!--        <description locale="ru_RU">Список отзывов о товаре</description>-->
+<!--      </file>-->
+<!--      <file path="compare.html">-->
+<!--        <description locale="en_US">Product comparison</description>-->
+<!--        <description locale="ru_RU">Сравнение товаров</description>-->
+<!--      </file>-->
+<!--      <file path="cart.html">-->
+<!--        <description locale="en_US">Shopping cart page</description>-->
+<!--        <description locale="ru_RU">Страница с товарами корзины</description>-->
+<!--      </file>-->
+<!--      <file path="cart.js" parent="1">-->
+<!--        <description locale="en_US">Cart JS</description>-->
+<!--        <description locale="ru_RU">JS-скрипты корзины</description>-->
+<!--      </file>-->
+<!--      <file path="checkout.html">-->
+<!--        <description locale="en_US">Checkout core wrapper</description>-->
+<!--        <description locale="ru_RU">Единый шаблон страниц оформления заказа</description>-->
+<!--      </file>-->
+<!--      <file path="checkout.shipping.html">-->
+<!--        <description locale="en_US">Checkout: shipping option selection</description>-->
+<!--        <description locale="ru_RU">Оформление заказа: выбор способа доставки</description>-->
+<!--      </file>-->
+<!--      <file path="checkout.payment.html">-->
+<!--        <description locale="en_US">Checkout: payment option selection</description>-->
+<!--        <description locale="ru_RU">Оформление заказа: выбор способа доставки</description>-->
+<!--      </file>-->
+<!--      <file path="checkout.contactinfo.html">-->
+<!--        <description locale="en_US">Checkout: customer contact information form</description>-->
+<!--        <description locale="ru_RU">Оформление заказа: выбор способа доставки</description>-->
+<!--      </file>-->
+<!--      <file path="checkout.confirmation.html">-->
+<!--        <description locale="en_US">Checkout: order confirmation</description>-->
+<!--        <description locale="ru_RU">Оформление заказа: выбор способа доставки</description>-->
+<!--      </file>-->
+<!--      <file path="checkout.success.html" custom="0" modified="1">-->
+<!--        <description locale="en_US">Checkout: thank you page</description>-->
+<!--        <description locale="ru_RU"></description>-->
+<!--      </file>-->
+<!--      <file path="checkout.error.html">-->
+<!--        <description locale="en_US">Checkout: error page</description>-->
+<!--        <description locale="ru_RU">Оформление заказа: выбор способа доставки</description>-->
+<!--      </file>-->
+<!--      <file path="my.nav.html">-->
+<!--        <description locale="en_US">Customer account navigation menu</description>-->
+<!--        <description locale="ru_RU">Меню навигации в личном кабинете покупателя</description>-->
+<!--      </file>-->
+<!--      <file path="my.affiliate.html">-->
+<!--        <description locale="en_US">Customer account interface: affiliate program</description>-->
+<!--        <description locale="ru_RU">Личный кабинет покупателя: партнерская программа</description>-->
+<!--      </file>-->
+<!--      <file path="my.profile.html" parent="1">-->
+<!--          </file>-->
+<!--      <file path="my.orders.html">-->
+<!--        <description locale="en_US">Customer account interface: order list</description>-->
+<!--        <description locale="ru_RU">Личный кабинет покупателя: список заказов</description>-->
+<!--      </file>-->
+<!--      <file path="my.order.html">-->
+<!--        <description locale="en_US">Customer account interface: single order information</description>-->
+<!--        <description locale="ru_RU">Личный кабинет покупателя: информация о заказе</description>-->
+<!--      </file>-->
+<!--      <file path="home.html" custom="0" modified="1">-->
+<!--        <description locale="en_US">Storefront homepage</description>-->
+<!--        <description locale="ru_RU"/>-->
+<!--      </file>-->
+<!--      <file path="search.html">-->
+<!--        <description locale="en_US">Wrapper for product search (filtering) results, e.g. by name, tag, or manufacturer</description>-->
+<!--        <description locale="ru_RU">Обертка для страницы поиска (фильтрации) товаров, например, по тегу, ключевому слову или производителю</description>-->
+<!--      </file>-->
+<!--      <file path="page.html">-->
+<!--        <description locale="en_US">Static page content</description>-->
+<!--        <description locale="ru_RU">Содержимое информационной страницы</description>-->
+<!--      </file>-->
+<!--      <file path="login.html" parent="1">-->
+<!--          </file>-->
+<!--      <file path="signup.html" parent="1">-->
+<!--          </file>-->
+<!--      <file path="forgotpassword.html" parent="1">-->
+<!--          </file>-->
+<!--      <file path="error.html" parent="1">-->
+<!--          </file>-->
+<!--      <file path="epika.js" parent="1">-->
+<!--          </file>-->
+<!--      <file path="js/reviews.js">-->
+<!--        <description locale="en_US">Reviews JS</description>-->
+<!--        <description locale="ru_RU">Скрипты отзывов</description>-->
+<!--      </file>-->
+<!--      <file path="searchpro_plugin_field.css" custom="1" modified="1">-->
+<!--        <description locale="ru_RU">Таблица стилей плагина "Поиск PRO" — Таблица стилей поля поиска</description>-->
+<!--      </file>-->
+  </files>
+</theme>

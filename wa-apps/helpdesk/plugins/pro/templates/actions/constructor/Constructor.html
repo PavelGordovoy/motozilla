@@ -1,0 +1,68 @@
+<div class="block">
+    <h1>[`Contact fields constructor`]</h1>
+</div>
+<div class="support-content">
+    <div class="s-request">
+        <div class="block double-padded">[`Choose additional contact fields, which will be displayed on request page. Inside each field you can edit the appearance and select the place of output.`]</div>
+    </div>
+    <div class="block double-padded">
+        <form action="?plugin=pro&module=constructor&action=save" method="post" id="helpdesk-pro-constructor-form">
+            <div class="fields">
+                {foreach $fields as $field}
+                    <div data-id="{$field.id}" class="field sortable margin-block bottom">
+                        <i class="icon16 sort" style="cursor:move"></i>
+                        <input type="checkbox" name="enable[]"{if $field.enable} checked{/if} value="{$field.id}" />
+                        <a href="javascript:void(0);" class="js-edit-field" data-id="{$field.id}">
+                            {$field.name|escape}
+                            {if !empty($field.params.name.value) || !empty($field.params)}
+                                <span class="grey no-bold">(</span>
+                                {$params_name = $field.name}
+                                {if !empty($field.params.name.value)}{$params_name = $field.params.name.value}{/if}
+                                <span class="grey" style="font-size: 14px; padding:2px;
+                                      {if !empty($field.params.font.color)}color:#{$field.params.font.color|escape};{/if}
+                                      {if !empty($field.params.font.family)}font-family:{$field.params.font.family|escape};{/if}
+                                      {if !empty($field.params.font.style)}
+                                        {if $field.params.font.style == 'bold'}
+                                            font-style:normal;font-weight:bold;
+                                        {elseif $field.params.font.style == 'bolditalic'}
+                                            font-style:italic;font-weight:bold;
+                                        {elseif $field.params.font.style == 'italic'}
+                                            font-style:italic;font-weight:normal;
+                                        {else}
+                                            font-style:normal;font-weight:normal;
+                                        {/if}
+                                      {/if}
+                                      {if !empty($field.params.background)}background:#{$field.params.background|escape};{/if}
+                                      {if !empty($field.params.border.size)}
+                                        border:{$field.params.border.size|escape} {$field.params.border.style|escape} #{$field.params.border.color|escape};
+                                      {/if}
+                                      {if !empty($field.params.border.radius)}border-radius:{$field.params.border.radius|escape};{/if}
+                                      ">
+                                    {$params_name|escape}</span>
+                                    <span class="grey no-bold">)</span>
+                                </span>
+                            {/if}
+                            {if !empty($field.params.output)}
+                                {$output_places = ['before_name' => "[`before name`]", 'after_name' => '[`after name`]', 'before_tabs' => '[`before tabs`]',
+                                'after_tabs' => '[`after tabs`]', 'bottom' => '[`bottom`]', 'after_request_id' => '[`after request ID`]']}
+                                {if isset($output_places[$field.params.output])}
+                                    <span class="grey">
+                                        {$output_places[$field.params.output]}
+                                    </span>
+                                {/if}
+                            {/if}
+                        </a>
+                    </div>
+                {/foreach}
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src="{$plugin_url}js/pro.constructor.js"></script>
+<script>
+    (function($) {
+        new helpdeskProConstructor({
+            $form: $("#helpdesk-pro-constructor-form")
+        });
+    })(jQuery);
+ </script>

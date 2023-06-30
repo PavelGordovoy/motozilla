@@ -1,0 +1,180 @@
+{strip}
+
+{$is_dialog = ($wa->get('cart') || $wa->server('HTTP_X_REQUESTED_WITH') == "XMLHttpRequest")}
+{if $is_dialog}
+    {* быстрый просмотр *}
+    <div class="js-product-cart-quick-view">
+        {include file="product.cart.html"}
+    </div>
+{else}
+    {if $theme_settings.test_settings && !empty($wa->cookie('show_product_discount'))}{$theme_settings.show_product_discount = $wa->cookie('show_product_discount')}{/if}
+    {if $theme_settings.test_settings && !empty($wa->cookie('show_product_badge_saving'))}{$theme_settings.show_product_badge_saving = $wa->cookie('show_product_badge_saving')}{/if}
+    {$is_mobile = ($wa->isMobile() && ($wa->cookie("is_desktop_for_mobile") != 1 || !$theme_settings.switch_version))}
+    {$cols = 1}
+    {$sidebar_left = false}
+    {$sidebar_right = false}
+    {$is_sidebar_right_content = false}
+    {if !$is_mobile}
+        {$sidebar_left = $theme_settings.product_sidebar_left}
+        {$sidebar_right = $theme_settings.product_sidebar_right}
+        {$is_sidebar_right_content = $theme_settings.product_content_sidebar_right && $theme_settings.product_sidebar_right}
+    {/if}
+    {if $sidebar_left}{$cols = $cols + 1}{/if}
+    {if $sidebar_right && empty($is_sidebar_right_content)}{$cols = $cols + 1}{/if}
+    {if $theme_settings.show_product_in_basket && !isset($cart_items_ids)}
+        {$cart_items_ids = []}
+        {$cart_items = $wa->shop->cart()->items()}
+        {if count($cart_items) > 0}
+            {foreach $cart_items as $cart_item}
+                {$cart_items_ids[] = $cart_item.product_id}
+            {/foreach}
+        {/if}
+    {/if}
+
+    {$is_schema_org = $theme_settings.schema_org_active}
+    {$product_name = $product.name|escape}{if !empty($product.params.h1)}{$product_name = $product.params.h1|escape}{/if}
+
+    {$content_cols_class_align = ""}
+    {if $sidebar_left}{$content_cols_class_align = " flex-align-r"}{/if}
+    {if $sidebar_right}{$content_cols_class_align = " flex-align-l"}{/if}
+    {if $sidebar_right && $sidebar_left}
+        {if $is_sidebar_right_content}
+            {$content_cols_class_align = " flex-align-r"}
+        {else}
+            {$content_cols_class_align = " flex-align-c"}
+        {/if}
+    {/if}
+
+    <div data-count="{$cols}" class="js-content-cols content-cols cols-{$cols}{$content_cols_class_align}">
+        <div class="content{if $sidebar_left} with-sidebar-l{/if}{if $sidebar_right && empty($is_sidebar_right_content)} with-sidebar-r{/if}">
+            <article {if $is_schema_org} itemscope itemtype="http://schema.org/Product"{/if}>
+                {if !$wa->isMobile() && $theme_settings.product_main_menu_button_head && !$sidebar_left}
+                    <div class="content-head">
+                        {* main menu *}
+                        {include file="`$wa_parent_theme_path`/vertical.main.menu.html" is_close=true}
+                        <div class="content-head__title">
+                            {* breadcrumbs *}
+                            {include file="`$wa_parent_theme_path`/breadcrumbs.html" is_category_subcategories=$theme_settings.breadcrumbs_subcategories last=['name' => $product_name, 'url' => $wa->currentUrl()]}
+                            <h1><span{if $is_schema_org} itemprop="name"{/if}>{$product_name}</span></h1>
+                        </div>
+                    </div>
+                {else}
+                    {* breadcrumbs *}
+                    {include file="`$wa_parent_theme_path`/breadcrumbs.html" is_category_subcategories=$theme_settings.breadcrumbs_subcategories last=['name' => $product_name, 'url' => $wa->currentUrl()]}
+                    <h1><span{if $is_schema_org} itemprop="name"{/if}>{$product_name}</span></h1>
+                {/if}
+
+                <div class="clearfix">
+                    <div class="product-info">
+                        <div class="product-card js-product">
+                            {* product gallery *}
+                            {include file="product.gallery.html"}
+
+                            {* product left block width cart *}
+                            <div class="product-card__right {$theme_settings.product_card_bg}-bg">
+                                {include file="product.cart.html"}
+
+                                <!-- plugin hook: 'frontend_product.block_aux' -->
+                                {* @event frontend_product.%plugin_id%.block_aux *}
+                                {if !empty($frontend_product)}
+                                    <div class="product-card__block-aux aux">
+                                        {foreach $frontend_product as $_}{$_.block_aux}{/foreach}
+                                    </div>
+                                {/if}
+                            </div>
+                        </div>
+
+                        {include file="product.services.html"}
+
+                        {if $sidebar_right && !empty($is_sidebar_right_content)}{$cols = $cols + 1}{/if}
+                        <div data-count="{$cols}" class="js-content-cols product-cols cols-{$cols}">
+                            <div class="product-card__content {if $is_sidebar_right_content} with-sidebar-r{/if}">
+                                {* descriptions, features, reviews, etc. *}
+                                {include file="product.content.html"}
+
+                                {* products list crossselling, upselling, viewed, custom *}
+                                {$list_products_list = []}
+                                {if !empty($theme_settings.product_products_lists)}{$list_products_list = ","|explode:$theme_settings.product_products_lists}{/if}
+                                {foreach $list_products_list as $products_list_alias}
+                                    {if $products_list_alias == 'crossselling'}
+                                        {* crossselling products *}
+                                        {$count_crossselling = (int) $theme_settings.crossselling_count}
+                                        {$is_available_only = !empty($theme_settings.crossselling_available)}
+                                        {if $count_crossselling > 0}
+                                            {$crossselling = $product->crossSelling($count_crossselling, $is_available_only)}
+                                            {if count($crossselling) > 0}
+                                                {$product_list_title = sprintf('[`Customers who bought %s also bought`]', $product_name)}
+                                                {if $theme_settings.crossselling_title}{$product_list_title = sprintf($theme_settings.crossselling_title, $product_name)}{/if}
+                                                {$product_list_view = $theme_settings.product_crossselling_view}
+                                                {include file="product.product-lists.html" title=$product_list_title view=$product_list_view products=$crossselling}
+                                            {/if}
+                                        {/if}
+                                    {else if $products_list_alias == 'upselling'}
+                                        {* upselling products *}
+                                        {$count_upselling = (int) $theme_settings.upselling_count}
+                                        {$is_available_only = !empty($theme_settings.upselling_available)}
+                                        {if $count_upselling > 0}
+                                            {$upselling = $product->upSelling($count_upselling, $is_available_only)}
+                                            {if count($upselling) > 0}
+                                                {$compare_ids = array_merge(array($product.id), array_keys($upselling))}
+                                                {$onClick = "javascript:window.location='{$wa->getUrl('/frontend/compare', ['id' => implode(',', $compare_ids)])}';"}
+                                                {$product_list_title = "[`See also`]"}
+                                                {if $theme_settings.upselling_title}{$product_list_title = $theme_settings.upselling_title}{/if}
+                                                {if $theme_settings.upselling_title_is_compare}{$product_list_title = "`$product_list_title` <span class='items-list__all'><span class='show-all ac-color' onClick=`$onClick`>[`Compare all`] <i class='button-more fal fa-long-arrow-right'></i></span></span>"}{/if}
+                                                {$product_list_view = $theme_settings.product_upselling_view}
+                                                {include file="product.product-lists.html" title=$product_list_title view=$product_list_view products=$upselling}
+                                            {/if}
+                                        {/if}
+                                    {else if $products_list_alias == 'viewed'}
+                                        {* viewed products *}
+                                        {$viewed_list = $wa->cookie('viewed_list')}
+                                        {$count_last_products = (int) $theme_settings.product_viewed_in_content_count}
+                                        {if $theme_settings.viewed_products && $viewed_list && $count_last_products > 0}
+                                            {$viewed_list_arr = ","|explode:$viewed_list}
+                                            {if $viewed_list_arr > $count_last_products}{$viewed_list_arr = array_slice($viewed_list_arr, 0, $count_last_products)}{/if}
+                                            {$products_result = $wa->shop->products($viewed_list_arr)}
+                                            {if count($products_result) > 0}
+                                                {$products_views = []}
+                                                {foreach $viewed_list_arr as $viewed_product}
+                                                    {if isset($products_result[$viewed_product])}
+                                                        {$products_views[$viewed_product] = $products_result[$viewed_product]}
+                                                    {/if}
+                                                {/foreach}
+                                                {if count($products_views) > 0}
+                                                    {$product_list_view = $theme_settings.product_viewed_view}
+                                                    {$product_viewed_title = $theme_settings.product_viewed_title}
+                                                    {if !empty($product_viewed_title)}
+                                                        {$product_viewed_link = "`$wa->getUrl('shop/frontend/search')`?list=viewed"}
+                                                        {$product_viewed_title = "`$product_viewed_title` <span class='items-list__all'><a class='show-all ac-color' href='`$product_viewed_link`'>[`View all`] <i class='button-more fal fa-long-arrow-right'></i></a></span>"}
+                                                    {/if}
+                                                    {include file="product.product-lists.html" title=$product_viewed_title view=$product_list_view products=$products_views}
+                                                {/if}
+                                            {/if}
+                                        {/if}
+                                    {else if $products_list_alias == 'custom'}
+                                        {if !empty($product.params.products_list)}
+                                            {$product_list_custom_1 = $wa->shop->productSet($product.params.products_list)}
+                                            {if count($product_list_custom_1)}
+                                                {$products_list_custom_1_title = null}
+                                                {if !empty($product.params.products_list_title)}{$products_list_custom_1_title = $product.params.products_list_title}{/if}
+                                                {$product_list_custom_1_view = $theme_settings.product_custom_view}
+                                                {include file="product.product-lists.html" title=$products_list_custom_1_title view=$product_list_custom_1_view products=$product_list_custom_1}
+                                            {/if}
+                                        {/if}
+                                    {/if}
+                                {/foreach}
+
+                            </div>
+                            {* sidebar right in content *}
+                            {if $is_sidebar_right_content}{include file="./sidebar.right.html" blocks=$sidebar_right inline}{/if}
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        {* sidebar left *}
+        {if $sidebar_left}{include file="./sidebar.left.html" blocks=$sidebar_left inline}{/if}
+        {if $sidebar_right && empty($is_sidebar_right_content)}{include file="./sidebar.right.html" blocks=$sidebar_right inline}{/if}
+    </div>
+{/if}
+{/strip}

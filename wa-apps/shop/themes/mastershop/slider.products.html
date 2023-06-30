@@ -1,0 +1,159 @@
+{strip}
+{if $theme_settings.test_settings && !empty($wa->cookie('cart_add_action'))}{$theme_settings.cart_add_action = $wa->cookie('cart_add_action')}{/if}
+
+{$is_retina = $wa->shop->config('enable_2x')}
+{function getDiscountSlider price=null compare_price=null}
+    {if $theme_settings.show_product_discount && $compare_price > $price}
+        {$discount = (($compare_price-$price)/$compare_price)*100}
+        {if $theme_settings.show_product_discount_round == "ceil"}
+            {$discount = ceil($discount)}
+        {else if $theme_settings.show_product_discount_round == "floor"}
+            {$discount = floor($discount)}
+        {else}
+            {$discount = round($discount)}
+        {/if}
+        {if $discount >= (int)$theme_settings.show_product_discount_minimal && $price > 0}
+            <div class="product-discount slider-product__discount">-{$discount}%</div>
+        {/if}
+    {/if}
+{/function}
+
+{if $product_list_id}
+    {if (int)$theme_settings.slider_height > 0}
+        {$height_slider = $theme_settings.slider_height}
+    {/if}
+    {$promoproducts = $wa->shop->productSet($product_list_id, null, null, ["params" => "tag_slider", "params" => "tag_slider_url"])}
+    {if count($promoproducts) > 0}
+        {$promoproducts_features = []}
+        {if $theme_settings.slider_product_features}
+            {$promoproducts_features = $wa->shop->features($promoproducts)}
+            {if !empty($theme_settings.product_short_features_aliases)}
+                {$features_aliases_list = ","|explode:$theme_settings.product_short_features_aliases}
+            {/if}
+        {/if}
+        {$is_lazy_images = $theme_settings.homepage_slider_lazy}
+        <div class="slider-wrap slider-wrap--products js-slider-wrap">
+            <div class="js-main-slider owl-carousel main-slider" data-lazy="{$is_lazy_images}" data-swipe="{$theme_settings.homepage_slider_swipe}" data-pause="{$theme_settings.slider_pause}" data-pages="true" data-type="products">
+                {if $theme_settings.homepage_slider_rand}{$shuffle = $promoproducts|shuffle}{/if}
+                {foreach $promoproducts as $p}
+                    <div class="js-product-item main-slider_el slider-product"{if isset($height_slider) && !$wa->isMobile()} style="height: {$height_slider}px"{/if}>
+                        <div class="slider-product__inner">
+                            <a href="{$p.frontend_url}" class="slider-product__img{if $is_retina} js-product-img-retina{/if}">
+                                {getDiscountSlider price=$p.price compare_price=$p.compare_price}
+                                {$badge_html = $wa->shop->badgeHtml($p.badge)}
+                                {if $badge_html}{$badge_html}{/if}
+
+                                {if $theme_settings.use_plugin_autobadge && $theme_settings.slider_autobadge}
+                                    {if isset($p.autobadge) && !empty($p.autobadge)}{$p.autobadge}{/if}
+                                {/if}
+
+                                {$default_image = "`$wa_theme_url`img/dummy200.png"}
+                                {if !empty($theme_settings.default_image)}
+                                    {$default_image = strtok($theme_settings.default_image, "?")}
+                                    {$default_image = "`$wa_parent_theme_url``$default_image`"}
+                                {/if}
+
+                                {if !empty($p.image_id)}
+                                    {if $is_lazy_images}
+                                        {$wa->shop->productImgHtml($p, '0x250', ['class' => "owl-lazy", 'alt' => $p.name, 'default' => $default_image])|replace:"src":"src=`$wa_theme_url`img/lazy-image.png data-src"}
+                                    {else}
+                                        {$wa->shop->productImgHtml($p, '0x250', ['alt' => $p.name, 'default' => $default_image])}
+                                    {/if}
+                                {else}
+                                    {$wa->shop->productImgHtml($p, '0x250', ['alt' => $p.name, 'default' => $default_image])}
+                                {/if}
+                            </a>
+                            <div class="slider-product__content">
+                                {if isset($p.params.tag_slider) && !empty($p.params.tag_slider)}
+                                    <div class="slider-product__tag bs-color">
+                                        {if isset($p.params.tag_slider_url) && !empty($p.params.tag_slider_url)}<a href="{$p.params.tag_slider_url}">{/if}
+                                            {$p.params.tag_slider}
+                                        {if isset($p.params.tag_slider_url) && !empty($p.params.tag_slider_url)}</a>{/if}
+                                    </div>
+                                {/if}
+
+                                <div class="slider-product__name">
+                                    <a title="{$p.name}" href="{$p.frontend_url}">{$p.name}</a>
+                                </div>
+
+                                {$is_summary = $theme_settings.slider_product_summary && !empty($p.summary)}
+                                {$is_features = isset($p.features) && (!$wa->isMobile() || ($wa->isMobile() && empty($p.summary))) && (!empty($promoproducts_features))}
+                                {if $is_summary || $is_features}
+                                    <div class="slider-product__text">
+                                        {if $is_summary}
+                                            {if $wa->isMobile()}{strip_tags($p.summary)|truncate:150}{else}{$p.summary}{/if}
+                                        {/if}
+                                        {if $is_features}
+                                            <table class="slider-product__features product_features">
+                                                {$index = 1}
+                                                {foreach $p.features as $f_code => $f_value}
+                                                    {if $promoproducts_features[$f_code].type != 'divider'}
+                                                        {if $theme_settings.slider_product_features_count && $index > $theme_settings.slider_product_features_count}{break}{/if}
+                                                        {if !empty($features_aliases_list) && !in_array($f_code, $features_aliases_list)}{continue}{/if}
+                                                        <tr class="product_features-item">
+                                                            <td class="product_features-title">
+                                                                <span>{$promoproducts_features[$f_code].name|escape}</span>
+                                                            </td>
+                                                            <td class="product_features-value">
+                                                                {if is_array($f_value)}
+                                                                    {if $promoproducts_features[$f_code].type == 'color'}
+                                                                        <span class="product_features__colors-short">{implode(' ', $f_value)}</span>
+                                                                    {else}
+                                                                        {implode(', ', $f_value)}
+                                                                    {/if}
+                                                                {else}
+                                                                    {$f_value}
+                                                                {/if}
+                                                            </td>
+                                                        </tr>
+                                                        {$index = $index + 1}
+                                                    {/if}
+                                                {/foreach}
+                                            </table>
+                                        {/if}
+                                    </div>
+                                {/if}
+
+                                {$title_cart_button = "[`Buy`]"}
+                                {if $theme_settings.product_button_cart_title}{$title_cart_button = $theme_settings.product_button_cart_title}{/if}
+                                <div class="slider-product__bottom">
+                                    <div class="slider-product__prices">
+                                        {if $p.compare_price > $p.price && $p.price != 0}
+                                            <div class="slider-product__price-compare">{shop_currency_html($p.compare_price)}</div>
+                                        {/if}
+
+                                        {$text_zero_price = $theme_settings.product_zero_price_text}
+                                        {if $text_zero_price && $p.price == 0}
+                                            <div class="slider-product__zero-text">{$text_zero_price}</div>
+                                        {else}
+                                            <div class="slider-product__price-price">{shop_currency_html($p.price)}</div>
+                                        {/if}
+                                    </div>
+                                    {$available = $wa->shop->settings('ignore_stock_count') || $p.count === null || $p.count > 0}
+                                    {if $available}
+                                        {if $p.sku_count > 1}
+                                            <span data-href="{$p.frontend_url}{if strpos($p.frontend_url, '?')}&{else}?{/if}cart=1{if $theme_settings.product_addtocart_mini_dialog}&select-options=1{/if}" class="js-product-card-dialog button add2cart-button button-with-icon">
+                                                <i class="button__icon fas fa-shopping-basket"></i>
+                                                {$title_cart_button}
+                                            </span>
+                                        {else}
+                                            {$preview_image = $wa->shop->productImgUrl($p, '60')}
+                                            <form data-image="{$preview_image}" data-link="{$p.frontend_url}" data-name="{$p.name|escape}" data-price="{shop_currency_html($p.price)|escape}" data-after-action="{$theme_settings.cart_add_action}" class="js-add-to-cart slider-product__cart" method="post" action="{$wa->getUrl('/frontendCart/add')}">
+                                                <input type="hidden" name="product_id" value="{$p.id}">
+                                                <span class="js-submit-form button add2cart-button button-with-icon">
+                                                    <i class="button__icon fas fa-shopping-basket"></i>
+                                                    {$title_cart_button}
+                                                </span>
+                                            </form>
+                                        {/if}
+                                    {/if}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {/foreach}
+            </div>
+        </div>
+    {/if}
+{/if}
+{/strip}

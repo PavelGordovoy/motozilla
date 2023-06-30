@@ -1,0 +1,51 @@
+{strip}
+
+{$widgets = [ 'vk' =>  $theme_settings.widget_social_groups_vk, 'facebook' => $theme_settings.widget_social_groups_fb, 'twitter' => $theme_settings.widget_social_groups_tw, 'odnoklassniki' => $theme_settings.widget_social_groups_ok, 'instagram' => false  ]}
+
+{$widgetInst = []}
+{if $theme_settings.widget_social_groups_inst && $theme_settings.widget_social_groups_inst_id && $theme_settings.widget_social_groups_inst_oath}
+    {$widgets["instagram"] = $theme_settings.widget_social_groups_inst}
+    {if !$theme_settings.widget_social_groups_inst_out}
+        {$theme_settings.widget_social_groups_inst_out = $theme_settings.widget_social_groups_inst_id}
+    {/if}
+    {$widgetInst = [ "clientId" =>  $theme_settings.widget_social_groups_inst_id,  "userId" => $theme_settings.widget_social_groups_inst_out, "accessToken" => $theme_settings.widget_social_groups_inst_oath, "limit" => $theme_settings.widget_social_groups_inst_limit]}
+{/if}
+
+{if $theme_settings.widget_social_shuffle}
+    {$keys = $widgets|array_keys}
+    {$hole = $keys|shuffle}
+    {$widgets_temp = []}
+    {foreach $keys as $key}
+        {$widgets_temp[$key] = $widgets[$key]}
+    {/foreach}
+    {$widgets = $widgets_temp}
+{/if}
+
+{if $widgets['vk'] || $widgets['facebook'] || $widgets['odnoklassniki'] || $widgets['twitter'] || $widgets['instagram']}
+    <div class="sidebar-wrap">
+        <div class="social-widgets js-social-widgets" data-auto="{$theme_settings.widget_social_groups_auto}" data-time="{$theme_settings.widget_social_groups_time * 1000}" data-preload="{$theme_settings.widget_social_groups_load}">
+            {$step = 0}
+            <div class="social-widgets__tabs">
+                {foreach $widgets as $key=>$widget}
+                    {if !$widget}{continue}{/if}
+                    <span class="social-widgets__tab js-social-widgets-tab _{$key}{if $step == 0} _active{/if}" data-tab="{$key}"><i class="fab fa-{$key}" aria-hidden="true"></i></span>
+                    {$step = $step + 1}
+                {/foreach}
+            </div>
+            <div class="social-widgets__contents">
+                {$step = 0}
+                {foreach $widgets as $key=>$widget}
+                    {if !$widget}{continue}{/if}
+                    <div class="social-widgets__content js-social-widgets-content{if $step == 0} _show{/if}" id="social-widgets-content-{$key}" data-content="{$key}"></div>
+                    {$step = $step + 1}
+                {/foreach}
+            </div>
+            <script>
+                var vivaSocialWidgetsData = {$widgets|json_encode};
+                var vivaSocialWidgetsInst = {$widgetInst|json_encode};
+            </script>
+        </div>
+    </div>
+{/if}
+
+{/strip}

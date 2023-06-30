@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE theme PUBLIC "wa-app-theme" "http://www.webasyst.com/wa-content/xml/wa-app-theme.dtd">
+<theme id="easysale" app="shop" vendor="1003320" author="Easyweb" parent_theme_id="site:easysale" version="100.1.3" system="0">
+  <name locale="en_US">Easysale</name>
+  <name locale="ru_RU">Продавай легко</name>
+  <files>
+    <!-- parent resources -->
+    <file path="css/easysale.css" parent="1">
+    </file>
+    <file path="js/easysale.js" parent="1">
+    </file>
+    <file path="css/mobile.css" parent="1">
+    </file>
+    <file path="css/default.css" parent="1">
+    </file>
+    <file path="js/default.js" parent="1">
+    </file>
+    <!-- shop resources -->
+    <file path="css/easysale.shop.css">
+      <description locale="ru_RU"/>
+    </file>
+    <file path="js/cart.js">
+      <description locale="en_US">Cart JS</description>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="js/checkout.js">
+        </file>
+    <file path="js/easysale.shop.js">
+      <description locale="ru_RU"/>
+    </file>
+    <file path="js/product.js">
+      <description locale="en_US">Product page JS</description>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="js/products.js">
+      <description locale="ru_RU"/>
+    </file>
+    <file path="js/reviews.js">
+      <description locale="en_US">Reviews JS</description>
+      <description locale="ru_RU"/>
+    </file>
+    <!-- parent templates -->
+    <file path="index.html" parent="1">
+        </file>
+    <file path="error.html" parent="1">
+        </file>
+    <file path="signup.html" parent="1">
+        </file>
+    <file path="login.html" parent="1">
+        </file>
+    <file path="forgotpassword.html" parent="1">
+        </file>
+    <file path="page.html" parent="1">
+      <description locale="en_US">Static page content</description>
+      <description locale="ru_RU">Содержимое информационной страницы</description>
+    </file>
+    <file path="my.profile.html" parent="1">
+        </file>
+    <file path="header.layout.html" parent="1">
+    </file>
+    <file path="footer-all.html" parent="1">
+    </file>
+    <!-- shop templates -->
+    <file path="breadcrumbs.html">
+      <description locale="ru_RU"></description>
+    </file>
+    <file path="cart.html">
+      <description locale="en_US"/>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="category.filters.html">
+      <description locale="ru_RU"/>
+    </file>
+    <file path="category.html">
+      <description locale="en_US">Wrapper for a category page</description>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="checkout.auth.html">
+      <description locale="ru_RU"/>
+    </file>
+    <file path="checkout.confirmation.html">
+      <description locale="en_US">Checkout: order confirmation</description>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="checkout.contactinfo.html">
+      <description locale="en_US">Checkout: customer contact information form</description>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="checkout.error.html">
+      <description locale="en_US">Checkout: error page</description>
+      <description locale="ru_RU">Оформление заказа: выбор способа доставки</description>
+    </file>
+    <file path="checkout.html">
+      <description locale="en_US">Checkout core wrapper</description>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="checkout.payment.html">
+      <description locale="en_US">Checkout: payment option selection</description>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="checkout.shipping.html">
+      <description locale="en_US">Checkout: shipping option selection</description>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="checkout.success.html">
+      <description locale="en_US">Checkout: thank you page</description>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="compare.html">
+      <description locale="en_US">Product comparison</description>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="footer.html">
+      <description locale="en_US">App specific footer content</description>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="head.html">
+      <description locale="en_US"/>
+      <description locale="en_US">Блок &lt;head&gt; приложения Shop-Script</description>
+    </file>
+    <file path="header.html">
+      <description locale="en_US">App specific header content</description>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="home.html">
+      <description locale="en_US"/>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="home.slider.html">
+      <description locale="ru_RU"/>
+    </file>
+    <file path="list-thumbs.html">
+      <description locale="en_US">Product list thumbnail view</description>
+      <description locale="ru_RU">Список товаров эскизами</description>
+    </file>
+    <file path="main.html">
+      <description locale="en_US">Main storefront layout and navigation</description>
+      <description locale="ru_RU">Основное макет вывода содержимого и навигации в интернет-магазине</description>
+    </file>
+    <file path="my.nav.html">
+        </file>
+    <file path="my.affiliate.html">
+      <description locale="en_US">Customer account interface: affiliate program</description>
+      <description locale="ru_RU">Личный кабинет покупателя: партнерская программа</description>
+    </file>
+    <file path="my.order.html">
+      <description locale="en_US">Customer account interface: single order information</description>
+      <description locale="ru_RU">Личный кабинет покупателя: информация о заказе</description>
+    </file>
+    <file path="my.orders.html">
+      <description locale="en_US">Customer account interface: order list</description>
+      <description locale="ru_RU">Личный кабинет покупателя: список заказов</description>
+    </file>
+    <file path="product.cart.html">
+      <description locale="en_US"/>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="product.html">
+      <description locale="en_US"/>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="product.page.html">
+        </file>
+    <file path="products.html">
+      <description locale="ru_RU"/>
+    </file>
+    <file path="products.sorting.html">
+      <description locale="ru_RU"/>
+    </file>
+    <file path="review.html">
+      <description locale="en_US">A single product review template</description>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="reviews.html">
+      <description locale="en_US">Product review list</description>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="search.html">
+      <description locale="en_US">Wrapper for product search (filtering) results, e.g. by name, tag, or manufacturer</description>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="sidebar.html">
+      <description locale="ru_RU"/>
+    </file>
+    <file path="list-thumbs-slider.html">
+      <description locale="ru_RU"/>
+    </file>
+    <file path="home.tile.html">
+      <description locale="ru_RU"/>
+    </file>
+    <file path="list-thumbs-search.html">
+      <description locale="ru_RU"/>
+    </file>
+    <file path="home.shops.html">
+      <description locale="ru_RU"/>
+    </file>
+  </files>
+  <thumbs>
+    <thumb>48x48</thumb>
+    <thumb>96x96</thumb>
+    <thumb>200</thumb>
+    <thumb>0x320</thumb>
+    <thumb>750</thumb>
+    <thumb>970</thumb>
+  </thumbs>
+  <locales>
+    <locale>
+      <msgid>No review's</msgid>
+      <msgstr locale="ru_RU">Отзывов нет</msgstr>
+    </locale>
+    <locale>
+      <msgid>Home</msgid>
+      <msgstr locale="ru_RU">Главная</msgstr>
+    </locale>
+    <locale>
+      <msgid>Catalog</msgid>
+      <msgstr locale="ru_RU">Каталог</msgstr>
+    </locale>
+    <locale>
+      <msgid>Logout</msgid>
+      <msgstr locale="ru_RU">Выход</msgstr>
+    </locale>
+    <locale>
+      <msgid>Review's</msgid>
+      <msgstr locale="ru_RU">Отзывы</msgstr>
+    </locale>
+    <locale>
+      <msgid>Sorting</msgid>
+      <msgstr locale="ru_RU">Сортировка</msgstr>
+    </locale>
+    <locale>
+      <msgid>Table</msgid>
+      <msgstr locale="ru_RU">Таблица</msgstr>
+    </locale>
+    <locale>
+      <msgid>Thumbs</msgid>
+      <msgstr locale="ru_RU">Плитки</msgstr>
+    </locale>
+    <locale>
+      <msgid>Recommended</msgid>
+      <msgstr locale="ru_RU">Рекомендуемые товары</msgstr>
+    </locale>
+    <locale>
+      <msgid>Clear favorited product list</msgid>
+      <msgstr locale="ru_RU">Очистить список избранных товаров</msgstr>
+    </locale>
+    <locale>
+      <msgid>Clear viewed product list</msgid>
+      <msgstr locale="ru_RU">Очистить список просмотренных товаров</msgstr>
+    </locale>
+    <locale>
+      <msgid>Favorited product list</msgid>
+      <msgstr locale="ru_RU">Список избранных товаров</msgstr>
+    </locale>
+    <locale>
+      <msgid>Until the end of the action remained:</msgid>
+      <msgstr locale="ru_RU">До конца акции осталось:</msgstr>
+    </locale>
+    <locale>
+      <msgid>Subcategories</msgid>
+      <msgstr locale="ru_RU">Подкатегории</msgstr>
+    </locale>
+    <locale>
+      <msgid>Products filtration</msgid>
+      <msgstr locale="ru_RU">Фильтрация товаров</msgstr>
+    </locale>
+    <locale>
+      <msgid>Go to cart</msgid>
+      <msgstr locale="ru_RU">Перейти в корзину</msgstr>
+    </locale>
+    <locale>
+      <msgid>Go to product page</msgid>
+      <msgstr locale="ru_RU">Перейти в карточку товара</msgstr>
+    </locale>
+    <locale>
+      <msgid>Product list is empty or not exists</msgid>
+      <msgstr locale="ru_RU">Список товаров пустой или не существует</msgstr>
+    </locale>
+    <locale>
+      <msgid>List</msgid>
+      <msgstr locale="ru_RU">Список</msgstr>
+    </locale>
+    <locale>
+      <msgid>Vendor code</msgid>
+      <msgstr locale="ru_RU">Артикул</msgstr>
+    </locale>
+  </locales>
+</theme>

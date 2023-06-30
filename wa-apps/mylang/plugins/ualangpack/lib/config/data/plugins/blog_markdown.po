@@ -1,0 +1,42 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Webasyst Blog Markdown plugin 1.5.0.3 UA translation v 1.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#: /wa-apps/blog/plugins/markdown/lib/blogMarkdown.plugin.php:9
+#: /wa-apps/blog/plugins/markdown/lib/config/plugin.php:4
+msgid "Markdown"
+msgstr "Markdown"
+
+#: /wa-apps/blog/plugins/markdown/lib/blogMarkdown.plugin.php:11
+msgid "This post was not edited in the Markdown mode yet (<a href=\"http://en.wikipedia.org/wiki/Markdown\" target=\"_blank\">what is Markdown?</a>). If you want to continue editing in Markdown instead of HTML, create a Markdown version and continue editing using the Markdown syntax. Current HTML version will be automatically re-compiled from the Markdown content during the next post save."
+msgstr "Цей запис ще не було відредаговано у режимі Markdown (<a href=\"https://uk.wikipedia.org/wiki/Markdown\" target=\"_blank\">що таке Markdown</a>). Якщо ви хочете редагувати у Markdown замість HTML, створіть Markdown-версію та продовжіть редагування, використовуючи синтаксис Markdown. Поточну HTML-версію буде автоматично перекомпільовано з Markdown-контенту під час наступного збереження запису."
+
+#: /wa-apps/blog/plugins/markdown/lib/blogMarkdown.plugin.php:12
+msgid "Create Markdown version"
+msgstr "Створити Markdown-версію"
+
+#: /wa-apps/blog/plugins/markdown/lib/blogMarkdown.plugin.php:13
+msgid "Current post content HTML version is newer than the current Markdown version (below). If you save your Markdown content now, newest HTML content will be erased and compiled from the current Markdown version."
+msgstr "Поточна версія вмісту в HTML новіша, ніж Markdown-версія. Якщо ви зараз збережете Markdown-версію, більш новий HTML-вміст буде втрачено і перезаписано з поточної Markdown-версії."
+
+#: /wa-apps/blog/plugins/markdown/lib/blogMarkdown.plugin.php:14
+msgid "Recreate Markdown from the latest HTML version"
+msgstr "Відтворити Markdown-версію з останньої версії HTML"
+
+#: /wa-apps/blog/plugins/markdown/lib/blogMarkdown.plugin.php:15
+msgid "Override current Markdown content and update it from the latest HTML version?"
+msgstr "Замінити поточний контент у Markdown на останню версію HTML?"
+
+#: /wa-apps/blog/plugins/markdown/lib/config/plugin.php:5
+msgid "Enables support for editing blog posts using the Markdown syntax"
+msgstr "Додає підтримку синтаксису Markdown при редагуванні записів у «Блозі»"

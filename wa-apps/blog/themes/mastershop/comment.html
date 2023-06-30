@@ -1,0 +1,69 @@
+{strip}
+{$is_schema_org = $theme_settings.schema_org_active}
+<div class="comment" id="comment-{$comment.id}">
+    {$username_first_letter = $comment.name|truncate:1:"":true}
+    {$is_user_photo = isset($comment.user.photo_url_50) && !empty($comment.user.photo_url_50) && $comment.user.photo_url_50 != "/wa-content/img/userpic50.jpg"}
+    {if $comment.site}
+        {if $is_user_photo}
+            <a href="{$comment.site}" class="comment-avatar">
+                <img src="{$comment.user.photo_url_50}" alt="{$comment.name}">
+            </a>
+        {else}
+            <a href="{$comment.site}" class="comment-avatar bs-bg">
+                {$username_first_letter}
+            </a>
+        {/if}
+    {else}
+        {if $is_user_photo}
+            <span class="comment-avatar bs-bg ">
+                <img src="{$comment.user.photo_url_50}" alt="{$comment.name}">
+            </span>
+        {else}
+            <span class="comment-avatar bs-bg ">
+               {$username_first_letter}
+            </span>
+        {/if}
+    {/if}
+
+    <div class="comment-content">
+        <div class="comment-credentials">
+            <span{if !empty($is_schema_org)} itemprop="commentTime"{/if} class="comment-date" title="{$comment.datetime|wa_datetime}">{$comment.datetime|wa_datetime:"humandatetime"}</span>
+
+            {if empty($comment.site)}
+                <span class="comment-username username"{if !empty($is_schema_org)} itemprop="creator"{/if}>{$comment.name}</span>
+            {else}
+                <a href="{$comment.site}" class="comment-username username"{if !empty($is_schema_org)} itemprop="creator"{/if}>{$comment.name}</a>
+            {/if}
+
+            {if $comment.user.id}
+                <span class="staff">{$wa->accountName()}</span>
+            {/if}
+
+            {* @event prepare_comments_frontend.%plugin_id%.authorname_suffix *}
+            {if !empty($comment.plugins.authorname_suffix)}
+                {foreach $comment.plugins.authorname_suffix as $plugin => $output}{$output}{/foreach}
+            {/if}
+        </div>
+
+        {* @event prepare_comments_frontend.%plugin_id%.before *}
+        {if !empty($comment.plugins.before)}
+            {foreach $comment.plugins.before as $plugin => $output}{$output}{/foreach}
+        {/if}
+
+        <div class="comment-text"{if !empty($is_schema_org)} itemprop="commentText"{/if}>{$comment.text|nl2br}</div>
+
+        {* @event prepare_comments_frontend.%plugin_id%.after *}
+        {if !empty($comment.plugins.after)}
+            {foreach $comment.plugins.after as $plugin => $output}{$output}{/foreach}
+        {/if}
+        <div class="display-t">
+            <div class="comment-actions actions">
+                <a class="link-action-icon ac-color comment-reply" href="#">
+                    <i class="fas fa-pen"></i>
+                    [`reply`]
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{/strip}

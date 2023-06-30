@@ -1,0 +1,15 @@
+{if isset($error)}
+    <p class="state-error">{$error}</p>
+{else}
+    <form>
+        <div class="fields">
+            {$controls}
+
+            <div class="field">
+                <div class="value">
+                    <span class="state-error"></span>
+                </div>
+            </div>
+        </div>
+    </form>
+{/if}

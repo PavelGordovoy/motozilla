@@ -1,0 +1,83 @@
+{strip}
+<div title="{sprintf('[`Average user rating: %s / 5`]', $product.rating)}">
+    {$section_reviews_title = $theme_settings.product_info_section_reviews_title}
+    {if empty($section_reviews_title)}{$section_reviews_title = sprintf('[`%s reviews`]', $product.name|escape)}{/if}
+    <h2>{$section_reviews_title}</h2>
+
+    {if !empty($rates)}
+        <p class="rating-total">
+            [`Average customer rating:`]
+            <span class="rating">{$wa->shop->ratingHtml($product.rating, 10)}</span>
+            <span class="hint">
+                <span class="rating-total__count">(<a href="reviews/"><span>{$reviews_total_count}</span></a>)</span>
+                {if $product.rating > 0}
+                    {sprintf('[`%s out of 5 stars`]', $product.rating)}
+                {/if}
+            </span>
+        </p>
+
+        <table class="rating-distribution">
+            {$_total_count = 0}
+            {foreach $rates as $_rate => $_count}
+                {$_total_count = $_total_count + $_count}
+            {/foreach}
+            {* foreach $rates as $_rate => $_count *}
+            {for $i = 5 to 0 step -1}
+                {if empty($rates[$i]) || !$rates[$i]}{$_count = 0}{else}{$_count = $rates[$i]}{/if}
+                {if $i || $_count}
+                    <tr>
+                        <td class="min-width hint">{$_count}</td>
+                        <td>
+                            <div class="bar">
+                                <div class="filling bs-bg" style="width: {if $_total_count > 0}{str_replace(',','.', 100*$_count/$_total_count)}{else}0{/if}%;{if !$i} background: #ddd;{/if}"></div>
+                            </div>
+                        </td>
+                        <td>
+                            {for $j=1 to $i}<span class="rating"><i class="icon10 star"></i></span>{forelse}<span class="hint">[`no rate`]</span>{/for}
+                        </td>
+                    </tr>
+                {/if}
+            {/for}
+        </table>
+    {/if}
+
+    <div class="js-reviews-content reviews-content" data-url-product="{$wa->shop->productUrl($product)}">
+        {if $reviews}
+            {foreach $reviews as $review}
+                {include file="review.html" is_schema_org=$is_schema_org inline}
+            {/foreach}
+        {/if}
+    </div>
+
+    <script>
+        ( function($) {
+            var reviewsSection = $('#product-reviews');
+
+            function loadProductCardReviews (){
+                var reviewsContent = $('.js-reviews-content'),
+                    isLoad = reviewsContent.find('.js-reviews-outer').length;
+
+                if(!isLoad){
+                    reviewsContent.html("");
+                    reviewsContent.append("<span class='bs-color reviews-loading-icon'></span>");
+
+                    var url = reviewsContent.data("url-product").replace(/\/#\/[^#]*|\/#|\/$/g, '') + '/reviews/';
+
+                    $.get(url, function(data) {
+                        var content = $(data).find('.js-reviews-outer');
+                        reviewsContent.html(content);
+                    });
+                }
+            }
+
+            if(reviewsSection.length && reviewsSection.is(':visible') || reviewsSection.is(':first-child') || $('.js-accordion-tab:first-child + #product-reviews').length){
+                loadProductCardReviews();
+            }else{
+                $('.js-tab[data-tab-content="product-reviews"], .js-accordion-tab[data-tab-content="product-reviews"], .js-move-to-tab[data-tab-content="product-reviews"]').one("click", function (){
+                    loadProductCardReviews();
+                });
+            }
+        })(jQuery);
+    </script>
+</div>
+{/strip}

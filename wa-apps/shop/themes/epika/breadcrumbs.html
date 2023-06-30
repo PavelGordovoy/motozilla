@@ -1,0 +1,61 @@
+{*    {$breadcrumbs|@var_export:true|nl2br} *}
+
+<nav class="breadcrumbs" itemprop="breadcrumb">
+    {if !$wa->globals('isMyAccount')}
+    <a href="{$wa_app_url}">{$wa->shop->settings('name')}</a>  <i class="icon-angle-right"></i>
+    {else}
+    {* within My Account we exclude first node from navigation because links are on the page already *}
+    {$breadcrumbs[0] = null}
+    {/if}
+
+    {if !empty($breadcrumbs)}
+        {$cat_id = 0}
+        {$depth = 0}
+        {foreach from=$breadcrumbs item=breadcrumb name=br}
+            {if $breadcrumb}
+                <a href="{$breadcrumb.url}">{$breadcrumb.name|escape}</a>
+                {$categories = $wa->shop->categories($cat_id, $depth, false)}
+
+                {if $categories|count > 1}
+                <div class="dropdown">
+                    <button class="dropdown-toggle" type="button" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu animated fadeInUp">
+                        {foreach $categories as $cate}
+                        {if $cate.name == $breadcrumb.name}
+                            {$cat_id = $cate.id} {$depth = 1}
+                        {else}
+                            {if $cate.status}<li><a href="{$cate.url}">{$cate.name}</a></li>{/if}
+                        {/if}
+                        {/foreach}
+                    </ul>
+                </div>
+                {/if}
+                <i class="icon-angle-right"></i>
+            {/if}
+        {/foreach}
+    {/if}
+
+    {if !isset($page_type)}
+
+        {$depth = 0}
+        {if $category.parent_id > 0} {$depth = 1} {/if}
+        <a href="{$wa->currentUrl(0,1)}">{$category.name|escape}</a>
+
+        {$categories = $wa->shop->categories($category.parent_id, $depth, false)}
+        {if $categories|count > 1}
+
+            <div class="dropdown">
+                <button class="dropdown-toggle" type="button" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu animated fadeInUp">
+                    {foreach $categories as $cate}
+                    {if $cate.name != $category.name}
+                        {if $cate.status}<li><a href="{$cate.url}">{$cate.name}</a></li>{/if}
+                    {/if}
+                    {/foreach}
+                </ul>
+            </div>
+
+        {/if}
+    {/if}
+</nav>
+

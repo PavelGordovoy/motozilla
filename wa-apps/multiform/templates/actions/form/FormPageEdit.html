@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="{$wa_app_static_url}js/datepicker/css/metallic.css">
+<link rel="stylesheet" href="{$wa_app_static_url}js/rangeslider/ion.rangeSlider.min.css">
+
+<script src="{$wa_app_static_url}js/jquery.sortable.js"></script>
+
+<script src="{$wa_app_static_url}js/jquery.mask.js"></script>
+<script src="{$wa_app_static_url}js/datepicker/javascript/zebra_datepicker.src.js"></script>
+
+<script src="{$wa_app_static_url}js/rangeslider/ion.rangeSlider.min.js"></script>
+
+<script src="{$wa_app_static_url}js/jquery-fileupload/js/vendor/jquery.ui.widget.js"></script>
+<script src="{$wa_app_static_url}js/jquery-fileupload/js/jquery.iframe-transport.js"></script>
+<script src="{$wa_app_static_url}js/jquery-fileupload/js/jquery.fileupload.js"></script>
+<script src="{$wa_app_static_url}js/jquery-fileupload/js/jquery.fileupload-process.js"></script>
+<script src="{$wa_app_static_url}js/jquery-fileupload/js/jquery.fileupload-validate.js"></script>
+
+{if $wa->get('addJs')}
+    <script src="{$wa_app_static_url}js/form/edit.js"></script>
+    <script src="{$wa_app_static_url}js/jquery.simple-color.js"></script>
+{/if}
+<div class="block top-padded">
+    <div class="sidebar left330px">
+        <div id="form-builder-fields">
+            <h3 class="align-center">[`Select field`]</h3>
+            <ul>
+                {foreach $field_types as $ft_id => $ft}
+                    <li><a href="#/add/field/" data-type="{$ft_id|escape}" class='js-action'>{if !empty($ft.icon_custom)}<i class="icon-custom {$ft.icon_custom|escape}"></i> {elseif !empty($ft.icon)}<img src="{$ft.icon|escape}"> {/if}{$ft.name|escape}</a></li>
+                {/foreach}
+                {if $field_types|count % 2 !== 0}
+                    <li><a href="javascript:void(0)">&nbsp;</a></li>
+                {/if}
+            </ul>
+        </div>
+    </div>
+    <div class="content left330px">
+        <div id="form-builder" class="sort-list">
+            {if !empty($fields)}
+                {multiformFormBuilder::getFieldsControlFromTree($fields)}
+            {/if}
+        </div>
+    </div>
+    <div id="multiform-wa-dialog"></div>
+</div>
+<script>
+    $(function() {
+       $.form_edit.initPageEdit();
+    });
+</script>
+<style>
+    .multiform-section.empty .row-wrapper:after { content: "[`Drag fields here`]"; }
+</style>

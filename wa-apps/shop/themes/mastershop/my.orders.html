@@ -1,0 +1,61 @@
+{strip}
+{if $wa->isMobile()}{include file="`$wa_parent_theme_path`/profile-links.html" ul_class="profile-pages"}{/if}
+<h1>[`My orders`]</h1>
+
+{$text_vendor_code = "[`Vendor code`]"}{if !empty($theme_settings.product_text_vendor_code)}{$text_vendor_code = $theme_settings.product_text_vendor_code}{/if}
+<div class="orders-list">
+    {foreach $orders as $o}
+        <div class="orders-item" id="order-{$o.id}">
+            <div class="orders-item__meta">
+                <span class="nowrap order-status" style="{$o.state->getStyle(1)}">
+                    {$o.state->getName()}
+                </span>
+                <a href="{$o.url}" class="orders-item__id nowrap bold">{$o.id_str}</a>
+                <div class="orders-item__date nowrap hint">
+                    {$o.create_datetime|wa_date:'humandate'}
+                </div>
+            </div>
+            <div class="orders-item__products">
+                <div class="orders-products__title">
+                    [`Products list`]:
+                 </div>
+                {if !empty($o.items)}
+                    {foreach $o.items as $i}
+                        <div class="orders-product">
+                            {$i.name|escape} <span class="orders-product__count{if !empty($i.sku_code)} margin-right{/if}"> [ x {$i.quantity} ]</span>
+                            {if !empty($i.sku_code)}
+                                <span class="orders-product__sku">
+                                    <span class="orders-product__sku-text">{$text_vendor_code}:</span> {$i.sku_code|escape}
+                                </span>
+                            {/if}
+                        </div>
+                    {/foreach}
+                {/if}
+            </div>
+            <div class="orders-item__right">
+                {if $o.shipping_name}
+                    <div class="orders-item__shipping">
+                        <strong>[`Shipping`]:</strong> {$o.shipping_name|escape}
+                    </div>
+                {/if}
+                {if $o.payment_name}
+                    <div class="orders-item__shipping">
+                        <strong>[`Payment`]:</strong> {$o.payment_name|escape}
+                    </div>
+                {/if}
+                <a href="{$o.url}" class="orders-item__link show-all ac-color">
+                    [`Go to order`] <i class="button-more fal fa-long-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    {foreachelse}
+        [`You have no order history yet.`]
+    {/foreach}
+</div>
+
+<!-- plugin hook: 'frontend_my_orders' -->
+{* @event frontend_my_orders.%plugin_id% *}
+{foreach $frontend_my_orders as $_}{$_}{/foreach}
+
+{$wa->globals('isMyAccount', true)}
+{/strip}

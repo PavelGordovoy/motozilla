@@ -1,0 +1,28 @@
+{strip}
+{if $wa->shop}
+    {$categories_list = $wa->shop->categories(0, null, true, true)}
+    {if !empty($categories_list)}
+        {if !isset($theme_settings.categories_list_images_retina)}{$theme_settings.categories_list_images_retina = true}{/if}
+        {if !isset($theme_settings.categories_list_images_lazy)}{$theme_settings.categories_list_images_lazy = true}{/if}
+        {if !isset($theme_path) && empty($theme_path)}{$theme_path = $wa->shop->themePath('mastershop')}{/if}
+
+        {if class_exists('shopSkcatimagePlugin')}
+            {$skImages = shopSkcatimageHelper::getImages()}
+        {elseif class_exists('shopWmimageincatPlugin')}
+            {$Wmimages = shopWmimageincatPlugin::getCategoryImageObj()}
+        {/if}
+
+
+        {if empty($type)}{$type = "tile"}{/if}
+
+        {if $type == 'list'}
+            {if !isset($theme_settings.subcategories_mainpage)}{$theme_settings.subcategories_mainpage = 'all'}{/if}
+            {include file="`$theme_path`categories-subcats.html" categories=$categories_list}
+        {else if $type == 'icon'}
+            {include file="`$theme_path`categories-icon.html" categories=$categories_list}
+        {else}
+            {include file="`$theme_path`categories-tile.html" categories=$categories_list}
+        {/if}
+    {/if}
+{/if}
+{/strip}

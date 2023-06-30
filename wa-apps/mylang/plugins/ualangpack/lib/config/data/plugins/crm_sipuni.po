@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Webasyst CRM Sipuni plugin 1.0.0.7 UA translation v 0.1\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: /wa-apps/crm/plugins/sipuni/templates/actions/settings/SettingsDefault.html:44
+msgid "delete"
+msgstr "видалити"
+
+#: /wa-apps/crm/plugins/sipuni/templates/actions/settings/SettingsDefault.html:62
+msgid "Number does not exist"
+msgstr "Номер не існує"
+
+#: /wa-apps/crm/plugins/sipuni/templates/actions/settings/SettingsDefault.html:72
+#: /wa-apps/crm/plugins/sipuni/templates/actions/settings/SettingsDefault.html:100
+msgid "Add user"
+msgstr "Додати користувача"
+
+#: /wa-apps/crm/plugins/sipuni/templates/actions/settings/SettingsDefault.html:76
+#: /wa-apps/crm/plugins/sipuni/templates/actions/settings/SettingsDefault.html:104
+msgid "or"
+msgstr "або"
+
+#: /wa-apps/crm/plugins/sipuni/templates/actions/settings/SettingsDefault.html:77
+#: /wa-apps/crm/plugins/sipuni/templates/actions/settings/SettingsDefault.html:105
+msgid "cancel"
+msgstr "скасувати"
+
+#: /wa-apps/crm/plugins/sipuni/templates/actions/settings/SettingsDefault.html:126
+msgid "Save"
+msgstr "Зберегти"
+
+#: /wa-apps/crm/plugins/sipuni/templates/actions/settings/SettingsDefault.html:141
+msgid "Remove \"%name%\" from recipients of %number%?"
+msgstr "Видалити \"%name%\" з отримувачів %number%?"
+
+#: /wa-apps/crm/plugins/sipuni/templates/actions/settings/SettingsDefault.html:142
+msgid "Are you sure?"
+msgstr "Ви впевнені?"
+
+#: /wa-apps/crm/plugins/sipuni/templates/actions/settings/SettingsDefault.html:143
+msgid "Delete"
+msgstr "Видалити"

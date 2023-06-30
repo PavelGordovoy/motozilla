@@ -1,0 +1,55 @@
+{if !empty($breadcrumbs)}
+    <div class="breadcrumbs"itemprop="breadcrumb">
+        {foreach $breadcrumbs as $breadcrumb}
+            <a href="{$breadcrumb.url}">{$breadcrumb.name|escape}</a> <span class="rarr">&rarr;</span>
+        {/foreach}
+    </div>
+{/if}
+
+{$subpages = $wa->site->pages($page.id)}
+{if $subpages}
+    <ul class="sub-links">
+        {foreach $subpages as $p}
+            <li><a href="{$p.url}">{$p.name}</a></li>
+        {/foreach}
+    </ul>
+{/if}
+
+<div class="row site e-space">
+        {$site_pages=$wa->site->pages()}
+        {$site_pages_id=$wa->site->pages($page.id)}
+        {if count($site_pages)>1 || !empty($site_pages_id)}
+            <aside>
+                <div class="sidebar">
+                    <h3 class="title"><i class="icon-info"></i> Информация</h3>
+                    <ul class="categories">
+                        {foreach $site_pages as $spage}
+                            <li>
+                                <a href="{$spage.url}">{$spage.name}</a>
+                                <div class="sub-page">
+                                    {$subpages = $wa->site->pages($spage.id)}
+                                    {if $subpages}
+                                        <ul class="sub-links">
+                                            {foreach $subpages as $p}
+                                                <li><a href="{$p.url}">{$p.name}</a></li>
+                                            {/foreach}
+                                        </ul>
+                                    {/if}
+                                </div>
+                            </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </aside>
+        {/if}
+
+    <div class="content" id="page" role="main" itemprop="description">
+        <h1 itemprop="name" class="category-name">{$page.name}</h1>
+        {$page.content}
+    </div>
+
+    {$site_page_id=$wa->site->pages($page.id)}
+    {if count($site_pages)>1 || !empty($site_page_id)}
+    {/if}
+
+</div>

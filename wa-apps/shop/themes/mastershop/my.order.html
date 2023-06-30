@@ -1,0 +1,213 @@
+{strip}
+{if $wa->isMobile()}{include file="`$wa_parent_theme_path`/profile-links.html" ul_class="profile-pages"}{/if}
+{$text_vendor_code = "[`Vendor code`]"}{if !empty($theme_settings.product_text_vendor_code)}{$text_vendor_code = $theme_settings.product_text_vendor_code}{/if}
+{if !empty($pin_required)}
+    <h1>
+        [`Order`] {$encoded_order_id}
+    </h1>
+    <div class="wrap-content">
+        <form action="" method="post" class="my-order-request">
+            {if $wrong_pin}
+                <p style="color:red">[`PIN is not valid`]</p>
+            {/if}
+            <p>[`Please enter a 4-digit PIN that you received with your order receipt by email.`]</p>
+            <div>
+                <input type="text" name="pin" class="my-order-request__pin">
+
+                <input type="submit" value="[`View order`]" class="my-order-request__btn">
+            </div>
+        </form>
+    </div>
+{else}
+    <h1>[`Order`] {$order.id_str}</h1>
+
+    <div class="order-content">
+        <div class="order-content__head">
+            <span class="order-content__status order-status" style="{$order.state->getStyle(1)}">{$order.state->getName()}</span>
+            <span class="gray inline-block">{$order.create_datetime|wa_date:'humandatetime'}</span>
+        </div>
+        <div class="order-content__data">
+            <div class="order-content__shipping">
+                <div class="order-content__title">[`Shipping`]</div>
+                {if $order.shipping_name}
+                    <div><strong>{$order.shipping_name}</strong></div>
+                {/if}
+
+                <!-- shipping plugin output -->
+                {if !empty($order.params.tracking_number)}
+                    [`Shipment tracking number`]: {$order.params.tracking_number}
+                    <br />
+                {/if}
+                {if !empty($tracking) && $order.state->getId() != 'completed'}
+                    <div class="plugin">
+                        {$tracking}
+                    </div>
+                {/if}
+                <p>
+                    {$contact.name|escape}<br>
+                    {if $shipping_address}
+                        {$shipping_address}
+                    {/if}
+                </p>
+            </div>
+
+            <div class="order-content__billing">
+                <div class="order-content__title">[`Payment`] </div>
+                {if $order.payment_name}
+                    <div><strong>{$order.payment_name}</strong></div>
+                {/if}
+
+                {if !empty($payment)}
+                    <div class="plugin">
+                        {$payment}
+                    </div>
+                {/if}
+                <p>
+                    {$contact.name|escape}<br>
+                    {if $billing_address}
+                        {$billing_address}
+                    {/if}
+                </p>
+                {if !empty($order.comment)}
+                    <h3>[`Comment`]</h3>
+                    <p>
+                        {$order.comment|escape}<br>
+                    </p>
+                {/if}
+            </div>
+        </div>
+    </div>
+
+    {$products_id = []}
+    {$products = []}
+    {foreach $order.items as $product}
+        {if isset($product.product_id) && !empty($product.product_id)}
+            {$products_id[] = $product.product_id}
+        {/if}
+    {/foreach}
+    {if count($products_id)}
+        {$products = $wa->shop->products($products_id)}
+    {/if}
+    {$default_image = "`$wa_theme_url`img/dummy200.png"}
+    {if !empty($theme_settings.default_image)}
+        {$default_image = strtok($theme_settings.default_image, "?")}
+        {$default_image = "`$wa_parent_theme_url``$default_image`"}
+    {/if}
+
+    <div class="order-products-summary">
+        <div class="order-products">
+            <div class="order-products__title">[`Products`]</div>
+            <div class="order-products__items">
+                {foreach $order.items as $item}
+                    {$product = null}
+                    {$image = null}
+                    {if $item.type != 'service'}
+                        {if !empty($products[$item.product_id])}
+                            {$product = $products[$item.product_id]}
+                            {if !empty($item.image_id)}
+                                {$product.image_id = $item.image_id}
+                            {/if}
+
+                            {$image = $wa->shop->productImgHtml($product, '50', ['alt' => "", 'default' => $default_image])}
+                        {/if}
+                        {if empty($image)}
+                            {$image = '<img src="`$default_image`" />'}
+                        {/if}
+                    {/if}
+
+                    <div class="order-product{if $item.type == 'service'} service{/if}">
+                        <div class="order-product__image">{$image}</div>
+                        <div class="order-product__content">
+                            <div class="order-product__title">
+                                <span class="order-product__name{if !empty($item.sku_code)} m-r{/if}">
+                                {if $item.type == 'service'}+ {/if}
+
+                                {if !empty($product.frontend_url)}
+                                    <a href="{$product.frontend_url}">{$item.name}</a>
+                                {else}
+                                    {$item.name}
+                                {/if}
+
+                                {if $item.type == 'product' && !empty($item.download_link)} <a href="{$item.download_link}"><strong>[`Download`]</strong></a>{/if}
+                                </span>
+                                {if !empty($item.sku_code) && $item.type != 'service'}
+                                    <span class="orders-product__sku">
+                                        <span class="orders-product__sku-text"> {$text_vendor_code}:</span> {$item.sku_code|escape}
+                                    </span>
+                                {/if}
+                            </div>
+                            <div class="order-product__price">
+                                <span class="gray">{wa_currency_html($item.price, $order.currency)} x</span> {$item.quantity}
+                            </div>
+                            <div class="order-product__total">
+                                {wa_currency_html($item.price * $item.quantity, $order.currency)}
+                            </div>
+                        </div>
+                    </div>
+                {/foreach}
+            </div>
+        </div>
+        <div class="order-summary">
+            <div class="order-summary__items">
+                <div class="order-summary__item">
+                    <div class="order-summary__title">
+                        <span class="order-summary__inner">[`Subtotal`]</span>
+                    </div>
+                    <div class="order-summary__cost">
+                        <span class="order-summary__inner">{wa_currency_html($subtotal, $order.currency)}</span>
+                    </div>
+                </div>
+
+                <div class="order-summary__item">
+                    <div class="order-summary__title">
+                        <span class="order-summary__inner">[`Discount`]</span>
+                    </div>
+                    <div class="order-summary__cost">
+                        <span class="order-summary__inner">&minus; {wa_currency_html($order.discount, $order.currency)}</span>
+                    </div>
+                </div>
+                <div class="order-summary__shipping">
+                    <div class="order-summary__item">
+                        <div class="order-summary__title">
+                            <span class="order-summary__inner">
+                                [`Shipping`]
+                            </span>
+                        </div>
+                        <div class="order-summary__cost">
+                            <span class="order-summary__inner">{wa_currency_html($order.shipping, $order.currency)}</span>
+                        </div>
+                    </div>
+                    {if !empty($order.params.shipping_name)}
+                        <strong>{$order.params.shipping_name}</strong>
+                    {/if}
+                </div>
+
+                {if $order.tax > 0}
+                    <div class="order-summary__item">
+                        <div class="order-summary__title"><span class="order-summary__inner">[`Tax`]</span></div>
+                        <div class="order-summary__cost"><span class="order-summary__inner">{wa_currency_html($order.tax, $order.currency)}</span></div>
+                    </div>
+                {/if}
+            </div>
+
+            <div class="order-summary__bottom">
+                <div class="order-total">
+                    <div class="order-total__title">[`Total`]:</div> {wa_currency_html($order.total, $order.currency)}
+                </div>
+                {if count($frontend_my_order)}
+                    <div class="order-summary__plugin">
+                        <!-- plugin hook: 'frontend_my_order' -->
+                        {* @event frontend_my_order.%plugin_id% *}
+                        {foreach $frontend_my_order as $_}{$_}{/foreach}
+                    </div>
+                {/if}
+            </div>
+        </div>
+    </div>
+{/if}
+
+
+
+{$wa->globals('isMyAccount', true)}
+
+{/strip}

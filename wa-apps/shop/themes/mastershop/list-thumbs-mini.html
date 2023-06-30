@@ -1,0 +1,38 @@
+{strip}
+<!-- products mini thumbnail list view: related products, etc. -->
+<ul class="products-s">
+{foreach $products as $p}
+    {$available = $wa->shop->settings('ignore_stock_count') || $p.count === null || $p.count > 0}
+    <li class="product-s__item-outer">
+        <div class="product-s__item">
+            {$badge_html = $wa->shop->badgeHtml($p.badge)}
+            {if $badge_html}{$badge_html}{/if}
+            <a class="product-s_image" href="{$p.frontend_url}" title="{$p.name}">
+                {$default_image = "`$wa_theme_url`img/dummy96.png"}
+                {if !empty($theme_settings.default_image)}
+                    {$default_image = strtok($theme_settings.default_image, "?")}
+                    {$default_image = "`$wa_parent_theme_url``$default_image`"}
+                {/if}
+                {$wa->shop->productImgHtml($p, '96', ['itemprop' => 'image', 'alt' => $p.name, 'default' => $default_image])}
+            </a>
+            <div class="product-s__content">
+                <div class="product-s__title"><a href="{$p.frontend_url}">{$p.name|truncate:30}</a></div>
+                <div class="product-s__prices">
+                    {if $p.compare_price > 0}
+                        <span class="price-compare nowrap">{shop_currency_html($p.compare_price)} </span>
+                    {/if}
+                    <div class="price nowrap">{shop_currency_html($p.price)}</div>
+                </div>
+            </div>
+        </div>
+    </li>
+{/foreach}
+</ul>
+
+
+{if isset($pages_count) && $pages_count > 1}
+<div class="block {if $theme_settings.pagination == 'lazyloading'}lazyloading-paging{else}paging-nav{/if}" data-loading-str="[`Loading...`]">
+    {wa_pagination total=$pages_count attrs=['class' => "menu-h"]}
+</div>
+{/if}
+{/strip}

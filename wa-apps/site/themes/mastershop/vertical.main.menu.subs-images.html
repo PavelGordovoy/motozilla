@@ -1,0 +1,71 @@
+{strip}
+{if $is_has_submenu}
+    {if $is_category && !empty($cat_images[$item.id].menu_banner)}
+        {$banner = $cat_images[$item.id].menu_banner}
+    {else if !empty($item.menu_banner)}
+        {$banner = $item.menu_banner}
+    {else}
+        {$banner = null}
+    {/if}
+
+    {$count_subitems = count($item.childs)}
+    {$count_cols = 4}
+    {if $count_subitems < 5}{$count_cols = 2}{/if}
+    {if $count_subitems < 3}{$count_cols = 1}{/if}
+
+    {$is_retina = $theme_settings.categories_menu_images_retina && class_exists('shopSkcatimagePlugin') && !empty($cat_images)}
+    {$is_lazy = $theme_settings.categories_menu_images_lazy && !empty($cat_images)}
+    <div class="js-categories-sub subcat-v-image{if $banner} with-banner{/if} cols-{$count_cols}">
+        {if $banner}
+            {$banner_link = ""}{if isset($item.params.category_banner_menu_url)}{$banner_link = $item.params.category_banner_menu_url}{/if}
+            <div class="subcat-v-image__banner">
+                {if !empty($banner_link)}<a href="{$banner_link}">{/if}
+                {if $theme_settings.categories_menu_images_lazy}
+                    <img class="js-subcat-image" alt="{$item.name}" src="{$wa_theme_url}img/lazy-image.png" data-src="{$banner}" />
+                {else}
+                    <img class="js-subcat-image" alt="{$item.name}" src="{$banner}" />
+                {/if}
+                {if !empty($banner_link)}</a>{/if}
+            </div>
+        {/if}
+
+        <div class="subcat-v-image__items">
+            {foreach $item.childs as $item_lvl2}
+                {if !empty($item_lvl2.params.vertical_menu_hide)}{continue}{/if}
+                <div class="subcat-v-image__item">
+                    <a class="subcat-v-image__inner" href="{$item_lvl2.url}"{if !empty($item_lvl2.target)} target="{$item_lvl2.target}"{/if}>
+                        {$is_category = isset($item_lvl2.filter) || isset($item_lvl2.sort_products) || isset($item_lvl2.count)}
+                        {$item_lvl2_image = null}
+                        {if !empty($is_menus_item) && !empty($menus_list_with_img[$item_lvl2.id]['img'])}
+                            {$item_lvl2_image_name = $menus_list_with_img[$item_lvl2.id]['img']}
+                            {$item_lvl2_image = "`$wa_url`wa-data/public/menus/image/`$item_lvl2_image_name`"}
+                        {else if $is_category && isset($cat_images[$item_lvl2.id].image)}
+                            {$item_lvl2_image = $cat_images[$item_lvl2.id].image}
+                        {else if !empty($item_lvl2.image)}
+                            {$item_lvl2_image = $item_lvl2.image}
+                        {/if}
+                        {$is_badge = (!empty($theme_settings.vertical_main_menu_badge) && !empty($item_lvl2.params.badge_text) && !empty($item_lvl2.params.badge_class))}
+                        {if $is_badge} <span class="cat-badge cat-badge--{$item_lvl2.params.badge_class} subcat-v-image__badge">{$item_lvl2.params.badge_text}</span>{/if}
+                        <span class="subcat-v-image__image">
+                            {$default_image = "`$wa_theme_url`img/dummy200.png"}
+                            {if !empty($theme_settings.default_image)}
+                                {$default_image = strtok($theme_settings.default_image, "?")}
+                                {$default_image = "`$wa_parent_theme_url``$default_image`"}
+                            {/if}
+                            {if $is_lazy && isset($item_lvl2_image)}
+                                <img class="js-subcat-image"  alt="{$item_lvl2.name}" src="{$wa_theme_url}img/lazy-image.png" data-src="{if isset($item_lvl2_image)}{$item_lvl2_image}{else}{$default_image}{/if}" />
+                            {else}
+                                <img class="js-subcat-image" alt="{$item_lvl2.name}" src="{if isset($item_lvl2_image)}{$item_lvl2_image}{else}{$default_image}{/if}" />
+                            {/if}
+                        </span>
+
+                        <span class="subcat-v-image__title">
+                             {$item_lvl2.name}<i class="subcat-v-image__more ac-color fal fa-long-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+            {/foreach}
+        </div>
+    </div>
+{/if}
+{/strip}

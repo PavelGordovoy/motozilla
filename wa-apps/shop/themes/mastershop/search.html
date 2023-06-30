@@ -1,0 +1,108 @@
+{strip}
+{if $wa->get('ajax')}
+    {include file='search.auto.html'}
+{else}
+    {$cols = 1}
+    {$sidebar_left = false}
+    {$sidebar_right = false}
+    {$sorting=true}
+    {$is_mobile = ($wa->isMobile() && ($wa->cookie("is_desktop_for_mobile") != 1 || !$theme_settings.switch_version))}
+    {$isSearchPro = $theme_settings.plugin_search_pro && strpos($wa->currentUrl(false, true), '/search/' ) === 0 && class_exists('shopSearchproPluginViewHelper') && !$wa->get('list')}
+    {$is_select_count_pages = $theme_settings.select_count_pages}
+    {if $isSearchPro}{$sorting=false}{/if}
+
+    {$searchTitle = "[`Search by request`]"}
+    {if $wa->get('list') == 'favorites'}
+        {$searchTitle = "[`Favorites products`]"}
+    {elseif $wa->get('list') == 'viewed'}
+        {$searchTitle = "[`Viewed products`]"}
+    {elseif $wa->get('query') != ''}
+        {$searchTitle = "[`Search by request`]: `$title`"}
+    {elseif $title}
+        {$searchTitle = $title}
+    {elseif $wa->get('query') == ''}
+        {$searchTitle = "[`Search by request`]"}
+    {/if}
+
+    {if $wa->get('list')}
+        {$is_select_count_pages = false}
+    {/if}
+
+    {if $wa->get('list') == 'favorites' || $wa->get('list') == 'viewed'}
+        {$sorting=false}
+        {$products = []}
+        {$list = $wa->cookie("`$wa->get('list')`_list")}
+        {if $list}
+            {$pages_count = 0}
+            {$products_per_page = 64}
+            {$current_page = (int)$wa->get('page')}
+            {if empty($current_page)}{$current_page = 1}{/if}
+            {$offset = 0}
+            {if $current_page > 1}
+                {$offset = $products_per_page * ($current_page-1)}
+            {/if}
+
+            {$list_arr = ","|explode:$list}
+            {if $wa->get('list') == 'viewed'}
+                {$products_max_count = (int)$theme_settings.viewed_products_count}
+            {else}
+                {$products_max_count = (int)$theme_settings.favorites_products_count}
+            {/if}
+
+            {if empty($products_max_count)}{$products_max_count = 128}{/if}
+            {$list_arr = array_slice($list_arr, 0, $products_max_count)}
+
+            {$products = $wa->shop->products($list_arr, $offset, $products_per_page)}
+            {$products_count = $wa->shop->productsCount($list_arr)}
+
+            {if $products_count > $products_per_page}
+                {$pages_count = ceil($products_count/$products_per_page)}
+            {else if !empty($products_count)}
+                {$products_result = []}
+                {foreach $list_arr as $id}
+                    {if isset($products[$id])}
+                        {$products_result[$id] = $products[$id]}
+                    {/if}
+                {/foreach}
+                {$products = $products_result}
+            {/if}
+        {/if}
+    {/if}
+
+    <!-- plugin hook: 'frontend_search' -->
+    {* @event frontend_search.%plugin_id% *}
+    {foreach $frontend_search as $_}{$_}{/foreach}
+    {if !$products}
+        [`No products were found.`]
+    {else}
+        {if $theme_settings.horizontal_filter == 1}
+            {include file="./horizontal.filter.html" inline}
+        {/if}
+        {if isset($filters) && !empty($filters)}
+        {if $isSearchPro}{$wa->globals('globalFilters', $filters)}{/if}
+            <div class="js-btn-open-filter m-filters-open{if $wa->isMobile()} show-mobile{/if}">
+                <i class="m-filters-open__icon far fa-sliders-h"></i>
+                [`Selection by parameters`]
+                <i class="m-filters-open__caret fal fa-chevron-right"></i>
+            </div>
+        {/if}
+        <div id="product-list" class="js-search-page">
+            {if $is_mobile}
+                {$product_preview_view = $theme_settings.mobile_product_preview_type_default}
+                {$switch_view = $theme_settings.mobile_preview_product_switch}
+            {else}
+                {$product_preview_view = $theme_settings.desktop_product_preview_type_default}
+                {$switch_view = $theme_settings.desktop_preview_product_switch}
+            {/if}
+            {include file='list-thumbs.html' is_custom_list=$wa->get('list') sorting=$sorting switch_view=$switch_view is_select_count_pages=$is_select_count_pages}
+            {if $isSearchPro && $theme_settings.preview_product_images_lazy}
+                <script>$(function(){ productsPreviewList.init(); });</script>
+            {/if}
+        </div>
+    {/if}
+
+    {$wa->globals('isSearchTemplate', true)}
+    {if isset($searchTitle) && !empty($searchTitle)}{$wa->globals('isSearchTemplatetTitle', $searchTitle)}{/if}
+    {if $isSearchPro}{$wa->globals('isSearchProPage', true)}{/if}
+{/if}
+{/strip}

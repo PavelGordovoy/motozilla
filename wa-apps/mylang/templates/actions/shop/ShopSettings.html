@@ -1,0 +1,37 @@
+<div class="block">
+    <h1>[`Store settings`]</h1>
+    <div class="fields form">
+        <form action="?module=settings&action=save" method="post" id="plugins-settings-form" enctype="multipart/form-data" target="plugins-settings-iframe">
+            {$wa->csrf()}
+            <input type="hidden" name="action" value="shopsettings"/>
+            <div class="field">
+                <div class="name">
+                    <label>[`Search scope`]</label>
+                </div>
+                <div class="value">
+                    <label><input type="checkbox" name="fullsearch" value="1" {if $settings.fullsearch|default:0} checked {/if}/>  [`Use full text search.`]</label><br>
+                    <span class="hint">[`By default search is using translated strings. Check option to use full text search.`]</span>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">
+                    <label>[`Reviews filter`]</label>
+                </div>
+                <div class="value">
+                    <label><input type="checkbox" name="disablereviewfilter" value="1" {if $settings.disablereviewfilter|default:0} checked {/if}/>  [`Disable reviews filter.`]</label><br>
+                    <span class="hint">[`By default reviews are filtered by locale.`]</span>
+                </div>
+            </div>
+            <div class="field">
+                <div class="field">
+                    <div class="value submit">
+                        <input type="submit" class="button green" value="[`Save`]">
+                        <span id="mylang-settings-form-status" style=""></span>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <iframe style="display:none" name="plugins-settings-iframe" id="plugins-settings-iframe"></iframe>
+    </div>
+    <div class="clear-left"></div>
+</div>

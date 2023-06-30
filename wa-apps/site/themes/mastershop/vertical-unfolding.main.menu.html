@@ -1,0 +1,289 @@
+{strip}
+{* selected category *}
+{$selected_category=null}
+{if isset($category)}{$selected_category=$category.id}{/if}
+
+{$res_menu = []}
+
+{* init menu *}
+{$menu = []}
+{if $theme_settings.vertical_unfolding_main_menu == 'app-menu' && $wa->menu && (int)$theme_settings.vertical_unfolding_id_app_main_menu > 0}
+    {$id_menu = $theme_settings.vertical_unfolding_id_app_main_menu}
+    {if $wa->globals("appMenuId`$id_menu`")}
+        {$menu = $wa->globals("appMenuId`$id_menu`")}
+    {else}
+        {$menu = $wa->menu->get($id_menu)}
+        {$wa->globals("appMenuId`$id_menu`", $menu)}
+    {/if}
+{else if $theme_settings.vertical_unfolding_main_menu == 'app-menus' && $wa->menus && (int)$theme_settings.vertical_unfolding_id_app_main_menu > 0}
+    {$id_menu = $theme_settings.vertical_unfolding_id_app_main_menu}
+    {$menu = $wa->menus->getMyMenu($id_menu)}
+    {if !empty($menu) && $theme_settings.vertical_unfolding_main_menu_icon}
+        {$menus_list_with_img_temp = $wa->menus->getMyMenuForeach($id_menu)}{$menus_list_with_img = []}
+        {foreach $menus_list_with_img_temp as $menu_item}
+            {$menus_list_with_img[$menu_item.id] = $menu_item}
+        {/foreach}
+        {foreach $menu as $key => $menu_item}
+            {$menu[$key]['is_menus'] = true}
+        {/foreach}
+    {/if}
+{else if $wa->shop}
+    {if !isset($shop_categories) || empty($shop_categories)}
+        {if $wa->globals('shopCategories')}
+            {$shop_categories = $wa->globals('shopCategories')}
+        {else}
+            {$shop_categories = $wa->shop->categories(0, null, true, true)}
+            {$wa->globals('shopCategories', $shop_categories)}
+        {/if}
+    {/if}
+    {$menu = $shop_categories}
+{/if}
+
+{* Additional menu from pages *}
+{if $theme_settings.vertical_unfolding_main_menu_add}
+    {$add_menu_res = []}
+    {$add_ids = ","|explode:$theme_settings.vertical_unfolding_main_menu_add_ids}
+    {if $theme_settings.vertical_unfolding_main_menu_add == 'site-pages' && $wa->site}
+        {if $wa->globals("site_pages")}
+            {$add_menu = $wa->globals("site_pages")}
+        {else}
+            {$add_menu =  $wa->site->pages()}
+            {$wa->globals("site_pages", $add_menu)}
+        {/if}
+    {elseif $theme_settings.vertical_unfolding_main_menu_add == 'shop-pages' && $wa->shop}
+        {if $wa->globals("shop_pages")}
+            {$add_menu = $wa->globals("shop_pages")}
+        {else}
+            {$add_menu =  $wa->shop->pages()}
+            {$wa->globals("shop_pages", $add_menu)}
+        {/if}
+    {elseif $theme_settings.vertical_unfolding_main_menu_add == 'app-menu' && $theme_settings.vertical_unfolding_main_menu != 'app-menu' && $wa->menu && (int)$theme_settings.vertical_unfolding_id_app_main_menu > 0}
+        {$id_menu = $theme_settings.vertical_unfolding_id_app_main_menu}
+        {if $wa->globals("appMenuId`$id_menu`")}
+            {$add_menu = $wa->globals("appMenuId`$id_menu`")}
+        {else}
+            {$add_menu = $wa->menu->get($id_menu)}
+            {$wa->globals("appMenuId`$id_menu`", $add_menu)}
+        {/if}
+    {elseif $theme_settings.vertical_unfolding_main_menu_add == 'app-menus' && $theme_settings.vertical_unfolding_main_menu != 'app-menus' && $wa->menus && (int)$theme_settings.vertical_unfolding_id_app_main_menu > 0}
+        {$id_menu = $theme_settings.vertical_unfolding_id_app_main_menu}
+        {$add_menu = $wa->menus->getMyMenu($id_menu)}
+        {if !empty($add_menu) && $theme_settings.vertical_unfolding_main_menu_icon}
+            {$menus_list_with_img_temp = $wa->menus->getMyMenuForeach($id_menu)}{$menus_list_with_img = []}
+            {foreach $menus_list_with_img_temp as $menu_item}
+                {$menus_list_with_img[$menu_item.id] = $menu_item}
+            {/foreach}
+            {foreach $add_menu as $key => $menu_item}
+                {$add_menu[$key]['is_menus'] = true}
+            {/foreach}
+        {/if}
+    {elseif $theme_settings.vertical_unfolding_main_menu_add == 'wa-apps'}
+        {if $wa->globals("menuWaApps")}
+            {$add_menu = $wa->globals("menuWaApps")}
+        {else}
+            {$add_menu = $wa->apps()}
+            {$wa->globals("menuWaApps", $add_menu)}
+        {/if}
+    {/if}
+    {if !empty($add_menu)}
+        {if $theme_settings.vertical_unfolding_main_menu_add == 'shop-pages' || $theme_settings.vertical_unfolding_main_menu_add == 'site-pages'}
+            {foreach $add_menu as $item}
+                {if in_array($item.id, $add_ids)}
+                    {$add_menu_res[] = $item}
+                {/if}
+            {/foreach}
+        {else if $theme_settings.vertical_unfolding_main_menu_add == 'wa-apps'}
+            {foreach $add_menu as $key => $item}
+                {$add_menu[$key]['id'] = "app-`$key`"}
+            {/foreach}
+            {$add_menu_res = $add_menu}
+        {else}
+            {$add_menu_res = $add_menu}
+        {/if}
+
+        {if $theme_settings.vertical_unfolding_main_menu_add_end}
+            {$menu = $menu|@array_merge:$add_menu_res}
+        {else}
+            {$menu = $add_menu_res|@array_merge:$menu}
+        {/if}
+    {/if}
+{/if}
+
+{* hide lasted items to ELSE  link *}
+{$count_menu = count($menu)}
+{$count_max_menu = (int)$theme_settings.vertical_unfolding_max_main_menu_items}
+{if $count_menu && $count_max_menu && $count_max_menu < $count_menu}
+    {foreach $menu as $item}
+        {if $item@iteration > $count_max_menu}
+            {$else_menu[] = $item}
+        {else}
+            {$res_menu[] = $item}
+        {/if}
+    {/foreach}
+    {if isset($else_menu)}
+        {$main_menu_more_title = $theme_settings.vertical_unfolding_main_menu_more_title}
+    {if empty($main_menu_more_title)}{$main_menu_more_title = '[`Else categories`]'}{/if}
+        {$res_menu[] = ['name' => "`$main_menu_more_title`", 'id' => 'else', 'url' => '#', 'childs' => $else_menu]}
+    {/if}
+{else}
+    {$res_menu = $menu}
+{/if}
+
+{$max_level = (int)$theme_settings.vertical_unfolding_main_menu_max_levels}
+
+{if count($res_menu) > 0}
+    {if $theme_settings.vertical_unfolding_main_menu_icon}
+        {if class_exists('shopSkcatimagePlugin')}
+            {$cat_images = shopSkcatimageHelper::getImages()}
+        {elseif class_exists('shopWmimageincatPlugin')}
+            {$cat_images = shopWmimageincatPlugin::getCategoryImageObj()}
+        {/if}
+    {/if}
+
+    {$opens_categories = ","|explode:$theme_settings.vertical_unfolding_main_menu_open_cats}
+
+    {* function subcategories *}
+    {function name=getSubcategories subcategories=[] parent=[]}
+        {if count($subcategories) > 0}
+            {$is_parent_category = isset($parent.filter) || isset($parent.sort_products) || isset($parent.count)}
+            {$is_close = ($is_parent_category && $selected_category != $parent.id) || (!$is_parent_category && !(strlen($parent.url)>1 && $wa->currentUrl() == $parent.url))}
+            {$is_open_category = !empty($opens_categories) && $is_parent_category && in_array($parent.id, $opens_categories)}
+            <ul class="subcategories-vu{if $is_close && !$is_open_category} hide{/if} js-subcat">
+                {foreach $subcategories as $key => $subcategory}
+                    {if !empty($subcategory.params.vertical_unfolding_menu_hide)}{continue}{/if}
+                    {$is_category = isset($subcategory.filter) || isset($subcategory.sort_products) || isset($subcategory.count)}
+                    {$is_selected = ($is_category && $selected_category == $subcategory.id) || (!$is_category && strlen($subcategory.url)>1 && $wa->currentUrl() == $subcategory.url)}
+                    {$is_has_submenu = isset($subcategory.childs) && count($subcategory.childs)}
+
+                    {if isset($subcategory.depth) && !empty($max_level)}
+                        {$level = (int)$subcategory.depth + 1}
+                        {if $max_level <= $level}
+                            {$is_has_submenu = false}
+                        {/if}
+                    {/if}
+                    {$is_open_category = !empty($opens_categories) && $is_category && in_array($subcategory.id, $opens_categories)}
+                    {$is_badge = (!empty($theme_settings.vertical_unfolding_main_menu_badge) && !empty($subcategory.params.badge_text) && !empty($subcategory.params.badge_class))}
+                    <li class="subcategories-vu__item{if $is_selected} selected{/if}">
+                        <a class="subcategories-vu__link{if $is_has_submenu} margin-r{/if}" href="{$subcategory.url}"{if !empty($subcategory.target)} target="{$subcategory.target}"{/if}>
+                            {$subcategory.name}
+                            {if $is_badge} <span class="cat-badge cat-badge--{$subcategory.params.badge_class}">{$subcategory.params.badge_text}</span>{/if}
+                        </a>
+                        {if $is_has_submenu}
+                            <i class="subcategories-vu__open fal fa-angle-down js-subcat-open{if $is_selected || $is_open_category} selected{/if}"></i>
+                            {getSubcategories subcategories=$subcategory.childs parent=$subcategory}
+                        {/if}
+                    </li>
+                {/foreach}
+            </ul>
+        {/if}
+    {/function}
+
+    {$is_close = (isset($is_close) && !empty($is_close))}
+    <div class="categories-vu{if $is_close} js-categories-v close{/if}">
+        {if $theme_settings.vertical_unfolding_main_menu_title || $is_close}
+            <div class="categories-vu__head{if $is_close} hover js-categories-btn{/if}">
+                <i class="categories-vu__head-icon far fa-bars"></i>
+                {if $theme_settings.vertical_unfolding_main_menu_title_text}{$theme_settings.vertical_unfolding_main_menu_title_text}{else}[`Catalog`]{/if}
+                {if $is_close}<span class="categories-vu__head-caret"></span>{/if}
+            </div>
+        {/if}
+        {$is_retina = $theme_settings.categories_menu_images_retina && class_exists('shopSkcatimagePlugin') && !empty($cat_images)}
+        {$is_lazy = $theme_settings.categories_menu_images_lazy && !empty($cat_images)}
+        <div class="categories-vu__menu{if $is_close} js-categories-menu{/if} js-sidebar-cats-tree" data-retina="{$is_retina}" data-lazy="{$is_lazy}">
+            {foreach $res_menu as $item}
+                {if !empty($item.params.vertical_unfolding_menu_hide)}{continue}{/if}
+                {$is_category = isset($item.filter) || isset($item.sort_products) || isset($item.count)}
+                {$is_selected = ($is_category && $selected_category == $item.id) || (!$is_category && strlen($item.url)>1 && $wa->currentUrl() == $item.url)}
+                {$is_has_submenu = isset($item.childs) && count($item.childs)}
+                {if !empty($max_level) && $max_level <= 1}
+                    {$is_has_submenu = false}
+                {/if}
+                {$is_open_category = !empty($opens_categories) && $is_category && in_array($item.id, $opens_categories)}
+                {$is_badge = (!empty($theme_settings.vertical_unfolding_main_menu_badge) && !empty($item.params.badge_text) && !empty($item.params.badge_class))}
+                <div class="categories-vu__item">
+                    {if $is_has_submenu}<i class="categories-vu_open fal fa-angle-down  js-subcat-open{if $is_selected || $is_open_category} selected{/if}"></i>{/if}
+                    <span class="categories-vu__item-inner{if $is_selected} selected{/if}">
+                        {if $item.id != 'else'}
+                            <a class="categories-vu__link" href="{$item.url}"{if !empty($item.target)} target="{$item.target}"{/if}>
+                                {$is_menus_item = !empty($item['is_menus'])}
+                                {if $theme_settings.vertical_unfolding_main_menu_icon}
+                                    {if $is_menus_item && !empty($menus_list_with_img[$item.id]['img'])}
+                                        {$icon_name = $menus_list_with_img[$item.id]['img']}
+                                        {$icon = "`$wa_url`wa-data/public/menus/image/`$icon_name`"}
+                                    {else if $is_category && !empty($cat_images[$item.id].icon)}
+                                        {$icon = $cat_images[$item.id].icon}
+                                    {else if !empty($item.icon)}
+                                        {$icon = $item.icon}
+                                    {else}
+                                        {$icon = null}
+                                    {/if}
+                                    {if $icon}
+                                        <span class="categories-vu__icon">
+                                            {if $is_lazy}
+                                                <img class="js-sidebar-cat-image" alt="{$item.name}" src="{$wa_theme_url}img/lazy-image.png" data-src="{$icon}" />
+                                            {else}
+                                                <img class="js-sidebar-cat-image" alt="{$item.name}" src="{$icon}" />
+                                            {/if}
+                                        </span>
+                                    {/if}
+                                {/if}
+                                <span class="categories-vu__title">
+                                    {$item.name}{if $is_badge} <span class="cat-badge cat-badge--{$item.params.badge_class}">{$item.params.badge_text}</span>{/if}
+                                </span>
+                            </a>
+                        {else}
+                            <span class="categories-vu__link categories-vu__link--else">
+                                <span class="categories-vu__title bs-color">{$item.name}</span>
+                            </span>
+                        {/if}
+                    </span>
+                    {if $is_has_submenu}
+                        {getSubcategories subcategories=$item.childs parent=$item}
+                    {/if}
+                </div>
+            {/foreach}
+
+            {* brands list *}
+            {if $theme_settings.vertical_unfolding_main_menu_display_brand && $wa->shop}
+                {$is_productbrands = $theme_settings.use_brand_plugin == 'productbrands' && class_exists('shopProductbrandsPlugin')}
+                {$is_brandspro = $theme_settings.use_brand_plugin == 'brands_pro' && class_exists('shopBrandViewHelper')}
+
+                {if $is_productbrands || $is_brandspro}
+                    {$is_brands_submenu = $theme_settings.vertical_unfolding_main_menu_display_brands_list}
+                    {if !empty($is_brands_submenu)}
+                        {$brands = []}
+                        {if $is_productbrands}
+                            {$brands = shopProductbrandsPlugin::getBrands()}
+                        {else if $is_brandspro}
+                            {$brands = shopBrandViewHelper::getAllBrands()}
+                        {/if}
+                        {$count_brands = count($brands)}
+                    {/if}
+
+                    <div class="categories-vu__item">
+                        {if !empty($count_brands)}<i class="categories-vu_open fal fa-angle-down js-subcat-open"></i>{/if}
+                        <span class="categories-vu__item-inner">
+                            <a class="categories-vu__link" href="{$wa->getUrl('shop/frontend/brands')}">
+                                <span class="categories-vu__title ac-color bold">[`Brands`]</span>
+                            </a>
+                        </span>
+                        {if !empty($count_brands)}
+                            {$is_brands_page = isset($brand) || (isset($action) && $action == 'brands')}
+                            <ul class="subcategories-vu{if !$is_brands_page} hide{/if} js-subcat">
+                                {foreach $brands as $b}
+                                    {$url = ''}
+                                    {if $is_productbrands}{$url = $b.url}{/if}
+                                    {if $is_brandspro}{$url = $b.frontend_url}{/if}
+                                    <li class="subcategories-vu__item{if isset($brand) && $brand.id == $b.id} selected{/if}">
+                                        <a  class="subcategories-vu__link" title="{$b.name|escape}" href="{$url}">{$b.name|escape}</a>
+                                    </li>
+                                {/foreach}
+                            </ul>
+                        {/if}
+                    </div>
+                {/if}
+            {/if}
+        </div>
+    </div>
+{/if}
+{/strip}

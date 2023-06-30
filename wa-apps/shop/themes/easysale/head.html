@@ -1,0 +1,26 @@
+{strip}
+
+{if !empty($action) && ( $action == "default" )}
+    <meta itemprop="name" content="{$wa->shop->settings('name')}">
+    <meta itemprop="address" content="{$wa->shop->settings('country')}">
+    <meta itemprop="telephone" content="{$wa->shop->settings('phone')}">
+    <meta itemprop="currenciesAccepted" content="{$wa->shop->currency()}">
+{/if}
+
+{* CSS *}
+<link href="{$wa_active_theme_url}css/easysale.shop.css?v{$wa_theme_version}" rel="stylesheet" />
+
+{* PLUGINS *}
+<link href="{$wa_parent_theme_url}plugins/owlcarousel/owl.carousel.min.css?v{$wa_theme_version}" rel="stylesheet" type="text/css"/>
+<link href="{$wa_parent_theme_url}plugins/owlcarousel/owl.theme.default.min.css?v{$wa_theme_version}" rel="stylesheet" type="text/css"/>
+
+{* JS *}
+<script src="{$wa_app_static_url}js/lazy.load.js?v{$wa->version()}"></script>
+<script src="{$wa_static_url}wa-content/js/jquery-plugins/jquery.cookie.js?v{$wa->version(true)}"></script>
+<script src="{$wa_parent_theme_url}plugins/owlcarousel/owl.carousel.min.js?v{$wa_theme_version}"></script>
+<script src="{$wa_active_theme_url}js/easysale.shop.js?v{$wa_theme_version}"></script>
+
+{* @event frontend_head.%plugin_id% *}
+{foreach $frontend_head as $_}{$_}{/foreach}
+
+{/strip}

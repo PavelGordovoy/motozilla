@@ -1,0 +1,60 @@
+{strip}
+{$reviews = $wa->shop->reviews((int)$theme_settings.homepage_reviews_count)}
+{if count($reviews)}
+    {$products_review = []}
+    {foreach $reviews as $review}
+        {if isset($review.product_id) && !empty($review.product_id)}
+            {$products_id_review[] = $review.product_id}
+        {/if}
+    {/foreach}
+    {if count($products_id_review)}
+        {$products_review = $wa->shop->products($products_id_review)}
+    {/if}
+    <div class="home-reviews js-home-reviews" data-count-items="{count($reviews)}">
+        <div class="items-list__head">
+            <div class="items-list__direction bs-color js-carousel-direction"></div>
+            {if $theme_settings.homepage_reviews_head}
+                <div class="h1 head-decor">{$theme_settings.homepage_reviews_head}</div>
+            {/if}
+        </div>
+        <div class="home-reviews__list-outer">
+            <div class="home-reviews__list js-reviews-carousel owl-carousel">
+                {foreach $reviews as $review}
+                    <div class="js-home-reviews-item home-reviews__item">
+                        <span class="home-reviews__quotes">
+                            <span class="home-reviews__quotes__el"></span>
+                            <span class="home-reviews__quotes__el"></span>
+                        </span>
+                        {if isset($products_review[$review.product_id])}
+                            <a class="home-reviews__img" href="{$review.product_url}">
+                                {$wa->shop->productImgHtml($products_review[$review.product_id], '140', ['class' => "owl-lazy", 'alt' => $review.product_name|escape])|replace:"src":"src=`$wa_theme_url`img/lazy-image.png data-src"}
+                            </a>
+                        {/if}
+                        <div class="home-reviews__content">
+                            <div class="home-reviews__title">
+                                {if isset($products_review[$review.product_id])}
+                                    <a href="{$review.product_url}">{$review.product_name|escape}</a>
+                                {else}
+                                    {$review.product_name|escape}
+                                {/if}
+                            </div>
+                            <div class="home-reviews__info">
+                                {if $review.rate > 0}
+                                <span class="home-reviews__rating rating nowrap">
+                                    {$wa->shop->ratingHtml($review.rate, 10)}
+                                </span>
+                                {/if}
+                                <div class="home-reviews__username">{$review.author['name']}</div>
+                                <div class="home-reviews__date">{$review.datetime|wa_datetime:"humandate"}</div>
+                            </div>
+                            <div class="home-reviews__text">
+                                {strip_tags($review.text)|truncate:200}
+                            </div>
+                        </div>
+                    </div>
+                {/foreach}
+            </div>
+        </div>
+    </div>
+{/if}
+{/strip}

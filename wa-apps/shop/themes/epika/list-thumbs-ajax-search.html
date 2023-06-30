@@ -1,0 +1,18 @@
+<!-- products ajax search thumbnail list view: related products, etc. -->
+
+{$query = $wa->get("query")}
+{foreach $products|@array_slice:0:6 as $p}
+
+<a href="{$p.frontend_url}" title="{$p.name}" class="autocomplete-item">
+    <div class="autocomplete-thumb">
+        {$wa->shop->productImgHtml($p, '60x0', ['itemprop' => 'image', 'alt' => $p.name, 'default' => "{$wa_theme_url}assets/img/nophoto.png"])}
+    </div>
+    <span class="autocomplete-link">{$p.name|truncate:80:"...":true}</span>
+    <span class="autocomplete-price">{shop_currency_html($p.price)}</span>
+</a>
+
+{/foreach}
+
+<a href="{$wa->getUrl('shop/frontend/search')}?query={$query}" title="{$p.name}" class="find-more">
+    [`Найти больше...`]
+</a>

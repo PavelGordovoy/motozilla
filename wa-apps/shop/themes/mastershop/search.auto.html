@@ -1,0 +1,46 @@
+{strip}
+{if $products}
+    <div>
+        <div class="js-auto-search auto-search">
+            <ul class="products-mini">
+                {foreach $products as $p}
+                    {if $p@iteration > 6}{break}{/if}
+                    <li class="products-mini__item clearfix">
+                        <a class="products-mini__link" href="{$p.frontend_url}">
+                            <div class="products-mini__image">
+                                {$default_image = "`$wa_theme_url`img/dummy96.png"}
+                                {if !empty($theme_settings.default_image)}
+                                    {$default_image = strtok($theme_settings.default_image, "?")}
+                                    {$default_image = "`$wa_parent_theme_url``$default_image`"}
+                                {/if}
+                                {$wa->shop->productImgHtml($p, '50x0', ['alt' => $p.name, 'default' => $default_image])}
+                            </div>
+                            <div class="products-mini__content">
+                                <div class="products-mini__title">{$p.name}</div>
+                                <div class="products-mini__prices-btn clearfix">
+                                    <div class="products-mini__prices">
+                                        <span class="products-mini__price price">
+                                            {$text_zero_price = $theme_settings.product_zero_price_text}
+                                            {if $text_zero_price && $p.price == 0}
+                                                {$text_zero_price}
+                                            {else}
+                                                {shop_currency_html($p.price)}
+                                            {/if}
+                                        </span>
+                                        {* if $p.compare_price > $p.price}
+                                            <span class="products-mini__price-compare price-compare">{shop_currency_html($p.compare_price)}</span>
+                                        {/if *}
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                {/foreach}
+            </ul>
+            <div class="auto-search-all">
+                <a class="show-all ac-color" href="{$wa->getUrl('shop/frontend/search')}?query={$wa->get('query')|escape}">[`View all`] ({$products_count}) <i class="button-more fal fa-long-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+{/if}
+{/strip}

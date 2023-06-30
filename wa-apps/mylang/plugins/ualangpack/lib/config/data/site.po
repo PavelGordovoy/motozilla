@@ -1,0 +1,1631 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst Site 2.5.28.261 UA translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language: uk_UA\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"X-Generator: Poedit 3.0\n"
+
+msgid "Block"
+msgstr "Блок"
+
+msgid "New block"
+msgstr "Новий блок"
+
+msgid "View original"
+msgstr "Переглянути оригінал"
+
+msgid "Block settings"
+msgstr "Налаштування блоку"
+
+msgid "Revert to original"
+msgstr "Відновити оригінал"
+
+msgid "Delete"
+msgstr "Видалити"
+
+msgid "Embed block into a page or a template"
+msgstr "Вбудувати блок на сторінку або в шаблон"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Description"
+msgstr "Опис"
+
+msgid "This will reset all customizations you applied to this block. Are you sure?"
+msgstr "Відновлення з оригіналу скине всі зміни, які ви застосовували до блоку. Продовжити?"
+
+msgid "This will permanently delete this snipper. Are you sure?"
+msgstr "Блок буде видалено назавжди. Ви впевнені?"
+
+msgid "Saving..."
+msgstr "Збереження ..."
+
+msgid "Saved"
+msgstr "Збережено"
+
+msgid "An error occurred while saving"
+msgstr "При спробі збереження сталася помилка"
+
+msgid "Files"
+msgstr "Файли"
+
+msgid "New folder"
+msgstr "Нова папка"
+
+msgid "Upload files"
+msgstr "Завантажити файли"
+
+msgid "Selected files"
+msgstr "Вибрані файли"
+
+msgid "Move to folder"
+msgstr "Перемістити в папку"
+
+msgid "Folder"
+msgstr "Папка"
+
+msgid "Rename"
+msgstr "Перейменувати"
+
+msgid "File"
+msgstr "Файл"
+
+msgid "Modified"
+msgstr "Змінено"
+
+msgid "Size"
+msgstr "Розмір"
+
+msgid "Create"
+msgstr "Створено"
+
+msgid "or"
+msgstr "або"
+
+msgid "cancel"
+msgstr "відміна"
+
+msgid "Uploading..."
+msgstr "Завантаження ..."
+
+msgid "Upload"
+msgstr "Завантажити"
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "Move"
+msgstr "Перемістити"
+
+msgid "Delete folder"
+msgstr "Видалити папку"
+
+msgid "Folder will be deleted without the ability to recover."
+msgstr "Папка буде видалена без можливості відновлення."
+
+msgid "Delete files"
+msgstr "Видалити файли"
+
+msgid "Files will be deleted without the ability to recover."
+msgstr "Файли будуть видалені без можливості відновлення."
+
+msgid "New file"
+msgstr "Новий файл"
+
+msgid "Template settings"
+msgstr "Налаштування шаблону"
+
+msgid "File name"
+msgstr "Назва файлу"
+
+msgid "File should have one of the allowed extensions: .html, .css, .js"
+msgstr "Файл повинен мати одне з дозволених розширень: .html, .css, .js"
+
+msgid "Optional template description"
+msgstr "Необов'язковий опис шаблону"
+
+msgid "File will be deleted without the ability to recover. Are you sure?"
+msgstr "Файл буде видалено без можливості відновлення. Ви впевнені?"
+
+msgid "Error"
+msgstr "Помилка"
+
+msgid "Blocks"
+msgstr "Блоки"
+
+msgid "Authorization on %s"
+msgstr "Авторизація на %s"
+
+msgid "Disabled"
+msgstr "Вимкнено"
+
+msgid "Enabled"
+msgstr "Увімкнено"
+
+msgid "User sign up, authorization and personal accounts are not enabled on %s."
+msgstr "Реєстрацію користувачів, авторизацію та особистий кабінет вимкнено на сайті %s."
+
+msgid "User sign up, authorization and personal accounts are enabled on %s. <a id=\"configure-app\" href=\"#\" class=\"inline-link\"><b><i>Configure URLs</i></b></a>"
+msgstr "Реєстрацію користувачів, авторизацію та особистий кабінет увімкнено на %s. <a id=\"configure-app\" href=\"#\" class=\"inline-link\"><b><i>Налаштувати</i></b></a>"
+
+msgid "Select the app that will host authorization forms. The URLs of my profile, signup and authorization pages will be defined by the selected app routing:"
+msgstr "Оберіть програму, яка відповідатиме за функціональність форм реєстрації та авторизації користувачів на цьому сайті. Адреси сторінок реєстрації, входу і особистого кабінету будуть визначатися правилами маршрутизації обраної програми:"
+
+msgid "Auth"
+msgstr "Авторизація"
+
+msgid "Enable captcha for signup form"
+msgstr "Вимагати введення капчі (captcha) у формі реєстрації"
+
+msgid "Allow \"Remember me\" option in authorization form"
+msgstr "Дозволити опцію \"Запам'ятати мене\" у формі авторизації"
+
+msgid "Third-party authorization"
+msgstr "Авторизація через зовнішні сервіси"
+
+msgid "Enables your site visitors to quickly sign up or sign in via accounts on external popular platforms, e.g. Facebook and Twitter. <a href=\"http://www.webasyst.com/framework/docs/dev/auth-adapters/\" target=\"_blank\">Setup instructions</a> <i class=\"icon10 new-window\"></i>"
+msgstr "Дозволяє відвідувачам вашого сайту швидко зареєструватися або авторизуватися через акаунти в популярних сторонніх сервісах, наприклад, «Фейсбук» або «Твіттер». <a href=\"http://www.webasyst.ru/developers/docs/auth/auth-adapters/\" target=\"_blank\">Документація по налаштуванню</a> <i class=\"icon10 new-window\"></i>"
+
+msgid "To enable authorization on this website, install and settle at least one app that supports authorization forms."
+msgstr "Щоб зробити доступною авторизацію на цьому сайті, встановіть хоча б один додаток, який підтримує форми авторизації, і налаштуйте для нього маршрутизацію."
+
+msgid "Confirm email on sign up"
+msgstr "Підтвердження email-адреси після реєстрації"
+
+msgid "A unique email confirmation link will be sent to user after the signup. User will be able to sign in only after this confirmation link has been clicked."
+msgstr "Користувачеві по email буде направлене унікальне посилання для підтверждення реєстрації. Користувач зможе увійти тільки після того, як перейде по цьому посиланню."
+
+msgid "Text"
+msgstr "Текст"
+
+msgid "Variables"
+msgstr "Змінні"
+
+msgid "Sign up form fields"
+msgstr "Поля форми реєстрації"
+
+msgid "Edit field label"
+msgstr "Редагувати назву поля"
+
+msgid "Edit hint for this field"
+msgstr "Редагувати підказку поля"
+
+msgid "Sign up"
+msgstr "Реєстрація"
+
+msgid "Edit button label"
+msgstr "Редагувати текст на кнопці"
+
+msgid "This app cannot be enabled for personal accounts on this domain, because the app is not settled in this domain's routing settings. Add this app to the routing table first so it becomes published on this site, and then you’ll be able to link it in personal accounts navigation."
+msgstr "Цей додаток не можна включити в особистому кабінеті, тому що він не підключений у правилах маршрутизації сайту. Додайте правило маршрутизації для цього додатка у налаштуваннях структури сайту, після чого ви зможете включити його в особистому кабінеті."
+
+msgid "Setup routing"
+msgstr "Налаштувати маршрутизацію"
+
+msgid "%s personal account URL: <a id=\"s-app-frontend-link\" href=\"%s\" target=\"_blank\">%s</a> <i class=\"icon10 new-window top-padded\"></i>"
+msgstr "«%s» в особистому кабінеті: <a id=\"s-app-frontend-link\" href=\"%s\" target=\"_blank\">%s</a> <i class=\"icon10 new-window top-padded\"></i>"
+
+msgid "%s personal account is disabled on this site."
+msgstr "Особистий кабінет «%s» вимкнений на цьому сайті."
+
+msgid "My profile"
+msgstr "Мій профіль"
+
+msgid "Personal account structure is defined by the list of installed Webasyst apps linked in the current website frontend."
+msgstr "Структура особистого кабінету визначається списком встановлених і підключених на даному сайті додатків Webasyst."
+
+msgid "Auth &amp; Sign Up settings"
+msgstr "Налаштування авторизації"
+
+msgid "My profile page is not available on this site, because user authorization on this site is hosted by <strong>%s</strong> app, while it’s personal account functionality is disabled. Either enable <a href=\"#/personal/app/%s/\">%s app’s personal account</a> on this site, or change the app that hosts user authorization in <a href=\"%s\">Auth &amp; Sign Up</a> settings."
+msgstr "Сторінка управління профілем на цьому сайті недоступна, тому що особистий кабінет додатку «<strong>%s</strong>», відповідального за функціональність форм реєстрації та авторизації на цьому сайті, відключений. Для включення сторінки управління профілем необхідно або включити <a href=\"#/personal/app/%s/\">особистий кабінет додатку «%s»</a>, або <a href=\"%s\">в налаштуваннях авторизації</a> вибрати інший додаток, який буде відповідати за функціональність форм реєстрації та авторизації на цьому сайті."
+
+msgid "My profile form fields"
+msgstr "Поля форми настройки профілю"
+
+msgid "Site setup"
+msgstr "Налаштування сайту"
+
+msgid "Delete entire website"
+msgstr "Цілком видалити сайт"
+
+msgid "Settings"
+msgstr "Налаштування"
+
+msgid "Domain name"
+msgstr "Доменне ім'я"
+
+msgid "A valid URL pointing to this Webasyst installation."
+msgstr "Діюча адреса (URL), яка веде на дану установку фреймворку Webasyst."
+
+msgid "E.g. <em>domain.com</em> if Webasyst is installed into domain.com's root folder, <em>domain.com/wa</em> if Webasyst is installed into /wa/ subfolder on domain.com. Do not put slash at the end of the URL."
+msgstr "Наприклад, <em>domain.ru</em>, якщо Webasyst встановлюється в кореневу директорію домену domain.ru, або <em>domain.ru/wa</em>, якщо Webasyst встановлюється в піддиректорію /wa/ домену domain.ru. Наприкінці URL додавати косу риску (/) не потрібно."
+
+msgid "IMPORTANT"
+msgstr "ВАЖЛИВО"
+
+msgid "The URL entered must point to the root of this Webasyst framework installation."
+msgstr "Адреса повинна вказувати на кореневу папку установки фреймворку Webasyst."
+
+msgid "Site name"
+msgstr "Назва сайту"
+
+msgid "Matches domain name"
+msgstr "Збігається з доменним ім'ям"
+
+msgid "Site alias used within site selection menu (at the top left corner), and as the anchor name in frontend's <em>$wa->apps()</em> navigation menu array."
+msgstr "Псевдонім сайту, який використовується у меню вибору сайтів (у верхньому лівому куті) і в якості тексту посилання в меню навігації фронтенду <em>$wa->apps()</em>."
+
+msgid "Alias (mirror site) for"
+msgstr "Псевдонім (дзеркало сайту) для"
+
+msgid "menu"
+msgstr "меню"
+
+msgid "The array defining core website navigation menu"
+msgstr "Масив, який визначає основне меню навігації на сайті"
+
+msgid "All settled apps"
+msgstr "Усі додатки"
+
+msgid "Automatically define navigation menu according to the routing rules"
+msgstr "Меню навігації буде сформовано автоматично згідно з правилами маршрутизації цього сайту"
+
+msgid "Setup manually"
+msgstr "Налаштувати вручну"
+
+msgid "Edit"
+msgstr "Редагувати"
+
+msgid "When done editing, click “Save” to apply changes."
+msgstr "Після завершення редагування не забудьте натиснути кнопку «Зберегти»."
+
+msgid "Add link"
+msgstr "Додати посилання"
+
+msgid "Background"
+msgstr "Тло"
+
+msgid "Custom"
+msgstr "Завантажити"
+
+msgid "Background is for customizing your Site app backend, which is useful when you have multiple websites powered by the single Webasyst installation. Selected background will not be shown in the frontend."
+msgstr "Тло використовується для індивідуальної настройки бекенду додатку «Сайт» - це зручно, якщо ви керуєте кількома сайтами всередині однієї установки фреймворку Вебасіст. Обране тло не видно у фронтенді."
+
+msgid "Custom head JS"
+msgstr "Користувальницький JavaScript-код всередині \"head\""
+
+msgid "Google Analytics Property ID"
+msgstr "Google Analytics Property ID"
+
+msgid "Universal Analytics"
+msgstr "Universal Analytics"
+
+msgid "E.g. <strong>UA-123456-1</strong><br />If you are using <a href=\"https://www.google.com/analytics/\">Google Analytics</a> to track your website visits and conversions, instead of embedding Google Analytics JS code manually, enter your Google Analytics Property ID here. A valid Google Analytics code will be automatically embedded into every app and every design theme before the closing &lt;/head&gt; tag."
+msgstr "Наприклад, <strong>UA-123456-1</strong><br />Якщо ви використовуєте <a href=\"https://www.google.com/analytics/\">Google Analytics</a> для відстеження статистики відвідувань та конверсії вашого сайту, то замість додавання коду Google Analytics вручну досить просто ввести тут ваш Google Analytics Property ID. Правильний код Google Analytics автоматично вставиться в усі теми оформлення усіх додатків перед закриває тегом &lt;/head&gt;."
+
+msgid "Additional JS code to be added before the closing &lt;/head&gt; tag:"
+msgstr "Додатковий JavaScript-код для вставки перед закриваючим тегом &lt;/head&gt;:"
+
+msgid "Favicon"
+msgstr "Favicon"
+
+msgid "Upload favicon"
+msgstr "Завантажити фавіконки"
+
+msgid "Touch icon for iOS"
+msgstr "Фавіконки для iOS"
+
+msgid "Upload iOS touch icon"
+msgstr "Завантажити iOS-фавіконки"
+
+msgid "from 152x152 and up to 1024x1024 px"
+msgstr "від 152х152 до 1024х1024 пікселів"
+
+msgid "Contents of this site's robots.txt file."
+msgstr "Вміст файлу robots.txt цього сайту."
+
+msgid "CDN"
+msgstr "CDN"
+
+msgid "Enable CDN (Content Delivery Network) support for this site by entering CDN URL prefix."
+msgstr "Увімкнути підтримку CDN (Content Delivery Network, Мережі Постачання Контенту) на цьому сайті шляхом вводу префіксу CDN URL."
+
+msgid "Authorization"
+msgstr "Авторизація"
+
+msgid "Personal &rarr; <a href=\"%s\">Auth &amp; Sign Up</a>"
+msgstr "Особистий кабінет &rarr; <a href=\"%s\">Налаштування авторизації</a>"
+
+msgid "This will delete the link from the menu. Are you sure?"
+msgstr "Це посилання буде видалене з меню. Ви впевнені?"
+
+msgid "This will delete entire website including all its pages without the ability to recover. Are you sure?"
+msgstr "Буде видалений весь сайт з усіма сторінками без можливості відновлення. Ви впевнені?"
+
+msgid "settings"
+msgstr "налаштування"
+
+msgid "Redirect"
+msgstr "Перенаправлення"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Delete rule"
+msgstr "Видалити правило"
+
+msgid "Settlement name"
+msgstr "Назва поселення"
+
+msgid "Name is used in the <em>$wa->apps</em> navigation menu of this website"
+msgstr "Назва використовується у меню навігації <em>$wa->apps</em> цього сайта"
+
+msgid "Design theme"
+msgstr "Тема оформлення"
+
+msgid "Mobile design theme"
+msgstr "Мобільна тема оформлення"
+
+msgid "Design theme for mobile multi-touch devices such as iPhone and Android"
+msgstr "Тема оформлення для мобільних multi-touch пристроїв (iPhone, Android та ін.)"
+
+msgid "Locale"
+msgstr "Локаль"
+
+msgid "Privacy"
+msgstr "Публічність"
+
+msgid "Private settlement"
+msgstr "Приховане поселення"
+
+msgid "When this option is enabled, the settlement is treated as hidden (not published), i.e. accessible by the direct URL but not included either in the $wa->apps array or in the main Sitemaps file. The private setting is useful for temporary settlements, such as “Under Construction” pages, and for other settlements which should not be included in the core website navigation menu or indexed by search engines."
+msgstr "При включенні цієї настройки поселення буде вважатися прихованим (не публічним). Воно буде доступне за своєю прямою адресою, але не буде включене у масив $wa->apps і основний Sitemap-файл. Прихованими зручно робити тимчасові поселення, наприклад, сторінки «Сайт знаходиться в розробці», і поселення, які не повинні бути включені в основне меню навігації або індексуватися пошуковими системами."
+
+msgid "Custom parameters"
+msgstr "Додаткові параметри"
+
+msgid "Optional set of custom <em>key=value</em> parameters which can be used within design templates and pages of this settlement as <em>&#123;$wa->globals(\"key\")&#125;</em>. Each key=value pair should be on a separate line."
+msgstr "Необов'язковий набір параметрів виду <em>key=value</em>, до значень яких можна звертатися у шаблонах дизайну і сторінках цього поселення як <em>&#123;$wa->globals(\"key\")&#125;</em>. Кожна пара key=value повинна бути вказана на окремому рядку."
+
+msgid "http://www.webasyst.com/framework/docs/site/design/"
+msgstr "http://www.webasyst.com/framework/docs/site/design/"
+
+msgid "Help"
+msgstr "Допомога"
+
+msgid "This will delete the rule from website structure. Are you sure?"
+msgstr "Правило буде видалене зі структури сайту. Ви впевнені?"
+
+msgid "Select route to manage its settings"
+msgstr "Оберіть правило маршрутизації для редагування його налаштувань"
+
+msgid "Site structure"
+msgstr "Структура сайту"
+
+msgid "New rule"
+msgstr "Нове правило"
+
+msgid "Site structure is defined by routing rules. Each rule sets which app should run by which URL (web address). Similar to how folders are used to organize files on a computer, routing rules are used to create a website powered by multiple apps."
+msgstr "Структура сайту визначається правилами маршрутизації. Кожне правило вказує на адреси, за якими працюють додатки. За аналогією з тим, як папки використовуються для організації файлів на комп'ютері, правила маршрутизації використовуються для розподілу додатків по розділах сайту."
+
+msgid "Rules are processed one by one in the given order. The first rule matching current HTTP request (web address) will be processed. Use * symbol in the URL fields for wildcard."
+msgstr "Правила обробляються по черзі у зазначеному порядку. Обробка починається з першого правила в списку і закінчується на правилі, яке відповідає поточному HTTP-запиту (адресою). Для позначення будь-яких символів в якості маски використовуйте зірочку (*)."
+
+msgid "http://www.webasyst.com/developers/docs/routing/site-app-routing/"
+msgstr "http://www.webasyst.ru/developers/docs/routing/site-app-routing/"
+
+msgid "Loading"
+msgstr "Завантаження"
+
+msgid "Cheat sheet"
+msgstr "Шпаргалка"
+
+msgid "New site"
+msgstr "Новий сайт"
+
+msgid "E.g. mydomain.com, www.mydomain.com, subdomain.mydomain.com"
+msgstr "Наприклад, mydomain.ru, www.mydomain.ru, subdomain.mydomain.ru"
+
+msgid "Enter the URL of your new website. You should own the domain and map it into your Webasyst installation (the URL should be the effective URL to access this Webasyst installation). Contact your hosting provider on how to map your domain name."
+msgstr "Вкажіть URL нового сайту. Ви маєте бути власником доменного імені і попередньо налаштувати домен таким чином, щоб він вказував на дану установку Webasyst. Для налаштування доменного імені зверніться за допомогою до вашого хостинг-провайдеру."
+
+msgid "Create site"
+msgstr "Створити сайт"
+
+msgid "Structure"
+msgstr "Структура"
+
+msgid "Personal"
+msgstr "Особистий кабінет"
+
+msgid "This is a mirror site (alias) for <strong>%s</strong>."
+msgstr "Цей сайт є дзеркалом для <strong>%s</strong>."
+
+msgid "File manager"
+msgstr "Файл-менеджер"
+
+msgid "Unsaved changes will be lost if you leave this page now. Are you sure?"
+msgstr "Незбережені зміни будуть втрачені. Ви впевнені?"
+
+msgid "File URL"
+msgstr "URL файлу"
+
+msgid "Download"
+msgstr "Завантажити"
+
+msgid "Delete file"
+msgstr "Видалити файл"
+
+msgid "will be deleted without the ability to recover."
+msgstr "буде видалений без можливості відновлення."
+
+msgid "Site"
+msgstr "Сайт"
+
+msgid "Page name"
+msgstr "Назва сторінки"
+
+msgid "Page title (&lt;title&gt;)"
+msgstr "Заголовок сторінки (&lt;title&gt;)"
+
+msgid "Page content"
+msgstr "Вміст сторінки"
+
+msgid "Page last update datetime"
+msgstr "Час останнього оновлення сторінки"
+
+msgid "Returns the array of pages associated with the current “Site” app settlement. Each page is an array of ( <em>\"id\", \"name\", \"title\", \"url\", \"create_datetime\", \"update_datetime\", \"content\"[, \"custom_1\", \"custom_2\", …]</em> )"
+msgstr "Повертає масив сторінок, пов'язаних з поселенням додатку «Сайт». Кожна сторінка являє собою масив з наступною структурою: <em>\"id\", \"name\", \"title\", \"url\", \"create_datetime\", \"update_datetime\", \"content\"[, \"custom_1\", \"custom_2\", …]</em>"
+
+msgid "Page list (only id, name, title, url, create_datetime, update_datetime)"
+msgstr "Список сторінок (тільки id, name, title, url, create_datetime, update_datetime)"
+
+msgid "Returns page info (array) by <em>id</em> (int)"
+msgstr "Повертає інформацію про сторінку (масив) з ідентифікатором <em>id</em> (int)"
+
+msgid "Content"
+msgstr "Вміст"
+
+msgid "META Keywords"
+msgstr "META Ключові слова"
+
+msgid "META Description"
+msgstr "META Опис"
+
+msgid "Error code (e.g. 404)"
+msgstr "Код помилки (наприклад, 404)"
+
+msgid "Error message"
+msgstr "Повідомлення про помилку"
+
+msgid "Email feedback form"
+msgstr "Форма для відправки повідомлень"
+
+msgid "This website is powered by the Site app."
+msgstr "Цей сайт працює на основі додатку «Сайт»."
+
+msgid "Refer to this tutorial to build your new site"
+msgstr "Зверніться до цього навчального матеріалу, щоб створити свій новий сайт"
+
+msgid "http://www.webasyst.com/framework/docs/site/tutorial/"
+msgstr "http://www.webasyst.ru/developers/docs/creating-a-website-tutorial/"
+
+msgid "added a new site"
+msgstr "додав новий сайт"
+
+msgid "edited site settings"
+msgstr "відредагував налаштування сайту"
+
+msgid "deleted site"
+msgstr "видалив сайт"
+
+msgid "uploaded file"
+msgstr "завантажив файл"
+
+msgid "deleted file"
+msgstr "видалив файл"
+
+msgid "added a new block for site"
+msgstr "додав новий блок для сайту"
+
+msgid "edited block for site"
+msgstr "відредагував блок для сайту"
+
+msgid "deleted block for site"
+msgstr "видалив блок на сайті"
+
+msgid "added a new routing rule"
+msgstr "додав нове правило маршрутизації"
+
+msgid "edited routing rule"
+msgstr "відредагував правило маршрутизації"
+
+msgid "deleted routing rule"
+msgstr "видалив правило маршрутизації"
+
+msgid "Available sites"
+msgstr "Доступні сайти"
+
+msgid "Only latin characters, numbers and underscore symbol are allowed."
+msgstr "Допускається використання тільки латинських букв, цифр і символу підкреслення."
+
+msgid "Block with id \"%s\" already exists"
+msgstr "Блок з ідентифікатором «%s» вже існує"
+
+msgid "Folder could not bet created due to the insufficient file write permissions for the %s folder."
+msgstr "Не вдалося створити папку через недостатні права на запис до папки %s."
+
+msgid "An unkown error occured when attempting to create a folder."
+msgstr "При спробі створення папки сталася невідома помилка."
+
+msgid "Files with extension .%s are not allowed to security considerations."
+msgstr "Файли з розширенням .%s не допускаються з міркувань безпеки."
+
+msgid "Folder or file could not bet renamed due to the insufficient file write permissions for the %s folder."
+msgstr "Не вдалося перейменувати файл (папку) через недостатні права на запис до папки %s."
+
+msgid "File (folder) can not be renamed"
+msgstr "Не вдалося перейменувати файл (папку)"
+
+msgid "Enter the new name"
+msgstr "Введіть нове ім'я"
+
+msgid "Selected folder (file) does not exist anymore"
+msgstr "Обрана папка (файл) більше не існує"
+
+msgid "Files could not bet moved due to the insufficient file write permissions for the %s folder."
+msgstr "Не вдалося перемістити файли через недостатні права на запис до папки %s."
+
+msgid "Can not move file “%s” to a new location"
+msgstr "Не вдалося перемістити файл %s у вказану папку"
+
+msgid "Can not move to a new location"
+msgstr "Не вдається перемістити в нове розташування"
+
+msgid "Folder could not bet deleted due to the insufficient permissions."
+msgstr "Не вдалося видалити папку через недостатні права доступу."
+
+msgid "Files with extensions %s are allowed only."
+msgstr "Дозволяются тільки файли з розширеннями %s."
+
+msgid "Image will be uploaded into"
+msgstr "Зображення буде завантажене в"
+
+msgid "My account"
+msgstr "Особистий кабінет"
+
+msgid "Database error"
+msgstr "Помилка бази даних"
+
+msgid "URL of this Webasyst installation (relative)"
+msgstr "URL установки Webasyst (відносний)"
+
+msgid "URL of the current app settlement (relative)"
+msgstr "URL поточного поселення додатку (відносний)"
+
+msgid "URL to access Webasyst backend (relative)"
+msgstr "URL доступу до бекенду Webasyst (відносний)"
+
+msgid "URL of the current app design theme folder (relative)"
+msgstr "URL папки з файлами поточної теми оформлення (відносний)"
+
+msgid "Title"
+msgstr "Назва"
+
+msgid "Assigns a new title"
+msgstr "Встановлює новий заголовок"
+
+msgid "Returns name of this Webasyst installation (name is specified in “Installer” app settings)"
+msgstr "Повертає назву даної установки Webasyst, вказане в налаштуваннях програми «Інсталлер»"
+
+msgid "Returns this site’s core navigation menu which is either set automatically or manually in the “Site settings” screen"
+msgstr "Повертає основне меню навігації цього сайту, сформоване автоматично або вказане вручну в налаштуваннях сайту"
+
+msgid "Returns current page URL (either absolute or relative)"
+msgstr "Повертає URL поточної сторінки (абсолютний або відносний)"
+
+msgid "Returns this domain’s root URL (absolute)"
+msgstr "Повертає кореневий URL цього домену (абсолютний)"
+
+msgid "Returns value of the global var by <em>key</em>. Global var array is initially empty, and can be used arbitrarily."
+msgstr "Повертає значення глобальної змінної по ключу <em>key</em>. Масив глобальних змінних спочатку порожній і може використовуватися довільним чином."
+
+msgid "Assigns global var a new value"
+msgstr "Присвоює нове значення глобальній змінній"
+
+msgid "Returns GET parameter value (same as PHP $_GET[\"<em>key</em>\"])"
+msgstr "Повертає значення GET-параметра (аналогічно $_GET[\"<em>key</em>\"] у PHP)"
+
+msgid "Based on current session data returns <em>true</em> or <em>false</em> if user is using a multi-touch mobile device; if no session var reflecting current website version (mobile or desktop) is available, User Agent information is used"
+msgstr "Повертає <em>true</em> або <em>false</em> в залежності від того, чи використовує користувач в даний момент мобільний multi-touch пристрій (iPhone, Android та ін.) чи ні; якщо змінна сесії, яка містить тип версії сайту (мобільний або стандартний), відсутня, то використовується інформація із заголовків User Agent"
+
+msgid "Returns user locale, e.g. \"en_US\", \"ru_RU\". In case user is authorized, locale is retrieved from “Contacts” app user record, or detected automatically otherwise"
+msgstr "Повертає мовну локаль користувача, наприклад, en_US, ru_RU. Якщо користувач авторизований, інформація про локалі витягується з програми «Контакти»; в іншому випадку визначається автоматично"
+
+msgid "Returns POST parameter value (same as PHP $_POST[\"<em>key</em>\"])"
+msgstr "Повертає значення POST-параметра (аналогічно $_POST[\"<em>key</em>\"] у PHP)"
+
+msgid "Returns SERVER parameter value (same as PHP $_SERVER[\"KEY\"])"
+msgstr "Повертає значення параметра масиву SERVER (аналогічно $_SERVER[\"<em>key</em>\"] у PHP)"
+
+msgid "Returns SESSION var value (same as PHP $_SESSION[\"<em>key</em>\"])"
+msgstr "Повертає значення змінної сесії SESSION (аналогічно $_SESSION[\"<em>key</em>\"] у PHP)"
+
+msgid "Embeds HTML block by ID"
+msgstr "Відображає вміст блоку за його ідентифікатором"
+
+msgid "Returns authorized user data from associated record in “Contacts” app. \"<em>field</em>\" (string) is optional and indicates the field id to be returned. If not  Returns <em>false</em> if user is not authorized"
+msgstr "Повертає масив з даними авторизованого користувача з відповідного запису у додатку «Контакти». Якщо вказаний необов'язковий параметр \"<em>field</em>\" (string), то повертається вміст конкретного поля запису про контакт. Якщо користувач не авторизований, функція повертає <em>false</em>"
+
+msgid "Returns User Agent info by specified “<em>key</em>” parameter:"
+msgstr "Повертає інформацію User Agent за вказаною параметру <em>key</em>:"
+
+msgid "— <em>\"platform\"</em>: current visitor device platform name, e.g. <em>windows, mac, linux, ios, android, blackberry</em>;"
+msgstr "— <em>platform</em>: назва системної платформи пристрою користувача, наприклад, <em>windows, mac, linux, ios, android, blackberry</em>;"
+
+msgid "— <em>\"isMobile\"</em>: returns <em>true</em> or <em>false</em> if user is using a multi-touch mobile device (iOS, Android and similar), based solely on User Agent string;"
+msgstr "— <em>\"isMobile\"</em>: ґрунтуючись на вмісті заголовків User Agent, повертає <em>true</em> или <em>false</em> в залежності від того, чи використовує користувач в даний момент мобільне multi-touch пристрій (iPhone, Android та ін.) чи ні;"
+
+msgid "Returns path to theme folder by <em>theme_id</em> and <em>APP_ID</em>"
+msgstr "Повертає шлях до папки теми дизайну по <em>theme_id</em> и <em>APP_ID</em>"
+
+msgid "Displays a simple variable (non array/object)"
+msgstr "Відображає просту змінну (не підходить для масивів та об'єктів)"
+
+msgid "Displays the 5th element of a zero-indexed array"
+msgstr "Відображає 5-й елемент масиву, вважаючи з нульового індексу"
+
+msgid "Displays the \"<em>bar</em>\" key value of an array. Similar to PHP $foo[\"bar\"]"
+msgstr "Відображає значення ключа масиву «<em>bar</em>» аналогічно $foo[\"bar\"] в PHP."
+
+msgid "Displays variable key value of an array. Similar to PHP $foo[$bar]"
+msgstr "Відображає значення елемента масиву з перемінним ключем. Аналогічно використанню $foo[$bar] в PHP"
+
+msgid "Displays the object property named <em>bar</em>"
+msgstr "Відображає властивість об'єкта з ім'ям <em>bar</em>"
+
+msgid "Displays the return value of object method named <em>bar()</em>"
+msgstr "Відображає значення, що повертається методом об'єкта з ім'ям <em>bar()</em>"
+
+msgid "Displays structured information about variable. Arrays and objects are explored recursively with values indented to show structure. Similar to PHP var_dump($foo)"
+msgstr "Відображає докладну інформацію про структуру змінної, масиву або об'єкта. Працює аналогічно функції PHP var_dump($foo)"
+
+msgid "Escapes a variable for safe display in HTML"
+msgstr "Екранує змінну для безпечного відображення в HTML-коді"
+
+msgid "Outputs <em>$var</em> datetime in a user-friendly form. Supported <em>$format</em> values: <em>monthdate, date, dtime, datetime, fulldatetime, time, fulltime, humandate, humandatetime</em>"
+msgstr "Відображає час <em>$var</em> у зручному для читання вигляді. Доступні значення <em>$format</em>: <em>monthdate, date, dtime, datetime, fulldatetime, time, fulltime, humandate, humandatetime</em>"
+
+msgid "Outputs the sum of <em>$x</em> and <em>$y</em>"
+msgstr "Відображає суму <em>$x</em> і <em>$y</em>"
+
+msgid "Assigns variable a value"
+msgstr "Присвоює значення змінної"
+
+msgid "Direct PHP function access. E.g. <em>{time()}</em> displays the current timestamp"
+msgstr "Прямий доступ до функцій PHP. Наприклад, <em>{time()}</em> відображає поточну мітку часу UNIX"
+
+msgid "Content between {literal} tags will not be parsed by Smarty"
+msgstr "Текст між тегами {literal} не обробляється Smarty"
+
+msgid "Embeds a Smarty template into the current content. <em>file</em> attribute specifies a template filename within the current design theme folder"
+msgstr "Впроваджує шаблон Smarty в поточний зміст. Атрибут <em>file</em> вказує на ім'я файлу шаблону в папці поточної теми дизайну"
+
+msgid "Similar to PHP if statements"
+msgstr "Аналогічно конструкції if в PHP"
+
+msgid "{foreach} is for looping over arrays of data"
+msgstr "Використовується для перебору елементів в масивах даних"
+
+msgid "File could not be saved due to the insufficient file write permissions for the \"%s\" folder."
+msgstr "Не вдалося зберегти файл через недостатні права запису до папки «%s»."
+
+msgid "Incorrect domain URL: %s"
+msgstr "Некоректний URL домену: %s"
+
+msgid "Website with a domain name %s is already registered in this Webasyst installation. Delete %s website (Site app > %s > Settings) to be able to use it's domain name for another website."
+msgstr "Сайт з доменним ім'ям %s уже зареєстрований у цій установці Вебасиста. Видаліть сайт %s (додаток «Сайт» > %s > Налаштування), щоб підключити цей домен до іншого сайту."
+
+msgid "Settings could not be saved due to the insufficient file write permissions for the \"%s\" folder."
+msgstr "Не вдалося зберегти настройки через недостатні права запису до папки «%s»."
+
+msgid "Failed to upload file."
+msgstr "Не вдалося завантажити файл."
+
+msgid "Files with extension *.ico are allowed only."
+msgstr "Допускаються тільки файли з розширенням *.ico."
+
+msgid "Files with extension *.png are allowed only."
+msgstr "Дозволене завантаження тільки файлів з розширенням *.png."
+
+msgid "Touch icon you upload here will not take effect for you website %s because your website is set for a subfolder on a domain. Touch icon uploaded using the form above will be set only for websites set from the domain root folder."
+msgstr "Зображення, завантажене за допомогою цієї форми, не буде відображене на сайті %s, тому що сайт розташований в підкаталозі домену. Завантажена через дану форму іконка може бути встановлена ​​тільки для сайтів, розміщених в кореневому каталозі домену."
+
+msgid "Favicon image you upload here will not take effect for you website %s because your website is set for a subfolder on a domain. Favicon uploaded using the form above will be set only for websites set from the domain root folder."
+msgstr "Фавіконка, завантажена за допомогою цієї форми, не буде застосована до сайту %s, тому що сайт розташований в підкаталозі домена. Завантажена через дану форму іконка може бути встановлена ​​тільки для сайтів, розміщених в кореневому каталозі домена."
+
+msgid "Rules you set above for robots.txt will not take effect for you website %s because your website is set for a subfolder on a domain. Rules for robots.txt from the form above will be effective only for websites set to the domain root folder."
+msgstr "Правила для файлу robots.txt, встановлені за допомогою цієї форми, не буде застосовано для сайту %s, тому що цей сайт розташований в підкаталозі домена. Вміст robots.txt, доданий за допомогою цієї форми, може бути застосовано тільки для сайтів, розташованих в кореневому каталозі домену."
+
+msgid "File favicon.ico exists in the Webasyst framework installation folder. The favicon you upload here will be overridden by the icon uploaded as file unless you delete this file."
+msgstr "Файл favicon.ico виявлено в поточній папці установки Вебасист. Замість фавіконки, збереженої на цій сторінці, буде відображатися фавіконка з вказаного файлу,поки ви його не видалите."
+
+msgid "File apple-touch-icon.png exists in the Webasyst framework installation folder. The touch icon you upload here will be overridden by the icon uploaded as file unless you delete this file."
+msgstr "Файл apple-touch-icon.png виявлено в каталозі установки Webasyst. Замість іконки, збереженої на цій сторінці, буде відображатися іконка з вказаного файлу, поки ви його не видалите."
+
+msgid "File robots.txt exists in the Webasyst framework installation folder. Rules for robots.txt you specify above will not take effect unless you delete this file."
+msgstr "Файл robots.txt виявлений в каталозі установки Webasyst. Правила для файлу robots.txt, збережені на цій сторінці, чи не будуть застосовані, поки ви не видалите цей файл."
+
+msgid "Settings could not be saved due to the insufficient file write permissions for the file \"%s\"."
+msgstr "Не вдалося зберегти настройки через недостатні права на запис файлу «%s»."
+
+msgid "The URL %s is already used by %s app. If you proceed, this will replace %s app with %s app on this URL."
+msgstr "Адреса %s вже використовується додатком «%s». Якщо ви продовжите, поселення додатку «%s» за цим URL буде повністю замінено поселенням додатки «%s»."
+
+msgid "Auto"
+msgstr "Авто"
+
+msgid "Website with a domain name %s is already registered in this Webasyst installation. Delete %s website (Site app > Settings > %s) to be able to use it's domain name for another website."
+msgstr "Сайт з доменним ім'ям %s вже зареєстрований в цій установці Вебасисту. Видаліть сайт %s (додаток «Сайт»> %s> Настройки), щоб підключити цей домен до іншого сайту."
+
+msgid "We are using <a href=\"http://www.webasyst.com/\">Webasyst</a>"
+msgstr "Ми використовуємо <a href=\"http://www.webasyst.ru\">Webasyst</a>"
+
+msgid "Welcome to your new site!"
+msgstr "Ласкаво просимо на ваш новий сайт!"
+
+msgid "Start by <a href=\"%s\">creating a page</a> in your site backend."
+msgstr "Почніть зі <a href=\"%s\">створення сторінки</a> у бекенді сайту."
+
+msgid "Site settings"
+msgstr "Налаштування сайту"
+
+msgid "System settings"
+msgstr "Системні налаштування"
+
+msgid "CDN address"
+msgstr "Адреса CDN"
+
+msgid "Remove"
+msgstr "Видалити"
+
+msgid "Security"
+msgstr "Безпека"
+
+msgid "Redirect to HTTPS"
+msgstr "Перенаправляти на HTTPS"
+
+msgid "You cannot enable redirection because your web server does not allow to distinguish HTTP from HTTPS."
+msgstr "Ви не можете увімкнути перенаправлення, тому що ваш веб-сервер не в змозі відрізнити HTTP від HTTPS."
+
+msgid "To activate this option, <a>log in via HTTPS</a>."
+msgstr "Аби увімкнути цю опцію, <a>авторизуйтесь з використанням HTTPS</a>."
+
+msgid "Redirect website visitors from ordinary HTTP to secure HTTPS connection."
+msgstr "Перенаправити відвідувачів сайту зі звичайного HTTP до безпечного HTTPS-з'єднання."
+
+msgid "This option will work only if an SSL certificate is installed for your domain name."
+msgstr "Ця опція буде діяти тільки якщо для вашого доменного імені встановлено SSL-сертифікат."
+
+msgid "Добавить"
+msgstr "Додати"
+
+msgid "Site structure error notifications"
+msgstr "Повідомлення про помилки у структурі сайту"
+
+msgid "Show error notifications in site structure settings."
+msgstr "Показувати повідомлення про помилки у структурі сайту."
+
+msgid "Files uploaded here are accessible to all website visitors without authorization. Do not upload private files."
+msgstr "Завантажені тут файли доступні усім відвідувачам сайту без авторизації. Не завантажуйте приватні файли."
+
+msgid "Your file is too large. Either raise the size limit for uploaded files in PHP configuration above %s bytes or upload a smaller file."
+msgstr "Ваш файл надто великий. Підніміть обмеження на розмір завантажуваних файлів у конфігурації PHP понад %s байт або завантажте файл меншого розміру."
+
+msgid "Custom text"
+msgstr "Довільний текст"
+
+msgid "Comment"
+msgstr "Коментар"
+
+msgid "Redirect disabled"
+msgstr "Перенаправлення вимкнено"
+
+msgid "Redirect enabled"
+msgstr "Перенаправлення увімкнено"
+
+msgid "Language"
+msgstr "Мова"
+
+msgid "Select a language to translate text strings in website frontend."
+msgstr "Оберіть мову, якою має відображатися текст у фронтенді вебсайту."
+
+msgid "If “Auto” option is selected, website language will be determined by user browser settings."
+msgstr "Якщо обрано опцію «Авто», мову веб-сайту буде визначати налаштування браузера відвідувача."
+
+msgid "Redirect website visitors from ordinary HTTP to secure HTTPS connection within this settlement."
+msgstr "Перенаправити відвідувачів сайту зі звичайного HTTP до безпечного HTTPS-з'єднання у цьому поселенні."
+
+msgid "Text to be returned at specified URL"
+msgstr "Текст, який має бути відображено за вказаним URL"
+
+msgid "Content type"
+msgstr "Тип вмісту"
+
+msgid "file"
+msgstr "файл"
+
+msgid "App [%s] deleted or disabled."
+msgstr "Додаток [%s] видалено або вимкнено."
+
+msgid "To enable redirect to HTTPS for <em>all</em> website settlements, change this option in <a href=\"%s#/settings/\">common site settings</a>."
+msgstr "Аби увімкнути перенаправлення на HTTPS для <em>усіх</em> поселень веб-сайту, зробіть налаштування у <a href=\"%s#/settings/\">загальних настройках сайту</a>."
+
+msgid "This rule is disabled because it is placed below a more general rule. Move this rule higher in the list to enable it."
+msgstr "Це правило вимкнено тому, що воно знаходиться нижче, ніж більш загальне правило. Перетягніть це правило вище у переліку, аби увімкнути його."
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Email or domain"
+msgstr "Email або доменне ім'я"
+
+msgid "Default"
+msgstr "За замовчуванням"
+
+msgid "Enter an <strong>email address</strong> to set up a transport <em>for one sender email</em>.<br>Enter a <strong>domain name</strong> to set up a transport <em>for all sender emails on that domain</em>."
+msgstr "Вкажіть <strong>email-адресу</strong>, щоб налаштувати транспорт для <em>одного email відправника</em>. Вкажіть <strong>доменне ім'я</strong>, аби налаштувати транспорт для <em>усіх email відправника на цьому домені</em>."
+
+msgid "Transport"
+msgstr "Транспорт"
+
+msgid "Options"
+msgstr "Параметри"
+
+msgid "Host"
+msgstr "Хост"
+
+msgid "Port"
+msgstr "Порт"
+
+msgid "Login name"
+msgstr "Логін"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Encryption"
+msgstr "Шифрування"
+
+msgid "None"
+msgstr "Немає"
+
+msgid "SSL/TLS"
+msgstr "SSL/TLS"
+
+msgid "STARTTLS"
+msgstr "STARTTLS"
+
+msgid "Pop3 host"
+msgstr "Хост POP3"
+
+msgid "Pop3 port"
+msgstr "Порт POP3"
+
+msgid "Command"
+msgstr "Команда"
+
+msgid "Add a DKIM signature to outgoing email messages to confirm your ownership of the sender’s email address."
+msgstr "Додайте підпис DKIM для вихідних email-повідомлень, аби підтвердити належність email-адреси вам."
+
+msgid "Enter an email address in “Sender” field to use DKIM."
+msgstr "Для використання DKIM вкажіть адресу відправника."
+
+msgid "You need to install openssl php extention to use DKIM"
+msgstr "Аби користуватись DKIM, вам необхідно встановити розширення PHP OpenSSL"
+
+msgid "You need PHP version 5.3 or higher to use DKIM. Your current version is:"
+msgstr "Аби користуватись DKIM, потрібна версія PHP 5.3 або вища. Ваша поточна версія:"
+
+msgid "Add a new <b>TXT record</b> with this public DKIM key to the DNS zone of domain name"
+msgstr "Додайте новий TXT-запис із цим публічним ключем DKIM у DNS-зону домену"
+
+msgid "Host "
+msgstr "Хост "
+
+msgid "Domain"
+msgstr "Доменне ім'я"
+
+msgid "Record type"
+msgstr "Тип запису"
+
+msgid "Value"
+msgstr "Значення"
+
+msgid "Email settings"
+msgstr "Параметри email"
+
+msgid "Email address for notifications"
+msgstr "Email-адреса для сповіщень"
+
+msgid "Main account administrative email where system notification will be sent."
+msgstr "Основна електронна адреса адміністратора, на яку відправлятимуться системні повідомлення."
+
+msgid "Sender email address"
+msgstr "Email-адреса відправника"
+
+msgid "Reply-To address for system email notifications sent by Webasyst."
+msgstr "Цю електронну адресу буде вказано в якості зворотної адреси в системних email-повідомленнях, що відправляються Вебасістом."
+
+msgid "Select how email messages must be sent by default from your Webasyst."
+msgstr "Оберіть, яким чином Вебасіст відправлятиме email-повідомлення за замовчуванням."
+
+msgid "If you use different sender email addresses in your apps, then you can add extra rules to send messages from those addresses. Emails from other addresses will be sent via the transport selected in “Default” section."
+msgstr "Якщо ви використовуєте різні email-адреси відправника у своїх додатках, то можете створити додаткові правила для цих адрес. Email з інших адрес будуть відправлятися транспортом, вказаним в розділі «За замовчуванням»."
+
+msgid "Add email sending rule"
+msgstr "Додати правило відправки email"
+
+msgid "General settings"
+msgstr "Загальні налаштування"
+
+msgid "Maps"
+msgstr "Карти"
+
+msgid "Captcha"
+msgstr "CAPTCHA"
+
+msgid "B,KB,MB"
+msgstr "Б,КБ,МБ"
+
+msgid "File not found"
+msgstr "Файл не знайдено"
+
+msgid "Stretch to fill entire screen"
+msgstr "Розтягнути зображення на весь екран"
+
+msgid "Company name"
+msgstr "Назва компанії"
+
+msgid "May be displayed on websites and in email notifications."
+msgstr "Може відображатись на веб-сайтах та у повідомленнях email."
+
+msgid "Website address"
+msgstr "Адреса веб-сайту"
+
+msgid "May be used on websites and in email notifications."
+msgstr "Може відображатись на веб-сайтах та у повідомленнях email."
+
+msgid "Locale of software available for installation in Installer"
+msgstr "Локаль програмних продуктів, доступних для установки через Інсталлер"
+
+msgid "Localization engine"
+msgstr "Двигун локалізації"
+
+msgid "Auto-login"
+msgstr "Автологін"
+
+msgid "Allow “Remember me” option in Webasyst backend authorization form"
+msgstr "Можна включити «Запам'ятати мене» при вході у Вебасіст"
+
+msgid "Authorization form background image"
+msgstr "Фон форми авторизації"
+
+msgid "Clear cache"
+msgstr "Очистити кеш"
+
+msgid "For developers"
+msgstr "Для розробників"
+
+msgid "Developer mode"
+msgstr "Режим відладки (debug mode)"
+
+msgid "Debug mode disables caching and enables verbose error messages. Recommended for debugging and during software development."
+msgstr "Режим відладки вимикає кешування та вмикає детальні повідомлення про помилки. Рекомендується для діагностики помилок та протягом розробки програмного забезпечення."
+
+msgid "Delete authorization form background image?"
+msgstr "Видалити фонове зображення форми авторизації?"
+
+msgid "Сaptcha settings"
+msgstr "Налаштування CAPTCHA"
+
+msgid "Select a type of captcha to be used on your websites."
+msgstr "Оберіть тип CAPTCHA, який буде використовуватись на ваших сайтах."
+
+msgid "Сaptcha type"
+msgstr "Тип CAPTCHA"
+
+msgid "Webasyst Captcha"
+msgstr "CAPTCHA Webasyst"
+
+msgid "Google reCAPTCHA"
+msgstr "reCAPTCHA від Google"
+
+msgid "Site Key"
+msgstr "Ключ сайта"
+
+msgid "Secret"
+msgstr "Секрет"
+
+msgid "Get site key and secret for your website"
+msgstr "Отримати ключ та секрет для вашого веб-сайту"
+
+msgid "Invisible mode"
+msgstr "Невидимий режим"
+
+msgid "Maps settings"
+msgstr "Налаштування карт"
+
+msgid "Select an online map service to display maps."
+msgstr "Оберіть сервіс онлайн-карт для відображення карт."
+
+msgid "Map service"
+msgstr "Сервіс карт"
+
+msgid "No map services available"
+msgstr "Немає доступних сервісів карт"
+
+msgid "Select Webasyst default captcha or Google reCAPTCHA"
+msgstr "Оберіть стандартну CAPTCHA від Webasyst або reCAPTCHA від Google"
+
+msgid "Allow “Remember me” option in authorization form on the website"
+msgstr "Можна включити «Запам'ятати мене» при вході в Вебасіст"
+
+msgid "Enables your site visitors to quickly sign up or sign in via accounts on external popular platforms, e.g. Facebook and Twitter. <a href=\"https://support.webasyst.com/5556/third-party-auth-setup/\" target=\"_blank\">Setup instructions</a> <i class=\"icon10 new-window\"></i>"
+msgstr "Дозволяє вашим відвідувачам швидко реєструватись або входити за допомогою облікових записів на зовнішніх популярних платформах — наприклад, Facebook та Twitter. <a href=\"https://support.webasyst.ru/5554/third-party-auth-setup/\" target=\"_blank\">Інструкції з налаштування</a> <i class=\"icon10 new-window\"></i>"
+
+msgid "Personal data processing"
+msgstr "Обробка персональних даних"
+
+msgid "Do not require consent to personal data protection policy"
+msgstr "Не вимагати згоди із політикою обробки персональних даних"
+
+msgid "Show only notice and link to policy"
+msgstr "Показувати тільки підказку із посиланням на політику"
+
+msgid "Show mandatory checkbox, notice, and link"
+msgstr "Пропонувати увімкнути обов'язковий прапорець із підказкою та посиланням"
+
+msgid "Restore original text"
+msgstr "Відновити стандартний текст"
+
+msgid "---INSERT A LINK HERE!---"
+msgstr "---ВСТАВТЕ СЮДИ ПОСИЛАННЯ НА ДОКУМЕНТ!---"
+
+msgid "You have no rules set up for %s app."
+msgid_plural "You have no rules set up for %s apps."
+msgstr[0] "Ви не налаштували правил для %s додатку."
+msgstr[1] "Ви не налаштували правила для %s додатків."
+msgstr[2] "Ви не налаштували правила для %s додатків."
+
+msgid "Some rules of %s app are incorrect."
+msgid_plural "Some rules of %s apps are incorrect."
+msgstr[0] "Деякі правила %s додатку є невірними."
+msgstr[1] "Деякі правила %s додатків є невірними."
+msgstr[2] "Деякі правила %s додатків є невірними."
+
+msgid "”, “"
+msgstr "”, “"
+
+msgid "Cache cleared"
+msgstr "Кеш очищено"
+
+msgid "But with errors:"
+msgstr "З помилками:"
+
+msgid "Gettext (recommended)"
+msgstr "Gettext (рекомендовано)"
+
+msgid "PHP"
+msgstr "PHP"
+
+msgid "Extension openssl is not installed"
+msgstr "Розширення OpenSSL не встановлено"
+
+msgid "Failed to create DKIM signature"
+msgstr "Не вдалось створити підпис DKIM"
+
+msgid "SMTP"
+msgstr "SMTP"
+
+msgid "A special server for sending email messages. You can send email via any SMTP server for which you have connection credentials: host, port, user name, and password. It may belong either to your web-hosting company or to a public mail service such as Gmail, Yahoo! Mail, Outlook.com, etc."
+msgstr "Спеціальний сервер для надсилання email-повідомлень. Ви можете надсилати email через довільний сервер SMTP, до якого у вас є дані для підключення: хост, порт, ім'я користувача та пароль. Він може належати вашому провайдеру хостинга або публічному поштовому сервісу — Gmail, Yahoo! Mail, Outlook.com та іншим."
+
+msgid "php mail() function"
+msgstr "PHP-функція mail()"
+
+msgid "Some web-hosting companies allow sending email message by means of this transport only. If it is required to specify additional parameters for the mail() function you can enter them in the provided text field. The default parameters are -f%s."
+msgstr "Деякі хостинг-провайдери дозволяють надсилати електронні повідомлення тільки цим транспортом. Якщо існує необхідність ввести додаткові параметри, їх можна вказати у текстовому полі при виборі варіанту «PHP-функція mail ()». За замовчуванням використовується параметр -f%s."
+
+msgid "Sendmail"
+msgstr "Sendmail"
+
+msgid "This is a default command for sending email in UNIX-like operating systems. You can edit it to use a different command for sending messages if you are an experienced server administrator."
+msgstr "Це стандартна команда для надсилання email у UNIX-подібних операційних системах. Ви можете відредагувати її, аби використовувати іншу команду для надсилання повідомлень, якщо ви досвідчений системний адміністратор."
+
+msgid "Invalid e-mail"
+msgstr "Невірний email"
+
+msgid "Settings have been saved"
+msgstr "Налаштування збережено"
+
+msgid "Delete route"
+msgstr "Видалити маршрут"
+
+msgid "You are about to delete the only routing rule set up for <b>%s</b> app."
+msgstr "Ви збираєтесь видалити єдине правило маршрутизації для <b>%s</b> додатку."
+
+msgid "This will limit its functionality. Delete the rule?"
+msgstr "Це обмежить функціональність. Видалити правило?"
+
+msgid "Login and signup settings for %s"
+msgstr "Вхід та налаштування реєстрації для %s"
+
+msgid "User personal area"
+msgstr "Особистий кабінет користувача"
+
+msgid "authorization enabled"
+msgstr "авторизація включена"
+
+msgid "Ways of login and registration"
+msgstr "Способи входу та реєстрації"
+
+msgid "Set up how website visitors will log in and sign up on your website."
+msgstr "Налаштуйте, як відвідувачі сайту будуть реєструватися на вашому сайті та входити на нього."
+
+msgid "Login & signup forms"
+msgstr "Форми входу та реєстрації"
+
+msgid "Set up fields website visitors will need to complete in login and signup forms."
+msgstr "Налаштуйте поля форм входу та реєстрації, які повинні будуть заповнити відвідувачі."
+
+msgid "Cannot disable both authorization options “Email” &amp; “Phone”"
+msgstr "Неможливо відключити обидві опції авторизації «Пошта» &amp; «Телефон»"
+
+msgid "Keep at least one of these two basic authorization option enabled for website visitors to be able to log into their accounts."
+msgstr "Збережіть принаймні один з цих двох основних варіантів авторизації, аби відвідувачі сайту були в змозі входити до своїх акаунтів."
+
+msgid "Authorization with an email address is used by default."
+msgstr "Авторизація за адресою електронної пошти використовується за замовчуванням."
+
+msgid "Phone"
+msgstr "Телефон"
+
+msgid "Email or phone"
+msgstr "Email-адреса або номер телефону"
+
+msgid "Site section for login and signup"
+msgstr "Розділ сайту для входу та реєстрації"
+
+msgid "Select a site section where visitors will sign up and log into their personal accounts."
+msgstr "Виберіть розділ сайту, де користувачі зможуть зареєструватися і увійти в особистий кабінет."
+
+msgid "Select app"
+msgstr "Виберіть додаток"
+
+msgid "Passwords type"
+msgstr "Типи паролів"
+
+msgid "Confirm signup"
+msgstr "Підтвердіть реєстрацію"
+
+msgid "A signup confirmation link or code will be sent in a notification."
+msgstr "Посилання для підтверждення реєстрації буде надіслано у повідомленні."
+
+msgid "Successful signup notification"
+msgstr "Повідомлення про успішну реєстрацію"
+
+msgid "Send successful signup notifications to users"
+msgstr "Відправляти користувачам повідомлення про успішну реєстрацію"
+
+msgid "Verification code re-sending"
+msgstr "Повторне надсилання коду підтвердження"
+
+msgid "Waiting period in seconds before sending next verification code:"
+msgstr "Період очікування в секундах перед надсиланням наступного коду верифікації:"
+
+msgid "Authorization by login name"
+msgstr "Авторизація по імені користувача"
+
+msgid "Enable to allow backend users to log in on the website with their login names. Only login names different from phone numbers, i.e. containing characters other than digits, are supported."
+msgstr "Дозволити користувачам бекенда вхід на сайт за своїми логінами. Підтримуються тільки такі логіни, що відрізняються від номера телефону — тобто містять символи, відмінні від цифр."
+
+msgid "User notifications"
+msgstr "Повідомлення користувачів"
+
+msgid "Select a group of notification templates to be used for sending login, signup, and password recovery notifications."
+msgstr "Виберіть групу шаблонів повідомлень, які будуть використовуватися для відправки логіна, реєстрації, відновлення пароля і повідомлень."
+
+msgid "Edit email notification templates in <a href=\"%s\">Settings</a> app"
+msgstr "Відредагуйте шаблони email-повідомлень у додатку <a href=\"%s\">«Налаштування»</a>"
+
+msgid "Notification templates"
+msgstr "Шаблони повідомлень"
+
+msgid "No sender email address specified in “<a href=\"%s\">Email settings</a>” section of Settings app."
+msgstr "У розділі «<a href=\"%s\">Налаштування email</a>» додатку «Налаштування» не зазначено адресу електронної пошти відправника."
+
+msgid "Edit the list in “<a href=\"%s\">Email&nbsp;templates</a>” section."
+msgstr "Відредагуйте перелік у розділі «<a href=\"%s\">Email&nbsp;шаблони</a>»."
+
+msgid "Social networks (additional authorization option)"
+msgstr "Соціальні мережі (додаткова опція авторизації)"
+
+msgid "Services"
+msgstr "Послуги"
+
+msgid "Edit SMS notification templates in <a href=\"%s\">Settings</a> app"
+msgstr "Редагувати шаблони SMS-повідомлень у додатку «<a href=\"%s\">Налаштування</a>»"
+
+msgid "Priority over email notifications"
+msgstr "Пріоритет над повідомленнями по електронній пошті"
+
+msgid "Prefer SMS over email for sending notifications. In case of SMS sending failure, email will be sent as a replacement."
+msgstr "Надавати для відправлення повідомлень перевагу SMS над email. У разі відмови відправки SMS, email буде надіслано у якості заміни."
+
+msgid "Signup form"
+msgstr "Форма реєстрації"
+
+msgid "A user must enter characters shown in an image"
+msgstr "Користувач має увести символи із зображення"
+
+msgid "Fields"
+msgstr "Поля"
+
+msgid "Required field"
+msgstr "Обов'язкове поле"
+
+msgid "Invisible captcha will be used"
+msgstr "Буде використано невидимий режим CAPTCHA"
+
+msgid "Login form"
+msgstr "Форма логіну"
+
+msgid "Login and signup settings"
+msgstr "Входу та налаштування реєстрації"
+
+msgid "Personal account sections"
+msgstr "Особисті розділи рахунку"
+
+msgid "Sections are determined by connected applications."
+msgstr "Розділи визначаються підключеними програмами."
+
+msgid "Read <a href=\"https://support.webasyst.com/29298/site-auth-settings/\" target=\"_blank\">user manual</a>."
+msgstr "Читати <a href=\"https://support.webasyst.com/29298/site-auth-settings/\" target=\"_blank\">керівництво користувача</a>."
+
+msgid "authorization disabled"
+msgstr "авторизацію відключено"
+
+msgid "Add"
+msgstr "Додати"
+
+msgid "Deleting this site will also delete routing rules set up for installed apps. This will limit their functionality. Delete the site?"
+msgstr "Із видаленням цього сайту будуть видалені правила маршрутизації, налаштування для встановлених програм. Це обмежить їх функціональні можливості. Видалити сайт?"
+
+msgid "”</b>, <b>“"
+msgstr "”</b>, <b>“"
+
+msgid "Delete this site alias? It will <strong>not</strong> delete any data of the main site."
+msgstr "Видалити цей сайт-псевдонім? Це <strong>не</strong> призведе до видалення будь-яких даних основного сайту."
+
+msgid "Deleting this site will also delete routing rules set up for <b>%s</b> app. This will limit its functionality.</p><p>Upon site deletion, set up routing rules for this app in the structure settings of remaining sites to continue using all functions."
+msgid_plural "Deleting this site will also delete routing rules set up for <b>%s</b> apps. This will limit their functionality.</p><p>Upon site deletion, set up routing rules for these apps in the structure settings of remaining sites to continue using all functions."
+msgstr[0] "Видалення цього сайту також видалить правила маршрутизації для <b>%s</b> додатку. Це обмежить їх функції..</p><p>Перед видаленням сайту налаштуйте правила маршрутизації для цих додатків у на інших сайтах, аби продовжити використовувати усі функції."
+msgstr[1] "Видалення цього сайту також видалить правила маршрутизації для <b>%s</b> додатків. Це обмежить їх функції..</p><p>Перед видаленням сайту налаштуйте правила маршрутизації для цих додатків у на інших сайтах, аби продовжити використовувати усі функції."
+msgstr[2] "Видалення цього сайту також видалить правила маршрутизації для <b>%s</b> додатків. Це обмежить їх функції..</p><p>Перед видаленням сайту налаштуйте правила маршрутизації для цих додатків у на інших сайтах, аби продовжити використовувати усі функції."
+
+msgid "Login, signup, and personal account"
+msgstr "Вхід, реєстрація та особистий кабінет"
+
+msgid "Site URL"
+msgstr "URL-адреса сайту"
+
+msgid "Matches Site URL"
+msgstr "Відповідає URL-адреса сайту"
+
+msgid "Upload another favicon"
+msgstr "Завантажити інший фавикон"
+
+msgid "Enable sign up and login forms for this site"
+msgstr "Увімкнути на цьому сайті форми реєстрації та входу"
+
+msgid "New page"
+msgstr "Нова сторінка"
+
+msgid "Page settings"
+msgstr "Налаштування сторінки"
+
+msgid "This will delete entire page. Are you sure?"
+msgstr "Цілу сторінку буде видалено. Ви впевнені?"
+
+msgid "draft"
+msgstr "чернетка"
+
+msgid "Preview"
+msgstr "Попередній перегляд"
+
+msgid "The page is not available on the website because “Site” app is not connected in the website structure."
+msgstr "Сторінка не доступна на сайті, тому що додаток «Сайт» не підключено до структури сайту."
+
+msgid "Draft"
+msgstr "Чернетка"
+
+msgid "Published"
+msgstr "Опубліковано"
+
+msgid "Page URL"
+msgstr "URL сторінки"
+
+msgid "Page custom parameters"
+msgstr "Додаткові параметри сторінки"
+
+msgid "Optional set of custom <em>key=value</em> parameters which can be used within page.html template or this page content as <em>&#123;$page.key&#125;</em>. Each key=value pair should be on a separate line."
+msgstr "Додатковий набір параметрів <em>key=value</em>, який можна використовувати у шаблоні page.html або у вмісті цій сторінки як <em>&#123;$page.key&#125;</em>. Кожна пара key=value має бути розміщена на окремому рядку."
+
+msgid "http://www.webasyst.com/framework/docs/site/pages/"
+msgstr "https://developers.webasyst.ru/templates/pages/"
+
+msgid "WYSIWYG"
+msgstr "Візуальний редактор"
+
+msgid "Disable this URL"
+msgstr "Відключити цю URL-адресу"
+
+msgid "disable"
+msgstr "відключити"
+
+msgid "Enable this URL"
+msgstr "Включити цей URL"
+
+msgid "enable"
+msgstr "увімкнути"
+
+msgid "Routing"
+msgstr "Маршрутизація"
+
+msgid "Edit URL"
+msgstr "Змінити URL"
+
+msgid "App settings"
+msgstr "Налаштування програми"
+
+msgid "Rules are processed one by one in the given order. The first rule matching current HTTP request will be processed. Use * symbol in the URL fields for wildcard."
+msgstr "Правила обробляються одне за одним у певному порядку. При обробці поточного HTTP-запиту буде оброблено перше відповідне правило. Для підстановки використовуйте символ “*” у стрічці з URL."
+
+msgid "http://www.webasyst.com/framework/docs/site/structure/"
+msgstr "https://developers.webasyst.ru/docs/cookbook/basics/routing/"
+
+msgid "{$app.name|escape} app settled at"
+msgstr "Додаток {$app.name|escape} поселено у"
+
+msgid "Open website in a new window"
+msgstr "Відкрити сайт у новому вікні"
+
+msgid "URL of this Webasyst installation (relative)."
+msgstr "URL цієї установки фреймворку Webasyst (відносний)."
+
+msgid "URL of the current app settlement (relative)."
+msgstr "URL поселення поточного додатку (відносний)."
+
+msgid "URL to access Webasyst backend (relative)."
+msgstr "URL доступу до бекенду (відносний)."
+
+msgid "URL of the current app’s design theme folder (relative)."
+msgstr "URL директорії теми дизайну додатку (відносний)."
+
+msgid "Assigns a new title."
+msgstr "Встановлює новий заголовок."
+
+msgid "Returns name of this Webasyst installation specified in Installer app settings.<br><em>escape = false</em> requires to embed special characters in account name instead of displaying them."
+msgstr "Повертає назву цієї установки Webasyst, яку вказано у налаштуваннях Інсталера<br><em>escape = false</em> потребується, аби включити спеціальні символи до назви акаунта замість того, аби їх відобразити."
+
+msgid "Returns this site’s core navigation menu which is either defined automatically or manually in the Site‘s “Settings” screen."
+msgstr "Повертає основне меню навігації сайту, яке визначається автоматично або вручну у розділі «Налаштування сайту» додатку «Сайт»."
+
+msgid "Returns current page URL.<br><em>$absolute = true</em> requires to return an absolute URL instead of a relative one.<br><em>$without_params = true</em> requires to return current URL without GET parameters."
+msgstr "Повертає поточний URL сторінки.<br><em>$absolute = true</em> вимагає повернути абсолютний URL, а не відносний.<br><em>$without_params = true</em> вимагає повернути поточний URL без параметрів GET."
+
+msgid "Returns this domain’s root URL (absolute)."
+msgstr "Повертає кореневий URL домену (абсолютний)."
+
+msgid "Assigns a new value to a global variable."
+msgstr "Присвоює нове значення глобальній змінній."
+
+msgid "Returns GET parameter value (same as PHP $_GET[\"<em>key</em>\"]).<br>\"<em>default</em>\" is an optional default value which is returned if specified GET parameter is not found."
+msgstr "Повертає значення параметру GET (подібно до PHP $_GET[\"<em>key</em>\"]). <br>\"<em>default</em>\" — це опціональне значення за замовчуванням, яке повертається, якщо не знайдено запрошений параметр GET."
+
+msgid "Based on current session data, returns <em>true</em> or <em>false</em> depending on whether a multi-touch mobile device is used. If no session variable indicates the requested website version (mobile or desktop), User Agent information is used."
+msgstr "На основі даних поточної сесії, повертає <em>true</em> or <em>false</em> в залежності від того, чи використовується мультитач мобільний пристрій. Якщо жодна змінна сесії не вказує на запитувану версію сайту (мобільну або стаціонарну), використовується інформація User Agent."
+
+msgid "Returns user locale; e.g., “en_US”, “ru_RU”. If the user is authorized, the locale is retrieved from the user’s record in the Contacts app or is detected automatically otherwise."
+msgstr "Повертає локаль користувача; наприклад, “en_US”, “uk_UA”. Якщо користувач авторизований, то локаль береться із запису користувача у додатку «Контакти»; в іншому випадку визначається автоматично."
+
+msgid "Returns POST parameter value (same as $_POST[\"<em>key</em>\"] in PHP).<br>\"<em>default</em>\" is an optional default value which is returned if specified POST parameter is not found."
+msgstr "Повертає значення параметра POST (так само як $_POST[\"<em>key</em>\"] в PHP).<br>\"<em>default</em>default</em>\" є необов'язковим значенням за замовчуванням, яке повертається, якщо вказаний параметр POST не знайдено."
+
+msgid "Returns SERVER parameter value (same as $_SERVER[\"<em>KEY</em>\"] in PHP).<br>\"<em>default</em>\" is an optional default value which is returned if specified server parameter is not found."
+msgstr "Повертає значення параметра SERVER (так само, як $_SERVER[\"<em>KEY</em>\"] у PHP).<br>\"<em>default</em> є необов'язковим значенням за замовчуванням, яке повертається, якщо вказаний серверний параметр не знайдено."
+
+msgid "Returns SESSION var value (same as $_SESSION[\"<em>key</em>\"] in PHP).<br>\"<em>default</em>\" is an optional default value which is returned if specified session parameter is not found."
+msgstr "Повертає значення змінної SESSION (так само, як $_SESSION[\"<em>KEY</em>\"] у PHP).<br>\"<em>default</em> є необов'язковим значенням за замовчуванням, яке повертається, якщо вказаний параметр сесії не знайдено."
+
+msgid "Embeds HTML block by ID.<br><em>$params</em> is array of Smarty variables to be passed to block contents."
+msgstr "Підключає блок HTML за ідентифікатором.<br><em>$params</em> — це масив змінних Smarty, які передаються до вмісту блоку."
+
+msgid "Returns authorized user‘s data. \"<em>field</em>\" (string) is optional and indicates the field id to be returned. Returns <em>false</em> if user is not authorized.<br><em>$format</em> parameter (defaults to \"html\") defines the <a href=\"https://developers.webasyst.com/cookbook/basics/classes/waContact/#method-get\" target=\"_blank\">format</a> of the returned value."
+msgstr "Повертає дані авторизованого користувача. \"<em>поле</em>\" (рядок) є необов'язковим та зазначає ідентифікатор поля, що повертається. Повертає <em>false</em>, якщо користувач не авторизований.<br>Параметр <em>$format</em> (“html” за замовчуванням) визначає <a href=\"https://developers.webasyst.ru/docs/cookbook/basics/classes/waContact/#method-get\" target=\"_blank\">формат</a> значення, що повертається."
+
+msgid "— not specified: returns entire User Agent string;"
+msgstr "— не вказано: повертає повний рядок User Agent;"
+
+msgid "Welcome"
+msgstr "Ласкаво просимо"
+
+msgid "Logout"
+msgstr "Вийти"
+
+msgid "Login"
+msgstr "Логін"
+
+msgid "Powered by Webasyst"
+msgstr "Працює на Вебасист"
+
+msgid "Thank you!"
+msgstr "Дякуємо!"
+
+msgid "You have successfully signed up."
+msgstr "Ви успішно зареєструвались."
+
+msgid "Edit this layout in your <a href=\"{$wa_backend_url}\">Webasyst backend</a> using “Site” app."
+msgstr "Відредагуйте цей макет у <a href=\"{$wa_backend_url}\">бекенді Вебасисту</a> з використанням додатку «Сайт»."
+
+msgid "The requested resource is not available."
+msgstr "Ресурс недоступний."
+
+msgid "Displays structured information about variable. Arrays and objects are explored recursively with values indented to show structure."
+msgstr "Відображає структуровану інформацію про змінну. Масиви та об'єкти розглядаються рекурсивно зі значеннями для того, щоб показати структуру."
+
+msgid "Facebook"
+msgstr "Фейсбук"
+
+msgid "Twitter"
+msgstr "Твіттер"
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "Cancel"
+msgstr "Відміна"
+
+msgid "http://www.webasyst.com/developers/docs/creating-a-website-tutorial/"
+msgstr "https://developers.webasyst.ru/tutorials/creating-a-website-tutorial/"
+
+msgid "We are using <a href=\"http://www.webasyst.com/\" target=\"_blank\">Webasyst</a>"
+msgstr "Ми використовуємо <a href=\"http://www.webasyst.ru/\" target=\"_blank\">Webasyst</a>"
+
+msgid "Returns path to design theme folder by <em>theme_id</em> and <em>app_id</em>."
+msgstr "Повертає шлях до папки теми дизайну по <em>theme_id</em> та <em>app_id</em>."
+
+msgid "Start by creating a page in your <a href=\"%s\">site backend</a>."
+msgstr "Почніть зі створення сторінки у <a href=\"%s\">бекенді сайту</a>."
+
+msgid "Contact information successfully updated!"
+msgstr "Контактну інформацію успішно оновлено!"
+
+msgid "Auth & Sign Up settings"
+msgstr "Налаштування авторизації та реєстрації"
+
+msgid "%s personal account URL: <a href=\"%s\">%s</a> <i class=\"icon10 new-window top-padded\"></i>"
+msgstr "%s URL персонального акаунту: <a href=\"%s\">%s</a> <i class=\"icon10 new-window top-padded\"></i>"
+
+msgid "Personal account profile URL: <a href=\"%s\">%s</a> <i class=\"icon10 new-window top-padded\"></i>"
+msgstr "URL персонального профілю: <a href=\"%s\">%s</a> <i class=\"icon10 new-window top-padded\"></i>"
+
+msgid "A confirmation link will be sent to user after sign up"
+msgstr "Посилання для підтвердження буде надіслано користувачеві після реєстрації"
+
+msgid "Personal &rarr; <a href=\"%s\">Auth &amp; Sign Up settings</a>"
+msgstr "Особисті &rarr; <a href=\"%s\">Налаштування авторизації та входу</a>"
+
+msgid "Change password"
+msgstr "Змінити пароль"
+
+msgid "Delete photo"
+msgstr "Видалити фото"
+
+msgid "You successfully confirmed email."
+msgstr "Ви успішно підтвердили адресу електронної пошти."
+
+msgid "Specified email is already in use."
+msgstr "Вказану адресу електронної пошти вже використовується."
+
+msgid "Temporary redirecting"
+msgstr "Тимчасове перенаправлення"
+
+msgid "Use server response code 302"
+msgstr "Використовувати код відповіді сервера 302"
+
+msgid "Enable for <strong>temproray</strong> redirecting only, which you are planning to cancel in the future."
+msgstr "Увімкнути тільки для тимчасового перенаправлення, яке ви плануєте скасувати у майбутньому."
+
+msgid "Disable for <strong>permanent</strong> redirecting with server response code 301, which is used to inform search engines that the new URL should be indexed instead of the old one."
+msgstr "Вимкніть для постійного перенаправлення з кодом відповіді сервера 301, який інформує пошукові системи про необхідність індексувати новий URL замість застарілого."
+
+msgid "A registered website visitor will be able to log in only with an email address or phone number confirmed."
+msgstr "Зареєстрований відвідувач сайту зможе авторизуватись тільки за адресою email або підтвердженим номером телефону."
+
+msgid "National direct-dialing code (NDD)"
+msgstr "Національній код прямого виклику (National direct-dialing code, NDD)"
+
+msgid "Enter the NDD code which is used for making calls within your country."
+msgstr "Вкажіть код прямого виклику, який використовується для дзвінків по вашій країні."
+
+msgid "The NDD, if specified, will be replaced with the country code in website visitors’ phone numbers."
+msgstr "Код прямого виклику, якщо вказано, буде замінено кодом країни у номерах телефонів користувачів сайту."
+
+msgid "Country code"
+msgstr "Код країни"
+
+msgid "Enter your country’s phone number code to be used in website visitors’ phone numbers instead of the NDD."
+msgstr "Введіть телефонний код вашої країни, який буде використовуватись у номерах телефонів користувачів замість коду прямого виклику."
+
+msgid "Enter digits only"
+msgstr "Введіть тільки цифри"
+
+msgid "text (text/plain)"
+msgstr "текст (text/plain)"
+
+msgid "HTML code (text/html)"
+msgstr "Код HTML (text/html)"
+
+msgid "If content type “file” is selected, downloading of a file will start automatically if there is no extension in its name."
+msgstr "Якщо обрано тип «файл», завантаження файлу почнеться автоматично, у разі, коли у його назві немає розширення."
+
+msgid "Open “<a href=\"%s\">Pages</a>” section and add a new page with an empty address. You will see its contents here."
+msgstr "Відкрийте розділ «<a href=\"%s\">Сторінки</a>» та додайте нову сторінку із пустою адресою. Її вміст ви побачите нижче."
+
+msgid "Move rule %s/* to the bottom of the rule list."
+msgstr "Перемістіть правило %s/* у кінець переліку."
+
+msgid "By submitting this form I agree to %spersonal data protection policy%s"
+msgstr "Надсилаючи цю форму, я погоджуюсь із %sполітикою обробки персональних даних%s"
+
+msgid "I agree to %spersonal data protection policy%s"
+msgstr "Я погоджуюсь із %sполітикою обробки персональних даних%s"
+
+msgid "Rule cannot be saved"
+msgstr "Не вдалося зберегти правило"
+
+msgid "Rule address contains unsupported character <strong class=\"highlighted\">%s</strong>."
+msgstr "Правило містить символ, що не підтримується: <strong class=\"highlighted\">%s</strong>."
+
+msgid "“Custom text” rule is incorrect."
+msgid_plural "%d “Custom text” rules are incorrect."
+msgstr[0] "%d правил типу \"настроюваний текст\" налаштовані невірно."
+msgstr[1] "%d правила типу \"настроюваний текст\" налаштовані невірно."
+msgstr[2] "%d правил типу \"настроюваний текст\" налаштовані невірно."
+
+msgid "“Redirect” rule is incorrect."
+msgid_plural "%d “Redirect” rules are incorrect."
+msgstr[0] "%d правило перенаправлення налаштоване невірно."
+msgstr[1] "%d правила перенаправлення налаштовані невірно."
+msgstr[2] "%d правил перенаправлення налаштовані невірно."
+
+msgid "Homepage"
+msgstr "Головна сторінка"
+
+msgid "Invalid value: %s."
+msgstr "Невірне значення: %s."
+
+msgid "Optional set of custom <em>key=value</em> parameters, which can be used in design templates and pages of this settlement as <em>&#123;$wa->param(\"key\")&#125;</em>. Each key=value pair must be specified on a separate line."
+msgstr "Додатковий набір користувацьких параметрів <em>key=value</em>, які можна використовувати у шаблонах оформлення та сторінках цього поселення як <em>&#123;$wa->param(\"key\")&#125;</em>. Кожну пару ключ=значення потрібно вказати в окремому рядку."

@@ -1,0 +1,486 @@
+{strip}
+{if $wa->globals("color_scheme")}{$theme_settings.color_scheme = $wa->globals("color_scheme")}{/if}
+{if $theme_settings.test_settings && !empty($wa->cookie('color_scheme')) && $wa->cookie('color_scheme') != 'null'}{$theme_settings.color_scheme = $wa->cookie('color_scheme')}{/if}
+{$_color_scheme = str_replace('img/themesettings/','',str_replace('.png','',$theme_settings.color_scheme))}
+
+{$baseBgColor = '#0989d2'}
+{$baseBgColorFont = '#FFF'}
+{$baseFontColor = '#0989d2'}
+{$acBgColor = '#ff6c00'}
+{$acBgColorFont = '#FFF'}
+{$acFontColor = '#ff6c00'}
+{if $_color_scheme == 'violet.magenta'}
+    {$baseBgColor = '#3D3270'}
+    {$baseBgColorFont = '#FFF'}
+    {$baseFontColor = '#3D3270'}
+    {$acBgColor = '#E0057B'}
+    {$acBgColorFont = '#FFF'}
+    {$acFontColor = '#E0057B'}
+{else if $_color_scheme == 'lilac.orange'}
+    {$baseBgColor = '#6385FF'}
+    {$baseBgColorFont = '#FFF'}
+    {$baseFontColor = '#6385FF'}
+    {$acBgColor = '#FC7D55'}
+    {$acBgColorFont = '#FFF'}
+    {$acFontColor = '#FC7D55'}
+{else if $_color_scheme == 'brown.yellow'}
+    {$baseBgColor = '#B15614'}
+    {$baseBgColorFont = '#FFF'}
+    {$baseFontColor = '#B15614'}
+    {$acBgColor = '#FFBF02'}
+    {$acBgColorFont = '#000'}
+    {$acFontColor = '#ffb302'}
+{else if $_color_scheme == 'orange.lilac'}
+    {$baseBgColor = '#FEA83B'}
+    {$baseBgColorFont = '#FFF'}
+    {$baseFontColor = '#FEA83B'}
+    {$acBgColor = '#6066F2'}
+    {$acBgColorFont = '#FFF'}
+    {$acFontColor = '#6066F2'}
+{else if $_color_scheme == 'beigo.brown'}
+    {$baseBgColor = '#FAE4BC'}
+    {$baseBgColorFont = '#8C2A35'}
+    {$baseFontColor = '#8C2A35'}
+    {$acBgColor = '#FAE4BC'}
+    {$acBgColorFont = '#8C2A35'}
+    {$acFontColor = '#8C2A35'}
+{else if $_color_scheme == 'blue.red'}
+    {$baseBgColor = '#1b5b94'}
+    {$baseBgColorFont = '#FFF'}
+    {$baseFontColor = '#1b5b94'}
+    {$acBgColor = '#ff4d4d'}
+    {$acBgColorFont = '#FFF'}
+    {$acFontColor = '#ff4d4d'}
+{else if $_color_scheme == 'magenta.violet'}
+    {$baseBgColor = '#CF5A80'}
+    {$baseBgColorFont = '#FFF'}
+    {$baseFontColor = '#CF5A80'}
+    {$acBgColor = '#43368a'}
+    {$acBgColorFont = '#FFF'}
+    {$acFontColor = '#43368a'}
+{else if $_color_scheme == 'blue.pink'}
+    {$baseBgColor = '#00bdd8'}
+    {$baseBgColorFont = '#FFF'}
+    {$baseFontColor = '#00bdd8'}
+    {$acBgColor = '#F6CDD3'}
+    {$acBgColorFont = '#c31e37'}
+    {$acFontColor = '#c31e37'}
+{else if $_color_scheme == 'brown.green'}
+    {$baseBgColor = '#4E7E65'}
+    {$baseBgColorFont = '#FFF'}
+    {$baseFontColor = '#4E7E65'}
+    {$acBgColor = '#A4411F'}
+    {$acBgColorFont = '#FFF'}
+    {$acFontColor = '#A4411F'}
+{else if $_color_scheme == 'violet.lilac'}
+    {$baseBgColor = '#6655EE'}
+    {$baseBgColorFont = '#FFF'}
+    {$baseFontColor = '#6655EE'}
+    {$acBgColor = '#FF4A6B'}
+    {$acBgColorFont = '#FFF'}
+    {$acFontColor = '#FF4A6B'}
+{else if $_color_scheme == 'green.red'}
+    {$baseBgColor = '#034654'}
+    {$baseBgColorFont = '#FFF'}
+    {$baseFontColor = '#034654'}
+    {$acBgColor = '#D14C4C'}
+    {$acBgColorFont = '#FFF'}
+    {$acFontColor = '#D14C4C'}
+{else if $_color_scheme == 'green.lightbrown'}
+    {$baseBgColor = '#01A5A5'}
+    {$baseBgColorFont = '#FFF'}
+    {$baseFontColor = '#01A5A5'}
+    {$acBgColor = '#F7C473'}
+    {$acBgColorFont = '#5d3000'}
+    {$acFontColor = '#5d3000'}
+{else if $_color_scheme == 'black.red'}
+    {$baseBgColor = '#000'}
+    {$baseBgColorFont = '#FFF'}
+    {$baseFontColor = '#000'}
+    {$acBgColor = '#CB2324'}
+    {$acBgColorFont = '#FFF'}
+    {$acFontColor = '#CB2324'}
+    {$theme_settings.button_catalog_bg_color = '#CB2324'}
+    {$theme_settings.button_catalog_font_color = '#FFF'}
+{else if $_color_scheme == 'black.yellow'}
+    {$baseBgColor = '#232323'}
+    {$baseBgColorFont = '#FFF'}
+    {$baseFontColor = '#d22525'}
+    {$acBgColor = '#FFC001'}
+    {$acBgColorFont = '#000'}
+    {$acFontColor = '#ff8f00'}
+    {$theme_settings.button_catalog_bg_color = '#FFC001'}
+    {$theme_settings.button_catalog_font_color = '#000'}
+{else if $_color_scheme == 'green.pink'}
+    {$baseBgColor = '#00CE69'}
+    {$baseBgColorFont = '#FFF'}
+    {$baseFontColor = '#00CE69'}
+    {$acBgColor = '#FF6E91'}
+    {$acBgColorFont = '#FFF'}
+    {$acFontColor = '#FF6E91'}
+{else if $_color_scheme == 'violet.blue'}
+    {$baseBgColor = '#6151A9'}
+    {$baseBgColorFont = '#FFF'}
+    {$baseFontColor = '#6151A9'}
+    {$acBgColor = '#00B8EC'}
+    {$acBgColorFont = '#FFF'}
+    {$acFontColor = '#00B8EC'}
+{else if $_color_scheme == 'orange.green'}
+    {$baseBgColor = '#FF7A01'}
+    {$baseBgColorFont = '#FFF'}
+    {$baseFontColor = '#FF7A01'}
+    {$acBgColor = '#51BE00'}
+    {$acBgColorFont = '#FFF'}
+    {$acFontColor = '#51BE00'}
+{else if $_color_scheme == 'pink.blue'}
+    {$baseBgColor = '#FF7A50'}
+    {$baseBgColorFont = '#FFF'}
+    {$baseFontColor = '#FF7A50'}
+    {$acBgColor = '#45C1F6'}
+    {$acBgColorFont = '#FFF'}
+    {$acFontColor = '#45C1F6'}
+{else if $_color_scheme == 'blue.green'}
+    {$baseBgColor = '#19AAEA'}
+    {$baseBgColorFont = '#FFF'}
+    {$baseFontColor = '#19AAEA'}
+    {$acBgColor = '#44B15B'}
+    {$acBgColorFont = '#FFF'}
+    {$acFontColor = '#44B15B'}
+{/if}
+
+{* настройки для витрины *}
+{if $wa->globals("base_bg_color")}{$theme_settings.base_bg_color = $wa->globals("base_bg_color")}{/if}
+{if $wa->globals("base_bg_font_color")}{$theme_settings.base_bg_font_color = $wa->globals("base_bg_font_color")}{/if}
+{if $wa->globals("base_font_color")}{$theme_settings.base_font_color = $wa->globals("base_font_color")}{/if}
+{if $wa->globals("ac_bg_color")}{$theme_settings.ac_bg_color = $wa->globals("ac_bg_color")}{/if}
+{if $wa->globals("ac_bg_color_font")}{$theme_settings.ac_bg_color_font = $wa->globals("ac_bg_color_font")}{/if}
+{if $wa->globals("ac_font_color")}{$theme_settings.ac_font_color = $wa->globals("ac_font_color")}{/if}
+{if $wa->globals("top_menu_bg_color")}{$theme_settings.top_menu_bg_color = $wa->globals("top_menu_bg_color")}{/if}
+{if $wa->globals("top_menu_font_color")}{$theme_settings.top_menu_font_color = $wa->globals("top_menu_font_color")}{/if}
+{if $wa->globals("h_filter_bg_color")}{$theme_settings.h_filter_bg_color = $wa->globals("h_filter_bg_color")}{/if}
+{if $wa->globals("h_filter_font_color")}{$theme_settings.h_filter_font_color = $wa->globals("h_filter_font_color")}{/if}
+{if $wa->globals("button_cart_bg_color")}{$theme_settings.button_cart_bg_color = $wa->globals("button_cart_bg_color")}{/if}
+{if $wa->globals("button_cart_font_color")}{$theme_settings.button_cart_font_color = $wa->globals("button_cart_font_color")}{/if}
+{if $wa->globals("link_hover_color")}{$theme_settings.link_hover_color = $wa->globals("link_hover_color")}{/if}
+{if $wa->globals("vertical_main_menu_btn_bg_color")}{$theme_settings.vertical_main_menu_btn_bg_color = $wa->globals("vertical_main_menu_btn_bg_color")}{/if}
+{if $wa->globals("vertical_main_menu_btn_font_color")}{$theme_settings.vertical_main_menu_btn_font_color = $wa->globals("vertical_main_menu_btn_font_color")}{/if}
+{if $wa->globals("vertical_unfolding_main_menu_btn_bg_color")}{$theme_settings.vertical_unfolding_main_menu_btn_bg_color = $wa->globals("vertical_unfolding_main_menu_btn_bg_color")}{/if}
+{if $wa->globals("vertical_unfolding_main_menu_btn_font_color")}{$theme_settings.vertical_unfolding_main_menu_btn_font_color = $wa->globals("vertical_unfolding_main_menu_btn_font_color")}{/if}
+{if $wa->globals("h_main_menu_bg_color")}{$theme_settings.h_main_menu_bg_color = $wa->globals("h_main_menu_bg_color")}{/if}
+{if $wa->globals("h_main_menu_font_color")}{$theme_settings.h_main_menu_font_color = $wa->globals("h_main_menu_font_color")}{/if}
+{if $wa->globals("h_main_menu_font_color_hover")}{$theme_settings.h_main_menu_font_color_hover = $wa->globals("h_main_menu_font_color_hover")}{/if}
+{if $wa->globals("h_main_menu_link_bg_color_hover")}{$theme_settings.h_main_menu_link_bg_color_hover = $wa->globals("h_main_menu_link_bg_color_hover")}{/if}
+{if $wa->globals("h_main_menu_brand_font_color")}{$theme_settings.h_main_menu_brand_font_color = $wa->globals("h_main_menu_brand_font_color")}{/if}
+{if $wa->globals("logo_icon_color")}{$theme_settings.logo_icon_color = $wa->globals("logo_icon_color")}{/if}
+{if $wa->globals("logo_text_1_color")}{$theme_settings.logo_text_1_color = $wa->globals("logo_text_1_color")}{/if}
+{if $wa->globals("logo_text_2_color")}{$theme_settings.logo_text_2_color = $wa->globals("logo_text_2_color")}{/if}
+
+{* тестовые настройик *}
+{if $theme_settings.test_settings && !empty($wa->cookie('base_bg_color')) && $wa->cookie('base_bg_color') != 'null'}{$theme_settings.base_bg_color = $wa->cookie('base_bg_color')}{/if}
+{if $theme_settings.test_settings && !empty($wa->cookie('base_bg_font_color')) && $wa->cookie('base_bg_font_color') != 'null'}{$theme_settings.base_bg_font_color = $wa->cookie('base_bg_font_color')}{/if}
+{if $theme_settings.test_settings && !empty($wa->cookie('base_font_color')) && $wa->cookie('base_font_color') != 'null'}{$theme_settings.base_font_color = $wa->cookie('base_font_color')}{/if}
+{if $theme_settings.test_settings && !empty($wa->cookie('ac_bg_color')) && $wa->cookie('ac_bg_color') != 'null'}{$theme_settings.ac_bg_color = $wa->cookie('ac_bg_color')}{/if}
+{if $theme_settings.test_settings && !empty($wa->cookie('ac_bg_color_font')) && $wa->cookie('ac_bg_color_font') != 'null'}{$theme_settings.ac_bg_color_font = $wa->cookie('ac_bg_color_font')}{/if}
+{if $theme_settings.test_settings && !empty($wa->cookie('ac_font_color')) && $wa->cookie('ac_font_color') != 'null'}{$theme_settings.ac_font_color = $wa->cookie('ac_font_color')}{/if}
+
+{* базовый цвет *}
+{if $theme_settings.base_bg_color}{$baseBgColor = $theme_settings.base_bg_color}{/if}
+{if $theme_settings.base_bg_font_color}{$baseBgColorFont = $theme_settings.base_bg_font_color}{/if}
+{if $theme_settings.base_font_color}{$baseFontColor = $theme_settings.base_font_color}{/if}
+
+{* акцентный цвет *}
+{if $theme_settings.ac_bg_color}{$acBgColor = $theme_settings.ac_bg_color}{/if}
+{if $theme_settings.ac_bg_color_font}{$acBgColorFont = $theme_settings.ac_bg_color_font}{/if}
+{if $theme_settings.ac_font_color}{$acFontColor = $theme_settings.ac_font_color}{/if}
+
+{* наведение и выделеные ссылки *}
+{if $theme_settings.link_hover_color}{$linkHoverColor = $theme_settings.link_hover_color}{else}{$linkHoverColor = $baseFontColor}{/if}
+
+{* подвал *}
+{if $theme_settings.footer_bg_color}{$footerBgColor = $theme_settings.footer_bg_color}{else}{$footerBgColor = '#000'}{/if}
+{if $theme_settings.footer_font_color}{$footerFontColor = $theme_settings.footer_font_color}{else}{$footerFontColor = '#FFF'}{/if}
+
+{* кнопка в корзину *}
+{if $theme_settings.button_cart_bg_color}{$buttonCartBgColor = $theme_settings.button_cart_bg_color}{else}{$buttonCartBgColor = $acBgColor}{/if}
+{if $theme_settings.button_cart_font_color}{$buttonCartFontColor = $theme_settings.button_cart_font_color}{else}{$buttonCartFontColor = $acBgColorFont}{/if}
+
+{* верхнее меню *}
+{if $theme_settings.top_menu_bg_color}{$topMenuBgColor = $theme_settings.top_menu_bg_color|upper}{else}{$topMenuBgColor = $baseBgColor|upper}{/if}
+{if $theme_settings.top_menu_font_color}{$topMenuFontColor = $theme_settings.top_menu_font_color}{else}{$topMenuFontColor = $baseBgColorFont}{/if}
+
+{* кнопка Каталога товаров у вертикального выпадающего меню *}
+{if $theme_settings.vertical_main_menu_btn_bg_color}{$verticalMainMenuBtnBgColor = $theme_settings.vertical_main_menu_btn_bg_color|upper}{else}{$verticalMainMenuBtnBgColor = $baseBgColor|upper}{/if}
+{if $theme_settings.vertical_main_menu_btn_font_color}{$verticalMainMenuBtnFontColor = $theme_settings.vertical_main_menu_btn_font_color}{else}{$verticalMainMenuBtnFontColor = $baseBgColorFont}{/if}
+
+{* кнопка Каталога товаров у вертикального разворачивающегося меню *}
+{if $theme_settings.vertical_unfolding_main_menu_btn_bg_color}{$verticalUnfoldingMainMenuBtnBgColor = $theme_settings.vertical_unfolding_main_menu_btn_bg_color|upper}{else}{$verticalUnfoldingMainMenuBtnBgColor = $baseBgColor|upper}{/if}
+{if $theme_settings.vertical_unfolding_main_menu_btn_font_color}{$verticalUnfoldingMainMenuBtnFontColor = $theme_settings.vertical_unfolding_main_menu_btn_font_color}{else}{$verticalUnfoldingMainMenuBtnFontColor = $baseBgColorFont}{/if}
+
+{* горизонтальный фильтр *}
+{if $theme_settings.h_filter_bg_color}{$hFilterBgColor = $theme_settings.h_filter_bg_color|upper}{else}{$hFilterBgColor = $baseBgColor|upper}{/if}
+{if $theme_settings.h_filter_font_color}{$hFilterFontColor = $theme_settings.h_filter_font_color}{else}{$hFilterFontColor = $baseBgColorFont}{/if}
+
+{* горизонтальное основное меню *}
+{if $theme_settings.h_main_menu_bg_color}{$hMainMenuBgColor = $theme_settings.h_main_menu_bg_color|upper}{else}{$hMainMenuBgColor = '#FFF'}{/if}
+{if $theme_settings.h_main_menu_font_color}{$hMainMenuFontColor = $theme_settings.h_main_menu_font_color}{else}{$hMainMenuFontColor = '#000'}{/if}
+{if $theme_settings.h_main_menu_font_color_hover}{$hMainMenuFontColorHover = $theme_settings.h_main_menu_font_color_hover}{else}{$hMainMenuFontColorHover = $linkHoverColor}{/if}
+{if $theme_settings.h_main_menu_link_bg_color_hover}{$hMainMenuLinkBgColorHover = $theme_settings.h_main_menu_link_bg_color_hover}{else}{$hMainMenuLinkBgColorHover = '#f9f9f9'}{/if}
+{if $theme_settings.h_main_menu_brand_font_color}{$hMainMenuBrandFontColor = $theme_settings.h_main_menu_brand_font_color}{else}{$hMainMenuBrandFontColor = $acFontColor}{/if}
+{$hMainMenuBrandFontColorHover = $hMainMenuBrandFontColor}
+{if $hMainMenuBrandFontColor == $hMainMenuFontColorHover}{$hMainMenuBrandFontColorHover = $hMainMenuFontColorHover}{/if}
+{if !empty($theme_settings.h_main_menu_brand_font_color_hover)}
+    {$hMainMenuBrandFontColorHover = $theme_settings.h_main_menu_brand_font_color_hover}
+{/if}
+
+{* кнопка на мобильное основное меню *}
+{if $theme_settings.m_main_menu_button_bg_color}{$mMainMenuButtonBgColor = $theme_settings.m_main_menu_button_bg_color|upper}{else}{$mMainMenuButtonBgColor = '#FFF'}{/if}
+{if $theme_settings.m_main_menu_button_font_color}{$mMainMenuButtonFontColor = $theme_settings.m_main_menu_button_font_color}{else}{$mMainMenuButtonFontColor = $acFontColor}{/if}
+
+{$mobile_theme_color = $baseBgColor}
+{if !empty($theme_settings.mobile_theme_color)}{$mobile_theme_color = $theme_settings.mobile_theme_color}{/if}
+{if !empty($mobile_theme_color)}<meta name="theme-color" content="{$mobile_theme_color}">{/if}
+
+<style>
+    a:hover,
+    a.selected,
+    .selected > a,
+    .link:hover,
+    .link.selected,
+    .selected > .link{
+        color: {$linkHoverColor};
+    }
+
+    .bs-bg{
+        background: {$baseBgColor};
+    }
+
+    .bs-bg,
+    .bs-bg a,
+    .bs-bg a:hover,
+    .bs-bg .link,
+    .bs-bg .link:hover,
+    .bs-bg .selected > a,
+    .bs-bg .selected > .link{
+        color: {$baseBgColorFont};
+    }
+
+    .bs-color,
+    .link.bs-color,
+    a.bs-color,
+    .link.bs-color:hover,
+    a.bs-color:hover{
+        color: {$baseFontColor};
+    }
+
+    .ac-bg{
+        background: {$acBgColor};
+    }
+
+    .ac-bg,
+    .ac-bg a,
+    .ac-bg .link,
+    .ac-bg a:hover,
+    .ac-bg .selected > a,
+    .ac-bg .selected > .link{
+        color: {$acBgColorFont};
+    }
+
+    .ac-color,
+    .link.ac-color,
+    a.ac-color,
+    .link.ac-color:hover,
+    a.ac-color:hover{
+        color: {$acFontColor};
+    }
+
+    .button,
+    button,
+    input[type="button"],
+    input[type="submit"],
+    a.button,
+    .inline-select__item.selected,
+    .filter-param__variant--button.checked{
+        background: {$baseBgColor};
+        color: {$baseBgColorFont};
+    }
+
+    .cartOS__button{
+    background: {$baseBgColor} !important;
+    color: {$baseBgColorFont} !important;
+    }
+
+    .bar-fixed-b__caret,
+    .bar-fixed-r__caret,
+    .products-custom-link__caret,
+    .header-cart-message__caret{
+        color: {$baseBgColor};
+    }
+
+    .button.button--acc,
+    button.button--acc,
+    a.button--acc,
+    input[type="button"].button--acc,
+    input[type="submit"].button--acc{
+        background: {$acBgColor};
+        color: {$acBgColorFont};
+    }
+
+    a.add2cart-button--mini,
+    .add2cart-button--mini,
+    a.add2cart-button,
+    .add2cart-button {
+        background: {$buttonCartBgColor};
+        color: {$buttonCartFontColor};
+    }
+
+    .rating,
+    .star,
+    .star-empty,
+    .product-action.selected,
+    .head-decor:first-letter,
+    .jq-checkbox.checked:before,
+    .checkbox-styler.checked:before,
+    .shop-sk-callback__slider .ui-slider-range{
+        color: {$baseFontColor};
+    }
+
+    .cartOS__title svg {
+        fill: {$baseFontColor} !important;
+    }
+
+    .jq-radio.checked:before,
+    .radio-styler.checked:before,
+    .bx-pager-item a.active:before,
+    .owl-dot.active span:before{
+        background: {$baseFontColor};
+    }
+
+    .tabs_el.selected,
+    .border-color{
+        border-color: {$baseBgColor};
+    }
+
+    .footer{
+        background: {$footerBgColor};
+        color: {$footerFontColor};
+    }
+
+    .footer a{
+        color: {$footerFontColor};
+    }
+
+    .header-top{
+        background: {$topMenuBgColor};
+        {if $topMenuBgColor == '#FFF' || $topMenuBgColor == '#FFFFFF'}border-bottom: 1px solid #f7f7f7;{/if}
+    }
+
+    {if $topMenuBgColor == '#FFF' || $topMenuBgColor == '#FFFFFF'}
+        .switch-version{
+            border-bottom: 1px solid #f7f7f7;
+        }
+    {/if}
+
+    .header-top,
+    .header-top a,
+    .header-menu__item.selected > a,
+    .header-menu__item.selected > .link,
+    .header-top a:hover,
+    .header-top .link,
+    .header-top .link:hover{
+        color: {$topMenuFontColor};
+    }
+
+    {if $theme_settings.top_menu_hover_dark}
+        .header-top .header-menu__item:hover,
+        .header-top .header-menu__item.selected,
+        .header-top .header-auth:hover,
+        .header-top .header-callback:hover {
+            background: rgba(0,0,0,0.03);
+        }
+    {/if}
+
+    .categories-v__head{
+         background: {$verticalMainMenuBtnBgColor};
+         color: {$verticalMainMenuBtnFontColor};
+        {if $verticalMainMenuBtnBgColor == '#FFF' || $verticalMainMenuBtnBgColor == '#FFFFFF'}border-bottom: 1px solid #ebebeb;{/if}
+    }
+
+    .categories-vu__head{
+        background: {$verticalUnfoldingMainMenuBtnBgColor};
+        color: {$verticalUnfoldingMainMenuBtnFontColor};
+        {if $verticalUnfoldingMainMenuBtnBgColor == '#FFF' || $verticalUnfoldingMainMenuBtnBgColor == '#FFFFFF'}border-bottom: 1px solid #ebebeb;{/if}
+    }
+
+    .category-filters,
+    .m-filters-open{
+        background: {$hFilterBgColor};
+        color: {$hFilterFontColor};
+        {if $hFilterBgColor == '#FFF' || $hFilterBgColor == '#FFFFFF'}box-shadow: 0 1px 3px rgba(0,0,0,0.1);{/if}
+    }
+
+    .category-filters__send{
+        background: {$hFilterFontColor};
+        color: {$hFilterBgColor};
+    }
+
+    .categories-h{
+        background: {$hMainMenuBgColor};
+        color: {$hMainMenuFontColor};
+        {if $hMainMenuBgColor == '#FFF' || $hMainMenuBgColor == '#FFFFFF'}border-top: 1px solid #f7f7f7;{/if}
+    }
+
+    .categories-h__link:hover,
+    .categories-h__link.selected,
+    .categories-h__title.link:hover{
+        color: {$hMainMenuFontColorHover};
+    }
+
+    .categories-h__item:hover{
+        background: {$hMainMenuLinkBgColorHover};
+    }
+
+    .categories-h__brand{
+        color: {$hMainMenuBrandFontColor};
+    }
+
+    .categories-h__brand .categories-h__link:hover{
+        color: {$hMainMenuBrandFontColorHover};
+    }
+
+    .m-open-categories{
+        background: {$mMainMenuButtonBgColor};
+        {if $mMainMenuButtonBgColor == "#FFF" || $mMainMenuButtonBgColor == "#FFFFFF"}border-top: 1px solid #f7f7f7;{/if}
+        color: {$mMainMenuButtonFontColor};
+    }
+
+    {* логотип *}
+    {if !$is_mobile}
+        {if $theme_settings.logo_icon_color}{$logoIconColor = $theme_settings.logo_icon_color}{else}{$logoIconColor = $acFontColor}{/if}
+        {if $theme_settings.logo_text_1_color}{$logoText1Color = $theme_settings.logo_text_1_color}{else}{$logoText1Color = $baseFontColor}{/if}
+        {if $theme_settings.logo_text_2_color}{$logoText2Color = $theme_settings.logo_text_2_color}{else}{$logoText2Color = "#000"}{/if}
+    {else}
+        {if $theme_settings.logo_icon_color_mobile}{$logoIconColor = $theme_settings.logo_icon_color_mobile}{else}{$logoIconColor = $acFontColor}{/if}
+        {if $theme_settings.logo_text_1_color_mobile}{$logoText1Color = $theme_settings.logo_text_1_color_mobile}{else}{$logoText1Color = $baseFontColor}{/if}
+        {if $theme_settings.logo_text_2_color_mobile}{$logoText2Color = $theme_settings.logo_text_2_color_mobile}{else}{$logoText2Color = "#000"}{/if}
+    {/if}
+
+    {if $theme_settings.logo_icon}
+        .header-logo__icon{
+            color: {$logoIconColor};
+        }
+    {/if}
+
+    {if $theme_settings.logo_text_1}
+        .header-logo__text{
+            color: {$logoText1Color};
+        }
+    {/if}
+
+    {if $theme_settings.logo_text_1}
+        .header-logo__text-second{
+            color: {$logoText2Color};
+        }
+    {/if}
+
+</style>
+{/strip}

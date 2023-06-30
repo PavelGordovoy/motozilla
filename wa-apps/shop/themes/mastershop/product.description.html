@@ -1,0 +1,33 @@
+{strip}
+<div class="product-card__description{if !empty($add_class)} {$add_class}{/if}">
+    {if $theme_settings.product_card_show_brand_content}
+        {$is_productbrands = $theme_settings.use_brand_plugin == 'productbrands' && class_exists('shopProductbrandsPlugin')}
+        {$is_brandspro = $theme_settings.use_brand_plugin == 'brands_pro' && class_exists('shopBrandViewHelper')}
+
+        {$image = null}
+        {$url = null}
+        {$_b = null}
+        {if $is_productbrands}
+            {$_b = shopProductbrandsPlugin::productBrand($product.id)}
+            {if $_b}
+                {$image = "`$wa_url`wa-data/public/shop/brands/`$_b.id`/`$_b.id`.150`$_b.image`"}
+                {$url = $_b.url}
+            {/if}
+        {else if $is_brandspro}
+            {$_b = shopBrandViewHelper::getProductBrand($product)}
+            {if $_b}
+                {$image = $_b.image_url}
+                {$url = $_b.frontend_url}
+            {/if}
+        {/if}
+
+        {if !empty($image)}
+            <a class="product-card__brand" href="{$url}">
+                <img alt="{$_b.name|escape}" src="{$image}">
+            </a>
+        {/if}
+    {/if}
+
+    <div{if $is_schema_org} itemprop="description"{/if}>{$product.description}</div>
+</div>
+{/strip}

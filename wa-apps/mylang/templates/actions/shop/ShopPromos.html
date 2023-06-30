@@ -1,0 +1,61 @@
+{if empty($promos)}
+    <span>[`Promos list is empty. Add <a href="{$wa_backend_url}shop/?action=products#/promos/">new</a> to translate it.`]</span>
+{else}
+    <form id="s-mylang-form" method="POST" action="?module=shop&action=save" data-form="save">
+    {if $list}
+        <h1>[`Promos`]</h1>
+        <table class="zebra single-lined">
+            <tr class="header">
+                <th>[`Promo title`]</th>
+                {foreach $locales as $l}
+                    <th class="short align-right">{$l}</th>
+                {/foreach}
+            </tr>
+            {foreach $promos as $p}
+            <tr>
+                <td>
+                    <a href="#/promos/{$p.id}">{$p.title|default:$p.name|escape}</a>
+                </td>
+                {foreach $locales as $key=>$l}
+                <td class="align-right"><input tabindex="{$key}" type="text" name="mylang[promos][{$key}][{$p.id}][title]" value="{if isset($p.locale.$key.text)}{$p.locale.$key.text}{/if}" placeholder="{$l}" data-mylang="{$key}"/></td>
+                {/foreach}
+            </tr>
+            {/foreach}
+        </table>
+    {else}
+    <h1><a href="#/promos/" class="back">← [`Back`]</a>[`Promo`] - {$promos.title|default:$promos.name|default:'[`Noname`]|escape'}</h1>
+    <form id="s-mylang-service-form" method="POST" action="?module=shop&action=save">
+    <div>
+        {literal}<style>div[data-mylang]{margin-right:20%}</style>{/literal}
+        <div class="field">
+            <div class="name">
+                [`Promo title`]
+            </div>
+            <div class="value no-shift">
+                <input type="text" value="{$promos.title|default:$promos.name|escape}" disabled readonly/><br>
+                {foreach $locales as $key=>$l}
+                <input type="text" title="{$l}" name="mylang[promos][{$key}][{$promos.id}][title]" value="{if isset($promos.locale.$key.title)}{$promos.locale.$key.title}{/if}" placeholder="{$l}" data-mylang="{$key}"/><br>
+                {/foreach}
+            </div>
+        </div>
+        <div class="field">
+            <div class="name">
+                [`Promo text`]
+            </div>
+            <div class="value no-shift">
+                <textarea readonly>{$promos.body|default:''|escape}</textarea><br>
+                {foreach $locales as $key=>$l}
+                <textarea name="mylang[promos][{$key}][{$promos.id}][body]" placeholder="{$l}" data-mylang="{$key}" title="{$l}">{if isset($promos.locale.$key.body)}{$promos.locale.$key.body}{/if}</textarea><br>
+                {/foreach}
+            </div>
+        </div>
+    </div>
+    {/if}
+    <div class="placeholder"><div>
+    <div class="wa-mylang-save-panel block bordered-top">
+            <input id="wa-save-button" type="submit" class="button green" value="[`Save`]">
+            <em class="hint">Ctrl + S</em>
+            <span id="wa-editor-status" style="margin-left: 20px; display: none;"><i class="icon16 yes"></i> [`Saved`]</span>
+        </div>
+    </form>
+{/if}

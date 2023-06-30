@@ -1,0 +1,65 @@
+{$epikafavList = waRequest::cookie('epika_shop_favorites')}
+{assign var=epikafavList value=","|explode:$epikafavList}
+
+{$epikacartList = waRequest::cookie('epika_shop_incart')}
+{assign var=epikacartList value=","|explode:$epikacartList}
+
+{if $wa->shop->cart->total() > 0}{$add2cart_label = '[`Add to cart`]'}{else}{$add2cart_label = '[`Buy`]'}{/if}
+<div class="scroll-container">
+<div class="thumbs product-list">
+    <ul>
+    {foreach $products as $p }
+        {$epikafavClass = ''}
+        {foreach from=$epikafavList item=i}
+            {if $i == $p.id}
+                {$epikafavClass = 'active'}
+            {/if}
+        {/foreach}
+
+        {$epikacartClass = ''}
+        {foreach from=$epikacartList item=i}
+            {if $i == $p.id}
+                {$epikacartClass = 'active'}
+            {/if}
+        {/foreach}
+
+    {$available = $wa->shop->settings('ignore_stock_count') || $p.count === null || $p.count > 0}
+    <li itemscope itemtype ="http://schema.org/Product" class="prd mini vertical zeus">
+
+        <div class="prd-wrapper">
+
+                <div class="badge-wrapper">
+                    <img itemprop="image" class="product-first-img lazy" alt="{$p.name}" data-original="{$wa->shop->productImgUrl($p, '60')}" src="{if $wa->shop->productImgUrl($p, '60')}{if !empty($theme_settings.disable_products_img_lazyload)}{$wa->shop->productImgUrl($p, '60')}{else}{$wa_active_theme_url}img/balls.gif{/if}{else}{$wa_theme_url}assets/img/nophoto.png{/if}">
+                </div>
+
+                <div class="info">
+                    <a href="{$p.frontend_url}" title="{$p.name}">
+                        <h5 class="title">
+                            <span itemprop="name">{$p.name}
+                                {$badge_html = $wa->shop->badgeHtml($p.badge)}
+                                {if $badge_html}
+                                <span class="corner">{$badge_html}</span>
+                                {/if}
+                            </span>
+                        </h5>
+                    </a>
+                    <span class="price nowrap" itemprop="price">
+                        {shop_currency_html($p.price)}
+                        {if $p.compare_price > 0}
+                            <span class="compare-at-price nowrap">
+                                {shop_currency_html($p.compare_price)}
+                            </span>
+                        {/if}
+                    </span>
+                </div>
+        </div>
+
+    </li>
+    {/foreach}
+    </ul>
+</div>
+<div class="scrollbarvert">
+    <div class="handle"></div>
+</div>
+</div>
+

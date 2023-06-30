@@ -1,0 +1,80 @@
+<div class="s-category-wrapper" id="s-category-wrapper">
+
+    <h1 class="s-category-header">{$category.name|escape}</h1>
+    
+    {* Show subcategories list navigation *}
+    {if !empty($theme_settings.category_subcategories_list)}
+        {$_catalogs = $category.subcategories}
+        {if !empty($_catalogs)}
+            <div class="s-category-subcategories-list-wrapper">
+                <ul>
+                    {foreach $_catalogs as $cat_item}
+                        <li><a href="{$cat_item.url}">{$cat_item.name}</a>{if !$cat_item@last}<span class="separator">-</span>{/if}</li>
+                    {/foreach}
+                </ul>
+            </div>
+        {/if}
+    {/if}
+
+    {* CATEGORY DESCRIPTION *}
+    {if $category.description && $theme_settings.category_desc == 'header'}
+        {$category.description}
+    {/if}
+
+    {if !empty($category.params.banner)}
+        {if !empty($category.params.banner_link)}<a class="s-category-banner" href="{$category.params.banner_link}">{/if}
+        <img src="{$category.params.banner}">
+        {if !empty($category.params.banner_link)}</a>{/if}
+    {/if}
+
+    {* CATEGORY DESCRIPTION *}
+    {if $category.description && $theme_settings.category_desc == 'banner'}
+        {$category.description}
+    {/if}
+
+    {* Show subcategories navigation *}
+    {if !empty($theme_settings.category_subcategories) && empty($category.params.nosub) || empty($theme_settings.category_subcategories) && !empty($category.params.hassub)}
+        {$_catalogs = $category.subcategories}
+        {if !empty($_catalogs)}
+            <div class="s-category-subcategories-wrapper row">
+                {foreach $_catalogs as $cat_item}
+                    <div class="s-category-subcategory col-lg-4 col-md-6">
+                        <a href="{$cat_item.url}" class="default-bg">{$cat_item.name}</a>
+                        <div class="s-category-subcategories-image">
+                            <a href="{$cat_item.url}" class="default-bg">
+                                {if !empty($cat_item.params.image)}
+                                    <div style="background-image: url({$cat_item.params.image});"></div>
+                                {else}
+                                    <div style="background-image: url({$wa_parent_theme_url}img/blank_480x360.png);"></div>
+                                {/if}
+                            </a>
+                        </div>
+                    </div>
+                {/foreach}
+            </div>
+        {/if}
+    {/if}
+
+    {* @event frontend_category.%plugin_id% *}
+    {foreach $frontend_category as $_}{$_}{/foreach}
+
+    {*PRODUCT-LIST*}
+    {if !empty($products)}
+        {include file="./products.html" sorting=!empty($category.params.enable_sorting)}
+    {else}
+        <div class="s-category-empty">
+            {if !empty($filters)}
+                [`No products were found.`]
+            {else}
+                [`This category does not contain any products.`]
+            {/if}
+        </div>
+    {/if}
+
+    {* CATEGORY DESCRIPTION *}
+    {if $category.description && $theme_settings.category_desc == 'products'}
+        <div class="clearfix"></div>
+        {$category.description}
+    {/if}
+
+</div>

@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst CRM Facebook plugin 1.0.6.26 UA translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-06-15 10:25+0300\n"
+"PO-Revision-Date: \n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "(no subject)"
+msgstr "(без теми)"
+
+msgid "incoming"
+msgstr "вхідні"
+
+msgid "outgoing"
+msgstr "вихідні"
+
+msgid "open conversation"
+msgstr "відкрити розмову"
+
+msgid "From"
+msgstr "Від"
+
+msgid "To"
+msgstr "Для"
+
+msgid "Deal"
+msgstr "Угода"
+
+msgid "Reply"
+msgstr "Відповісти"
+
+msgid "or"
+msgstr "або"
+
+msgid "cancel"
+msgstr "скасувати"
+
+msgid "Delete message"
+msgstr "Видалити повідомлення"
+
+msgid "Delete"
+msgstr "Видалити"
+
+msgid "Write a message"
+msgstr "Написати повідомлення"
+
+msgid "Send"
+msgstr "Надіслати"
+
+msgid "to"
+msgstr "для"
+
+msgid "to "
+msgstr "для "
+
+msgid "Message sent successfully"
+msgstr "Повідомлення відправлене"
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "Plugin %s is installed and working."
+msgstr "Плагін %s встановлено і запущено."
+
+msgid "Specify configuration parameters on <a href=\"%s\">deal source settings</a>."
+msgstr "Задайте параметри на <a href=\"%s\">екрані налаштувань джерела угод</a>."
+
+msgid "Stage deleted"
+msgstr "Етап видалено"
+
+msgid "Funnel deleted"
+msgstr "Воронку видалено"
+
+msgid "Unknown source"
+msgstr "Невідоме джерело"
+
+msgid "Delete message from %s"
+msgstr "Видалити повідомлення від %s"
+
+msgid "This field is required"
+msgstr "Це поле є обов'язковим"
+
+msgid "The video tag is not supported by your browser."
+msgstr "Тег відео не підтримується вашим браузером."
+
+msgid "Audio file"
+msgstr "Аудіофайл"
+
+msgid "Download"
+msgstr "Завантажити"
+
+msgid "File"
+msgstr "Файл"
+
+msgid "Image"
+msgstr "Зображення"
+
+msgid "Audio"
+msgstr "Аудіо"
+
+msgid "Video"
+msgstr "Відео"
+
+msgid "Attachment"
+msgstr "Прикріплений файл"
+
+msgid "Drop file here"
+msgstr "Перетягніть сюди файл"
+
+msgid "Your message"
+msgstr "Ваше повідомлення"
+
+msgid "Name"
+msgstr "Назва"
+
+msgid "Page access marker"
+msgstr "Маркер доступу до сторінки"
+
+msgid "Callback URL"
+msgstr "Callback URL"
+
+msgid "Add settlement for CRM"
+msgstr "Додати поселення для CRM"
+
+msgid "Verification marker"
+msgstr "Маркер для підтвердження"
+
+msgid "Use Human Agent tag"
+msgstr "Використовувати тег Human Agent"
+
+msgid "You can not start a conversation with the user"
+msgstr "Ви не можете почати листування з користувачем"
+
+msgid "Deal source disabled"
+msgstr "Джерело угод вимкнене"

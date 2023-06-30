@@ -1,0 +1,17 @@
+{strip}
+{if isset($category) && isset($skImages[$category.id].sidebar_banner)}
+    {$sidebar_banner = $skImages[$category.id].sidebar_banner}
+    {$banner_link = ""}{if isset($category.params.category_sidebar_banner_url)}{$banner_link = $category.params.category_sidebar_banner_url}{/if}
+    {$is_retina = $theme_settings.categories_list_images_retina && count($skImages) > 0}
+    {$is_lazy = $theme_settings.categories_list_images_lazy}
+    <div class="sidebar-banner js-categories-list" data-retina="{$is_retina}" data-lazy="{$is_lazy}">
+        {if !empty($banner_link)}<a href="{$banner_link}">{/if}
+        {if $is_lazy}
+            <img class="js-categories-item-image" src="{$wa_theme_url}img/lazy-image.png" data-src="{$sidebar_banner}" alt="{$category.name|escape}" />
+        {else}
+            <img class="js-categories-item-image" src="{$sidebar_banner}" alt="{$category.name|escape}" />
+        {/if}
+        {if !empty($banner_link)}</a>{/if}
+    </div>
+{/if}
+{/strip}

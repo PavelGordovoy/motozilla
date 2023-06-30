@@ -1,0 +1,153 @@
+<style>
+    #deleteLocalized-dialog div{ float:left; width:48%}
+    #deleteLocalized-dialog hr{ margin-top:0;}
+</style>
+<div class="content" id="c-core">
+    <div class="block not-padded c-core-content shadowed" id="content">
+        <div class="block">
+            <h1>[`Maintenance`]</h1>
+            <div class="block fields" style="width:80%">
+                <div class="field-group">
+                    <div class="field">
+                        <div class="name">[`Tables`]</div>
+                        <div class="value">
+                            {if $tables}
+                                <ul>
+                                {foreach $tables as $t}
+                                    <li>{$t.Name}({$t.Rows}):{$t.Data_free} <a href="#" class="optimizeTable" data-name="{$t.Name}">[`Optimize`]</a></li>
+                                {/foreach}
+                                </ul>
+                            {else}
+                                <span>[`All tables are optimized.`]</span>
+                            {/if}
+                        </div>
+                    </div>
+                </div>
+                <h5>[`Clean data`]</h5>
+                <div class="field-group">
+                    <div class="field">
+                        <div class="name">[`Autotranslate cache files`]</div>
+                        <div class="value">
+                            {if $cachefiles}
+                                <ul>
+                                {foreach $cachefiles as $file}
+                                    <li>{$file|replace:'.dat':''} <a href="#" class="deleteCachefile" data-name="{$file}">[`Delete`]</a></li>
+                                {/foreach}
+                                </ul>
+                            {else}
+                                [`No files`]
+                            {/if}
+                        </div>
+                    </div>
+                </div>
+                <div class="field-group">
+                    <div class="field">
+                        <div class="name">[`Localized data`]</div>
+                        <div class="value">
+                            {if $localestats}
+                            <ul>
+                                {foreach $localestats as $loc=>$stat}
+                                <li>{$locales[$loc]|default:$loc|escape} - {_w('%d entry', '%d entries', $stat)}</li>
+                                {/foreach}
+                            </ul>
+                            {/if}
+                            <form action="?module=backend&action=deleteLocalizedData" method="post" id="deleteLocalized-form">
+                                {$wa->csrf()}
+                                {html_options name="locale" options=$locales}
+                            <div id="deleteLocalized-dialog">
+                                <div>
+                                    <label><input type="checkbox" name="apps[shop]" value="all">[`Shop`]</label><br>
+                                    <label><input type="checkbox" name="apps[shop][theme]" value="1">[`Shop`] - [`Themes`]*</label><br>
+                                    <label><input type="checkbox" name="apps[shop][feature]" value="1">[`Shop`] - [`Features`]</label><br>
+                                    <label><input type="checkbox" name="apps[shop][feature_value]" value="1">[`Shop`] - [`Features`]-[`Values`]</label><br>
+                                    <label><input type="checkbox" name="apps[shop][tag]" value="1">[`Shop`] - [`Tags`]</label><br>
+                                    <label><input type="checkbox" name="apps[shop][stock]" value="1">[`Shop`] - [`Stocks`]</label><br>
+                                    <label><input type="checkbox" name="apps[shop][service]" value="1">[`Shop`] - [`Services`]</label><br>
+                                    <label><input type="checkbox" name="apps[shop][promos]" value="1">[`Shop`] - [`Promos`]</label><br>
+                                    <label><input type="checkbox" name="apps[shop][product]" value="name">[`Shop`] - [`Products`] - [`Name`]</label><br>
+                                    <label><input type="checkbox" name="apps[shop][product]" value="summary">[`Shop`] - [`Products`] - [`Summary`]</label><br>
+                                    <label><input type="checkbox" name="apps[shop][product]" value="description">[`Shop`] - [`Products`] - [`Description`]</label><br>
+                                    <label><input type="checkbox" name="apps[shop][category]" value="name">[`Shop`] - [`Category`] - [`Name`]</label><br>
+                                    <label><input type="checkbox" name="apps[shop][category]" value="description">[`Shop`] - [`Category`] - [`Description`]</label>
+                                </div>
+                                <div>
+                                    <label><input type="checkbox" name="apps[site]" value="all">[`Site`]</label><br>
+                                    <label><input type="checkbox" name="apps[site][theme]" value="1">[`Site`] - [`Themes`]*</label><br>
+                                    <br>
+                                </div>
+                                <div>
+                                    <label><input type="checkbox" name="apps[blog]" value="all">[`Blog`]</label><br>
+                                    <label><input type="checkbox" name="apps[blog][theme]" value="1">[`Blog`] - [`Themes`]*</label><br>
+                                    <br>
+                                </div>
+                                <div>
+                                    <label><input type="checkbox" name="apps[photos]" value="all">[`Photos`]</label><br>
+                                    <label><input type="checkbox" name="apps[photos][theme]" value="1">[`Photos`] - [`Themes`]*</label><br>
+                                    <label><input type="checkbox" name="apps[photos][album]" value="1">[`Photos`] - [`Albums`]*</label><br>
+                                    <label><input type="checkbox" name="apps[photos][photo]" value="1">[`Photos`] - [`Photo`]*</label>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="clear-both"></div>
+                            <hr>
+                            <div>
+                                <span>*[`Themes data is removed from datatbase, not from theme files.`]</span>
+                                <br>
+                                <br>
+                                <input type="submit" class="button red" value="[`Clear`]">
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear-left"></div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $.maintenance = {
+        url: '?module=backend&action=',
+        optimizeTable:function(name){
+            $.post(this.url+'optimize', { table:name}, function (request) {
+                return request;
+            }, 'json');
+        },
+        deleteCachefile:function(file){
+            $.post(this.url+'deleteCachefile', { file:file}, function (request) {
+                return request;
+            }, 'json');
+        },
+        deleteLocalizedData:function(data){
+            $.post(this.url+'deleteLocalizedData', data, function (request) {
+                return request;
+            }, 'json');
+        }
+    };
+
+    $('.optimizeTable').on('click', function(e){
+        e.preventDefault();
+        $.maintenance.optimizeTable($(this).data('name'));
+        $(this).parent().hide();
+    });
+    $('.deleteCachefile').on('click', function(e){
+        e.preventDefault();
+        $.maintenance.deleteCachefile($(this).data('name'));
+        $(this).parent().hide();
+    });
+
+    $('#deleteLocalized-form').on('submit', function(e){
+        e.preventDefault();
+        var fields = $(this).serialize();
+        if (confirm("{_w('Clear selected data?')}")) {
+            $.maintenance.deleteLocalizedData(fields);
+            $.mylang.maintenanceAction();
+        }
+    });
+
+    $('input[value=all]','#deleteLocalized-dialog').on('click', function(){
+        $('#deleteLocalized-dialog').find('input[name^="'+this.name+'["]').attr('disabled', this.checked);
+    })
+</script>

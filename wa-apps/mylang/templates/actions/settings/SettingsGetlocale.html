@@ -1,0 +1,125 @@
+<div class="dialog-background"></div>
+<div class="dialog-window">
+    <form id="form-editLocale" action="?module=settings&action=save" method="POST">
+    <input type="hidden" name="action" value="editlocale">
+    <input type="hidden" name="locale" value="{$locale}">
+    <div class="dialog-content">
+        <div class="dialog-content-indent">
+            <div class="dialog-content-indent">
+            {if !in_array($locale,array('ru_RU','en_US'))}<span style="float:right"><a href="javascript:void(0)" data-id="{$locale}" class="dellocale"><i class="icon16 delete"></i>[`Delete locale`]</a></span>{/if}<br>
+            <h1>[`Edit locale`] - {$info.name|escape}({$locale})</h1>
+            <div class="fields form s-dialog-form">
+                <div class="field-group">
+                    <div class="field">
+                        <div class="name">[`Currency`]</div>
+                        <div class="value">
+                            {html_options name="localedata[currency]" options=$currency selected=$info.currency|default:''}
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="name">[`Original`]</div>
+                        <div class="value">
+                            <label>[`Name:`] <input type="text" name="localedata[name]" class="large s-full-width-input" value="{$info.name|default:''|escape}"></label>
+                            <label>[`Region:`] <input type="text" name="localedata[region]" class="large s-full-width-input" value="{$info['region']|default:''}"></label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="name">[`English`]</div>
+                        <div class="value">
+                            <label>[`Name:`] <input type="text" name="localedata[english_name]" class="large s-full-width-input" value="{$info['english_name']|default:''}"></label>
+                            <label>[`Region:`] <input type="text" name="localedata[english_region]" class="large s-full-width-input" value="{$info['english_region']|default:''}"></label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="name">[`Thousands separator`]</div>
+                        <div class="value">
+                            <input type="text" name="localedata[thousands_sep]" class="small" value="{$info['thousands_sep']|default:''}">
+                            <span>[`Usually space or comma`]</span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="name">[`Decimal point`]</div>
+                        <div class="value">
+                            <input type="text" name="localedata[decimal_point]" class="small" value="{$info['decimal_point']|default:''}">
+                            <span>[`Usually full stop or comma`]</span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="name">[`Fractional digits`]</div>
+                        <div class="value">
+                            {html_options name="localedata[frac_digits]" options=[0, 1, 2, 3] selected=$info['frac_digits']|default:1}
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="name">[`First day of week`]</div>
+                        <div class="value">
+                            {html_options name="localedata[first_day]" options=$weekday selected=$info['first_day']|default:'1'}
+                        </div>
+                    </div>
+                    {if !$supported_locales}
+                        <div style="float:right">
+                            <i class="icon16 info"></i>[`This locale is not installed on the server.`][`Some transalted strings may display incorrect.`]
+                        </div>
+                    {/if}
+                </div>
+            </div>
+        </div>
+        </div><br>
+    </div>
+    <div class="dialog-buttons">
+        <div class="dialog-buttons-gradient">
+            <input type="submit" value="[`Update`]" class="button green" id="dialog-editlocale-save"> <i class="icon16 yes" id="dialog-editlocale-success" style="display:none"></i> [`or`]  <a class="cancel button" href="#">[`close`]</a>  <span id="dialog-editocale-error" style="display:none"><i class="icon16 no"></i><span>
+        </div>
+    </div>
+    </form>
+    <div class="clear"></div>
+</div>
+<script>
+$('select[name="localedata[currency]"]').chosen({
+    no_results_text: "Oops, nothing found!",
+    width: "250px",
+    height: "250px",
+    max_selected_options:1,
+    search_contains:true,
+    placeholder_text_single:'Select an option',
+});
+
+$('a.cancel','#dialog-editlocale').on('click', function(){
+    $("#dialog-editlocale").waDialog().trigger('close');
+});
+
+$(".dellocale").on("click", function(e) {
+    if(confirm('[`All data with locale %s will be cleared. Are you sure?`]'.replace('%s','{$info.name|escape}({$locale})'))) {
+        $.post('?module=settings&action=save', {
+            locale: $(this).data('id'),
+            action: 'deletelocale',
+        }).done(function(response) {
+            if (response.status == "ok") {
+                $.mylang.generalAction();
+                $("#dialog-editlocale").waDialog().trigger('close');
+            }
+        });
+    }
+    e.preventDefault();
+});
+
+$('#form-editLocale').on('submit', function(e){
+        e.preventDefault();
+        var fields = $(this).serialize();
+        $.post('?module=settings&action=save',fields).done(function(response) {
+            if (response.status == "ok") {
+                $.mylang.generalAction();
+                $("#dialog-editlocale-success").show();
+                setTimeout(function () {
+                    $("#dialog-editlocale-success").hide();
+                },3000);
+            } else {
+                $("#dialog-editlocale-error").text(response.errors).show();
+                setTimeout(function () {
+                    $("#dialog-editlocale-error").hide();
+                    $("#dialog-editlocale-save").removeClass("red").addClass("yellow");
+                },3000);
+            }
+        });
+    });
+</script>

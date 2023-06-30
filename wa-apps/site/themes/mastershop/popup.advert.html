@@ -1,0 +1,24 @@
+{strip}
+{$is_open_advert = !$wa->cookie("widget_popup_advert_close_`$theme_settings.widget_popup_id`") || !$wa->cookie("popup_advert_tabu")}
+{if $is_open_advert}
+    {$max_width = 800}
+    {if (int)$theme_settings.widget_popup_advert_width}
+        {$max_width = (int)$theme_settings.widget_popup_advert_width}
+    {/if}
+
+    <div class="popup-content popup-content__advert mfp-hide js-popup-advert" data-id="{$theme_settings.widget_popup_id}" data-time="{$theme_settings.widget_popup_advert_time}" data-tabu="{$theme_settings.widget_popup_advert_tabu_days}" style="max-width: {$max_width}px">
+        {if $theme_settings.widget_popup_advert_title}
+            <div class="h1">
+                {if !empty($theme_settings.static_var_smarty)}
+                    {eval var=$theme_settings.widget_popup_advert_title}
+                {else}
+                    {$theme_settings.widget_popup_advert_title}
+                {/if}
+            </div>
+        {/if}
+        <div class="popup-content__inside">
+            {$wa->block($theme_settings.widget_popup_advert_block_id)}
+        </div>
+    </div>
+{/if}
+{/strip}

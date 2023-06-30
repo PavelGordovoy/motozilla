@@ -1,0 +1,148 @@
+{strip}
+
+<link href="{$wa_static_url}wa-content/css/jquery-ui/base/jquery.ui.slider.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery-ui/jquery.ui.core.min.js?v{$wa->version(true)}"></script>
+<script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery-ui/jquery.ui.widget.min.js?v{$wa->version(true)}"></script>
+<script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery-ui/jquery.ui.mouse.min.js?v{$wa->version(true)}"></script>
+<script type="text/javascript" src="{$wa_static_url}wa-content/js/jquery-ui/jquery.ui.slider.min.js?v{$wa->version(true)}"></script>
+
+<section class="s-category-filters" id="s-category-filters">
+    <h5 class="filters-collapse default-bg" data-toggle="collapse" data-target="#filters-form" aria-expanded="{if !empty($theme_settings.sidebar_filter)}true{else}false{/if}"><i class="fa fa-lg fa-angle-{if !empty($theme_settings.sidebar_filter)}up{else}down{/if} default-color"></i> [`Products filtration`]</h5>
+    <form id="filters-form" class="collapse{if !empty($theme_settings.sidebar_filter)} in{/if}" method="get" action="{$wa->currentUrl(0,1)}">
+        {foreach $filters as $fid => $filter}
+            <div class="s-filter-group">
+                {if $fid == 'price'}
+                    {$c = $wa->shop->currency(true)}
+                    <h5 class="s-filter-header" data-toggle="collapse" data-target="#fid{$fid}" aria-expanded="true"><i class="fa fa-lg fa-angle-up"></i> [`Price`]{if $c.sign}, {$c.sign}{/if}</h5>
+                    <div class="s-filter-wrapper collapse in" id="fid{$fid}">
+                        <div class="s-filter-item filter-price-item s-range-item" data-min="{floor($filter.min)}" data-max="{ceil($filter.max)}">
+                            <div class="row s-filter-slider">
+                                <div class="col-half"><span>[`from`]</span><input type="text" class="form-control btn-sm min" name="price_min" {if $wa->get('price_min')}value="{(int)$wa->get('price_min')}"{/if} placeholder="{floor($filter.min)}"></div>
+                                <div class="col-half"><span>[`to`]</span><input type="text" class="form-control btn-sm max" name="price_max" {if $wa->get('price_max')}value="{(int)$wa->get('price_max')}"{/if} placeholder="{ceil($filter.max)}"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                {else}
+                    <h5 class="s-filter-header" data-toggle="collapse" data-target="#fid{$fid}" aria-expanded="true"><i class="fa fa-lg fa-angle-up"></i> {$filter.name|escape}{if !empty($filter.unit)}, {$filter.unit.title}{if $filter.unit.value != $filter.base_unit.value}<input type="hidden" name="{$filter.code}[unit]" value="{$filter.unit.value}">{/if}{/if}</h5>
+                    <div class="s-filter-wrapper collapse in" id="fid{$fid}">
+                        {if $filter.type == 'boolean'}
+                            <div class="s-filter-item">
+                                <label class="c-input c-radio">
+                                  <input id="{$filter.code}" type="radio" name="{$filter.code}"{if $wa->get($filter.code)} checked{/if} value="1">
+                                  <span class="c-indicator"></span>
+                                  [`Yes`]
+                                </label>
+                            </div>
+                            <div class="s-filter-item">
+                                <label class="c-input c-radio">
+                                  <input id="{$filter.code}" type="radio" name="{$filter.code}"{if $wa->get($filter.code) === '0'} checked{/if} value="0">
+                                  <span class="c-indicator"></span>
+                                  [`No`]
+                                </label>
+                            </div>
+                            <div class="s-filter-item">
+                                <label class="c-input c-radio">
+                                  <input id="{$filter.code}" name="{$filter.code}" type="radio" name="{$filter.code}"{if $wa->get($filter.code, '') === ''} checked{/if} value="">
+                                  <span class="c-indicator"></span>
+                                  [`Any`]
+                                </label>
+                            </div>
+                        {elseif isset($filter.min)}
+                            {$_v = $wa->get($filter.code)}
+                            <div class="s-filter-item s-range-item" data-min="{$filter.min}" data-max="{$filter.max}">
+                                <div class="row s-filter-slider">
+                                    <div class="col-half"><span>[`from`]</span><input type="text" class="form-control btn-sm min" name="{$filter.code}[min]" placeholder="{$filter.min}" {if !empty($_v.min)}value="{$_v.min}"{/if}></div>
+                                    <div class="col-half"><span>[`to`]</span><input type="text" class="form-control btn-sm max" name="{$filter.code}[max]" placeholder="{$filter.max}" {if !empty($_v.max)}value="{$_v.max}"{/if}></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        {else}
+                            {foreach $filter.values as $v_id => $v}
+                                <div class="s-filter-item">
+                                    <label class="c-input c-checkbox">
+                                      <input type="checkbox" name="{$filter.code}[]" {if in_array($v_id, (array)$wa->get($filter.code, array()))}checked{/if} value="{$v_id}">
+                                      <span class="c-indicator"></span>
+                                      {$v}
+                                    </label>
+                                </div>
+                            {/foreach}
+                        {/if}
+                    </div>
+                {/if}
+            </div>
+        {/foreach}
+
+        <div class="s-buttons-wrapper">
+            <input class="btn btn-default btn-sm" type="submit" value="[`Filter products`]">
+            {if $wa->get('sort')}<input type="hidden" name="sort" value="{$wa->get('sort')|escape}">{/if}
+            {if $wa->get('order')}<input type="hidden" name="order" value="{$wa->get('order')|escape}">{/if}
+        </div>
+
+    </form>
+
+</section>
+
+<script>
+        $('.s-category-filters .s-filter-slider').each(function () {
+            if (!$(this).find('.s-filter-slider').length) {
+                $(this).append('<div class="s-filter-slider"></div>');
+            } else {
+                return;
+            }
+            var min = $(this).find('.min');
+            var max = $(this).find('.max');
+            var min_value = parseFloat(min.attr('placeholder'));
+            var max_value = parseFloat(max.attr('placeholder'));
+            var step = 1;
+            var slider = $(this).find('.s-filter-slider');
+            if (slider.data('step')) {
+                step = parseFloat(slider.data('step'));
+            } else {
+                var diff = max_value - min_value;
+                if (Math.round(min_value) != min_value || Math.round(max_value) != max_value) {
+                    step = diff / 10;
+                    var tmp = 0;
+                    while (step < 1) {
+                        step *= 10;
+                        tmp += 1;
+                    }
+                    step = Math.pow(10, -tmp);
+                    tmp = Math.round(100000 * Math.abs(Math.round(min_value) - min_value)) / 100000;
+                    if (tmp && tmp < step) {
+                        step = tmp;
+                    }
+                    tmp = Math.round(100000 * Math.abs(Math.round(max_value) - max_value)) / 100000;
+                    if (tmp && tmp < step) {
+                        step = tmp;
+                    }
+                }
+            }
+            slider.slider({
+                range: true,
+                min: parseFloat(min.attr('placeholder')),
+                max: parseFloat(max.attr('placeholder')),
+                step: step,
+                values: [parseFloat(min.val().length ? min.val() : min.attr('placeholder')),
+                    parseFloat(max.val().length ? max.val() : max.attr('placeholder'))],
+                slide: function( event, ui ) {
+                    var v = ui.values[0] == $(this).slider('option', 'min') ? '' : ui.values[0];
+                    min.val(v);
+                    v = ui.values[1] == $(this).slider('option', 'max') ? '' : ui.values[1];
+                    max.val(v);
+                },
+                stop: function (event, ui) {
+                    min.change();
+                }
+            });
+            min.add(max).change(function () {
+                var v_min =  min.val() === '' ? slider.slider('option', 'min') : parseFloat(min.val());
+                var v_max = max.val() === '' ? slider.slider('option', 'max') : parseFloat(max.val());
+                if (v_max >= v_min) {
+                    slider.slider('option', 'values', [v_min, v_max]);
+                }
+            });
+        });
+</script>
+
+{/strip}

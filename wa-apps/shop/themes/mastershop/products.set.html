@@ -1,0 +1,101 @@
+{strip}
+
+{if $wa->shop && !empty($list_id) || !empty($category_id)}
+    {* shop settings *}
+    {$current_lang = $wa->locale()}
+    {if !isset($theme_settings.favorites_products)}{$theme_settings.favorites_products = true}{/if}
+    {if !isset($theme_settings.compare_products)}{$theme_settings.compare_products = true}{/if}
+    {if !isset($theme_settings.show_product_rates)}{$theme_settings.show_product_rates = true}{/if}
+    {if !isset($theme_settings.show_preview_stock)}{$theme_settings.show_preview_stock  = true}{/if}
+    {if !isset($theme_settings.show_product_preview_video)}{$theme_settings.show_product_preview_video = true}{/if}
+    {if !isset($theme_settings.show_product_badge_saving)}{$theme_settings.show_product_badge_saving = true}{/if}
+    {if !isset($theme_settings.show_product_discount)}{$theme_settings.show_product_discount  = 'none'}{/if}
+    {if !isset($theme_settings.show_product_discount_round)}{$theme_settings.show_product_discount_round  = 'round'}{/if}
+    {if !isset($theme_settings.show_product_discount_minimal )}{$theme_settings.show_product_discount_minimal = 3}{/if}
+
+    {if !isset($theme_settings.product_zero_price_text)}
+        {$theme_settings.product_zero_price_text = "Price on request"}
+        {if $current_lang == 'ru_RU'}
+            {$theme_settings.product_zero_price_text = "Цена по запросу"}
+        {/if}
+    {/if}
+
+    {if !isset($theme_settings.product_button_cart_title)}
+        {$theme_settings.product_button_cart_title = "Buy"}
+        {if $current_lang == 'ru_RU'}
+            {$theme_settings.product_button_cart_title = "Купить"}
+        {/if}
+    {/if}
+
+    {if $wa_app != 'shop' && $current_lang == 'ru_RU'}
+        {$in_stock_text = "В наличии"}
+        {$unit_text = "шт."}
+        {$pre_order_only_text = "Под заказ"}
+        {$none_stock_text = "Нет в наличии"}
+        {$vendor_code_text = "Артикул"}
+    {/if}
+
+    {* product tile settings *}
+    {if !isset($theme_settings.product_addtocart_mini_dialog)}{$theme_settings.product_addtocart_mini_dialog = true}{/if}
+    {if !isset($theme_settings.product_tile_add2cart_full)}{$theme_settings.product_tile_add2cart_full = true}{/if}
+    {if !isset($theme_settings.product_tile_gallerytile)}{$theme_settings.product_tile_gallerytile = true}{/if}
+    {if !isset($theme_settings.product_tile_gallerytile_count)}{$theme_settings.product_tile_gallerytile_count = null}{/if}
+    {if !isset($theme_settings.tile_preview_name_height)}{$theme_settings.tile_preview_name_height = 40}{/if}
+    {if !isset($theme_settings.tile_preview_name_height_mobile)}{$theme_settings.tile_preview_name_height_mobile = 30}{/if}
+    {if !isset($theme_settings.tile_preview_description_length_mobile)}{$theme_settings.tile_preview_description_length_mobile = 60}{/if}
+    {if !isset($theme_settings.tile_preview_description_length_desktop)}{$theme_settings.tile_preview_description_length_desktop = 100}{/if}
+    {if !isset($theme_settings.data_products_per_page)}{$theme_settings.data_products_per_page = null}{/if}
+
+    {* product list settings *}
+    {if !isset($theme_settings.list_preview_summary)}{$theme_settings.list_preview_summary = true}{/if}
+    {if !isset($theme_settings.list_preview_features)}{$theme_settings.list_preview_features = true}{/if}
+    {if !isset($theme_settings.list_preview_features_count)}{$theme_settings.list_preview_features_count = 5}{/if}
+    {if !isset($theme_settings.show_product_list_sku)}{$theme_settings.show_product_list_sku = true}{/if}
+
+    {if !empty($list_id)}
+        {$products = $wa->shop->productSet($list_id)}
+    {else if !empty($category_id)}
+        {$products = $wa->shop->products("category/`$category_id`")}
+    {/if}
+
+    {if count($products)}
+        {if !isset($theme_path) && empty($theme_path)}
+            {$theme_path = $wa->shop->themePath('mastershop')}
+        {/if}
+
+        {if empty($list_view)}{$list_view = 'tile'}{/if}
+        {if $list_view == 'list'}
+            {if !empty($list_title)}<div class="items-list__head"><span class="h1">{$list_title}</span></div>{/if}
+            <div class="product-list--list">
+                {include file="`$theme_path`product-preview-list.html" products=$products theme_path=$theme_path}
+            </div>
+        {else if $list_view == 'tbl'}
+            {if !empty($list_title)}<div class="items-list__head"><span class="h1">{$list_title}</span></div>{/if}
+            <div class="product-list--tbl">
+                {include file="`$theme_path`product-preview-tbl.html" products=$products theme_path=$theme_path}
+            </div>
+        {else}
+            {if !empty($is_owl_carousel)}
+                {$is_tile_mini = (!empty($theme_settings.mobile_preview_product_tile) && $theme_settings.mobile_preview_product_tile == 'mini')}
+                {$is_tile_large = !empty($theme_settings.desktop_preview_product_tile) && $theme_settings.desktop_preview_product_tile == 'large'}
+                <div class="product-list js-carousel-products js-preview-products" data-loop="{!empty($theme_settings.carousel_products_loop)}" data-retina="{$wa->shop->config('enable_2x')}" data-swipe="{!empty($theme_settings.products_carousel_swipe)}" data-tile-mini="{$is_tile_mini}" data-tile-large="{$is_tile_large}">
+                    <div class="items-list__head">
+                        <div class="items-list__direction bs-color js-carousel-direction"></div>
+                        {if !empty($list_title)}<span class="h1">{$list_title}</span>{/if}
+                    </div>
+                    <div class="carousel-products__outer">
+                        <div class="js-products-list carousel-products">
+                            {include file="`$theme_path`product-preview-tile.html" products=$products is_owl_carousel=true}
+                        </div>
+                    </div>
+                </div>
+            {else}
+                {if !empty($list_title)}<div class="items-list__head">{$list_title}</div>{/if}
+                <div class="product-list--tile">
+                    {include file="`$theme_path`product-preview-tile.html" products=$products theme_path=$theme_path}
+                </div>
+            {/if}
+        {/if}
+    {/if}
+{/if}
+{/strip}

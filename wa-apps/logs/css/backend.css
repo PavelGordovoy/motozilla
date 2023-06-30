@@ -1,0 +1,301 @@
+/* webasyst */
+#wa-app {
+    width: 700px;
+    padding: 20px;
+    margin: 0 auto;
+    background: var(--background-color-blank);
+}
+
+#wa.file #wa-app,
+#wa.action #wa-app {
+    width: 90%;
+    min-width: 700px;
+}
+
+/* general */
+
+.content {
+    margin-top: 50px;
+}
+
+#wa.file .content,
+#wa.action .content {
+    margin-top: 0;
+}
+
+.logs-action-icon {
+    cursor: pointer;
+}
+
+/* item list */
+
+.item-list .item-icon {
+    margin-right: 0.5em;
+}
+
+.item-list .item-list-item {
+    align-items: center;
+    cursor: default;
+}
+
+.item-list .item-list-item:hover .item-open-link,
+.item-list .item-list-item:hover .item-open-link * {
+    color: var(--blue);
+}
+
+.item-list a:hover {
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+.item-list a.folder {
+    color: var(--gray);
+}
+
+.list-update-action {
+    position: absolute;
+    left: 50%;
+}
+
+.list-update-action svg {
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 20px var(--text-color-hint);
+    color: var(--blue);
+    background-color: var(--background-color-blank);
+}
+
+.item-list .item-actions {
+    display: none;
+    margin-left: 0.9em;
+}
+
+.item-list .item-list-item:hover .item-actions {
+    display: inline;
+}
+
+.item-list .item-action:not(:first-child) {
+    cursor: pointer;
+    margin-left: 0.3em;
+}
+
+.item-list .item-markers {
+    cursor: default;
+    margin-left: 0.9em;
+}
+
+.item-list .item-markers svg:not(:first-child) {
+    margin-left: 0.3em;
+}
+
+.tracked-marker-updated {
+    color: var(--orange);
+}
+
+ul.action-menu .enabled-action-container svg {
+    color: var(--blue);
+}
+
+ul.action-menu .action-group-container {
+    margin-left: 0.6em;
+}
+
+.item-list .item-actions * {
+    color: var(--text-color);
+}
+
+.item-list .item-actions.item-actions-buttons * {
+    color: var(--blue);
+}
+
+.item-list .item-data-updatetime {
+    font-size: small;
+}
+
+.item-list .folder {
+    color: var(--text-color);
+}
+
+.item-list .file {
+    color: var(--text-color-strongest);
+}
+
+.item-list a:hover span {
+    color: var(--blue);
+}
+
+/* file view */
+
+.item-data .item-contents {
+    border-style: solid;
+    border-color: var(--background-color);
+    border-width: 0 8px;
+    padding: 4px 20px;
+    margin: 0;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.item-data .pagination {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.item-data .pagination.pagination-placeholder {
+    margin: 0;
+    height: 20px;
+}
+
+ul.action-menu {
+    display: flex;
+    list-style: none;
+    line-height: 2;
+    padding: 0;
+    margin: 0 0.6em 0 0;
+}
+
+ul.action-menu li {
+    margin-right: 0.3em;
+}
+
+ul.action-menu svg {
+    color: var(--text-color);
+}
+
+/* load more lines */
+
+.item-data .item-lines {
+    background: var(--background-color);
+    text-align: center;
+    cursor: pointer;
+    padding: 2px 0;
+}
+
+.item-data .item-lines.previous {
+    border-radius: 4px 4px 0 0;
+}
+
+.item-data .item-lines.next {
+    border-radius: 0 0 4px 4px;
+}
+
+.item-data .item-lines.disabled {
+    cursor: default;
+}
+
+.item-data .item-lines.disabled .arrow {
+    visibility: hidden;
+}
+
+.item-data .item-lines * {
+    color: var(--text-color);
+}
+
+.item-data .item-lines .message {
+    padding: 3px;
+    display: block;
+    font-size: 12px;
+}
+
+.item-data .item-lines .arrow {
+    border-style: solid;
+    border-width: 0 6px;
+    border-color: transparent;
+    display: inline-block;
+}
+
+.item-data .item-lines .arrow.hidden {
+    display: none;
+}
+
+.item-data .item-lines.previous .arrow {
+    border-bottom-width: 12px;
+    border-bottom-color: var(--text-color);
+}
+
+.item-data .item-lines.next .arrow {
+    border-top-width: 12px;
+    border-top-color: var(--text-color);
+}
+
+/* prettyprint hacks for dark mode */
+
+.prettyprint .pln {
+    color:var(--alert-text-color)
+}
+.prettyprint .tag {
+    color:var(--text-color-link)
+}
+.prettyprint .atn {
+    color:var(--brown)
+}
+.prettyprint .kwd {
+    color:var(--text-color-link)
+}
+.prettyprint .com {
+    color:var(--gray)
+}
+.prettyprint .typ {
+    color:var(--purple)
+}
+
+/* navigation */
+
+/* breadcrumbs */
+
+.back-link {
+    color: var(--white);
+    background: var(--blue);
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.breadcrumbs {
+    font-weight: bold;
+    display: inline;
+}
+
+.breadcrumbs.item {
+    margin-left: 0.9em;
+}
+
+.breadcrumbs .breadcrumb {
+    color: #555;
+}
+
+.breadcrumbs .breadcrumb a {
+    color: #558FCE;
+}
+
+.breadcrumbs-separator {
+    color: #999;
+    margin: 0 0.2em;
+}
+
+/* total size */
+
+.total-size {
+    color: var(--white);
+    background: var(--gray);
+    padding: 7px;
+    line-height: 1.2;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.total-size.total-size-large {
+    background: var(--orange);
+}
+
+.total-size.total-size-file {
+    background: var(--blue);
+}
+
+/* dialogs */
+
+.logs-dialog-settings .dialog-content {
+    height: 500px!important;
+    overflow-y: auto;
+}

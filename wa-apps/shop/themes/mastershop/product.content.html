@@ -1,0 +1,271 @@
+{strip}
+{if $theme_settings.test_settings && !empty($wa->cookie('product_card_type_main_content_mobile'))}{$theme_settings.product_card_type_main_content_mobile = $wa->cookie('product_card_type_main_content_mobile')}{/if}
+{if $theme_settings.test_settings && !empty($wa->cookie('product_card_type_main_content_desktop'))}{$theme_settings.product_card_type_main_content_desktop = $wa->cookie('product_card_type_main_content_desktop')}{/if}
+{if $wa->isMobile()}
+    {$type_tabs = $theme_settings.product_card_type_main_content_mobile}
+{else}
+    {$type_tabs = $theme_settings.product_card_type_main_content_desktop}
+{/if}
+
+{$is_normal_tabs = $type_tabs == "normal_tabs"}
+{$is_anchor_tabs = $type_tabs == "anchor_tabs"}
+{$is_none_tabs = $type_tabs == "none_tabs"}
+{$is_accordion_tabs = $type_tabs == "accordion_tabs"}
+
+{$overview_title = "[`Overview`]"}{if $theme_settings.product_info_overview_title}{$overview_title = $theme_settings.product_info_overview_title}{/if}
+{$options_title = "[`Characteristics`]"}{if $theme_settings.product_info_options_title}{$options_title = $theme_settings.product_info_options_title}{/if}
+{$reviews_title = "[`Reviews`]"}{if $theme_settings.product_info_reviews_title}{$reviews_title = $theme_settings.product_info_reviews_title}{/if}
+{$vk_title = "[`Discussions`]"}{if $theme_settings.product_info_comments_vk_title}{$vk_title = $theme_settings.product_info_comments_vk_title}{/if}
+{$fb_title = "[`Discussions`]"}{if $theme_settings.product_info_comments_fb_title}{$fb_title = $theme_settings.product_info_comments_fb_title}{/if}
+
+{$product_section_class = "product-card__section"}
+{if $is_normal_tabs}{$product_section_class = "js-tab-content tab-content_el"}{/if}
+{if $is_accordion_tabs}{$product_section_class = "js-accordion-tab-content accordion-tab-content_el"}{/if}
+
+{$product_main_content = $theme_settings.product_main_description_desktop}
+{if $wa->isMobile()}{$product_main_content = $theme_settings.product_main_description_mobile}{/if}
+{$list_product_main_content = []}
+{if !empty($product_main_content)}{$list_product_main_content = ","|explode:$product_main_content}{/if}
+<div class="product-card__tabs {if $is_normal_tabs} js-tabs-outer{/if}{if $is_accordion_tabs} js-accordion-tabs-outer{/if}">
+    {if count($list_product_main_content) > 0}
+        {if ($is_normal_tabs || $is_anchor_tabs)}
+            {$js_class_tab = "js-tab"}
+            {if $is_anchor_tabs}{$js_class_tab = "js-move-to-tab"}{/if}
+            <ul class="tabs js-tabs">
+                {foreach $list_product_main_content as $content_alias}
+                    {if $content_alias == 'description' && $product.description}
+                        <li class="{$js_class_tab} tabs_el" data-tab-content="product-description">{$overview_title}</li>
+                    {else if $content_alias == 'features' && $product.features}
+                        <li class="{$js_class_tab} tabs_el" data-tab-content="product-options">{$options_title}</li>
+                    {else if $content_alias == 'reviews'}
+                        <li class="{$js_class_tab} tabs_el" data-tab-content="product-reviews">{$reviews_title}<span class="js-reviews-count product-reviews__count bs-color">{$reviews_total_count}</span></li>
+                    {else if $content_alias == 'comments_vk' && $theme_settings.product_info_comments_vk_app_id}
+                        <li class="{$js_class_tab} tabs_el" data-tab-content="comments-vk">
+                            {$vk_title} <i class="fab fa-vk tabs_el-vk" aria-hidden="true"></i>
+                        </li>
+                    {else if $content_alias == 'comments_fb' && $theme_settings.product_info_comments_fb_app_id}
+                        <li class="{$js_class_tab} tabs_el" data-tab-content="comments-fb">
+                            {$fb_title} <i class="fab fa-facebook-f tabs_el-fb"></i>
+                        </li>
+                    {else if $content_alias == 'add_1' && $theme_settings.product_add_1_title && $theme_settings.product_add_1_block_name}
+                        <li class="{$js_class_tab} tabs_el" data-tab-content="product-page-addinfo1">{$theme_settings.product_add_1_title|escape}</li>
+                    {else if $content_alias == 'add_2' && $theme_settings.product_add_2_title && $theme_settings.product_add_2_block_name}
+                        <li class="{$js_class_tab} tabs_el" data-tab-content="product-page-addinfo2">{$theme_settings.product_add_2_title|escape}</li>
+                    {else if $content_alias == 'add_3' && $theme_settings.product_add_3_title && $theme_settings.product_add_3_block_name}
+                        <li class="{$js_class_tab} tabs_el" data-tab-content="product-page-addinfo3">{$theme_settings.product_add_3_title|escape}</li>
+                    {else if $content_alias == 'pages' && count($product.pages) > 0}
+                        {foreach $product.pages as $page}
+                            <li class="{$js_class_tab} tabs_el" data-tab-content="product-page-{$page.id}">{$page.name|escape}</li>
+                        {/foreach}
+                    {/if}
+                {/foreach}
+            </ul>
+        {/if}
+        <div class="product-card__sections{if $is_normal_tabs} tab-contents{/if}{if $is_accordion_tabs} accordion-tab-contents{/if}">
+            {foreach $list_product_main_content as $content_alias}
+                {if $content_alias == 'description' && $product.description}
+                    {if $is_accordion_tabs}
+                        <div class="js-accordion-tab accordion-tabs-el" data-tab-content="product-description">
+                            <span class="accordion-tabs-caret">
+                                <span class="accordion-tabs-caret__icon bs-color"></span>
+                            </span>
+                            <div class="accordion-tabs-title">{$overview_title}</div>
+                        </div>
+                    {/if}
+                    <div id="product-description" class="{$product_section_class}">
+                        {if !$is_normal_tabs && !$is_accordion_tabs}
+                            <div class="product-card_head"><h2>{$overview_title}</h2></div>
+                        {/if}
+                        {include file="product.description.html"}
+                    </div>
+                {else if $content_alias == 'features' && $product.features}
+                    {if $is_accordion_tabs}
+                        <div class="js-accordion-tab accordion-tabs-el" data-tab-content="product-options">
+                            <span class="accordion-tabs-caret">
+                                <span class="accordion-tabs-caret__icon bs-color"></span>
+                            </span>
+                            <div class="accordion-tabs-title">{$options_title}</div>
+                        </div>
+                    {/if}
+                    <div id="product-options" class="{$product_section_class}">
+                        {if !$is_normal_tabs && !$is_accordion_tabs}
+                            <div class="product-card_head"><h2>{$options_title}</h2></div>
+                        {/if}
+                       {include file="product.features.html"}
+                    </div>
+                {else if $content_alias == 'reviews'}
+                    {if $is_accordion_tabs}
+                        <div class="js-accordion-tab accordion-tabs-el" data-tab-content="product-reviews">
+                            <span class="accordion-tabs-caret">
+                                <span class="accordion-tabs-caret__icon bs-color"></span>
+                            </span>
+                            <div class="accordion-tabs-title">{$reviews_title} <span class="js-reviews-count product-reviews__count bs-color">{$reviews_total_count}</span></div>
+                        </div>
+                    {/if}
+                    <div id="product-reviews" class="{$product_section_class}">
+                        {include file="product.reviews.html"}
+                    </div>
+                {else if $content_alias == 'comments_vk' && $theme_settings.product_info_comments_vk_app_id}
+                    {if $is_accordion_tabs}
+                        <div class="js-accordion-tab accordion-tabs-el" data-tab-content="comments-vk">
+                            <span class="accordion-tabs-caret">
+                                <span class="accordion-tabs-caret__icon bs-color"></span>
+                            </span>
+                            <div class="accordion-tabs-title">
+                                {if $theme_settings.product_info_comments_vk_title}{$theme_settings.product_info_comments_vk_title}{else}[`Discussions`]{/if}
+                                <i class="fab fa-vk tabs_el-vk" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    {/if}
+                    <div id="comments-vk" class="{$product_section_class}">
+                        {if !$is_normal_tabs && !$is_accordion_tabs}
+                            <div class="product-card_head"><h2>{if $theme_settings.product_info_comments_vk_title}{$theme_settings.product_info_comments_vk_title}{else}[`Discussions`]{/if}</h2></div>
+                        {/if}
+                        {include file="`$wa_active_theme_path`/product.comments.vk.html"}
+                    </div>
+                {else if $content_alias == 'comments_fb' && $theme_settings.product_info_comments_fb_app_id}
+                    {if $is_accordion_tabs}
+                        <div class="js-accordion-tab accordion-tabs-el" data-tab-content="comments-fb">
+                            <span class="accordion-tabs-caret">
+                                <span class="accordion-tabs-caret__icon bs-color"></span>
+                            </span>
+                            <div class="accordion-tabs-title">
+                                {if $theme_settings.product_info_comments_fb_title}{$theme_settings.product_info_comments_fb_title}{else}[`Discussions`]{/if}</span>
+                                <i class="fab fa-facebook-f tabs_el-fb"></i>
+                            </div>
+                        </div>
+                    {/if}
+                    <div id="comments-fb" class="{$product_section_class}">
+                        {if !$is_normal_tabs && !$is_accordion_tabs}
+                            <div class="product-card_head"><h2>{if $theme_settings.product_info_comments_fb_title}{$theme_settings.product_info_comments_fb_title}{else}[`Discussions`]{/if}</h2></div>
+                        {/if}
+                        {include file="`$wa_active_theme_path`/product.comments.fb.html"}
+                    </div>
+                {else if $content_alias == 'add_1' && $theme_settings.product_add_1_title && $theme_settings.product_add_1_block_name}
+                    {if $is_accordion_tabs}
+                        <div class="js-accordion-tab accordion-tabs-el" data-tab-content="product-page-addinfo1">
+                            <span class="accordion-tabs-caret">
+                                <span class="accordion-tabs-caret__icon bs-color"></span>
+                            </span>
+                            <div class="accordion-tabs-title">
+                                {$theme_settings.product_add_1_title}
+                            </div>
+                        </div>
+                    {/if}
+                    <div id="product-page-addinfo1" class="{$product_section_class}">
+                        {if !$is_normal_tabs && !$is_accordion_tabs}
+                            <div class="product-card_head">
+                                <h2>{$theme_settings.product_add_1_title}</h2>
+                            </div>
+                        {/if}
+                        {$wa->block("`$theme_settings.product_add_1_block_name`")}
+                    </div>
+                {else if $content_alias == 'add_2' && $theme_settings.product_add_2_title && $theme_settings.product_add_2_block_name}
+                    {if $is_accordion_tabs}
+                        <div class="js-accordion-tab accordion-tabs-el" data-tab-content="product-page-addinfo2">
+                            <span class="accordion-tabs-caret">
+                                <span class="accordion-tabs-caret__icon bs-color"></span>
+                            </span>
+                            <div class="accordion-tabs-title">
+                                {$theme_settings.product_add_2_title}
+                            </div>
+                        </div>
+                    {/if}
+                    <div id="product-page-addinfo2" class="{$product_section_class}">
+                        {if !$is_normal_tabs && !$is_accordion_tabs}
+                            <div class="product-card_head">
+                                <h2>{$theme_settings.product_add_2_title}</h2>
+                            </div>
+                        {/if}
+                        {$wa->block("`$theme_settings.product_add_2_block_name`")}
+                    </div>
+                {else if $content_alias == 'add_3' && $theme_settings.product_add_3_title && $theme_settings.product_add_3_block_name}
+                    {if $is_accordion_tabs}
+                        <div class="js-accordion-tab accordion-tabs-el" data-tab-content="product-page-addinfo3">
+                            <span class="accordion-tabs-caret">
+                                <span class="accordion-tabs-caret__icon bs-color"></span>
+                            </span>
+                            <div class="accordion-tabs-title">
+                                {$theme_settings.product_add_3_title}
+                            </div>
+                        </div>
+                    {/if}
+                    <div id="product-page-addinfo3" class="{$product_section_class}">
+                        {if !$is_normal_tabs && !$is_accordion_tabs}
+                            <div class="product-card_head">
+                                <h2>{$theme_settings.product_add_3_title}</h2>
+                            </div>
+                        {/if}
+                        {$wa->block("`$theme_settings.product_add_3_block_name`")}
+                    </div>
+                {else if $content_alias == 'pages' && count($product.pages) > 0}
+                    {foreach $product.pages as $page}
+                        {if $is_accordion_tabs}
+                            <div class="js-accordion-tab accordion-tabs-el" data-tab-content="product-page-{$page.id}">
+                                <span class="accordion-tabs-caret">
+                                    <span class="accordion-tabs-caret__icon bs-color"></span>
+                                </span>
+                                <div class="accordion-tabs-title">
+                                    {$page.name|escape}
+                                </div>
+                            </div>
+                        {/if}
+                        <div id="product-page-{$page.id}" class="{$product_section_class}">
+                            {if !$is_normal_tabs && !$is_accordion_tabs}
+                                <div class="product-card_head">
+                                    <h2>{$page.name|escape}</h2>
+                                </div>
+                            {/if}
+                            {eval var=$page.content}
+                        </div>
+                    {/foreach}
+                {/if}
+            {/foreach}
+        </div>
+    {/if}
+
+    <!-- plugin hook: 'frontend_product.block' -->
+    {* @event frontend_product.%plugin_id%.block *}
+    {foreach $frontend_product as $_}{$_.block}{/foreach}
+
+
+    {$is_product_categories = (!empty($theme_settings.product_card_categories) && count($product.categories) > 1)}
+    {$is_product_tags = (!empty($theme_settings.product_card_tags) && $product.tags)}
+    {$is_product_share = !empty($theme_settings.product_share_code)}
+
+    {if $is_product_categories || $is_product_tags || $is_product_share}
+        <div class="product-card__content-bottom">
+            {if $is_product_share}
+                <div class="product-card__social">{$theme_settings.product_share_code}</div>
+            {/if}
+
+            {if $is_product_categories}
+                <p class="product-card__categories">
+                     <span class="product-card__categories-title">[`Categories`]:</span>
+                    {foreach $product.categories as $c}
+                        {if $c.status}
+                            <a href="{$wa->getUrl('/frontend/category', ['category_url' => $c.full_url])}">{$c.name|escape}</a>
+                        {/if}
+                    {/foreach}
+                </p>
+            {/if}
+
+            {if $is_product_tags}
+                <p class="product-card__tags" id="product-tags">
+                    <span class="product-card__tags-title">[`Tags`]:</span>
+
+                    {if class_exists('shopTageditorPlugin')}
+                         {foreach shopTageditorPlugin::tags($product.tags) as $t}
+                            <a href="{$wa->getUrl('/frontend/tag', ['tag' => $t.uri_name])}">{$t.name|escape}</a>
+                         {/foreach}
+                    {else}
+                       {foreach $product.tags as $t}
+                            <a href="{$wa->getUrl('/frontend/tag', ['tag' => urlencode($t)])}">{$t}</a>
+                        {/foreach}
+                    {/if}
+                </p>
+            {/if}
+        </div>
+    {/if}
+</div>
+{/strip}

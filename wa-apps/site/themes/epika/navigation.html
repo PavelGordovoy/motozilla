@@ -1,0 +1,148 @@
+{if isset($category) && isset($category.id)}
+{$parentCat = $wa->shop->category($category.id)}
+{while $parentCat.parent_id != 0}
+{$parentCat = $wa->shop->category($parentCat.parent_id)}
+{/while}
+{/if}
+{$pages = $wa->shop->pages()}
+{$categories = $wa->shop->categories(0, null, true)}
+<div class="cd-dropdown-wrapper {if isset($theme_settings.menu_products_catalog) && $theme_settings.menu_products_catalog == "wide_horizontal_menu"}wide_horizontal_menu{else}compact_view{/if}">
+<a class="cd-dropdown-trigger" href="#0">[`Catalogue`]</a>
+<nav class="cd-dropdown">
+    <h2>[`Catalogue`]</h2>
+    <a href="#0" class="cd-close">Close</a>
+    <ul class="cd-dropdown-content">
+
+        {foreach $categories as $c}
+        {$menuParams = $wa->shop->category($c.id)}
+        <li {if $c.childs}class="has-children {if isset($parentCat) && isset($parentCat.id) && $parentCat.id == $c.id}selected{/if}" {elseif isset($parentCat) && isset($parentCat.id) && $parentCat.id == $c.id} class="selected" {/if}>
+        <a href="{$c.url}">{if !empty($menuParams.params.menuLogo)}<img class="menulogo" src="{$menuParams.params.menuLogo}">{/if} {$c.name} {if $c.childs} <span class="more-cat"></span>{/if}</a>
+        {if $c.childs}
+        <ul class="level-1 {if !empty($menuParams.params.menu_dropdown_type)}{$menuParams.params.menu_dropdown_type}{else}default{/if} is-hidden">
+            <li class="go-back"><a href="#0"><span>Назад</span></a></li>
+            <li class="see-all"><a href="{$c.url}">{if !empty($menuParams.params.menulinkall)}{$menuParams.params.menulinkall}{else}Смотреть все{/if}</a></li>
+
+            {$c_childs = $c.childs}
+            {if !$wa->isMobile() && ((isset($theme_settings.menu_products_catalog) && $theme_settings.menu_products_catalog != "wide_horizontal_menu") || !isset($theme_settings.menu_products_catalog)) }
+            {if isset($menuParams.params.menu_dropdown_type) && $menuParams.params.menu_dropdown_type == "cd-secondary-dropdown"}
+            {$c_childs = $c.childs|@array_slice:0:4}
+            {/if}
+            {if isset($menuParams.params.menu_dropdown_type) && $menuParams.params.menu_dropdown_type == "cd-dropdown-gallery"}
+            {$c_childs = $c.childs|@array_slice:0:6}
+            {/if}
+            {if isset($menuParams.params.menu_dropdown_type) && $menuParams.params.menu_dropdown_type == "cd-dropdown-icon"}
+            {$c_childs = $c.childs|@array_slice:0:10}
+            {/if}
+            {/if}
+
+            {foreach $c_childs as $a}
+            {$submenuParams = $wa->shop->category($a.id)}
+            <li{if $a.childs} class="has-children" {/if}>
+            <a class="cd-dropdown-item" href="{$a.url}" {if !empty($menuParams.params.menu_dropdown_type) and $menuParams.params.menu_dropdown_type eq 'cd-dropdown-icons'}style="background-image:url({if !empty($submenuParams.params.icon_menu_ico)}{$submenuParams.params.icon_menu_ico}{/if})"{/if}>
+            {if !empty($menuParams.params.menu_dropdown_type) and $menuParams.params.menu_dropdown_type eq 'cd-dropdown-gallery'}
+            <img src="{if !empty($submenuParams.params.gall_menu_img)}{$submenuParams.params.gall_menu_img}{/if}" alt="">
+            {/if}
+            {$a.name} {if $a.childs} <span class="more-cat"></span>{/if}
+            {if !empty($menuParams.params.menu_dropdown_type) and $menuParams.params.menu_dropdown_type eq 'cd-dropdown-icons'}
+            <p>{if !empty($submenuParams.params.icon_menu_description)}{$submenuParams.params.icon_menu_description}{/if}</p>
+            {/if}
+            </a>
+            <ul class="level-2 is-hidden">
+                {if isset($menuParams.params.menu_dropdown_type) && $menuParams.params.menu_dropdown_type == "cd-secondary-dropdown"}
+                <li class="go-back"><a href="#0"><span>{$a.name}</span></a></li>
+                {if $a.childs}<li class="see-all"><a href="{$a.url}">Смотреть все...</a></li>{/if}
+                {/if}
+                {if $a.childs && (!isset($menuParams.params.menu_dropdown_type) || (isset($menuParams.params.menu_dropdown_type) && $menuParams.params.menu_dropdown_type != "cd-dropdown-gallery" && $menuParams.params.menu_dropdown_type != "cd-dropdown-icons"))}
+                {$ac_childs = $a.childs}
+                {if !$wa->isMobile() && ((isset($theme_settings.menu_products_catalog) && $theme_settings.menu_products_catalog != "wide_horizontal_menu") || !isset($theme_settings.menu_products_catalog)) }
+                {if isset($menuParams.params.menu_dropdown_type) && $menuParams.params.menu_dropdown_type == "cd-secondary-dropdown"}
+                {$ac_childs = $a.childs|@array_slice:0:7}
+                {/if}
+                {/if}
+                {foreach $ac_childs as $d}
+                <li{if $d.childs} class="has-children"{/if}>
+                <a href="{$d.url}">{$d.name} {if $d.childs} <span class="more-cat"></span>{/if}</a>
+                {if $d.childs}
+                <ul  class="is-hidden level-3">
+                    <li class="go-back"><a href="#0"><span>{$d.name}</span></a></li>
+
+                    {$dc_childs = $d.childs}
+                    {if !$wa->isMobile() && ((isset($theme_settings.menu_products_catalog) && $theme_settings.menu_products_catalog != "wide_horizontal_menu") || !isset($theme_settings.menu_products_catalog)) }
+                    {if isset($menuParams.params.menu_dropdown_type) && $menuParams.params.menu_dropdown_type == "cd-secondary-dropdown"}
+                    {$dc_childs = $d.childs|@array_slice:0:6}
+                    {/if}
+                    {/if}
+
+                    {foreach $dc_childs as $cc}
+                    <li><a href="{$cc.url}">{$cc.name}</a></li>
+                    {/foreach}
+                </ul>
+                {/if}
+                </li>
+                {/foreach}
+                {/if}
+            </ul>
+            {/foreach}
+        </ul>
+        {/if}
+        </li>
+        {/foreach}
+
+
+
+        {$_mlinks = []}
+        {if !empty($theme_settings.main_menu_links) && $theme_settings.main_menu_links == 'site-pages'}
+        {if $wa->site}{$_mlinks = $wa->site->pages()}{/if}
+        {elseif !empty($theme_settings.main_menu_links) && $theme_settings.main_menu_links == 'shop-pages'}
+        {if $wa->shop}{$_mlinks = $wa->shop->pages()}{/if}
+        {elseif !empty($theme_settings.main_menu_links) && $theme_settings.main_menu_links == 'blog-pages'}
+        {if $wa->blog}{$_mlinks = $wa->blog->pages()}{/if}
+        {elseif !empty($theme_settings.main_menu_links) && $theme_settings.main_menu_links == 'photos-pages'}
+        {if $wa->photos}{$_mlinks = $wa->photos->pages()}{/if}
+        {elseif !empty($theme_settings.main_menu_links) && $theme_settings.main_menu_links == 'hub-pages'}
+        {if $wa->hub}{$_mlinks = $wa->hub->pages()}{/if}
+        {elseif !empty($theme_settings.main_menu_links) && $theme_settings.main_menu_links != 'none'}
+        {$_mlinks = $wa->apps()}
+        {/if}
+
+        {foreach $_mlinks as $a}
+        {if !($a.url == $wa_url && $a.name == $wa->accountName())}
+        {$subpages = $wa->shop->pages($a.id)}
+        <li class="page{if $subpages} has-children {/if}{if $a.url==$wa_app_url && !$wa->globals('isMyAccount') || strlen($a.url)>1 && $wa->currentUrl()|strstr:$a.url} selected{/if}"><a href="{$a.url}">{if !empty($theme_settings.main_menu_links) && $theme_settings.main_menu_links == "wa-apps" && isset($a.app)}<i class="{if $a.app == 'site'}icon-siteicon{elseif $a.app == 'blog'}icon-blogicon{elseif $a.app == 'photos'}icon-camera{elseif $a.app == 'shop'}icon-shopicon{elseif $a.app == 'hub'}icon-hubicon{/if}"></i>{/if}{$a.name}{if $subpages} <span class="more-cat"></span>{/if}</a>
+            {if $subpages}
+            <ul class="level-1 is-hidden{if !empty($menuParams.params.menu_dropdown_type)} {$menuParams.params.menu_dropdown_type}{else} default{/if}">
+                <li class="go-back"><a href="#0"><span>Назад</span></a></li>
+                {foreach $subpages as $sp}
+                <li><a class="cd-dropdown-item" href="{$sp.url}">{$sp.name}</a></li>
+                {/foreach}
+            </ul>
+            {/if}
+        </li>
+        {/if}
+        {/foreach}
+
+    </ul>
+</nav>
+</div>
+
+{if isset($theme_settings.menu_products_catalog) && $theme_settings.menu_products_catalog != "wide_horizontal_menu"}
+
+<ul class="pages">
+    {foreach $_mlinks as $a}
+    {if !($a.url == $wa_url && $a.name == $wa->accountName())}
+    {$subpages = $wa->shop->pages($a.id)}
+    <li class="item{if $subpages} has-children {/if}{if $a.url==$wa_app_url && !$wa->globals('isMyAccount') || strlen($a.url)>1 && $wa->currentUrl()|strstr:$a.url} selected{/if}"><a href="{$a.url}">{if !empty($theme_settings.main_menu_links) && $theme_settings.main_menu_links == "wa-apps" && isset($a.app)}<i class="{if $a.app == 'site'}icon-siteicon{elseif $a.app == 'blog'}icon-blogicon{elseif $a.app == 'photos'}icon-camera{elseif $a.app == 'shop'}icon-shopicon{elseif $a.app == 'hub'}icon-hubicon{/if}"></i>{/if}{$a.name}{if $subpages} <span class="more-cat"></span>{/if}</a>
+        {if $subpages}
+        <ul class="sub-links level-1 is-hidden{if !empty($menuParams.params.menu_dropdown_type)} {$menuParams.params.menu_dropdown_type}{else} default{/if}" style="display: none">
+            <li class="go-back"><a href="#0"><span>Назад</span></a></li>
+            {foreach $subpages as $sp}
+            <li><a class="cd-dropdown-item" href="{$sp.url}">{$sp.name}</a></li>
+            {/foreach}
+        </ul>
+        {/if}
+    </li>
+    {/if}
+    {/foreach}
+</ul>
+
+{/if}

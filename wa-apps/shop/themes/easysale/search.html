@@ -1,0 +1,77 @@
+{strip}
+
+<div class="s-search-page">
+
+    <h1 class="s-search-header">
+        {if $wa->currentUrl()|strpos:"?addon=favorite"}
+            [`Favorited product list`]
+            {$wa->title("[`Favorited product list`]")}
+            {$favorited = waRequest::cookie('shop_favorite', array(), waRequest::TYPE_ARRAY_INT)}
+            {$products = null}
+            {$sorting = null}
+            {if $favorited}
+                {foreach $favorited as $p}
+                    {append var='products' value=$wa->shop->product($p)}
+                {/foreach}
+            {/if}
+        {elseif $wa->currentUrl()|strpos:"?addon=lastviews"}
+            [`Viewied products`]
+            {$wa->title("[`Viewied products`]")}
+            {$lastview = waRequest::cookie('shop_lastviews', array(), waRequest::TYPE_ARRAY_INT)}
+            {$products = null}
+            {$sorting = null}
+            {if $lastview}
+                {foreach $lastview as $p}
+                    {append var='products' value=$wa->shop->product($p)}
+                {/foreach}
+            {/if}
+        {else}
+            {$title}
+        {/if}
+    </h1>
+
+    {* @event frontend_search.%plugin_id% *}
+    {foreach $frontend_search as $_}{$_}{/foreach}
+
+    
+    
+    {if !$products}
+        <p>[`No products were found.`]</p>
+    {elseif $wa->currentUrl()|strpos:"?addon=favorite" || $wa->currentUrl()|strpos:"?addon=lastviews"}
+        {include file="./list-thumbs-search.html" inline}
+    {else}
+        {include file="./products.html" inline}
+    {/if}
+    
+    {if $wa->currentUrl()|strpos:"?addon=favorite" && $favorited|count > 0}
+        <div class="clearfix"></div>
+        <div class="s-buttons-wrapper text-center">
+            <button id="favorite-clear" class="btn btn-default">[`Clear favorited product list`]</button>
+        </div>
+        {literal}
+        <script>
+            ( function($) {
+                    
+                $("#favorite-clear").on("click", function () {
+                    clearFavorite();
+                    $(this).remove();
+                });
+                
+                function clearFavorite() {
+                    var $wrapper = $("#s-favorite-counter"),
+                        empty_class = "is-empty",
+                        default_class = "default-bg";
+                        
+                    //$.removeCookie('shop_favorite', {path: '/'});
+                    $.cookie('shop_favorite', null, {path: '/'});
+                    $('.s-products-list').remove();
+                    $wrapper.addClass(empty_class);
+                    $wrapper.find(".s-favorite-count").removeClass(default_class).text('0');
+                }
+            })(jQuery);
+        </script>
+        {/literal}
+    {/if}
+</div>
+
+{/strip}

@@ -1,0 +1,260 @@
+{strip}
+
+{if !empty($products)}
+
+    {$add2cart_label = '[`Buy`]'}
+    {if $wa->shop->cart->total() > 0}
+        {$add2cart_label = '[`Add to cart`]'}
+    {/if}
+
+    {if !empty($theme_settings.list_features)}
+        {$features = $wa->shop->features($products)}
+    {/if}
+
+    {$_types = ["thumbs" => "thumbs-view", "table" => "table-view", "list" => "list-view"]}
+    {$_type = $_types["thumbs"]}
+    {if !empty($type)}
+        {$_type = $_types[$type]}
+    {else}
+        {$_settings_type = $theme_settings.related_view_type}
+        {if !empty($_settings_type) && $_settings_type == "table"}
+            {$_type = $_types["table"]}
+        {elseif !empty($_settings_type) && $_settings_type == "list"}
+            {$_type = $_types["list"]}
+        {/if}
+    {/if}
+
+    <section class="s-products-wrapper" id="s-products-wrapper">
+
+        {if !empty($sorting) && (!$wa->currentUrl()|strpos:"?addon=favorite" || !$wa->currentUrl()|strpos:"?addon=lastviews")}
+            {include file="./products.sorting.html" inline}
+        {/if}
+
+        <ul class="s-products-list s-not-slider {$_type}{if $theme_settings.product_resize == 'css'} s-product-list-resize-css{/if}">
+            {foreach $products as $product}
+                {$available = $wa->shop->settings('ignore_stock_count') || $product.count === null || $product.count > 0}
+                {$badge_html = $wa->shop->badgeHtml($product.badge)}
+
+                {$_product_image_src = $wa->shop->productImgUrl($product, "0x200")}
+                {if !$_product_image_src}
+                    {$_product_image_src = "`$wa_theme_url`img/dummy200.png"}
+                {/if}
+
+                <li class="s-product-wrapper{if empty($show_sidebar)} col-xl-4 col-md-6 col-sm-6{else} col-xl-3 col-lg-4 col-md-6 col-sm-6{/if}" data-product-id="{$product.id}" itemscope itemtype ="http://schema.org/Product">
+
+                    <div class="product-item">
+                        <div class="s-image-wrapper">
+                            <a href="{$product.frontend_url}" title="{$product.name}">
+                                <img src="{$_product_image_src}" alt="{$product.name}" itemprop="image">
+                            </a>
+                            {if !empty($theme_settings.product_list_preview)}<span class="s-preview-button" data-url="{$product.frontend_url}{if strpos($product.frontend_url, '?')}&{else}?{/if}cart=1"><i class="icon-size-fullscreen"></i></span>{/if}
+                        </div>
+
+                        <div class="s-info-wrapper{if !empty($theme_settings.product_list_summary)} s-info-wrapper-with-desc{/if}">
+                            <h5 class="s-product-header" itemprop="name">
+                                <a href="{$product.frontend_url}" title="{$product.name}">{$product.name}</a>
+                            </h5>
+
+                            {if $product.summary && !empty($theme_settings.product_list_summary)}
+                                <div class="s-product-description" itemprop="description">{strip_tags($product.summary)|truncate:100}</div>
+                            {/if}
+                        </div>
+
+                        <div class="s-offers-wrapper" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                            {if $available}
+                                <form class="add-to-cart" {if $product.sku_count > 1}data-url="{$product.frontend_url}{if strpos($product.frontend_url, '?')}&{else}?{/if}cart=1"{/if} method="post" action="{$wa->getUrl('/frontendCart/add')}">
+                            {/if}
+
+                                {if $available}
+
+                                    <div class="s-pricing-height{if $product.compare_price == 0} s-pricing-height-auto{/if}">
+                                        <div class="s-pricing-wrapper">
+                                            {function name=in_stock n=0 low=5 critical=2}
+                                                <div class="s-pricing-stock">
+                                                    {if $n > $low or $n === null}
+                                                        <span class="stock-high"><i class="icon16 stock-green"></i>[`In stock`]</span>
+                                                    {elseif $n > $critical}
+                                                        <span class="stock-low"><i class="icon16 stock-yellow"></i>{* _w("Only %d left in stock", "Only %d left in stock", $n) *}{_w("Only a few items left")}</span>
+                                                    {elseif $n > 0}
+                                                        <span class="stock-critical"><i class="icon16 stock-red"></i>{_w("Only %d left in stock", "Only %d left in stock", $n)}</span>
+                                                    {else}
+                                                        <span class="stock-none"><i class="icon16 stock-transparent"></i>{if $wa->shop->settings('ignore_stock_count')}[`Pre-order only`]{else}[`Out of stock`]{/if}</span>
+                                                    {/if}
+                                                </div>
+                                            {/function}
+                                            {in_stock n=$product.count}
+
+                                            <span class="s-price">{shop_currency_html($product.price)}</span>
+                                            {if $product.compare_price > 0}
+                                                <span class="s-compare"> {shop_currency_html($product.compare_price)}</span>
+                                            {/if}
+                                        </div>
+
+                                        {if $product.compare_price > 0}
+                                            <div class="s-discount-wrapper">
+                                                <span class="s-discount">- {(($product.compare_price - $product.price) / ($product.compare_price / 100))|wa_format_number:0}%</span>
+                                                <span class="s-saving">[`Savings`] {shop_currency_html($product.compare_price - $product.price)}</span>
+                                            </div>
+                                        {/if}
+                                    </div>
+
+                                    <input type="hidden" name="product_id" value="{$product.id}">
+                                    <link itemprop="availability" href="http://schema.org/InStock" />
+                                    <meta itemprop="price" content="{$product.price}">
+                                    <meta itemprop="priceCurrency" content="{$wa->shop->primaryCurrency()}">
+                                {else}
+
+                                    <div class="s-pricing-height">
+                                        <div class="s-pricing-wrapper">
+
+                                            <div class="s-pricing-stock s-out-of-stock">
+                                                <i class="fa fa-times red"></i><span class="s-stock-text">{if $wa->shop->settings('ignore_stock_count')}[`Pre-order only`]{else}[`Out of stock`]{/if}</span>
+                                            </div>
+
+                                            <span class="s-price">{shop_currency_html($product.price)}</span>
+                                            {if $product.compare_price > 0}
+                                                <span class="s-compare"> {shop_currency_html($product.compare_price)}</span>
+                                            {/if}
+
+                                            {if $product.compare_price > 0}
+                                                <div class="s-discount-wrapper">
+                                                    <span class="s-discount">- {(($product.compare_price - $product.price) / ($product.compare_price / 100))|wa_format_number:0}%</span>
+                                                    <span class="s-saving">[`Savings`] {shop_currency_html($product.compare_price - $product.price)}</span>
+                                                </div>
+                                            {/if}
+
+                                        </div>
+                                    </div>
+
+                                    <meta itemprop="price" content="{$product.price}">
+                                    <meta itemprop="priceCurrency" content="{$wa->shop->primaryCurrency()}">
+                                    <link itemprop="availability" href="http://schema.org/OutOfStock" />
+                                {/if}
+
+                                {if !empty($theme_settings.product_list_rating)}
+                                <div class="s-rating-wrapper">
+                                    {if $product.rating > 0}
+                                        <span class="s-rating-block nowrap">{$wa->shop->ratingHtml($product.rating, 16)}</span>
+                                        <span class="s-rating-hint">{$product.rating_count} [`Review's`]</span>
+                                    {else}
+                                        <span class="s-rating-block nowrap">
+                                            <i class="icon16 star-empty"></i>
+                                            <i class="icon16 star-empty"></i>
+                                            <i class="icon16 star-empty"></i>
+                                            <i class="icon16 star-empty"></i>
+                                            <i class="icon16 star-empty"></i>
+                                        </span>
+                                        <span class="s-rating-hint">[`No review's`]</span>
+                                    {/if}
+                                </div>
+                                {/if}
+
+                                <div class="row">
+                                    {if !($product.sku_count > 1) && !empty($theme_settings.product_list_q)}
+                                        <div class="col-md-6 col-xs-6 s-quantity-wrapper">
+                                            <div class="input-group">
+                                                <span class="input-group-btn">
+                                                    <input class="btn btn-sm minus-button decrease-volume" type="button" value="&minus;">
+                                                </span>
+                                                <input class="form-control btn-sm product-quantity-field" type="text" name="quantity" value="1" data-max-quantity="{$product.count}">
+                                                <span class="input-group-btn">
+                                                    <input class="btn btn-sm plus-button increase-volume" type="button" value="+">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    {/if}
+                                    {if empty($hide_buttons)}
+                                        <div class="col-md-6 col-xs-6 s-buttons-wrapper">
+                                            <div class="{if !($product.sku_count > 1) && !empty($theme_settings.product_list_q)} text-right{/if}">
+                                                {if $available}
+                                                    <input class="s-button s-add-button btn btn-default btn-sm" type="submit" data-added-text="[`added`]" value="{$add2cart_label}">
+                                                {/if}
+                                            </div>
+                                        </div>
+                                    {/if}
+                                </div>
+
+                            {if $available}
+                                </form>
+                            {/if}
+                        </div>
+
+                        {if !empty($badge_html)}
+                            <div class="s-badge-wrapper">{$badge_html}</div>
+                        {/if}
+
+                        {if empty($disable_compare)}
+                            <div class="s-buttons-compare-favorite">
+                                <a class="s-button s-compare-button" href="javascript:void(0);" data-product="{$product.id}" title="[`Compare`]">
+                                    <i class="icon-chart fa-lg compare{if $wa->shop->inComparison($product.id)} active{/if}"></i>
+                                </a>
+                                <div class="clearfix"></div>
+                                {$favorited = waRequest::cookie('shop_favorite', array(), waRequest::TYPE_ARRAY_INT)}
+                                <a class="s-button s-favorite-button" href="javascript:void(0);" data-product="{$product.id}" title="[`Favorite`]">
+                                    <i class="icon-star fa-lg favorite{if in_array($product.id, $favorited)} active{/if}"></i>
+                                </a>
+                            </div>
+                        {/if}
+
+                        <div class="s-product-added">
+                            <a href="{$wa->getUrl('shop/frontend/cart')}" class="btn btn-default btn-sm">[`Go to cart`]</a>
+                            <a href="{$product.frontend_url}" class="btn btn-default btn-sm">[`Go to product page`]</a>
+                        </div>
+
+                    </div>
+                </li>
+            {/foreach}
+        </ul>
+
+        <script>
+            ( function($) {
+
+                var is_products_exist = (typeof Products === "function");
+
+                function initProducts() {
+
+                    var $products = $("#s-products-wrapper").removeAttr("id"),
+                        $products_resize = '{$theme_settings.product_resize}';
+
+                    new Products({
+                        $wrapper: $products,
+                        product_resize: $products_resize,
+                        compare: {
+                            url: "{$wa->getUrl("/frontend/compare")}",
+                            title: "[`Compare selected products`]"
+                        }
+                    });
+
+                    if ($products_resize == 'jquery') {
+
+                        var $elements = ['.s-image-wrapper', '.s-info-wrapper', '.s-pricing-height', 'li.s-product-wrapper'];
+
+                        $.fn.matchHeight._maintainScroll = true;
+
+                        $.each($elements, function(index,value) {
+
+                            var element = $products.find(value.toString());
+
+                            element.matchHeight();
+
+                        });
+
+                    }
+
+                }
+
+                if (!is_products_exist) {
+                    $.getScript("{$wa_theme_url}js/products.js?v{$wa_theme_version}", function() {
+                        initProducts();
+                    });
+                } else {
+                    initProducts();
+                }
+            })(jQuery);
+        </script>
+
+    </section>
+
+{/if}
+
+{/strip}

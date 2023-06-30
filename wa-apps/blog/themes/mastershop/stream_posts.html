@@ -1,0 +1,104 @@
+{strip}
+{* post stream (list): default view mode *}
+{if class_exists('blogSkimagePlugin')}
+    {$sk_images = blogSkimageHelper::getImages()}
+{/if}
+{$is_schema_org = $theme_settings.schema_org_active}
+
+{foreach $posts as $post}
+    <section class="post post--list" id="post-{$post.id}"{if $is_schema_org} {if $wa->param('blog_url')}itemprop="blogPosts"{/if} itemscope itemtype="http://schema.org/BlogPosting"{/if}>
+        <div class="post__head">
+            {if $is_schema_org}
+                <meta itemprop="dateModified" content="{$post.datetime|date_format:'Y-m-d'}" />
+            {/if}
+            <span class="post__date"{if $is_schema_org} itemprop="datePublished" content="{$post.datetime|date_format:'Y-m-d'}"{/if}>
+                {$post.datetime|wa_datetime:"humandate"}
+            </span>
+            <h3 class="post__title">
+                <a href="{$post.link}" {if $is_schema_org} itemprop="url"{/if}>
+                    <span {if $is_schema_org}itemprop="headline"{/if}>{$post.title}</span>
+                </a>
+                {* @event prepare_posts_frontend.%plugin_id%.post_title *}
+                {if !empty($post.plugins.post_title)}
+                    {foreach $post.plugins.post_title as $plugin => $output}{$output}{/foreach}
+                {/if}
+            </h3>
+        </div>
+        {* @event prepare_posts_frontend.%plugin_id%.before *}
+        {if !empty($post.plugins.before) && !$wa->isMobile()}
+            <div class="text_before">
+                {foreach $post.plugins.before as $plugin => $output}{$output}{/foreach}
+            </div>
+        {/if}
+        <div class="post__text">
+            {if isset($sk_images[$post.id]['preview']) && !empty($sk_images[$post.id]['preview'])}
+                <a href="{$post.link}" class="post__img">
+                    <img src="{$sk_images[$post.id]['preview']}" alt="{$post.title}"{if $is_schema_org} itemprop="image"{/if}>
+                </a>
+            {/if}
+
+            <div {if $is_schema_org} itemprop="articleBody"{/if}>
+                {if $wa->isMobile()}{$post.text|strip_tags|truncate:400}{else}{$post.text|strip_tags}{/if}
+            </div>
+        </div>
+        {* attached album photo thumbs *}
+        {if $post.album_id && $post.album.id && $post.album.photos}
+            {$photos_loaded = 1} {* required for proper photo thumbs retinification *}
+            <ul class="post__album">
+                {foreach $post.album.photos as $p}
+                    <li class="post__album-item">
+                        <a href="{$post.link}#photo{$p.id}">
+                            <img src="{$p.thumb_crop.url}" class="retinify" width="96" height="96" alt="{$p.name|escape}">
+                        </a>
+                    </li>
+                {/foreach}
+            </ul>
+        {/if}
+        {* @event prepare_posts_frontend.%plugin_id%.after *}
+        {if !empty($post.plugins.after) && !$wa->isMobile()}
+            <div class="text_after">
+                {foreach $post.plugins.after as $plugin => $output}{$output}{/foreach}
+            </div>
+        {/if}
+        <div class="post__credentials">
+            {if $post.user.posts_link}
+                <span class="post_author"{if $is_schema_org} itemprop="author" itemscope itemtype="http://schema.org/Person"{/if}>
+                    <a href="{$post.user.posts_link}"{if $is_schema_org} itemprop="url"{/if}>
+                        {if isset($post.user.photo_url_20)}<img src="{$post.user.photo_url_20}" class="post_userpic" alt="">{/if}
+                        <span class="post_username"{if $is_schema_org} itemprop="name"{/if}>{$post.user.name}</span>
+                    </a>
+                </span>
+            {else}
+                <span class="post_author"{if $is_schema_org} itemprop="author" itemscope itemtype="http://schema.org/Person"{/if}>
+                    {if isset($post.user.photo_url_20)}<img src="{$post.user.photo_url_20}" class="post_userpic" alt="">{/if}
+                    <span class="post_username"{if $is_schema_org} itemprop="name"{/if}>{$post.user.name}</span>
+                </span>
+            {/if}
+            {if $show_comments && $post.comments_allowed}
+                {if !empty($post.comment_count)}
+                    <a href="{$post.link}#comments" class="post__count-comments">
+                        <i class="far fa-comment icon"></i>
+                        {if $wa->isMobile()}{$post.comment_count}{else}{_w('%d comment','%d comments',$post.comment_count)}{/if}
+                    </a>
+                {/if}
+            {/if}
+            {if $post.cutted}
+                <a class="show-all post__more ac-color" href="{$post.link}">
+                    {$post.cut_link_label|default:'[`Read more`]'}
+                    <i class="button-more fal fa-long-arrow-right"></i>
+                </a>
+            {/if}
+        </div>
+    </section>
+{foreachelse}
+    {if $page lt 2}
+        {_w('%d post','%d posts',0)}
+    {/if}
+{/foreach}
+{/strip}
+
+{if !empty($photos_loaded) && blogPhotosBridge::is2xEnabled()}
+    <script>$(function() { "use strict";
+        $.Retina && $('img.retinify').retina();
+    });</script>
+{/if}

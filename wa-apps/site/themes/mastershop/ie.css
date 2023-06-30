@@ -1,0 +1,51 @@
+.cols-2 .content,
+.cols-3 .content{
+    float: right;
+    width: calc(100% - 296px) !important;
+}
+
+@media (max-width: 1000px) {
+    .cols-2 .content,
+    .cols-3 .content,
+    .content{
+        float: none !important;
+        width: 100% !important;
+    }
+}
+
+.promocard{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.promocard__inner{
+    display: block;
+    min-height: 266px;
+}
+
+.categories-tile-item{
+    vertical-align: top;
+    display: inline-block;
+}
+
+.home-news__item{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.home-news__content{
+    white-space: normal;
+}
+
+.categories-icons__item{
+    vertical-align: top;
+    display: inline-block;
+}
+
+.categories-tile-item{
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+

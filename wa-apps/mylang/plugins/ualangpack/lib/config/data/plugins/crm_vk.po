@@ -1,0 +1,219 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst CRM vk.com plugin 1.0.9.49 v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2018-03-02 16:41+0300\n"
+"PO-Revision-Date: \n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Plugin %s is installed and working."
+msgstr "Плагін %s встановлено і запущено."
+
+msgid "Specify configuration parameters on <a href=\"%s\">deal source settings</a>."
+msgstr "Задайте параметри на <a href=\"%s\">екрані налаштувань джерела угод</a>."
+
+msgid "CRM"
+msgstr "CRM"
+
+msgid "view vk.com profile"
+msgstr "переглянути профіль на vk.com"
+
+msgid "incoming"
+msgstr "вхідні"
+
+msgid "from"
+msgstr "від"
+
+msgid "outgoing"
+msgstr "вихідні"
+
+msgid "to "
+msgstr "для "
+
+msgid "Write a message"
+msgstr "Написати повідомлення"
+
+msgid "File successful added"
+msgstr "Файл додано"
+
+msgid "delete"
+msgstr "видалити"
+
+msgid "Attach file"
+msgstr "Прикріпити файл"
+
+msgid "Drop file here"
+msgstr "Перетягніть сюди файл"
+
+msgid "view vk.com group"
+msgstr "переглянути групу на vk.com"
+
+msgid "vk.com"
+msgstr "vk.com"
+
+msgid "(no subject)"
+msgstr "(без теми)"
+
+msgid "open conversation"
+msgstr "відкрити розмову"
+
+msgid "From"
+msgstr "Від"
+
+msgid "To"
+msgstr "Для"
+
+msgid "Send"
+msgstr "Надіслати"
+
+msgid "or"
+msgstr "або"
+
+msgid "cancel"
+msgstr "скасувати"
+
+msgid "Message sent successfully"
+msgstr "Повідомлення відправлене"
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "Sorry, couldn't send reply message"
+msgstr "Надіслати повідомлення, на жаль, не вдалося"
+
+msgid "Deal between %s and %s"
+msgstr "Угода між %s та %s"
+
+msgid "Chat between %s and %s"
+msgstr "Чат між %s та %s"
+
+msgid "Chat #%s"
+msgstr "Чат №%s"
+
+msgid "to"
+msgstr "для"
+
+msgid "Stage deleted"
+msgstr "Етап видалено"
+
+msgid "Funnel deleted"
+msgstr "Воронку видалено"
+
+msgid "Deal"
+msgstr "Угода"
+
+msgid "Save configuration parameters in the <a href=\"%s\">deal source settings</a>."
+msgstr "Збережіть параметри на <a href=\"%s\">екрані налаштувань джерела угод</a>."
+
+msgid "File has been added."
+msgstr "Файл додано."
+
+msgid "Message has been sent."
+msgstr "Повідомлення надіслано."
+
+msgid "Photo"
+msgstr "Фото"
+
+msgid "Video"
+msgstr "Відео"
+
+msgid "Audio"
+msgstr "Аудіо"
+
+msgid "Wall report"
+msgstr "Звіт по стіні"
+
+msgid "GIF"
+msgstr "GIF"
+
+msgid "Image"
+msgstr "Зображення"
+
+msgid "Audio Message"
+msgstr "Аудіоповідомлення"
+
+msgid "Attachment"
+msgstr "Вкладення"
+
+msgid "Location"
+msgstr "Розташування"
+
+msgid "no subject"
+msgstr "без теми"
+
+msgid "Attach photo"
+msgstr "Прикріпити фото"
+
+msgid "Drop photo here"
+msgstr "Перетягніть фото сюди"
+
+msgid "Name"
+msgstr "Назва"
+
+msgid "Group settings"
+msgstr "Налаштування групи"
+
+msgid "Create <a href=\"https://vk.com/groups\" target=\"_blank\">new Community on VK</a>"
+msgstr "Створіть <a href=\"https://vk.com/groups\" target=\"_blank\">нову спільноту у VK</a>"
+
+msgid "Group ID"
+msgstr "ID групи"
+
+msgid "Access token"
+msgstr "Токен доступу"
+
+msgid "Callback API URL"
+msgstr "URL API зворотнього виклику"
+
+msgid "Set settlement for CRM app <a target=\"_blank\" href=\"%s\">here</a>"
+msgstr "Налаштуйте поселення для додатку CRM <a target=\"_blank\" href=\"%s\">тут</a>"
+
+msgid "Will be shown after source creation"
+msgstr "Буде показано після створення джерела"
+
+msgid "API Version"
+msgstr "Версія API"
+
+msgid "Verify code"
+msgstr "Перевірте код"
+
+msgid "Copy here <b>string to be returned</b> from <a target=\"_blank\" href=\"%s\">Callback API settings</a>"
+msgstr "Скопіюйте сюди <b>рядок, який потрібно повернути</b> з <a target=\"_blank\" href=\"%s\">налаштувань API зворотного виклику</a>"
+
+msgid "Secret key"
+msgstr "Секретний ключ"
+
+msgid "Application settings"
+msgstr "Налаштування додатку"
+
+msgid "Create <a target=\"_blank\" href=\"https://vk.com/editapp?act=create\">an Application on VK</a>"
+msgstr "Створіть <a target=\"_blank\" href=\"https://vk.com/editapp?act=create\">додаток у VK</a>"
+
+msgid "Application ID"
+msgstr "Ідентифікатор додатку"
+
+msgid "Secure key"
+msgstr "Захищений ключ"
+
+msgid "Service token"
+msgstr "Сервісний токен"
+
+msgid "Unknown location"
+msgstr "Невідоме місцезнаходження"
+
+msgid "Empty conversation"
+msgstr "Порожня розмова"
+
+msgid "Field is required"
+msgstr "Це поле є обов'язковим"

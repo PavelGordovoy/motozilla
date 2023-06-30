@@ -1,0 +1,200 @@
+<div id="wa-app">
+      <div class="sidebar left200px block left-padded">
+        {$sidebar|default:'Loading...'}
+      </div>
+      <div class="content left200px block double-padded">
+        <h3>{$title|default:'Unknown'|escape}</h3>
+        <ul class="menu-h dropdown">
+            <li><a href="#" class="add_custom"><i class="icon16 plus"></i>[`Add`]</a></li>
+            <li><a href="#" class="locale-download"><i class="icon16 download"></i>[`Export`]</a></li>
+            <li><a href="#" class="locale-upload"><i class="icon16 upload"></i>[`Import`]</a></li>
+            <li>
+              <select title="editor_locale" id="editor_locale">
+                {foreach $locales as $key=>$po_locale}
+                    <option value="{$key}" {if $key==$user_locale}selected="selected"{/if}>{$po_locale}</option>
+                {/foreach}
+              </select>
+            </li>
+            <li>
+                <input type="text" autocomplete="off" name="query" placeholder="[`Search`]" value="{$wa->get('query')|escape}"/>
+                <i class="icon16 close stealth" style="vertical-align: baseline;" id="clearQuery"></i>
+                <button id="search" onClick="$.mylang.editor.getstrings()" class="button small blue">[`Search`]</button>
+            </li>
+            <li>
+                <a href="#" id="editor_reload"><i class="icon16 update"></i>[`Reload file`]</a>
+            </li>
+            <li><span class="loading hidden"><i class="icon16 loading"></i> [`Loading...`]</span></li>
+
+            <li class="float-right"><a href="#" id="locale-compile-dialog"><i class="icon16 merge"></i>[`Actions`]</a></li>
+            <li class="float-right" style="width:150px">
+                {$providers = $wa->mylang->providers()}
+                {if $providers}
+                <a href="#" onClick="return false;"><i class="icon16 globe"></i><span>[`Translate empty`]</span></a>
+                <ul class="menu-v">
+                    {foreach $providers as $key=>$provider}
+                        <li><a href="#" class="translate-provider" onclick="$.mylang.editor.translate('{$key}')">{$provider|escape}</a></li>
+                    {/foreach}
+                </ul>
+                {else}
+                    <span class="gray">[`No translate plugins`]</span>
+                {/if}
+            </li>
+        </ul>
+        <form id="editor_strings" action="?module=editorjs&action=save" method="POST">
+            <div id="transtable">
+              <span class="loading hidden"><i class="icon16 loading"></i> [`Loading...`]</span>
+            </div>
+            <div class="placeholder"></div>
+            <div id="editor_save_panel">
+                <div class="wa-mylang-save-panel block bordered-top">
+                    <input id="wa-save-button" type="submit" class="button green" value="[`Save`]">
+                    <em class="hint">Ctrl + S</em>
+                    <span id="wa-form-status" class="stealth"><i class="icon16 yes"></i> [`Saved`]</span>
+                    <span id="wa-form-error" class="stealth"><i class="icon16 no"></i> [`Error`]</span>
+                    <div class="paging hidden">
+                      <a class="prevnext" id="paging-prev" href="#"><i class="icon10 larr"></i> [`prev`]</a>
+                      <a class="prevnext" id="paging-next" href="#">[`next`] <i class="icon10 rarr"></i></a>
+                    </div>
+                </div>
+            </div>
+        </form>
+      </div>
+</div>
+
+<div class="dialog small" id="wa-locale-download-dialog" style="display: none;">
+    <div class="dialog-background"> </div>
+    <div class="dialog-window">
+            <div class="dialog-content">
+                <div class="dialog-content-indent">
+                    <h1>{$title|default:'Unknown'}</h1>
+                    {if $available_locales}
+                    <ul class="menu-v with-icons">
+                      {foreach $available_locales as $pofile}
+                      <li class="bold"><a href="?module=editor&slug={$slug}&action=localeDownload&locale={$pofile}"><i class="icon16 download"></i>[`PO-file for locale - `]{$pofile}<span class="hint nowrap">.tar.gz</span></a></li>
+                      {/foreach}
+                    </ul>
+                    {else}
+                      [`App doesn't support additional locales.`]
+                    {/if}
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="dialog-buttons">
+                <div class="dialog-buttons-gradient">
+                    <a href="?module=editor&slug={$slug}" class="cancel button">[`Close`]</a>
+                </div>
+            </div>
+    </div>
+</div>
+
+<div class="dialog small" id="wa-locale-upload-dialog" style="display: none;">
+    <div class="dialog-window" style="height: 220px; min-height: 200px; width: 400px; min-width: 350px; left: 40%; top: 36%;">
+         <div class="dialog-content">
+                <div class="dialog-content-indent">
+                    <form id="pofile-upload" method="POST" action="?module=editorjs&action=upload" enctype="multipart/form-data">
+                    <h1>{$title|default:'Unknown'}</h1>
+                    <p>[`File to upload should have *.po extension and been created with poedit or other tools.`]</p>
+                    <input type="hidden" name="slug" value="{$slug}">
+                    <input type="file" name="pofile" accept=".po, text/x-gettext-translation"><br><br>
+                    <select title="[`Select locale to upload`]" id="upload_pofile" name="locale">
+                        <option value="">[`Select locale to upload`]</option>
+                        {foreach $available_locales as $po_locale}
+                            <option value="{$po_locale}">{$locales[$po_locale]}</option>
+                        {/foreach}
+                    </select><br>
+                    <span class="wa-upload-dialog-error bold" style="color: red;"></span>
+                    <div class="dialog-buttons">
+                        <div class="dialog-buttons-gradient">
+                            <input type="submit" class="green button" title="[`Upload`]"/> [`or`] <a href="?module=editor&slug={$slug}" class="cancel button">[`Close`]</a>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+        </div>
+    </div>
+</div>
+
+<div class="dialog small" id="wa-locale-compile-dialog" style="display: none;">
+    <div class="dialog-background"> </div>
+    <div class="dialog-window" style="height: 270px; min-height: 200px; width: 500px; min-width: 350px; left: 40%; top: 36%;">
+            <div class="dialog-content">
+                <div class="dialog-content-indent">
+                    <h1>{$title|default:'Unknown'}</h1>
+                    <p>
+                        <a id="locale-sync" href="#" class="blue">[`Scan new`]</a>
+                        <br>
+                        <span class="hint">[`Scan product to get new strings to translate for all locales.`]</span><br><br>
+                        <a id="editor-repair" href="#" class="blue">[`Clean hash strings`]</a>
+                        <br>
+                        <span class="hint">[`Repair file for md5-hash keys.`]</span><br><br>
+                        <a id="editor-repair-keys" href="#" class="blue">[`Unescape keys`]</a>
+                        <br>
+                        <span class="hint">[`Repair keys.`]</span>
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="dialog-buttons">
+                <div class="dialog-buttons-gradient">
+                    <span id="compile-form-status" class="hidden"><i class="icon16 yes"></i> [`Completed`]</span>
+                    <span id="compile-form-error" class="hidden"><i class="icon16 no"></i> [`Error`]</span>
+                    <a href="?module=editor&slug={$slug}" style="margin-left:75%" class="cancel button">[`Close`]</a>
+                </div>
+            </div>
+    </div>
+</div>
+
+<div class="dialog add-dialog" id="add-dialog">
+    <form id="add-form" autocomplete="off" method="POST">
+    {$wa->csrf()}
+    <div class="dialog-background"> </div>
+    <div class="dialog-window" style="min-height: 200px; max-width:50%; min-width: 350px; left: 40%; top: 15%;">
+            <div class="dialog-content">
+                <div class="dialog-content-indent">
+                    <h1>[`Add custom text`]</h1>
+                    <div class="block fields">
+                        <div class="field-group">
+                            <a href="javascript:void()" class="inline"><label for="add-dialog-plural" class="add-dialog-plural">[`Plural forms`]</label></a>
+                          <input type="checkbox" id="add-dialog-plural" class="hidden"/>
+                          <div class="field">
+                             <div class="name">[`Original text`]</div>
+                             <div class="value"><input name="custom_id" class="long" type="text" placeholder="[`Key text`]" value=""/></div>
+                             <div class="value plural"><input name="custom_id_plural" class="long" type="text" placeholder="[`Key text plural`]" value=""/></div>
+                          </div>
+                          {foreach $locales as $key=>$po_locale}
+                          <div class="field">
+                             <div class="name">[`ID string`] {$po_locale}</div>
+                             <div class="value"><input type="text" class="long" name="custom_str[{$key}]" placeholder="{$po_locale}" value=""/></div>
+                             <div class="value plural"><input type="text" class="long" name="custom_str_plural[{$key}]" placeholder="{$po_locale} [`plural`]" value=""/></div>
+                          </div>
+                          {/foreach}
+                          <div class="block">
+                            <h3>[`Usage:`]</h3>
+                            {literal}<span>[`[&#96;Key text&#96;] or {_w('Key text')} for apps`]</span>{/literal}
+                        </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="dialog-buttons">
+                <div class="dialog-buttons-gradient">
+                    <input type="submit" class="green button" title="[`Add`]" value="[`Add`]"/>
+                    <a href="#" class="cancel button">[`Close`]</a>
+                </div>
+            </div>
+    </div>
+    </form>
+</div>
+<script src="{$wa_app_static_url}js/mylang.editor.js?{$v}"></script>
+<script>
+/*global $*/
+$.wa.errorHandler = function(){ };
+let options = {
+    'locales':{$locales|json_encode},
+    'slug': {$slug|json_encode},
+    'page':{$wa->get('page',1,int)},
+};
+$.mylang.editor.init(options);
+$('#editor_locale').change();
+</script>

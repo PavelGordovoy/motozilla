@@ -1,0 +1,262 @@
+{if !$ajax}
+<div class="sidebar left200px">
+    <div class="block">
+        <ul class="menu-v with-icons" data-id="shop-actions">
+            <li data-id="general">
+                <a href="#/general/"><i class="icon16 settings"></i><b>[`General settings`]</b></a>
+            </li>
+            <li data-id="selector">
+                <a href="#/selector/"><i class="icon16 globe"></i><b>[`Selector`]</b></a>
+            </li>
+            <li data-id="langpack">
+                <a href="#/langpack/"><i class="icon16 box"></i><b>[`Language pack`]</b></a>
+            </li>
+            <li data-id="maintenance">
+                <a href="#/maintenance/"><i class="icon16 lightning"></i><b>[`Maintenance`]</b></a>
+            </li>
+            <li data-id="providers">
+                <a href="#/providers/"><i class="icon16 custom"></i><b>[`Providers`]</b></a>
+            </li>
+        </ul>
+        </div>
+</div>
+{/if}
+<div class="content {if !$ajax}left200px{/if}" id="c-core">
+        <div class="block not-padded c-core-content" id="content">
+            <div class="block shadowed">
+                <h1>[`Settings`]</h1>
+    <div class="fields form">
+        <form action="?module=settings&action=save" method="post" id="plugins-settings-form" enctype="multipart/form-data" target="plugins-settings-iframe">
+            {$wa->csrf()}
+            <input type="hidden" name="action" value="settings"/>
+            {if $domains}
+            <div class="field">
+                <div class="name">
+                    <label>[`Domains`]</label>
+                </div>
+                <div class="value">
+                    {foreach $domains as $key=>$domain}
+                        <input type="checkbox" name="domains[]" value="{$domain.name}" {if in_array($domain.name,$settings.domains)|default:0}checked="checked" {/if} class="groupbox checkbox" id="domains_{$key}" title="{$domain.title}">
+                        <label for="domains_{$key}">{$domain.title|escape}{if $domain.title !== $domain.name} ({$domain.name|escape}){/if}</label>
+                        <br>
+                    {/foreach}
+                </div>
+            </div>
+            {/if}
+            <div class="field">
+                <div class="name">
+                    <label>[`Available locales`]</label>
+                </div>
+                <div class="value">
+                    {foreach $locales as $key=>$loc}
+                        <input type="checkbox" name="locales[{$key}]" value="{$key}" {if in_array($key,$settings.locales)}checked="checked" {/if} class="groupbox checkbox" id="locales_{$key}" title="{$loc}" data-count={$loc.count|default:0}>
+                        <label for="locales_{$key}">{$loc} - ({$key})</label>{if !in_array($key,array('ru_RU','en_US'))}<a href="javascript:void(0)" data-id="{$key}" title="{$loc} - {$key}" class="editlocale"><i class="icon16 edit"></i></a>{/if}
+                        {if !in_array($key,$supported_locales)}<i class="icon16 info" title="[`This locale is not installed on the server.`]"></i>{/if}
+                        <br>
+                    {/foreach}
+                    <br>
+                    <span class="hint">[`Select additional locales`].</span><br>
+                    <span><i class="icon16 add"></i><a href="#" id="addlocale">[`Add new locale`]</a></span><br>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name"></div>
+                <div class="value">
+                    <span><i class="icon16 status-blue"></i><a href="#" id="fixlocale">[`Fix locales`]</a></span><span class="hidden" id="fixlocale-status"><i class="icon16 yes"></i> [`Done`]</span><br>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">
+                    <label>[`Main language`]</label>
+                </div>
+                <div class="value">
+                        {html_options name=main_language options=$locales selected=$settings.main_language|default:ru_RU}
+                    </div>
+            </div>
+            <div class="field">
+                <div class="name">
+                    <label>[`Select main provider`]</label>
+                </div>
+                <div class="value">
+                    <select name="main_provider">
+                        {foreach $providers as $key=>$provider}
+                        <option value="{$key}"{if $key==$settings.main_provider|default:'yandex'}selected{/if}>{$provider}</option>
+                        {/foreach}
+                    </select>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">
+                    <label>[`Integrate with Menu app`]</label>
+                </div>
+                <div class="value">
+                    <label><input class="checkbox" type="checkbox" name="app_menu" value="1" {if $settings.app_menu|default:false}checked="checked"{/if}/>[`Translate menu items`]</label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">
+                    <label>[`MyLang version`]</label>
+                </div>
+                <div class="value">
+                    {$version}
+                </div>
+            </div>
+            <div class="field">
+                <div class="field">
+                    <div class="value submit">
+                        <input type="submit" class="button green" value="[`Save`]">
+                        <span id="plugins-settings-form-status" style=""></span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    <iframe style="display:none" name="plugins-settings-iframe" id="plugins-settings-iframe"></iframe>
+    </div>
+    <div class="clear-left"></div>
+
+    <div class="dialog height350" id="dialog-addlocale">
+        <div class="dialog-background"></div>
+        <div class="dialog-window">
+            <form id="form-addLocale" action="?module=settings&action=save" method="POST">
+            <input type="hidden" name="action" value="addlocale">
+            <div class="dialog-content">
+                <div class="dialog-content-indent">
+                    <h1>[`New locale`]</h1>
+                    <div class="fields form s-dialog-form">
+                        <div class="field-group">
+                            <div class="field">
+                                <div class="name">[`Locale`]</div>
+                                <div class="value">
+                                    {html_options name=locale options=$fulllist}
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="name">[`Currency`]</div>
+                                <div class="value">
+                                    {html_options name="localedata[currency]" options=$currency}
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="name">[`Original`]</div>
+                                <div class="value">
+                                    <label>[`Name:`] <input type="text" name="localedata[name]" class="large s-full-width-input"></label>
+                                    <label>[`Region:`] <input type="text" name="localedata[region]" class="large s-full-width-input"></label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="name">[`English`]</div>
+                                <div class="value">
+                                    <label>[`Name:`] <input type="text" name="localedata[english_name]" class="large s-full-width-input"></label>
+                                    <label>[`Region:`] <input type="text" name="localedata[english_region]" class="large s-full-width-input"></label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="name">[`Thousands separator`]</div>
+                                <div class="value">
+                                    <input type="text" name="localedata[thousands_sep]" class="small">
+                                    <span>[`Usually space or comma`]</span>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="name">[`Decimal point`]</div>
+                                <div class="value">
+                                    <input type="text" name="localedata[decimal_point]" class="small">
+                                    <span>[`Usually full stop or comma`]</span>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="name">[`Fractional digits`]</div>
+                                <div class="value">
+                                   {html_options name="localedata[frac_digits]" options=[0, 1, 2, 3] selected=1}
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="name">[`First day of week`]</div>
+                                <div class="value">
+                                    {html_options name="localedata[first_day]" options=$weekday}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+            </div>
+            <div class="dialog-buttons">
+                <div class="dialog-buttons-gradient">
+                    <input type="submit" value="[`Add`]" class="button green" id="dialog-addlocale-save"> <i class="icon16 yes" id="dialog-addlocale-success" style="display:none"></i> [`or`]  <a class="cancel" href="#">[`close`]</a>  <span id="dialog-addlocale-error" style="display:none"><i class="icon16 no"></i><span>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="height350" id="dialog-editlocale"></div>
+
+           </div>
+        </div>
+    </div>
+
+<script>
+/*global $*/
+    $(".editlocale").on("click", function(e) {
+        e.preventDefault();
+        $('#form-editLocale').data('id',$(this).data('id'));
+        $("#dialog-editlocale").waDialog().load('?module=settings&action=getlocale&locale='+$(this).data('id'));
+    });
+
+    $("#fixlocale").on("click", function(e) {
+        e.preventDefault();
+        var fields = { action:'fixlocale', _csrf:$('input[name="_csrf"]:first').val()};
+        $.post('?module=settings&action=save', fields);
+        $('#fixlocale-status').fadeIn().fadeOut(1000);
+    });
+
+    $("#addlocale").on("click", function() {
+            $("#dialog-addlocale").waDialog();
+        });
+    $('#form-addLocale').on('submit', function(e){
+        e.preventDefault();
+    });
+    $("#dialog-addlocale-save").on("click", function(e) {
+            if($('[name=locale]').attr("value")=="") $("#dialog-addlocale-error").text("{_w('Empty value')}").show();
+            $("#dialog-addlocale-save").removeClass("green").addClass("yellow");
+            if(!document.getElementById('form-addLocale').checkValidity()) return;
+            e.preventDefault();
+            var fields = $('#form-addLocale').serialize();
+            $.post('?module=settings&action=save', fields).done(function(response) {
+                if (response.status == "ok") {
+                    $('#content').load('?module=settings');
+                    $("#dialog-addlocale-save").removeClass("yellow").addClass("green");
+                    $("#dialog-addlocale-success").show();
+                    setTimeout(function () {
+                        $("#dialog-addlocale-success").hide();
+                    },3000);
+                }
+                else {
+                    $("#dialog-addlocale-save").removeClass("yellow").addClass("red");
+                    $("#dialog-addlocale-success").removeClass("yellow").addClass("green");
+                    $("#dialog-addlocale-error").text(response.errors).show();
+                    setTimeout(function () {
+                        $("#dialog-addlocale-error").hide();
+                        $("#dialog-addlocale-save").removeClass("red").addClass("yellow");
+                    },3000);
+                }
+            });
+        });
+
+        $('select[name=locale]').chosen({
+            no_results_text: "Oops, nothing found!",
+            width: "250px",
+            height: "350px",
+            max_selected_options:1,
+            search_contains:true,
+            placeholder_text_single:'Select an option',
+        });
+        $('select[name="localedata[currency]"]').chosen({
+            no_results_text: "Oops, nothing found!",
+            width: "250px",
+            height: "350px",
+            max_selected_options:1,
+            search_contains:true,
+            placeholder_text_single:'Select an option',
+        });
+</script>

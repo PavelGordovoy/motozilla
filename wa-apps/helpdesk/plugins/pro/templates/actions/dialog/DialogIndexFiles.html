@@ -1,0 +1,37 @@
+<div class="w-dialog-wrapper is-full-screen">
+    <div class="w-dialog-background"></div>
+    <div class="w-dialog-wrapper">
+        <div class="w-dialog-block index-dialog gray-header compact-header">
+            <form action="" method="post">
+                <div class="w-dialog-content margin-block">
+                    <div class="longaction-progressbar" style="margin-top: 20px;">
+                        <div class="margin-block bottom">
+                            [`Wait, please. Files are indexing.`]
+                        </div>
+                        <div class="longaction-progressbar__progressbar progressbar blue float-left" style="width: 88%;">
+                            <div class="longaction-progressbar__progressbar-outer progressbar-outer">
+                                <div class="longaction-progressbar__progressbar-inner progressbar-inner" style="width: 0;"></div>
+                            </div>
+                        </div>
+                        <img style="float:left; margin-top:8px;" class="longaction-progressbar__loader" src="{$wa_url}wa-content/img/loading32.gif"/>
+                        <div class="clear"></div>
+                        <span class="longaction-progressbar__progress">0.000%</span>
+                        <em class="hint">[`Please don't close your browser window until process is over`]</em>
+                        <br style="clear:left"/>
+                    </div>
+                    <div class="longaction-progressbar__report"></div>
+                </div>
+                <footer class="w-dialog-footer">
+                    <div class="margin-block errormsg"></div>
+                    <div class="t-actions">
+                        <div class="t-layout">
+                            <div class="t-column align-right">
+                                <a href="javascript:void(0)" class="js-close-dialog">[`close`]</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </form>
+        </div>
+    </div>
+</div>

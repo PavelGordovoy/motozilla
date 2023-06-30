@@ -1,0 +1,40 @@
+{strip}
+{$is_retina = $wa->shop->config('enable_2x')}
+{$is_lazy_images = $theme_settings.homepage_slider_lazy}
+{if $wa->photos}
+    {if $album_id && $wa->photos}
+        {if (int)$theme_settings.slider_height > 0}
+            {$height_slider = $theme_settings.slider_height}
+        {/if}
+        {$photos = $wa->photos->photos("#/album/`$album_id`")}
+        {if count($photos) > 0}
+            {if $theme_settings.homepage_slider_rand}{$shuffle = $photos|shuffle}{/if}
+            <div class="slider-wrap slider-wrap--banner js-slider-wrap">
+                <div class="js-main-slider owl-carousel main-slider slider-banner" data-lazy="{$is_lazy_images}" data-swipe="{$theme_settings.homepage_slider_swipe}" data-pages="true" data-pause="{$theme_settings.slider_pause}" data-type="image">
+                    {if $theme_settings.homepage_slider_rand}{$shuffle = $photos|shuffle}{/if}
+                    {foreach $photos as $photo}
+                        <div class="main-slider_el main-slider_el--{$photo.id}">
+                            <a class="slider-banner__inner" href="{$photo.description|escape}">
+                                {$class_img = "slider-banner__img"}
+                                {if $is_retina}{$class_img = "`$class_img` js-img-retina"}{/if}
+                                {if $is_lazy_images}
+                                    {$class_img = "`$class_img` owl-lazy"}
+                                    {$wa->photos->getImgHtml($photo, "`$widthSlider`x0", ["class" => $class_img])|replace:"src":"src=`$wa_theme_url`img/lazy-image.png data-src"}
+                                {else}
+                                    {$wa->photos->getImgHtml($photo, "`$widthSlider`x0", ["class" => $class_img])}
+                                {/if}
+
+                                {if $theme_settings.slider_description && !empty($photo.name)}
+                                    <div class="slider-banner__content">
+                                        <div class="slider-banner__title">{$photo.name}</div>
+                                    </div>
+                                {/if}
+                            </a>
+                        </div>
+                    {/foreach}
+                </div>
+            </div>
+        {/if}
+    {/if}
+{/if}
+{/strip}

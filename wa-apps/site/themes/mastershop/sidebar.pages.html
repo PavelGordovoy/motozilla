@@ -1,0 +1,37 @@
+{strip}
+{if isset($pages) && count($pages)}
+    {function name=get_sub_pages pages=[]}
+        <ul class="sidebar-subpages{if $is_close} hide{/if} js-subpages">
+            {foreach $pages as $p}
+                {if !isset($p.sidebar_menu_hide)}
+                    {$is_selected = strlen($p.url)>1 && $wa->currentUrl() == $p.url}
+                    <li class="sidebar-subpages__item{if $is_selected} selected{/if}">
+                        {if isset($p.childs) && $p.childs && count($p.childs)}<span class="js-subpages-open sidebar-subpages__open fal fa-angle-down"></span>{/if}
+                         <span class="sidebar-subpages__item-inner">
+                            <a class="sidebar-subpages__link" href="{$p.url}">{$p.name}</a>
+                         </span>
+                        {if isset($p.childs) && $p.childs && count($p.childs)}{get_sub_pages pages=$p.childs is_close=!$is_selected}{/if}
+                    </li>
+                {/if}
+            {/foreach}
+        </ul>
+    {/function}
+    <div class="sidebar-wrap">
+        {if $title}<div class="sidebar-wrap__head">{$title}</div>{/if}
+        <ul class="sidebar-pages js-sidebar-pages-tree">
+            {foreach $pages as $p}
+                {if !isset($p.sidebar_menu_hide)}
+                    {$is_selected = strlen($p.url)>1 && $wa->currentUrl() == $p.url}
+                    <li class="sidebar-pages__item">
+                        {if isset($p.childs) && $p.childs && count($p.childs)}<span class="js-subpages-open sidebar-pages__open fal fa-angle-down"></span>{/if}
+                        <span class="sidebar-pages__item-inner{if $is_selected} selected{/if}">
+                            <a class="sidebar-pages__link" href="{$p.url}">{$p.name}</a>
+                        </span>
+                        {if isset($p.childs) && $p.childs && count($p.childs)}{get_sub_pages pages=$p.childs is_close=!$is_selected}{/if}
+                    </li>
+                {/if}
+            {/foreach}
+        </ul>
+    </div>
+{/if}
+{/strip}

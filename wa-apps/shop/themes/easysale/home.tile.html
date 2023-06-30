@@ -1,0 +1,77 @@
+{strip}
+
+<div id="s-homepage-tile" class="s-homepage-tile">
+    <div class="container">
+        <div class="row">
+            {if !empty($_promocards)}
+                {if $theme_settings.slider_mode == "promos"}
+                  {$_promocards = $_promocards|@array_slice:-6}
+                {/if}
+                {foreach $_promocards as $promo}
+                    <div class="{if $promo@iteration == 1 || $promo@iteration == 6}col-lg-6{else}col-lg-3{/if} col-md-6 col-sm-6 s-homepage-tile-item">
+                        <a href="{$promo.link|escape}">
+                            <div class="s-homepage-wrapper default-bg">
+                                <div class="s-homepage-tile-image-container"><div class="s-homepage-tile-image" style="background-image: url({$promo.image});"></div></div>
+                                <div class="s-homepage-tile-desc">
+                                    {if !empty($promo.title)}<div class="s-homepage-tile-text">{$promo.title|escape}</div>{/if}
+                                    {if !empty($promo.body)}<div class="s-homepage-tile-price">{$promo.body|escape}</div>{/if}
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {/foreach}
+            {elseif !empty($_products)}
+                {foreach $_products as $product}
+
+                    {$tile_photos = $wa->shop->images( array_keys($_products), '512' )}
+                    {* leave only last photos for each product *}
+                    {foreach $tile_photos as $product_id => $_photos}
+                        {$tile_photos[$product_id] = end($_photos)}
+                    {/foreach}
+
+                    {$_name = $product.name}
+                    {if $product.summary}
+                        {$_name = "`$product.name` — {strip_tags($product.summary)|escape}"}
+                    {/if}
+
+                    <div class="{if $promo@iteration == 1 || $promo@iteration == 6}col-lg-6{else}col-lg-3{/if} col-md-6 col-sm-6 s-homepage-tile-item">
+                        <a href="{$product.frontend_url}" title="{$_name}">
+                          <div class="s-homepage-wrapper default-bg">
+                            <div class="s-homepage-tile-image-container"><div class="s-homepage-tile-image" style="background-image: url({$tile_photos[ $product.id ]['url_'|cat:'512']});"></div></div>
+                            <div class="s-homepage-tile-desc">
+                                <div class="s-homepage-tile-text default-bg">{$product.name}</div>
+                                <div class="s-homepage-tile-price default-bg">{shop_currency_html($product.price)}</div>
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+
+                {/foreach}
+            {else !empty($_photos)}
+                {foreach $_photos as $photo}
+
+                    {if !empty($photo.description)}
+                        {assign var="_photo_params" value="|"|explode:$photo.description}
+                    {else}
+                        {$_photo_params = null}
+                    {/if}
+
+                    <div class="{if $photo@iteration == 1 || $photo@iteration == 6}col-lg-6{else}col-lg-3{/if} col-md-6 col-sm-6 s-homepage-tile-item">
+                        <a href="{if isset($_photo_params.0) && $_photo_params.0 != 'null'}{$_photo_params.0}{else}#s-homepage-tile{/if}">
+                          <div class="s-homepage-wrapper default-bg">
+                            <div class="s-homepage-tile-image-container"><div class="s-homepage-tile-image" style="background-image: url({$photo.thumb_512.url});"></div></div>
+                            <div class="s-homepage-tile-desc">
+                                {if isset($_photo_params.1) && $_photo_params.1 != 'null'}<div class="s-homepage-tile-text">{$_photo_params.1}</div>{/if}
+                                {if isset($_photo_params.2) && $_photo_params.2 != 'null'}<div class="s-homepage-tile-price">{$_photo_params.2}</div>{/if}
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+                {/foreach}
+            {/if}
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+{/strip}

@@ -1,0 +1,173 @@
+
+{function name="get_cloned_fields_and_close" cloned_fields=[] sections=[] form_fields=[] index=0 prefix_name=''}
+    {$instance = multiformFormBuilder::getFieldInstance($section['type'])}
+    {foreach $sections as $section}
+
+        {* Ссылка дублирования полей *}
+        {if !empty($section['properties']['multiply_fields'])}
+            {$instance->getMultiplyField($section, 'add', isset($cloned_fields[$section.id]))}
+        {/if}
+
+        {* Проверка наличия дублированных полей *}
+        {if isset($cloned_fields[$section.id])}
+            <div class="cloned-sections">
+
+                {$section.class = 'cloned-section'}
+                {$section.edit_record_page = 1}
+                {multiformFormBuilder::getControl($section, null, true)}
+
+                {if $prefix_name}
+                    {$prefix_name="`$prefix_name`[cloned_section]"}
+                {else}
+                    {$prefix_name='cloned_section'}
+                {/if}
+
+                {$prefix_name=$prefix_name|cat:'['|cat:$section.id|cat:']'}
+
+                {if $index}
+                    {$index = "`$index`._.`$section['id']`"}
+                {else}
+                    {$index = $section['id']}
+                {/if}
+
+                {foreach $cloned_fields[$section.id] as $index2 => $fields}
+                    {$section_cloned_fields = []}
+                    {if isset($fields._)}
+                        {$section_cloned_fields = $fields._}
+                    {/if}
+
+                    {$prefix_name=$prefix_name|cat:'['|cat:$index2|cat:']'}
+                    {$inside_index = "`$index`.`$index2`"}
+
+                    {call name="get_records"
+                        form_fields=array_intersect_key($form_fields, $section.all_childs)
+                        record_fields=$fields
+                        cloned_fields=$section_cloned_fields
+                        index=$inside_index
+                        prefix_name=$prefix_name
+                    }
+
+                {/foreach}
+
+                {$instance->getMultiplyField($section, 'remove')}
+                {$instance->getMultiplyField($section)}
+
+                {* Закрываем секцию *}
+                </div>
+            </div>
+        {/if}
+
+        {* Закрываем секцию *}
+        </div>
+    {/foreach}
+{/function}
+
+{function name="get_records" form_fields=[] record_fields=[] cloned_fields=[] index=0 prefix_name=''}
+    {if !empty($form_fields)}
+
+        {* Доступ к частным полям *}
+        {$private_field_access = multiformHelper::privateFieldAccess($form)}
+        {$active_section = 0}
+        {$opened_sections = []}
+
+        {foreach $form_fields as $form_field}
+
+            {* Если секция закончилась *}
+            {if empty($form_field['additional']['section'])}{$active_section = 0}{/if}
+
+            {* Закрываем секцию в секции и проверяем наличие дублированных полей *}
+            {if ($opened_sections && !empty($form_field['additional']['section']) && $active_section !== (int) $form_field['additional']['section'])}
+                {$section = array_pop($opened_sections)}
+                {get_cloned_fields_and_close cloned_fields=$cloned_fields sections=[$section] form_fields=$form_fields index=$index prefix_name=$prefix_name}
+            {/if}
+            {* Если поле не принадлежит ни одной секции, значит можно закрывать все секции от начала до конца *}
+            {if ($opened_sections && empty($form_field['additional']['section']))}
+                {get_cloned_fields_and_close cloned_fields=$cloned_fields sections=$opened_sections form_fields=$form_fields index=$index prefix_name=$prefix_name}
+                {$opened_sections = []}
+            {/if}
+            {if ($form_field['type'] == 'section')}
+                {$opened_sections[] = $form_field}
+            {/if}
+            {if (!empty($form_field['additional']['section']) || $form_field['type'] == 'section')}
+                {if $form_field['type'] == 'section'}
+                    {$active_section = (int) $form_field['id']}
+                {else}
+                    {$active_section = (int) $form_field['additional']['section']}
+                {/if}
+            {/if}
+
+            {if (!$form_field['status']
+            || ($form_field['private'] && !$private_field_access)
+            || (isset($form_field['properties']['save_data']) && !$form_field['properties']['save_data'])
+            || $form_field.type == 'button')}
+                {continue}
+            {/if}
+
+            {* Вывод полей формы *}
+            {$record_value = null}
+            {if isset($record_fields[$form_field['id']])}
+                {$record_value = $record_fields[$form_field['id']]}
+            {/if}
+
+            {$form_field.edit_record_page = 1}
+            {* При помощи data_name меняем названия у дублированных полей *}
+            {$form_field.data_name = $prefix_name}
+            {* Индекс необходим для файлов *}
+            {$form_field.data_index = $index}
+            {multiformFormBuilder::getControl($form_field, $record_value, true)}
+
+        {/foreach}
+
+        {if ($opened_sections)}
+            {get_cloned_fields_and_close cloned_fields=$cloned_fields sections=$opened_sections form_fields=$form_fields index=$index prefix_name=$prefix_name}
+        {/if}
+    {/if}
+{/function}
+
+{multiformHelper::addCss()}
+{multiformHelper::addJs()}
+{if (!empty($form['fields']) || !empty($record['fields'][0]))}
+    <div class='multiform-gap-fields'>
+        <form>
+
+            {* Вывод записей формы *}
+            {get_records form_fields=$form.fields record_fields=$record.fields cloned_fields=$record.cloned_fields}
+
+            {* Дополнительные параметры, переданные в форму *}
+            {foreach $custom_params as $rf_ext => $rf}
+                <div class='multiform-gap-field size-large'>
+                    <div class='multiform-gap-name'>
+                        <label>{$rf|escape}</label>
+                    </div>
+                    <div class='multiform-gap-value'>
+                        <input type='text' name='params[][{$rf_ext|escape}]' value='{if !empty($record['fields'][0][$rf_ext])}{$record['fields'][0][$rf_ext]|escape}{/if}'>
+                    </div>
+                </div>
+            {/foreach}
+
+           {multiformHelper::csrf()}
+
+            {* Поле для ошибок *}
+            <div class='multiform-errorfld'>
+                <em class='errormsg'></em>
+            </div>
+
+            {* Кнопка отправления *}
+            <div class='multiform-submit'>
+                <button data-submit>[`Send`]</button>
+            </div>
+
+            <input type='hidden' name='form_id' value ='{$form['id']}' />
+            <input type='hidden' name='record_id' value ='{$record.id}' />
+            <script>
+                (function($) {
+                    $(function() {
+                        $(".multiform-wrap[data-id='{$form['id']}']").trigger("multiform-loaded-{$form['id']}") });
+                    })
+                (jQuery);
+            </script>
+        </form>
+        {multiformFormBuilder::getCss()}
+        {multiformFormBuilder::getJs()}
+    </div>
+{/if}

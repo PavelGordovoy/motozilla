@@ -1,0 +1,9 @@
+b2d6175d8c18903169530f5265f1b678 *img/icon.png
+209634bb0238704c4874c35d615ae59e *lib/.htaccess
+5a5ad77cfd8e7000c244553551293b36 *lib/actions/contactsIscontactPluginSet.controller.php
+4c18486f464cc4520dee63dc4129df3e *lib/config/plugin.php
+77816bfc7adb651653785f0d46ab7c0c *lib/contactsIscontact.plugin.php
+a1751e1f10a3b96b05d0401c97e72008 *locale/.htaccess
+d36eafe7747a7cdc45016dc8e4ca4fa3 *locale/en_US/LC_MESSAGES/contacts_iscontact.po
+72f93efc94b671642229c874f14eb4f7 *locale/ru_RU/LC_MESSAGES/contacts_iscontact.mo
+598c6988cade0a648ea996c772b810c7 *locale/ru_RU/LC_MESSAGES/contacts_iscontact.po

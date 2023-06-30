@@ -1,0 +1,113 @@
+{function name=menu level=1}
+	{if $level==1}
+		{$selected_node = null}
+
+		{foreach $data as $p}
+			{if $wa->currentUrl()|strstr:$p.url && strlen($p.url) >= strlen($selected_node.url)}
+				{$selected_node = $p}
+			{/if}
+		{/foreach}
+
+		{if !isset($selected_node.id)}
+			{$selected_node.id = null}
+		{/if}
+
+		<ul class="menu">
+			{foreach $data as $entry}
+				{$active = ''}
+				{if isset($entry.id) && ($entry.id == $selected_node.id && !empty($selected_node.id))}
+					{$active = 'class="active"'}
+				{/if}
+				{if isset($entry.childs) && count($entry.childs)}{*hassub*}
+					<li {$active}>
+						<div class="link">
+							<span class="sub_toggle"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
+							<a href="{$entry.url}">{$entry.name}</a>
+						</div>
+						{menu data=$entry.childs level=$level+1}
+					</li>
+				{else}
+					<li {$active}><div class="link"><a href="{$entry.url}">{$entry.name}</a></div></li>
+				{/if}
+			{/foreach}
+		</ul>
+	{elseif $level==2}
+		<div class="submenu">
+			{$cLength = count($data)}
+			{$i = 1}
+
+			{if $cLength >= 4 && 6 > $cLength}
+				{$colCount = 2}
+				{$perCol = ceil($cLength / 2)}
+			{elseif $cLength >= 6 }
+				{$colCount = 3}
+				{$perCol = ceil($cLength / 3)}
+			{else}
+				{$colCount = 1}
+				{$perCol = $cLength}
+			{/if}
+
+			{$stop = $perCol+1}
+
+			{foreach $data as $entry}
+				{if $i == 1}
+				<div class="col">
+					<ul class="level{$level}">
+				{elseif $colCount > 1}
+					{* MULTICOLS *}
+					{if $i == $stop}
+						{$stop = $stop+$i-1}
+					</ul>
+				</div>
+				<div class="col ">
+					<ul class="level{$level}">
+					{/if}
+				{/if}
+
+					{if $wa->currentUrl()|strstr:$entry.url}
+						{$active = 'class="active"'}
+					{else}
+						{$active = ''}
+					{/if}
+
+					{if isset($entry.childs) && count($entry.childs)}
+						<li {$active}>
+							<div class="link">
+								<span class="sub_toggle"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
+								<a href="{$entry.url}">{$entry.name}</a>
+							</div>
+							{menu data=$entry.childs level=$level+1}
+						</li>
+					{else}
+						<li {$active}><div class="link"><a href="{$entry.url}">{$entry.name}</a></div></li>
+					{/if}
+
+				{if $i == $cLength}
+					</ul>
+				</div>
+				{/if}
+
+				{$i=$i+1}
+			{/foreach}
+		</div>
+	{else}
+		<div class="submenu">
+			<ul class="level{$level}">
+				{foreach $data as $entry}
+					{if $wa->currentUrl()|strstr:$entry.url}
+						{$active = 'class="active"'}
+					{else}
+						{$active = ''}
+					{/if}
+
+					{if isset($entry.childs) && count($entry.childs)}
+						<li {$active}><a href="{$entry.url}">{$entry.name}</a></li>
+						{menu data=$entry.childs level=$level+1}
+					{else}
+						<li {$active}><a href="{$entry.url}">{$entry.name}</a></li>
+					{/if}
+				{/foreach}
+			</ul>
+		</div>
+	{/if}
+{/function}

@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: multiform\n"
+"POT-Creation-Date: 2019-08-29T11:29:26.306Z\n"
+"Last-Translator: multiform\n"
+"Language-Team: multiform\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; "
+"plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%"
+"100)<10)||((n%100)>=20)))?(1):2));\n"
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.js:420
+msgid "Close"
+msgstr "Закрыть"
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.js:539
+msgid "Fill in the required fields"
+msgstr "Заполните обязательные поля формы"
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.js:545
+msgid "Added files are not valid"
+msgstr "Добавленные файлы содержат ошибки"
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.js:551
+msgid "Fix the errors above"
+msgstr "Исправьте ошибки, допущенные в форме"
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.js:571
+msgid "Please, wait, while data is saving"
+msgstr "Пожалуйста, подождите, идет сохранение данных"
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.js:605
+msgid "Files uploading"
+msgstr "Загрузка файлов"
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.js:615
+msgid "Saving"
+msgstr "Сохранение"
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.js:656
+msgid "Something wrong. Please, reload the page"
+msgstr "Произошла ошибка. Перезагрузите страницу"
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.js:673
+msgid "Data saved with errors"
+msgstr "Данные сохранены с ошибками"
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.js:683
+msgid "Wait, please. Redirecting"
+msgstr "Идет перенаправление"
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.js:683
+msgid "Loading"
+msgstr "Идет загрузка"
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.js:1003
+msgid "Field is required"
+msgstr "Обязательное поле"
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.js:1167
+msgid "Value must be more than "
+msgstr "Значение должно быть больше, чем "
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.js:1172
+msgid "Value must be less than "
+msgstr "Значение должно быть меньше, чем "
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.js:1178
+msgid "Value must be a multiple of "
+msgstr "Значение должно кратно "
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.js:1178
+msgid "For example"
+msgstr "Например"
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.min.js:1
+msgid "You have to select at least %d checkboxes"
+msgstr ""
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.min.js:1
+msgid "Checkboxes cannot exceed %d selected values"
+msgstr ""
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.js:1182
+msgid "You have to select at least 1 checkbox"
+msgid_plural "You have to select at least {n} checkboxes"
+msgstr[0] "Вам необходимо выбрать хотя бы 1 вариант"
+msgstr[1] "Вам необходимо выбрать хотя бы {n} варианта"
+msgstr[2] "Вам необходимо выбрать хотя бы {n} вариантов"
+
+#: C:\Server\domains\localhost\ss\wa-apps\multiform\js\frontend.js:1187
+msgid "Checkboxes cannot exceed 1 selected value"
+msgid_plural "Checkboxes cannot exceed {n} selected values"
+msgstr[0] "Выбранных значений не может быть больше 1"
+msgstr[1] "Выбранных значений не может быть больше {n}"
+msgstr[2] "Выбранных значений не может быть больше {n}"

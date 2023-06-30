@@ -1,0 +1,277 @@
+{strip}
+
+{$wa->globals("hideSidebar", true)}
+{$wa->globals("cart", true)}
+
+<div id="s-cart-page" class="s-cart-page col-md-12">
+
+    {if !$cart.count}
+
+        <h1 class="s-cart-header">[`Shopping cart`]</h1>
+
+        <div class="s-empty-cart">
+            <p>[`Your shopping cart is empty.`]</p>
+        </div>
+
+    {else}
+
+        <h1 class="s-cart-header">[`Shopping cart`]</h1>
+
+        <form method="post">
+
+            {* CART ITEM *}
+            <div class="s-cart-products cart">
+                {foreach $cart.items as $item}
+                    <div class="s-cart-product" data-id="{$item.id}">
+                    
+                        <div class="s-cart-product-wrapper">
+                        
+                            <div class="s-cart-product-column s-cart-product-column-image">
+                                <a class="s-product-image" href="{$wa->shop->productUrl($item.product)}" title="{$item.product.name|escape}">
+                                    {$wa->shop->productImgHtml($item.product, '96x96', ['default' => "`$wa_theme_url`img/dummy48.png"])}
+                                </a>
+                            </div>
+    
+                            <div class="s-cart-product-column s-cart-product-column-name">
+    
+                                <div class="s-offers-wrapper">
+    
+                                    <h4 class="s-product-name">
+                                        <a href="{$wa->shop->productUrl($item.product)}">{$item.product.name|escape}</a>
+                                        <span> {if $item.sku_name && $item.sku_name != $item.product.name}{$item.sku_name|escape}{/if}</span>
+                                    </h4>
+                                    
+                                    {* SERVICES *}
+                                    {if !empty($item.services)}
+                                        <div class="s-product-services">
+                                            {foreach $item.services as $service_id => $s}
+                                                <div class="s-service" {if !empty($s.id)}data-id="{$s.id}"{/if}>
+    
+                                                    <label class="c-input c-checkbox">
+                                                        <input type="checkbox" name="services[{$item.id}][]" value="{$service_id}" {if !empty($s.id)}checked{/if}>
+                                                        {$s.name|escape}
+                                                        <span class="c-indicator"></span>
+                                                        {if $s.price && !isset($s.variants)}
+                                                            (<span>+{shop_currency_html($s.price, $s.currency)}</span>)
+                                                        {/if}
+                                                    </label>
+    
+                                                    {if isset($s.variants)}
+                                                        <select class="form-control" name="service_variant[{$item.id}][{$service_id}]" {if empty($s.id)}disabled{/if}>
+                                                            {foreach $s.variants as $variant_id => $v}
+                                                                <option {if $s.variant_id == $variant_id}selected{/if} value="{$variant_id}">{$v.name|escape} (+{shop_currency($v.price, $s.currency)})</option>
+                                                            {/foreach}
+                                                        </select>
+                                                    {else}
+                                                        <input type="hidden" name="service_variant[{$item.id}][{$service_id}]" value="{$s.variant_id}">
+                                                    {/if}
+    
+                                                </div>
+                                            {/foreach}
+                                        </div>
+                                    {/if}
+    
+                                </div>
+    
+                            </div>
+                            <div class="s-cart-product-column s-cart-product-column-info">
+                                <div class="s-offers-wrapper">
+                                    <div class="s-pricing-wrapper">
+                                        <span class="s-price" data-price="{shop_currency($item.price, null, null, 0)}">{shop_currency_html($item.price)}</span>
+                                            {if $item.compare_price > 0}
+                                                <span class="s-compare" data-compare-price="{shop_currency_html($item.compare_price, null, null, 0)}"> {shop_currency_html($item.compare_price)}</span>
+                                            {/if}
+                                        </div>
+                                    {if $item.compare_price > 0}
+                                        <div class="s-discount-wrapper">
+                                            <span class="s-discount">- {(($item.compare_price - $item.price) / ($item.compare_price / 100))|wa_format_number:0}%</span>
+                                            <span class="s-saving">[`Savings`] <span class="s-saving-price">{shop_currency_html($item.compare_price - $item.price)}</span></span>
+                                        </div>
+                                    {/if}
+                                </div>
+                            </div>
+                            <div class="s-cart-product-column s-cart-product-column-quantity">
+                            
+                                <div class="s-offers-wrapper">
+    
+                                    <div class="s-buttons-wrapper input-group">
+                                        <span class="input-group-btn">
+                                            <input class="btn s-button decrease-volume" type="button" value="&minus;">
+                                        </span>
+                                        <input class="form-control text-center s-product-quantity{if !empty($item.error)} error{/if}" type="text" name="quantity[{$item.id}]" value="{$item.quantity}">
+                                        <span class="input-group-btn">
+                                            <input class="btn s-button increase-volume" type="button" value="&plus;">
+                                        </span>
+                                    </div>
+    
+                                </div>
+                                
+                            </div>
+                            <div class="s-cart-product-column s-cart-product-column-total">
+                                <div class="s-offers-wrapper">
+                                    <div class="s-product-total">{shop_currency_html($item.full_price, true)}</div>
+                                </div>
+                            </div>
+                            <div class="s-cart-product-column s-cart-product-column-delete">
+                                <div class="s-delete-wrapper">
+                                    <button class="s-delete-button delete-product" type="button" value="[`Delete`]" title="[`Remove from cart`]"><i class="fa fa-trash-o fa-lg red" aria-hidden="true"></i></button>
+                                </div>  
+                                {if !empty($item.error)}
+                                    <script>
+                                        alert({json_encode($item.error)});
+                                    </script>
+                                {/if}
+                            </div>
+                        </div>
+                        {* SERVICES *}
+
+                    </div>
+                {/foreach}
+            </div>
+            
+            <div class="clearfix"></div>
+
+            {* CART TOTAL *}
+            <div class="s-cart-total">
+                
+                <div class="row">
+                
+                    {* DISCOUNT BLOCK *}
+                    <div class="cart-discount-wrapper col-md-6" id="cart-discount-wrapper">
+    
+                        {* COUPONS *}
+                        {if shopDiscounts::isEnabled('coupons')}
+                            <div class="s-coupon-wrapper">
+                                {if !$coupon_code}
+                                    <div class="s-coupon-apply">
+                                        <input class="s-button btn btn-default btn-sm" id="use-coupon" type="button" value="[`I have a coupon!`]">
+                                    </div>
+                                {/if}
+    
+                                <div {if !$coupon_code}style="display: none;"{/if} id="apply-coupon-code">
+                                    <span class="s-coupon-header">[`Coupon code`]</span>
+                                    
+                                    <div class="input-group">
+                                        <input class="form-control btn-sm s-text" type="text" name="coupon_code" value="{$coupon_code|escape}">
+                                        <span class="input-group-btn">
+                                            <input class="btn btn-default btn-sm" type="submit" value="[`Apply`]">
+                                        </span>
+                                    </div>
+                                    
+                                    {if $coupon_code && empty($coupon_discount) && empty($coupon_free_shipping)}
+                                        <div class="error-message">[`Invalid coupon code`]</div>
+                                    {/if}
+                                </div>
+                            </div>
+                        {/if}
+    
+                        {* DISCOUNT *}
+                        {if $discount > 0}
+                            <div class="s-discount-wrapper">
+                                <h5 class="s-discount-header">[`Discount`]</h5>
+                                <div class="s-cart-discount" id="s-cart-discount">&minus; {shop_currency_html($discount, true)}</div>
+                            </div>
+                        {/if}
+                    </div>
+                    
+                    {* TOTAL *}
+                    <div class="s-total-wrapper col-md-6 text-right">
+                        <span class="s-total-header">[`Total`]:</span>
+                        <span class="s-total" id="cart-total">{shop_currency_html($cart.total, true)}</span>
+                    </div>
+                </div>
+                
+                <div class="clearfix"></div>
+                
+                {* AFFILIATE BONUS *}
+                {if shopAffiliate::isEnabled() && $affiliate_bonus > 0}
+                    <div class="affiliate-bonus-wrapper push-top push-bottom">
+                        <div class="text-block">
+                            {sprintf('[`Your current affiliate bonus of %s points allows you to get an additonal discount of up to %s`]', $affiliate_bonus, shop_currency_html(shopAffiliate::convertBonus($affiliate_bonus)))}
+                        </div>
+                        <div class="affiliate-discount">
+                            &minus; {if $use_affiliate}{shop_currency_html(shopAffiliate::convertBonus($used_affiliate_bonus))}{else}0{/if}
+                        </div>
+                        <div class="button-block push-top">
+                            {if $use_affiliate}
+                                <input id="cancel-affiliate" class="btn btn-transparent btn-sm"  type="button" value="[`Don’t use bonus discount`]">
+                            {else}
+                                <input class="btn btn-transparent btn-sm" type="submit" name="use_affiliate" value="[`Use bonus`]">
+                            {/if}
+                        </div>
+                    </div>
+                {/if}
+
+                {if shopAffiliate::isEnabled() && !empty($add_affiliate_bonus)}
+                    <div class="affiliate-hint-wrapper" id="affiliate-hint-wrapper">
+                        {sprintf("[`This order will add <strong>+%s bonuses</strong> to  your account, which you will be able to spend on getting additional discounts later.`]", $add_affiliate_bonus)}
+                    </div>
+                {/if}
+
+                {* CHECKOUT *}
+                <div class="s-cart-checkout">
+                    {if class_exists('shopStorequickorderPlugin')}
+                        {shopStorequickorderPlugin::cart_button()}
+                    {/if}
+                    <input class="btn btn-default" name="checkout" type="submit" value="[`Proceed to checkout`] &rarr;">
+                </div>
+                
+                <div class="s-checkout-featured">
+                    {$availabe_options = $wa->shop->payment()}
+                    {$_cnt = 0}
+                    {foreach $availabe_options as $option name=options}
+                        {if $_cnt == 8}{break}{/if}
+                        {if $option.logo}
+                            <img src="{$option.logo}" alt="{$option.name}">
+                            {$_cnt = $_cnt + 1}
+                        {/if}
+                    {/foreach}
+                </div>
+                
+            </div>
+
+            {* @event frontend_cart.%plugin_id% *}
+            {foreach $frontend_cart as $_}{$_}{/foreach}
+        </form>
+
+        {* RELATED PRODUCT LIST *}
+        {$related = $wa->shop->crossSelling($cart.items, 'product_id')}
+        {if !empty($related)}
+            <div class="s-related-products">
+                <h3 class="s-related-header">[`Recommended`]</h3>
+                {include file="./list-thumbs-slider.html" products=$related inline}
+            </div>
+        {/if}
+
+    {/if}
+
+</div>
+
+{$currency_info = waCurrency::getInfo($wa->shop->currency())}
+{$locale = waLocale::getInfo($wa->locale())}
+
+{if !isset($currency_info['sign_position'])}{$currency_info['sign_position'] = " "}{/if}
+{if !isset($currency_info['sign_delim'])}{$currency_info['sign_delim'] = 1}{/if}
+{if !isset($currency_info['sign_html'])}{$currency_info['sign_html'] = $currency_info['sign']}{/if}
+{$currency_info['decimal_point'] = $locale['decimal_point']}
+{$currency_info['frac_digits']  = $locale['frac_digits']}
+{$currency_info['thousands_sep'] = $locale['thousands_sep']}
+
+<script>
+( function($) {
+    var js_href = "{$wa_theme_url}js/cart.js",
+        is_loaded = (typeof Cart == "function");
+
+    (is_loaded) ? initCart() :  $.getScript(js_href, initCart);
+
+    function initCart() {
+        new Cart({
+            $wrapper: $(".s-cart-page"),
+            currency: {json_encode($currency_info)}
+        });
+    }
+
+})(jQuery);
+</script>
+
+{/strip}

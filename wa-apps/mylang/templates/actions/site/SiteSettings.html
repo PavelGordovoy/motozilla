@@ -1,0 +1,28 @@
+<div class="block">
+    <h1>[`Site settings`]</h1>
+    <div class="fields form">
+        <form action="?module=settings&action=save" method="post" id="plugins-settings-form" enctype="multipart/form-data" target="plugins-settings-iframe">
+            {$wa->csrf()}
+            <input type="hidden" name="action" value="sitesettings"/>
+            <div class="field">
+                <div class="name">
+                    <label>[`Filter pages`]</label>
+                </div>
+                <div class="value">
+                    <label><input type="checkbox" name="filterpages" value="1" {if $settings.filterpages|default:0} checked {/if}/> [`Filter pages by locale`]</label><br>
+                    <span class="hint">[`By default pages are shown as is.`]</span>
+                </div>
+            </div>
+            <div class="field">
+                <div class="field">
+                    <div class="value submit">
+                        <input type="submit" class="button green" value="[`Save`]">
+                        <span id="mylang-settings-form-status" style=""></span>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <iframe style="display:none" name="plugins-settings-iframe" id="plugins-settings-iframe"></iframe>
+    </div>
+    <div class="clear-left"></div>
+</div>

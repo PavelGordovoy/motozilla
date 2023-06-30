@@ -1,0 +1,14 @@
+d13f3444c197b74eb0110e53814b90dd *img/attr/attr.png
+5f8b48769e9cf4ade0ae27a4d84bdd5f *img/microsoft.png
+a1751e1f10a3b96b05d0401c97e72008 *lib/.htaccess
+fc25efdd0f4e0fa7ca9af1a723c4609b *lib/classes/mylangMicrosoftPluginTranslate.class.php
+6d89453c824aa8d13138f129b18abc91 *lib/config/install.php
+6e247e64144a4110b629bab11946b9b6 *lib/config/plugin.php
+b4888d49511a339692b9fb188851bd67 *lib/config/requirements.php
+50d7a20b2c57e60baf3393d432032a3e *lib/config/settings.php
+6b255325879ee9291b93c1189142d5d5 *lib/mylangMicrosoftPlugin.class.php
+a1751e1f10a3b96b05d0401c97e72008 *locale/.htaccess
+9a4ee681ff9d01e3321825f4a1f267e4 *locale/en_US/LC_MESSAGES/mylang_microsoft.mo
+cad83e9a71902de83312bcc9b9d7e406 *locale/en_US/LC_MESSAGES/mylang_microsoft.po
+0d7875d03b77fe6f1eafad85f126efaf *locale/ru_RU/LC_MESSAGES/mylang_microsoft.mo
+19b894ccde8ba827d6eb91731515e332 *locale/ru_RU/LC_MESSAGES/mylang_microsoft.po

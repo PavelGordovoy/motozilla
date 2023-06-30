@@ -1,0 +1,218 @@
+<link rel="stylesheet" href="{$wa_url}wa-content/js/redactor/2/redactor.css">
+<script src="{$wa_url}wa-content/js/redactor/2/redactor.min.js?v={$wa->version()}"></script>
+{if $lang != 'en'}
+<script src="{$wa_url}wa-content/js/redactor/2/{$lang}.js"></script>
+{/if}
+
+{if $wa->get('addJs')}
+<script src="{$wa_app_static_url}js/form/notifications.js"></script>
+{/if}
+
+<div class="block notifications-tab">
+    <form action="?module=form&action=notificationsSave" method="post" id="s-form-notifications-save" class="submit-fixed">
+        <div class="margin-block large header"><span><i class="icon16 email"></i></span> <b>[`Email notifications`]</b></div>
+        <div class="fields">
+            <div class="field">
+                <div class="name">[`Your email`]</div>
+                <div class="value">
+                    <input type="text" name="email" value="{if !empty($form.email)}{$form.email|escape}{/if}" style="width: 60%"/>
+                    <div class="margin-block">[`Use commas to separate emails. Limit: 10 emails`]</div>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">[`Reply to`]</div>
+                <div class="value">
+                    {if $email_fields}
+                    <select name="reply_to">
+                        <option value="0">[`* * * Select field * * *`]</option>
+                        {foreach $email_fields as $e}
+                        {if !empty($e.unique_id)}{$email_id = $e.unique_id}{else}{$email_id = $e.id}{/if}
+                        <option value="{$email_id}"{if !empty($form.reply_to) && $form.reply_to == $email_id} selected{/if}>{if $e.title}{$e.title|escape}{else}[`Field`]_{$email_id}{/if}</option>
+                        {/foreach}
+                    </select>
+                    {else}
+                    <a href="#/page/edit/{$form.id}/" title="[`Create email field`]"><i class="icon16 add"></i> [`Create email field`]</a>, [`if you want to reply to user`].
+                    {/if}
+                    <div class="margin-block">[`Select the email field you want to reply to`]</div>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">[`Send emails about`]</div>
+                <div class="value">
+                    <label><input type="checkbox" name="new_records" value="1"{if !empty($form.new_records) || !isset($form.new_records)} checked{/if} /> [`New records`]</label>
+                    <label><input type="checkbox" name="new_comments" value="1"{if !empty($form.new_comments)} checked{/if} /> [`New comments`]</label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">[`Cancel notifications when editing a record in backend`]</div>
+                <div class="value">
+                    <label><input type="checkbox" name="cancel_backend_notifications" value="1"{if !isset($form.cancel_backend_notifications) || !empty($form.cancel_backend_notifications)} checked{/if} /></label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">[`Email sender`]</div>
+                <div class="value">
+                    <input type="text" name="email_sender" class='f-email-sender-field' value="{if !empty($form.email_sender)}{$form.email_sender|escape}{/if}" />
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">[`Sender name (field "From:" in your mail box)`]</div>
+                <div class="value">
+                    <div class="margin-block semi bottom">
+                        <span class="small">[`Records`]:</span>
+                        <input type="text" name="email_sender_name_record" value="{if !empty($form.email_sender_name_record)}{$form.email_sender_name_record|escape}{/if}" />
+                    </div>
+                    <div class="margin-block semi bottom">
+                        <span class="small">[`Comments`]:</span>
+                        <input type="text" name="email_sender_name_comment" value="{if !empty($form.email_sender_name_comment)}{$form.email_sender_name_comment|escape}{/if}" />
+                    </div>
+                    <div class="margin-block">[`You can use <a href='#/get/templateVars/' class='js-action' title='template vars'>template vars</a>`]</div>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">[`Message subject`]</div>
+                <div class="value">
+                    <div class="margin-block semi bottom">
+                        <span class="small">[`Records`]:</span>
+                        <input type="text" style="width: 60%" name="email_subject_record" value="{if !empty($form.email_subject_record)}{$form.email_subject_record|escape}{else}[`You've got new notification`]: {literal}{Request:ID}{/literal}{/if}" />
+                    </div>
+                    <div class="margin-block semi bottom">
+                        <span class="small">[`Comments`]:</span>
+                        <input type="text" style="width: 60%" name="email_subject_comment" value="{if !empty($form.email_subject_comment)}{$form.email_subject_comment|escape}{else}[`New comment on record`]: {literal}{Request:ID}{/literal}{/if}" />
+                    </div>
+                    <div class="margin-block">[`You can use <a href='#/get/templateVars/' class='js-action' title='template vars'>template vars</a>`]</div>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">[`Email CC`]</div>
+                <div class="value">
+                    <input type="text" name="email_cc" value="{if !empty($form.email_cc)}{$form.email_cc|escape}{/if}" />
+                    <div class="margin-block">[`Send message copy to email recipients. The list of CCed recipients is visible to all other recipients of the message.`]
+                        <br>[`Use commas to separate emails. Limit: 10 emails`]
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">[`Email BCC`]</div>
+                <div class="value">
+                    <input type="text" name="email_bcc" value="{if !empty($form.email_bcc)}{$form.email_bcc|escape}{/if}" />
+                    <div class="margin-block">[`Send message copy to email recipients. The list of BCCed recipients are not shown to any other recipient's.`]
+                        <br>[`Use commas to separate emails. Limit: 10 emails`]
+                    </div>
+                </div>
+            </div>
+            <div class="field margin-block">
+                <label><input type="checkbox" name="email_attachments" value="1"{if !empty($form.email_attachments)} checked{/if} /> [`Allow attaching files to email notification`]</label>
+            </div>
+            <div class="field margin-block">
+                <label><input type="checkbox" name="plain_text" value="1"{if !empty($form.plain_text)} checked{/if} /> [`Send emails in plain text`]</label>
+            </div>
+            <div class="field" style="max-width: 1000px;">
+                <div class="name">[`Customize email template`]</div>
+                <div class="value">
+                    <textarea name="email_notification" class="redactor-editor">{if !empty($form.email_notification)}{$form.email_notification|escape}{/if}</textarea>
+                    <div class="margin-block">[`You can use <a href='#/get/templateVars/' class='js-action' title='template vars'>template vars</a>`]</div>
+                    <div class="margin-block">[`Leave it blank, if you want to use default template`]</div>
+                </div>
+            </div>
+            {if multiformHelper::notificationsAccess() >= 3}
+                <div class="field submit-block">
+                    <input type="hidden" value="{$form.id}" name="id" />
+                    <input type="submit" value="[`Save`]" class="button green" />
+                    <div class="errormsg"></div>
+                </div>
+            {/if}
+        </div>
+        <div class="fields" style="margin-top: 20px">
+            <div class="margin-block large header"><span><i class="icon16 mobile"></i></span> <b>[`SMS notifications`]</b></div>
+            <div class="field">
+                <div class="name">[`Your phone number`]</div>
+                <div class="value">
+                    <input type="text" name="sms_phone" value="{if !empty($form.sms_phone)}{$form.sms_phone|escape}{/if}" />
+                </div>
+            </div>
+            <div class="field">
+                {if count($sms_adapters)}
+                    {foreach $sms_adapters as $i => $a}
+                    <div class="margin-block bottom">
+                        <input name="sms[{$i}][adapter]" type="hidden" value="{$a.id}">
+                        <strong><i class="icon16" style="background-image: url('{$a.icon}');"></i>{$a.name}</strong><br>
+                        <div class="field">
+                            <div class="name">{if isset($a.controls.from.title)}{$a.controls.from.title}{else}[`Sender IDs`]{/if}</div>
+                            <div class="value">
+                                {strip}
+                                <textarea name="sms[{$i}][from]">
+                                    {if !empty($a.config.from)}{implode("\n", $a.config.from)}{/if}
+                                </textarea>
+                                {/strip}
+                                <p class="hint">{if isset($a.controls.from.description)}{$a.controls.from.description}{else}[`Enter Sender IDs to use with this SMS gateway (Sender ID is either your phone number or up-to-11-characters text label). Enter * to use default Sender ID issued for your account by the gateway.`]{/if}</p>
+                            </div>
+                        </div>
+                        {foreach $a.controls as $k => $v}
+                        {if $k != 'from'}
+                        <div class="field">
+                            <div class="name">{$v.title}</div>
+                            <div class="value">
+                                {if ifset($v.control_type) == 'checkbox'}
+                                <input type="hidden" name="sms[{$i}][{$k}]" value="">
+                                <input type="checkbox" name="sms[{$i}][{$k}]" value="1" {if !empty($a.config[$k])}checked{/if}>
+                                {else}
+                                <input type="text" name="sms[{$i}][{$k}]" value="{if !empty($a.config[$k])}{$a.config[$k]|escape}{/if}">
+                                {/if}
+                                {if !empty($v.description)}
+                                <p class="hint">{$v.description}</p>
+                                {/if}
+                            </div>
+                        </div>
+                        {/if}
+                        {/foreach}
+                    </div>
+                    {/foreach}
+                {else}
+                    <div class="value no-shift">
+                        <p>
+                            {sprintf('[`To enable SMS message sending, install and configure sending plugin for your preferred SMS gateway.<br /> <a href="%s">Browse for SMS gateway plugins</a> in Installer app.`]', $wa_backend_url|cat:'installer/#/plugins/wa-plugins/sms/')}
+                        </p>
+                    </div>
+                {/if}
+            </div>
+            <div class="field">
+                <div class="name">[`Send from`]</div>
+                <div class="value">
+                    <select class="notification-from" name="sms_from">
+                        {$cnt = count($sms_from)}
+                        <option value="" {if empty($form.sms_from)}selected{/if}>[`Default (as configured in SMS gateway)`]</option>
+                        {if $cnt >= 1 && !($cnt == 1 && isset($sms_from["*"]))}
+                            {foreach $sms_from as $from => $value}
+                                <option value="{$from}" {if !empty($form.sms_from) && $form.sms_from == $from}selected{/if}>{$from}</option>
+                            {/foreach}
+                        {/if}
+                    </select>
+                    {if !empty($form.sms_from) && !isset($sms_from[$form.sms_from])}
+                        <input type="text" name="sms_from" value="{$form.sms_from}">
+                    {/if}
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">[`Send sms about`]</div>
+                <div class="value">
+                    <label><input type="checkbox" name="new_records_sms" value="1"{if !empty($form.new_records_sms)} checked{/if} /> [`New records`]</label>
+                    <label><input type="checkbox" name="new_comments_sms" value="1"{if !empty($form.new_comments_sms)} checked{/if} /> [`New comments`]</label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="name">[`Customize sms template`]</div>
+                <div class="value">
+                    <textarea name="sms_notification">{if !empty($form.sms_notification)}{$form.sms_notification|escape}{elseif !isset($form.sms_notification)}[`You've got new notification`]: {literal}{Request:ID}{/literal}{/if}</textarea>
+                    <p class="hint">[`Max 300 symbols`]</p>
+                    <div class="margin-block">[`You can use <a href='#/get/templateVars/' class='js-action' title='template vars'>template vars</a>`]</div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    $(function () {
+        $.form_notifications.initPageNotifications();
+    });
+</script>

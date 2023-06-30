@@ -1,0 +1,24 @@
+<div>
+    <h1>[`Sign up`]</h1>
+    {if $keys}
+        <div>
+            <h3>[`You have custom fields names available only for 1 language:`]</h3>
+            <ul>
+                {foreach $keys as $key}
+                    <li>{$key}</li>
+                {/foreach}
+            </ul>
+            <input type="button" class="button green" id="fixauth" value="[`Use default`]"/>
+            <span class="hint">[`Names will be changed to use system translations.`]</span>
+        </div>
+    {else}
+        <h4><i class="icon16 yes"></i> [`You have default auth settings and all fields use system translations.`]</h4>
+    {/if}
+</div>
+<script>
+    $('#fixauth').on('click', function(){
+        $.post('?module=sitejs','action=fixauth', function(){
+            $.mylang.authAction();
+        });
+    });
+</script>

@@ -1,0 +1,25 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Webasyst Blog My Posts plugin 1.0.0.17573 UA translation v 0.1\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: /wa-apps/blog/plugins/myposts/lib/blogMyposts.plugin.php:22
+msgid "Posts by me"
+msgstr "Записи, зроблені мною"
+
+#: /wa-apps/blog/plugins/myposts/lib/blogMyposts.plugin.php:43
+#: /wa-apps/blog/plugins/myposts/lib/config/plugin.php:4
+msgid "My posts"
+msgstr "Мої записи"
+
+#: /wa-apps/blog/plugins/myposts/lib/config/plugin.php:5
+msgid "Backend filtering for self-authored posts"
+msgstr "Фільтрація за власними записами у бекенді"

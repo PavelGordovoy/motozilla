@@ -1,0 +1,113 @@
+<div class="contacts-background">
+	<div class="block not-padded c-core-content">
+		<div class="block">
+			<div class="c-actions-wrapper"></div>
+			<h1 class="wa-page-heading">[`Export to SendPulse`]</h1>
+		</div>
+		<div id="sendpulse-preexport-container" class="tab-content sendpulse_tab_content">
+			<form id="sendpulse_preexport_form" action="?plugin=sendpulse&action=export2" method="post">
+				<div class="block not-padded contacts-data">
+				    <div class="block double-padded">
+						<div class="fields form">
+							<div class="field">
+								<div class="name">
+									<label>[`Categories for export`]</label>
+								</div>							
+								<div class="value">
+									<label class="check_all_cats_label">
+										<input 
+										id="check_all_cats" data-checked-title="[`Check all`]" data-unchecked-title="[`Check all`]"  type="checkbox">
+										<span>
+											[`Check all`] 
+										</span>
+									</label>
+								</div>	
+								{foreach from=$categories item=cat}
+									<div class="value">
+										<label>
+											<input 
+											{if $cat.cnt == 0}
+											disabled
+											{/if}					
+											class="category" name="categories[]" value="{$cat.id}" type="checkbox">
+												{$cat.name}
+										</label>
+										&nbsp;&nbsp;&nbsp;
+										<span class="count">{$cat.cnt}</span>
+									</div>
+								{/foreach}
+							</div>
+
+							<div class="field sendpulse_progressbar_field">
+								<div class="value">
+									<div class="progressbar small yellow" style="width: 100%; display: none; ">
+									  <div class="progressbar-outer" style="overflow: hidden;">
+										<div class="progressbar-inner" id="sendpulse-progressbar" style="width: 0%;">
+										</div>
+									  </div>
+									</div>
+								</div>
+							</div>	
+						
+						    <div class="field on_save_error"></div>
+							<div class="field margintop20">
+				                <div class="value submit">
+				                    <input type="submit" class="button green" disabled value="[`Export`]">
+									<input type="button" style="display: none;"  class="button button_stop red" value="[`cancel`]">
+				                    <i class="icon16 loading" style="display: none;"></i>
+				                    <div class="dialog_complete_outer"></div>
+				                </div>
+				            </div>
+						</div>
+					</div>
+				</div>
+				{$wa->csrf()}
+
+			</form>
+		</div>
+	</div>
+	<div class="clear-left"></div>
+</div>
+{if false}
+<h1>[`Export to SendPulse`]</h1>
+<div class="fields form s-dialog-form">
+	<div class="field" id="sendpulse-export">
+		<div class="name">
+			[`Categories for export`]
+		</div>
+	
+		<div class="value">
+			<label class="check_all_cats_label">
+				<input  
+				id="check_all_cats" data-checked-title="[`Uncheck all`]" data-unchecked-title="[`Check all`]"  type="checkbox">
+				<span>
+					[`Check all`]
+				</span>
+			</label>
+			{foreach from=$categories item=cat}
+				<label>
+					<input 
+					{if $cat.cnt > 0}
+					 
+					{/if}
+					{if $cat.cnt == 0}
+					disabled
+					{/if}										
+					class="category" name="categories[]" value="{$cat.id}" type="checkbox">
+						{$cat.name}
+						<span class="count">{$cat.cnt}</span>
+				</label>
+			{/foreach}
+		</div>
+	</div>
+
+	<div class="field sendpulse_progressbar_field">
+		<div class="progressbar small yellow" style="width: 100%; display: none; ">
+		  <div class="progressbar-outer" style="overflow: hidden;">
+			<div class="progressbar-inner" id="sendpulse-progressbar" style="width: 0%;">
+			</div>
+		  </div>
+		</div>
+	</div>	
+</div>
+{/if}

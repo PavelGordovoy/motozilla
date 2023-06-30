@@ -1,0 +1,38 @@
+{$is_schema_org = $theme_settings.schema_org_active}
+{if $post.album.photos}
+{strip}
+    <div class="photo-album-attachment">
+        {foreach $post.album.photos as $p}
+            <figure{if !empty($is_schema_org)} itemscope itemtype ="http://schema.org/Photograph"{/if} class="photo">
+                {if $p.description}
+                    {if $p.description|strstr:'<p>'}
+                        <div{if !empty($is_schema_org)} itemprop="description"{/if}>{$p.description}</div>
+                    {else}
+                        <p{if !empty($is_schema_org)} itemprop="description"{/if}>{$p.description}</p>
+                    {/if}
+                {/if}
+                <input type="hidden" name="photo{$p.id}" />
+                <img src="{$p.thumb_big.url}" class="retinify" alt="{$p.name|escape}">
+            </figure>
+        {/foreach}
+    </div>
+{/strip}
+    {if blogPhotosBridge::is2xEnabled()}
+        <script>$(function() { "use strict";
+            if ($.Retina) {
+                retinify();
+            } else {
+                $.ajax({ // Load JS script, making sure it WILL get cached in non-debug mode
+                      dataType: "script",
+                      url: "{$wa_static_url}wa-content/js/jquery-plugins/jquery.retina.min.js?{$wa->version(true)}",
+                      cache: true
+                }).done(retinify);
+            }
+
+            function retinify() {
+                $.Retina && $('img.retinify').retina();
+            }
+        });</script>
+    {/if}
+{/if}
+

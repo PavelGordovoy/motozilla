@@ -1,0 +1,19 @@
+{strip}
+{$current_per_page = $wa->cookie('products_per_page')}{if empty($current_per_page)}{$current_per_page = 30}{/if}
+<div class="category-onpage">
+    <span class="category-onpage__title">[`Show by`]:</span>
+    <div class="js-drop-down-list drop-down-list">
+        <span class="js-drop-down-toggle drop-down-list__toggle">
+            {$current_per_page}
+            <span class="drop-down-list__caret"></span>
+        </span>
+        <ul class="js-drop-down-items drop-down-list__items">
+            {foreach [30,60,90] as $count}
+                <li data-count="{$count}" class="js-select-per-page drop-down-list__item{if $current_per_page == $count} selected{/if}">
+                    {$count}
+                </li>
+            {/foreach}
+        </ul>
+    </div>
+</div>
+{/strip}

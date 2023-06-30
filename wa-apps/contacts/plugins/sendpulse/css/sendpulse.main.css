@@ -1,0 +1,33 @@
+.icon16.sendpulse{
+	background: url("/wa-apps/contacts/plugins/sendpulse/img/16.png");
+}
+.dialog-content .count{
+	margin-left: 40px;
+}
+.dialog_complete_outer{
+	display: inline-block;
+}
+#sendpulse-export .value label, #sendpulse-import .value label{
+	display: block;
+	margin-bottom: 10px;
+}
+#sendpulse-export .value label.check_all_cats_label, #sendpulse-import .value label.check_all_cats_label{
+	color: #888;
+	margin-bottom: 15px;
+}
+.on_save_error{
+	color: red;
+	padding-bottom: 10px;
+	display: inline-block;
+}
+.on_save_error:empty{
+	display: none;
+}
+
+.margintop20{
+	margin-top: 20px;
+}
+.sendpulse_tab_content .value{
+	min-width: 400px;
+}
+

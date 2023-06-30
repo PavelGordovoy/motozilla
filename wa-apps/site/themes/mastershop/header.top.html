@@ -1,0 +1,64 @@
+{strip}
+{$is_mobile = ($wa->isMobile() && ($wa->cookie("is_desktop_for_mobile") != 1 || !$theme_settings.switch_version))}
+{$isButtonSeoRegionsPlugin = ($wa->shop && $theme_settings.use_region_plugin == 'seo_regions' && class_exists('shopRegionsViewHelper'))}
+{$isButtonCitySelectPlugin = ($wa->shop && $theme_settings.use_region_plugin == 'cityselect' && class_exists('shopCityselectPlugin'))}
+{$isButtonRegionsMobile = ($isButtonSeoRegionsPlugin || $isButtonCitySelectPlugin) && $wa->isMobile() && $theme_settings.mobile_region_plugin_button == 'header_top'}
+{$isButtonRegionsDesktop = ($isButtonSeoRegionsPlugin || $isButtonCitySelectPlugin) && !$wa->isMobile() && $theme_settings.desktop_region_plugin_button == 'header_top'}
+
+{$fixed_header_top = !empty($is_mobile) && !empty($theme_settings.mobile_fixed_mobile)}
+<div class="js-header-top{if $is_mobile} js-m-header-top{/if} header-top"{if $fixed_header_top} data-fixed="true"{/if}>
+    <div class="l-wrapper clearfix js-header-top-inner">
+        <div class="header-top__right">
+
+            {* mobile search button *}
+            {if $wa->shop}<span data-id="popup-search" class="js-open-m-popup header-open-search far fa-search"></span>{/if}
+
+            {* region button *}
+            {if $isButtonRegionsMobile || $isButtonRegionsDesktop}
+                {if $isButtonSeoRegionsPlugin}
+                    <div class="header-region">{shopRegionsViewHelper::getWindow()}</div>
+                {else if $isButtonCitySelectPlugin}
+                    <div class="header-region">{shopCityselectPlugin::showCity('0')}</div>
+                {/if}
+            {/if}
+
+            {* auth menu *}
+            {include file="`$parent_theme_path`/header.top.auth.html"}
+
+            {* mobile contacts button *}
+            <span data-id="popup-contacts" class="js-open-m-popup header-open-contacts fas fa-phone"></span>
+
+            {* callback button *}
+            {if !empty($theme_settings.plugin_callback)}
+                {$js_class = ''}
+                {if $wa->shop && class_exists('shopSkcallbackHelper') && $theme_settings.plugin_callback == 'skcallback'}
+                    {$js_class = 'js-sk-callback-open'}
+                {else if $theme_settings.plugin_callback == 'other' || $theme_settings.plugin_callback == 'callb'}
+                    {$js_class = 'js-callback-open'}
+                {/if}
+                <span class="header-callback{if $js_class} {$js_class}{/if}">
+                    <i class="header-callback__icon fas fa-phone"></i>
+                    <span class="header-callback__title">[`Order call`]</span>
+                </span>
+            {/if}
+
+            {* mobile cart *}
+            {if empty($theme_settings.cart_hide)}
+                {include file="`$parent_theme_path`/header.top.cart.html"}
+            {/if}
+        </div>
+
+        <i data-id="m-header-menu" class="header-menu__bar js-open-mobile-menu fal fa-bars{if $wa->isMobile()} show-mobile{/if}"></i>
+        {if !$is_mobile}
+            {include file="`$parent_theme_path`/header.top.menu.html" is_mobile_menu=false}
+        {/if}
+
+        {if $is_mobile && $theme_settings.logo_mobile_place == 'header_top'}
+            {include file="`$parent_theme_path`/header.logo.html"}
+        {/if}
+    </div>
+</div>
+{if $is_mobile}
+    {include file="`$parent_theme_path`/header.top.menu.html" is_mobile_menu=true}
+{/if}
+{/strip}

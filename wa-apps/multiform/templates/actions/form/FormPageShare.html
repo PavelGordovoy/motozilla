@@ -1,0 +1,140 @@
+{if $wa->get('addJs')}
+<script src="{$wa_app_static_url}js/form/share.js"></script>
+{/if}
+
+<div class="block share-tab">
+    <div class="fields style-1">
+        <div class="large align-center margin-block bold">[`Embed your form`]</div>
+        <div class="field cloud-style with-tabs">
+            <div class="name"><a href="#/change/CloudTab/" class="js-action s-field-tab-name" data-tab="javascript">[`Embed with Javascript`]</a></div>
+            <div class="name inactive"><a href="#/change/CloudTab/" class="js-action s-field-tab-name" data-tab="iframe">[`Embed with iFrame`]</a></div>
+            <div class="name inactive"><a href="#/change/CloudTab/" class="js-action s-field-tab-name" data-tab="webasyst">[`Embed on Webasyst`]</a></div>
+            <div class="value">
+                <div class="s-javascript-tab f-tab" data-tab='javascript'>
+                    <p>[`Use this code to place your form into other websites.`]</p>
+                    <div class="content">
+                        <form>
+                            <textarea id="jsEmbedCode" onclick="this.form.jsEmbedCode.focus();this.form.jsEmbedCode.select();">{strip}
+<div id="multiform-{$form.hash}">
+    {sprintf('[`Fill out my <a href="%s" title="%s">%s</a>.`]', $wa->getUrl('multiform/frontend', ['url' => $form.hash, 'domain' => $domain], true), "[`online form`]", "[`online form`]")}
+</div>
+<script>
+    var f{$form.hash};
+    (function (d, t) { &nbsp;
+        var s = d.createElement(t), options = { &nbsp;
+            'formHash': '{$form.hash}',
+            'async': true,
+            'ssl': 0,
+            'host': "{$host}",
+            'formId': '{$form.id}',
+            'width': 500,
+            'height': 500,
+            'src': "{$wa->getUrl('multiform/frontend', ['url' => $form.hash, 'domain' => $domain], true)}" &nbsp;
+        };
+        s.src = "{$wa->url(true)}wa-apps/multiform/js/embed/form.js";
+        var called = 0;
+        var fn = function () { &nbsp;
+            called = 1;
+            f{$form.hash} = new multiformForm();
+            f{$form.hash}.init(options);&nbsp;
+        };
+        if (document.readyState === 'complete') { &nbsp;
+            fn();&nbsp;
+        } else if (window.addEventListener) { &nbsp;
+            window.addEventListener("load", function () { &nbsp;
+                fn();&nbsp;
+            });&nbsp;
+        } else if (window.attachEvent) { &nbsp;
+            window.attachEvent("onload", function () { &nbsp;
+                fn();&nbsp;
+            });&nbsp;
+        } else { &nbsp;
+            setTimeout(function () { &nbsp;
+                fn();&nbsp;
+            }, 1000);&nbsp;
+        }
+        setTimeout(function () { &nbsp;
+            if (!called) { &nbsp;
+                fn();&nbsp;
+            }&nbsp;
+        }, 5000);
+        var scr = d.getElementsByTagName(t)[0], par = scr.parentNode;
+        par.insertBefore(s, scr); &nbsp;
+    })(document, 'script');
+</script>
+                            {/strip}</textarea>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="s-iframe-tab f-tab" data-tab='iframe' style="display: none">
+                    <p class="margin-block bottom">[`Use this iframe code to place your form into pages where <b>JavaScript is unavailable</b>.`]</p>
+                    <div class="margin-block bottom">
+                        <form>
+                            <div class="field">
+                                <div class="float-left">[`iFrame height`]</div>
+                                <div style="margin-left: 155px;"><input type="text" value="500" class="f-height width50px" placeholder="500" /></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="content">
+                        <form>
+                            {$form_link = $wa->getUrl('multiform/frontend', ['url' => $form.hash, 'domain' => $domain], true)}
+                            <textarea id="iframeEmbedCode" onclick="this.form.iframeEmbedCode.focus();this.form.iframeEmbedCode.select();">{strip}
+<div id="multiform-{$form.hash}">
+    <iframe id="multiformForm-frame-{$form.hash}" height="500" scrolling="auto" src="{$wa->getUrl('multiform/frontend', ['url' => $form.hash, 'domain' => $domain], true)}?nojs=1" width="500" style="width: 100%; border: 0px none;">
+       [`Fill out my`] <a href="{$form_link}" title="[`online form`]">[`online form`]</a>.
+    </iframe>
+</div>
+                            {/strip}</textarea>
+                        </form>
+                    </div>
+                </div>
+                <div class="s-webasyst-tab f-tab" data-tab='webasyst' style="display: none">
+                    <p>[`Use this code to place your form into Webasyst template or page, where Smarty is available.`]</p>
+                    <div class="content">
+                        <form>
+                            <textarea id="waEmbedCode" onclick="this.form.waEmbedCode.focus();this.form.waEmbedCode.select();">{strip}
+&#123;$wa->multiform->form({$form.id})&#125;
+                            {/strip}</textarea>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="large align-center margin-block bold" style="margin-top: 20px;">[`Share a link`]</div>
+        <div class="field cloud-style with-tabs">
+            <div class="name"><a href="#/change/CloudTab/" class="js-action s-field-tab-name" data-tab="permanent">[`Permanent link`]</a></div>
+            {if $form.url}
+                <div class="name inactive"><a href="#/change/CloudTab/" class="js-action s-field-tab-name" data-tab="url">[`Form ID link`]</a></div>
+            {/if}
+            <div class="value">
+                <div class="s-permanent-tab f-tab" data-tab='permanent'>
+                    <div class="content">
+                        <form>
+                            <textarea id="waPermanentCode" onclick="this.form.waPermanentCode.focus();this.form.waPermanentCode.select();">{strip}
+{$wa->getUrl('multiform/frontend', ['url' => $form.hash, 'domain' => $domain], true)}
+                            {/strip}</textarea>
+                        </form>
+                    </div>
+                </div>
+                {if $form.url}
+                    <div class="s-url-tab f-tab" data-tab='url' style="display: none">
+                        <div class="content">
+                            <form>
+                                <textarea id="waUrlCode" onclick="this.form.waUrlCode.focus();this.form.waUrlCode.select();">{strip}
+    {$wa->getUrl('multiform/frontend', ['url' => $form.url, 'domain' => $domain], true)}
+                                {/strip}</textarea>
+                            </form>
+                        </div>
+                    </div>
+                {/if}
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $.form_share.initPageShare();
+    });
+</script>

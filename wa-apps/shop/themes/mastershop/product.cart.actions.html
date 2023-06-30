@@ -1,0 +1,52 @@
+{strip}
+<div class="product-card__actions-rating">
+    {if $theme_settings.show_product_rates}
+        <div class="product-card__rating">
+            {if !empty($product.rating) && $product.rating > 0}
+                <span class="rating nowrap"{if $is_schema_org} itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"{/if}>
+                    {$wa->shop->ratingHtml($product.rating, 10)}
+                    {if $is_schema_org && !empty($product.rating_count)}
+                        <span itemprop="ratingValue" style="display: none;">{$product.rating}</span>
+                        <span itemprop="reviewCount" style="display: none;">{$product.rating_count}</span>
+                    {/if}
+                </span>
+                {if !empty($reviews_total_count)}
+                    {if $is_dialog}
+                        <span class="product-card__count-reviews">
+                            ({_w('%d review','%d reviews ', $reviews_total_count)})
+                        </span>
+                    {else}
+                        <span class="js-move-to-tab product-card__count-reviews" data-tab-content="product-reviews">
+                            {_w('%d review','%d reviews ', $reviews_total_count)}
+                        </span>
+                    {/if}
+                {/if}
+            {else}
+                <span class="product-card__rating rating nowrap">
+                    <i class="icon10 star-empty"></i>
+                    <i class="icon10 star-empty"></i>
+                    <i class="icon10 star-empty"></i>
+                    <i class="icon10 star-empty"></i>
+                    <i class="icon10 star-empty"></i>
+                </span>
+            {/if}
+        </div>
+    {/if}
+
+    {if ($theme_settings.favorites_products || $theme_settings.compare_products) && !$is_dialog_select_options}
+        <div class="product-card__actions">
+            {if $theme_settings.favorites_products}
+                {$favorites = $wa->cookie('favorites_list')}
+                {if $favorites}{$favorites_list = ","|explode:$favorites}{else}{$favorites_list = []}{/if}
+                <i title="[`Add to favorite`]" class="js-add-to-favorites product-action fas fa-heart{if in_array($product.id, $favorites_list)} selected{/if}" data-product="{$product.id}"></i>
+            {/if}
+            {if $theme_settings.compare_products}
+                <i title="[`Add to compare`]" class="js-add-to-compare product-action fas fa-copy{if $wa->shop->inComparison($product.id)} selected{/if}" data-product="{$product.id}"></i>
+            {/if}
+        </div>
+    {/if}
+    {if $is_dialog_select_options}
+        {getDiscountCartOptions price=$product.price compare_price=$product.compare_price}
+    {/if}
+</div>
+{/strip}

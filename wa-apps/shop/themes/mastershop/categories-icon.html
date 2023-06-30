@@ -1,0 +1,40 @@
+{strip}
+{if count($categories) > 0}
+    {$is_retina = $theme_settings.categories_list_images_retina && !empty($skImages)}
+    {$is_lazy = $theme_settings.categories_list_images_lazy}
+    <div class="categories-icons-wrap js-categories-list" data-retina="{$is_retina}" data-lazy="{$is_lazy}">
+        <ul class="categories-icons">
+            {foreach $categories as $cat}
+                {if !empty($is_count_products) && !empty($is_count_products_with_subs)}
+                    {$cat.count = $wa->shop->productsCount("category/`$cat.id`")}
+                {/if}
+                <li class="categories-icons__item">
+                    <a class="categories-icons__inner js-category-link" href="{$cat.url|escape}">
+                        {$cat_icon = null}
+                        {if isset($Wmimages[$cat.id].icon)}
+                            {$cat_icon = $Wmimages[$cat.id].icon}
+                        {/if}
+                        {if isset($skImages[$cat.id].icon)}
+                            {$cat_icon = $skImages[$cat.id].icon}
+                        {/if}
+                        {if !empty($cat_icon)}
+                            <div class="categories-icons__image">
+                                {if $theme_settings.categories_list_images_lazy}
+                                    <img src="{$wa_theme_url}img/lazy-image.png" class="js-categories-item-image" data-src="{$cat_icon}"  alt="{$cat.name|escape}" />
+                                {else}
+                                    <img src="{$cat_icon}" class="js-categories-item-image" alt="{$cat.name|escape}" />
+                                {/if}
+                            </div>
+                        {/if}
+                        {$is_badge = (!empty($is_display_badge) && !empty($cat.params.badge_text) && !empty($cat.params.badge_class))}
+                        <div class="categories-icons__title">
+                            {$cat.name|escape}{if !empty($is_count_products) && !empty($cat.count)}<span class="categories-icons__count bs-color">{$cat.count}</span>{/if}
+                            {if $is_badge} <span class="cat-badge cat-badge--{$cat.params.badge_class}">{$cat.params.badge_text}</span>{/if}
+                        </div>
+                    </a>
+                </li>
+            {/foreach}
+        </ul>
+    </div>
+{/if}
+{/strip}

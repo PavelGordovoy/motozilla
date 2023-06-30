@@ -1,0 +1,654 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst Logs 1.3.1 UA translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2013-10-14 22:25+0400\n"
+"PO-Revision-Date: \n"
+"Language: uk_UA\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "No logs."
+msgstr "Немає логів."
+
+msgid "File is not accessible"
+msgstr "Файл недоступний"
+
+msgid "By directory"
+msgstr "За каталогами"
+
+msgid "By file size"
+msgstr "За розміром файлу"
+
+msgid "B,KB,MB,GB"
+msgstr "Б,КБ,МБ,ГБ"
+
+msgid "Logs"
+msgstr "Логи"
+
+msgid "cancel"
+msgstr "скасувати"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Delete file"
+msgstr "Видалити файл"
+
+msgid "Deletion of files and directories"
+msgstr "Видалення файлів і директорій"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "Download"
+msgstr "Скачати"
+
+msgid "By update time"
+msgstr "За часом оновлення"
+
+msgid "Choose a page"
+msgstr "Виберіть сторінку"
+
+msgid "View previous lines"
+msgstr "Перегляд попередніх рядків"
+
+msgid "View next lines"
+msgstr "Перегляд наступних рядків"
+
+msgid "Settings"
+msgstr "Налаштування"
+
+msgid "PHP error messages will be saved to file <tt>wa-log/<b>php.log</b></tt>."
+msgstr "Повідомлення про помилки PHP буде збережено у файл <tt>wa-log/<b>php.log</b></tt>."
+
+msgid "Cannot save changes due to insufficient write permissions for file <tt>%s</tt>."
+msgstr "Неможливо зберегти зміни з-за недостатніх прав на запис для файлу <tt>%s</tt>."
+
+msgid "Enable PHP error log"
+msgstr "Увімкнути вивід помилок PHP"
+
+msgid "no new records"
+msgstr "немає нових записів"
+
+msgid "View PHP info"
+msgstr "Дивитися інформацію про PHP"
+
+msgid "Settings management"
+msgstr "Керування налаштуваннями"
+
+msgid "Viewing of PHP configuration"
+msgstr "Перегляд конфігурації PHP"
+
+msgid "back"
+msgstr "назад"
+
+msgid "deleted file"
+msgstr "видалив файл"
+
+msgid "published file"
+msgstr "опублікував файл"
+
+msgid "unpublished file"
+msgstr "зняв файл з публікації"
+
+msgid "published PHP configuration page"
+msgstr "опублікував сторінку конфігурації PHP"
+
+msgid "unpublished PHP configuration page"
+msgstr "зняв з публікації сторінку конфігурації PHP"
+
+msgid "set password for published file"
+msgstr "встановив пароль для опублікованого файлу"
+
+msgid "set password for PHP configuration page"
+msgstr "встановив пароль для сторінки конфігурації PHP"
+
+msgid "removed password for PHP configuration page"
+msgstr "видалив пароль з сторінки конфігурації PHP"
+
+msgid "removed password for published file"
+msgstr "видалив пароль для опублікованого файлу"
+
+msgid "Keeping this option enabled for a long time may make your disk space occupied by large error logs! Use it only during a brief period of debugging."
+msgstr "Тривале зберігання цієї опції може заповнити ваш дисковий простір великими журналами помилок! Використовуйте його лише протягом короткого періоду налагодження."
+
+msgid "This setting will remain valid during 1 hour only (until %s), to prevent large error logs from occupying server disk space."
+msgstr "Цей параметр буде залишатися дійсним протягом 1 години (до %s), аби великі файли логів не займали диск."
+
+msgid "Re-enable it after this time expires, if necessary."
+msgstr "При необхідності повторно увімкніть його після цього терміну."
+
+msgid "Notify me on large logs size"
+msgstr "Повідомляти мене про великий розмір логів"
+
+msgid "Show indicator %s next to app icon in main menu when total logs size exceed 1&nbsp;GB."
+msgstr "Показати індикатор %s біля іконки програми в головному меню, коли загальний обсяг логів перевищує 1&nbsp;ГБ."
+
+msgid "1 GB+"
+msgstr "1 ГБ+"
+
+msgid "Reload list"
+msgstr "Поновити список"
+
+msgid "This setting will remain valid during 1 hour only, to prevent large error logs from occupying server disk space."
+msgstr "Цей параметр буде залишатися дійсним протягом 1 години, аби великі файли логів не займали диск."
+
+msgid "PHP errors will be logged without limitations, because “%s” is enabled <a href=\"%s\" target=\"_blank\">in&nbsp;system settings</a>."
+msgstr "Помилки PHP реєструються без обмежень, тому що <a href=\"%s\" target=\"_blank\">у&nbsp;системних налаштуваннях</a> увімкнено \"%s\"."
+
+msgid "To make PHP errors be logged only during 1 hour, disable \"%s\"."
+msgstr "Аби реєструвати помилки PHP на протязі тільки 1 години, вимкніть \"%s\"."
+
+msgid "This limitation will not be applied if you enable “%s” setting <a href=\"%s\" target=\"_blank\">in&nbsp;system settings</a>."
+msgstr "Це обмеження не буде застосовано, якщо ви включите \"%s\" <a href=\"%s\" target=\"_blank\">у&nbsp;системних налаштуваннях</a>."
+
+msgid "PHP errors will be logged during 1 hour only (until %s), to prevent large error logs from occupying server disk space."
+msgstr "Помилки PHP будуть реєструватися протягом 1 години (до %s), аби запобігти тому, що файли логів почнуть займати надо багато місця на сервері."
+
+msgid "Re-enable logging after this time expires, if necessary."
+msgstr "При необхідності повторно увімкніть запис логів після закінчення цього часу."
+
+msgid "PHP errors will be logged during 1 hour only, to prevent large error logs from occupying server disk space."
+msgstr "Помилки PHP будуть реєструватися протягом 1 години, аби запобігти тому, що файли логів почнуть займати надо багато місця на сервері."
+
+msgid "Function <tt>phpinfo()</tt> is not available on your server."
+msgstr "Функція <tt>phpinfo()</tt> не доступна на вашому сервері."
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "Cannot show PHP configuration."
+msgstr "Не вдається показати конфігурацію PHP."
+
+msgid "not published"
+msgstr "не опубліковано"
+
+msgid "published"
+msgstr "опубліковано"
+
+msgid "File %s is not published."
+msgstr "Файл %s не опубліковано."
+
+msgid "File %s does not exist."
+msgstr "Файл %s не існує."
+
+msgid "No routing rule to create public links to files. Add a <em>hidden</em> rule for Logs app in Site app’s “<a href=\"%s\">Structure</a>” section."
+msgstr "Немає правил маршрутизації для створення публічних посилань на файли. Додайте <em>приховане</em> правило для додатку «Логи» у розділі <a href=\"%s\">Структура</a> додатку «Сайт»."
+
+msgid "published file hint"
+msgstr "підказка опублікованого файлу"
+
+msgid "Insufficient access rights for user with id = %u to delete log files or directories."
+msgstr "Аби видалити файли журналів чи каталогів, у користувача з ID = %u недостатньо прав."
+
+msgid "%s item is not available for deletion."
+msgstr "%s елемент не доступний для видалення."
+
+msgid "Could not delete %s."
+msgstr "Не вдалося видалити %s."
+
+msgid "Invalid file URL."
+msgstr "Неправильна URL-адреса файлу."
+
+msgid "You have no permissions to publish or unpublish log files."
+msgstr "У вас немає дозволу на публікацію або скасування публікації файлів логів."
+
+msgid "Incorrect data received. Reload this page and try again."
+msgstr "Отримано невірні дані. Оновіть сторінку і спробуйте знову."
+
+msgid "This file is not available any more. Reload this page."
+msgstr "Цей файл більше не доступний. Оновіть цю сторінку."
+
+msgid "Managing of public links to files"
+msgstr "Управління публічними посилань на файли"
+
+msgid "Password protection"
+msgstr "Захист паролем"
+
+msgid "This file is not password-protected."
+msgstr "Цей файл не захищено паролем."
+
+msgid "set password"
+msgstr "встановити пароль"
+
+msgid "This file is password-protected."
+msgstr "Цей файл захищено паролем."
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "change password"
+msgstr "змінити пароль"
+
+msgid "remove password"
+msgstr "видалити пароль"
+
+msgid "Enter a password"
+msgstr "Введіть пароль"
+
+msgid "Send"
+msgstr "Надіслати"
+
+msgid "This file is not published. Reload this page and publish the file."
+msgstr "Цей файл не було опубліковано. Оновіть сторінку та опублікуйте файл."
+
+msgid "This file does not exists. Reload this page and try again."
+msgstr "Цього файлу не існує. Оновіть сторінку і спробуйте знову."
+
+msgid "File %s does not exist or is not accessible."
+msgstr "Файл %s не існує або недоступний."
+
+msgid "Incorrect password."
+msgstr "Невірний пароль."
+
+msgid "PHP configuration"
+msgstr "Конфігурація PHP"
+
+msgid "View"
+msgstr "Переглянути"
+
+msgid "open"
+msgstr "відкрито"
+
+msgid "Public link"
+msgstr "Публічне посилання"
+
+msgid "The link to your PHP configuration is not password-protected."
+msgstr "Посилання на конфігурацію PHP не захищено паролем."
+
+msgid "PHP configuration page is not published. Reload this page and try again."
+msgstr "Сторінку конфігурації PHP не опубліковано. Оновіть сторінку і спробуйте знову."
+
+msgid "You have no permissions to publish or unpublish the PHP configuration page."
+msgstr "У вас немає прав доступу, щоб опублікувати або скасувати публікацію сторінки конфігурації PHP."
+
+msgid "Function phpinfo() is not available on your server."
+msgstr "Функція phpinfo() не доступна на вашому сервері."
+
+msgid "PHP configuration page is not published."
+msgstr "Сторінку конфігурації PHP не опубліковано."
+
+msgid "The link to your PHP configuration is password-protected."
+msgstr "Посилання на конфігурацію PHP захищено паролем."
+
+msgid "Invalid data. Reload this page and try again."
+msgstr "Неприпустимі дані. Оновіть сторінку і спробуйте знову."
+
+msgid "changed access type for published file"
+msgstr "змінив тип доступу до опублікованого файлу"
+
+msgid "downloading"
+msgstr "завантаження"
+
+msgid "viewing"
+msgstr "перегляд"
+
+msgid "Rename"
+msgstr "Перейменувати"
+
+msgid "Non-authorized persons may view sensitive information about your server configuration."
+msgstr "Не уповноважені особи можуть проглядати конфіденційну інформацію про конфігурацію сервера."
+
+msgid "Name"
+msgstr "Имя"
+
+msgid "user actions"
+msgstr "дії користувача"
+
+msgid "Empty name."
+msgstr "Пусте ім&#39;я."
+
+msgid "New name matches the old one."
+msgstr "Нова назва відповідає старій."
+
+msgid "Cannot rename to “%s”. Invalid name or insufficient permissions."
+msgstr "Не вдається перейменувати на \"%s\". Неприпустиме ім&#39;я або недостатньо прав."
+
+msgid "Deleting this directory will also delete %u file contained in it."
+msgid_plural "Deleting this directory will also delete %u files contained in it."
+msgstr[0] "Видалення цієї директорії також видалить %u файл, який у ній знаходиться."
+msgstr[1] "Видалення цієї директорії також видалить %u файли, які у ній знаходяться."
+msgstr[2] "Видалення цієї директорії також видалить %u файлів, які у ній знаходяться."
+
+msgid "After deletion, it will no longer be available via a published link."
+msgid_plural "After deletion, they will no longer be available via published links."
+msgstr[0] "Після видалення він більше не буде доступним за опублікованим посиланням."
+msgstr[1] "Після видалення вони більше не будуть доступними за опублікованим посиланням."
+msgstr[2] ""
+
+msgid "After deletion, %u of them will no longer be available via a published link."
+msgid_plural "After deletion, %u of them will no longer be available via published links."
+msgstr[0] "Після видалення %u з них більше не буде доступним за опублікованим посиланням."
+msgstr[1] "Після видалення %u з них більше не будуть доступними за опублікованим посиланням."
+msgstr[2] ""
+
+msgid "Delete directory"
+msgstr "Видалити директорію"
+
+msgid "After deletion, this file will no longer be available via a published link."
+msgstr "Після видалення цей файл більше не буде доступний за опублікованим посиланням."
+
+msgid "You have no permissions to change settings."
+msgstr "У вас немає дозволу на зміну налаштувань."
+
+msgid "Show relative file paths instead of absolute paths in error logs"
+msgstr "У лозі показувати відносні шляхи до файлів замість абсолютних"
+
+msgid "After renaming, %u published file in this directory will no longer be available via a published link."
+msgid_plural "After renaming, %u published files in this directory will no longer be available via published links."
+msgstr[0] "Після перейменування %u з них більше не буде доступним за опублікованим посиланням."
+msgstr[1] "Після видалення %u з них більше не будуть доступними за опублікованим посиланням."
+msgstr[2] ""
+
+msgid "You have no permissions to rename files and directories."
+msgstr "У вас немає прав для перейменування файлів та директорій."
+
+msgid "Rename directory"
+msgstr "Перейменувати каталог"
+
+msgid "Rename file"
+msgstr "Перейменувати файл"
+
+msgid "After renaming, this file will no longer be available via a published link."
+msgstr "Після перейменування, цей файл більше не буде доступний за опублікованим посиланням."
+
+msgid "%u entry"
+msgid_plural "%u entries"
+msgstr[0] "%u запис"
+msgstr[1] "%u записи"
+msgstr[2] ""
+
+msgid "directory"
+msgstr "директорія"
+
+msgid "log file"
+msgstr "файл логу"
+
+msgid "user action list"
+msgstr "список дій користувача"
+
+msgid "user action"
+msgstr "дія користувача"
+
+msgid "Action with id=“%s” is not available."
+msgstr "Дії з ID=“%s” недоступні."
+
+msgid "Renaming of files and directories"
+msgstr "Перейменування файлів і директорій"
+
+msgid "Invalid name."
+msgstr "Неприпустиме ім&#39;я."
+
+msgid "File is not accessible."
+msgstr "Файл недоступний."
+
+msgid "link disabled"
+msgstr "посилання вимкнено"
+
+msgid "link enabled"
+msgstr "посилання увімкнено"
+
+msgid "PHP errors are being logged without limitations, because <tt>php_logging_admin</tt> parameter is enabled in Logs’ configuration file."
+msgstr "Помилки PHP реєструються без обмежень, так як у конфігураційному файлі «Логів» увімкнено параметр <tt>php_logging_admin</tt>."
+
+msgid "To make PHP errors be logged only during 1 hour, disable <tt>php_logging_admin</tt> parameter in file <tt>%s</tt>."
+msgstr "Аби зберігати помилки PHP на протязі тільки 1 години, відключіть параметр <tt>php_logging_admin</tt> у файлі <tt>%s</tt>."
+
+msgid "PHP errors will be logged without limitations, because <tt>php_logging_admin</tt> parameter is enabled in Logs’ configuration file."
+msgstr "Помилки PHP реєструються без обмежень, так як у конфігураційному файлі «Логів» увімкнено параметр <tt>php_logging_admin</tt>."
+
+msgid "PHP errors are being logged without limitations, because “%s” is enabled <a href=\"%s\" target=\"_blank\">in&nbsp;system settings</a>."
+msgstr "Помилки PHP реєструються без обмежень, тому що увімкнено “%s” <a href=\"%s\" target=\"_blank\">у&nbsp;системних налаштуваннях</a>."
+
+msgid "logs"
+msgstr "логи"
+
+msgid "This file’s size"
+msgstr "Розмір цього файлу"
+
+msgid "All log files‘ total size"
+msgstr "Загальний розмір усіх файлів логів"
+
+msgid "Empty password."
+msgstr "Порожній пароль."
+
+msgid "in published files"
+msgstr "в опублікованих файлах"
+
+msgid "in backend"
+msgstr "у бекенді"
+
+msgid "Hide IP addresses in error logs"
+msgstr "Приховати IP-адреси в логах"
+
+msgid "Types of PHP errors"
+msgstr "Типи помилок в PHP"
+
+msgid "all"
+msgstr "усі"
+
+msgid "fatal errors"
+msgstr "фатальні помилки"
+
+msgid "warnings"
+msgstr "попередження"
+
+msgid "frontend"
+msgstr "фронтенд"
+
+msgid "backend"
+msgstr "бекенд"
+
+msgid "%s app"
+msgstr "%s додаток"
+
+msgid "A file with this name exists. Enter another name."
+msgstr "Файл з таким ім&#39;ям існує. Введіть інше ім&#39;я."
+
+msgid "File access password has changed. Reload this page to enter a correct password."
+msgstr "Пароль доступу до файлів був змінений. Перезавантажте цю сторінку, щоб ввести правильний пароль."
+
+msgid "Managing of public link to PHP configuration page"
+msgstr "Управління публічним посиланням на сторінку конфігурації PHP"
+
+msgid "You have no permissions to view PHP configuration."
+msgstr "У вас немає прав для перегляду конфігурації PHP."
+
+msgid "You have no permissions to delete files and directories."
+msgstr "У вас немає прав доступу на видалення файлів і директорій."
+
+msgid "No routing rule to create a public link to the PHP configuration page. Add a <em>hidden</em> rule for Logs app in Site app’s “<a href=\"%s\">Structure</a>” section."
+msgstr "Немає правил маршрутизації для створення публічного посилання на сторінку конфігурації PHP. Додайте <em>приховане</em> правило для додатку «Логи» у розділі <a href=\"%s\">Структура</a> додатку «Сайт»."
+
+msgid "← back"
+msgstr "← назад"
+
+msgid "This setting will remain valid during 1 hour only to avoid large error logs occupying server disk space."
+msgstr "Цей параметр буде залишатися дійсним протягом 1 години, аби великі файли логів не займали диск."
+
+msgid "Empty hash or file path"
+msgstr "Порожній хеш або шлях до файлу"
+
+msgid "Insufficient access rights for user id=%u to delete log files or directories."
+msgstr "Недостатньо прав доступу для користувача з ID=%u, щоб видалити файли журналів або директорії."
+
+msgid "View in backend"
+msgstr "Переглянути у бекенді"
+
+msgid "view"
+msgstr "вид"
+
+msgid "Published file"
+msgstr "Опублікований файл"
+
+msgid "Open"
+msgstr "Відкрити"
+
+msgid "Updated tracked file"
+msgstr "Оновлено відстежуваний файл"
+
+msgid "Tracked file"
+msgstr "Відстежуваний файл"
+
+msgid "Latest update time"
+msgstr "Час останнього оновлення"
+
+msgid "Error"
+msgstr "Помилка"
+
+msgid "File updates tracking"
+msgstr "Відстеження оновлення файлів"
+
+msgid "Path"
+msgstr "Шлях"
+
+msgid "Tracking"
+msgstr "Відстеження"
+
+msgid "tracking enabled"
+msgstr "відстеження увімкнено"
+
+msgid "tracking disabled"
+msgstr "відстеження вимкнено"
+
+msgid "Once this file is updated, you will see a %s&nbsp;badge next to the app’s icon in the main menu."
+msgstr "Щойно цей файл буде оновлено, ви побачите позначку %s&nbsp; поруч із значком додатку у головному меню."
+
+msgid "User actions"
+msgstr "Дії користувача"
+
+msgid "Track changes (enabled)"
+msgstr "Вістежувати зміни (увімкнено)"
+
+msgid "Track changes"
+msgstr "Вістежувати зміни"
+
+msgid "Public link (enabled)"
+msgstr "Публічне посилання (увімкнено)"
+
+msgid "View PHP info (public link enabled)"
+msgstr "Переглянути інформацію PHP (публічне посилання увімкнено)"
+
+msgid "Insufficient access rights to delete log files or directories."
+msgstr "Для видалення директорій та файлів журналів недостатньо прав доступу."
+
+msgid "%s is not available for deletion."
+msgstr "%s не доступний для видалення."
+
+msgid "%u published file in this directory will no longer be available via a published link."
+msgid_plural "%u published files in this directory will no longer be available via published links."
+msgstr[0] "%u з опублікованих файлів більше не буде доступним за опублікованим посиланням."
+msgstr[1] "%u з опублікованих файлів більше не будуть доступними за опублікованим посиланням."
+msgstr[2] "%u з опублікованих файлів більше не будуть доступними за опублікованим посиланням."
+
+msgid "You and other users will no longer be notified on %u file’s updates in this directory."
+msgid_plural "You and other users will no longer be notified on %u files’ updates in this directory."
+msgstr[0] "Ви та інші користувачі більше не отримаєте повідомлення про оновлення %u файлу у цій директорії."
+msgstr[1] "Ви та інші користувачі більше не отримаєте повідомлення про оновлення %u файлів у цій директорії."
+msgstr[2] "Ви та інші користувачі більше не отримаєте повідомлення про оновлення %u файлів у цій директорії."
+
+msgid "You will no longer be notified on %u file’s updates in this directory."
+msgid_plural "You will no longer be notified on %u files’ updates in this directory."
+msgstr[0] "Ви більше не отримаєте повідомлення про оновлення %u файлу у цій директорії."
+msgstr[1] "Ви більше не отримаєте повідомлення про оновлення %u файлів у цій директорії."
+msgstr[2] "Ви більше не отримаєте повідомлення про оновлення %u файлів у цій директорії."
+
+msgid "Other users will no longer be notified on %u file’s updates in this directory."
+msgid_plural "Other users will no longer be notified on %u files’ updates in this directory."
+msgstr[0] "Інші користувачі більше не отримають повідомлення про оновлення %u файлу у цій директорії."
+msgstr[1] "Інші користувачі більше не отримають повідомлення про оновлення %u файлів у цій директорії."
+msgstr[2] "Інші користувачі більше не отримають повідомлення про оновлення %u файлів у цій директорії."
+
+msgid "This file will no longer be available via a published link."
+msgstr "Цей файл більше не буде доступний за опублікованим посиланням."
+
+msgid "You and other users will no longer be notified on this file’s updates."
+msgstr "Ви та інші користувачі більше не отримаєте повідомлення про оновлення цього файлу."
+
+msgid "You will no longer be notified on this file’s updates."
+msgstr "Ви більше не отримаєте повідомлення про оновлення цього файлу."
+
+msgid "Other users will no longer be notified on this file’s updates."
+msgstr "Інші користувачі більше не отримають повідомлення про оновлення цього файлу."
+
+msgid "Show the %s&nbsp;badge next to the app’s icon in the main menu when the total logs size exceed 1&nbsp;GB."
+msgstr "Показати індикатор %s&nbsp; біля іконки програми у головному меню, коли загальний обсяг логів перевищує 1&nbsp;ГБ."
+
+msgid "PHP error messages are saved to file <tt>wa-log/<b>php.log</b></tt>."
+msgstr "Повідомлення про помилки PHP буде збережено у файл <tt>wa-log/<b>php.log</b></tt>."
+
+msgid "%u file contained in this directory will be deleted."
+msgid_plural "%u files contained in this directory will be deleted."
+msgstr[0] "%u файл, що міститься у цій директорії, буде видалено."
+msgstr[1] "%u файли, що міститься у цій директорії, буде видалено."
+msgstr[2] "%u файлів, що міститься у цій директорії, буде видалено."
+
+msgid "%u file will no longer be available via a published link."
+msgid_plural "%u files will no longer be available via published links."
+msgstr[0] "%u файл більше не буде доступним за опублікованим посиланням."
+msgstr[1] "%u файли більше не будуть доступними за опублікованим посиланням."
+msgstr[2] "%u файлів більше не будуть доступними за опублікованим посиланням."
+
+msgid "You and other users will no longer be notified on %u file’s updates."
+msgid_plural "You and other users will no longer be notified on %u files’ updates."
+msgstr[0] "Ви та інші користувачі більше не отримаєте повідомлення про оновлення %u файлу."
+msgstr[1] "Ви та інші користувачі більше не отримаєте повідомлення про оновлення %u файлів."
+msgstr[2] "Ви та інші користувачі більше не отримаєте повідомлення про оновлення %u файлів."
+
+msgid "You will no longer be notified on %u file’s updates."
+msgid_plural "You will no longer be notified on %u files’ updates."
+msgstr[0] "Ви більше не отримаєте повідомлення про оновлення %u файлу."
+msgstr[1] "Ви більше не отримаєте повідомлення про оновлення %u файлів."
+msgstr[2] "Ви більше не отримаєте повідомлення про оновлення %u файлів."
+
+msgid "Other users will no longer be notified on %u file’s updates."
+msgid_plural "Other users will no longer be notified on %u files’ updates."
+msgstr[0] "Інші користувачі більше не отримають повідомлення про оновлення %u файлу."
+msgstr[1] "Інші користувачі більше не отримають повідомлення про оновлення %u файлів."
+msgstr[2] "Інші користувачі більше не отримають повідомлення про оновлення %u файлів."
+
+msgid "This file cannot be tracked because its modification time cannot be read. Check the file’s permissions on the server."
+msgstr "Цей файл неможливо відстежити, оскільки не вдається прочитати час його модифікації. Перевірте дозволи файлу на сервері."
+
+msgid "Directory"
+msgstr "Директорія"
+
+msgid "Log file"
+msgstr "Файл логу"
+
+msgid "User action list"
+msgstr "Перелік дій користувача"
+
+msgid "User action"
+msgstr "Дія користувача"
+
+msgid "You and other users will be further notified on this file’s updates <em>by its old name</em> until the “%” option is disabled."
+msgstr "Ви та інші користувачі отримуватимете сповіщення про оновлення цього файлу <em>під його старою назвою</em>, доки параметр «%» не буде вимкнено."
+
+msgid "You will be further notified on this file’s updates <em>by its old name</em> until the “%” option is disabled."
+msgstr "Ви отримуватимете сповіщення про оновлення цього файлу <em>під його старою назвою</em>, доки параметр «%» не буде вимкнено."
+
+msgid "Other users will be further notified on this file’s updates <em>by its old name</em> until the “%” option is disabled."
+msgstr "Інші користувачі отримають подальші сповіщення про оновлення цього файлу <em>під його старою назвою</em>, доки параметр «%» не буде вимкнено."
+
+msgid "You and other users will be further notified on this file’s updates until the “%” option is disabled."
+msgstr "Ви та інші користувачі отримаєте подальші сповіщення про оновлення цього файлу, доки параметр «%» не буде вимкнено."
+
+msgid "You will be further notified on this file’s updates until the “%” option is disabled."
+msgstr "Ви будете отримувати додаткові сповіщення про оновлення цього файлу, доки параметр «%» не буде вимкнено."
+
+msgid "Other users will be further notified on this file’s updates until the “%” option is disabled."
+msgstr "Інші користувачі отримають подальші сповіщення про оновлення цього файлу, доки параметр «%» не буде вимкнено."

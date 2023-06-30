@@ -1,0 +1,46 @@
+{*
+* @author Gaponov Igor <gapon2401@gmail.com>
+    *}
+    <div class="shadowed blank">
+        <form action="about:blank" id="mask-form">
+            <div class="block double-padded">
+                <p>[`This section is intended for creation regular expressions that are used to check in text fields of the form. If You are not good at this - contact the developer. Any errors in regular expressions can affect the application's work.`]</p>
+                    <p>[`IMPORTANT! Write regular expressions only between symbols`] <b>/</b>...<b>/</b></p>
+                    <p><span class="hint"><a href="http://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F" target="_blank"><i class="icon16 new-window"></i>[`More`]</a> [`info about regular expressions`]</span></p>
+                <table class="zebra">
+                    <tr>
+                        <th>[`Name`]</th>
+                        <th>[`RegExp mask`]</th>
+                        <th>[`Error message`]</th>
+                        <th width="20"></th>
+                    </tr>
+                    {if $masks}
+                    {foreach $masks as $mask}
+                    <tr rel="{$mask.id}">
+                        <td><input type="text" class="f-required" name="mask[{$mask.id}][name]" maxlength="50" value="{$mask.name|escape}" /></td>
+                        <td><input type="text" class="f-required" name="mask[{$mask.id}][mask]" maxlength="255" value="{$mask.mask|escape}" /></td>
+                        <td><textarea name="mask[{$mask.id}][error]" maxlength="255">{$mask.error|escape}</textarea></td>
+                        <td><a href="javascript:void(0)" onclick="$(this).closest('tr').remove()" title="[`remove`]"><i class="icon16 delete"></i></a></td>
+                    </tr>
+                    {/foreach}
+                    {/if}
+                    <tr class="template">
+                        <td><input type="text" disabled class="f-name f-required" name="mask[][name]" maxlength="50" /></td>
+                        <td><input type="text" disabled class="f-mask f-required" name="mask[][mask]" maxlength="255" /></td>
+                        <td><textarea class="f-error" disabled name="mask[][error]" maxlength="255"></textarea></td>
+                        <td><a href="javascript:void(0)" onclick="$(this).closest('tr').remove()" title="[`remove`]"><i class="icon16 delete"></i></a></td>
+                    </tr>
+                    <tr class="add-button">
+                        <td colspan="4"><a href="javascript:void(0)" class="f-add-mask"><i class="icon16 add"></i> [`Add regexp mask`]</a></td>
+                    </tr>
+                </table>
+                <div class="errormsg block"></div>
+                <div><input type="submit" value="[`Save`]" class="button green" /></div>
+            </div>
+        </form>
+    </div>
+    <script>
+        $(function() {
+            $.masks.initMasks();
+        });
+    </script>

@@ -1,0 +1,2595 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst Helpdesk 1.2.19.101 UA translation v 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-11-21 14:55+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter-studio.ru\n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Helpdesk"
+msgstr "Підтримка"
+
+msgid "Sidebar"
+msgstr "Бічна панель"
+
+msgid "Loading..."
+msgstr "Завантаження..."
+
+msgid "Change search conditions"
+msgstr "Змініть умови пошуку"
+
+msgid "Save as a filter"
+msgstr "Зберегти як фільтр"
+
+msgid "Error"
+msgstr "Помилка"
+
+msgid "Page not found"
+msgstr "Сторінку не знайдено"
+
+msgid "Insufficient access rights"
+msgstr "Недостатньо прав доступу"
+
+msgid "Internal server error"
+msgstr "Внутрішня помилка сервера"
+
+msgid "Details"
+msgstr "Докладніше"
+
+msgid "Enable Debug mode in the Installer app to see the details."
+msgstr "Увімкніть режим відладки у додатку «Інсталер», аби побачити докладнішу інформацію."
+
+msgid "Select access level:"
+msgstr "Оберіть рівень доступу:"
+
+msgid "Personal"
+msgstr "Особистий"
+
+msgid "Will appear in the sidebar in MY FILTERS section and will be available for me only"
+msgstr "З&#39;явиться у бічній панелі у розділі «МОЇ ФІЛЬТРИ» і буде доступний тільки мені"
+
+msgid "Public"
+msgstr "Публічний"
+
+msgid "Will appear in the main section in sidebar and will be available for all users"
+msgstr "З&#39;явиться в основному розділі у бічній панелі та будет доступний усім користувачам"
+
+msgid "Add a filter"
+msgstr "Додати фільтр"
+
+msgid "or"
+msgstr "або"
+
+msgid "cancel"
+msgstr "скасувати"
+
+msgid "Actions with selected"
+msgstr "Дії з обраними"
+
+msgid "Mark as read"
+msgstr "Помітити як прочитане"
+
+msgid "Mark as unread"
+msgstr "Помітити як непрочитане"
+
+msgid "Unmark as Follow"
+msgstr "Зняти помітку стеження"
+
+msgid "Mark as Follow"
+msgstr "Поставити помітку стеження"
+
+msgid "Change status"
+msgstr "Змінити статус"
+
+msgid "Change assignment"
+msgstr "Змінити призначення"
+
+msgid "Delete"
+msgstr "Видалити"
+
+msgid "Sorting:"
+msgstr "Сортування:"
+
+msgid "newest on top"
+msgstr "нові зверху"
+
+msgid "oldest on top"
+msgstr "старі зверху"
+
+msgid "recently updated on top"
+msgstr "нещодавно оновлені зверху"
+
+msgid "Icon"
+msgstr "Значок"
+
+msgid "Access"
+msgstr "Доступ"
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "Delete filter"
+msgstr "Видалити фільтр"
+
+msgid "This list is the search result:"
+msgstr "Цей перелік є результатом пошуку:"
+
+msgid "Created by"
+msgstr "Створений користувачем"
+
+msgid "This filter displays all requests independent on their status. If you don't need this whole list for a permanent access, simply hide it. Once you need it again, you can turn it on anytime using Add filter option in the left-hand sidebar."
+msgstr "Цей фільтр показує усі запити, незалежно від їх статусу. Якщо вам не потрібен увесь цей список для постійного доступу, просто приховайте його. Як тільки він вам знову знадобиться, ви можете включити його в будь-який момент, використовуючи опцію «Додати фільтр» у лівій бічній панелі."
+
+msgid "Hide All requests filter"
+msgstr "Приховати фільтр «Усі запити»"
+
+msgid "These are your personal settings. They define rules that cause some requests to be marked as \"unread\" and display them in a dedicated list in the left side navigation panel."
+msgstr "Це ваші особисті налаштування. Вони визначають правила, через які деякі запити будуть позначені як\"непрочитані\" та показані у окремому перелікові в лівій частині панелі."
+
+msgid "Mark as \"unread\""
+msgstr "Помітити як непрочитане"
+
+msgid "All new requests"
+msgstr "Усі нові запити"
+
+msgid "Requests assigned to me personally"
+msgstr "Запити, призначені мені особисто"
+
+msgid "Any new action performed on these requests will cause them to be marked as \"unread\""
+msgstr "Будь-яка нова дія, що буде виконана із цими запитами, позначить іх як непрочитані"
+
+msgid "Requests assigned to my user group"
+msgstr "Запити, призначені для моєї групи користувачів"
+
+msgid "Mark request as \"read\""
+msgstr "Позначити запит прочитаним"
+
+msgid "When I open the request"
+msgstr "Коли я відкриваю запит"
+
+msgid "When I perform any action with the request"
+msgstr "При виконанні мною будь-яких дій із запитом"
+
+msgid "Display counter on the application icon"
+msgstr "Показати лічильник на іконці програми"
+
+msgid "Mark all as read"
+msgstr "Позначити усе як прочитане"
+
+msgid "Forms"
+msgstr "Форми"
+
+msgid "Settings"
+msgstr "Налаштування"
+
+msgid "Choose new request forms that should be available for clients in their Customer portals:"
+msgstr "Оберіть нові форми запиту, які повинні бути доступними клієнтам у особистих кабінетах:"
+
+msgid "Specify what should be displayed as an action executor in Customer Portal:"
+msgstr "Вкажіть, що має відображатися у якості виконавця дій у особистому кабінеті:"
+
+msgid "Assigned person name"
+msgstr "Ім&#39;я призначеного"
+
+msgid "Company name:"
+msgstr "Назва компанії:"
+
+msgid "Saved"
+msgstr "Збережено"
+
+msgid "Enabled"
+msgstr "Увімкнено"
+
+msgid "Disabled"
+msgstr "Вимкнено"
+
+msgid "Message preview"
+msgstr "Попередній перегляд повідомлення"
+
+msgid "From:"
+msgstr "Від:"
+
+msgid "To:"
+msgstr "До:"
+
+msgid "Subject:"
+msgstr "Тема:"
+
+msgid "Attachments:"
+msgstr "Вкладення:"
+
+msgid "To"
+msgstr "Для"
+
+msgid "Select"
+msgstr "Оберіть"
+
+msgid "Client (request originator)"
+msgstr "Клієнт (джерело запиту)"
+
+msgid "Assigned user"
+msgstr "Призначений користувач"
+
+msgid "All group members (for group assignment)"
+msgstr "Усі члени групи (для групового завдання)"
+
+msgid "Add another recipient"
+msgstr "Додати іншого отримувача"
+
+msgid "All messages will be sent as blind copies (BCC)."
+msgstr "Усі повідомлення будуть надсилатися як сліпі копії (BCC)."
+
+msgid "From"
+msgstr "Від"
+
+msgid "Source email address"
+msgstr "Адреса джерела електронної пошти"
+
+msgid "Specified"
+msgstr "Вказаний"
+
+msgid "It is recommended to specify an existing email address which you do not check for new mail as the sender's address for such notifications; e.g., noreply@yourdomain.com. This will help minimize the number of redundant requests."
+msgstr "Рекомендовано вказати, як адресу відправника для таких повідомлень, існуючу адресу електронної пошти, яку ви не перевіряєте на нову пошту; наприклад, noreply@yourdomain.ua. Це допоможе мінімізувати кількість надлишкових запитів."
+
+msgid "Use source email address"
+msgstr "Використовувати адресу електронної пошти джерела"
+
+msgid "Subject"
+msgstr "Тема"
+
+msgid "Text"
+msgstr "Текст"
+
+msgid "WYSIWYG"
+msgstr "Візуальний редактор"
+
+msgid "Variables"
+msgstr "Змінні"
+
+msgid "1-Click Feedback"
+msgstr "Зворотній зв&#39;язок в одне торкання"
+
+msgid "Add a snippet in your email template that will allow recipient with just one click to select a value for pull down or checkbox field. This field must exist in your Helpdesk app (refer to the Field constructor section) and be available for clients in their customer portals. Recipients will be redirected to their customer portals. This option can be used for quick evaluation of the request reply by your customers."
+msgstr "Додайте фрагмент у вашому шаблоні електронної пошти, який дозволить одержувачу обрати значення селектора або пропорця лише одним клацанням миші. Це поле має існувати у додатку «Підтримка» (див. конструктор полів) і бути доступним для клієнтів у їх особистих кабінетах. Одержувачів буде перенаправлено до їх особистих кабінетів. Ця опція може бути застосована для швидкої оцінки відповіді на запити вашими клієнтами."
+
+msgid "There are no appropriate fields"
+msgstr "Немає відповідних полів"
+
+msgid "Include attachments"
+msgstr "Включати вкладення"
+
+msgid "Add a new action"
+msgstr "Додати нову дію"
+
+msgid "Add existing actions from other states, which are not used in the current state:"
+msgstr "Додати існуючі дії з інших статусів, які не використовуються у поточному статусі:"
+
+msgid "Create a new action to be performed by user"
+msgstr "Створіть нову дію, яка буде виконуватись користувачем"
+
+msgid "Users perform this action manually on the request's page or in their Customer portals."
+msgstr "Ця операція виконується користувачем вручну на сторінці запиту у його особистому кабінеті."
+
+msgid "Create a new action to be performed automatically"
+msgstr "Створити нову дію, яка виконуватиметься автоматично"
+
+msgid "This action will be triggered automatically (by time-out) if no other actions are performed with request during a certain period of time."
+msgstr "Це дія буде викликана автоматично (по часу), якщо ніякі інші дії із запитом не виконуються протягом певного періоду часу."
+
+msgid "Proceed"
+msgstr "Продовжити"
+
+msgid "Delete this action"
+msgstr "Видалити цю дію"
+
+msgid "The action will be eliminated only for the state &ldquo;%s&rdquo;. For other states this action will stay available."
+msgstr "Дію буде виключено тільки для статусу &ldquo;%s&rdquo;. У інших статусах ця дія буде залишатися доступною."
+
+msgid "more..."
+msgstr "детальніше..."
+
+msgid "Create new state"
+msgstr "Створити статус"
+
+msgid "Edit state"
+msgstr "Редагувати статус"
+
+msgid "Name "
+msgstr "Назва "
+
+msgid "ID:"
+msgstr "Ідентифікатор:"
+
+msgid "ID "
+msgstr "Ідентифікатор "
+
+msgid "Customer portal"
+msgstr "Особистий кабінет"
+
+msgid "If enabled, requests in this status are available for clients in their Customer Portal."
+msgstr "Якщо увімкнено, запити в даному статусі доступні клієнтам у їх особистих кабінетах."
+
+msgid "Name of this state in the Customer Portal:"
+msgstr "Назва цього статусу у особистому кабінеті:"
+
+msgid "Color"
+msgstr "Колір"
+
+msgid "Selected color will be used to display this state name."
+msgstr "Обраний колір буде використовуватися для відображення назви цього стану."
+
+msgid "Actions"
+msgstr "Дії"
+
+msgid "Action buttons will be shown in this order on request page."
+msgstr "Кнопки з діями буде показано на сторінці запиту в такому порядку."
+
+msgid "To change the order simply drag action names in the list."
+msgstr "Для зміни порядку просто перетягніть назви дій у списку."
+
+msgid "No actions are specified for this state"
+msgstr "Для цього статусу не призначено дій"
+
+msgid "Delete this state"
+msgstr "Видалити цей статус"
+
+msgid "Off"
+msgstr "Вимкнено"
+
+msgid "On"
+msgstr "Увімкнено"
+
+msgid "%d request"
+msgid_plural "%d requests"
+msgstr[0] "%d запит"
+msgstr[1] "%d запита"
+msgstr[2] "%d запитів"
+
+msgid "prev"
+msgstr "назад"
+
+msgid "of"
+msgstr "з"
+
+msgid "next"
+msgstr "далі"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Assigned:"
+msgstr "Призначено:"
+
+msgid "group"
+msgstr "група"
+
+msgid "Follow"
+msgstr "Стежити"
+
+msgid "unmark"
+msgstr "зняти помітку"
+
+msgid "ago"
+msgstr "тому"
+
+msgid "via"
+msgstr "через"
+
+msgid "Click to edit subject"
+msgstr "Натисніть, аби редагувати тему"
+
+msgid "<no name>"
+msgstr "<немає імені>"
+
+msgid "no link to contact"
+msgstr "немає посилання на контакт"
+
+msgid "Download original email"
+msgstr "Завантажити оригінальний email"
+
+msgid "Old subject"
+msgstr "Стара тема"
+
+msgid "New subject"
+msgstr "Нова тема"
+
+msgid "Old workflow"
+msgstr "Старий робочий процес"
+
+msgid "New workflow"
+msgstr "Новий робочий процес"
+
+msgid "Message sent:"
+msgstr "Повідомлення надіслано:"
+
+msgid "creates request"
+msgstr "створює запит"
+
+msgid "Request has been changed"
+msgstr "Запит було змінено"
+
+msgid "Please <a>reload the page</a>."
+msgstr "Будь ласка <a>, оновіть сторінку</a>."
+
+msgid "All tags"
+msgstr "Усі теги"
+
+msgid "Select tags for this request"
+msgstr "Оберіть теги для даного запиту"
+
+msgid "Display original message"
+msgstr "Показати вихідне повідомлення"
+
+msgid "Hide original message"
+msgstr "Приховати вихідне повідомлення"
+
+msgid "Follow mark"
+msgstr "Відмітка стеження"
+
+msgid "After you set \"Follow\" mark, next time someone performs an action with this request it will appear as \"Unread\" for you and you will receive email notification about this action. So you will be able to follow all further activity related to this request."
+msgstr "Після установки відмітки стеження , коли наступного разу хтось виконає дію з цим запитом, для вас його буде помічено як \"непрочитаний\" і ви отримаєте повідомлення про цю дію електронною поштою. Так ви зможете стежити за усіма подальшими діями, що пов&#39;язані із цим запитом."
+
+msgid "Don't show this message anymore"
+msgstr "Більше не показувати це повідомлення"
+
+msgid "Set mark"
+msgstr "Встановити помітку"
+
+msgid "Are you sure to remove this request from database completely?"
+msgstr "Ви впевнені, що хочете повністю видалити цей запит з бази даних?"
+
+msgid "Add tag"
+msgstr "Додати тег"
+
+msgid "Rotate left"
+msgstr "Повернути вліво"
+
+msgid "Rotate right"
+msgstr "Повернути вправо"
+
+msgid "Anonymous"
+msgstr "Анонімний"
+
+msgid "Advanced search"
+msgstr "Розширений пошук"
+
+msgid "New filter is easy to create using search function. To do so, use <strong>Save as filter</strong> option on the search results page."
+msgstr "Новий фільтр легко створити за допомогою функції пошуку. Для цього використовуйте опцію <strong>Зберегти як фільтр</strong> на сторінці результатів пошуку."
+
+msgid "Request ID"
+msgstr "Ідентифікатор запиту"
+
+msgid "Create date"
+msgstr "Дата створення"
+
+msgid "Client name"
+msgstr "Ім&#39;я клієнта"
+
+msgid "Client email"
+msgstr "Email клієнта"
+
+msgid "Source"
+msgstr "Джерело"
+
+msgid "select"
+msgstr "оберіть"
+
+msgid "Search requests that were added via selected sources"
+msgstr "Пошукові запити, які були додані через обрані джерела"
+
+msgid "State"
+msgstr "Статус"
+
+msgid "Search requests that are currently in selected states"
+msgstr "Пошукові запити, які на даний час знаходяться у обраних статусах"
+
+msgid "Assigned to"
+msgstr "Призначено користувачеві"
+
+msgid "Search by users who have open assignments now"
+msgstr "Пошук по користувачам, які наразі мають відкриті призначення"
+
+msgid "Actor"
+msgstr "Діюча особа"
+
+msgid "Search by users who performed actions with requests"
+msgstr "Пошук по користувачам, які виконували дії з запитами"
+
+msgid "Search requests that were ever subjected to selected actions"
+msgstr "Пошукові запити, які коли-небудь були піддані обраним діям"
+
+msgid "Tags"
+msgstr "Теги"
+
+msgid "Search requests that have selected tags assigned"
+msgstr "Пошукові запити, яким призначено обрані теги"
+
+msgid "Words"
+msgstr "Слова"
+
+msgid "Search in request subject"
+msgstr "Шукати у темі запиту"
+
+msgid "Search in request subject and text"
+msgstr "Шукати у темі та тексті запиту"
+
+msgid "Search in discussion, comments and response to client"
+msgstr "Пошук в обговореннях, коментарях та відповідях клієнтам"
+
+msgid "Yes"
+msgstr "Так"
+
+msgid "No"
+msgstr "Ні"
+
+msgid "Search"
+msgstr "Пошук"
+
+msgid "Clear"
+msgstr "Очистити"
+
+msgid "Words to search must be %d or more characters each"
+msgstr "У словах для пошуку має бути %d символів або більше"
+
+msgid "No options available"
+msgstr "Немає доступних варіантів"
+
+msgid "New request"
+msgstr "Новий запит"
+
+msgid "select another form"
+msgstr "оберіть іншу форму"
+
+msgid "Additional request parameters:"
+msgstr "Додаткові параметри запиту:"
+
+msgid "default form"
+msgstr "форма за замовчуванням"
+
+msgid "Unread "
+msgstr "Непрочитані "
+
+msgid "All requests"
+msgstr "Усі запити"
+
+msgid "search by request, name, or email"
+msgstr "пошук за запитом, іменем або адресою електронної пошти"
+
+msgid "History"
+msgstr "Історія"
+
+msgid "No states available."
+msgstr "Немає доступних статусів."
+
+msgid "My filters"
+msgstr "Мої фільтри"
+
+msgid "New filter"
+msgstr "Новий фільтр"
+
+msgid "Admin"
+msgstr "Адміністратор"
+
+msgid "Design"
+msgstr "Дизайн"
+
+msgid "Cron Job"
+msgstr "Завдання cron"
+
+msgid "Field constructor"
+msgstr "Конструктор полів"
+
+msgid "FAQ"
+msgstr "FAQ"
+
+msgid "Workflows"
+msgstr "Робочі процеси"
+
+msgid "Sources, states and actions with requests are customized separately for every workflow."
+msgstr "Джерела, стани та дії із запитами налаштовуються окремо для кожного робочого процесу."
+
+msgid "Change state"
+msgstr "Змінити стан"
+
+msgid "Selected state will be set for %s requests."
+msgstr "Обраний стан буде встановлено для %s запитів."
+
+msgid "Selected assignment will be set for %s requests."
+msgstr "Обране призначення буде встановлено для %s запитів."
+
+msgid "Are you sure?"
+msgstr "Ви впевнені?"
+
+msgid "Show all fields"
+msgstr "Показати всі поля"
+
+msgid "No <tt>cron</tt> job required for automated email capture and execution of auto actions in your workflow is set up for your account."
+msgstr "У вашому акаунті не налаштоване завдання <tt>cron</tt>, яке потрібне для автоматичного отримання email та виконання автоматичних дій у вашому робочому процесі."
+
+msgid "Without a <tt>cron</tt> job set up, new mail is captured and new requests are received only as long as you keep Helpdesk open in your browser. Auto actions in your workflow are not triggered in this case."
+msgstr "Без налаштованого завдання <tt>cron</tt>, отримання нових email та запитів виконується тільки коли «Підтримку» відкрито у вашому браузері. Автоматичні дії у робочому процесі у цьому разі не виконуються."
+
+msgid "Last execution time:"
+msgstr "Останній час виконання:"
+
+msgid "<tt>cron</tt> job is set up properly."
+msgstr "Завдання <tt>cron</tt> налаштоване правильно."
+
+msgid "http://www.webasyst.com/framework/docs/server/cron/"
+msgstr "https://developers.webasyst.ru/docs/installation/tips/cron/"
+
+msgid "Customer Portal is a personal page available for clients sending requests to your Helpdesk. On this page customers can see all their requests, check status of any request, add a new request, and etc. Clients must log in to your website to access their customer portal."
+msgstr "Особистий кабінет — це персональна сторінка, доступна клієнтам, які надсилають запити до вашої «Підтримки». На цій сторінці клієнти можуть бачити усі свої запити, перевіряти стан кожного запиту, створювати нові запити та інше. Аби отримати доступ до персональної сторінки, клієнти мають авторизуватись."
+
+msgid "Customer Portal address:"
+msgstr "Адреса особистого кабінету:"
+
+msgid "Workflow"
+msgstr "Робочий процес"
+
+msgid "The selected state will be automatically set for new requests received via customer portal."
+msgstr "Обраний статус буде автоматично встановлено для нових запитів, отриманих через особистий кабінет."
+
+msgid "Your choice will be shown by an arrow in the workflow setup diagram."
+msgstr "Ваш вибір буде показано стрілкою на схемі установки робочого процесу."
+
+msgid "Assignment"
+msgstr "Призначення"
+
+msgid "no assignment"
+msgstr "немає призначення"
+
+msgid "Select the user or user group who should be automatically assigned to requests received via customer portal."
+msgstr "Виберіть користувача або групу користувачів, які мають бути автоматично призначені на запити, отримані через особистий кабінет."
+
+msgid "States"
+msgstr "Статуси"
+
+msgid "Specify which statuses (states) are available to the customer. The status names as they appear to the customer may be changed here. For example, if you are discussing a request with your support team, you may choose to display “Processing” at the status seen by the customer in his/her Customer Portal."
+msgstr "Вкажіть, які статуси (стани) доступні замовнику. Назви статусів, які бачить клієнт, можна змінити тут. Наприклад, якщо ви обговорюєте запит із своєю командою підтримки, ви можете показати клієнту у його особистому кабінеті статус запиту «В обробці»."
+
+msgid "Not available"
+msgstr "Не доступно"
+
+msgid "Specify which actions customized in your workflow are available to the customer. You may hide some internal actions performed by your support team (e.g. adding comments, or forwarding request to experts for discussion). Other actions may be set up as read-only for customers, and you may make certain actions available for the customer to perform."
+msgstr "Вказати, які дії, налаштовані в робочому процесі доступні клієнту. Ви можете приховати деякі внутрішні дії, що виконуються службою підтримки (наприклад, додавання коментарів або пересилання запиту експертам для обговорення). Інші дії можуть бути встановлені у режим тільки читання для клієнтів, ви також можете зробити певні дії доступними для виконання клієнтом."
+
+msgid "Only personal"
+msgstr "Тільки особисті"
+
+msgid "All available for read only"
+msgstr "Усі доступні тільки для читання"
+
+msgid "All available for read and action"
+msgstr "Усі доступні для читання і виконання дій"
+
+msgid "Clients do not see any information associated with this action in their Customer Portal"
+msgstr "Клієнти не бачать будь-яку інформацію, пов&#39;язану із цією дією, у своєму особистому кабінеті"
+
+msgid "Customer can perform the action but can not see these actions performed by other users"
+msgstr "Клієнт може виконати дію, але не зможе побачити ці дії, виконувані іншими користувачами"
+
+msgid "Clients can see this action record and it's description (except assignments info) in their Customer Portal"
+msgstr "Клієнти можуть побачити цю дію та її опис (за винятком інформації про призначення) у своєму особистому кабінеті"
+
+msgid "Clients can perform this action from their Customer Portal (except assignments if they are set up for the action)"
+msgstr "Клієнти можуть виконувати цю дію зі свого особистого кабінету (за винятком призначень, якщо вони налаштовані для цієї дії)."
+
+msgid "Delete workflow"
+msgstr "Видалити робочий процес"
+
+msgid "New source"
+msgstr "Нове джерело"
+
+msgid "New state"
+msgstr "Новий статус"
+
+msgid "Add an action"
+msgstr "Додати нову дію"
+
+msgid "d"
+msgstr "д"
+
+msgid "h"
+msgstr "год"
+
+msgid "Edit workflow"
+msgstr "Редагувати робочий процес"
+
+msgid "Workflow name"
+msgstr "Назва робочого процесу"
+
+msgid "Rename"
+msgstr "Перейменувати"
+
+msgid "delete"
+msgstr "видалити"
+
+msgid "Navigation pane"
+msgstr "Панель навігації"
+
+msgid "Common filters"
+msgstr "Загальні фільтри"
+
+msgid "Add"
+msgstr "Додати"
+
+msgid "Back to workflow customizing page"
+msgstr "Повернутися до сторінки налаштування робочого процесу"
+
+msgid "Download error log"
+msgstr "Завантажити журнал помилок"
+
+msgid "Delete this source"
+msgstr "Видалити це джерело"
+
+msgid "Unsaved changes will be lost if you leave this page now."
+msgstr "Незбережені зміни будуть втрачені, якщо ви залишите цю сторінку зараз."
+
+msgid "Add fields"
+msgstr "Додати поля"
+
+msgid "Allows your subscriber to create a password for further authorization on your site and log in to their customer portal. Requires Email field in the form."
+msgstr "Дозволяє абоненту створити пароль для подальшої авторизації на вашому сайті та входу у особистий кабінет. Потребує полe для адреси email у формі."
+
+msgid "Sign up"
+msgstr "Зареєструватися"
+
+msgid "Edit button label"
+msgstr "Редагувати назву кнопки"
+
+msgid "Form width (200-600px)"
+msgstr "Ширина форми (200-600 пікселів)"
+
+msgid "Preview"
+msgstr "Попередній перегляд"
+
+msgid "Delete field"
+msgstr "Видалити поле"
+
+msgid "No data in the field"
+msgstr "У полі немає даних"
+
+msgid "Deleting this field will not cause a loss of any data."
+msgstr "Видалення цього поля не призведе до втрати даних."
+
+msgid "Deleting this field will cause a loss of these data."
+msgstr "Видалення цього поля призведе до втрати цих даних."
+
+msgid "%d request have data in the field:"
+msgid_plural "%d requests have data in the field:"
+msgstr[0] "У %d запиту є дані у полі:"
+msgstr[1] "У %d запитів є дані у полі:"
+msgstr[2] "У %d запитів є дані у полі:"
+
+msgid "Yes/No"
+msgstr "Так/Ні"
+
+msgid "Remove this field from the heading area."
+msgstr "Видалити це поле з області заголовка."
+
+msgid "Request field constructor"
+msgstr "Запитати конструктор полів"
+
+msgid "Number"
+msgstr "Кількість"
+
+msgid "Request subject"
+msgstr "Тема запиту"
+
+msgid "Customer's name"
+msgstr "Ім&#39;я замовника"
+
+msgid "9 days ago"
+msgstr "9 днів тому"
+
+msgid "Request source"
+msgstr "Джерело запита"
+
+msgid "Add a field to the heading area"
+msgstr "Додати поле до області заголовка"
+
+msgid "All available fields are already added."
+msgstr "Усі доступні поля вже додано."
+
+msgid "NOTE: You can drag and drop fields to change its position in the heading area of request page."
+msgstr "Примітка: Ви можете перетягувати поле, аби змінити його позицію у області заголовка сторінки запиту."
+
+msgid "Additional fields"
+msgstr "Додаткові поля"
+
+msgid "Additional fields allow you to add a number of multiple parameters to requests content. These parameters essentially depend on a type of product and services you deliver to your customers. For example, if you accept requests to repair household appliances, you may wish to know some manufacturing details, e.g. model name, and etc. Additional fields can be added to the request form to be submitted by your client, or be available on the request page for your Helpdesk app users manipulations."
+msgstr "Додаткові поля дозволяють додати декілька параметрів до вмісту запиту. Ці параметри істотно залежать від типу товару і послуг, які ви надаєте клієнтам . Наприклад, якщо ви приймаєте заявки по ремонту побутової техніки, вам потрібно знати деякі виробничі деталі, наприклад, назву моделі, і т. д. Додаткові поля можуть бути додані до форми запиту, яку повинен заповнити клієнт, або бути доступними на сторінці запиту для маніпуляції із ними службою підтримки."
+
+msgid "New field"
+msgstr "Нове поле"
+
+msgid "Checking data in this field"
+msgstr "Перевірка даних у цій області"
+
+msgid "Edit field"
+msgstr "Редагувати поле"
+
+msgid "Field name"
+msgstr "Назва поля"
+
+msgid "Field ID"
+msgstr "ID поля"
+
+msgid "Type of field"
+msgstr "Тип поля"
+
+msgid "List items"
+msgstr "Елементи переліку"
+
+msgid "Enter each new item on new line"
+msgstr "Вводити кожен новий елемент на новому рядку"
+
+msgid "If enabled, data in this field are available for clients in their Customer portal."
+msgstr "Якщо увімкнено, то дані у цьому полі доступні клієнтам у особистому кабінеті."
+
+msgid "#<strong>%s</strong>"
+msgid_plural "[`Number`]"
+msgstr[0] "№<strong>%s</strong>"
+msgstr[1] "№<strong>%s</strong>"
+msgstr[2] "№<strong>%s</strong>"
+
+msgid "search"
+msgstr "пошук"
+
+msgid "show all"
+msgstr "показати усе"
+
+msgid "more"
+msgstr "більше"
+
+msgid "No search results."
+msgstr "Пошук не дав результатів."
+
+msgid "No questions in this category."
+msgstr "Немає питань у цій категорії."
+
+msgid "No search results"
+msgstr "Пошук не дав результатів"
+
+msgid "New question"
+msgstr "Нове запитання"
+
+msgid "Categories"
+msgstr "Категорії"
+
+msgid "Categories help you to arrange questions and answers by themes to simplify naviagation and search, e.g.: Common questions, How to.., and etc."
+msgstr "Категорії допоможуть вам організувати питання та відповіді по темам для спрощення навігації по темам та пошуку, наприклад: загальні питання, як зробити і т. д."
+
+msgid "New category"
+msgstr "Нова категорія"
+
+msgid "Please <a href=\"#/faq/category/new\">create a category</a> first, to start adding questions and answers."
+msgstr "Будь ласка,<a href=\"#/faq/category/new\">створіть категорію</a>, а потім почніть додавати запитання та відповіді."
+
+msgid "Category"
+msgstr "Категорія"
+
+msgid "Visibility"
+msgstr "Видимість"
+
+msgid "Backend"
+msgstr "Бекенд"
+
+msgid "Users can see this question and answer when they reply to client requests"
+msgstr "Користувачі можуть бачити це питання і відповідь, коли вони відповідають на запити клієнтів"
+
+msgid "Comment for users"
+msgstr "Коментар для користувачів"
+
+msgid "Write a brief instruction here that may help users to select this answer when they work on a client's request."
+msgstr "Напишіть стислу інструкцію, яка допоможе користувачам обрати цю відповідь, коли вони опрацьовують запит клієнта."
+
+msgid "Site"
+msgstr "Сайт"
+
+msgid "Visible in the public category"
+msgstr "Видиме у публічній категорії"
+
+msgid "Page URL"
+msgstr "URL сторінки"
+
+msgid "Delete this question & answer"
+msgstr "Видалити ці питання і відповідь"
+
+msgid "Write an answer here"
+msgstr "Напишіть відповідь тут"
+
+msgid "Icons"
+msgstr "Значки"
+
+msgid "Users can see questions and answers from this category when they reply to client requests"
+msgstr "Користувачі можуть бачити питання та відповіді з цієї категорії, коли вони опрацьовують запити клієнтів"
+
+msgid "Category is visible in the public part of your site"
+msgstr "Категорія є видимою у публічній частині вашого сайту"
+
+msgid "Helpdesk app is not settled on any site. Use %s app to manage settlements."
+msgstr "Додаток \"Підтримка\" не поселено на жодному сайті. Використовуйте додаток %s, аби керувати поселеннями."
+
+msgid "All sites"
+msgstr "Усі сайти"
+
+msgid "Only selected sites"
+msgstr "Тільки обрані сайти"
+
+msgid "Shown above are only sites where Helpdesk app is settled. Use %s app to manage settlements."
+msgstr "Вище наведені тільки ті сайти, де поселено додаток \"Підтримка\". Використовуйте додаток %s для керування поселеннями."
+
+msgid "View"
+msgstr "Вид"
+
+msgid "All answers on one page"
+msgstr "Усі відповіді на одній сторінці"
+
+msgid "Every answer on separate page"
+msgstr "Кожна відповідь на окремій сторінці"
+
+msgid "Delete category"
+msgstr "Видалити категорію"
+
+msgid "There are no records in this category."
+msgstr "У цій категорії немає записів."
+
+msgid "draft"
+msgstr "чернетка"
+
+msgid "ID"
+msgstr "Ідентифікатор"
+
+msgid "Created"
+msgstr "Створено"
+
+msgid "Updated"
+msgstr "Оновлено"
+
+msgid "Assigned"
+msgstr "Призначено"
+
+msgid "Questions & Answers"
+msgstr "Питання і відповіді"
+
+msgid "Loading"
+msgstr "Завантаження"
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "Empty response from server"
+msgstr "Порожня відповідь сервера"
+
+msgid "What is this?"
+msgstr "Що це?"
+
+msgid "Ok"
+msgstr "ОК"
+
+msgid "Error delivering messages from:"
+msgstr "Помилка доставки повідомлень від:"
+
+msgid "Insert code block"
+msgstr "Вставити блок коду"
+
+msgid "Insert"
+msgstr "Вставити"
+
+msgid "Requests:"
+msgstr "Запити:"
+
+msgid "Show %s records on a page"
+msgstr "Показати %s записів на сторінці"
+
+msgid "Pages"
+msgstr "Сторінки"
+
+msgid "No requests."
+msgstr "Немає запитів."
+
+msgid "Last action"
+msgstr "Остання дія"
+
+msgid "No actions with this request."
+msgstr "Із цим проханням дії не виконувались."
+
+msgid "#%s"
+msgstr "#%s"
+
+msgid "To select an action you should select state first (above)."
+msgstr "Аби обрати дію, ви маєте спочатку вказати статус (вище)."
+
+msgid "Only actions for the selected state (above) are available."
+msgstr "Доступні тільки дії для вказаного вище стану."
+
+msgid "Value of the field \"%s\""
+msgstr "Значення поля \"%s\""
+
+msgid "performs action"
+msgstr "виконує дію"
+
+msgid "Available values for \"%s\""
+msgstr "Доступні значення для \"%s\""
+
+msgid "After this action is executed"
+msgstr "Після цього виконується дія"
+
+msgid "Leave request in the same state"
+msgstr "Залишити запит у тому ж статусі"
+
+msgid "Forward request to state"
+msgstr "Перевести запит до статусу"
+
+msgid "When a user performs this action the request state will be changed to the state you select here. Your choice will be shown by an arrow in the workflow setup diagram."
+msgstr "Коли користувач виконує цю дію, стан запиту зміниться на обраний тут. Ваш вибір буде показано стрілкою на схемі установки робочого процесу."
+
+msgid "clear previous assignment"
+msgstr "очистити попереднє призначення"
+
+msgid "keep previous assignment"
+msgstr "залишити попереднє призначення"
+
+msgid "Customer"
+msgstr "Клієнт"
+
+msgid "Choose if this action is available for customer (request's originator) in their customer portal."
+msgstr "Оберіть, чи має бути ця дія доступною клієнтові (ініціатору запиту) у його особистому кабінеті."
+
+msgid "Available for viewing only"
+msgstr "Доступне тільки для перегляду"
+
+msgid "Advanced settings"
+msgstr "Додаткові параметри"
+
+msgid "Revoke all access rights for customer"
+msgstr "Позбавити клієнта усіх прав доступу"
+
+msgid "If you turn on this option, then execution of this action will automatically cause a complete banning of the contact who sent you this request."
+msgstr "Якщо ви увімкнете цю опцію, виконання цієї дії автоматично заблокує контакт, який відправив вам це прохання."
+
+msgid "The contact will not be able to log in to your site and customer portal anymore, and all further requests from this contact will be bounced."
+msgstr "Контакт не зможе увійти на ваш сайт і до свого особистого кабінету, усі наступні запити від цього контакту буде відхилено."
+
+msgid "This option can be used for banning contacts for spam or other illegal actions."
+msgstr "Ця опція може використовуватися для блокування контактів через спам або інші протиправні дії."
+
+msgid "Messages"
+msgstr "Повідомлення"
+
+msgid "Send email message"
+msgstr "Надіслати повідомлення електронною поштою"
+
+msgid "Send another email message"
+msgstr "Надіслати ще одне повідомлення електронною поштою"
+
+msgid "action name"
+msgstr "назва дії"
+
+msgid "Time-out"
+msgstr "Тайм-аут"
+
+msgid "days"
+msgstr "днів"
+
+msgid "hours"
+msgstr "годин"
+
+msgid "Available for execution only"
+msgstr "Доступно тільки для виконання"
+
+msgid "Available for viewing and execution"
+msgstr "Доступне для перегляду та виконання"
+
+msgid "Attach:"
+msgstr "Прикріпити:"
+
+msgid "&lt;select&gt;"
+msgstr "&lt;оберіть&gt;"
+
+msgid "Send message"
+msgstr "Надіслати повідомлення"
+
+msgid "Notification preview"
+msgstr "Попередній перегляд повідомлення"
+
+msgid "preview"
+msgstr "попередній перегляд"
+
+msgid "Send copy"
+msgstr "Надіслати копію"
+
+msgid "Search by name or email"
+msgstr "Пошук за іменем або адресою електронної пошти"
+
+msgid "Assignment is required"
+msgstr "Необхідно вказати призначення"
+
+msgid "This message template is customized by administrator in workflow settings."
+msgstr "Шаблон цього повідомлення встановлюється адміністратором у налаштуваннях робочого процесу."
+
+msgid "remove"
+msgstr "видалити"
+
+msgid "Form"
+msgstr "Форма"
+
+msgid "Customize form that appears for users when they perform this action. Choose required fields and set up their properties and location in the form."
+msgstr "Налаштувати форму, що з&#39;являється у користувачів, коли вони виконують цю дію. Оберіть необхідні поля та вкажіть їх властивості та розташування у формі."
+
+msgid "Enter a default text here"
+msgstr "Введіть текст за замовчуванням тут"
+
+msgid "Attachments"
+msgstr "Вкладення"
+
+msgid "Default assignee:"
+msgstr "Призначення за замовчуванням:"
+
+msgid "assign user performing this action"
+msgstr "призначити користувача, що виконує цю дію"
+
+msgid "Allow to select assignee"
+msgstr "Дозволити обрати призначеного"
+
+msgid "This shows how this action's button will look like on request page in backend"
+msgstr "Демонстрація вигляду кнопок цієї дії на сторінці запиту у бекенді"
+
+msgid "Customize button color"
+msgstr "Налаштувати колір кнопки"
+
+msgid "Use color of the state %s where this button forwards request"
+msgstr "Використовувати колір статусу %s, до якого ця кнопка переводить запит"
+
+msgid "Auto action"
+msgstr "Автоматична дія"
+
+msgid "This field only allows Latin letters, numbers and underscores."
+msgstr "Це поле дозволяє вводити тільки латинські літери, цифри та знак підкреслення."
+
+msgid "Action with this ID already exists"
+msgstr "Дія з таким ідентифікатором вже існує"
+
+msgid "Action with this name already exists"
+msgstr "Дія з такою назвою вже існує"
+
+msgid "Sorry, the request status has been changed. To continue working with this request you have to refresh the page."
+msgstr "На жаль, статус запиту змінився. Аби продовжити роботу із цим запитом, вам доведеться оновити сторінку."
+
+msgid "Assigned user or all members of assigned group"
+msgstr "Призначений користувач або усі члени групи"
+
+msgid "All members of assigned group"
+msgstr "Усі члени призначеної групи"
+
+msgid "New action"
+msgstr "Нова дія"
+
+msgid "Specify default values for new request."
+msgstr "Вказати значення за замовчуванням для нового запиту."
+
+msgid "Assign to"
+msgstr "Призначити"
+
+msgid "New contact"
+msgstr "Новий контакт"
+
+msgid "find by name, email, of phone number"
+msgstr "знайти за іменем, адресою електронної пошти, номером телефону"
+
+msgid "Another contact"
+msgstr "Інший контакт"
+
+msgid "Attach"
+msgstr "Прикріпити"
+
+msgid "Contact not found"
+msgstr "Контакт не знайдено"
+
+msgid "An error occurred while processing your request. Please try again later."
+msgstr "При обробці вашого запиту сталася помилка. Будь ласка, спробуйте ще раз пізніше."
+
+msgid "Send"
+msgstr "Надіслати"
+
+msgid "Refresh CAPTCHA"
+msgstr "Оновити CAPTCHA"
+
+msgid "Add contact fields"
+msgstr "Додати поля контактів"
+
+msgid "Add request fields"
+msgstr "Додати поля запиту"
+
+msgid "Reload image"
+msgstr "Оновити зображення"
+
+msgid "Thank you!"
+msgstr "Дякуємо!"
+
+msgid "Text paragraph"
+msgstr "Параграф тексту"
+
+msgid "Apply"
+msgstr "Застосувати"
+
+msgid "Field settings"
+msgstr "Параметри поля"
+
+msgid "Field"
+msgstr "Поле"
+
+msgid "Terms description"
+msgstr "Опис умов"
+
+msgid "Checked by default"
+msgstr "Відмічене за замовчуванням"
+
+msgid "Label"
+msgstr "Мітка"
+
+msgid "Label placement"
+msgstr "Розміщення мітки"
+
+msgid "Left aligned"
+msgstr "Вирівнювання по лівому краю"
+
+msgid "Top aligned"
+msgstr "Вирівнювання по верхньому краю"
+
+msgid "Do not show"
+msgstr "Не показувати"
+
+msgid "Plain text"
+msgstr "Простий текст"
+
+msgid "Redactor"
+msgstr "Редактор"
+
+msgid "Drop down"
+msgstr "Випадаючий перелік"
+
+msgid "Radio buttons"
+msgstr "Радіокнопки"
+
+msgid "Address labels placement"
+msgstr "Розміщення міток адрес"
+
+msgid "As a placeholder inside of field input"
+msgstr "В якості заповнювача всередині поля введення"
+
+msgid "Placeholder"
+msgstr "Заповнювач"
+
+msgid "Required"
+msgstr "Обов&#39;язково"
+
+msgid "Identification"
+msgstr "Ідентифікація"
+
+msgid "If enabled we shall search for an existing contact with the same phone number and associate request sent via this form with the contact found."
+msgstr "Якщо увімкнено, ми будемо шукати існуючий контакт із тим же номером телефону і пов&#39;яжемо запит, відправлений через цю форму, із знайденим контактом."
+
+msgid "Edit field settings"
+msgstr "Редагувати параметри поля"
+
+msgid "Remove this field from the form"
+msgstr "Видалити це поле з форми"
+
+msgid "Horizontal rule"
+msgstr "Горизонтальне правило"
+
+msgid "This source enables you to receive new requests via a web form published in the frontend of any Webasyst app or anywhere on the Internet. Also this form can be used to add requests directly from your backend (\"New request\" button), or from your clients customer portals."
+msgstr "Це джерело дозволяє отримувати нові запити через веб-форму, опубліковані в інтерфейсі любого додатку Вебасист або де завгодно в Інтернеті. Також ця форма може бути використана, аби створювати запити прямо з вашого бекенду (кнопка \"новий запит\"), або з особистих кабінетів ваших контактів."
+
+msgid "Set up the appearance of the web form as it should be displayed on your website."
+msgstr "Налаштувати зовнішній вигляд веб-форми для відображення на сайті."
+
+msgid "Use this form on the site"
+msgstr "Використовувати цю форму на сайті"
+
+msgid "Form can be published on any page of the site."
+msgstr "Форми можуть бути опубліковані на будь-якій сторінці сайту."
+
+msgid "Edit CSS"
+msgstr "Редагувати CSS"
+
+msgid "To publish the form on your site use this code:"
+msgstr "Аби опублікувати цю форму на вашому сайті, скористайтеся цим кодом:"
+
+msgid "To publish the form on external site use this code:"
+msgstr "Для публікації форми на зовнішньому сайті використовуйте цей код:"
+
+msgid "iframe"
+msgstr "iframe"
+
+msgid "After successful submission (if client is not authorized)"
+msgstr "Після успішної відправки (якщо клієнта не авторизовано)"
+
+msgid "This setting will redirect new clients (who are not yet authorized on your site) to any specified URL or display any text message after the form is submitted."
+msgstr "Цей параметр буде перенаправляти нових клієнтів (які ще не авторизовані на вашому сайті) після відправки форми до будь-якого зазначеного URL або відображати довільне повідомлення."
+
+msgid "Redirect to URL"
+msgstr "Перенаправлення на URL"
+
+msgid "Display text instead of the form"
+msgstr "Показати текст замість форми"
+
+msgid "Send a request for confirmation"
+msgstr "Надіслати запит на підтвердження"
+
+msgid "To enable this option, your form must contain Email field."
+msgstr "Аби увімкнути цю опцію, ваша форма повинна містити поле для адреси електронної пошти."
+
+msgid "After successful submission of this form an automatic notification will be sent to the sender's email address. This notification contains a special link which must be clicked to confirm the sending of the request. You may also add extra instructions for your clients to the notification text."
+msgstr "Після успішної відправки цієї форми автоматичне повідомлення буде відправлено на адресу електронної пошти відправника. У цьому повідомленні міститься спеціальне посилання, яке необхідно натиснути для підтвердження запиту. Ви також можете додати додаткові інструкції для клієнтів в текст повідомлення."
+
+msgid "NOTE: Request will be accepted and shows up in your request lists only after client clicks confirmation link in this message. It's probably a good idea to write about this in the text that appears on your web page after this form submission."
+msgstr "Примітка: заявку буде прийнято і показано у вашому переліку запитів тільки після того, як клієнт натисне на посилання для підтвердження, направлене йому в повідомленні. Ймовірно, буде гарною ідеєю писати про це в тексті, який з&#39;являється на веб-сторінці, після відправки форми."
+
+msgid "After successful submission (if client is authorized)"
+msgstr "Після успішної відправки (якщо клієнта авторизовано)"
+
+msgid "For registered clients authorized on your site at the moment of this form submission, you can customize a different behaviour."
+msgstr "Для зареєстрованих клієнтів, авторизованих на вашому сайті на момент надсилання форми, можна налаштувати окрему поведінку."
+
+msgid "Redirect to the request page in customer portal"
+msgstr "Перенаправити на сторінку запиту у особистому кабінеті"
+
+msgid "Use this form in backend"
+msgstr "Використовувати цю форму у бекенді"
+
+msgid "Allows you to manually create new requests via this form in Helpdesk backend using the “New request” button. This option may be useful when a client cannot send you a request personally; e.g., during a telephone call."
+msgstr "Дозволяє вручну створювати нові запити через цю форму у бекенді \"Підтримки\" за допомогою кнопки Новий запит\". Ця опція може бути корисною, коли клієнт не може надіслати вам запит особисто; наприклад, під час телефонної розмови."
+
+msgid "Use this form in customer portal"
+msgstr "Використовуйте цю форму на порталі підтримки"
+
+msgid "Forwarding request to workflow"
+msgstr "Пересилання запиту в робочий процес"
+
+msgid "The selected state will be automatically set for new requests received via this form."
+msgstr "Обраний стан буде автоматично встановлений для нових запитів, отриманих через цю форму."
+
+msgid "Action"
+msgstr "Дія"
+
+msgid "The selected action will be automatically performed with requests received via this form."
+msgstr "Обраний стан буде автоматично встановлено для нових запитів, отриманих через цю форму."
+
+msgid "Select the user or user group who should be automatically assigned to requests received via this form."
+msgstr "Оберіть користувача або групи користувачів, які мають бути автоматично призначені на запити, отримані через цю форму."
+
+msgid "Language"
+msgstr "Мова"
+
+msgid "For new clients who send their first request to your helpdesk service, a new contact record will be automatically created in your Contacts app."
+msgstr "Для нових клієнтів, які посилають перший запит до служби підтримки. у додатку \"Контакти\" буде автоматично створено запис."
+
+msgid "Select the default language for such new clients here."
+msgstr "Оберіть мову за замовчуванням для таких нових клієнтів."
+
+msgid "Custom CSS"
+msgstr "Користувальницький CSS"
+
+msgid "You are using customized version of CSS."
+msgstr "Ви використовуєте настроювану версію CSS."
+
+msgid "Revoke to default CSS."
+msgstr "Повернути стандартний CSS."
+
+msgid "You are using the original version of CSS."
+msgstr "Ви використовуєте оригінальну версію CSS."
+
+msgid "Delete form"
+msgstr "Видалити форму"
+
+msgid "If the sender of the message is"
+msgstr "Якщо відправник повідомлення"
+
+msgid "and request state is"
+msgstr "і статус запиту"
+
+msgid ", then perform action"
+msgstr ", потім виконати дію"
+
+msgid "Set up the email address from which you would like to receive support requests."
+msgstr "Налаштувати адресу електронної пошти, з якої ви хочете отримувати запити на підтримку."
+
+msgid "Please specify an existing email address; it may be hosted on any mail server; e.g., in a popular mail service such as Gmail, Yahoo!, etc., and must be accessible for connection via POP3 protocol."
+msgstr "Вкажіть, будь-ласка існуючу адресу електронної пошти. Вона може хостуватися на будь-якому поштовому сервері — наприклад, на одному з таких популярних сервісів, як Gmail, Yahoo! Поштова скринька має бути доступною для підключення по протоколу POP3."
+
+msgid "<strong>IMPORTANT NOTE:</strong> It is recommended that you specify an email account which was specially created for use by the Helpdesk app."
+msgstr "<strong>ВАЖЛИВО:</strong> рекомендується вказати обліковий запис електронної пошти, який було створено спеціально для використання додатком «Підтримка»."
+
+msgid "After you configure and save this source, all messages from the specified email account will be downloaded into Helpdesk and will be <strong>deleted from your mail server!</strong>"
+msgstr "Після налаштування і збереження цього джерела, усі повідомлення з вказаного облікового запису електронної пошти буде завантажено у додаток «Підтримка» та <strong>видалено з поштової скриньки!</strong>"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Username"
+msgstr "Ім&#39;я користувача"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Leave blank to keep current value unchanged."
+msgstr "Залиште поле порожнім, аби зберегти поточне значення без змін."
+
+msgid "Incoming server"
+msgstr "Вхідний сервер"
+
+msgid "POP3 Port"
+msgstr "Порт POP3"
+
+msgid "Use Secure STARTTLS Settings"
+msgstr "Використовувати налаштування безпеки STARTTLS"
+
+msgid "Use Secure SSL/TLS Settings"
+msgstr "Використовувати налаштування безпеки SSL/TLS"
+
+msgid "If your mail server supports this option, we recommend using POP3 over STARTTLS or SSL/TLS since it provides increased security for your interactions with the remote mail server."
+msgstr "Якщо ваш поштовий сервер підтримує цю функцію, ми рекомендуємо використовувати POP3 через STARTTLS або SSL/TLS, оскільки вони забезпечують підвищений рівень безпеки для ваших взаємодій з віддаленим поштовим сервером."
+
+msgid "Spam control"
+msgstr "Захист від спаму"
+
+msgid "Every time you receive a message from an unknown email address which is not yet stored in your Contacts database, an automatic notification will be sent to the sender's address."
+msgstr "Кожного разу, коли ви отримуєте повідомлення з невідомої адреси email, якої ще немає у ваших «Контактах», на цю адресу буде надіслано автоматичне повідомлення."
+
+msgid "This notification contains a special link which must be clicked to confirm the sending of the first request. You may also add extra instructions for your clients to the notification text."
+msgstr "Повідомлення містить спеціальне посилання, за яким необхідно перейти, аби підтвердити надсилання першого запиту. Ви также можете додати інструкції для ваших клієнтів у текст повідомлення."
+
+msgid "Please specify how requests received via this email address should be handled."
+msgstr "Будь ласка, вкажіть , як повинні бути оброблено запити, отримані через цю адресу електронної пошти."
+
+msgid "This state will be automatically set for new requests received via this email address."
+msgstr "Цей стан буде автоматично встановлено для нових запитів, отриманих через цю адресу електронної пошти."
+
+msgid "This action will be automatically performed with requests received via this email address."
+msgstr "Цю дію буде автоматично виконано із запитами, отриманими через цю адресу електронної пошти."
+
+msgid "Select a user or a user group who should be automatically assigned to requests received via this email address."
+msgstr "Оберіть користувача або групи користувачів, які мають бути автоматично призначені на запити, отримані через цю адресу електронної пошти."
+
+msgid "Reply to reply handling"
+msgstr "Відповідь на відповідь за зверненням"
+
+msgid "In case a message incoming to this email address contains a request ID in their subject (e.g., [ID:12345-XXXXX]; 12345 is request ID in this sample), then we bind incoming message with this request. However, you can customize special processing for this kind of messages."
+msgstr "У разі, якщо вхідне повідомлення на цю адресу містить ідентифікатор запиту в своїй темі (наприклад, [ID:12345-ХХХХХ]; де 12345 — ідентифікатор запиту в цьому прикладі), то ми пов&#39;язуємо вхідне повідомлення з цим запросом. Тим не менш, ви можете налаштувати спеціальну обробку для такого роду повідомлень."
+
+msgid "anyone"
+msgstr "будь-хто"
+
+msgid "Request author"
+msgstr "Автор запиту"
+
+msgid "Assigned user "
+msgstr "Призначений користувач "
+
+msgid "Another user"
+msgstr "Інший користувач"
+
+msgid "Add new rule"
+msgstr "Додати нове правило"
+
+msgid "Custom handling"
+msgstr "Користувальницька обробка"
+
+msgid "Default handling"
+msgstr "Обробка за замовчуванням"
+
+msgid "Please specify required data"
+msgstr "Будь ласка, вкажіть необхідні дані"
+
+msgid "Your request is confirmed."
+msgstr "Ваш запит підтверджено."
+
+msgid "Unknown contact"
+msgstr "Невідомий контакт"
+
+msgid "Encryption requires OpenSSL PHP module to be installed."
+msgstr "Аби увімкнути шифрування, має бути встановлено модуль PHP OpenSSL."
+
+msgid "Unknown error."
+msgstr "Невідома помилка."
+
+msgid "IMAP is not supported. Please use POP3."
+msgstr "Протокол IMAP не підтримується. Використовуйте, будь ласка, POP3."
+
+msgid "An error occured while attempting to connect with specified settings."
+msgstr "При спробі підключення за заданими параметрами сталася помилка."
+
+msgid "Name"
+msgstr "Назва"
+
+msgid "Thank you for sending request to our support team!"
+msgstr "Дякуємо за відправку запиту в службу підтримки!"
+
+msgid "Full name"
+msgstr "Повне ім&#39;я"
+
+msgid "Captcha"
+msgstr "Капча"
+
+msgid "Consent to terms"
+msgstr "Згода з умовами"
+
+msgid "Access denied."
+msgstr "Доступ заборонено."
+
+msgid "Original subject"
+msgstr "Оригінальна тема повідомлення"
+
+msgid "No request form"
+msgstr "Немає форми запиту"
+
+msgid "Settlement type"
+msgstr "Тип поселення"
+
+msgid "With public frontend"
+msgstr "З публічним фронтендом"
+
+msgid "<br>Includes Customer Portal"
+msgstr "<br>Включає особистий кабінет"
+
+msgid "Customer Portal only"
+msgstr "Лише особистий кабінет"
+
+msgid "Main request form"
+msgstr "Основна форма запиту"
+
+msgid "created a new request"
+msgstr "створив новий запит"
+
+msgid "performed an action with request"
+msgstr "виконав дію із запитом"
+
+msgid "Workflow &ldquo;%s&rdquo;"
+msgstr "Робочий процес &ldquo;%s&rdquo;"
+
+msgid "Can add new requests"
+msgstr "Може створювати запити"
+
+msgid "Can add new tags"
+msgstr "Може створювати теги"
+
+msgid "Can be assigned to requests"
+msgstr "Може бути призначеним на запити"
+
+msgid "Available actions"
+msgstr "Доступні дії"
+
+msgid "Available states"
+msgstr "Доступні статуси"
+
+msgid "Users with limited access are not allowed to change application settings, e.g. sources, workflows, and etc."
+msgstr "Користувачам з обмеженим доступом не дозволено змінювати налаштування додатку, наприклад, джерел, робочих процесів і т. д."
+
+msgid "Support request"
+msgstr "Запит до служби підтримки"
+
+msgid "Request states"
+msgstr "Статуси запитів"
+
+msgid "<no change>"
+msgstr "<без змін>"
+
+msgid "no subject"
+msgstr "без теми"
+
+msgid "Summary"
+msgstr "Резюме"
+
+msgid "Action text"
+msgstr "Текст дії"
+
+msgid "year"
+msgstr "рік"
+
+msgid "month"
+msgstr "місяць"
+
+msgid "day"
+msgstr "день"
+
+msgid "workflow"
+msgstr "робочий процес"
+
+msgid "Not assigned"
+msgstr "Не призначено"
+
+msgid "Assigned to id="
+msgstr "Призначено ідентифікатору="
+
+msgid "client"
+msgstr "клієнт"
+
+msgid "closed"
+msgstr "закрито"
+
+msgid "open"
+msgstr "відкрито"
+
+msgid "Unread"
+msgstr "Непрочитані"
+
+msgid "Group:"
+msgstr "Група:"
+
+msgid "Sources"
+msgstr "Джерела"
+
+msgid "Assignments"
+msgstr "Призначення"
+
+msgid "Select a user or a user group who have access to Helpdesk app. Manage users and user groups, and their access rights in <a href=\"%s\">Team</a> app."
+msgstr "Оберіть користувача або групу користувачів, які мають доступ до додатка «Підтримка». Управління користувачами, групами користувачів та правами доступу можна виконати у додатку <a href=\"%s\">«Команда»</a>."
+
+msgid "Unique identifier automatically assigned to each request (e.g. #1001)"
+msgstr "Унікальний ідентифікатор автоматично присвоюється кожному запиту (наприклад, #1001)"
+
+msgid "Subject of the request"
+msgstr "Тема запиту"
+
+msgid "Request subject followed by the request ID (e.g. Request subject [ID: 1001-XXXXX]). The request ID and hash will associate any reply you receive from the customer with the original request."
+msgstr "Тема запиту, післа якої вказується ідентифікатор запиту (наприклад, Тема запиту [ID: 1001-XXXXX]). Ідентифікатор запиту та хеш пов&#39;яжуть отриману вами відповідь клієнта з оригінальним запитом."
+
+msgid "Text of the original request"
+msgstr "Текст оригінального запиту"
+
+msgid "Text entered in this action"
+msgstr "Текст, введений при виконанні дії"
+
+msgid "Request status (its current state) displayed in the backend"
+msgstr "Статус запиту (його поточний стан) відображається у бекенді"
+
+msgid "Request status (its current state) that the customer sees in Customer Portal"
+msgstr "Статус запиту (його поточний стан), як клієнт бачить його у особистому кабінеті"
+
+msgid "Full history of request, including the original message. Similar to the request view in backend."
+msgstr "Повна історія запиту, у тому числі вихідне повідомлення. Схоже на перегляд запиту у бекенді."
+
+msgid "History of request as seen by the customer. Similar to the request view in Customer Portal."
+msgstr "Історія запитів, як її бачить клієнт. Схоже на перегляд запиту у особистому кабінеті."
+
+msgid "URL of the request page in the backend"
+msgstr "URL-адреса сторінки запиту у бекенді"
+
+msgid "URL of the request page in the Customer Portal"
+msgstr "URL-адреса сторінки запиту у особистому кабінеті"
+
+msgid "Unique identifier automatically assigned to each customer in Contacts"
+msgstr "Унікальний ідентифікатор автоматично присвоюється кожному клієнту у додатку «Контакти»"
+
+msgid "Primary email for customer"
+msgstr "Основна адреса електронної пошти клієнта"
+
+msgid "Name of customer in the format First Middle Last"
+msgstr "Ім&#39;я клієнта у форматі Ім&#39;я По-батькові Прізвище"
+
+msgid "Full name of person who has performed this action"
+msgstr "Повне ім&#39;я персони, яка виконала цю дію"
+
+msgid "Name of user or group assigned to the request"
+msgstr "Ім&#39;я користувача або групи, призначених на запит"
+
+msgid "Company name specified in your Installer settings (also displayed in the top-left corner of your backend)"
+msgstr "Назва компанії, зазначена у налаштуваннях Інсталера (також відображається у верхньому лівому куті бекенду)"
+
+msgid "URL address for not registered clients to confirm their original email. Click on this link opens the request in the client's Customer Portal."
+msgstr "URL-адреса для незареєстрованих клієнтів, аби підтвердити їх оригінальний лист. Клацання по цьому посиланню відкриє запит у особистому кабінеті клієнта."
+
+msgid "Request fields"
+msgstr "Поля запиту"
+
+msgid "Customer contact fields"
+msgstr "Поля контактних даних клієнта"
+
+msgid "User contact fields"
+msgstr "Поля контактних даних користувача"
+
+msgid "Assignee contact fields"
+msgstr "Поля контакта призначеного"
+
+msgid "Common fields"
+msgstr "Загальні поля"
+
+msgid "Value of customer field \"%s\""
+msgstr "Значення поля клієнта \"%s\""
+
+msgid "Value of actor field \"%s\""
+msgstr "Значення поля діючої особи \"%s\""
+
+msgid "Value of assigned user field \"%s\""
+msgstr "Значення поля \"%s\" призначеного користувача"
+
+msgid "site"
+msgstr "сайт"
+
+msgid "backend"
+msgstr "бекенд"
+
+msgid "I agree to <a>{$this->default_link_text}</a>"
+msgstr "Я згоден з <a>{$this->default_link_text}</a>"
+
+msgid "personal data protection policy"
+msgstr "політика захисту персональних даних"
+
+msgid "---INSERT A LINK HERE!---"
+msgstr "---ВСТАВТЕ СЮДИ ПОСИЛАННЯ!---"
+
+msgid "Status:"
+msgstr "Статус:"
+
+msgid "Edit subject"
+msgstr "Змінити тему"
+
+msgid "Reply by email"
+msgstr "Відповісти електронною поштою"
+
+msgid "<1 hour"
+msgstr "<1 години"
+
+msgid "%ds"
+msgstr "%ds"
+
+msgid "%dm"
+msgstr "%dm"
+
+msgid "%dh %dm"
+msgstr "%dh %dm"
+
+msgid "%dd %dh"
+msgstr "%dd %dh"
+
+msgid "%dd"
+msgstr "%dd"
+
+msgid "%dm %dd"
+msgstr "%dm %dd"
+
+msgid "%dy %dd"
+msgstr "%dy %dd"
+
+msgid "Requests"
+msgstr "Запити"
+
+msgid "<no category>"
+msgstr "<немає категорії>"
+
+msgid "State with this name already exists"
+msgstr "Статус з такою назвою вже існує"
+
+msgid "State with this ID already exists"
+msgstr "Статус з таким ідентифікатором вже існує"
+
+msgid "Others"
+msgstr "Інші"
+
+msgid "(deleted)"
+msgstr "(видалено)"
+
+msgid "Deleted %s request"
+msgid_plural "Deleted %s requests"
+msgstr[0] "Видалено %s запит"
+msgstr[1] "Видалено %s запити"
+msgstr[2] "Видалено %s запитів"
+
+msgid "%d request has been marked as Follow"
+msgid_plural "%d requests have been marked as Follow"
+msgstr[0] "%d запит помічено для стеження"
+msgstr[1] "%d запити помічено для стеження"
+msgstr[2] "%d запитів помічено для стеження"
+
+msgid "%d request has been removed from the Follow list"
+msgid_plural "%d requests have been removed from the Follow list"
+msgstr[0] "%d запит видалено з переліку стеження"
+msgstr[1] "%d запити видалено з переліку стеження"
+msgstr[2] "%d запитів видалено з переліку стеження"
+
+msgid "Updated %s request"
+msgid_plural "Updated %s requests"
+msgstr[0] "Оновлено %s запит"
+msgstr[1] "Оновлено %s запити"
+msgstr[2] "Оновлено %s запитів"
+
+msgid "%s request cleared assignment"
+msgid_plural "%s requests cleared assignment"
+msgstr[0] "Призначення прибране з %s запиту"
+msgstr[1] "Призначення прибране з %s запитів"
+msgstr[2] "Призначення прибране з %s запитів"
+
+msgid "%d request has been marked as unread"
+msgid_plural "%d requests have been marked as unread"
+msgstr[0] "%d запит було помічено як непрочитаний"
+msgstr[1] "%d запити було помічено як непрочитані"
+msgstr[2] "%d запитів було помічено як непрочитані"
+
+msgid "%d request has been marked as read"
+msgid_plural "%d requests have been marked as read"
+msgstr[0] "%d запит було помічено як прочитаний"
+msgstr[1] "%d запити було помічено як прочитані"
+msgstr[2] "%d запитів було помічено як прочитані"
+
+msgid "<unknown>"
+msgstr "<невідомо>"
+
+msgid ":: DELETED ::"
+msgstr "::ВИДАЛЕНО::"
+
+msgid "no status"
+msgstr "немає статусу"
+
+msgid "This action cannot be performed by user."
+msgstr "Ця дія не може бути виконана користувачем."
+
+msgid "Files with extensions %s are allowed only."
+msgstr "Дозволено тільки файли з розширеннями %s."
+
+msgid "Access denied"
+msgstr "Доступ заборонено"
+
+msgid "single line text"
+msgstr "єдиний рядок тексту"
+
+msgid "number"
+msgstr "кількість"
+
+msgid "drop down"
+msgstr "випадаючий список"
+
+msgid "checkbox"
+msgstr "прапорець"
+
+msgid "Empty id."
+msgstr "Порожній ідентифікатор."
+
+msgid "Unknown field:"
+msgstr "Невідоме поле:"
+
+msgid "Required field"
+msgstr "Обов&#39;язкове поле"
+
+msgid "Only English alphanumeric, hyphen and underline symbols are allowed"
+msgstr "Можна використовувати тільки латинські літери, цифри, знак переносу і підкреслювання"
+
+msgid "This ID is already in use"
+msgstr "Цей ідентифікатор вже використовується"
+
+msgid "Unknown field type:"
+msgstr "Невідомий тип поля:"
+
+msgid "Category URL may contain only letters, digits, and hyphens"
+msgstr "URL-адреса категорії може містити тільки літери, цифри та тире"
+
+msgid "This URL is already used"
+msgstr "Цей URL вже використовується"
+
+msgid "This field is required"
+msgstr "Це поле є обов&#39;язковим"
+
+msgid "You have no access rights to this request."
+msgstr "У вас немає прав доступу до цього запиту."
+
+msgid "Request"
+msgstr "Запит"
+
+msgid "My account"
+msgstr "Мій акаунт"
+
+msgid "My requests"
+msgstr "Мої запити"
+
+msgid "My profile"
+msgstr "Мій профіль"
+
+msgid "This action is not available"
+msgstr "Ця дія недоступна"
+
+msgid "This action cannot be performed from frontend."
+msgstr "Ця дія не може бути виконана з фронтенду."
+
+msgid "Find the answer"
+msgstr "Знайти відповідь"
+
+msgid "Welcome to new helpdesk section on your site!"
+msgstr "Ласкаво просимо до нового розділу підтримки на вашому сайті!"
+
+msgid "Attention: initial request parameters <a href=\"javascript:void(0);\" class=\"request-params-changed-link\">was changed</a>"
+msgstr "Увага: початкові параметри запиту <a href=\"javascript:void(0);\" class=\"request-params-changed-link\">було змінено</a>"
+
+msgid "no records"
+msgstr "немає записів"
+
+msgid "Sent"
+msgstr "Відправлені"
+
+msgid "&lt;no support requests&gt;"
+msgstr "&lt;Немає запитів&gt;"
+
+msgid "Contact information successfully updated!"
+msgstr "Контактні дані успішно оновлено!"
+
+msgid "We are using <a href=\"http://www.webasyst.com/\">Webasyst</a>"
+msgstr "Ми використовуємо <a href=\"http://www.webasyst.ru/\">Webasyst</a>"
+
+msgid "Create a new action"
+msgstr "Створити нову дію"
+
+msgid "Author of the request"
+msgstr "Автор запиту"
+
+msgid "Use source email address if request came by email"
+msgstr "Використовувати початкову адресу електронної пошти, якщо запит надійшов електронною поштою"
+
+msgid "Text:"
+msgstr "Текст:"
+
+msgid "More actions"
+msgstr "Більше дій"
+
+msgid "Sent to:"
+msgstr "Відправлено на:"
+
+msgid "Request text"
+msgstr "Текст запиту"
+
+msgid "All"
+msgstr "Усі"
+
+msgid "Any"
+msgstr "Будь-які"
+
+msgid "All states"
+msgstr "Усі статуси"
+
+msgid "Please set up a <tt>cron</tt> job (<a href=\"%s\" target=\"_blank\">view instructions</a>) using the command specified below in your web-hosting control panel:"
+msgstr "Будь-ласка, налаштуйте завдання <tt>cron</tt> (<a href=\"%s\" target=\"_blank\">переглянути інструкції</a>) за допомогою вказаної нижче команди у контрольній панелі вашого хостингу:"
+
+msgid "Customer Portal is a personal page available for clients sending requests to your Helpdesk. On this page customers can see all their requests, check status of any request, add a new request, and etc."
+msgstr "Особистий кабінет — це персональна сторінка, доступна клієнтам, які надсилають запити до вашої «Підтримки». На цій сторінці клієнти можуть бачити усі свої запити, перевіряти стан кожного запиту, створювати нові запити та інше."
+
+msgid "To access Customer Portal authorization by email and password is required. On the first login customer will be offered to enter a password. “Forgot password” option is also available on the authorization page."
+msgstr "Аби отримати доступ до особистого кабінету, потрібно вказати email та пароль. При першій авторизації клієнтові буде запропоновано ввести пароль. На сторінці авторизації також доступна опція «Забули пароль?»."
+
+msgid "New requests added from Customer Portal acquire status:"
+msgstr "Нові запити, надіслані з особистого кабінету, отримують статус:"
+
+msgid "Specify which statuses are available for client (status names as they appear for client can be changed):"
+msgstr "Вкажіть, які статуси доступні клієнтові (назви стану, які відображаються клієнтові, можна змінити):"
+
+msgid "Specify actions available in Customer Portal:"
+msgstr "Вкажіть дії, доступні у особистому кабінеті:"
+
+msgid "Mark request as “read”"
+msgstr "Позначити запит прочитаним"
+
+msgid "Customizing workflow"
+msgstr "Налаштування робочого процесу"
+
+msgid "Cancel"
+msgstr "Скасувати"
+
+msgid "All requests\")})},requestsFilterAction:function(a){for(var a=a||[],c=[\"requests"
+msgid_plural "filter\"],d=\""
+msgstr[0] "All requests\")})},requestsFilterAction:function(a){for(var a=a||[],c=[\"requests"
+msgstr[1] "filter\"],d=\""
+msgstr[2] ""
+
+msgid "Error delivering messages from:\")+\" \"+d.join("
+msgid_plural ")))):e.remove()}},loadHTML:function(a,c,d,e){this.showLoading();var f=\"#c-core-content"
+msgstr[0] "Error delivering messages from:\")+\" \"+d.join("
+msgstr[1] ")))):e.remove()}},loadHTML:function(a,c,d,e){this.showLoading();var f=\"#c-core-content"
+msgstr[2] ""
+
+msgid "Age"
+msgstr "Вік"
+
+msgid "Form preview"
+msgstr "Форма попереднього перегляду"
+
+msgid "Assigned to group:"
+msgstr "Призначено на групи:"
+
+msgid "Request #%s"
+msgstr "Запит №%s"
+
+msgid "wrote:"
+msgstr "написав:"
+
+msgid "source"
+msgstr "джерело"
+
+msgid "state"
+msgstr "статус"
+
+msgid "assigned to"
+msgstr "призначено"
+
+msgid "not assigned"
+msgstr "не призначено"
+
+msgid "assigned to id="
+msgstr "присвоєний ідентифікатору="
+
+msgid "Enter characters you see in the image"
+msgstr "Введіть символи, які ви бачите на зображенні"
+
+msgid "Name of requestor"
+msgstr "Ім&#39;я запитувача"
+
+msgid "Company name specified in your Installer settings. Also displayed in the left top corner in your backend."
+msgstr "Назва компанії, зазначена у налаштуваннях «Інсталера». Також відображається у лівому верхньому кутові бекенда."
+
+msgid "Request ID "
+msgstr "Ідентифікатор запиту "
+
+msgid "Request subject with ID (e.g. [ID:1234]) to identify original request in email replies"
+msgstr "Тема запиту з ідентифікатором (наприклад, [ID:1234]) для визначення оригінального запиту по відповіді у електронній пошті"
+
+msgid "Request status as configured for Customer Center"
+msgstr "Статус запиту, налаштованого для Центру замовника"
+
+msgid "Full request actions history, including the original text. Similar to request page in backend."
+msgstr "Повна історія дій із запитом, включаючи вихідний текст. Подібна сторінці запиту у бекенді."
+
+msgid "Request actions history available to customer. Similar to request page in the Customer Portal."
+msgstr "Історія дій із запитом доступна клієнтові. Подібна до сторінки запиту в особистому кабінеті."
+
+msgid "URL address of backend request page."
+msgstr "URL-адреса сторінки запиту у бекенді."
+
+msgid "URL address of request page in customer portal."
+msgstr "URL-адреса сторінки запиту у особистому кабінеті."
+
+msgid "Client original name"
+msgstr "Оригінальне ім&#39;я клієнта"
+
+msgid "Client original email"
+msgstr "Оригінальний email клієнта"
+
+msgid "Original email subject"
+msgstr "Оригінальна тема листа"
+
+msgid "Client original phone"
+msgstr "Оригінальний телефон клієнта"
+
+msgid "Assign to:"
+msgstr "Призначити:"
+
+msgid "Nobody"
+msgstr "Ніхто"
+
+msgid "%sEmail%s will be sent to:"
+msgstr "%sEmail%s буде надіслано:"
+
+msgid "This source allows to add requests from the application backend using “New request” button."
+msgstr "Це джерело дозволяє додавати запити з бекенду додатка, використовуючи кнопку \"Новий запит\"."
+
+msgid "For example, it can be used to accept requests by phone."
+msgstr "Наприклад, його можна використовувати для прийому запитів телефоном."
+
+msgid "Send a receipt upon receiving new request"
+msgstr "Відправити підтверждення при отриманні нового запиту"
+
+msgid "A receipt message will be sent to the customer to confirm his/her request receiving. It's recommended to specify an estimated response time in this receipt."
+msgstr "Аби підтвердити прийняття запиту, клієнтові буде направлене підтвердження. Ми рекомендуємо у цьому повідомленні вказати очікуваний час надання відповіді."
+
+msgid "As a return address for receipt messages, it is better to specify an unmonitored email box (e.g. noreply@your_company.com); this will minimize redundant requests."
+msgstr "В якості зворотної адреси для підтверждень краще вказати неконтрольовану адресу email (наприклад, noreply@your_company.com). Це дозволить мінімізувати зайві запити."
+
+msgid "Receipt text:"
+msgstr "Текст підтверждення:"
+
+msgid "Save new request in state:"
+msgstr "Зберегти новий запит у статусі:"
+
+msgid "Server"
+msgstr "Сервер"
+
+msgid "Port"
+msgstr "Порт"
+
+msgid "Login"
+msgstr "Логін"
+
+msgid "Use SSL"
+msgstr "Використовувати SSL"
+
+msgid "Enable spam control"
+msgstr "Увімкнути контроль спаму"
+
+msgid "Every time you receive a message from an unknown email address which does not exist in your Contacts database, an automatic confirmation request will be sent to this email address. This request contains a special link for sender to confirm his/her original message as well as additional confirmation instructions you may wish to provide."
+msgstr "Кожен раз, коли ви отримуєте повідомлення від невідомої адреси електронної пошти, якої не існує у вашій базі даних контактів, автоматичний запит підтвердження буде надіслано на вказану адресу електронної пошти. Цей запит містить спеціальне посилання для відправника, щоб підтвердити своє початкове повідомлення, ви також можете додати у це повідомлення додаткові інструкції."
+
+msgid "Confirmation request text:"
+msgstr "Текст запиту підтверждення:"
+
+msgid "If message does not contain an existing request ID in email subject (e.g. [ID:12345]), this messages will be treated as a new request. For this request:"
+msgstr "Якщо повідомлення не містить існуючий ідентифікатор запиту в темі повідомлення (наприклад, [ID:12345]), ці повідомлення будуть розглядатися як новий запит. Для цього запиту:"
+
+msgid "Assign to user or group:"
+msgstr "Призначити користувачу або групі:"
+
+msgid "If client (sender of this message) is new, then set for him/her this language:"
+msgstr "Якщо клієнт (відправник повідомлення) є новим, вкажіть для нього мову:"
+
+msgid "If message contains an ID in email subject, then:"
+msgstr "Якщо повідомлення містить ідентифікатор в темі повідомлення, тоді:"
+
+msgid "Request is in state:"
+msgstr "Запит знаходиться в стані:"
+
+msgid "Sender of the message is:"
+msgstr "Відправник повідомлення:"
+
+msgid "&lt;select an action&gt;"
+msgstr "&lt;обрати дію&gt;"
+
+msgid "In all cases unspecified (empty cells):"
+msgstr "У всіх необумовлених випадках (пусті клітинки):"
+
+msgid "Remove ID in subject and create new request"
+msgstr "Видалити ідентифікатор з теми і створити новий запит"
+
+msgid "Ignore message"
+msgstr "Ігнорувати повідомлення"
+
+msgid "Extended code"
+msgstr "Розширений код"
+
+msgid "Source name"
+msgstr "Назва джерела"
+
+msgid "Select fields for the form to contain:"
+msgstr "Оберіть поля для розміщення у формі:"
+
+msgid "Caption"
+msgstr "Заголовок"
+
+msgid "Placeholder to show in empty field"
+msgstr "Заповнювач для відображення у порожньому полі"
+
+msgid "Phone"
+msgstr "Телефон"
+
+msgid "First 100 characters of text will be used as request subject."
+msgstr "Перші 100 символів тексту будуть використовуватися у якості теми запиту."
+
+msgid "Button"
+msgstr "Кнопка"
+
+msgid "After successfull submit:"
+msgstr "Після успішної відправки:"
+
+msgid "Replace form with given text"
+msgstr "Замінити форму заданим текстом"
+
+msgid "Name of a person who performs the action"
+msgstr "Ім&#39;я особи, яка виконує дію"
+
+msgid "leave previous assignment"
+msgstr "залишити попереднє призначення"
+
+msgid "Message:"
+msgstr "Повідомлення:"
+
+msgid "Customizing action"
+msgstr "Налаштування дії"
+
+msgid "Allow to add a text message"
+msgstr "Дозволяє додати текстове повідомлення"
+
+msgid "A text area will open when user performs this action to enter a message (e.g.: comment or reply to client)."
+msgstr "Коли користувач виконує цю дію, буде розгорнуто текстове поле для введення повідомлення (наприклад, коментаря або відповіді клієнту)."
+
+msgid "After action is performed this text will be saved in the request history and included in notifications associated with this action (if it's included in email templates)."
+msgstr "Після того, як дію буде виконано, цей текст буде збережено в історії запитів і включено у повідомлення, пов&#39;язані з цією дією (якщо її включено до шаблонів email)."
+
+msgid "Allow to attach files"
+msgstr "Дозволити прикріплювати файли"
+
+msgid "Transition"
+msgstr "Перехід"
+
+msgid "Transfer request to another state"
+msgstr "Перевести запит до іншого стану"
+
+msgid "Set status:"
+msgstr "Встановити статус:"
+
+msgid "and perform action:"
+msgstr "і виконати дію:"
+
+msgid "Customer contact ID."
+msgstr "Ідентифікатор контакту клієнта."
+
+msgid "Sort by:"
+msgstr "Сортувати за:"
+
+msgid "This source enables you to receive new requests via a web form published in the frontend of any Webasyst app or anywhere on the Internet."
+msgstr "Це джерело дозволяє отримувати запити через веб-форму, опубліковано в інтерфейсі додатку Webasyst або де завгодно в Інтернеті."
+
+msgid "This title is displayed only in your workflow setup diagram."
+msgstr "Цей заголовок відображається тільки в схемі робочого процесу."
+
+msgid "Select the initial action for requests"
+msgstr "Оберіть початкову дію для запитів"
+
+msgid "no action"
+msgstr "немає дій"
+
+msgid "Select user or group assigned to requests"
+msgstr "Оберіть користувачів або групи, призначені на запити"
+
+msgid "Select language for new clients"
+msgstr "Вибір мови для нових клієнтів"
+
+msgid "Form setup"
+msgstr "Налаштування форм"
+
+msgid "After form submission"
+msgstr "Після відправки форми"
+
+msgid "This setting will redirect clients to any specified URL or display any text message after the form is submitted."
+msgstr "Цей параметр дозволяє перенаправляти клієнтів після заповнення форми на будь-яку вказану URL або показувати повідомлення на місці форми."
+
+msgid "After successfull submission:"
+msgstr "Після успішного відправлення:"
+
+msgid "Confirmation receipt"
+msgstr "Отримання підтвердження"
+
+msgid "Enable this setting to send your clients automatic request receipt notifications."
+msgstr "Увімкніть цей параметр, аби надсилати вашим клієнтам автоматичні повідомлення про отримання запитів."
+
+msgid "This option may be useful for providing estimated response time to your clients."
+msgstr "Ця опція може бути корисною для сповіщення клієнтів щодо приблизного часу відповіді."
+
+msgid "Select the state which should be set for newly created requests."
+msgstr "Обрати стан, який має бути встановлено для нових запитів."
+
+msgid "This source enables you to receive new requests via any email address."
+msgstr "Це джерело дозволяє отримувати нові запити через будь-яку адресу електронної пошти."
+
+msgid "Configure email"
+msgstr "Налаштування електронної пошти"
+
+msgid "If your mail server supports this option, we recommend using POP3 over SSL/TLS since it provides increased security for your interactions with the remote mail server."
+msgstr "Якщо ваш поштовий сервер підтримує цю функцію, ми рекомендуємо використовувати POP3, SSL і TLS, оскільки вона забезпечує підвищений рівень безпеки ваших взаємодій з поштовим сервером."
+
+msgid "Email Reply templates in the Helpdesk by default contain the request ID in their subject; e.g., [ID:12345]."
+msgstr "Email-шаблони відповіді в службу підтримки за замовчуванням містять ідентифікатор запиту у темі; наприклад, [ID:12345]."
+
+msgid "Following replies to these emails sent by your clients and received in Helpdesk can be associated with the corresponding requests."
+msgstr "Відповіді на ці листи, надіслані вашими клієнтами і отримані у додатку «Підтримка», можуть бути пов&#39;язані з відповідними запитами."
+
+msgid "Select an action in the table below that should be performed with such requests; the choice of such an action depends on the current request state and the sender of the reply."
+msgstr "У таблиці нижче оберіть дію, яка має бути виконана з такими запитами; вибір дії залежить від поточного стану запиту та відправника відповіді."
+
+msgid "The person that sent you the original request"
+msgstr "Персона, яка надіслала оригінальний запит"
+
+msgid "The user that is currently assigned to handle this request"
+msgstr "Користувач, який наразі призначений для обробки цього запиту"
+
+msgid "Any other user that has access privileges to your Helpdesk app"
+msgstr "Будь-який інший користувач, який має права доступу до вашого додатку «Підтримка»"
+
+msgid "Any other person in your Contacts app"
+msgstr "Будь-яка інша персона у додатку «Контакти»"
+
+msgid "no actions customized for this state"
+msgstr "для цього статусу немає налаштованих дій"
+
+msgid "The requested resource is not available."
+msgstr "Запитаний ресурс недоступний."
+
+msgid "Name and company fields are always displayed in the heading area on contact page."
+msgstr "Поля з іменем і компанією завжди відображаються у області заголовка на сторінці контакту."
+
+msgid "Customize additional heading fields"
+msgstr "Налаштуванти додаткові поля заголовку"
+
+msgid "Title"
+msgstr "Назва"
+
+msgid "First name"
+msgstr "Ім&#39;я"
+
+msgid "Middle name"
+msgstr "По-батькові"
+
+msgid "Last name"
+msgstr "Прізвище"
+
+msgid "Job title"
+msgstr "Посада"
+
+msgid "@"
+msgstr "@"
+
+msgid "Company"
+msgstr "Компанія"
+
+msgid "Contact"
+msgstr "Контакт"
+
+msgid "person"
+msgstr "персона"
+
+msgid "company"
+msgstr "компанія"
+
+msgid "disabled"
+msgstr "вимкнено"
+
+msgid "Add name in another language"
+msgstr "Додати ім&#39;я у іншій мові"
+
+msgid "Menu items"
+msgstr "Пункти меню"
+
+msgid "Applied to"
+msgstr "Застосовується до"
+
+msgid "Person"
+msgstr "Персона"
+
+msgid "Additional fields are always shown at the top area of contact page. Add here the fields that you access most frequently, e.g. Email, Phone, Address, and etc."
+msgstr "Додаткові поля завжди відображаються у верхній частині сторінки контактів. Тут ви можете додати поля, до яких ви найчастіше звертаєтеся — наприклад, електронна пошта, телефон, адреса та ін."
+
+msgid "Add category"
+msgstr "Додати категорію"
+
+msgid "Mark"
+msgstr "Позначити"
+
+msgid "Notify about actions "
+msgstr "Повідомити про акції "
+
+msgid "Insert snippet"
+msgstr "Вставити фрагмент"
+
+msgid "for request"
+msgstr "за запитом"
+
+msgid "Search result"
+msgstr "Результат пошуку"
+
+msgid "Main fields"
+msgstr "Основні поля"
+
+msgid "Main request fields can not be modified or disabled. Email requests usually contain subject and text with optional attachments. Requests sent via public or customer portal form may not have data in these fields. In this case they will be filled with default values."
+msgstr "Основні поля запиту не можна змінити чи вимкнути. Запити по email зазвичай містять тему та текст без додаткових вкладень. Запити, відправлені через публічну форму або через особистий кабінет, можут не містити даних у цих полях. В такому разі іх буде заповнено значеннями за замовчуванням."
+
+msgid "Attached files"
+msgstr "Прикріплені файли"
+
+msgid "Request double opt-in"
+msgstr "Запит на подвійну реєстрацію"
+
+msgid "Read"
+msgstr "Читати"
+
+msgid "I want to receive email notifications on unread requests"
+msgstr "Я хочу отримувати email-повідомлення про непрочитані запити"
+
+msgid "You got unread requests"
+msgstr "У вас є непрочитані запити"
+
+msgid "After you set \"Follow and advise\" mark, next time someone performs an action with this request it will appear as \"Unread\" for you and you will receive email notification about this action. So you will be able to follow all further activity related to this request."
+msgstr "Після установки позначки відстежування, наступного разу, коли хтось виконає дію із запитом, його буде помічено для вас, як непрочитаний — і ви отримаєте про це email-повідомлення. Таким чином ви зможете відстежувати подальшу активність у цьому запиті."
+
+msgid "Follow and advise mark"
+msgstr "Позначка відстежування"
+
+msgid "Using this form"
+msgstr "За допомогою цієї форми"
+
+msgid "Available in the Helpdesk backend"
+msgstr "Доступно у додатку «Підтримка»"
+
+msgid "Available for your clients in their Customer portal for these websites:"
+msgstr "Доступне для клієнтів у їх особистому кабінеті на цих сайтах:"
+
+msgid "Form settings"
+msgstr "Параметри форми"
+
+msgid "Text of comment"
+msgstr "Текст коментаря"
+
+msgid "Available in the Helpdesk backend:"
+msgstr "Доступно у бекенді додатку «Підтримка»:"
+
+msgid "Routing rules are not defined for Helpdesk app"
+msgstr "Для додатка «Підтримка» не визначено правил маршрутизації"
+
+msgid "Форму можно опубликовать на любой странице сайта."
+msgstr "Форму можна опублікувати на будь-якій сторінці сайту."
+
+msgid "Authorized user redirected to the request page in customer portal"
+msgstr "Авторизований користувач перенаправляється на сторінку запиту у особистому кабінеті"
+
+msgid "select form"
+msgstr "оберіть форму"
+
+msgid "If a client is authorized"
+msgstr "Якщо клієнта авторизовано"
+
+msgid "Redirect to the request page in pustomer portal"
+msgstr "Перенаправляти на сторінку запиту у особистому кабінеті"
+
+msgid "Category is visible in the pubalic part of your site"
+msgstr "Категорію видно у публічній частині вашого сайту"
+
+msgid "Apply visibility change to all questions in category"
+msgstr "Застосувати зміну видимості до усіх запитів у категорії"
+
+msgid "Catefgory is visible in the public part of your site"
+msgstr "Категорію видно у публічній частині вашого сайту"
+
+msgid "This field is already used"
+msgstr "Це поле вже використовується"
+
+msgid "no categories"
+msgstr "немає категорій"
+
+msgid "Questions & Answer"
+msgstr "Питання та відповіді"
+
+msgid "Custom markup"
+msgstr "Користувальницька розмітка"
+
+msgid "string"
+msgstr "рядок"
+
+msgid "Form design"
+msgstr "Дизайн форми"
+
+msgid "Use default CSS"
+msgstr "Використовувати CSS за замовчанням"
+
+msgid "Revert code to default"
+msgstr "Повернути код за замовчуванням"
+
+msgid "Delete rule"
+msgstr "Видалити правило"
+
+msgid "All answer on one page"
+msgstr "Усі відповіді на одній сторінці"
+
+msgid "Published"
+msgstr "Опубліковано"
+
+msgid " Name"
+msgstr " Назва"
+
+msgid "Frequently Asked Questions"
+msgstr "Часті питання"
+
+msgid "back"
+msgstr "назад"
+
+msgid "Request created"
+msgstr "Запит створено"
+
+msgid "Attention: initial request parameters <a href=\"javascript:void(0);\" class=\"request-params-changed-link\">was_changed</a>"
+msgstr "Увага: початкові параметри запиту <a href=\"javascript:void(0);\" class=\"request-params-changed-link\">було змінено</a>"
+
+msgid "Name of client"
+msgstr "Ім&#39;я клієнта"
+
+msgid "Comment"
+msgstr "Коментар"
+
+msgid "Request page constructor"
+msgstr "Конструктор сторінки запиту"
+
+msgid "Please fill required fields"
+msgstr "Будь ласка, заповніть необхідні поля"
+
+msgid "any"
+msgstr "будь-яке"
+
+msgid "Default"
+msgstr "За замовчуванням"
+
+msgid "Blue"
+msgstr "Синій"
+
+msgid "Green"
+msgstr "Зелений"
+
+msgid "Orange"
+msgstr "Помаранчевий"
+
+msgid "Custom"
+msgstr "Користувальницький"
+
+msgid "send request"
+msgstr "надіслати запит"
+
+msgid "We got new request from"
+msgstr "Ми отримали новий запит від"
+
+msgid "Create custom view"
+msgstr "Створити настроюваний огляд"
+
+msgid "Copy CSS from another view"
+msgstr "Скопіюйте код CSS з іншого виду"
+
+msgid "Delete custom CSS"
+msgstr "Видалити користувальницький CSS"
+
+msgid "Available fields"
+msgstr "Доступні поля"
+
+msgid "Action performed by user"
+msgstr "Дія, що виконується користувачем"
+
+msgid "Action performed automatically"
+msgstr "Дія, що виконується автоматично"
+
+msgid "System default (%s)"
+msgstr "Системний за замовчуванням (%s)"
+
+msgid "for state &ldquo;%s&rdquo;"
+msgstr "для стану &ldquo;%s&rdquo;"
+
+msgid "%s found in this state. These requests will NOT be deleted, but they will stay in unknown state."
+msgstr "Знайдено %s у цьому стані. Ці запити НЕ видалятимуться, але вони будуть перебувати у невідомому стані."
+
+msgid "The following <tt>cron</tt> job command is currently in use (%ssetting up a cron job%s):"
+msgstr "Наступне завдання <tt>cron</tt> наразі використовується (%sналаштування завдань cron%s):"
+
+msgid "To setup Customer portal use the <a href=\"%s\">Site app</a>."
+msgstr "Аби налаштувати особистий кабінет клієнта, скористайтеся <a href=\"%s\">додатком «Сайт»</a>."
+
+msgid "For further setup up of your Customer Portal use the <a href=\"%s\">Site app</a>"
+msgstr "Для подальшого налаштування особистого кабінету клієнта, скористайтеся <a href=\"%s\">додатком «Сайт»</a>"
+
+msgid "performs bulk operation “%s”"
+msgstr "запускає масове виконання операції \"%s\""
+
+msgid "Helpdesk is unable to fetch messages from source “%s”:"
+msgstr "Підтримка не може отримувати повідомлення з джерела \"%s\":"
+
+msgid "This filter displays all requests regardless of their status or assignment. If you do not usually need this full list for your work, simply hide it. Once you need it again, you can turn it on anytime using the “Add filter” option in the left-hand sidebar."
+msgstr "Цей фільтр відображає всі запити незалежно від їх статусу чи призначення. Якщо зазвичай для роботи вам не потрібен цей повний список, просто сховайте його. Як тільки він вам знову знадобиться, ви можете будь-коли ввімкнути його за допомогою опції «Додати фільтр» на лівій бічній панелі."
+
+msgid "Hide “All requests” filter"
+msgstr "Приховати фільтр «Усі запити»"
+
+msgid "Enable the “Developer mode” option in the Settings app to see the details."
+msgstr "Увімкніть режим розробника у додатку «Налаштування», аби переглянути подробиці."
+
+msgid "Categories help you to arrange questions and answers by themes to simplify navigation and search, e.g.: Common questions, How to.., and etc."
+msgstr "Категорії допоможуть вам організувати питання та відповіді по темам для спрощення навігації по темам та пошуку, наприклад: загальні питання, як зробити і т. д."
+
+msgid "Customer can perform the action but cannot see the same actions performed by other users"
+msgstr "Клієнт може виконати дію, але не зможе побачити ці дії, виконувані іншими користувачами"
+
+msgid "https://developers.webasyst.com/installation/tips/cron/"
+msgstr "https://developers.webasyst.ru/docs/installation/tips/cron/"
+
+msgid "For registered clients authorized on your site at the moment of this form submission, you can customize a different behavior."
+msgstr "Для зареєстрованих клієнтів, авторизованих на вашому сайті на момент надсилання форми, можна налаштувати окрему поведінку."
+
+msgid "An error occurred while attempting to connect with specified settings."
+msgstr "При спробі підключення за заданими параметрами сталася помилка."

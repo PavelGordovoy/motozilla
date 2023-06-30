@@ -1,0 +1,329 @@
+{strip}
+
+{if $wa->shop}
+{$categories = $wa->shop->categories(0, 1, true, true)}
+{/if}
+
+<header class="s-header-wrapper">
+
+    {* TOP *}
+    <nav class="s-top-header">
+        <div class="container">
+
+            <div class="s-top-header-menu">
+                <a class="s-navbar-toggler nav-toggle-wrapper{if empty($theme_settings.mobile_toggle)} hidden-xl-up{/if}" data-toggle="collapse" aria-expanded="false" data-target="#s-mobile-nav">
+                    <i class="nav-toggle"></i>
+                </a>
+                <ul class="{if empty($theme_settings.mobile_toggle)}hidden-lg-down{else}hidden{/if}">
+                    {include file="`$wa_active_theme_path`/header.html" inline topmenu=1}
+                </ul>
+            </div>
+
+            {if $wa->shop}
+            {$_phone = $wa->shop->settings('phone')}
+            {/if}
+
+            {if !empty($_phone)}
+            <div class="{if $wa->shop && $theme_settings.header_style == 'type_3'}hidden-lg-up {/if}s-time-wrapper text-right">
+                <ul>
+                    <li class="s-phone-wrapper nav-item"><a class="nav-link" href="tel:{$_phone|replace:" ":""}">{$_phone}</a>
+                    {if !empty($theme_settings.feedback_button_text)}<li class="s-callback-wrapper nav-item"><span class="{if !empty($theme_settings.feedback_link) && $wa->currentUrl(false, true) != $theme_settings.feedback_link}s-callback-dialog {/if}nav-link">{$theme_settings.feedback_button_text}</span></li>{/if}
+                </ul>
+            </div>
+            {/if}
+
+            {if $wa->isAuthEnabled()}
+            <div class="hidden-sm-down s-top-header-user-account">
+                <ul>
+                    <li class="nav-item"><a class="nav-link" href="{$wa->myUrl()}">{if $wa->user()->isAuth()}[s`My profile`]{else}[`Login`]{/if}</a></li>
+                    {if $wa->user()->isAuth()}
+                    <li class="nav-item"><a class="nav-link" href="?logout">[s`Log out`]</a></li>
+                    {else}
+                    <li class="nav-item"><a class="nav-link" href="{$wa->signupUrl()}">[s`Sign up`]</a></li>
+                    {/if}
+                </ul>
+            </div>
+            {/if}
+
+        </div>
+    </nav>
+
+    {* MIDDLE *}
+    <nav class="navbar s-middle-header">
+        <div class="container">
+            <div class="s-site-logo">
+                {if !empty($theme_settings.logo)}
+                <a href="{$wa_static_url}"><img src="{$wa_theme_url}{$theme_settings.logo}?v{$wa_theme_version}" alt="logo"></a>
+                {else}
+                <a href="{$wa_static_url}">{$wa->accountName()}</a>
+                {/if}
+            </div>
+            <div class="s-middle-header-menu">
+                <ul id="s-mobile-catalog" class="nav navbar-nav hidden-xl-up">
+                   <li class="nav-item default-bg">
+                       <a class="container nav-link nav-toggle-wrapper" data-toggle="collapse" href="#category-list-mobile" aria-expanded="false" aria-controls="category-list-mobile">
+                           [`Catalog`]
+                           <i class="nav-toggle"></i>
+                       </a>
+                       <div id="category-list-mobile" class="category-list-mobile collapse">
+                           <div class="category-list-mobile-block">
+                               {if count($categories)}
+                               <ul class="category-menu">
+                                   {foreach $categories as $cat}
+                                   <li>
+                                       {$subs = $wa->shop->categories($cat.id, 1, true)}
+                                       <a href="{$cat.url}">{$cat.name}{if count($subs)}<i class="fa fa-lg fa-angle-down" aria-hidden="true" data-toggle="collapse" data-target="#sub-category-{$cat.id}" aria-expanded="false" aria-controls="sub-category-{$cat.id}" role="button"></i>{/if}</a>
+                                       {if count($subs)}
+                                       <ul id="sub-category-{$cat.id}" class="sub-category-mobile collapse">
+                                           {foreach $subs as $sub}
+                                           {$subs2 = $wa->shop->categories($sub.id, 1, true)}
+                                               <li>
+                                                   <a href="{$sub.url}">{$sub.name}{if count($subs2)}<i class="fa fa-lg fa-angle-down" aria-hidden="true" data-toggle="collapse" data-target="#sub-category-{$sub.id}" aria-expanded="false" aria-controls="sub-category-{$sub.id}" role="button"></i>{/if}</a>
+                                                   {if count($subs)}
+                                                       <ul id="sub-category-{$sub.id}" class="sub-category-mobile collapse">
+                                                           {foreach $subs2 as $sub2}
+                                                               <li><a href="{$sub2.url}">{$sub2.name}</a></li>
+                                                           {/foreach}
+                                                       </ul>
+                                                   {/if}
+                                               </li>
+                                           {/foreach}
+                                       </ul>
+                                       {/if}
+                                   </li>
+                                   {/foreach}
+                               </ul>
+                               {else}
+                               <p class="default-color">[`You did not create any product categories yet.`]</p>
+                               {/if}
+                           </div>
+                       </div>
+                   </li>
+                </ul>
+                {if $theme_settings.header_style != 'type_3'}
+                <ul class="hidden-lg-down">
+                    {if $theme_settings.header_style == 'type_1' && $wa->shop}
+                    <li class="nav-item s-mainmenu-catalog">
+                        <a class="nav-link" href="javascript:void(0);">[`Catalog`]</a>
+                        <div class="container s-mainmenu-catalog-wrapper">
+                            <div class="s-mainmenu-catalog-menu">
+                                {if count($categories)}
+                                    <ul>
+                                    {foreach $categories as $cat}
+                                        <li>
+                                          {$subs = $wa->shop->categories($cat.id, 1, true)}
+                                          <a href="{$cat.url}">{if isset($cat.params.icon)}<i class="{$cat.params.icon} default-color"></i>{/if}{$cat.name}</a>
+                                          {if count($subs)}
+                                          <ul>
+                                            {foreach $subs as $s}
+                                            <li><a href="{$s.url}">{$s.name}</a></li>
+                                            {/foreach}
+                                          </ul>
+                                          {/if}
+                                        </li>
+                                    {/foreach}
+                                    </ul>
+                                {else}
+                                  <p class="align-center" style="color: #fff;">[`You did not create any product categories yet.`]</p>
+                                {/if}
+                            </div>
+                        </div>
+                    </li>
+                    {elseif $theme_settings.header_style == 'type_2' && $wa->shop}
+                    <li class="nav-item s-mainmenu-catalog-dropdown">
+                        <a class="nav-link" href="javascript:void(0);">[`Catalog`]</a>
+                        {if count($categories)}
+                        <ul>
+                            {foreach $categories as $cat}
+                            {$subs = $wa->shop->categories($cat.id, 1, true, true)}
+                            <li{if count($subs)} class="s-mainmenu-sub"{/if}>
+                                <a href="{$cat.url}">{$cat.name}</a>
+                                {if count($subs)}
+                                <ul class="{if isset($cat.params.menu_style)}s-menu-style-{$cat.params.menu_style}{else}s-menu-style-1{/if}">
+                                    {foreach $subs as $sub}
+                                    {$subs2 = $wa->shop->categories($sub.id, 1, true)}
+                                    <li{if count($subs2) && isset($cat.params.menu_subs)} class="s-mainmenu-sub"{/if}>
+                                        <a href="{$sub.url}">
+                                            {$sub.name}
+                                            {if isset($sub.params.image)}
+                                            <img src="{$sub.params.image}" alt="{$sub.name}">
+                                            {/if}
+                                        </a>
+                                        {if count($subs2) && isset($cat.params.menu_subs)}
+                                        <ul>
+                                            {foreach $subs2 as $sub2}
+                                            <li>
+                                                <a href="{$sub2.url}">{$sub2.name}</a>
+                                            </li>
+                                            {/foreach}
+                                        </ul>
+                                        {/if}
+                                    </li>
+                                    {/foreach}
+                                </ul>
+                                {/if}
+                            </li>
+                            {/foreach}
+                        </ul>
+                        {else}
+                        <ul>
+                            <li><a href="#">[`You did not create any product categories yet.`]</a></li>
+                        </ul>
+                        {/if}
+                    </li>
+                    {/if}
+                    {include file="`$wa_active_theme_path`/header.html" inline mainmenu=1}
+                </ul>
+                {else}
+                {if $wa->shop}
+                {$_phone = $wa->shop->settings('phone')}
+                {/if}
+                {if !empty($_phone)}
+                <div class="s-time-wrapper hidden-md-down">
+                    <ul>
+                        <li class="s-phone-wrapper nav-item"><a class="nav-link" href="tel:{$_phone|replace:" ":""}">{$_phone}</a>
+                        {if !empty($theme_settings.feedback_button_text)}<li class="s-callback-wrapper nav-item"><span class="{if !empty($theme_settings.feedback_link) && $wa->currentUrl(false, true) != $theme_settings.feedback_link}s-callback-dialog {/if}nav-link default-color">{$theme_settings.feedback_button_text}</span></li>{/if}
+                    </ul>
+                </div>
+                {/if}
+                {/if}
+            </div>
+            <div class="s-column-center hidden-sm-down">
+                <div class="s-search-wrapper">
+                    {if $wa->shop}
+                    <form id="s-shop-search" method="get" action="{$wa->getUrl("shop/frontend/search")}" data-url="{$wa->getUrl("shop/frontend/search")}" data-autocomplete="{if !empty($theme_settings.search_autocomplete)}true{else}false{/if}">
+                        {$_query = $smarty.get.query|default:''|escape}
+                        <input id="s-shop-search-input" class="s-text-input" type="text" name="query" value="{if !empty($_query)}{$_query}{/if}" placeholder="[`Search`]">
+                        <input class="s-submit-input" type="submit" value="">
+                    </form>
+                    {elseif $wa->site && class_exists('siteSearchPlugin')}
+                    <form action="{$wa_app_url}search/">
+                        <div class="input-group">
+                            <input class="form-control btn-sm" type="text" name="query" placeholder="[`Site search`]">
+                            <span class="input-group-btn">
+                                <input class="btn btn-sm default-bg" type="submit" value="Поиск">
+                            </span>
+                        </div>
+                    </form>
+                    {/if}
+                </div>
+            </div>
+            <div class="s-column-right">
+                <div class="s-info-blocks">
+
+                    {if $wa->shop}
+                    {$_cart_total = $wa->shop->cart->total()}
+                    {$_cart_count = $wa->shop->cart->count()}
+                    {$_price_text = "[`Empty`]"}
+                    {if !empty($_cart_total)}
+                    {$_price_text = wa_currency_html($_cart_total, $wa->shop->currency())}
+                    {/if}
+
+                    {$favorited = waRequest::cookie('shop_favorite', array(), waRequest::TYPE_ARRAY_INT)}
+                    <div class="s-info-wrapper s-favorite-wrapper is-empty" id="s-favorite-counter">
+                        <div class="s-info-block">
+                            <div class="s-image-wrapper">
+                                <span class="s-image"><i class="icon-star fa-lg"></i></span>
+                                <span class="s-favorite-count">0</span>
+                            </div>
+                        </div>
+                        <a class="s-link" href="{$wa->getUrl('shop/frontend/search/')}?addon=favorite/"></a>
+                    </div>
+
+                    <div class="s-info-wrapper s-compare-wrapper is-empty{if $theme_settings.cart_fixed} s-compare-fixed{else} s-compare-not-fixed{/if}" id="s-compare-counter">
+                        <div class="s-info-block">
+                            <div class="s-image-wrapper">
+                                <span class="s-image"><i class="icon-chart fa-lg"></i></span>
+                                <span class="s-compare-count">0</span>
+                            </div>
+                        </div>
+                        <a class="s-link" href="{$wa->getUrl('shop/frontend/compare')}"></a>
+                    </div>
+
+                    {if !$wa->globals("cart") || $wa->globals("cart")}
+                    <div id="s-cart-wrapper" class="s-info-wrapper s-cart-wrapper{if empty($_cart_count)} is-empty{/if}{if $theme_settings.cart_fixed} s-cart-fixed{else} s-cart-not-fixed{/if}" data-fixed="{if $theme_settings.cart_fixed}true{else}false{/if}">
+                        <div class="s-info-block">
+                            <div class="s-image-wrapper">
+                                <span class="s-image"><i class="icon-basket fa-lg"></i></span>
+                                <span class="s-cart-count">{if !empty($_cart_count)}{$_cart_count}{/if}</span>
+                            </div>
+                            <div class="s-text-wrapper">
+                                <div class="s-header">[s`Cart`]</div>
+                                <div class="s-text">{$_price_text}</div>
+                            </div>
+                        </div>
+                        <a class="s-link" href="{$wa->getUrl('shop/frontend/cart')}"></a>
+                    </div>
+
+                    {$show_popover = $wa->globals("cart")}
+                    {if empty($show_popover)}
+                    <div class="s-cart-popover s-cart-page{if !$theme_settings.cart_fixed} s-cart-not-fixed{/if} hidden-md-down">
+                        <div class="s-cart-popover-header"><h4>[s`Cart`]</h4></div>
+                        <div class="s-cart-products-wrapper"></div>
+                        <div class="s-cart-total-wrapper">
+                            <div class="s-discount-wrapper col-md-6 text-left"><h5 class="s-discount-header">[`Discount`]</h5><div class="s-cart-discount" id="s-cart-discount"></div></div>
+                            <div class="s-total-wrapper col-md-6 text-right"><span class="s-total-header">[`Total`]:</span><span class="s-total" id="cart-total"></span></div>
+                            <div class="col-md-12 push-bottom push-top">
+                                <a class="btn btn-transparent pull-left" id="cart-close-button" href="#">[`Continue shopping`]</a>
+                                <a class="btn btn-default pull-right" id="cart-button" href="">[`Checkout`]</a>
+                            </div>
+                        </div>
+                    </div>
+                    {/if}
+
+                    {/if}
+
+                    {/if}
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    {* BOTTOM *}
+    {if $theme_settings.header_style == 'type_3' && $wa->shop}
+    <nav class="navbar s-bottom-header hidden-lg-down"{if $theme_settings.bottom_header_bg} style="background-color:{$theme_settings.bottom_header_bg}; border-bottom: none;"{/if}>
+         <div class="container">
+            {if count($categories)}
+                <ul class="s-bottom-menu">
+                    {foreach $categories as $cat}
+                    {$subs = $wa->shop->categories($cat.id, 1, true, true)}
+                    <li{if count($subs)} class="s-mainmenu-sub{if isset($cat.params.menu_style)} s-menu-style-{$cat.params.menu_style}{else} s-menu-style-1{/if}"{/if}>
+                        <a href="{$cat.url}"{if $theme_settings.bottom_header_color} style="color:{$theme_settings.bottom_header_color};"{/if}>{$cat.name}{if count($subs)}<i class="fa fa-angle-down" aria-hidden="true"></i>{/if}</a>
+                        {if count($subs)}
+                        <ul class="{if isset($cat.params.menu_style)}s-menu-style-{$cat.params.menu_style}{else}s-menu-style-1{/if}">
+                            {foreach $subs as $sub}
+                            {$subs2 = $wa->shop->categories($sub.id, 1, true)}
+                            <li class="{if isset($cat.params.menu_cols)} s-mainmenu-sub-columns-{$cat.params.menu_cols}{/if}{if count($subs2) && isset($cat.params.menu_subs)} s-mainmenu-sub{/if}">
+                                <a href="{$sub.url}">
+                                    {$sub.name}
+                                    {if isset($cat.params.menu_style) && $cat.params.menu_style == 2 && isset($cat.params.menu_style_image)}
+                                        {if isset($sub.params.image)}
+                                            <img src="{$sub.params.image}" alt="{$sub.name}">
+                                        {/if}
+                                    {/if}
+                                </a>
+                                {if count($subs2) && isset($cat.params.menu_subs)}
+                                <ul>
+                                    {foreach $subs2 as $sub2}
+                                    <li>
+                                        <a href="{$sub2.url}">{$sub2.name}</a>
+                                    </li>
+                                    {/foreach}
+                                </ul>
+                                {/if}
+                            </li>
+                            {/foreach}
+                        </ul>
+                        {/if}
+                    </li>
+                    {/foreach}
+                </ul>
+            {/if}
+        </div>
+    </nav>
+    {/if}
+
+</header>
+
+{/strip}

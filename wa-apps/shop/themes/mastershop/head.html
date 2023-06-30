@@ -1,0 +1,21 @@
+{strip}
+{if $theme_settings.min_style_off}
+    <link href="{$wa_active_theme_url}mastershop.shop.css?v{$wa_theme_version}" rel="stylesheet">
+{else}
+    {if $theme_settings.preload_styles_js}
+        <link href="{$wa_active_theme_url}mastershop.shop.min.css?v{$wa_theme_version}" rel="preload" as="style" />
+    {/if}
+    <link href="{$wa_active_theme_url}mastershop.shop.min.css?v{$wa_theme_version}" rel="stylesheet">
+{/if}
+
+{if !empty($nofollow)}
+    <!-- "nofollow" for pages not to be indexed, e.g. customer account -->
+    <meta name="robots" content="noindex,nofollow" />
+{/if}
+
+{if !$theme_settings.plugins_shop_js_footer}
+    <!-- plugin hook: 'frontend_head' -->
+    {* @event frontend_head.%plugin_id% *}
+    {foreach $frontend_head as $_}{$_}{/foreach}
+{/if}
+{/strip}

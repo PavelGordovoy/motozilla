@@ -1,0 +1,982 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-07-04T12:06:23+02:00\n"
+"PO-Revision-Date: 2019-07-04T12:06:23+02:00\n"
+"Language: \n"
+
+msgid "Export"
+msgstr ""
+
+msgid "Import"
+msgstr ""
+
+msgid "Select locale to edit"
+msgstr ""
+
+msgid "Reload file"
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
+
+msgid "Compile"
+msgstr ""
+
+msgid "Translate empty(Yandex)"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Saved"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "prev"
+msgstr ""
+
+msgid "next"
+msgstr ""
+
+msgid "PO-file for locale - "
+msgstr ""
+
+msgid "App doesn't support additional locales."
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "File to upload should have *.po extension and been created with poedit or other tools."
+msgstr ""
+
+msgid "Select locale to upload"
+msgstr ""
+
+msgid "Upload"
+msgstr ""
+
+msgid "or"
+msgstr ""
+
+msgid "Generate mo-file containing all translated strings."
+msgstr ""
+
+msgid "Generate"
+msgstr ""
+
+msgid "Rollback to first original mo-file. May contain partial translation."
+msgstr ""
+
+msgid "Rollback"
+msgstr ""
+
+msgid "Scan product to get new strings to translate for all locales."
+msgstr ""
+
+msgid "Scan new"
+msgstr ""
+
+msgid "Completed"
+msgstr ""
+
+msgid "Plural form"
+msgstr ""
+
+msgid "Choose strings locale"
+msgstr ""
+
+msgid "Checkout"
+msgstr ""
+
+msgid "You have custom steps names available only for 1 language:"
+msgstr ""
+
+msgid "Use default"
+msgstr ""
+
+msgid "Names will be changed to use system translations."
+msgstr ""
+
+msgid "You have custom fields names available only for 1 language:"
+msgstr ""
+
+msgid "change"
+msgstr ""
+
+msgid "You have default checkout settings and all fields use system translations."
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Features"
+msgstr ""
+
+msgid "Feature name"
+msgstr ""
+
+msgid "Value"
+msgstr ""
+
+msgid "Save the main value beforehand, to translate it."
+msgstr ""
+
+msgid "Services list is empty. Add <a href=\"{$wa_backend_url}shop/?action=products#/services/\">new</a> to translate it."
+msgstr ""
+
+msgid "Services"
+msgstr ""
+
+msgid "Service name"
+msgstr ""
+
+msgid "Service"
+msgstr ""
+
+msgid "Noname"
+msgstr ""
+
+msgid "Tags"
+msgstr ""
+
+msgid "Tag name"
+msgstr ""
+
+msgid "Stocks list is empty. Add <a href=\"{$wa_backend_url}shop/?action=settings#/stock/\">new stock</a> to translate it."
+msgstr ""
+
+msgid "Stocks"
+msgstr ""
+
+msgid "Stock name"
+msgstr ""
+
+msgid "Contact fields"
+msgstr ""
+
+msgid "General settings"
+msgstr ""
+
+msgid "Selector"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Domains"
+msgstr ""
+
+msgid "Available locales"
+msgstr ""
+
+msgid "Select additional locales"
+msgstr ""
+
+msgid "Add new locale"
+msgstr ""
+
+msgid "Main language"
+msgstr ""
+
+msgid "New locale"
+msgstr ""
+
+msgid "Locale"
+msgstr ""
+
+msgid "Add"
+msgstr ""
+
+msgid "close"
+msgstr ""
+
+msgid "Delete locale"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "All data with locale %s will be cleared. Are you sure?"
+msgstr ""
+
+msgid "Empty value"
+msgstr ""
+
+msgid "Customize Your Shopping Experience!"
+msgstr ""
+
+msgid "Please select the destination country, language, and currency you prefer."
+msgstr ""
+
+msgid "Select the Destination"
+msgstr ""
+
+msgid "Select Your Language"
+msgstr ""
+
+msgid "Select Your Currency"
+msgstr ""
+
+msgid "Available Shipping Methods"
+msgstr ""
+
+msgid "Available Payment Methods"
+msgstr ""
+
+msgid "Save Preferences"
+msgstr ""
+
+msgid "Change language"
+msgstr ""
+
+msgid "Selector settings"
+msgstr ""
+
+msgid "Redirects"
+msgstr ""
+
+msgid "New rule"
+msgstr ""
+
+msgid "Remove"
+msgstr ""
+
+msgid "Plugins"
+msgstr ""
+
+msgid "Locale is not selected."
+msgstr ""
+
+msgid "File is not selected."
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+msgid "Translate"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Everyone"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "You can translate tags in"
+msgstr ""
+
+msgid "Mylang app"
+msgstr ""
+
+msgid "Access denied"
+msgstr ""
+
+msgid "MO-file restored"
+msgstr ""
+
+msgid "No backup MO-file"
+msgstr ""
+
+msgid "Input data error"
+msgstr ""
+
+msgid "Input file error"
+msgstr ""
+
+msgid "Input file content error"
+msgstr ""
+
+msgid "Previous file content error"
+msgstr ""
+
+msgid "File not found."
+msgstr ""
+
+msgid "Request strings error"
+msgstr ""
+
+msgid "Editor"
+msgstr ""
+
+msgid "Translate empty"
+msgstr ""
+
+msgid "Yandex Translate"
+msgstr ""
+
+msgid "Google Translate"
+msgstr ""
+
+msgid "Payment"
+msgstr ""
+
+msgid "Shipping"
+msgstr ""
+
+msgid "Yandex API key"
+msgstr ""
+
+msgid "Free < 10 millions chars per month. More info..."
+msgstr ""
+
+msgid "Google API key"
+msgstr ""
+
+msgid "Free trial. More info..."
+msgstr ""
+
+msgid "Microsoft API key"
+msgstr ""
+
+msgid "Api error. Check the token key and quota."
+msgstr ""
+
+msgid "https://tech.yandex.com/translate/"
+msgstr ""
+
+msgid "Microsoft Translate"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "System keys"
+msgstr ""
+
+msgid "Currency"
+msgstr ""
+
+msgid "Original"
+msgstr ""
+
+msgid "Name:"
+msgstr ""
+
+msgid "Region:"
+msgstr ""
+
+msgid "English"
+msgstr ""
+
+msgid "Thousands sep"
+msgstr ""
+
+msgid "Usually space or comma"
+msgstr ""
+
+msgid "Decimal point"
+msgstr ""
+
+msgid "Usually full stop or comma"
+msgstr ""
+
+msgid "Fractional digits"
+msgstr ""
+
+msgid "First day of week"
+msgstr ""
+
+msgid "Edit locale"
+msgstr ""
+
+msgid "Update"
+msgstr ""
+
+msgid "Select currency"
+msgstr ""
+
+msgid "Empty filename."
+msgstr ""
+
+msgid "Thousands separator"
+msgstr ""
+
+msgid "This locale is not installed on the server."
+msgstr ""
+
+msgid "Some transalted strings may display incorrect."
+msgstr ""
+
+msgid "Store settings"
+msgstr ""
+
+msgid "Search scope"
+msgstr ""
+
+msgid "Use full text search."
+msgstr ""
+
+msgid "By default search is using translated strings. Check option to use full text search."
+msgstr ""
+
+msgid "Promos list is empty. Add <a href=\"{$wa_backend_url}shop/?action=products#/promos/\">new</a> to translate it."
+msgstr ""
+
+msgid "Promos"
+msgstr ""
+
+msgid "Promo title"
+msgstr ""
+
+msgid "Promo"
+msgstr ""
+
+msgid "Promo text"
+msgstr ""
+
+msgid "Themes"
+msgstr ""
+
+msgid "Theme has no text fields to translate."
+msgstr ""
+
+msgid "Theme field"
+msgstr ""
+
+msgid "Theme name"
+msgstr ""
+
+msgid "Theme ID"
+msgstr ""
+
+msgid "Theme %s not found"
+msgstr ""
+
+msgid "Duplicate theme failed"
+msgstr ""
+
+msgid "Missed theme file(s): %s"
+msgstr ""
+
+msgid "Invalid theme slug"
+msgstr ""
+
+msgid "Brush custom theme not available"
+msgstr ""
+
+msgid "Theme “%s” is for app “%s”, which is not installed in your Webasyst. Install the app, and upload theme once again."
+msgstr ""
+
+msgid "http://www.webasyst.com/framework/docs/site/themes/#%s"
+msgstr ""
+
+msgid "Invalid theme archive structure (%s). <a href=\"%s\" target=\"_blank\">See help</a> for details"
+msgstr ""
+
+msgid "Failed to extract files from theme archive (%s). <a href=\"%s\" target=\"_blank\">See help</a> for details"
+msgstr ""
+
+msgid "Autotranslate"
+msgstr ""
+
+msgid "Source language"
+msgstr ""
+
+msgid "Target language"
+msgstr ""
+
+msgid "Providers"
+msgstr ""
+
+msgid "No API key"
+msgstr ""
+
+msgid "Replace old data"
+msgstr ""
+
+msgid "Replace old data with new"
+msgstr ""
+
+msgid "All selected fields will be overwritten with new translations data."
+msgstr ""
+
+msgid "Items to translate"
+msgstr ""
+
+msgid "Categories"
+msgstr ""
+
+msgid "not translated"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Products"
+msgstr ""
+
+msgid "Summary"
+msgstr ""
+
+msgid "Start"
+msgstr ""
+
+msgid "Source and target language should be different."
+msgstr ""
+
+msgid "Check at least 1 field to translate."
+msgstr ""
+
+msgid "Invalid API key"
+msgstr ""
+
+msgid "Blocked API key"
+msgstr ""
+
+msgid "Exceeded the daily limit on the amount of translated text"
+msgstr ""
+
+msgid "Exceeded the maximum text size"
+msgstr ""
+
+msgid "The text cannot be translated"
+msgstr ""
+
+msgid "The specified translation direction is not supported"
+msgstr ""
+
+msgid "Unknown error. See logs."
+msgstr ""
+
+msgid "Unknown provider"
+msgstr ""
+
+msgid "Translate process is finished."
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Cache files"
+msgstr ""
+
+msgid "Select main provider"
+msgstr ""
+
+msgid "Language is empty."
+msgstr ""
+
+msgid "Empty provider."
+msgstr ""
+
+msgid "Widgets"
+msgstr ""
+
+msgid "Add custom text"
+msgstr ""
+
+msgid "Plural forms"
+msgstr ""
+
+msgid "Original text"
+msgstr ""
+
+msgid "Key text"
+msgstr ""
+
+msgid "Key text plural"
+msgstr ""
+
+msgid "ID string"
+msgstr ""
+
+msgid "plural"
+msgstr ""
+
+msgid "Usage:"
+msgstr ""
+
+msgid "[&#96;Key text&#96;] or {_w('Key text')} for apps"
+msgstr ""
+
+msgid "Delete string?"
+msgstr ""
+
+msgid "Available selectors"
+msgstr ""
+
+msgid "Integrate with Menu app"
+msgstr ""
+
+msgid "Translate menu items"
+msgstr ""
+
+msgid "Clean hash strings"
+msgstr ""
+
+msgid "Repair file for md5-hash keys."
+msgstr ""
+
+msgid "Unescape keys"
+msgstr ""
+
+msgid "Repair keys."
+msgstr ""
+
+msgid "Fix locales"
+msgstr ""
+
+msgid "Done"
+msgstr ""
+
+msgid "Select locale"
+msgstr ""
+
+msgid "Select items"
+msgstr ""
+
+msgid "Custom strings"
+msgstr ""
+
+msgid "Product name"
+msgstr ""
+
+msgid "SKU name"
+msgstr ""
+
+msgid "SKU code"
+msgstr ""
+
+msgid "Price"
+msgstr ""
+
+msgid "Storefront link"
+msgstr ""
+
+msgid "Order states"
+msgstr ""
+
+msgid "Set default"
+msgstr ""
+
+msgid "State"
+msgstr ""
+
+msgid "Order state"
+msgstr ""
+
+msgid "Sign up"
+msgstr ""
+
+msgid "You have default auth settings and all fields use system translations."
+msgstr ""
+
+msgid "File could not be saved due to the insufficient file write permissions for the \"%s\" folder."
+msgstr ""
+
+msgid "Language pack"
+msgstr ""
+
+msgid "MyLang version"
+msgstr ""
+
+msgid "Language packs"
+msgstr ""
+
+msgid "For developers"
+msgstr ""
+
+msgid "Version"
+msgstr ""
+
+msgid "Your current version is"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
+msgid "There are no language packs installed."
+msgstr ""
+
+msgid "Install new plugins from the Webasyst Store using the Installer app"
+msgstr ""
+
+msgid "Show other plugins"
+msgstr ""
+
+msgid "Select locale to generate export files:"
+msgstr ""
+
+msgid "By default langpack will replace all supported:"
+msgstr ""
+
+msgid "Only missing"
+msgstr ""
+
+msgid "Create data for langpack"
+msgstr ""
+
+msgid "Create pack"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Install langpack"
+msgstr ""
+
+msgid "%d app"
+msgid_plural "%d apps"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "%d plugin"
+msgid_plural "%d plugins"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "%d widget"
+msgid_plural "%d widgets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Download"
+msgstr ""
+
+msgid "Files added:"
+msgstr ""
+
+msgid "Plugin settings page"
+msgstr ""
+
+msgid "Maintenance"
+msgstr ""
+
+msgid "Tables"
+msgstr ""
+
+msgid "Optimize"
+msgstr ""
+
+msgid "All tables are optimized."
+msgstr ""
+
+msgid "Clean data"
+msgstr ""
+
+msgid "Autotranslate cache files"
+msgstr ""
+
+msgid "No files"
+msgstr ""
+
+msgid "Localized data"
+msgstr ""
+
+msgid "Shop"
+msgstr ""
+
+msgid "Values"
+msgstr ""
+
+msgid "Category"
+msgstr ""
+
+msgid "Site"
+msgstr ""
+
+msgid "Blog"
+msgstr ""
+
+msgid "Photos"
+msgstr ""
+
+msgid "Albums"
+msgstr ""
+
+msgid "Photo"
+msgstr ""
+
+msgid "Themes data is removed from datatbase, not from theme files."
+msgstr ""
+
+msgid "Clear"
+msgstr ""
+
+msgid "%d entry"
+msgid_plural "%d entries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "No table name"
+msgstr ""
+
+msgid "Database error"
+msgstr ""
+
+msgid "No filename"
+msgstr ""
+
+msgid "No data"
+msgstr ""
+
+msgid "B,KB,MB,GB"
+msgstr ""
+
+msgid "Clear selected data?"
+msgstr ""
+
+msgid "Reviews filter"
+msgstr ""
+
+msgid "Disable reviews filter."
+msgstr ""
+
+msgid "By default reviews are filtered by locale."
+msgstr ""
+
+msgid "Meta title"
+msgstr ""
+
+msgid "Meta keywords"
+msgstr ""
+
+msgid "Meta description"
+msgstr ""
+
+msgid "No translate plugins"
+msgstr ""
+
+msgid "There are no translate plugins installed."
+msgstr ""
+
+msgid "Install new plugins from the\n"
+"                        Webasyst Store using the Installer app"
+msgstr ""
+
+msgid "No translation plugin."
+msgstr ""
+
+msgid "String"
+msgstr ""
+
+msgid "added a product"
+msgstr ""
+
+msgid "Skip N products"
+msgstr ""
+
+msgid "Skip N products from the start"
+msgstr ""
+
+msgid "Welcome to Shop-Script!"
+msgstr ""
+
+msgid "This screen will help you to quickly launch your new online store."
+msgstr ""
+
+msgid "Select a primary currency"
+msgstr ""
+
+msgid "Select a country"
+msgstr ""
+
+msgid "Other"
+msgstr ""
+
+msgid "No default regional data will be added"
+msgstr ""
+
+msgid "Next step"
+msgstr ""
+
+msgid "Quick start"
+msgstr ""
+
+msgid "of"
+msgstr ""
+
+msgid "Done!"
+msgstr ""
+
+msgid "Close quick start"
+msgstr ""
+
+msgid "Welcome to My Lang!"
+msgstr ""
+
+msgid "This screen will help you to quickly set MyLang App."
+msgstr ""
+
+msgid "Not set"
+msgstr ""
+
+msgid "Change"
+msgstr ""
+
+msgid "Example"
+msgstr ""
+
+msgid "Domain"
+msgstr ""
+
+msgid "Url"
+msgstr ""
+
+msgid "Customer"
+msgstr ""
+
+msgid "Store admin"
+msgstr ""
+
+msgid "Featured on homepage"
+msgstr ""
+
+msgid "Bestsellers"
+msgstr ""
+
+msgid "Welcome to MyLang"
+msgstr ""
+
+msgid "Tutorial"
+msgstr ""
+
+msgid "Basic settings"
+msgstr ""
+
+msgid "External plugins"
+msgstr ""
+
+msgid "Empty site"
+msgstr ""
+
+msgid "Site has rules for all locales"
+msgstr ""
+
+msgid "Site has no rules for locales:"
+msgstr ""
+
+msgid "fixed"
+msgstr ""
+
+msgid "Site settings"
+msgstr ""
+
+msgid "Filter pages"
+msgstr ""
+
+msgid "Filter pages by locale"
+msgstr ""
+
+msgid "By default pages are shown as is."
+msgstr ""

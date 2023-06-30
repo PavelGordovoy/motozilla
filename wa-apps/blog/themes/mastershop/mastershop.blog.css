@@ -1,0 +1,245 @@
+.post {
+    margin: 0 0 10px;
+    background: #FFF;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 40px;
+    font-size: 14px;
+}
+
+.post__head{
+    margin: 0 0 20px;
+}
+
+.post__title{
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0;
+}
+
+.post__date{
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+
+.post__title a{
+    text-decoration: none;
+}
+
+.post__title a:hover{
+    text-decoration: underline;
+}
+
+.post__more{
+    float: right;
+}
+
+.post__album{
+    margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.post__album-item{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5px 0 0;
+}
+
+.post__credentials {
+    margin: 30px 0 0;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 26px;
+}
+
+.post__credentials:first-child{
+    margin: 0 0 20px;
+}
+
+.post__date{
+    font-size: 12px;
+    color: #9E9E9E;
+}
+
+.post__count-comments{
+    text-decoration: none;
+}
+
+.post__count-comments .icon{
+    margin: 0 5px 0 0;
+}
+
+.post img {
+    max-width: 100%;
+    height: auto !important;
+}
+
+.post iframe {
+    max-width: 100%;
+}
+
+.post__text {
+    margin: 0 0 20px;
+    overflow: hidden;
+}
+
+.post__text p:last-child{
+    margin: 0;
+}
+
+.post__img{
+    max-width: 150px;
+    display: block;
+    float: left;
+    margin: 5px 15px 0 0;
+}
+
+.post__img--one,
+.post__img--one img{
+    max-width: 400px;
+}
+
+.post textarea { width: 100%; min-height: 300px; margin-top: 10px; height: 250px; }
+
+
+.post_author{
+    text-decoration: none;
+    margin: 0 20px 0 0;
+    display: inline-block;
+}
+
+.post_userpic{
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 0 5px 0 0;
+}
+
+.post_username{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.post__comments{
+    background: #FFF;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 40px;
+    margin: 10px 0 0;
+}
+
+.post-one__text{
+    display: inline-block;
+    width: 100%;
+}
+
+
+@media (max-width: 500px){
+    .post{
+        padding: 20px;
+    }
+
+    .post__count-comments{
+        margin: 0 20px 0 0;
+    }
+
+    .post--list .post_author{
+        display: none;
+    }
+
+    .post__title{
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .post__img{
+        width: 80px;
+    }
+
+    .post__credentials{
+        margin-top: 10px;
+    }
+
+    .post__head,
+    .post__text{
+        margin-bottom: 10px;
+    }
+
+    .post__img--one{
+        float: none;
+    }
+
+    .post__img--one{
+        max-width: 100%;
+        width: auto;
+        text-align: center;
+        margin: 0;
+    }
+
+    .post__img--one img{
+        max-height: 200px;
+    }
+
+    .post__comments{
+        padding: 20px;
+    }
+}
+
+.pageless-wrapper { font-style: italic; }
+
+html.realtime-preview,
+html.realtime-preview body { background: #fff; }
+html.realtime-preview .globalheader,
+html.realtime-preview .globalfooter { display: none; }
+html.realtime-preview .content { margin-right: 0; }
+html.realtime-preview .page { top: 0; margin: 10px 0; }
+
+
+.tags.cloud {
+    text-align: center;
+    margin: 0 0 40px;
+}
+
+.sidebar-rss{
+    float: right;
+    font-size: 16px;
+    margin: -2px 0 0;
+}
+
+.sidebar-menu-dropdown--blog{
+    border-bottom: 1px solid #ebebeb;
+}
+
+.post .photo{
+    margin: 0 0 10px;
+}
+
+.comment .comment-form h4{
+    display: none;
+}
+
+@media (max-width: 1000px){
+    .sidebar-rss{
+        float: none;
+        margin: 0 0 0 5px;
+    }
+}
+
+.post--one .post_author,
+.post--one .post__date{
+    vertical-align: middle;
+}
+
+.post__share{
+    float: right;
+}
+
+@media (max-width: 600px){
+    .post__share{
+        float: none;
+        margin: 15px 0 0;
+    }
+}
+
+.post-products{
+    margin: 40px 0 0;
+}

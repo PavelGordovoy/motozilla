@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{$wa->appName()}</title>
+    {$wa->css()}
+    <script type="text/javascript" src="{$wa_url}wa-content/js/jquery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="{$wa_url}wa-content/js/jquery-wa/wa.core.js"></script>
+    <script type="text/javascript" src="{$wa_url}wa-content/js/jquery-wa/wa.dialog.js"></script>
+</head>
+<body>
+    <div id="wa">
+        {$wa->header()}
+        <div id="wa-app">
+            <div class="sidebar left200px">
+            </div>
+            <div class="content left200px">
+                <div id="content"><br><br>
+
+                    {*<h1>Ускорение сайта</h1>*}
+                    <div class="fields form">
+                        <form action="?action=save" method="post" id="plugins-settings-form" enctype="multipart/form-data" target="plugins-settings-iframe">
+                            {$wa->csrf()}
+                            {foreach $settings_controls as $name => $control}
+                            <div class="field">
+                                {$control}
+                            </div>
+                            {/foreach}
+
+                            <div class="field"><br>
+                                <div class="value submit">
+                                    <input type="submit" class="button green" value="Сохранить настройки">
+                                    <input type="button" class="button yellow" id="clear-cache" value="Очистить кэш">
+                                    <script>
+                                        $("#clear-cache").click(function () {
+                                            $.get('?action=clear', function () {
+                                                location.reload();
+                                            });
+                                        })
+                                    </script>
+                                    <span id="plugins-settings-form-status" style="display:none"><!-- message placeholder --></span>
+                                </div>
+                            </div>
+
+                        </form>
+                        <iframe style="display:none" name="plugins-settings-iframe" id="plugins-settings-iframe"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

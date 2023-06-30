@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Webasyst Google Drive plugin 1.0.26 UA translation v 1.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#: /wa-apps/files/plugins/googledrive/lib/config/settings.php:8
+#: /wa-apps/files/plugins/googledrive/lib/config/settings.php:9
+msgid "Client ID"
+msgstr "Ідентифікатор клієнта"
+
+#: /wa-apps/files/plugins/googledrive/lib/config/settings.php:16
+#: /wa-apps/files/plugins/googledrive/lib/config/settings.php:17
+msgid "Client secret"
+msgstr "Секрет клієнта"
+
+#: /wa-apps/files/plugins/googledrive/lib/config/plugin.php:5
+msgid "Provide integration with accounts at Google Drive service"
+msgstr "Забезпечує інтеграцію з обліковими записами на сервісі Google Диск"
+
+#: /wa-apps/files/plugins/googledrive/lib/classes/filesGoogledriveOauth.class.php:111
+msgid "Session protection validated"
+msgstr "Захист сесії затверджено"
+
+#: /wa-apps/files/plugins/googledrive/lib/classes/filesGoogledriveOauth.class.php:143
+msgid "Code for generating token is not received"
+msgstr "Код для генерації токена не отримано"
+
+#: /wa-apps/files/plugins/googledrive/lib/classes/filesGoogledriveOauth.class.php:170
+msgid "Token is not generated"
+msgstr "Токен не згенеровано"
+
+#: /wa-apps/files/plugins/googledrive/lib/classes/filesGoogledriveOauth.class.php:130
+msgid "Access denied"
+msgstr "Доступ заборонено"
+
+#: /wa-apps/files/plugins/googledrive/lib/classes/filesGoogledriveSourceProvider.class.php:22
+msgid "Google Drive"
+msgstr "Диск Google"
+
+#: /wa-apps/files/plugins/googledrive/lib/filesGoogledrivePlugin.class.php:60
+msgid "You are signed into a different Googledrive account"
+msgstr "Ви увійшли в інший обліковий запис Google Диск"
+
+#: /wa-apps/files/plugins/googledrive/lib/filesGoogledrivePlugin.class.php:85
+msgid "To receive Client ID and secret <a href=\"https://console.developers.google.com/\" target=\"_blank\">register an application</a> on the Google Developers Console."
+msgstr "Для отримання ідентифікатора клієнта і секрета <a href=\"https://console.developers.google.com/\" target=\"_blank\">зареєструйте додаток</a> у консолі розробника Google."
+
+#: /wa-apps/files/plugins/googledrive/lib/filesGoogledrivePlugin.class.php:87
+msgid "<a href=\"https://support.webasyst.com/14600/files-google-drive/\" target=\"_blank\">Step-by-step manual on connecting with a Google Drive</a>"
+msgstr "<a href=\"https://support.webasyst.com/14600/files-google-drive/\" target=\"_blank\">Поетапне керівництво по під&#39;єднанню Диску Google</a>"
+
+#: /wa-apps/files/plugins/googledrive/lib/filesGoogledrivePlugin.class.php:107
+msgid "Authorized redirect URI"
+msgstr "Авторизовані URI переадресації"
+
+#: /wa-apps/files/plugins/googledrive/lib/filesGoogledrivePlugin.class.php:110
+msgid "URL where a user will return after Google OAuth authorization."
+msgstr "URL, до якого буде повернуто користувача після авторизації Google OAuth."
+
+#: /wa-apps/files/plugins/googledrive/lib/filesGoogledrivePlugin.class.php:111
+msgid "Copy specified URL to the appropriate field in your Google application settings."
+msgstr "Скопіюйте вказаний URL до відповідного поля у налаштуваннях додатка Google."
+
+#: /wa-apps/files/plugins/googledrive/lib/filesGoogledrivePlugin.class.php:172
+msgid "Open in Google Drive"
+msgstr "Відкрити у Диску Google"

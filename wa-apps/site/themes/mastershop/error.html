@@ -1,0 +1,19 @@
+{strip}
+<div class="error-page">
+	<span class="error-page__bg">{$error_code}</span>
+	<div class="error-page__content">
+
+		<h1 class="error-page__head">
+			{if $error_code}{$error_code}. {/if}{if $error_message}{$error_message}{else}[s`Error`]{/if}
+		</h1>
+		[s`The requested resource is not available.`]
+		<div class="error-page__buttons">
+			<a class="button button--acc error-page__home" href="{$wa_url}">[`To homepage`]</a>
+			<span onclick="window.history.go(-1); return false;">
+				&larr; <span class="link-action">[`Back`]</span>
+			</span>
+		</div>
+	</div>
+</div>
+
+{/strip}

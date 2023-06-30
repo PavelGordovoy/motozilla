@@ -1,0 +1,31 @@
+{strip}
+<div class="popup-contacts_col">
+    {$address = $theme_settings.address}
+    {$timetable = $theme_settings.timetable}
+    {$email = $theme_settings.email}
+    {if $email && $theme_settings.static_var_smarty}
+        {eval var=$email assign='email'}
+    {/if}
+    {if $wa->shop && empty($email)}
+        {$email = $wa->shop->settings('email')}
+    {/if}
+
+    {$isButtonSeoRegionsPlugin = ($theme_settings.mobile_region_plugin_button == 'popup_contacts' && $wa->shop && $theme_settings.use_region_plugin == 'seo_regions' && class_exists('shopRegionsViewHelper'))}
+    {$isButtonCitySelectPlugin = ($theme_settings.mobile_region_plugin_button == 'popup_contacts' && $wa->shop && $theme_settings.use_region_plugin == 'cityselect' && class_exists('shopCityselectPlugin'))}
+
+    {if $isButtonSeoRegionsPlugin}
+        <div class="popup-contacts_item">{shopRegionsViewHelper::getWindow()}</div>
+    {else if $isButtonCitySelectPlugin}
+        <div class="popup-contacts_item">{shopCityselectPlugin::showCity('0')}</div>
+    {/if}
+    {if $address}
+        {if $theme_settings.static_var_smarty}{eval var=$address assign='address'}{/if}
+        <span class="popup-contacts_item">{$address}</span>
+    {/if}
+    {if $email}<span class="popup-contacts_item"><a href="mailto:{$email}">{$email}</a></span>{/if}
+    {if $timetable}
+        {if $theme_settings.static_var_smarty}{eval var=$timetable assign='timetable'}{/if}
+        <span class="popup-contacts_timetable">{$timetable}</span>
+    {/if}
+</div>
+{/strip}

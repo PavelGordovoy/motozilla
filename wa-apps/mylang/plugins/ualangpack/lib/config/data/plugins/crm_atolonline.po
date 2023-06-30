@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst CRM Atol Online plugin 1.0.4.42 UA translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-06-16 10:44+0300\n"
+"PO-Revision-Date: \n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Выписать чек"
+msgstr "Виписати чек"
+
+msgid "Отменить также чеки, выписанные по данному счету:"
+msgstr "Скасувати також чеки, виписані по даному рахунку:"
+
+msgid "Next"
+msgstr "Далі"
+
+msgid "Before"
+msgstr "Перед"
+
+msgid "Add new company"
+msgstr "Додати нову компанію"
+
+msgid "Disabled"
+msgstr "Вимкнено"
+
+msgid "Enabled"
+msgstr "Увімкнено"
+
+msgid "Test connection"
+msgstr "Перевірити підключення"
+
+msgid "Refund"
+msgstr "Повернути"
+
+msgid "Refund receipt?"
+msgstr "Повернути платіж?"
+
+msgid "Reciept refund can not be undone."
+msgstr "Повернення платежу неможливо скасувати."
+
+msgid "Для выбранного варианта расчета НДС невозможно выписать чек при оплате."
+msgstr "Для обраного варіанту розрахунку ПДВ неможливо виписати чек при оплаті."
+
+msgid "Регистрация чека возможна только для НДС, включенного в стоимость."
+msgstr "Реєстрація чека можлива тільки для ПДВ, включеного у вартість."
+
+msgid "По данному счету уже выписан чек."
+msgstr "По даному рахунку чек вже виписано."
+
+msgid "Подтверждаю повторное создание чека"
+msgstr "Підтверджую повторне створення чека"
+
+msgid "or"
+msgstr "або"
+
+msgid "cancel"
+msgstr "скасувати"
+
+msgid "Кассовый чек"
+msgstr "Касовий чек"
+
+msgid "Статус"
+msgstr "Статус"
+
+msgid "Ожидание"
+msgstr "Очікування"
+
+msgid "UUID"
+msgstr "UUID"
+
+msgid "Ошибка"
+msgstr "Помилка"
+
+msgid "Код ошибки"
+msgstr "Код помилки"
+
+msgid "Тип ошибки"
+msgstr "Тип помилки"
+
+msgid "Номер смены"
+msgstr "Номер зміни"
+
+msgid "Номер чека за смену"
+msgstr "Номер чека за зміну"
+
+msgid "Признак расчета"
+msgstr "Ознака розрахунку"
+
+msgid "Приход"
+msgstr "Прихід"
+
+msgid "Возврат"
+msgstr "Повернення"
+
+msgid "Адрес покупателя"
+msgstr "Адреса покупця"
+
+msgid "Заводской номер фискального накопителя"
+msgstr "Заводський номер фіскального накопичувача"
+
+msgid "Фискальный признак документа"
+msgstr "Фіскальна ознака документа"
+
+msgid "Регистрационный номер ККТ"
+msgstr "Реєстраційний номер ККТ"
+
+msgid "Порядковый номер фискального документа"
+msgstr "Порядковий номер фіскального документа"
+
+msgid "Дата, время"
+msgstr "Дата, час"
+
+msgid "Кассир"
+msgstr "Касир"
+
+msgid "Системный администратор"
+msgstr "Системний адміністратор"
+
+msgid "ИТОГ"
+msgstr "ПІДСУМОК"
+
+msgid "НДС"
+msgstr "ПДВ"
+
+msgid "Оплачено электронным средством платежа"
+msgstr "Сплачено електронним засобом платежу"
+
+msgid "Применяемая система налогообложения"
+msgstr "Застосовувана система оподаткування"
+
+msgid "Чек сформирован в электронном виде и всегда доступен на сайте оператора фискальных данных"
+msgstr "Чек сформований в електронному вигляді і завжди доступний на сайті оператора фіскальних даних"
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "Чек на сумму %s будет создан и отправлен оператору фискальных данных"
+msgstr "Чек на суму %s буде створено та відправлено оператору фіскальних даних"

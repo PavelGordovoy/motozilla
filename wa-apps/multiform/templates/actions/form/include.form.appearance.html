@@ -1,0 +1,267 @@
+{if !empty($multiform_theme_settings)}
+{function name="set_font"}{strip}
+    {if !empty($font)}
+        {$fonts = ""}
+        {if !empty($font.family)}{$fonts = "`$fonts`font-family:`$font.family`"}{if $multiform_important}{$fonts = "`$fonts` !important;"}{else}{$fonts = "`$fonts`;"}{/if}{/if}
+        {if !empty($font.size)}{$fonts = "`$fonts`font-size:`$font.size`"}{if $multiform_important}{$fonts = "`$fonts` !important;"}{else}{$fonts = "`$fonts`;"}{/if}{/if}
+        {if !empty($font.style)}
+            {if $font.style == 'bold'}
+                {$fonts = "`$fonts`font-style:normal"}{if $multiform_important}{$fonts = "`$fonts` !important;"}{else}{$fonts = "`$fonts`;"}{/if}
+                {$fonts = "`$fonts`font-weight:bold"}{if $multiform_important}{$fonts = "`$fonts` !important;"}{else}{$fonts = "`$fonts`;"}{/if}
+            {elseif $font.style == 'bolditalic'}
+                {$fonts = "`$fonts`font-style:italic"}{if $multiform_important}{$fonts = "`$fonts` !important;"}{else}{$fonts = "`$fonts`;"}{/if}
+                {$fonts = "`$fonts`font-weight:bold"}{if $multiform_important}{$fonts = "`$fonts` !important;"}{else}{$fonts = "`$fonts`;"}{/if}
+            {elseif $font.style == 'italic'}
+                {$fonts = "`$fonts`font-style:italic; font-weight: normal;"}{if $multiform_important}{$fonts = "`$fonts` !important;"}{else}{$fonts = "`$fonts`;"}{/if}
+                {$fonts = "`$fonts`font-style:italic; font-weight: normal;"}{if $multiform_important}{$fonts = "`$fonts` !important;"}{else}{$fonts = "`$fonts`;"}{/if}
+            {else}
+                {$fonts = "`$fonts`font-style:normal"}{if $multiform_important}{$fonts = "`$fonts` !important;"}{else}{$fonts = "`$fonts`;"}{/if}
+                {$fonts = "`$fonts`font-weight:normal"}{if $multiform_important}{$fonts = "`$fonts` !important;"}{else}{$fonts = "`$fonts`;"}{/if}
+            {/if}
+        {/if}
+        {if !empty($font.color)}{$fonts = "`$fonts`color:`$font.color`"}{if $multiform_important}{$fonts = "`$fonts` !important;"}{else}{$fonts = "`$fonts`;"}{/if}{/if}
+        {$fonts}
+    {/if}
+    {/strip}
+{/function}
+{function name="set_background"}{strip}
+    {if !empty($background)}
+        {$backgrounds = ""}
+        {if $background.pattern == 'none'}
+            {$backgrounds = "`$backgrounds`background:none"}{if $multiform_important}{$backgrounds = "`$backgrounds` !important;"}{else}{$backgrounds = "`$backgrounds`;"}{/if}
+        {else}
+            {if !empty($background.pattern_src)}{$backgrounds = "`$backgrounds`background-image:url(`$background.pattern_src`)"}{if $multiform_important}{$backgrounds = "`$backgrounds` !important;"}{else}{$backgrounds = "`$backgrounds`;"}{/if}{/if}
+            {if !empty($background.color)}{$backgrounds = "`$backgrounds`background-color:`$background.color`"}{if $multiform_important || !empty($important)}{$backgrounds = "`$backgrounds` !important;"}{else}{$backgrounds = "`$backgrounds`;"}{/if}{/if}
+            {if isset($background.color) && $background.color == ''}{$backgrounds = "`$backgrounds`background-color:transparent"}{if $multiform_important || !empty($important)}{$backgrounds = "`$backgrounds` !important;"}{else}{$backgrounds = "`$backgrounds`;"}{/if}{/if}
+            {if isset($background.pattern_src) && $background.pattern_src == ''}{$backgrounds = "`$backgrounds`background-image:none"}{if $multiform_important}{$backgrounds = "`$backgrounds` !important;"}{else}{$backgrounds = "`$backgrounds`;"}{/if}{/if}
+        {/if}
+        {$backgrounds}
+    {/if}
+{/strip}{/function}
+{function name="set_borders"}{strip}
+    {if !empty($border)}
+        {$borders = ""}
+        {if isset($border.width) && $border.width == '0'}
+            {$borders = "`$borders`border:0 none"}{if $multiform_important || !empty($important)}{$borders = "`$borders` !important;"}{else}{$borders = "`$borders`;"}{/if}
+        {else}
+            {if !empty($border.width)}{$borders = "`$borders`border-width:`$border.width`"}{if $multiform_important || !empty($important)}{$borders = "`$borders` !important;"}{else}{$borders = "`$borders`;"}{/if}{/if}
+            {if !empty($border.style)}{$borders = "`$borders`border-style:`$border.style`"}{if $multiform_important || !empty($important)}{$borders = "`$borders` !important;"}{else}{$borders = "`$borders`;"}{/if}{/if}
+            {if !empty($border.color)}{$borders = "`$borders`border-color:`$border.color`"}{if $multiform_important || !empty($important)}{$borders = "`$borders` !important;"}{else}{$borders = "`$borders`;"}{/if}{/if}
+        {/if}
+        {if isset($border.radius)}
+            {if $border.radius == ''}{$border.radius = 0}{/if}
+            {$borders = "`$borders`-webkit-border-radius:`$border.radius`px"}{if $multiform_important || !empty($important)}{$borders = "`$borders` !important;"}{else}{$borders = "`$borders`;"}{/if}
+            {$borders = "`$borders`-moz-border-radius:`$border.radius`px"}{if $multiform_important || !empty($important)}{$borders = "`$borders` !important;"}{else}{$borders = "`$borders`;"}{/if}
+            {$borders = "`$borders`border-radius:`$border.radius`px"}{if $multiform_important || !empty($important)}{$borders = "`$borders` !important;"}{else}{$borders = "`$borders`;"}{/if}
+        {/if}
+        {$borders}
+    {/if}
+{/strip}{/function}
+{function name="set_shadows"}{strip}
+    {$shadows = ""}
+    {if !empty($shadow) && (!empty($shadow['h-shadow']) || !empty($shadow['v-shadow']) || !empty($shadow['blur']) || !empty($shadow['spread']))}
+        {if !empty($shadow['h-shadow'])}{$shadows = "`$shadows``$shadow['h-shadow']`px"}{else}{$shadows = "`$shadows`0"}{/if}
+        {if !empty($shadow['v-shadow'])}{$shadows = "`$shadows` `$shadow['h-shadow']`px"}{else}{$shadows = "`$shadows` 0"}{/if}
+        {if !empty($shadow['blur'])}{$shadows = "`$shadows` `$shadow['blur']`px"}{else}{$shadows = "`$shadows` 0"}{/if}
+        {if !empty($shadow['spread'])}{$shadows = "`$shadows` `$shadow['spread']`px"}{else}{$shadows = "`$shadows` 0"}{/if}
+        {if !empty($shadow['color'])}{$shadows = "`$shadows` `$shadow['color']`"}{else}{$shadows = "`$shadows` #000000"}{/if}
+        {if !empty($shadow['inset'])}{$shadows = "`$shadows` inset"}{/if}
+        {if $multiform_important}{$shadows = "`$shadows` !important"}{else}{$shadows = "`$shadows`"}{/if}
+        {$shadows = "-webkit-box-shadow:`$shadows`;-moz-box-shadow:`$shadows`;box-shadow:`$shadows`;"}
+    {else}
+        {if $multiform_important}{$shadows = "none !important;"}{else}{$shadows = "none;"}{/if}
+        {$shadows = "-webkit-box-shadow:`$shadows`;-moz-box-shadow:`$shadows`;box-shadow:`$shadows`;"}
+    {/if}
+    {$shadows}
+{/strip}{/function}
+{function name="set_sizes"}{strip}
+    {if !empty($size)}
+        {if isset($size.width) && $size.width == ''}{$width = 'auto'}{elseif isset($size.width)}{$width = $size.width}{/if}
+        {if isset($size.height) && $size.height == ''}{$height = 'auto'}{elseif isset($size.height)}{$height = $size.height}{/if}
+
+        {$sizes = ""}
+        {if $type == 'form' && !empty($size.size) && $size.size == 'adaptive'}
+            {$sizes = "`$sizes`width:100%"}{if $multiform_important && !$is_popup}{$sizes = "`$sizes` !important;"}{else}{$sizes = "`$sizes`;"}{/if}
+            {if isset($width)}
+                {$sizes = "`$sizes`max-width:"}
+                {if $width == 'auto'}{$sizes = "`$sizes`auto"}{else}{$sizes = "`$sizes``$width`px"}{/if}{if $multiform_important && !$is_popup}{$sizes = "`$sizes` !important;"}{else}{$sizes = "`$sizes`;"}{/if}
+            {/if}
+        {elseif isset($width)}
+            {$sizes = "`$sizes`width:"}
+            {if $width == 'auto'}{$sizes = "`$sizes`auto"}{else}{$sizes = "`$sizes``$width`px"}{/if}{if $multiform_important && $type !== 'form' && !$is_popup}{$sizes = "`$sizes` !important;"}{else}{$sizes = "`$sizes`;"}{/if}
+        {/if}
+        {if isset($height)}
+            {$sizes = "`$sizes`height:"}
+            {if $height == 'auto'}{$sizes = "`$sizes`auto"}{else}{$sizes = "`$sizes``$height`px"}{/if}{if $multiform_important && $type !== 'form' && !$is_popup}{$sizes = "`$sizes` !important;"}{else}{$sizes = "`$sizes`;"}{/if}
+        {/if}
+        {$sizes}
+    {/if}
+{/strip}{/function}
+{function name="set_marpad"}{strip}
+    {if !empty($marpad)}
+        {if (isset($marpad['margin-top']) && $marpad['margin-top'] == '') || !isset($marpad['margin-top'])}{$marpad['margin-top'] = 0}{/if}
+        {if (isset($marpad['margin-right']) && $marpad['margin-right'] == '') || !isset($marpad['margin-right'])}{$marpad['margin-right'] = 0}{/if}
+        {if (isset($marpad['margin-bottom']) && $marpad['margin-bottom'] == '') || !isset($marpad['margin-bottom'])}{$marpad['margin-bottom'] = 0}{/if}
+        {if (isset($marpad['margin-left']) && $marpad['margin-left'] == '') || !isset($marpad['margin-left'])}{$marpad['margin-left'] = 0}{/if}
+        {if (isset($marpad['padding-top']) && $marpad['padding-top'] == '') || !isset($marpad['padding-top'])}{$marpad['padding-top'] = 0}{/if}
+        {if (isset($marpad['padding-right']) && $marpad['padding-right'] == '') || !isset($marpad['padding-right'])}{$marpad['padding-right'] = 0}{/if}
+        {if (isset($marpad['padding-bottom']) && $marpad['padding-bottom'] == '') || !isset($marpad['padding-bottom'])}{$marpad['padding-bottom'] = 0}{/if}
+        {if (isset($marpad['padding-left']) && $marpad['padding-left'] == '') || !isset($marpad['padding-left'])}{$marpad['padding-left'] = 0}{/if}
+
+        {$marpads = ""}
+        {if $type !== 'header'}
+            {$marpads = "`$marpads`margin:"}
+            {if $marpad['margin-top'] == 'auto'}{$marpads = "`$marpads`auto"}{else}{$marpads = "`$marpads``$marpad['margin-top']`px"}{/if}
+            {if $marpad['margin-right'] == 'auto'}{$marpads = "`$marpads` auto"}{else}{$marpads = "`$marpads` `$marpad['margin-right']`px"}{/if}
+            {if $marpad['margin-bottom'] == 'auto'}{$marpads = "`$marpads` auto"}{else}{$marpads = "`$marpads` `$marpad['margin-bottom']`px"}{/if}
+            {if $marpad['margin-left'] == 'auto'}{$marpads = "`$marpads` auto"}{else}{$marpads = "`$marpads` `$marpad['margin-left']`px"}{/if}
+            {if $multiform_important}{$marpads = "`$marpads` !important;"}{else}{$marpads = "`$marpads`;"}{/if}
+        {/if}
+        {if $type !== 'form'}
+            {$marpads = "`$marpads`padding:"}
+            {if $marpad['padding-top'] == 'auto'}{$marpads = "`$marpads`0"}{else}{$marpads = "`$marpads``$marpad['padding-top']`px"}{/if}
+            {if $marpad['padding-right'] == 'auto'}{$marpads = "`$marpads` 0"}{else}{$marpads = "`$marpads` `$marpad['padding-right']`px"}{/if}
+            {if $marpad['padding-bottom'] == 'auto'}{$marpads = "`$marpads` 0"}{else}{$marpads = "`$marpads` `$marpad['padding-bottom']`px"}{/if}
+            {if $marpad['padding-left'] == 'auto'}{$marpads = "`$marpads` 0"}{else}{$marpads = "`$marpads` `$marpad['padding-left']`px"}{/if}
+            {if $multiform_important}{$marpads = "`$marpads` !important;"}{else}{$marpads = "`$marpads`;"}{/if}
+        {/if}
+
+        {$marpads}
+    {/if}
+{/strip}{/function}
+{function name="set_alignment"}{strip}
+    {if !empty($alignment)}
+        {$alignments = "text-align:`$alignment`"}{if $multiform_important}{$alignments = "`$alignments` !important;"}{else}{$alignments = "`$alignments`;"}{/if}
+        {$alignments}
+    {/if}
+{/strip}{/function}
+{function name="set_additional"}{strip}
+    {if !empty($additional)}
+        {$additionals = ""}
+        {if !empty($additional.even.color) && $type == 'even'}{$additionals = "`$additionals`background-color:`$additional.even.color`"}{if $multiform_important}{$additionals = "`$additionals` !important;"}{else}{$additionals = "`$additionals`;"}{/if}{/if}
+        {if !empty($additional.header.color) && $type == 'header'}{$additionals = "`$additionals`background-color:`$additional.header.color`"}{if $multiform_important}{$additionals = "`$additionals` !important;"}{else}{$additionals = "`$additionals`;"}{/if}{/if}
+        {if !empty($additional.odd.color) && $type == 'odd'}{$additionals = "`$additionals`background-color:`$additional.odd.color`"}{if $multiform_important}{$additionals = "`$additionals` !important;"}{else}{$additionals = "`$additionals`;"}{/if}{/if}
+        {if !empty($additional.highlight.color) && $type == 'highlight'}{$additionals = "`$additionals`background-color:`$additional.highlight.color`"}{if $multiform_important}{$additionals = "`$additionals` !important;"}{else}{$additionals = "`$additionals`;"}{/if}{/if}
+        {if !empty($additional.rating.color) && $type == 'rating'}{$additionals = "`$additionals`color:`$additional.rating.color`"}{if $multiform_important}{$additionals = "`$additionals` !important;"}{else}{$additionals = "`$additionals`;"}{/if}{/if}
+        {if !empty($additional.line.color) && $type == 'line'}{$additionals = "`$additionals`background-color:`$additional.line.color`"}{if $multiform_important}{$additionals = "`$additionals` !important;"}{else}{$additionals = "`$additionals`;"}{/if}{/if}
+        {if !empty($additional.inactive_line.color) && $type == 'inactive_line'}{$additionals = "`$additionals`background-color:`$additional.inactive_line.color`"}{if $multiform_important}{$additionals = "`$additionals` !important;"}{else}{$additionals = "`$additionals`;"}{/if}{/if}
+        {if !empty($additional.circle.color) && $type == 'circle'}{$additionals = "`$additionals`background-color:`$additional.circle.color`"}{if $multiform_important}{$additionals = "`$additionals` !important;"}{else}{$additionals = "`$additionals`;"}{/if}{/if}
+        {if !empty($additional.value.color) && $type == 'value'}{$additionals = "`$additionals`color:`$additional.value.color`"}{if $multiform_important}{$additionals = "`$additionals` !important;"}{else}{$additionals = "`$additionals`;"}{/if}{/if}
+        {if !empty($additional.value_block.color) && $type == 'value_block'}{$additionals = "`$additionals`background-color:`$additional.value_block.color`"}{if $multiform_important}{$additionals = "`$additionals` !important;"}{else}{$additionals = "`$additionals`;"}{/if}{/if}
+        {if !empty($additional.value_block.color) && $type == 'value_block_tail'}{$additionals = "`$additionals`border-top-color:`$additional.value_block.color`"}{if $multiform_important}{$additionals = "`$additionals` !important;"}{else}{$additionals = "`$additionals`;"}{/if}{/if}
+        {if !empty($additional.inactive_value.color) && $type == 'inactive_value'}{$additionals = "`$additionals`color:`$additional.inactive_value.color`"}{if $multiform_important}{$additionals = "`$additionals` !important;"}{else}{$additionals = "`$additionals`;"}{/if}{/if}
+        {if !empty($additional.inactive_value_block.color) && $type == 'inactive_value_block'}{$additionals = "`$additionals`background-color:`$additional.inactive_value_block.color`"}{if $multiform_important}{$additionals = "`$additionals` !important;"}{else}{$additionals = "`$additionals`;"}{/if}{/if}
+        {if !empty($additional.grid.color) && $type == 'grid'}{$additionals = "`$additionals`background-color:`$additional.grid.color`"}{if $multiform_important}{$additionals = "`$additionals` !important;"}{else}{$additionals = "`$additionals`;"}{/if}{/if}
+        {if !empty($additional.grid_value.color) && $type == 'grid_value'}{$additionals = "`$additionals`color:`$additional.grid_value.color`"}{if $multiform_important}{$additionals = "`$additionals` !important;"}{else}{$additionals = "`$additionals`;"}{/if}{/if}
+        {$additionals}
+    {/if}
+{/strip}{/function}
+
+{* Google fonts *}
+{$google_fonts = ["'Open Sans',sans-serif" => "Open+Sans", "'Open Sans Condensed',sans-serif" => "Open+Sans+Condensed:300", "'Roboto',sans-serif" => "Roboto", "'Roboto Condensed',sans-serif" => "Roboto+Condensed", "'Roboto Slab',serif" => "Roboto+Slab", "'PT Sans',sans-serif" => "PT+Sans", "'Lora',serif" => "Lora", "'Lobster',cursive" => "Lobster", "'Ubuntu',sans-serif" => "Ubuntu", "'Noto Sans',sans-serif" => "Noto+Sans"]}
+{$active_fonts = []}
+{foreach $multiform_theme_settings.fonts as $f}
+    {if isset($google_fonts[$f.family])}{$active_fonts[] = $google_fonts[$f.family]}{/if}
+{/foreach}
+{if $active_fonts}<link href="https://fonts.googleapis.com/css?family={implode('%7C', $active_fonts)}" rel="stylesheet">{/if}
+
+<style>{strip}
+    {* Fonts *}
+    .multiform-theme{$multiform_theme_id} .multiform-header{ldelim}{set_font font = $multiform_theme_settings.fonts.header}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-title{ldelim}{set_font font = $multiform_theme_settings.fonts.title}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-form-description{ldelim}{set_font font = $multiform_theme_settings.fonts.description}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-name{ldelim}{set_font font = $multiform_theme_settings.fonts.ftitle}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="text"],.multiform-theme{$multiform_theme_id} .multiform-gap-value textarea,.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="email"],.multiform-theme{$multiform_theme_id} .multiform-gap-value select,.multiform-theme{$multiform_theme_id} .multiform-gap-value .multiform-formula span,.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="tel"],.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="file"]{ldelim}{set_font font = $multiform_theme_settings.fonts.ftext}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-description{ldelim}{set_font font = $multiform_theme_settings.fonts.fdesc}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-value .prefix,.multiform-theme{$multiform_theme_id} .multiform-attachment-text.before,.multiform-theme{$multiform_theme_id} .multiform-gap-value .suffix,.multiform-theme{$multiform_theme_id} .multiform-attachment-text.after{ldelim}{set_font font = $multiform_theme_settings.fonts.presuf}{rdelim}
+    .multiform-wrap.multiform-theme{$multiform_theme_id} .errormsg,.multiform-theme{$multiform_theme_id} .multiform-mask-error{ldelim}{set_font font = $multiform_theme_settings.fonts.error}{rdelim}
+    .multiform-theme{$multiform_theme_id} .mf-button{ldelim}{set_font font = $multiform_theme_settings.fonts.button}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-grid th{ldelim}{set_font font = $multiform_theme_settings.fonts.tgst}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-grid thead td{ldelim}{set_font font = $multiform_theme_settings.fonts.tgcol}{rdelim}
+
+    {* Background *}
+    .multiform-theme{$multiform_theme_id} .multiform-header{ldelim}{set_background background=$multiform_theme_settings.background.header}{rdelim}
+    .multiform-wrap.multiform-theme{$multiform_theme_id}{ldelim}{set_background background=$multiform_theme_settings.background.form}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="text"],.multiform-theme{$multiform_theme_id} .multiform-gap-value textarea,.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="email"],.multiform-theme{$multiform_theme_id} .multiform-gap-value select,.multiform-theme{$multiform_theme_id} .multiform-gap-value .multiform-formula span,.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="tel"],.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="file"]{ldelim}{set_background background=$multiform_theme_settings.background.ftext}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="text"]:focus,.multiform-theme{$multiform_theme_id} .multiform-gap-value textarea:focus,.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="email"]:focus,.multiform-theme{$multiform_theme_id} .multiform-gap-value select:focus,.multiform-theme{$multiform_theme_id} .multiform-gap-value .multiform-formula span:focus,.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="tel"]:focus{ldelim}{set_background background=$multiform_theme_settings.background.ftextfoc}{rdelim}
+    .multiform-wrap.multiform-theme{$multiform_theme_id} .errormsg,.multiform-theme{$multiform_theme_id} .multiform-mask-error{ldelim}{set_background background=$multiform_theme_settings.background.errors}{rdelim}
+    .multiform-theme{$multiform_theme_id} .mf-button{ldelim}{set_background background=$multiform_theme_settings.background.button}{rdelim}
+    .multiform-theme{$multiform_theme_id} .mf-button:hover{ldelim}{set_background background=$multiform_theme_settings.background.button_hover}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-submit{ldelim}{set_background background=$multiform_theme_settings.background.button_block}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-name{ldelim}{set_background background=$multiform_theme_settings.background.fname}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-description{ldelim}{set_background background=$multiform_theme_settings.background.fdesc}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-form-description{ldelim}{set_background background=$multiform_theme_settings.background.formdesk}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-field{ldelim}{set_background background=$multiform_theme_settings.background.field}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-field:hover{ldelim}{set_background background=$multiform_theme_settings.background.hover_highlight}{rdelim}
+    .multiform-body[data-theme-id='{$multiform_theme_id}']{ldelim}{set_background background=$multiform_theme_settings.background.page}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-title{ldelim}{set_background background=$multiform_theme_settings.background.title}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-error-field, .multiform-theme{$multiform_theme_id} input.multiform-error-field, .multiform-theme{$multiform_theme_id} select.multiform-error-field{ldelim}{set_background background=$multiform_theme_settings.background.field_err_text important=1}{rdelim}
+
+    {* Borders *}
+    .multiform-wrap.multiform-theme{$multiform_theme_id}{ldelim}{set_borders border = $multiform_theme_settings.borders.form}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-value input[type='text'],.multiform-theme{$multiform_theme_id} .multiform-gap-value textarea,.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type='email'],.multiform-theme{$multiform_theme_id} .multiform-gap-value select,.multiform-theme{$multiform_theme_id} .multiform-gap-value .multiform-formula span,.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="tel"],.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="file"]{ldelim}{set_borders border = $multiform_theme_settings.borders.fields}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-description{ldelim}{set_borders border = $multiform_theme_settings.borders.fdesc}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-field{ldelim}{set_borders border = $multiform_theme_settings.borders.frows}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-name{ldelim}{set_borders border = $multiform_theme_settings.borders.fname}{rdelim}
+    .multiform-wrap.multiform-theme{$multiform_theme_id} .errormsg,.multiform-theme{$multiform_theme_id} .multiform-mask-error{ldelim}{set_borders border = $multiform_theme_settings.borders.errors}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="text"]:focus,.multiform-theme{$multiform_theme_id} .multiform-gap-value textarea:focus,.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="email"]:focus,.multiform-theme{$multiform_theme_id} .multiform-gap-value select:focus,.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="tel"]:focus{ldelim}{set_borders border = $multiform_theme_settings.borders.ffocus}{rdelim}
+    .multiform-theme{$multiform_theme_id} .mf-button{ldelim}{set_borders border = $multiform_theme_settings.borders.button}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-error-field, .multiform-theme{$multiform_theme_id} input.multiform-error-field, .multiform-theme{$multiform_theme_id} select.multiform-error-field{ldelim}{set_borders border=$multiform_theme_settings.borders.field_err_text important=1}{rdelim}
+
+    {* Shadows *}
+    .multiform-wrap.multiform-theme{$multiform_theme_id}{ldelim}{set_shadows shadow = $multiform_theme_settings.shadows.form}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="text"]:focus,.multiform-theme{$multiform_theme_id} .multiform-gap-value textarea:focus,.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="email"]:focus,.multiform-theme{$multiform_theme_id} .multiform-gap-value select:focus,.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="tel"]:focus{ldelim}{set_shadows shadow = $multiform_theme_settings.shadows.ffocus}{rdelim}
+    .multiform-theme{$multiform_theme_id} .mf-button{ldelim}{set_shadows shadow = $multiform_theme_settings.shadows.button}{rdelim}
+    .multiform-wrap.multiform-theme{$multiform_theme_id} .errormsg,.multiform-theme{$multiform_theme_id} .multiform-mask-error{ldelim}{set_shadows shadow = $multiform_theme_settings.shadows.errors}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-description{ldelim}{set_shadows shadow = $multiform_theme_settings.shadows.fdesc}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-name{ldelim}{set_shadows shadow = $multiform_theme_settings.shadows.fname}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-value input[type='text'],.multiform-theme{$multiform_theme_id} .multiform-gap-value textarea,.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type='email'],.multiform-theme{$multiform_theme_id} .multiform-gap-value select,.multiform-theme{$multiform_theme_id} .multiform-gap-value .multiform-formula span,.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="tel"],.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="file"]{ldelim}{set_shadows shadow = $multiform_theme_settings.shadows.fields}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-header{$multiform_theme_id}{ldelim}{set_shadows shadow = $multiform_theme_settings.shadows.header}{rdelim}
+
+    {* Sizes *}
+    .multiform-wrap.multiform-theme{$multiform_theme_id}{ldelim}{set_sizes size = $multiform_theme_settings.sizes.form type = 'form'}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-header{ldelim}{set_sizes size = $multiform_theme_settings.sizes.header type = 'header'}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-submit{ldelim}{set_sizes size = $multiform_theme_settings.sizes.button_block type = 'button_block'}{rdelim}
+
+    {* Margin/padding *}
+    {if !$is_popup}
+        .multiform-wrap.multiform-theme{$multiform_theme_id}{ldelim}{set_marpad marpad = $multiform_theme_settings.marginpadding.form type = 'form'}{rdelim}
+    {/if}
+    .multiform-theme{$multiform_theme_id} .multiform-header{ldelim}{set_marpad marpad = $multiform_theme_settings.marginpadding.header type = 'header'}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-field{ldelim}{set_marpad marpad = $multiform_theme_settings.marginpadding.frows type = 'frows'}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="text"],.multiform-theme{$multiform_theme_id} .multiform-gap-value textarea,.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="email"],.multiform-theme{$multiform_theme_id} .multiform-gap-value select,.multiform-theme{$multiform_theme_id} .multiform-gap-value .multiform-formula span,.multiform-theme{$multiform_theme_id} .multiform-gap-value input[type="tel"]{ldelim}{set_marpad marpad = $multiform_theme_settings.marginpadding.fields type = 'fields'}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-description{ldelim}{set_marpad marpad = $multiform_theme_settings.marginpadding.fdesc type = 'fdesc'}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-name{ldelim}{set_marpad marpad = $multiform_theme_settings.marginpadding.fname type = 'fname'}{rdelim}
+    .multiform-wrap.multiform-theme{$multiform_theme_id} .errormsg,.multiform-theme{$multiform_theme_id} .multiform-mask-error{ldelim}{set_marpad marpad = $multiform_theme_settings.marginpadding.errors type = 'errors'}{rdelim}
+    .multiform-theme{$multiform_theme_id} .mf-button{ldelim}{set_marpad marpad = $multiform_theme_settings.marginpadding.button type = 'button'}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-submit{ldelim}{set_marpad marpad = $multiform_theme_settings.marginpadding.button_block type = 'button_block'}{rdelim}
+
+    {* Alignment *}
+    .multiform-theme{$multiform_theme_id} .multiform-header{ldelim}{set_alignment alignment = $multiform_theme_settings.alignment.header}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-title{ldelim}{set_alignment alignment = $multiform_theme_settings.alignment.title}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-name{ldelim}{set_alignment alignment = $multiform_theme_settings.alignment.fname}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-form-description{ldelim}{set_alignment alignment = $multiform_theme_settings.alignment.fdesc}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-submit{ldelim}{set_alignment alignment = $multiform_theme_settings.alignment.button}{rdelim}
+
+    {* Additional *}
+    .multiform-theme{$multiform_theme_id} .multiform-grid thead th,.multiform-theme{$multiform_theme_id} .multiform-grid thead td{ldelim}{set_additional additional = $multiform_theme_settings.additional.table_grid type='header'}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-grid tbody tr.odd td,.multiform-theme{$multiform_theme_id} .multiform-grid tbody tr.odd th{ldelim}{set_additional additional = $multiform_theme_settings.additional.table_grid type='odd'}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-grid tbody tr.even td,.multiform-theme{$multiform_theme_id} .multiform-grid tbody tr.even th{ldelim}{set_additional additional = $multiform_theme_settings.additional.table_grid type='even'}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-grid tbody tr:hover th,.multiform-theme{$multiform_theme_id} .multiform-grid tbody tr:hover td,.multiform-theme{$multiform_theme_id} .multiform-grid tbody tr.odd:hover td{ldelim}{set_additional additional = $multiform_theme_settings.additional.table_grid type='highlight'}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-rating:not(:checked) > label:hover,.multiform-theme{$multiform_theme_id} .multiform-rating:not(:checked) > label:hover ~ label,.multiform-theme{$multiform_theme_id} .multiform-rating .star-full{ldelim}{set_additional additional = $multiform_theme_settings.additional type='rating'}{rdelim}
+
+    .multiform-theme{$multiform_theme_id} .irs-bar{ldelim}{set_additional additional = $multiform_theme_settings.additional.rangeslider type='line'}{rdelim}
+    .multiform-theme{$multiform_theme_id} .irs-line{ldelim}{set_additional additional = $multiform_theme_settings.additional.rangeslider type='inactive_line'}{rdelim}
+    .multiform-theme{$multiform_theme_id} .multiform-gap-value .irs-handle>i:first-child{ldelim}{set_additional additional = $multiform_theme_settings.additional.rangeslider type='circle'}{rdelim}
+    .multiform-theme{$multiform_theme_id} .irs-from,
+    .multiform-theme{$multiform_theme_id} .irs-to,
+    .multiform-theme{$multiform_theme_id} .irs-single{ldelim}{set_additional additional = $multiform_theme_settings.additional.rangeslider type='value'}{set_additional additional = $multiform_theme_settings.additional.rangeslider type='value_block'}{rdelim}
+    .multiform-theme{$multiform_theme_id} .irs-single:before,
+    .multiform-theme{$multiform_theme_id} .irs-from:before,
+    .multiform-theme{$multiform_theme_id} .irs-to:before{ldelim}{set_additional additional = $multiform_theme_settings.additional.rangeslider type='value_block_tail'}{rdelim}
+    .multiform-theme{$multiform_theme_id} .irs-min,
+    .multiform-theme{$multiform_theme_id} .irs-max{ldelim}{set_additional additional = $multiform_theme_settings.additional.rangeslider type='inactive_value'}{set_additional additional = $multiform_theme_settings.additional.rangeslider type='inactive_value_block'}{rdelim}
+    .multiform-theme{$multiform_theme_id} .irs-grid-pol{ldelim}{set_additional additional = $multiform_theme_settings.additional.rangeslider type='grid'}{rdelim}
+    .multiform-theme{$multiform_theme_id} .irs-grid-text{ldelim}{set_additional additional = $multiform_theme_settings.additional.rangeslider type='grid_value'}{rdelim}
+{/strip}</style>
+{/if}

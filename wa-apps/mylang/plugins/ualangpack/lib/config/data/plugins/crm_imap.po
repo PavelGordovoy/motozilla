@@ -1,0 +1,73 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Webasyst CRM IMAP plugin 1.0.1.13 UA translation v 1.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter.studio>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.2.3\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#: /wa-apps/crm/plugins/imap/templates/source/settings/EmailSourceSettingsImapBlock.html:6
+msgid "Set up an email address to receive messages and deal requests."
+msgstr "Налаштуйте адресу електронної пошти для отримання повідомлень та запитів на угоду."
+
+#: /wa-apps/crm/plugins/imap/templates/source/settings/EmailSourceSettingsImapBlock.html:7
+msgid "Please specify an existing email address; it may be hosted on any mail server; e.g., in a popular mail service such as Gmail, Yahoo!, etc., and must be accessible for connection via IMAP protocol."
+msgstr "Вкажіть, будь-ласка існуючу адресу електронної пошти. Вона може хостуватися на будь-якому поштовому сервері — наприклад, на одному з таких популярних сервісів, як Gmail, Yahoo! Поштова скринька має бути доступною для підключення по протоколу IMAP."
+
+#: /wa-apps/crm/plugins/imap/templates/source/settings/EmailSourceSettingsImapBlock.html:10
+msgid "<strong>IMPORTANT NOTE:</strong> It is recommended that you specify an email account which was specially created for use by the CRM app."
+msgstr "<strong>ВАЖЛИВО:</strong> рекомендується вказати обліковий запис електронної пошти, який було створено спеціально для використання додатком CRM."
+
+#: /wa-apps/crm/plugins/imap/templates/source/settings/EmailSourceSettingsImapBlock.html:11
+msgid "After you configure and save this source, all messages from the specified email account will be downloaded into CRM and will be <strong>deleted from your mail server!</strong>"
+msgstr "Після налаштування і збереження цього джерела, усі повідомлення з вказаного облікового запису електронної пошти буде завантажено в CRM і <strong>видалено з поштової скриньки!</strong>"
+
+#: /wa-apps/crm/plugins/imap/templates/source/settings/EmailSourceSettingsImapBlock.html:17
+msgid "Email"
+msgstr "Email"
+
+#: /wa-apps/crm/plugins/imap/templates/source/settings/EmailSourceSettingsImapBlock.html:23
+msgid "Username"
+msgstr "Ім&#39;я користувача"
+
+#: /wa-apps/crm/plugins/imap/templates/source/settings/EmailSourceSettingsImapBlock.html:30
+msgid "Password"
+msgstr "Пароль"
+
+#: /wa-apps/crm/plugins/imap/templates/source/settings/EmailSourceSettingsImapBlock.html:35
+msgid "Leave blank to keep current value unchanged."
+msgstr "Залиште поле порожнім, аби зберегти поточне значення без змін."
+
+#: /wa-apps/crm/plugins/imap/templates/source/settings/EmailSourceSettingsImapBlock.html:40
+msgid "Incoming server"
+msgstr "Вхідний сервер"
+
+#: /wa-apps/crm/plugins/imap/templates/source/settings/EmailSourceSettingsImapBlock.html:46
+msgid "IMAP Port"
+msgstr "Порт IMAP"
+
+#: /wa-apps/crm/plugins/imap/templates/source/settings/EmailSourceSettingsImapBlock.html:59
+msgid "Use Secure SSL/TLS Settings"
+msgstr "Використовувати налаштування безпеки SSL/TLS"
+
+#: /wa-apps/crm/plugins/imap/templates/source/settings/EmailSourceSettingsImapBlock.html:65
+msgid "If your mail server supports this option, we recommend using IMAP over SSL/TLS since it provides increased security for your interactions with the remote mail server."
+msgstr "Якщо ваш поштовий сервер підтримує цю функцію, ми рекомендуємо використовувати IMAP через SSL і TLS, оскільки таким чином забезпечується підвищений рівень безпеки ваших взаємодій з поштовим сервером."
+
+#: /wa-apps/crm/plugins/imap/templates/source/settings/EmailSourceSettingsImapBlock.html:76
+msgid "Test connection"
+msgstr "Перевірити підключення"
+
+#: /wa-apps/crm/plugins/imap/templates/source/settings/EmailSourceSettingsImapBlock.html:80
+msgid "Connection to IMAP-server failed"
+msgstr "Підключення до IMAP-сервера не вдалося"
+
+#: /wa-apps/crm/plugins/imap/templates/source/settings/EmailSourceSettingsImapBlock.html:84
+msgid "IMAP-server connected successfully"
+msgstr "IMAP-сервер успішно підключено"

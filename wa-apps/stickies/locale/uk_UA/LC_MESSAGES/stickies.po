@@ -1,0 +1,180 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Webasyst Stickies 1.1.1.1 UA translation v 0.1\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: Skeeter Dev\n"
+"Language: uk\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: /wa-apps/stickies/templates/actions/backend/Backend.html:5
+msgid "Stickies"
+msgstr "Стікери"
+
+#: /wa-apps/stickies/templates/actions-mobile/backend/Backend.html:91
+msgid "Apps"
+msgstr "Додатки"
+
+#: /wa-apps/stickies/templates/actions/backend/Backend.html:242
+msgid "New board"
+msgstr "Нова дошка"
+
+#: /wa-apps/stickies/templates/actions-mobile/backend/Backend.html:142
+msgid "Add"
+msgstr "Додати"
+
+#: /wa-apps/stickies/templates/actions/backend/Backend.html:190
+msgid "Settings"
+msgstr "Параметри"
+
+#: /wa-apps/stickies/templates/actions/backend/Backend.html:269
+msgid "Empty server responce"
+msgstr "Пуста відповідь сервера"
+
+#: /wa-apps/stickies/templates/actions/backend/Backend.html:270
+msgid "AJAX request error"
+msgstr "Помилка AJAX-запита"
+
+#: /wa-apps/stickies/templates/actions/backend/Backend.html:271
+msgid "Invalid server responce"
+msgstr "Нерозпізнана відповідь сервера"
+
+#: /wa-apps/stickies/templates/actions/backend/Backend.html:272
+msgid "Delete board with all stickies?"
+msgstr "Видалити дошку разом з усіма стікерами на ній?"
+
+#: /wa-apps/stickies/templates/actions/backend/Backend.html:273
+msgid "Error occurred while sorting boards"
+msgstr "Виникла помилка в процесі сортування дошок"
+
+#: /wa-apps/stickies/templates/actions-mobile/backend/Backend.html:233
+msgid "Please wait"
+msgstr "Будь ласка, зачекайте"
+
+#: /wa-apps/stickies/templates/actions/backend/Backend.html:84
+msgid "Loading..."
+msgstr "Завантаження..."
+
+#: /wa-apps/stickies/templates/actions/backend/Backend.html:101
+msgid "Delete"
+msgstr "Видалити"
+
+#: /wa-apps/stickies/templates/actions/backend/Backend.html:261
+msgid "Sticky status"
+msgstr "Статус стікера"
+
+#: /wa-apps/stickies/templates/actions/backend/Backend.html:127
+msgid "Color"
+msgstr "Колір"
+
+#: /wa-apps/stickies/templates/actions/backend/Backend.html:168
+msgid "New sticky"
+msgstr "Новий стікер"
+
+#: /wa-apps/stickies/templates/actions/backend/Backend.html:209
+msgid "Name"
+msgstr "Назва"
+
+#: /wa-apps/stickies/templates/actions/backend/Backend.html:212
+msgid "Background"
+msgstr "Тло"
+
+#: /wa-apps/stickies/templates/actions/backend/Backend.html:229
+msgid "Save"
+msgstr "Зберегти"
+
+#: /wa-apps/stickies/templates/actions/backend/Backend.html:230
+msgid "Delete board"
+msgstr "Видалити дошку"
+
+#: /wa-apps/stickies/templates/actions/backend/Backend.html:274
+msgid "no name"
+msgstr "без назви"
+
+#: /wa-apps/stickies/lib/api/v1/stickies.sheetInfo.method.php:28
+msgid "Not enough rights to work with current board"
+msgstr "Недостатньо прав для роботи з поточною дошкою"
+
+#: /wa-apps/stickies/lib/actions/sheet/stickiesSheet.actions.php:97
+msgid "Not enough rights to add new board"
+msgstr "Недостатньо прав для створення нової дошки"
+
+#: /wa-apps/stickies/lib/actions/sheet/stickiesSheet.actions.php:94
+msgid "Board"
+msgstr "Дошка"
+
+#: /wa-apps/stickies/lib/actions/sticky/stickiesSticky.actions.php:72
+msgid "Error while delete sticky"
+msgstr "Помилка видалення стікера"
+
+#: /wa-apps/stickies/lib/api/v1/stickies.stickyUpdate.method.php:45
+msgid "Error while save sticky"
+msgstr "Помилка збереження стікера"
+
+#: /wa-apps/stickies/lib/api/v1/stickies.stickyUpdate.method.php:48
+msgid "Invalid sticky ID"
+msgstr "Помилковий ідентифікатор стікера"
+
+#: /wa-apps/stickies/lib/config/stickiesRightConfig.class.php:7
+msgid "Allow add new board"
+msgstr "Дозволено додавати нові дошки"
+
+#: /wa-apps/stickies/lib/config/stickiesRightConfig.class.php:15
+msgid "Available boards"
+msgstr "Доступні дошки"
+
+#: /wa-apps/stickies/templates/actions-mobile/backend/Backend.html:132
+msgid "Boards"
+msgstr "Дошки"
+
+#: /wa-apps/stickies/lib/config/install.php:5
+msgid "My stickies"
+msgstr "Мої стікери"
+
+#: /wa-apps/stickies/js/compiled/stickies.js:118
+msgid "Cancel"
+msgstr "Відмінити"
+
+#: /wa-apps/stickies/lib/models/stickiesSheet.model.php:83
+msgid "Board not found"
+msgstr "Дошка не знайдена"
+
+#: /wa-apps/stickies/lib/config/logs.php:5
+msgid "created a new board"
+msgstr "створив нову дошку"
+
+#: /wa-apps/stickies/lib/config/logs.php:8
+msgid "edited board"
+msgstr "відредагував дошку"
+
+#: /wa-apps/stickies/lib/config/logs.php:11
+msgid "deleted board"
+msgstr "видалив дошку"
+
+#: /wa-apps/stickies/lib/config/logs.php:14
+msgid "added a new sticky"
+msgstr "додав новий стікер"
+
+#: /wa-apps/stickies/lib/config/logs.php:17
+msgid "edited sticky"
+msgstr "відредагував стікер"
+
+#: /wa-apps/stickies/lib/config/logs.php:20
+msgid "resized sticky"
+msgstr "змінив розмір стікера"
+
+#: /wa-apps/stickies/lib/config/logs.php:23
+msgid "moved sticky to another board"
+msgstr "перемістив стікер на іншу дошку"
+
+#: /wa-apps/stickies/lib/config/logs.php:26
+msgid "deleted sticky"
+msgstr "видалив стікер"
+
+#: /wa-apps/stickies/lib/config/logs.php:29
+msgid "moved sticky"
+msgstr "перемістив стікер"

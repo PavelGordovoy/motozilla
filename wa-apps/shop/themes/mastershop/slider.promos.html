@@ -1,0 +1,78 @@
+{strip}
+
+{if (int)$theme_settings.slider_height > 0}
+    {$height_slider = $theme_settings.slider_height}
+{/if}
+{$is_mobile = ($wa->isMobile() && ($wa->cookie("is_desktop_for_mobile") != 1 || !$theme_settings.switch_version))}
+{$promoslider = []}
+{if $promo_nums}
+    {$promo_nums = ","|explode:$promo_nums}
+    {if count($promo_nums) > 0}
+        {foreach $promo_nums as $num}
+            {if isset($promocards[$num-1])}
+                {$promoslider[] = $promocards[$num-1]}
+            {/if}
+        {/foreach}
+    {/if}
+{/if}
+
+{if count($promoslider)}
+    {$is_lazy_images = $theme_settings.homepage_slider_lazy}
+    {if $theme_settings.homepage_slider_rand}{$shuffle = $promoslider|shuffle}{/if}
+    <div class="slider-wrap slider-wrap--banner js-slider-wrap">
+        <div class="js-main-slider owl-carousel main-slider slider-banner" data-lazy="{$is_lazy_images}" data-swipe="{$theme_settings.homepage_slider_swipe}" data-pause="{$theme_settings.slider_pause}" data-pages="true" data-type="{if isset($height_slider) && !empty($height_slider)}image-bg{else}image{/if}">
+            {foreach $promoslider as $promo}
+                <div class="main-slider_el main-slider_el--{$promo.id}">
+                    <a class="slider-banner__inner" href="{$promo.link|escape}">
+                        {if !isset($height_slider) || $is_mobile}
+                            {if $is_lazy_images}
+                                <img class="owl-lazy slider-banner__img" data-src="{$promo.image}" src="{$wa_theme_url}img/lazy-image.png" alt="{$promo.title|escape}" />
+                            {else}
+                                <img class="slider-banner__img" src="{$promo.image}" alt="{$promo.title|escape}" />
+                            {/if}
+                        {else}
+                            {if $is_lazy_images}
+                                <span class="owl-lazy slider-banner__bg-img" data-src="{$promo.image}" style="height: {$height_slider}px;"></span>
+                            {else}
+                                <span class="slider-banner__bg-img" style="height: {$height_slider}px; background: url({$promo.image})"></span>
+                            {/if}
+                        {/if}
+                        {if $theme_settings.slider_description && (!empty($promo.title) || !empty($promo.body) || (!empty($promo.countdown_datetime) && time() <= strtotime($promo.countdown_datetime)))}
+                            {$background = null}
+                            {$color = null}
+                            {if isset($promo.background_color) && !empty($promo.background_color)}{$background = $promo.background_color}{/if}
+                            {if isset($promo.color) && !empty($promo.color)}{$color = $promo.color}{/if}
+                            <div class="slider-banner__content" {if $background || $color} style="{if $background}background: {$background};{/if}{if $color}color: {$color};{/if}"{/if}>
+                                {if !empty($promo.title)}<div class="slider-banner__title">{$promo.title|escape}</div>{/if}
+                                {if !empty($promo.body)}<div class="slider-banner__text">{$promo.body|escape}</div>{/if}
+                                {if !empty($promo.countdown_datetime) && time() <= strtotime($promo.countdown_datetime)}
+                                <div class="slider-banner__countdown">
+                                    <div data-wrap="1" data-day-text="[`d.`]" class="slider-banner__time js-promo-countdown" data-end="{$promo.countdown_datetime}">
+                                        <div class="countdown-item">
+                                            <span class="countdown-item-count js-countdown-days"></span>
+                                            <span class="countdown-item-text">[`d`]</span>
+                                        </div>
+                                        <div class="countdown-item">
+                                            <span class="countdown-item-count js-countdown-hours"></span>
+                                            <span class="countdown-item-text">[`h`]</span>
+                                        </div>
+                                        <div class="countdown-item">
+                                            <span class="countdown-item-count js-countdown-minutes"></span>
+                                            <span class="countdown-item-text">[`min`]</span>
+                                        </div>
+                                        <div class="countdown-item">
+                                            <span class="countdown-item-count js-countdown-seconds"></span>
+                                            <span class="countdown-item-text">[`sec`]</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/if}
+                            </div>
+                        {/if}
+                    </a>
+                </div>
+            {/foreach}
+        </div>
+    </div>
+{/if}
+{/strip}

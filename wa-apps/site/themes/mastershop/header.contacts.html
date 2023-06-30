@@ -1,0 +1,82 @@
+{strip}
+{$phone = $theme_settings.phone}
+{if $phone && $theme_settings.static_var_smarty}
+    {eval var=$phone assign='phone'}
+{/if}
+{if $wa->shop && empty($theme_settings.phone)}{$phone = $wa->shop->settings('phone')}{/if}
+{$phone_2 = $theme_settings.phone_2}
+{$phone_3 = $theme_settings.phone_3}
+{$is_add_phones_popup = $theme_settings.header_add_phones_pop && (!empty($phone_2) || !empty($phone_3))}
+
+{$is_icons_messangers = (!empty($theme_settings.whatsapp) || !empty($theme_settings.telegram) || !empty($theme_settings.viber))}
+<div class="header-phone-outer">
+    <div class="header-phones">
+        {if !$phone_2 && !$phone_3 && !$is_icons_messangers}<i class="header-phone__icon bs-color fas fa-phone"></i>{/if}
+        <div class="header-phone">
+            <a class="js-contact-phone" href="tel:{$phone|regex_replace:'/[^0-9\+]+/':''}">{$phone}</a>
+            {if $is_add_phones_popup}
+                <i class="header-phone_caret far fa-angle-down"></i>
+                <div class="header-phones-popup">
+                    {$phone_title = $theme_settings.phone_title}
+                    {if $phone_title && $phone}
+                        {if $theme_settings.static_var_smarty}{eval var=$phone_title assign='phone_title'}{/if}
+                        <div class="header-phones-popup__item">
+                            <div class="header-phones-popup__title">{$phone_title}</div>
+                            <i class="header-phone__icon bs-color fas fa-phone"></i>
+                            <a class="js-contact-phone" href="tel:{$phone|regex_replace:'/[^0-9\+]+/':''}">{$phone}</a>
+                        </div>
+                    {/if}
+                    {if $phone_2}
+                        <div class="header-phones-popup__item">
+                            {$phone_2_title = $theme_settings.phone_2_title}
+                            {if $phone_2_title}
+                                {if $theme_settings.static_var_smarty}{eval var=$phone_2_title assign='phone_2_title'}{/if}
+                                <div class="header-phones-popup__title">{$phone_2_title}</div>
+                            {/if}
+                            {if $theme_settings.static_var_smarty}{eval var=$phone_2 assign='phone_2'}{/if}
+                            <i class="header-phone__icon bs-color fas fa-phone"></i>
+                            <a class="js-contact-phone" href="tel:{$phone_2|regex_replace:'/[^0-9\+]+/':''}">{$phone_2}</a>
+                        </div>
+                    {/if}
+                    {if $phone_3}
+                        {if $theme_settings.static_var_smarty}{eval var=$phone_3 assign='phone_3'}{/if}
+                        <div class="header-phones-popup__item">
+                            {$phone_3_title = $theme_settings.phone_3_title}
+                            {if $phone_3_title}
+                                {if $theme_settings.static_var_smarty}{eval var=$phone_3_title assign='phone_3_title'}{/if}
+                               <div class="header-phones-popup__title">{$phone_3_title}</div>
+                            {/if}
+                            <i class="header-phone__icon bs-color fas fa-phone"></i>
+                            <a class="js-contact-phone" href="tel:{$phone_3|regex_replace:'/[^0-9\+]+/':''}">{$phone_3}</a>
+                        </div>
+                    {/if}
+                </div>
+            {/if}
+        </div>
+        {if !$is_add_phones_popup}
+            {if $phone_2}
+                {if $theme_settings.static_var_smarty}{eval var=$phone_2 assign='phone_2'}{/if}
+                <div class="header-phone"><a class="js-contact-phone" href="tel:{$phone_2|regex_replace:'/[^0-9\+]+/':''}">{$phone_2}</a></div>
+            {/if}
+            {if $phone_3}
+                {if $theme_settings.static_var_smarty}{eval var=$phone_3 assign='phone_3'}{/if}
+                <div class="header-phone"><a class="js-contact-phone" href="tel:{$phone_3|regex_replace:'/[^0-9\+]+/':''}">{$phone_3}</a></div>
+            {/if}
+        {/if}
+    </div>
+
+    {if $is_icons_messangers}
+        <div class="header-phone_socials">
+            {if !empty($theme_settings.whatsapp)}
+                <a target="_blank" title="[`Whatsapp`]" class="header-phone_social" href="{$theme_settings.whatsapp}"><i class="fab fa-whatsapp"></i></a>
+            {/if}
+            {if !empty($theme_settings.telegram)}
+                <a target="_blank" title="[`Telegram`]" class="header-phone_social" href="{$theme_settings.telegram}"><i class="fab fa-telegram-plane"></i></a>
+            {/if}
+            {if !empty($theme_settings.viber)}
+                <a target="_blank" title="[`Viber`]" class="header-phone_social" href="{$theme_settings.viber}"><i class="fab fa-viber"></i></a>
+            {/if}
+        </div>
+    {/if}
+</div>
+{/strip}

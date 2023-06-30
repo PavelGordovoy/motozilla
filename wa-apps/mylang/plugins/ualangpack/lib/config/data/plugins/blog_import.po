@@ -1,0 +1,314 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Webasyst Blog Import posts plugin advanced 1.2.42631 UA translation v 1.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#: /wa-apps/blog/plugins/import/templates/actions/settings/Settings.html:9
+msgid "Source"
+msgstr "Джерело"
+
+#: /wa-apps/blog/plugins/import/templates/actions/settings/Settings.html:12
+msgid "Platform"
+msgstr "Платформа"
+
+#: /wa-apps/blog/plugins/import/templates/actions/settings/Settings.html:15
+msgid "Select platform"
+msgstr "Оберіть платформу"
+
+#: /wa-apps/blog/plugins/import/templates/actions/settings/Settings.html:33
+msgid "Target"
+msgstr "Мета"
+
+#: /wa-apps/blog/plugins/import/templates/actions/settings/Settings.html:47
+msgid "Import"
+msgstr "Імпорт"
+
+#: /wa-apps/blog/plugins/import/templates/actions/settings/Settings.html:58
+msgid "Please do not close your browser window and do not leave this page until the entire import process is finished."
+msgstr "Не закривайте браузер, будь ласка, та не покидайте цю сторінку до закінчення імпорту."
+
+#: /wa-apps/blog/plugins/import/js/settings.js:168
+msgid "If you leave this page now, the import process is likely to be interrupted. Leave the page?"
+msgstr "Якщо ви зараз покинете цю сторінку, процес імпорту, ймовірно, буде перервано. Залишити сторінку?"
+
+#: /wa-apps/blog/plugins/import/lib/config/settings.php:30
+msgid "All imported posts will be authored by this user"
+msgstr "Усі імпортовані записи будуть створені цим користувачем"
+
+#: /wa-apps/blog/plugins/import/lib/config/settings.php:5
+msgid "Filter duplicate posts"
+msgstr "Фільтрувати дублікати записів"
+
+#: /wa-apps/blog/plugins/import/lib/config/settings.php:11
+msgid "By post title"
+msgstr "За назвою запису"
+
+#: /wa-apps/blog/plugins/import/lib/config/settings.php:12
+msgid "If a blog post with the same name exists in the target WebAsyst blog, the post will not be imported"
+msgstr "Якщо запис блогу із тією ж назвою існує в блозі призначення на Webasyst, запис не буде імпортовано"
+
+#: /wa-apps/blog/plugins/import/lib/config/settings.php:16
+msgid "Don’t filter duplicates"
+msgstr "Не фільтрувати дублікати"
+
+#: /wa-apps/blog/plugins/import/lib/config/settings.php:17
+msgid "All posts will be imported"
+msgstr "Буде імпортовано усі записи"
+
+#: /wa-apps/blog/plugins/import/lib/config/settings.php:23
+msgid "Blog"
+msgstr "Блог"
+
+#: /wa-apps/blog/plugins/import/lib/config/settings.php:24
+msgid "Target blog where all posts should be imported"
+msgstr "Цільовий блог, куди буде імпортовано усі записи"
+
+#: /wa-apps/blog/plugins/import/lib/config/settings.php:29
+msgid "Author"
+msgstr "Автор"
+
+#: /wa-apps/blog/plugins/import/lib/config/settings.php:36
+msgid "Find and replace"
+msgstr "Знайти і замінити"
+
+#: /wa-apps/blog/plugins/import/lib/config/plugin.php:4
+msgid "Import posts"
+msgstr "Імпорт записів"
+
+#: /wa-apps/blog/plugins/import/lib/config/plugin.php:5
+msgid "Transfer posts from popular blog platforms such as Wordpress and LiveJournal"
+msgstr "Перенос записів блогу з популярнихплатформ, таких як WordPress і Livejournal"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginLjTransport.class.php:30
+msgid "LiveJournal user"
+msgstr "Користувач LiveJournal"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginLjTransport.class.php:35
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWordpressTransport.class.php:31
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystRemoteTransport.class.php:27
+msgid "Password"
+msgstr "Пароль"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginLjTransport.class.php:140
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginLjTransport.class.php:157
+msgid "LiveJournal does not appear to be responding right now. Please try again later."
+msgstr "Схоже, LiveJournal наразі не відповідає. Спробуйте ще раз пізніше, будь ласка."
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginXmlrpcTransport.class.php:36
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystRemoteTransport.class.php:42
+msgid "Invalid URL"
+msgstr "Неправильний URL"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginXmlrpcTransport.class.php:126
+msgid "I/O error: %s"
+msgstr "Помилка вводу/виводу: %s"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginXmlrpcTransport.class.php:14
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginXmlrpcTransport.class.php:21
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystRemoteTransport.class.php:12
+msgid "PHP extension curl required"
+msgstr "Необхідне розширення PHP curl"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystSameTransport.class.php:18
+msgid "PHP extension SimpleXML required"
+msgstr "Необхідне розширення PHP SimpleXML"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystSameTransport.class.php:21
+msgid "Path to folder"
+msgstr "Шлях до папки"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystSameTransport.class.php:23
+msgid "Path to folder of the WebAsyst (old version) installation"
+msgstr "Шлях до папки установки старої версії Webasyst"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystSameTransport.class.php:73
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystSameTransport.class.php:76
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystSameTransport.class.php:88
+msgid "Invalid PATH %s; %s"
+msgstr "Невірний PATH %s; %s"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystSameTransport.class.php:73
+msgid "directory not exists"
+msgstr "каталогу не існує"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystSameTransport.class.php:76
+msgid "file kernel/wbs.xml not found"
+msgstr "файл kernel/wbs.xml не знайдено"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystSameTransport.class.php:88
+msgid "invalid file %s"
+msgstr "неправильний файл %s"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystSameTransport.class.php:99
+msgid "Invalid SQL server name"
+msgstr "Неприпустиме ім&#39;я сервера SQL"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWordpressTransport.class.php:72
+msgid "WordPress version should be at least 1.5.0"
+msgstr "Версія WordPress повинна бути як мінімум 1.5.0"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWordpressTransport.class.php:19
+msgid "Wordpress URL"
+msgstr "URL-адреса WordPress"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWordpressTransport.class.php:20
+msgid "Source blog URL"
+msgstr "URL-адреса блога-джерела"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWordpressTransport.class.php:25
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystRemoteTransport.class.php:21
+msgid "Login"
+msgstr "Логін"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWordpressTransport.class.php:27
+msgid "Wordpress blog user login"
+msgstr "Логін користувача блогу Wordpress"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWordpressTransport.class.php:33
+msgid "Wordpress blog user password"
+msgstr "Пароль користувача блогу Wordpress"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystRemoteTransport.class.php:131
+msgid "Invalid server response with code %d"
+msgstr "Неправильна відповідь сервера з кодом %d"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystRemoteTransport.class.php:15
+msgid "Data access URL"
+msgstr "URL-адреса доступу до даних"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystRemoteTransport.class.php:16
+msgid "For WebAsyst <strong>PHP software</strong> installed on your server:<br /> 1. Download data access script <a href=\"http://www.webasyst.com/wa-data/public/site/downloads/old-webasyst-export-php.zip\">export.php</a>, and upload it to your Webasyst published/ folder via FTP.<br /> 2. Enter the complete URL to this file, which should look like this: <strong>http://YOUR_WEBASYST_ROOT_URL/published/export.php</strong><br /><br /> For <strong>hosted accounts</strong>: get your Secure Data Access URL in your ACCOUNT.webasyst.net backend’s “Account (link in the top right corner) &gt; System Settings” page."
+msgstr "Для встановленого на вашому сервері <strong>програмного забезпечення PHP</strong> Webasyst: 1. Скачайте скрипт доступу до даних <a href=\"http://www.webasyst.com/wa-data/public/site/downloads/old-webasyst-export-php.zip\">export.php</a> та завантажте його до папки published/ по FTP.<br />2. Введіть повну URL-адресу цього файлу, вона має виглядати приблизно так: <strong>http://YOUR_WEBASYST_ROOT_URL/published/export.php</strong><br /><br /> Для <strong>акаунтів веб-сервісу</strong>: отримайте ваш URL безпечного доступу до даних (Secure Data Access URL) у бекенді вашого акаунту ACCOUNT.webasyst.net на сторінці «Системні налаштування» (посилання у верхньому правому кутові)."
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystRemoteTransport.class.php:23
+msgid "WebAsyst user login"
+msgstr "Логін користувача Webasyst"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystRemoteTransport.class.php:29
+msgid "WebAsyst user password"
+msgstr "Пароль користувача Webasyst"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystRemoteTransport.class.php:76
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystRemoteTransport.class.php:95
+msgid "Invalid URL, login or password"
+msgstr "Невірні URL, логін або пароль"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystRemoteTransport.class.php:83
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystRemoteTransport.class.php:87
+msgid "Invalid server response"
+msgstr "Неправильна відповідь сервера"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystRemoteTransport.class.php:195
+msgid "PHP extension curl not loaded"
+msgstr "Розширення PHP cURL не завантажене"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystRemoteTransport.class.php:198
+msgid "Error while init Curl"
+msgstr "Помилка ініціалізації сURL"
+
+#: /wa-apps/blog/plugins/import/lib/classes/blogImportPluginWebasystRemoteTransport.class.php:202
+msgid "Curl error %d#:%s"
+msgstr "Помилка cURL %d#:%s"
+
+#: /wa-apps/blog/plugins/import/lib/blogImport.plugin.php:9
+msgid "Invalid regex"
+msgstr "Неправильний регулярний вираз"
+
+#: /wa-apps/blog/plugins/import/lib/blogImport.plugin.php:10
+msgid "There was an internal PCRE error"
+msgstr "Сталася внутрішня помилка бібліотеки PCRE"
+
+#: /wa-apps/blog/plugins/import/lib/blogImport.plugin.php:11
+msgid "Backtrack limit was exhausted"
+msgstr "Ліміт backtrack вичерпано"
+
+#: /wa-apps/blog/plugins/import/lib/blogImport.plugin.php:12
+msgid "Recursion limit was exhausted"
+msgstr "Ліміт рекурсії вичерпано"
+
+#: /wa-apps/blog/plugins/import/lib/blogImport.plugin.php:13
+msgid "The offset didn't correspond to the begin of a valid UTF-8 code point"
+msgstr "Зсув не збігається з валідним початком коду UTF-8"
+
+#: /wa-apps/blog/plugins/import/lib/blogImport.plugin.php:17
+msgid "Malformed UTF-8 data"
+msgstr "Невірно сформовані дані UTF-8"
+
+#: /wa-apps/blog/plugins/import/lib/actions/backend/blogImportPluginBackendSetup.controller.php:26
+#: /wa-apps/blog/plugins/import/lib/actions/backend/blogImportPluginBackendRun.controller.php:85
+msgid "Transport type %s not found"
+msgstr "Тип транспорту %s не знайдено"
+
+#: /wa-apps/blog/plugins/import/lib/actions/backend/blogImportPluginBackendRun.controller.php:58
+msgid "Target blog not found"
+msgstr "Блог призначення не знайдено"
+
+#: /wa-apps/blog/plugins/import/lib/actions/backend/blogImportPluginBackendRun.controller.php:70
+msgid "Author not found or has insufficient rights"
+msgstr "Автора не знайдено або у нього недостатньо прав"
+
+#: /wa-apps/blog/plugins/import/lib/actions/backend/blogImportPluginBackendRun.controller.php:49
+msgid "Invalid replace settings"
+msgstr "Невірні налаштування заміни"
+
+#: /wa-apps/blog/plugins/import/lib/actions/backend/blogImportPluginBackendRun.controller.php:78
+msgid "Invalid settings"
+msgstr "Неприпустимі параметри"
+
+#: /wa-apps/blog/plugins/import/lib/actions/backend/blogImportPluginSettings.action.php:16
+msgid "WordPress"
+msgstr "WordPress"
+
+#: /wa-apps/blog/plugins/import/lib/actions/backend/blogImportPluginSettings.action.php:17
+msgid "Import posts and comments from a WordPress blog"
+msgstr "Імпорт записів та коментарів з блогу WordPress"
+
+#: /wa-apps/blog/plugins/import/lib/actions/backend/blogImportPluginSettings.action.php:20
+msgid "LiveJournal"
+msgstr "LiveJournal"
+
+#: /wa-apps/blog/plugins/import/lib/actions/backend/blogImportPluginSettings.action.php:21
+msgid "Import posts from a LiveJournal blog (comments are not imported)"
+msgstr "Імпорт записів з блогу на Livejournal (коментарі не імпортуються)"
+
+#: /wa-apps/blog/plugins/import/lib/actions/backend/blogImportPluginSettings.action.php:24
+msgid "WebAsyst Shop-Script (same server)"
+msgstr "WebAsyst Shop-Script (на тому ж сервері)"
+
+#: /wa-apps/blog/plugins/import/lib/actions/backend/blogImportPluginSettings.action.php:25
+#: /wa-apps/blog/plugins/import/lib/actions/backend/blogImportPluginSettings.action.php:29
+msgid "Import news from WebAsyst Shop-Script (older version of the Shop-Script app)"
+msgstr "Імпорт новин з WebAsyst Shop-Script (застарілої версії додатку Shop-Script)"
+
+#: /wa-apps/blog/plugins/import/lib/actions/backend/blogImportPluginSettings.action.php:28
+msgid "WebAsyst Shop-Script (remote server)"
+msgstr "WebAsyst Shop-Script (віддалений сервер)"
+
+#: /wa-apps/blog/plugins/import/lib/actions/backend/blogImportPluginSettings.action.php:70
+msgid "Search for"
+msgstr "Шукати:"
+
+#: /wa-apps/blog/plugins/import/lib/actions/backend/blogImportPluginSettings.action.php:71
+msgid "Replace with"
+msgstr "Замінити на:"
+
+#: /wa-apps/blog/plugins/import/lib/actions/backend/blogImportPluginSettings.action.php:72
+msgid "Reg Exp<br /> (advanced)"
+msgstr "Регулярний вираз<br /> (розширений)"
+
+#: /wa-apps/blog/plugins/import/lib/actions/backend/blogImportPluginSettings.action.php:73
+msgid "Remove the rule"
+msgstr "Видалити правило"
+
+#: /wa-apps/blog/plugins/import/lib/actions/backend/blogImportPluginSettings.action.php:74
+msgid "Add a rule"
+msgstr "Додати правило"

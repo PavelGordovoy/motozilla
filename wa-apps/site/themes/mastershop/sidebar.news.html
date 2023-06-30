@@ -1,0 +1,49 @@
+{strip}
+{if $wa->blog}
+    {if $theme_settings.is_sidebar_news_img && class_exists('blogSkimagePlugin')}
+        {$sk_blog_images = blogSkimageHelper::getImages()}
+    {/if}
+    {if !isset($blog_id) || empty($blog_id)}
+        {$blog_id = null}
+    {/if}
+    {$blog_posts = $wa->blog->posts($blog_id,3)}
+    {if count($blog_posts)}
+        <div class="sidebar-wrap">
+            {if $blog_title}
+                <div class="sidebar-wrap__head">{$blog_title}</div>
+            {/if}
+            <div class="sidebar-news">
+                {foreach $blog_posts as $post}
+                    <div class="sidebar-news__item">
+                        <a href="{$post.link|escape}" class="sidebar-news__link">
+                            {if isset($sk_blog_images[$post.id]['widget']) && !empty($sk_blog_images[$post.id]['widget'])}
+                                <span class="sidebar-news__image">
+                                    <img  src="{$sk_blog_images[$post.id]['widget']}" alt="{$post.title|escape}">
+                                </span>
+                            {/if}
+                            <div class="sidebar-news__content">
+                                <div class="sidebar-news__title">{strip_tags($post.title)|truncate:50}</div>
+                                <div class="overflow-hidden">
+                                    <div class="sidebar-news__date">{$post.datetime|wa_datetime:"humandate"}</div>
+                                    <span class="sidebar-news__btn button-more ac-color fal fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                {/foreach}
+            </div>
+            {if $blog_link_title}
+                <div class="sidebar-news__all">
+                    {$link = $wa->getUrl('blog/frontend')}
+                    {if $blog_id}
+                        {$blog = $wa->blog->blog($blog_id)}
+                        {$link = $blog['link']}
+                    {/if}
+                    <a href="{$link}" class="show-all ac-color">{$blog_link_title} <i class="button-more fal fa-long-arrow-right"></i></a>
+                </div>
+            {/if}
+        </div>
+    {/if}
+{/if}
+{/strip}

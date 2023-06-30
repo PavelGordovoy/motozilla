@@ -1,0 +1,104 @@
+{strip}
+{if isset($blocks) && !empty($blocks)}{$list_blocks = ","|explode:$blocks}{/if}
+<aside class="sidebar-r">
+    {if count($list_blocks)}
+        {foreach $list_blocks as $block}
+            {if $block == 'categories_unfolding'}
+                {include file="`$wa_parent_theme_path`/vertical-unfolding.main.menu.html"}
+            {else if $block == 'categories_unfolding_close'}
+                {include file="`$wa_parent_theme_path`/vertical-unfolding.main.menu.html" is_close=true}
+            {else if $block == 'shop_subcategories'}
+                {include file="`$wa_active_theme_path`/sidebar.subcategories.html"}
+            {else if $block == 'shop_filters'}
+                {include file="`$wa_active_theme_path`/sidebar.filters.html"}
+            {else if $block == 'shop_banner'}
+                {include file="`$wa_active_theme_path`/sidebar.category-banner.html"}
+            {else if $block == 'custom1'}
+                {if $theme_settings.sidebar_custom_1_block_name}{$wa->block("`$theme_settings.sidebar_custom_1_block_name`")}{/if}
+            {else if $block == 'custom2'}
+                {if $theme_settings.sidebar_custom_2_block_name}{$wa->block("`$theme_settings.sidebar_custom_2_block_name`")}{/if}
+            {else if $block == 'promo1'}
+                {include file="`$wa_parent_theme_path`/sidebar.promo.html"  promo_nums=$theme_settings.sidebar_promo_1 type_view=$theme_settings.sidebar_promo_1_type}
+            {else if $block == 'promo2'}
+                {include file="`$wa_parent_theme_path`/sidebar.promo.html"  promo_nums=$theme_settings.sidebar_promo_2 type_view=$theme_settings.sidebar_promo_2_type}
+            {else if $block == 'views'}
+                {include file="`$wa_parent_theme_path`/sidebar.views.html"}
+            {else if $block == 'products1' && !empty($theme_settings.sidebar_product_list_1)}
+                {$products = $wa->shop->productSet($theme_settings.sidebar_product_list_1)}
+                {include file="`$wa_parent_theme_path`/sidebar.products.html"  products=$products list_title=$theme_settings.sidebar_product_list_1_title}
+            {else if $block == 'products2' && !empty($theme_settings.sidebar_product_list_2)}
+                {$products = $wa->shop->productSet($theme_settings.sidebar_product_list_2)}
+                {include file="`$wa_parent_theme_path`/sidebar.products.html"  products=$products list_title=$theme_settings.sidebar_product_list_2_title}
+            {else if $block == 'products3' && !empty($theme_settings.sidebar_product_list_3)}
+                {$products = $wa->shop->productSet($theme_settings.sidebar_product_list_3)}
+                {include file="`$wa_parent_theme_path`/sidebar.products.html"  products=$products list_title=$theme_settings.sidebar_product_list_3_title}
+            {else if $block == 'products4' && !empty($theme_settings.sidebar_product_list_4)}
+                {$products = $wa->shop->productSet($theme_settings.sidebar_product_list_4)}
+                {include file="`$wa_parent_theme_path`/sidebar.products.html"  products=$products list_title=$theme_settings.sidebar_product_list_4_title}
+            {else if $block == 'products5' && !empty($theme_settings.sidebar_product_list_5)}
+                {$products = $wa->shop->productSet($theme_settings.sidebar_product_list_5)}
+                {include file="`$wa_parent_theme_path`/sidebar.products.html"  products=$products list_title=$theme_settings.sidebar_product_list_5_title}
+            {else if $block == 'products6' && !empty($theme_settings.sidebar_product_list_6)}
+                {$products = $wa->shop->productSet($theme_settings.sidebar_product_list_6)}
+                {include file="`$wa_parent_theme_path`/sidebar.products.html"  products=$products list_title=$theme_settings.sidebar_product_list_6_title}
+            {else if $block == 'category_products_list_1' && isset($category) && !empty($category.params.products_list_1)}
+                {$title = $theme_settings.category_products_list_title_1}
+                {if !empty($category.params.products_list_title_1)}{$title = $category.params.products_list_title_1}{/if}
+                {$products = $wa->shop->productSet($category.params.products_list_1)}
+                {include file="`$wa_parent_theme_path`/sidebar.products.html" products=$products list_title=$title}
+            {else if $block == 'category_products_list_2' && isset($category) && !empty($category.params.products_list_2)}
+                {$title = $theme_settings.category_products_list_title_2}
+                {if !empty($category.params.products_list_title_2)}{$title = $category.params.products_list_title_2}{/if}
+                {$products = $wa->shop->productSet($category.params.products_list_2)}
+                {include file="`$wa_parent_theme_path`/sidebar.products.html" products=$products list_title=$title}
+            {else if $block == 'news'}
+                {include file="`$wa_parent_theme_path`/sidebar.news.html" blog_id=(int)$theme_settings.sidebar_news_id blog_title=$theme_settings.sidebar_news_title blog_link_title=$theme_settings.sidebar_news_link_title}
+            {else if $block == 'photos'}
+                {include file="`$wa_parent_theme_path`/sidebar.photos.html" album_id=(int)$theme_settings.sidebar_photos_album_id}
+            {else if $block == 'cart'}
+                {include file="`$wa_parent_theme_path`/sidebar.cart.html"}
+            {else if $block == 'shop_tags'}
+                {include file="`$wa_parent_theme_path`/sidebar.shop-tags.html"}
+            {else if $block == 'shop_crossselling' && isset($product)}
+                {$count_crossselling = (int) $theme_settings.crossselling_count}
+                {if empty($count_crossselling)}{$count_crossselling = 12}{/if}
+                {$crossselling = $product->crossSelling($count_crossselling)}
+                {$crossselling_title = "[`This product is often viewed by`]"}
+                {if $theme_settings.crossselling_title}{$crossselling_title = sprintf($theme_settings.crossselling_title, $product.name|escape)}{/if}
+                {include file="`$wa_parent_theme_path`/sidebar.products.html"  products=$crossselling list_title=$crossselling_title}
+            {else if $block == 'shop_upselling' && isset($product)}
+                {$count_upselling = (int) $theme_settings.upselling_count}
+                {if empty($count_upselling)}{$count_upselling = 12}{/if}
+                {$upselling = $product->upSelling($count_upselling)}
+                {$compare_ids = array_merge(array($product.id), array_keys($upselling))}
+                {$upselling_title = "[`Recommended`]"}
+                {if $theme_settings.upselling_title}{$upselling_title = $theme_settings.upselling_title}{/if}
+                {$compare_link = $wa->getUrl('/frontend/compare', ['id' => implode(',', $compare_ids)])}
+                {include file="`$wa_parent_theme_path`/sidebar.products.html"  products=$upselling list_title=$upselling_title link_text="[`Compare all`]" link_url=$compare_link}
+            {else if $block == 'shop_plugins'}
+                {include file="`$wa_active_theme_path`/sidebar.plugins.html"}
+            {else if $wa->shop && $block == 'pages_shop'}
+                {include file="`$wa_parent_theme_path`/sidebar.pages.html" title=$theme_settings.sidebar_pages_shop_title pages=$wa->shop->pages(0, true, true)}
+            {else if $wa->site && $block == 'pages_site'}
+                {include file="`$wa_parent_theme_path`/sidebar.pages.html" title=$theme_settings.sidebar_pages_site_title pages=$wa->site->pages(0, true, true)}
+            {else if $wa->blog && $block == 'pages_blog'}
+                {include file="`$wa_parent_theme_path`/sidebar.pages.html" title=$theme_settings.sidebar_pages_blog_title pages=$wa->blog->pages(0, true, true)}
+            {else if $wa->photo && $block == 'pages_photo'}
+                {include file="`$wa_parent_theme_path`/sidebar.pages.html" title=$theme_settings.sidebar_pages_photo_title pages=$wa->photos->pages(0, true, true)}
+            {else if $wa->hub && $block == 'pages_hub'}
+                {include file="`$wa_parent_theme_path`/sidebar.pages.html" title=$theme_settings.sidebar_pages_hub_title pages=$wa->hub->pages(0, true, true)}
+            {else if $wa->helpdesk && $block == 'pages_helpdesk'}
+                {include file="`$wa_parent_theme_path`/sidebar.pages.html" title=$theme_settings.sidebar_pages_helpdesk_title pages=$wa->helpdesk->pages(0, true, true)}
+            {else if $wa->menu && $block == 'pages_app_menu_1'}
+                {include file="`$wa_parent_theme_path`/sidebar.app_menu.html" title=$theme_settings.sidebar_pages_appmenu_1_title id_menu=$theme_settings.sidebar_pages_appmenu_1_id}
+            {else if $wa->menu && $block == 'pages_app_menu_2'}
+                {include file="`$wa_parent_theme_path`/sidebar.app_menu.html" title=$theme_settings.sidebar_pages_appmenu_2_title id_menu=$theme_settings.sidebar_pages_appmenu_2_id}
+            {else if $block == 'social'}
+                {include file="`$wa_parent_theme_path`/sidebar.widgets.html"}
+            {else if $block == 'services'}
+                {include file="`$wa_parent_theme_path`/sidebar.services.html"}
+            {/if}
+        {/foreach}
+    {/if}
+</aside>
+{/strip}

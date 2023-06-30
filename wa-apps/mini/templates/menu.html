@@ -1,0 +1,54 @@
+<link rel="stylesheet" type="text/css" href="{$wa_url}wa-apps/mini/css/st.action-panel.css" />
+<script src="{$wa_url}wa-apps/mini/js/st.action-panel.js"></script>
+
+<div class="st-actionContainer right-bottom">
+    <div class="st-panel">
+        <div class="st-panel-header"><i class="fa fa-bars" aria-hidden="true"></i> Ускорение сайта</div>
+        <div class="st-panel-contents">
+            <a class="mini-run" id="critical" href="#">{if waRequest::param('mini_css_loaded')}Обновить{else}Получить{/if} критический CSS</a>
+        </div>
+        <div class="st-panel-contents">
+            <a class="mini-run" id="images" href="#">Оптимизировать изображения</a>
+        </div>
+        <div class="st-panel-contents">
+            <a class="mini-run" id="lighthouse" href="#">Узнать PageSpeed</a>
+        </div>
+    </div>
+    <div class="st-btn-container right-bottom">
+        <div class="st-button-main"><i class="fa fa-bars" aria-hidden="true"></i></div>
+    </div>
+</div>
+
+<script>
+    let mini = "{$path}";
+    let theme = "{if waRequest::isMobile()}{waRequest::param('theme_mobile')}{else}{waRequest::param('theme')}{/if}";
+    let type = "{waRequest::param('action')}";
+    $('st-actionContainer').launchBtn( { openDuration: 500, closeDuration: 300 } );
+    $(".mini-run").click(function (e) {
+        e.preventDefault();
+        let action = $(this).attr('id');
+        if (action === 'lighthouse') {
+            window.open("https://developers.google.com/speed/pagespeed/insights/?url=" + window.location.href, '_blank')
+            return;
+        }
+        $(".st-panel").hide();
+        $(".fa-bars").addClass("fa-spinner").removeClass("fa-bars");
+        $.get(mini, { url: window.location.href, action: action, theme: theme, type: type }, function (response) {
+            alert(response.data);
+            window.location.reload();
+        });
+    });
+
+    {if (mini::settings('auto_css'))}
+        var css_loaded = "{waRequest::param('mini_css_loaded')}";
+        if (!css_loaded) {
+            $("#critical").trigger('click');
+        }
+    {/if}
+</script>
+
+<style>
+    .st-panel a{
+        color: white;
+    }
+</style>

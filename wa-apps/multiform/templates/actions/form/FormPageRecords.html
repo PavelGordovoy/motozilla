@@ -1,0 +1,320 @@
+{if $wa->get('addJs')}
+    <script src="{$wa_app_static_url}js/form/records.js"></script>
+{/if}
+{$access = multiformHelper::recordAccess($form)}
+{$contact_rights = $wa->user()->getRights('contacts')}
+<div class="block records-tab">
+    {if $records}
+        <ul class="menu-h margin-block bottom" style="font-family: Arial;">
+            <li><a href="{$wa->getUrl('multiform/frontend', ['url' => $form.hash, 'domain' => $domain])}" target="_blank"><i class="icon16 add"></i> [`Create new record`]</a></li>
+            {if $records && $access == 3}
+                <li><a href="#/records/export/" class="js-action"><i class="icon-custom excel"></i> [`Export`]</a></li>
+                <li class="f-button-delete f-choise"><a href="#/records/deleteAll/1" class="js-action"><i class="icon16 delete"></i> [`Delete`]...</a></li>
+                <li class="f-button-delete" style="display: none"><a href="#/records/deleteAll/2" class="js-action f-selected"><i class="icon16 delete"></i> [`Delete selected`] <span class="indicator">0</span></a></li>
+                <li class="f-button-delete" style="display: none"><a href="#/records/deleteAll/3" class="js-action f-all"><i class="icon16 delete"></i> [`Delete all`]</a></li>
+                <li class="f-button-delete" style="display: none"><a href="#/records/deleteAll/4" class="js-action f-cancel"><i class="icon16 cross"></i> [`Cancel`]</a></li>
+            {/if}
+        </ul>
+
+        {* Блок поиска *}
+        <div class="margin-block">
+            <div class="search-block">
+                <form onsubmit="$.form_records.submitSearchAction(this); return false;">
+                    <input type="search" value="" placeholder="[`Search records...`]" />
+                    <div class="dropdown-ul">
+                        <a href="#/show/dropdownUl/" class="js-action">
+                            <span class="s-name" title="[`Everywhere`]"><span>[`Everywhere`]</span> <i class="icon16 darr"></i></span>
+                        </a>
+                        <ul>
+                            {foreach $form.fields as $ff3}
+                                {if in_array($ff3.type, ['html', 'file', 'section', 'button'])}{continue}{/if}
+                                {if $ff3.type == 'checkbox' || $ff3.type == 'table_grid'}
+                                    {if empty($ff3.option_fields)}{continue}{/if}
+                                    {if $ff3.type == 'checkbox'}{$options3 = $ff3.option_fields}{$customize_keys3 = 0}{else}{$options3 = $ff3.option_fields.statement}{$customize_keys3 = !empty($ff3.options.customize_statement_keys)}{/if}
+                                    {foreach $options3 as $of3}
+                                        <li><label title="{if !empty($customize_keys3)}{$of3.key|escape}{else}{$of3.value|escape}{/if}"><input type="checkbox" value="{$ff3.id}-{$of3.id}" /> {if !empty($customize_keys3)}{$of3.key|escape}&nbsp;{else}{$of3.value|escape}&nbsp;{/if}</label></li>
+                                    {/foreach}
+                                {else}
+                                        <li><label title="{if $ff3.title}{$ff3.title|escape}{/if}"><input type="checkbox" value="{$ff3.id}" /> {if $ff3.title}{$ff3.title|escape}{else}&nbsp;{/if}</label></li>
+                                {/if}
+                            {/foreach}
+
+                            {if !empty($custom_params)}
+                                {foreach $custom_params as $cp_ext => $cp}
+                                    <li><label title="{$cp|escape}"><input type="checkbox" value="0-{$cp_ext|escape}" /> {$cp|escape}</label></li>
+                                {/foreach}
+                            {/if}
+                        </ul>
+                    </div>
+                </form>
+                <a href="javascript:void(0)" class="submit-search" onclick="$(this).prev().submit()" title="[`Search`]"><i class="mf search"></i></a>
+                <div class="inline-block reset-search" style="display: none"><a href="#/reset/recordsSearch" class="js-action"><i class="icon10 no inline-block"></i> [`reset`]</a></div>
+
+                <div class="top-right">[`Found records:`] {$records_count}</div>
+            </div>
+        </div>
+
+        <div class="pagination align-center">
+            {if $total_pages_num > 1}
+                {include file="./../../pagination.html" total_pages_num = $total_pages_num current_page_num= $current_page_num module='form&action=edit'}
+            {/if}
+            <div class='more-fields'>
+                <a href="#/records/changeColumns/" class='js-action' title='[`Change columns`]'>+</a>
+                <div class="cloud-helper tooltip">
+                    <ul class="menu-v">
+                        <li>
+                            <a href="#/records/addColumn/" class='js-action column-id' data-column='id'>
+                                [`Record ID`] (#)
+                            </a>
+                        </li>
+                        {foreach $form.fields as $ff2}
+                            {if in_array($ff2.type, ['html', 'section', 'button'])}{continue}{/if}
+                            {if $ff2.type == 'checkbox' || $ff2.type == 'table_grid'}
+                                {if empty($ff2.option_fields)}{continue}{/if}
+                                {if $ff2.type == 'checkbox'}{$options2 = $ff2.option_fields}{$customize_keys2 = 0}{else}{$options2 = $ff2.option_fields.statement}{$customize_keys2 = !empty($ff2.options.customize_statement_keys)}{/if}
+                                {foreach $options2 as $of2}
+                                    <li>
+                                        <a href="#/records/addColumn/" class='js-action column-{$ff2.id}-{$of2.id}' data-column='{$ff2.id}-{$of2.id}'>
+                                            {if $of2.image}<img style='vertical-align: middle' src="{multiformImage::getOptionImage($of2.id, $ff2.id, $of2.image, '20x20')}" alt="" />{/if}
+                                            {if !empty($customize_keys2)}{$of2.key|escape}&nbsp;{else}{$of2.value|escape}&nbsp;{/if}
+                                        </a>
+                                    </li>
+                                {/foreach}
+                            {else}
+                                <li>
+                                    <a href="#/records/addColumn/" class='js-action column-{$ff2.id}' data-column = '{$ff2.id}'>{if $ff2.title}{$ff2.title|escape}{else}&nbsp;{/if}</a>
+                                </li>
+                            {/if}
+                        {/foreach}
+
+                        {if !empty($custom_params)}
+                            {foreach $custom_params as $cp_ext => $cp}
+                                <li>
+                                    <a href="#/records/addColumn/" class='js-action column-0-{$cp_ext|escape}' data-column = '0-{$cp_ext|escape}'>{$cp|escape}</a>
+                                </li>
+                            {/foreach}
+                        {/if}
+
+                        <li class="bordered-top">
+                            <a href="#/records/addColumn/" class='js-action column-createdatetime' data-column='createdatetime'>
+                                [`Created`]
+                            </a>
+                        </li>
+                        {if !empty($contact_rights['backend'])}
+                            <li>
+                                <a href="#/records/addColumn/" class='js-action column-createby' data-column='createby'>
+                                    [`Created by`]
+                                </a>
+                            </li>
+                        {/if}
+                        <li>
+                            <a href="#/records/addColumn/" class='js-action column-updatedatetime' data-column='updatedatetime'>
+                                [`Updated`]
+                            </a>
+                        </li>
+                        {if !empty($contact_rights['backend'])}
+                            <li>
+                                <a href="#/records/addColumn/" class='js-action column-updateby' data-column='updateby'>
+                                    [`Updated by`]
+                                </a>
+                            </li>
+                        {/if}
+                        <li>
+                            <a href="#/records/addColumn/" class='js-action column-ip' data-column='ip'>
+                                [`IP`]
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/records/addColumn/" class='js-action column-status' data-column='status'>
+                                [`Status`]
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <table class="black">
+            <thead>
+                <tr>
+                    <th class='width50px n'><span>№</span> <input type="checkbox" style="display: none" class="f-checkbox-delete all" /></th>
+                    <th class='sort-field column-id{if !empty($sort) && $sort.field == 'id'} active{/if}' data-column='id' onclick='$.form_records.orderByAction($(this), "id")'>#{if !empty($sort) && $sort.field == 'id'} <i class="icon16 {if $sort.direction == 'asc'}uarr{else}darr{/if}"></i>{/if}</th>
+                    {if !empty($form.fields)}
+                        {$fields_count = 0}
+                        {foreach $form.fields as $ff}
+                            {if in_array($ff.type, ['html', 'section', 'button'])}{continue}{/if}
+                            {if $ff.type == 'checkbox' || $ff.type == 'table_grid'}
+                                {if empty($ff.option_fields)}{continue}{/if}
+                                {if $ff.type == 'checkbox'}{$options = $ff.option_fields}{$customize_keys = 0}{else}{$options = $ff.option_fields.statement}{$customize_keys = !empty($ff.options.customize_statement_keys)}{/if}
+                                {foreach $options as $of}
+                                    <th onclick='$.form_records.orderByAction($(this), "{$ff.id}", "{$of.id}")' data-column='{$ff.id}-{$of.id}' class="sort-field{if $fields_count > 9} hidden{/if} column-{$ff.id}-{$of.id}{if !empty($sort) && $sort.field == $ff.id && $sort.ext == $of.id} active{/if}">
+                                        {if $of.image}<img style='vertical-align: middle' src="{multiformImage::getOptionImage($of.id, $ff.id, $of.image, '20x20')}" alt="" />{/if}
+                                        {if !empty($customize_keys)}{$of.key|escape}{else}{$of.value|escape}{/if}{if !empty($sort) && $sort.field == $ff.id && $sort.ext == $of.id} <i class="icon16 {if $sort.direction == 'asc'}uarr{else}darr{/if}"></i>{/if}
+                                    </th>
+                                    {$fields_count = $fields_count + 1}
+                                {/foreach}
+                            {else}
+                                <th onclick='{if $ff.type == "file"}$.form_records.orderByAction($(this), "{$ff.id}", "file"){else}$.form_records.orderByAction($(this), "{$ff.id}", ""){/if}' data-column='{$ff.id}' class="sort-field{if $fields_count > 9} hidden{/if} column-{$ff.id}{if !empty($sort) && $sort.field == $ff.id} active{/if}">{$ff.title|escape}{if !empty($sort) && $sort.field == $ff.id} <i class="icon16 {if $sort.direction == 'asc'}uarr{else}darr{/if}"></i>{/if}</th>
+                                {$fields_count = $fields_count + 1}
+                            {/if}
+                        {/foreach}
+                    {/if}
+                    {if !empty($custom_params)}
+                        {foreach $custom_params as $cp_ext => $cp}
+                            <th onclick='$.form_records.orderByAction($(this), "param", "{$cp}")' data-column='0-{$cp_ext|escape}' class="sort-field hidden column-0-{$cp_ext|escape}{if !empty($sort) && $sort.field == 'param' && $sort.ext == $cp} active{/if}">{$cp|escape}{if !empty($sort) && $sort.field == 'param' && $sort.ext == $cp} <i class="icon16 {if $sort.direction == 'asc'}uarr{else}darr{/if}"></i>{/if}</th>
+                        {/foreach}
+                    {/if}
+                    <th onclick='$.form_records.orderByAction($(this), "create_datetime")' data-column='createdatetime' class="sort-field hidden column-createdatetime{if !empty($sort) && $sort.field == 'create_datetime'} active{/if}">[`Created`]{if !empty($sort) && $sort.field == 'create_datetime'} <i class="icon16 {if $sort.direction == 'asc'}uarr{else}darr{/if}"></i>{/if}</th>
+                    {if !empty($contact_rights['backend'])}
+                        <th onclick='$.form_records.orderByAction($(this), "create_by")' data-column='createby' class="sort-field hidden column-createby{if !empty($sort) && $sort.field == 'create_by'} active{/if}">[`Created by`]{if !empty($sort) && $sort.field == 'create_by'} <i class="icon16 {if $sort.direction == 'asc'}uarr{else}darr{/if}"></i>{/if}</th>
+                    {/if}
+                    <th onclick='$.form_records.orderByAction($(this), "update_datetime")' data-column='updatedatetime' class="sort-field hidden column-updatedatetime{if !empty($sort) && $sort.field == 'update_datetime'} active{/if}">[`Updated`]{if !empty($sort) && $sort.field == 'update_datetime'} <i class="icon16 {if $sort.direction == 'asc'}uarr{else}darr{/if}"></i>{/if}</th>
+                    {if !empty($contact_rights['backend'])}
+                        <th onclick='$.form_records.orderByAction($(this), "update_by")' data-column='updateby' class="sort-field hidden column-updateby{if !empty($sort) && $sort.field == 'update_by'} active{/if}">[`Updated by`]{if !empty($sort) && $sort.field == 'update_by'} <i class="icon16 {if $sort.direction == 'asc'}uarr{else}darr{/if}"></i>{/if}</th>
+                    {/if}
+                    <th onclick='$.form_records.orderByAction($(this), "ip")' data-column='ip' class="sort-field hidden column-ip{if !empty($sort) && $sort.field == 'ip'} active{/if}">[`IP`]{if !empty($sort) && $sort.field == 'ip'} <i class="icon16 {if $sort.direction == 'asc'}uarr{else}darr{/if}"></i>{/if}</th>
+                    <th onclick='$.form_records.orderByAction($(this), "status")' data-column='status' class="sort-field hidden column-status{if !empty($sort) && $sort.field == 'status'} active{/if}">[`Status`]{if !empty($sort) && $sort.field == 'status'} <i class="icon16 {if $sort.direction == 'asc'}uarr{else}darr{/if}"></i>{/if}</th>
+                </tr>
+            </thead>
+            <tbody>
+            {foreach $records as $r}
+                <tr onclick="$.form_records.selectRecord($(this), {$r.id})"{if !$r.status} class='transparent'{/if} data-id="{$r.id}">
+                    <td class="width50px n" title='{if !empty($r.has_cloned_fields)}[`Record has cloned values`]{else}{($r@index + 1) + ($current_page_num-1)*$records_per_page}{/if}'>
+                        <span>{($r@index + 1) + ($current_page_num-1)*$records_per_page}</span><input type="checkbox" style="display: none" class="f-checkbox-delete" value="{$r.id}" />
+                        {if !empty($r.has_cloned_fields)}
+                            <svg title="[`Record has cloned values`]" viewBox="0 0 60 60" class="info-icon"><use xlink:href="{$wa_app_static_url}img/svg/dots.svg#dots"></use></svg>
+                        {/if}
+                    </td>
+                    <td class="min-width column-id">{multiformHelper::formatRecordId($r.id, $form)}</td>
+                    {if !empty($form.fields)}
+                        {$fields_count = 0}
+                        {foreach $form.fields as $ff}
+                            {if in_array($ff.type, ['html', 'section', 'button'])}{continue}{/if}
+                            {if $ff.type == 'checkbox' || $ff.type == 'table_grid'}
+                                {if empty($ff.option_fields)}{continue}{/if}
+                                {if $ff.type == 'checkbox'}{$options = $ff.option_fields}{else}{$options = $ff.option_fields.statement}{/if}
+                                {foreach $options as $of}
+                                    <td title='{$of.value|escape}' class="column-{$ff.id}-{$of.id}{if $fields_count > 9} hidden{/if}">{if !empty($r.fields[$ff.id][$of.id])}{$r.fields[$ff.id][$of.id]|escape}{/if}</td>
+                                    {$fields_count = $fields_count + 1}
+                                {/foreach}
+                            {elseif $ff.type == 'formula'}
+                                <td title="{$ff.title|escape}" class="column-{$ff.id}{if $fields_count > 9} hidden{/if}">
+                                    <div class="relative">
+                                        {if !empty($r.fields[$ff.id])}
+                                            {if is_array($r.fields[$ff.id])}
+                                                {foreach $r.fields[$ff.id] as $checked_field => $fail_field}
+                                                    {$fail_field|escape}
+                                                    <i class="icon16 exclamation" title='{$checked_field|escape}'></i>
+                                                {/foreach}
+                                            {else}
+                                                {$r.fields[$ff.id]|escape}
+                                            {/if}
+                                        {/if}
+                                    </div>
+                                </td>
+                                {$fields_count = $fields_count + 1}
+                            {else}
+                                <td title="{$ff.title|escape}" class="column-{$ff.id}{if $fields_count > 9} hidden{/if}">
+                                    {if isset($r.fields[$ff.id])}
+                                        {if $ff.type == 'email'}
+                                            <a href="mailto:{$r.fields[$ff.id]|escape}">{$r.fields[$ff.id]|escape}</a>
+                                        {elseif $ff.type == 'file'}
+                                            <ul>
+                                            {foreach $r.fields[$ff.id] as $file}
+                                                <li><a title="[`Download`]" href="#">{$file.filename|escape}</a></li>
+                                            {/foreach}
+                                            </ul>
+                                        {elseif $ff.type == 'radio'}
+                                            {if is_array($r.fields[$ff.id])}
+                                                {foreach $r.fields[$ff.id] as $option_id => $r1}
+                                                    {if !empty($ff.option_fields[$option_id].image)}
+                                                        <img src="{multiformImage::getOptionImage($option_id, $ff.id, $ff.option_fields[$option_id].image, '20x20')}" style="vertical-align: middle" />
+                                                    {/if}
+                                                    {$r1|escape}
+                                                    {break}
+                                                {/foreach}
+                                            {else}
+                                                {$r.fields[$ff.id]|escape}
+                                            {/if}
+                                        {elseif is_array($r.fields[$ff.id])}
+                                            {foreach $r.fields[$ff.id] as $rf}
+                                                {$rf|escape}
+                                                {break}
+                                            {/foreach}
+                                        {else}
+                                            {$r.fields[$ff.id]|escape}
+                                        {/if}
+                                    {/if}
+                                </td>
+                                {$fields_count = $fields_count + 1}
+                            {/if}
+                        {/foreach}
+                    {/if}
+                    {if !empty($custom_params)}
+                        {foreach $custom_params as $cp_ext => $cp}
+                            <td title="{$cp|escape}" class="column-0-{$cp_ext|escape} hidden">{if !empty($r.fields[0][$cp_ext])}{$r.fields[0][$cp_ext]|escape}{/if}</td>
+                        {/foreach}
+                    {/if}
+                    <td title="[`Created`]" class="column-createdatetime hidden">{$r.create_datetime}</td>
+                    {if !empty($contact_rights['backend'])}
+                        <td title="[`Created by`]" class="column-createby hidden">{if !empty($contacts[$r.create_contact_id])}<a href='{$wa_backend_url}contacts/#/contact/{$r.create_contact_id}'>{if $contacts[$r.create_contact_id].name}{$contacts[$r.create_contact_id].name|escape}{else}[`No name`]{/if}</a>{else}[`Unknown`]{/if}</td>
+                    {/if}
+                    <td title="[`Updated`]" class="column-updatedatetime hidden">{$r.update_datetime}</td>
+                    {if !empty($contact_rights['backend'])}
+                        <td title="[`Updated by`]" class="column-updateby hidden">{if !empty($contacts[$r.update_contact_id])}<a href='{$wa_backend_url}contacts/#/contact/{$r.update_contact_id}'>{if $contacts[$r.update_contact_id].name}{$contacts[$r.update_contact_id].name|escape}{else}[`No name`]{/if}</a>{elseif $r.update_datetime}[`Unknown`]{/if}</td>
+                    {/if}
+                    <td title="[`IP`]" class="column-ip hidden">{$r.ip}</td>
+                    <td title="[`Status`]" class="column-status hidden">{if $r.status}[`Saved`]{else}[`Processing`]{/if}</td>
+                </tr>
+            {/foreach}
+            </tbody>
+        </table>
+
+        <div class="dialog large" id="records-export-dialog">
+        <div class="dialog-background"></div>
+        <form method="post" action="?module=form&action=recordsExport">
+            <div class="dialog-window">
+                <div class="dialog-content">
+                    <div class="dialog-content-indent">
+                        <h1 class="align-center">[`Export all records`]</h1>
+                        <p class="margin-block align-center" style="margin-top: 50px;">[`All records will be exported in CSV file. Please, don't close or update webpage`]</p>
+                        <div id="s-export-progressbar" style="display:none; margin-top: 20px;">
+                            <div class="progressbar blue float-left" style="display: none; width: 90%;">
+                                <div class="progressbar-outer">
+                                    <div class="progressbar-inner" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                            <img style="float:left; margin-top:8px;" src="{$wa_url}wa-content/img/loading32.gif" />
+                            <div class="clear"></div>
+                            <span class="progressbar-description">0.000%</span>
+                            <em class="hint">[`Please don't close your browser window until export is over.`]</em>
+                            <br clear="left" />
+                            <em class="errormsg" style="display: none;">
+                                <span></span>
+                            </em>
+                        </div>
+                        <div id="s-export-report"></div>
+                    </div>
+                </div>
+                <div class="dialog-buttons">
+                    <div class="dialog-buttons-gradient">
+                        {$wa->csrf()}
+                        <input class="button green" disabled type="submit" value="[`Start export`]">
+                        [`or`] <a class="cancel" href="javascript:void(0);">[`cancel`]</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    {else}
+        <p class='align-center'>[`You don't have any records.`]</p>
+        {if !empty($form.fields)}
+            <p class='align-center'><a href="{$wa->getUrl('multiform/frontend', ['url' => $form.hash, 'domain' => $domain])}" target="_blank"><i class="icon16 add"></i> [`Create new record`]</a></p>
+        {/if}
+    {/if}
+</div>
+<script>
+    $(function () {
+        $.form_records.initPageRecords();
+    });
+</script>

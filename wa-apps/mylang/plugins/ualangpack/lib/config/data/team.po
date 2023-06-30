@@ -1,0 +1,1689 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Webasyst Team 2.0.2.156 UA translation v 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-07 22:30+0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Igor Kononov <contact@skeeter-studio.ru>\n"
+"Language-Team: skeeter.studio\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Team"
+msgstr "Команда"
+
+msgid "Delete"
+msgstr "Видалити"
+
+msgid "Change photo"
+msgstr "Змінити фото"
+
+msgid "@"
+msgstr "@"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "change password"
+msgstr "змінити пароль"
+
+msgid "The same password is used to access personal account and backend."
+msgstr "Для доступу до особистого кабінету і бекенду використовується єдиний пароль."
+
+msgid "New password"
+msgstr "Новий пароль"
+
+msgid "Confirm password"
+msgstr "Підтвердження пароля"
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "or"
+msgstr "або"
+
+msgid "cancel"
+msgstr "відмінити"
+
+msgid "Access"
+msgstr "Доступ"
+
+msgid "Block contact"
+msgstr "Заблокувати контакт"
+
+msgid "Unblock contact"
+msgstr "Розблокувати контакт"
+
+msgid "Disable this contact?"
+msgstr "Заблокувати цей контакт?"
+
+msgid "Enable this contact?"
+msgstr "Розблокувати цей контакт?"
+
+msgid "Disabled"
+msgstr "Вимкнено"
+
+msgid "Enabled"
+msgstr "Увімкнено"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Online"
+msgstr "Онлайн"
+
+msgid "Offline"
+msgstr "Офлайн"
+
+msgid "never logged in"
+msgstr "ніколи не входив до системи"
+
+msgid "last login:"
+msgstr "останній вхід:"
+
+msgid "Customer portal"
+msgstr "Особистий кабінет"
+
+msgid "Available"
+msgstr "Доступний"
+
+msgid "Not available"
+msgstr "Недоступний"
+
+msgid "Customer Portal is a part of your site available for registered clients and containing their personal data. To access their customer portals your clients must log in with email and password."
+msgstr "Особистий кабінет — це частина вашого сайту, що доступна кожному зареєстрованому кліентові и містить персональні дані кліента. Для доступу до особистого кабінету клієнтам знадобиться авторизація за допомогою email-адреси і пароля."
+
+msgid "Personal portal settings"
+msgstr "Налаштування особистого кабинету"
+
+msgid "in Site app"
+msgstr "у додатку «Сайт»"
+
+msgid "Login"
+msgstr "Логін"
+
+msgid "Backend"
+msgstr "Бекенд"
+
+msgid "Administrator"
+msgstr "Адміністратор"
+
+msgid "This access level is inherited from groups. To change it, please adjust group settings or edit group membership for this user."
+msgstr "Цей рівень доступу успадкований від груп. Щоб змінити його, відредагуйте налаштування цих груп або змініть набір груп для даного користувача."
+
+msgid "You cannot revoke administrative access level for yourself. Only another Administrator can do this."
+msgstr "Ви не можете анулювати адміністративний рівень доступу для самого себе. Лише адміністратор в змозі це зробити."
+
+msgid "No access"
+msgstr "Немає доступу"
+
+msgid "Limited access"
+msgstr "Обмежений доступ"
+
+msgid "Confirm access change"
+msgstr "Підтвердіть зміну доступу"
+
+msgid "Cannot set &ldquo;No access&rdquo; because some access rights are inherited from groups. To revoke access rights, edit group settings or group membership for this user."
+msgstr "Неможливо обрати «Доступ відсутній», тому що деякі права доступу успадковані від груп. Для позбавлення прав доступу відредагуйте налаштування груп або набір груп для даного користувача."
+
+msgid "Saved"
+msgstr "Збережено"
+
+msgid "Invitation sent"
+msgstr "Запрошення надіслано"
+
+msgid "expires"
+msgstr "спливає"
+
+msgid "Login name is required to access your account backend."
+msgstr "Логін є обов’язковим для доступу до бекенду."
+
+msgid "E.g., john, agent07, etc."
+msgstr "Приклад: john, agent07 и т. ін."
+
+msgid "change login"
+msgstr "змінити логін"
+
+msgid "Belongs to groups"
+msgstr "Належить до груп"
+
+msgid "&lt;no name&gt;"
+msgstr "&lt;без імені&gt;"
+
+msgid "&lt;none&gt;"
+msgstr "&lt;немає&gt;"
+
+msgid "customize groups"
+msgstr "налаштувати групи"
+
+msgid "Access rights"
+msgstr "Права доступу"
+
+msgid "Backend access rights are customized for every app separately and result from a combination of personal and group access rights."
+msgstr "Права доступу у бекенді налаштовуються для кожного додатка окремо і складаються із персональних та успадкованих від груп прав."
+
+msgid "Edit access"
+msgstr "Редагувати доступ"
+
+msgid "Passwords do not match."
+msgstr "Паролі не співпадають."
+
+msgid "Login is required."
+msgstr "Необхідно вказати логін."
+
+msgid "Loading..."
+msgstr "Завантаження..."
+
+msgid "Edit"
+msgstr "Редагувати"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Added"
+msgstr "Додав"
+
+msgid "Method"
+msgstr "Метод"
+
+msgid "map"
+msgstr "карта"
+
+msgid "other"
+msgstr "інший"
+
+msgid "which?"
+msgstr "який?"
+
+msgid "delete"
+msgstr "видалити"
+
+msgid "Add another"
+msgstr "Додати ще"
+
+msgid "required"
+msgstr "обов’язкове"
+
+msgid "year"
+msgstr "рік"
+
+msgid "Incorrect email address format."
+msgstr "Невірний формат email-адреси."
+
+msgid "Incorrect URL format."
+msgstr "Невірний формат URL."
+
+msgid "Must be a number."
+msgstr "Повинно бути числом."
+
+msgid "no name"
+msgstr "без імені"
+
+msgid "from"
+msgstr "з"
+
+msgid "Start"
+msgstr "Початок"
+
+msgid "to"
+msgstr "по"
+
+msgid "End"
+msgstr "Закінчення"
+
+msgid "by day"
+msgstr "по днях"
+
+msgid "by month"
+msgstr "по місяцях"
+
+msgid "Apply"
+msgstr "Застосувати"
+
+msgid "All time"
+msgstr "Весь час"
+
+msgid "Select dates..."
+msgstr "Обрати дати..."
+
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d день"
+msgstr[1] "%d дні"
+msgstr[2] "%d днів"
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d година"
+msgstr[1] "%d години"
+msgstr[2] ""
+
+msgid "Last %d day"
+msgid_plural "Last %d days"
+msgstr[0] "Останній %d день"
+msgstr[1] "Останні %d дні"
+msgstr[2] ""
+
+msgid "This field is required."
+msgstr "Це поле є обов’язковим."
+
+msgid "At least one of these fields must be filled"
+msgstr "Хоча б одне з цих полів має бути заповненим"
+
+msgid "Birthday"
+msgstr "День народження"
+
+msgid "deleted contact_id="
+msgstr "видалено contact_id="
+
+msgid "granted backend access rights"
+msgstr "надав права доступу до бекенду"
+
+msgid "revoked backend access rights"
+msgstr "скасовав права доступу до бекенду"
+
+msgid "deleted contact"
+msgstr "видалив контакт"
+
+msgid "invited"
+msgstr "запросив"
+
+msgid "created group"
+msgstr "створив групу"
+
+msgid "changed group"
+msgstr "змінив групу"
+
+msgid "deleted group"
+msgstr "видалив групу"
+
+msgid "created event"
+msgstr "створив подію"
+
+msgid "changed event"
+msgstr "змінив подію"
+
+msgid "deleted event"
+msgstr "видалив подію"
+
+msgid "created calendar"
+msgstr "створив календар"
+
+msgid "changed calendar"
+msgstr "змінив календар"
+
+msgid "deleted calendar"
+msgstr "видалив календар"
+
+msgid "Contact with id = %s doesn't exist"
+msgstr "Контакт з id = %s не існує"
+
+msgid "All users"
+msgstr "Усі користувачі"
+
+msgid "until"
+msgstr "до"
+
+msgid ":status until :till_end_date"
+msgstr ":status до :till_end_date"
+
+msgid ":status from :from_start_date until :until_end_date"
+msgstr ":status з :from_start_date до :until_end_date"
+
+msgid "Manage group"
+msgstr "Змінити групу"
+
+msgid "Last seen"
+msgstr "Останній визит"
+
+msgid "Name"
+msgstr "Назва"
+
+msgid "Name "
+msgstr "Ім’я "
+
+msgid "Signed up"
+msgstr "Зареєстрований"
+
+msgid "Sort by"
+msgstr "Сортування"
+
+msgid "Add group description"
+msgstr "Додати опис групи"
+
+msgid "No users in this group."
+msgstr "Ця група не має учасників."
+
+msgid "Edit group"
+msgstr "Редагувати групу"
+
+msgid "New group"
+msgstr "Нова група"
+
+msgid "Description"
+msgstr "Опис"
+
+msgid "Type"
+msgstr "Тип"
+
+msgid "Group"
+msgstr "Група"
+
+msgid "Group description"
+msgstr "Опис групи"
+
+msgid "Location "
+msgstr "Офіс "
+
+msgid "Location"
+msgstr "Місце розташування"
+
+msgid "Location description"
+msgstr "Опис офісу"
+
+msgid "Icon"
+msgstr "Іконка"
+
+msgid "Address"
+msgstr "Адреса"
+
+msgid "Specified address not found on map"
+msgstr "Вказану адресу не вдалося знайти на карті"
+
+msgid "Create"
+msgstr "Створити"
+
+msgid "Group name is mandatory."
+msgstr "Назва групи є обов’язковою."
+
+msgid "Address is needed"
+msgstr "Необхідно вказати адресу"
+
+msgid "Add to group"
+msgstr "Додати до групи"
+
+msgid "Remove from group"
+msgstr "Виключити з групи"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Manage access"
+msgstr "Керування доступом"
+
+msgid "Delete group"
+msgstr "Видалити групу"
+
+msgid "Find and add user"
+msgstr "Знайти і додати користувача"
+
+msgid "Users in this group"
+msgstr "Учасники цієї групи"
+
+msgid "Others users"
+msgstr "Інші користувачі"
+
+msgid "All users in this group."
+msgstr "Всі користувачі з цієї групи."
+
+msgid "Already in group"
+msgstr "Вже у групі"
+
+msgid "Delete this group?"
+msgstr "Видалити цю групу?"
+
+msgid "Access level selected for this group will be applied to all its members."
+msgstr "Рівень доступу, обраний для цієї групи, буде застосовано до всіх її учасників."
+
+msgid "To extend access rights of individual users within the group, edit their personal access settings."
+msgstr "Щоб підвищити рівень доступу для окремих користувачів у групі, змініть їхні персональні налаштування прав."
+
+msgid "me"
+msgstr "я"
+
+msgid "The app icon will not be shown in the app menu."
+msgstr "Іконку додатку не буде показано у головному меню."
+
+msgid "Full admin access to the app and its data."
+msgstr "Повний доступ до всіх функцій і даних додатку."
+
+msgid "Saving"
+msgstr "Збереження"
+
+msgid "Settings"
+msgstr "Налаштування"
+
+msgid "Calendars"
+msgstr "Календарі"
+
+msgid "Add calendar"
+msgstr "Додати календар"
+
+msgid "User name format"
+msgstr "Формат імені користувача"
+
+msgid "Maps"
+msgstr "Карти"
+
+msgid "Google Maps"
+msgstr "Карти Google"
+
+msgid "Google Maps API key"
+msgstr "API key карт Google"
+
+msgid "Yandex Maps"
+msgstr "Яндекс.Карти"
+
+msgid "No users."
+msgstr "Користувачі відсутні."
+
+msgid "Users"
+msgstr "Користувачі"
+
+msgid "No users found."
+msgstr "Користувачів не знайдено."
+
+msgid "Invite new user"
+msgstr "Запросити нового користувача"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Please specify an email to send user invitation with further instructions."
+msgstr "Вкажіть email-адресу для відправки користувачеві запрошення, що містить інструкції для входу."
+
+msgid "I will enter password on behalf of this user so no invitation will be sent."
+msgstr "Я введу пароль для цього користувача, щоб не відправляти йому запрошення."
+
+msgid "Groups"
+msgstr "Групи"
+
+msgid "Locations"
+msgstr "Офіси"
+
+msgid "Send"
+msgstr "Надіслати"
+
+msgid "Inactive users"
+msgstr "Неактивні користувачі"
+
+msgid "No inactive users."
+msgstr "Немає заблокованих користувачів."
+
+msgid "No invited contacts."
+msgstr "Немає запрошених контактів."
+
+msgid "Delete contacts"
+msgstr "Видалити контакти"
+
+msgid "Contact deletion cannot be undone."
+msgstr "Контакти будуть видалені без можливості відновлення."
+
+msgid "IMPORTANT NOTE:"
+msgstr "УВАГА:"
+
+msgid "All selected contacts have links to other applications."
+msgstr "Усі обрані контакти мають зв'язок з іншими додатками."
+
+msgid "Deletion of these contacts is allowed to an Administrator only."
+msgstr "Видалення таких контактів дозволено лише Адміністратору."
+
+msgid "After deletion of these contacts, other applications will refer to non-existent contacts."
+msgstr "Після видалення цих контактів інші додатки посилатимуться на неіснуючі контакти."
+
+msgid "Delete anyway"
+msgstr "Видалити все одно"
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "close"
+msgstr "закрити"
+
+msgid "%d link"
+msgid_plural "%d links"
+msgstr[0] "%d посилання"
+msgstr[1] "%d посилання"
+msgstr[2] ""
+
+msgid "%d of %d selected contacts shown below have links to other applications."
+msgstr "%d з %d обраних контактів, показаних нижче, мають зв’язки з іншими додатками."
+
+msgid "Delete %d of %d selected"
+msgstr "Видалити %d з %d обраних"
+
+msgid "Invitations"
+msgstr "Запрошення"
+
+msgid "Online users"
+msgstr "Користувачі онлайн"
+
+msgid "No users online."
+msgstr "Відсутні користувачі онлайн."
+
+msgid "Sign up as a new user"
+msgstr "Зареєструватись як новий користувач"
+
+msgid "Please specify login and password to create new backend user."
+msgstr "Введіть логін і пароль для реєстрації нового користувача бекенду."
+
+msgid "Password (again)"
+msgstr "Пароль (повторно)"
+
+msgid "Save and proceed"
+msgstr "Зберегти і продовжити"
+
+msgid "New user"
+msgstr "Новий користувач"
+
+msgid "Calendar"
+msgstr "Календар"
+
+msgid "Search users"
+msgstr "Знайти користувачів"
+
+msgid "No groups here"
+msgstr "Групи відсутні"
+
+msgid "No locations here"
+msgstr "Офіси відсутні"
+
+msgid "All contacts"
+msgstr "Усі контакти"
+
+msgid "Reports"
+msgstr "Звіти"
+
+msgid "Plugins"
+msgstr "Плагіни"
+
+msgid "No events for this user yet."
+msgstr "Для цього користувача події відсутні."
+
+msgid "Edit user"
+msgstr "Редагувати користувача"
+
+msgid "This user does not belong to any group."
+msgstr "Цей користувач не включений до жодної з груп."
+
+msgid "Edit groups"
+msgstr "Редагувати групи"
+
+msgid "hide"
+msgstr "приховати"
+
+msgid "Personal calendar settings"
+msgstr "Персональні налаштування календаря"
+
+msgid "External calendar type"
+msgstr "Тип зовнішнього календаря"
+
+msgid "specify settings"
+msgstr "налаштувати плагін"
+
+msgid "Continue"
+msgstr "Продовжити"
+
+msgid "Load authorize page"
+msgstr "Завантажити сторінку авторизації"
+
+msgid "Connect external calendar"
+msgstr "Підключити зовнішній календар"
+
+msgid "Empty"
+msgstr "Пусто"
+
+msgid "Inner calendars"
+msgstr "Внутрішні календарі"
+
+msgid "External calendars"
+msgstr "Зовнішні календарі"
+
+msgid "External calendar"
+msgstr "Зовнішній календар"
+
+msgid "Integration levels"
+msgstr "Рівні інтеграції"
+
+msgid "Connect & import events"
+msgstr "Підключити і імпортувати події"
+
+msgid "Import events"
+msgstr "Імпортувати події"
+
+msgid "Edit calendar"
+msgstr "Редагувати календар"
+
+msgid "New calendar"
+msgstr "Новий календар"
+
+msgid "Calendar name"
+msgstr "Назва календаря"
+
+msgid "Style"
+msgstr "Стиль"
+
+msgid "Background color"
+msgstr "Колір фону"
+
+msgid "Font color"
+msgstr "Колір тексту"
+
+msgid "Selected user groups only"
+msgstr "Лише окремі групи користувачів"
+
+msgid "Select user groups which you want to be able to control events in this calendar:"
+msgstr "Оберіть групи користувачів, яким ви бажаєте надати право керувати подіями в цьому календарі:"
+
+msgid "This group does not have access to Team app."
+msgstr "Ця група не має доступу до додатку «Команда»."
+
+msgid "Customize group access rights using the <a class=\"js-edit-group inline-link\" href=\"%s\"><b><i>Manage group</i></b></a> mode."
+msgstr "Налаштуйте права групи в режимі <a class=\"js-edit-group inline-link\" href=\"%s\"><b><i>Керування групою</i></b></a>."
+
+msgid "There are no user groups in your Webasyst installation."
+msgstr "У вашому бекенді Webasyst відсутні групи користувачів."
+
+msgid "Add groups to be able to manage access to calendars."
+msgstr "Створіть групи, щоб керувати доступом до календарів."
+
+msgid "Default status"
+msgstr "Статус за замовчуванням"
+
+msgid "Default label for adding a user status in this calendar"
+msgstr "Мітка за замовчуванням для створення статусу користувача у цьому календарі"
+
+msgid "Field is empty"
+msgstr "Поле не заповнене"
+
+msgid "Incorrect date"
+msgstr "Вказано некоректну дату"
+
+msgid "Incorrect period"
+msgstr "Вказано некоректний період"
+
+msgid "You need to install any calendar plugin before connecting external calendars."
+msgstr "Для підключення зовнішніх календарів потрібно встановити відповідні плагіни."
+
+msgid "Confirm calendar unlinking"
+msgstr "Підтвердження відключення календаря"
+
+msgid "Are you sure to unlink \"%s\"?"
+msgstr "Ви впевнені, що бажаєте відключити «%s»?"
+
+msgid "Are you sure to delete \"%s\"?"
+msgstr "Ви впевнені, що бажаєте видалити «%s»?"
+
+msgid "Also delete all events imported from this calendar"
+msgstr "Також видалити всі події, імпортовані з цього календаря"
+
+msgid "%d event"
+msgid_plural "%d events"
+msgstr[0] "%d подія"
+msgstr[1] "%d події"
+msgstr[2] ""
+
+msgid "Delete this calendar?"
+msgstr "Видалити цей календар?"
+
+msgid "This calendar is empty. No events will be deleted."
+msgstr "Календар пустий. Жодну подію не буде видалено."
+
+msgid "%d event in this calendar will be deleted"
+msgid_plural "%d events in this calendar will be deleted"
+msgstr[0] "%d подія в цьому календарі буде видалена"
+msgstr[1] "%d події в цьому календарі будуть видалені"
+msgstr[2] ""
+
+msgid "%d connection to external calendars will be deleted"
+msgid_plural "%d connections to external calendars will be deleted"
+msgstr[0] "%d підключення до зовнішнього календаря буде видалене"
+msgstr[1] "%d підключення до зовнішнього календаря будуть видалені"
+msgstr[2] ""
+
+msgid "unlink calendar"
+msgstr "відключити календар"
+
+msgid "Delete this event?"
+msgstr "Видалити цю подію?"
+
+msgid "more"
+msgstr "ще"
+
+msgid "days"
+msgstr "дні"
+
+msgid "Data is broken"
+msgstr "Дані пошкоджено"
+
+msgid "Not connected"
+msgstr "Не підключено"
+
+msgid "Configure"
+msgstr "Налаштувати"
+
+msgid "unlink"
+msgstr "відключити"
+
+msgid "No external calendars connected"
+msgstr "Не підключений жоден зовнішній календар"
+
+msgid "Add external calendar"
+msgstr "Додати зовнішній календар"
+
+msgid "This is your team calendar. Schedule events and user statuses so all your teammates see who is up to on what. Click on a date or drag between dates to add an event."
+msgstr "Це календар вашої команди. Додавайте події і встановлюйте статуси користувачів, щоб усі бачили, хто і що планує. Клікніть по окремій даті або виділіть період, щоб додати нову подію."
+
+msgid "Previous month"
+msgstr "Попередній місяць"
+
+msgid "Next month"
+msgstr "Наступний місяць"
+
+msgid "January"
+msgid_plural "January"
+msgstr[0] "Січень"
+msgstr[1] "Січня"
+msgstr[2] "Січня"
+
+msgid "February"
+msgid_plural "February"
+msgstr[0] "Лютий"
+msgstr[1] "Лютого"
+msgstr[2] "Лютого"
+
+msgid "March"
+msgid_plural "March"
+msgstr[0] "Березень"
+msgstr[1] "Березня"
+msgstr[2] "Березня"
+
+msgid "April"
+msgid_plural "April"
+msgstr[0] "Квітень"
+msgstr[1] "Квітня"
+msgstr[2] "Квітня"
+
+msgid "May"
+msgid_plural "May"
+msgstr[0] "Травень"
+msgstr[1] "Травня"
+msgstr[2] "Травня"
+
+msgid "June"
+msgid_plural "June"
+msgstr[0] "Червень"
+msgstr[1] "Червня"
+msgstr[2] "Червня"
+
+msgid "July"
+msgid_plural "July"
+msgstr[0] "Липень"
+msgstr[1] "Липня"
+msgstr[2] "Липня"
+
+msgid "August"
+msgid_plural "August"
+msgstr[0] "Серпень"
+msgstr[1] "Серпня"
+msgstr[2] "Серпня"
+
+msgid "September"
+msgid_plural "September"
+msgstr[0] "Вересень"
+msgstr[1] "Вересня"
+msgstr[2] "Вересня"
+
+msgid "October"
+msgid_plural "October"
+msgstr[0] "Жовтень"
+msgstr[1] "Жовтня"
+msgstr[2] "Жовтня"
+
+msgid "November"
+msgid_plural "November"
+msgstr[0] "Листопад"
+msgstr[1] "Листопада"
+msgstr[2] "Листопада"
+
+msgid "December"
+msgid_plural "December"
+msgstr[0] "Грудень"
+msgstr[1] "Грудня"
+msgstr[2] "Грудня"
+
+msgid "Event"
+msgstr "Подія"
+
+msgid "User"
+msgstr "Користувач"
+
+msgid "Event name"
+msgstr "Назва події"
+
+msgid "Type description here"
+msgstr "Додайте опис події"
+
+msgid "Event location"
+msgstr "Місце"
+
+msgid "Event start"
+msgstr "Початок"
+
+msgid "Event end"
+msgstr "Закінчення"
+
+msgid "All day"
+msgstr "Увесь день"
+
+msgid "Label"
+msgstr "Мітка"
+
+msgid "Your label"
+msgstr "Ваша мітка"
+
+msgid "Preview"
+msgstr "Попередній перегляд"
+
+msgid "This is how it will look like all around Webasyst"
+msgstr "Ось як це буде виглядати у вашому Webasys"
+
+msgid "When"
+msgstr "Коли"
+
+msgid "Source"
+msgstr "Джерело"
+
+msgid "Minimal access"
+msgstr "Мінімальний доступ"
+
+msgid "Full access"
+msgstr "Повний доступ"
+
+msgid "Remove"
+msgstr "Видалити"
+
+msgid "Welcome to the team!"
+msgstr "Ласкаво просимо до команди!"
+
+msgid "Webasyst is a great way for teams to work together online and share access to apps and data. Enter your teammates email addresses, and Webasyst will automatically create user accounts and send invitations."
+msgstr "Webasyst — це зручне середовище для колективної роботи і обміну робочою інформацією через Інтернет. Введіть email-адреси своїх колег, і Webasyst автоматично створить для них акаунти користувачів та надішле їм запрошення на вхід."
+
+msgid "Add more people"
+msgstr "Додайте більше людей"
+
+msgid "Send invitations"
+msgstr "Надіслати запрошення"
+
+msgid "add teammates manually later"
+msgstr "додати учасників вручну пізніше"
+
+msgid "<em>Full access</em> means the freedom of using all functions available in all installed apps. <em>Minimal access</em> limits the range of available functions only to viewing and editing personal profile in Team app. Later on you will be able to set up personal access rights to individual apps for each user."
+msgstr "<em>Повний доступ</em> — це можливість використовувати без обмежень усі функції усіх встановлених додатків. <em>Мінімальний доступ</em> — цей рівень доступу дозволяє лише передивлятись і редагувати власний профіль в додатку «Команда». Пізніше ви зможете гнучкіше налаштувати доступ для кожного співробітника до окремих додатків."
+
+msgid "Invalid email address"
+msgstr "Невірна email-адреса"
+
+msgid "Auto"
+msgstr "Авто"
+
+msgid "<span class=\"activity-action gray\">added</span> %s <span class=\"activity-action gray\">to group</span> %s"
+msgstr "<span class=\"activity-action gray\">додав</span> %s <span class=\"activity-action gray\">до групи</span> %s"
+
+msgid "<span class=\"activity-action gray\">removed</span> %s <span class=\"activity-action gray\">from group</span> %s"
+msgstr "<span class=\"activity-action gray\">видалив</span> %s <span class=\"activity-action gray\">з групи</span> %s"
+
+msgid "Can view teammates"
+msgstr "Може бачити учасників"
+
+msgid "Can edit self contact info"
+msgstr "Може редагувати власні дані"
+
+msgid "Can add users"
+msgstr "Може додавати користувачів"
+
+msgid "Can add groups"
+msgstr "Може додавати групи"
+
+msgid "View only"
+msgstr "Лише перегляд"
+
+msgid "Edit users data"
+msgstr "Може редагувати дані учасників"
+
+msgid "Can manage users in groups"
+msgstr "Може керувати учасниками груп"
+
+msgid "Can manage groups"
+msgstr "Може керувати групами"
+
+msgid "Can edit events in calendars"
+msgstr "Може редагувати події в календарях"
+
+msgid "Lastname Firstname Middlename"
+msgstr "Прізвище Ім’я По-батькові"
+
+msgid "Lastname Firstname"
+msgstr "Прізвище Ім’я"
+
+msgid "Firstname Lastname"
+msgstr "Ім’я Прізвище"
+
+msgid "Firstname Middlename Lastname"
+msgstr "Ім’я  По-батькові Прізвище"
+
+msgid "Group not found"
+msgstr "Групу не знайдено"
+
+msgid "Access denied"
+msgstr "Доступ заборонено"
+
+msgid "Password must not be empty."
+msgstr "Необхідно вказати пароль."
+
+msgid "%d contact has been deleted"
+msgid_plural "%d contacts have been deleted"
+msgstr[0] "видалений %d контакт"
+msgstr[1] "видалені %d контакти"
+msgstr[2] ""
+
+msgid "You cannot delete yourself."
+msgstr "Ви не можете видалити себе."
+
+msgid "Only Administrator can delete backend users."
+msgstr "Лише адміністратор може видаляти користувачів бекенду."
+
+msgid "You need full access to Team app to be able to delete contacts."
+msgstr "Для видалення контактів необхідний повний доступ до додатку «Команда»."
+
+msgid "Only Administrator can delete contacts that have links to other applications."
+msgstr "Лише Адміністратор може видаляти контакти, що мають зв’язки з іншими додатками."
+
+msgid "This login is already set for another user"
+msgstr "Вказаний логін вже використовується іншим користувачем"
+
+msgid "Already in our team!"
+msgstr "Вже в нашій команді!"
+
+msgid "This contact was banned"
+msgstr "Цей контакт заблоковано"
+
+msgid "Plugin settings page"
+msgstr "Сторінка налаштування плагіну"
+
+msgid "External calendar not found"
+msgstr "Зовнішній календар не знайдено"
+
+msgid "Calendar not found"
+msgstr "Календар не знайдено"
+
+msgid "Not enabled level of integration"
+msgstr "Обрано недопустимий рівень інтеграції"
+
+msgid "Authorize failed"
+msgstr "Авторизація не вдалася"
+
+msgid "External calendar plugin not found"
+msgstr "Не знайдено плагін для зовнішнього календаря"
+
+msgid "This does not look like a valid email"
+msgstr "Це несхоже на вірний email"
+
+msgid "All calendars"
+msgstr "Усі календарі"
+
+msgid "Timeline"
+msgstr "Хронологія"
+
+msgid "Contact info"
+msgstr "Контактна інформація"
+
+msgid "User access"
+msgstr "Доступ"
+
+msgid "Stats"
+msgstr "Статистика"
+
+msgid "Import only"
+msgstr "Лише імпорт"
+
+msgid "All entries available in an external calendar will be imported into your Webasyst account. No data will be exported from Webasyst to an external calendar."
+msgstr "Всі дані будуть повністю імпортовані із зовнішнього календаря до вашого Webasyst. З Webasyst до зовнішнього календаря жодні дані передаватись не будуть."
+
+msgid "Import + export of changes and deletions"
+msgstr "Імпорт + експорт змін і видалень"
+
+msgid "All entries available in an external calendar will be imported into your Webasyst account. From Webasyst to an external calendar will be exported only your changes and deletions; newly added entries will not be exported to an external calendar."
+msgstr "Всі дані будуть повністю імпортовані із зовнішнього календаря до вашого Webasyst. З Webasyst до зовнішнього календаря будуть експортуватись лише зміни і видалення; нові записи не будуть експортуватись до зовнішнього календаря."
+
+msgid "Full data synchronization"
+msgstr "Повний двосторонній обмін даними"
+
+msgid "All entries available in an external calendar will be imported into your Webasyst account. From Webasyst to an external calendar will be exported newly added entries as well as your changes and deletions."
+msgstr "Всі дані будуть повністю імпортовані із зовнішнього календаря до вашого Webasyst. З Webasyst до зовнішнього календаря будуть експортуватись нові записи, що знову додаються, зміни та видалення."
+
+msgid "No users will be deleted."
+msgstr "Користувачі не будуть видалені."
+
+msgid "To add a user to %s, either use <a class=\"js-edit-group inline-link\" href=\"%s\"><b><i>Manage group</i></b></a> mode, or drag a user to this group in the sidebar."
+msgstr "Щоб додати користувача до групи «%s», або використовуйте режим «<a class=\"js-edit-group inline-link\" href=\"%s\"><b><i>Змінити групу</i></b></a>», або ж перетягніть користувача на назву групи в боковій панелі."
+
+msgid "To add a user to %s, use <a class=\"inline-link\"><b><i><a class=\"js-edit-group\" href=\"%s\">Manage group</a></i></b></a> mode."
+msgstr "Щоб додати користувача до групи %s, використовуйте режим «<a class=\"inline-link\"><b><i><a class=\"js-edit-group\" href=\"%s\">Змінити групу</a></i></b></a>»."
+
+msgid "show %s weeks"
+msgstr "показати %s тижнів"
+
+msgid "You need to <a href=\"https://developers.google.com/maps/documentation/javascript/get-api-key\" target=\"_blank\">get a Key/Authentication</a> to use Google Maps JavaScript API"
+msgstr "Для використання JavaScript API карт Google необхідно <a href=\"https://developers.google.com/maps/documentation/javascript/get-api-key\" target=\"_blank\">отримати ключ авторизації</a>"
+
+msgid "Use <a class=\"js-edit-group inline-link\" href=\"%s\"><b><i>Plugins</i></b></a> section to install plugin you need."
+msgstr "Використовуйте розділ <a class=\"js-edit-group inline-link\" href=\"%s\"><b><i>Плагіни</i></b></a> для встановлення необхідних плагінів."
+
+msgid "All apps"
+msgstr "Усі додатки"
+
+msgid "Vacation"
+msgstr "Відпустка"
+
+msgid "Business"
+msgstr "Відрядження"
+
+msgid "Illness"
+msgstr "Лікарняний"
+
+msgid "Meeting"
+msgstr "Зустріч"
+
+msgid "Other"
+msgstr "Інше"
+
+msgid "on vacation"
+msgstr "у відпустці"
+
+msgid "in a business trip"
+msgstr "у відрядженні"
+
+msgid "sick"
+msgstr "хворію"
+
+msgid "at the meeting"
+msgstr "на зустрічі"
+
+msgid "%s's birthday — %s"
+msgstr "%s святкує день народження — %s"
+
+msgid "Access disabled by %1$s, %2$s"
+msgstr "Доступ відключив %1$s, %2$s"
+
+msgid "Remote"
+msgstr "Віддалено"
+
+msgid "Administrators"
+msgstr "Адміністратори"
+
+msgid "%s HQ"
+msgstr "%s штаб-квартира"
+
+msgid "This is a list of users who are no longer members of your team. You have disabled their access to your Webasyst backend."
+msgstr "Це перелік користувачів, що більше не працюють у вашій команді. Їм відключений доступ до бекенду вашого Webasyst."
+
+msgid "Access is switched off"
+msgstr "Доступ відключений"
+
+msgid "User invitation has been sent"
+msgstr "Надіслано запрошення увійти до команди"
+
+msgid "Open your user profile."
+msgstr "Перейдіть до свого користувацького профілю."
+
+msgid "Under the calendar, click <strong>“Personal calendar settings”</strong>."
+msgstr "Під календарем клікніть на посиланні <strong>«Персональні налаштування календаря»</strong>."
+
+msgid "Select <strong>“Add external calendar”</strong>."
+msgstr "Оберіть <strong>«Додати зовнішній календар»</strong>."
+
+msgid "Select <strong>“%s”</strong> and confirm your choice."
+msgstr "Оберіть <strong>«%s»</strong> і підтвердіть свій вибір."
+
+msgid "Complete settings fields using provided hints and save the changes."
+msgstr "Заповніть поля налаштувань, використовуючи підказки, і збережіть зміни."
+
+msgid "Connect your %s now"
+msgstr "Підключіть мій %s зараз"
+
+msgid "To connect an external calendar:"
+msgstr "Для підключення зовнішнього календаря:"
+
+msgid "deleted "
+msgstr "видалена "
+
+msgid " deleted"
+msgstr " видалений"
+
+msgid "deleted"
+msgstr "видалене"
+
+msgid "Check your key first of all <a href=\"{$wa_app_url}settings/\">here</a>"
+msgstr "Спочатку перевірте ваш ключ <a href=\"{$wa_app_url}settings/\">тут</a>"
+
+msgid "Error"
+msgstr "Помилка"
+
+msgid "Google map has error, maybe key is invalid"
+msgstr "Карти Google повернули помилку, можливо ключ невірний"
+
+msgid "Register application on %s"
+msgstr "Зареєструйте додаток на %s"
+
+msgid "Connect %s account:"
+msgstr "Під'єднайте акаунт %s:"
+
+msgid "Also delete all events imported from this calendar "
+msgstr "Також видалити всі події, імпортовані з цього календаря "
+
+msgid "name@company.com"
+msgstr "ім'я@компанія.укр"
+
+msgid "API tokens"
+msgstr "Токени API"
+
+msgid "Create data"
+msgstr "Створити дані"
+
+msgid "Client id"
+msgstr "ID клієнта"
+
+msgid "Scope"
+msgstr "Огляд"
+
+msgid "Expires"
+msgstr "Спливає"
+
+msgid "Remove token"
+msgstr "Видалити токен"
+
+msgid "Email change history"
+msgstr "Історія змін email"
+
+msgid "The user will not be able to send API requests using this token."
+msgstr "Маючи цей токен, користувач не зможе направляти запити до API."
+
+msgid "Unknown user"
+msgstr "Невідомий користувач"
+
+msgid "No API tokens"
+msgstr "Немає токенів API"
+
+msgid "Total:"
+msgstr "Усього:"
+
+msgid "Folders:"
+msgstr "Каталоги:"
+
+msgid "Files:"
+msgstr "Файли:"
+
+msgid "Page:"
+msgstr "Сторінка:"
+
+msgid "prev"
+msgstr "попер"
+
+msgid "next"
+msgstr "наст"
+
+msgid "- Uninstalled"
+msgstr "- Видалено"
+
+msgid "Uninstalled or not existed plugin"
+msgstr "Видалений або неіснуючий плагін"
+
+msgid "Plugin not found"
+msgstr "Плагін не знайдено"
+
+msgid "Август"
+msgstr "Серпень"
+
+msgid "Unknown action"
+msgstr "Невідома дія"
+
+msgid "Token not transferred"
+msgstr "Токен не передано"
+
+msgid "This login is already set for user %s"
+msgstr "Вказаний логін вже використовується користувачем %s"
+
+msgid "Add"
+msgstr "Додати"
+
+msgid "Create date"
+msgstr "Дата створення"
+
+msgid "Last use date"
+msgstr "Дата останнього використання"
+
+msgid "Email address changes history"
+msgstr "Історія змін email"
+
+msgid "%d contact"
+msgid_plural "%d contacts"
+msgstr[0] "%d контакт"
+msgstr[1] "%d контакти"
+msgstr[2] ""
+
+msgid "\"%s\""
+msgstr "\"%s\""
+
+msgid "Deleted contact"
+msgstr "Видалений контакт"
+
+msgid "has deleted"
+msgstr "видалив"
+
+msgid "has deleted contacts"
+msgstr "видалив контакти"
+
+msgid "has deleted contact"
+msgstr "видалив контакт"
+
+msgid "%s and %s more"
+msgstr "%s та ще %s"
+
+msgid "My office"
+msgstr "Мій офіс"
+
+msgid "The token was not transferred."
+msgstr "Токен не передано."
+
+msgid "This login name is already being used by user %s."
+msgstr "Цей логін вже зайнятий користувачем %s."
+
+msgid "Customer portal is a part of your site available for registered clients and containing their personal data. To access their customer portals, your clients must log in with an email address and a password."
+msgstr "Особистий кабінет — це частина вашого сайту, що доступна кожному зареєстрованому кліентові и містить персональні дані кліента. Для доступу до особистого кабінету клієнтам знадобиться авторизація за допомогою email-адреси і пароля."
+
+msgid "Manage <a href=\"%s\" class=\"no-underline\">personal portal settings</a> in Site app."
+msgstr "Керуйте <a href=\"%s\" class=\"no-underline\">налаштуваннями особистого кабінету</a> у додатку «Сайт»."
+
+msgid "Webasyst ID account <span class=\"bold\">%s</span> is connected."
+msgstr "Акаунт Webasyst ID <span class=\"bold\">%s</span> під'єднано."
+
+msgid "Cannot load Webasyst ID account data."
+msgstr "Не вдалося завантажити дані акаунта Webasyst ID."
+
+msgid "Specified password is too long."
+msgstr "Вказаний пароль занадто довгий."
+
+msgid "Google map error, probably key in settings is invalid."
+msgstr "Карти Google повернули помилку, можливо ключ невірний."
+
+msgid "What is it?"
+msgstr "Що це?"
+
+msgid "Sign in with %s"
+msgstr "Увійти через %s"
+
+msgid "You can sign in with a login name and a password or use a different Webasyst ID account."
+msgstr "Ви можете увійти за допомогою імені для входу та пароля або використовувати інший обліковий запис Webasyst ID."
+
+msgid "Failed to get Webasyst ID account data from the Webasyst resource server."
+msgstr "Не вдалося отримати дані про акаунт Webasyst ID з серверу Webasyst."
+
+msgid "Webasyst ID account %s is already connected to a backend user."
+msgstr "Акаунт Webasyst ID %s вже пов'язано із користувачем панелі управління."
+
+msgid "Mon"
+msgstr "Пн"
+
+msgid "Tue"
+msgstr "Вт"
+
+msgid "Wed"
+msgstr "Ср"
+
+msgid "Thu"
+msgstr "Чт"
+
+msgid "Fri"
+msgstr "Пт"
+
+msgid "Sat"
+msgstr "Сб"
+
+msgid "Sun"
+msgstr "Нд"
+
+msgid "What is Webasyst ID?"
+msgstr "Що таке Webasyst ID?"
+
+msgid "Go to the Webasyst Customer Center"
+msgstr "Перейти до Центру замовника Webasyst"
+
+msgid "Enable sign-in with %s"
+msgstr "Увімкнути вхід із %s"
+
+msgid "This is a required field."
+msgstr "Це поле є обов'язковим."
+
+msgid "At least one of these fields must be completed."
+msgstr "Хоча б одне з цих полів має бути заповненим."
+
+msgid "Sign-in with Webasyst ID"
+msgstr "Увійти із Webasyst ID"
+
+msgid "Disconnect"
+msgstr "Від'єднати"
+
+msgid "Connect your Webasyst ID account and sign into the backend securely with no extra passwords."
+msgstr "Підключіть свій обліковий запис Webasyst ID і безпечно увійдіть у панель управління без зайвих паролів."
+
+msgid "How does it work?"
+msgstr "Як це працює?"
+
+msgid "%sSign-in with Webasyst ID%s is connected."
+msgstr "%Вхід із Webasyst ID%s підключено."
+
+msgid "%sSign-in with Webasyst ID%s is not connected."
+msgstr "%Вхід із Webasyst ID%s не підключено."
+
+msgid "edited contact"
+msgstr "відредагував контакт"
+
+msgid "%s - Uninstalled"
+msgstr "%s - Видалено"
+
+msgid "A login name is required."
+msgstr "Логін є обов’язковим."
+
+msgid "Invalid login name."
+msgstr "Невірний логін."
+
+msgid "Today"
+msgstr "Сьогодні"
+
+msgid "Tomorrow"
+msgstr "Завтра"
+
+msgid "Yesterday"
+msgstr "Учора"
+
+msgid "Authorization with Webasyst ID has failed, try to log in with a login name and a password."
+msgstr "Авторизація за допомогою Webasyst ID не вдалася, спробуйте увійти за допомогою імені для входу та пароля."
+
+msgid "Optional comment about the reason for blocking"
+msgstr "Необов'язковий коментар про причину блокування"
+
+msgid "Block"
+msgstr "Блокувати"
+
+msgid "Reason for blocking:"
+msgstr "Причина блокування:"
+
+msgid "Enter an email address to send the new user an invitation with sign-in instructions."
+msgstr "Введіть адресу електронної пошти, аби надіслати новому користувачеві запрошення з інструкціями щодо входу."
+
+msgid "No API tokens."
+msgstr "Немає токенів API."
+
+msgid "User invitation was sent."
+msgstr "Користувачеві надіслано запрошення."
+
+msgid "Show navigation"
+msgstr "Показати навігацію"
+
+msgid "Invite"
+msgstr "Запросити"
+
+msgid "Add group"
+msgstr "Додати групу"
+
+msgid "Add location"
+msgstr "Додати локацію"
+
+msgid "Expires in"
+msgstr "Закінчується через"
+
+msgid "Send again"
+msgstr "Надіслати знову"
+
+msgid "Link to invitation"
+msgstr "Запрошення надіслано"
+
+msgid "Sending"
+msgstr "Надсилаємо"
+
+msgid "Sent"
+msgstr "Надіслано"
+
+msgid "Copied"
+msgstr "Скопійовано"
+
+msgid "Cancel"
+msgstr "Скасувати"
+
+msgid "By email"
+msgstr "За email"
+
+msgid "By link"
+msgstr "За посиланням"
+
+msgid "Enter login name & password"
+msgstr "Введіть логін та пароль"
+
+msgid "Enter a login name and a password for this user without sending an invitation."
+msgstr "Введіть логін і пароль для цього користувача без надсилання запрошення."
+
+msgid "First name"
+msgstr "Ім'я"
+
+msgid "Last name"
+msgstr "Прізвище"
+
+msgid "If neither first name nor last name are specified then the invitation date will be used as a temporary name."
+msgstr "Якщо не вказано ні ім’я, ні прізвище, дата запрошення буде використовуватися у якості тимчасового імені."
+
+msgid "The user will access"
+msgstr "Користувач матиме доступ"
+
+msgid "Create link"
+msgstr "Створити посилання"
+
+msgid "Copy"
+msgstr "Копіювати"
+
+msgid "Done"
+msgstr "Виконано"
+
+msgid "Creating an<span class=\"desktop-and-tablet-only\"> invitation</span>"
+msgstr "Створення<span class=\"desktop-and-tablet-only\"> запрошення</span>"
+
+msgid "Alphabetically"
+msgstr "За алфавітом"
+
+msgid "By signup date"
+msgstr "За датою реєстрації"
+
+msgid "never"
+msgstr "ніколи"
+
+msgid "Add teammates manually later"
+msgstr "Додати колег вручну пізніше"
+
+msgid "Color"
+msgstr "Колір"
+
+msgid "Custom color"
+msgstr "Власний колір"
+
+msgid "Custom icon"
+msgstr "Власна іконка"
+
+msgid "Customize group access rights using the <a class=\"js-edit-group inline-link\" href=\"%s\">Manage group</a> mode."
+msgstr "Налаштувати права групи за допомогою режима <a class=\"js-edit-group inline-link\" href=\"%s\">Керування групою</a>."
+
+msgid "Access inherited from user groups"
+msgstr "Доступ успадковано від груп користувачів"
+
+msgid "Access granted for the user individually"
+msgstr "Доступ надається користувачу індивідуально"
+
+msgid "Status will be displayed next to the user name in various apps."
+msgstr "Статус буде показано поруч з іменем користувача у деяких додатках."
+
+msgid "Events are visible in calendars only."
+msgstr "Події відображаються лише в календарях."
+
+msgid "Contacts"
+msgstr "Контакти"
+
+msgid "email"
+msgstr "email"
+
+msgid "no data"
+msgstr "немає даних"
+
+msgid "phone"
+msgstr "телефон"
+
+msgid "карта недоступна"
+msgstr "мапа недоступна"
+
+msgid "укажите API-ключ в <a href=\"%s\" class=\"link\">настройках</a>."
+msgstr "вкажіть API-ключ у <a href=\"%s\" class=\"link\">налаштуваннях</a>."
+
+msgid "More details"
+msgstr "Докладніше"
+
+msgid "CRM"
+msgstr "CRM"
+
+msgid "Required parameter is missing."
+msgstr "Відсутній необхідний параметр."
+
+msgid "Webasyst ID is connected"
+msgstr "Вхід із Webasyst ID підключено"
+
+msgid "Last sign-in"
+msgstr "Останній вхід"
+
+msgid "Connect Webasyst ID"
+msgstr "Під'єднати Webasyst ID"
+
+msgid "Sign into your Webasyst backend with 2-factor authentication (2FA) and get convenient access to all Webasyst services and mobile apps."
+msgstr "Увійдіть у свій Webasyst за допомогою 2-факторної автентифікації (2FA) та отримайте зручний доступ до всіх служб і мобільних додатків Webasyst."
+
+msgid "Webasyst ID is not connected"
+msgstr "Вхід із Webasyst ID не підключено"
+
+msgid "User %s has not connected Webasyst ID yet. Secure sign-in option with 2-factor authentication (2FA) for your Webasyst backend and access to all Webasyst services and mobile apps will become available only when Webasyst ID is connected."
+msgstr "Користувач %s ще не підключив Webasyst ID. Увійдіть у свій Webasyst за допомогою 2-факторної автентифікації (2FA) та отримайте зручний доступ до всіх служб і мобільних додатків Webasyst."
+
+msgid "Email instructions"
+msgstr "Надіслати інструкції електронною поштою"
+
+msgid "Email again"
+msgstr "Надіслати знову"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "%sEnable sign-in with Webasyst ID%s so that your teammates can use all Webasyst services and mobile apps and can enable secure sign-in with 2-factor authentication (2FA)."
+msgstr "%sУвімкніть вхід за допомогою Webasyst ID%s, аби усі ваші колеги могли отримати зручний доступ до всіх служб і мобільних додатків Webasyst та користуватись 2-факторною автентифікацією (2FA)."
+
+msgid "Upload or drag & drop a photo"
+msgstr "Завантажте або перетягніть зображення сюди"
+
+msgid "Actions"
+msgstr "Дії"
+
+msgid "Select all"
+msgstr "Обрати усе"
+
+msgid "Unselect"
+msgstr "Відмінити вибір"
+
+msgid "Choose file"
+msgstr "Оберіть файл"
+
+msgid "The cover can show 8 photos at most. To change the order of photos drag them in the list."
+msgstr "Обкладинка може відображувати максимум 8 фото. Аби змінити порядок зображень, перетягніть їх."
+
+msgid "Not an image or invalid image:"
+msgstr "Це не зображення, або некоректне зображення:"
+
+msgid "Nothing selected"
+msgstr "Нічого не вибрано"
+
+msgid "Remove selected"
+msgstr "Відалити обрані"
+
+msgid "Change password"
+msgstr "Змінити пароль"
+
+msgid "Change login name"
+msgstr "Змінити логін"
+
+msgid "Customize groups"
+msgstr "Налаштувати групи"
+
+msgid "Status & event calendars"
+msgstr "Календарі статусів та подій"
+
+msgid "Map in user profiles"
+msgstr "Карта у профілях користувачів"
+
+msgid "Online map settings"
+msgstr "Налаштування сервісу онлайн-карт"
+
+msgid "Can be used to display online maps on user and office-viewing pages."
+msgstr "Можна використовувати для відображення онлайн-карт у профілях користувачів та на сторінках локацій."
+
+msgid "Office location. E.g., 100 5th Avenue, New York."
+msgstr "Локація офісу. Наприклад: вулиця Хрещатик, 22, Київ, Україна."
+
+msgid "Change"
+msgstr "Змінити"
+
+msgid "Set up members"
+msgstr "Налаштувати учасників"
+
+msgid "You can also drag a user to this group in the sidebar."
+msgstr "Ви також можете перетягнути користувача для цієї групи у боковій колонці."
+
+msgid "Чтобы показать карту укажите API-ключ в <a href=\"%s\" class=\"link\">настройках</a>."
+msgstr "Аби показати карту, вкажіть API-ключ у <a href=\"%s\" class=\"link\">налаштуваннях</a>."
+
+msgid "To add a user to <span class=\"bold\">%s</span> use <a href=\"%s\">Manage group</a> mode."
+msgstr "Додати користувача до режиму <span class=\"bold\">%s</span> use <a href=\"%s\">Керування групою</a>."
+
+msgid "To add a user to %s, use <a href=\"%s\">Manage group</a> mode."
+msgstr "Аби додати користувача до %s, використовуйте режим <a href=\"%s\">Керування групою</a>."
+
+msgid "This contact was banned."
+msgstr "Цей контакт заблоковано."
+
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d хвилина"
+msgstr[1] "%d хвилини"
+msgstr[2] "%d хвилин"
+
+msgid "Name is required"
+msgstr "Ім'я є обов'язковим"
+
+msgid "Not added"
+msgstr "Не додано"
+
+msgid "Not allowed MIME type. Supported types are gif, jpg (jpeg), png."
+msgstr "Цей MIME-тип використовувати не дозволено. Підтримувані формати: gif, jpg (jpeg), png."
+
+msgid "Invitation token cannot be created."
+msgstr "Неможливо створити токен запрошення."

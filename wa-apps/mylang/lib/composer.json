@@ -1,0 +1,11 @@
+{
+  "config": {
+    "vendor-dir": "vendors",
+    "platform-check": false
+  },
+  "require": {
+    "gettext/gettext": "^5",
+    "jmathai/php-multi-curl": "dev-master",
+    "fire015/flintstone": "^2.1"
+  }
+}

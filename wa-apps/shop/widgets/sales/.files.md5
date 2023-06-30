@@ -1,0 +1,15 @@
+b8545b4f8172ecc02fea0c280987e651 *css/salesWidget.css
+f70d246bc8e916785fc30b4b0bd8751f *img/sales.png
+1d6c5c29185c1a37044160649f48a680 *js/salesWidget.js
+a285da79a1cf95556e4eb1fd40059097 *lib/.htaccess
+e17c7bff29c4a2a101dec335fa05b209 *lib/config/build.php
+5dca6e3181a24690cdad7375687c9597 *lib/config/settings.php
+8991e22f13f0577af43530f081d4931a *lib/config/widget.php
+2cfcd0819d0e55374caa035566c3242c *lib/shopSales.widget.php
+a1751e1f10a3b96b05d0401c97e72008 *locale/.htaccess
+4a56cacf69655271acaae7b3eeb16fae *locale/en_US/LC_MESSAGES/shop_widget_sales.mo
+0b0f575329af63d54fc7d54a5544efc6 *locale/en_US/LC_MESSAGES/shop_widget_sales.po
+a71397a98223d6c5676cce89ae028cac *locale/ru_RU/LC_MESSAGES/shop_widget_sales.mo
+6409ef9de26b0d1d3b037177cf012513 *locale/ru_RU/LC_MESSAGES/shop_widget_sales.po
+a285da79a1cf95556e4eb1fd40059097 *templates/.htaccess
+f5a0b9fe68a3c1551748b30c315845de *templates/Default.html

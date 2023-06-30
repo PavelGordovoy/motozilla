@@ -1,0 +1,72 @@
+{$_locale_string = substr($wa->locale()|default:"en", 0, 2)}
+{$_is_ru = false}
+{if $_locale_string === "ru"||$_locale_string === 'uk'}{$_is_ru = true}{/if}
+{include file="templates/actions/tutorial/include.TutorialSidebar.html" inline}
+<div class="block double-padded welcome">
+    <form method="post" action="?action=welcome" id="js-welcome-form">
+        <div class="s-welcome-page">
+            <h1>[`Selector`]</h1>
+            <div class="form fields" style="float: none;">
+                <div class="s-content-with-indent">
+                    <p>
+                        {if $_is_ru}
+                            В селекторе необходимо создать перенаправления для каждой используемой локали.
+                            <br>
+                            Кроме ссылки на целевую локаль, необходимо добавить и ссылку на основную локаль для возврата.
+                        {else}
+                            You need to add redirect for each locale you use.
+                            <br>
+                            Except target locale rules you need to add main locale redirect.
+                        {/if}
+                    </p>
+                    <div class="s-tutorial-block">
+                        {if $checked.sites}
+                            <b>[`Example`]</b>
+                            <br>
+                            <table class="zebra">
+                                <thead>
+                                <th>[`Locale`]</th>
+                                <th>[`Domain`]</th>
+                                <th>[`Url`]</th>
+                                </thead>
+                                <tbody>
+                                {foreach $checked.sites as $site}
+                                    {foreach $checked.locales as $loc}
+                                        {if $loc !== $checked.mainLocale}
+                                            <tr>
+                                                <td class="s-app">{$locales[$loc]}</td>
+                                                <td class="s-url">
+                                                    <span class="s-domain-url">{$site}</span>
+                                                </td>
+                                                <td class="s-app align-left">/{$loc|substr:0:2}/</td>
+                                            </tr>
+                                        {/if}
+                                    {/foreach}
+                                    <tr>
+                                        <td class="s-app">{$locales[$checked.mainLocale]}</td>
+                                        <td class="s-url">
+                                            <span class="s-domain-url">{$site}</span>
+                                        </td>
+                                        <td class="s-app align-left">/</td>
+                                    </tr>
+                                {/foreach}
+                                </tbody>
+                            </table>
+                        {/if}
+                    </div>
+                    <div class="s-tutorial-block">
+                        <p>
+                            {if $_is_ru}
+                                Для каждого сайта будут использоваться свои правила. <br>
+                                Помимо обязательных правил рекомендуется в структуре создать дополнительные, для других приложений - например отдельный Блог.
+                            {else}
+                                For each domain a separate set of rules.<br>
+                                Recommendation. Add several apps e.g. Blog for other locales to make the site better.
+                            {/if}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

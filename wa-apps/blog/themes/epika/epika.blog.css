@@ -1,0 +1,195 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\000031}}
+.blog, .site, .photo {
+  display: flex; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\000034}}
+  .blog .sidebar, .site .sidebar, .photo .sidebar {
+    margin: 15px 0;
+    padding: 15px 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\000038}}
+    .blog .sidebar .title, .site .sidebar .title, .photo .sidebar .title {
+      font-size: 18px;
+      margin-top: 0;
+      text-transform: uppercase; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\0000314}}
+    .blog .sidebar ul.categories, .blog .sidebar ul.timeline, .site .sidebar ul.categories, .site .sidebar ul.timeline, .photo .sidebar ul.categories, .photo .sidebar ul.timeline {
+      margin-left: 8px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\0000318}}
+      .blog .sidebar ul.categories .selected a, .blog .sidebar ul.timeline .selected a, .site .sidebar ul.categories .selected a, .site .sidebar ul.timeline .selected a, .photo .sidebar ul.categories .selected a, .photo .sidebar ul.timeline .selected a {
+        color: #e03829; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\0000325}}
+    .blog .sidebar ul.timeline ul.tree, .site .sidebar ul.timeline ul.tree, .photo .sidebar ul.timeline ul.tree {
+      margin-left: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\0000330}}
+    .blog .sidebar a, .site .sidebar a, .photo .sidebar a {
+      color: #212121;
+      transition: all 0.3s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\0000334}}
+      .blog .sidebar a:hover, .site .sidebar a:hover, .photo .sidebar a:hover {
+        color: #e03829; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\0000340}}
+    .blog .sidebar .sidebar-posts li:last-child, .site .sidebar .sidebar-posts li:last-child, .photo .sidebar .sidebar-posts li:last-child {
+      margin-bottom: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\0000343}}
+    .blog .sidebar .sidebar-posts li, .site .sidebar .sidebar-posts li, .photo .sidebar .sidebar-posts li {
+      margin-bottom: 8px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\0000346}}
+      .blog .sidebar .sidebar-posts li a, .site .sidebar .sidebar-posts li a, .photo .sidebar .sidebar-posts li a {
+        display: block;
+        font-size: 14px;
+        line-height: 16px;
+        color: #F44336; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\0000355}}
+    .blog .sidebar .search-wrapper, .site .sidebar .search-wrapper, .photo .sidebar .search-wrapper {
+      display: flex; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\0000358}}
+      .blog .sidebar .search-wrapper input, .site .sidebar .search-wrapper input, .photo .sidebar .search-wrapper input {
+        border: 1px solid #cacaca;
+        height: 24px;
+        width: 100%;
+        padding-left: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\0000365}}
+      .blog .sidebar .search-wrapper button, .site .sidebar .search-wrapper button, .photo .sidebar .search-wrapper button {
+        border: none;
+        height: 24px;
+        color: white;
+        background-color: #e03829; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\0000374}}
+  .blog .content, .site .content, .photo .content {
+    background: #FFFFFF;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\0000380}}
+    .blog .content h1, .blog .content h2, .blog .content h3, .site .content h1, .site .content h2, .site .content h3, .photo .content h1, .photo .content h2, .photo .content h3 {
+      margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\0000384}}
+    .blog .content section.post, .blog .content article.post, .site .content section.post, .site .content article.post, .photo .content section.post, .photo .content article.post {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\0000389}}
+      .blog .content section.post h1, .blog .content section.post h2, .blog .content section.post h3, .blog .content article.post h1, .blog .content article.post h2, .blog .content article.post h3, .site .content section.post h1, .site .content section.post h2, .site .content section.post h3, .site .content article.post h1, .site .content article.post h2, .site .content article.post h3, .photo .content section.post h1, .photo .content section.post h2, .photo .content section.post h3, .photo .content article.post h1, .photo .content article.post h2, .photo .content article.post h3 {
+        margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\0000392}}
+        .blog .content section.post h1 a, .blog .content section.post h2 a, .blog .content section.post h3 a, .blog .content article.post h1 a, .blog .content article.post h2 a, .blog .content article.post h3 a, .site .content section.post h1 a, .site .content section.post h2 a, .site .content section.post h3 a, .site .content article.post h1 a, .site .content article.post h2 a, .site .content article.post h3 a, .photo .content section.post h1 a, .photo .content section.post h2 a, .photo .content section.post h3 a, .photo .content article.post h1 a, .photo .content article.post h2 a, .photo .content article.post h3 a {
+          color: #e03829; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\0000397}}
+      .blog .content section.post h2, .blog .content article.post h2, .site .content section.post h2, .site .content article.post h2, .photo .content section.post h2, .photo .content article.post h2 {
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003102}}
+        .blog .content section.post h2 a, .blog .content article.post h2 a, .site .content section.post h2 a, .site .content article.post h2 a, .photo .content section.post h2 a, .photo .content article.post h2 a {
+          color: #e03829; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003108}}
+    .blog .content .credentials, .site .content .credentials, .photo .content .credentials {
+      margin-bottom: 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003111}}
+      .blog .content .credentials img, .site .content .credentials img, .photo .content .credentials img {
+        border-radius: 50px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003117}}
+    .blog .content .text img, .site .content .text img, .photo .content .text img {
+      max-width: 100%;
+      border-radius: 3px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003124}}
+    .blog .content .text_after .tags, .site .content .text_after .tags, .photo .content .text_after .tags {
+      font-weight: 600; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003126}}
+      .blog .content .text_after .tags a, .site .content .text_after .tags a, .photo .content .text_after .tags a {
+        font-weight: normal; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003132}}
+    .blog .content figure.photo, .site .content figure.photo, .photo .content figure.photo {
+      position: relative;
+      margin-bottom: 15px;
+      display: inline-block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003136}}
+      .blog .content figure.photo img, .site .content figure.photo img, .photo .content figure.photo img {
+        max-width: 100%;
+        border-radius: 3px;
+        display: inline-block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003141}}
+      .blog .content figure.photo .p-description, .site .content figure.photo .p-description, .photo .content figure.photo .p-description {
+        position: absolute;
+        bottom: 0;
+        font-size: 12px;
+        color: #FFFFFF;
+        background-color: rgba(0, 0, 0, 0.76);
+        padding: 5px 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003152}}
+    .blog .content .tags, .site .content .tags, .photo .content .tags {
+      margin-top: 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003156}}
+    .blog .content .photo-album-attachment, .site .content .photo-album-attachment, .photo .content .photo-album-attachment {
+      margin-top: 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003158}}
+      .blog .content .photo-album-attachment .thumbs, .site .content .photo-album-attachment .thumbs, .photo .content .photo-album-attachment .thumbs {
+        display: flex; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003162}}
+        .blog .content .photo-album-attachment .thumbs li:last-child a, .site .content .photo-album-attachment .thumbs li:last-child a, .photo .content .photo-album-attachment .thumbs li:last-child a {
+          margin-right: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003168}}
+        .blog .content .photo-album-attachment .thumbs li a, .site .content .photo-album-attachment .thumbs li a, .photo .content .photo-album-attachment .thumbs li a {
+          display: block;
+          margin-right: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003172}}
+          .blog .content .photo-album-attachment .thumbs li a img, .site .content .photo-album-attachment .thumbs li a img, .photo .content .photo-album-attachment .thumbs li a img {
+            border-radius: 3px; }
+
+@media only screen and (min-width: 320px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003184}}
+  .blog, .site, .photo {
+    flex-flow: row wrap; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003186}}
+    .blog aside, .site aside, .photo aside {
+      width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003190}}
+    .blog .content, .site .content, .photo .content {
+      width: 100%; } }
+@media only screen and (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003197}}
+  .blog, .site, .photo {
+    flex-flow: row nowrap; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003199}}
+    .blog aside, .site aside, .photo aside {
+      width: 23%;
+      min-width: 230px;
+      margin-right: 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003205}}
+    .blog .content, .site .content, .photo .content {
+      width: 67%;
+      margin-top: 15px; } }
+@media only screen and (min-width: 1024px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003215}}
+  .blog, .site, .photo {
+    flex-flow: row nowrap; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003217}}
+    .blog aside, .site aside, .photo aside {
+      width: 25%;
+      margin-right: 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003222}}
+    .blog .content, .site .content, .photo .content {
+      width: 75%;
+      margin-top: 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003227}}
+    .blog .p-album, .site .p-album, .photo .p-album {
+      display: flex;
+      flex-flow: wrap;
+      justify-content: space-between; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003232}}
+      .blog .p-album figure.photo, .site .p-album figure.photo, .photo .p-album figure.photo {
+        width: 48%; } }
+@media only screen and (min-width: 1440px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003240}}
+  .blog, .site, .photo {
+    flex-flow: row nowrap; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003242}}
+    .blog aside, .site aside, .photo aside {
+      width: 16%;
+      min-width: 240px;
+      margin-right: 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/xamp\/htdocs\/ep\/wa-data\/public\/blog\/themes\/epika\/epika\.blog\.scss}line{font-family:\00003248}}
+    .blog .content, .site .content, .photo .content {
+      width: 81.9%;
+      margin-top: 15px; } }
+
+/*# sourceMappingURL=epika.blog.css.map */

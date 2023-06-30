@@ -1,0 +1,153 @@
+{strip}
+<!-- plugin hook: 'frontend_header' -->
+{* @event frontend_header.%plugin_id% *}
+{foreach $frontend_header as $_}{$_}{/foreach}
+
+{$addClass = ''}
+{if $action == 'brands'}
+    {$addClass = ' brand-list'}
+{/if}
+{if $action == 'brandPage' && !$wa->globals('isSearchTemplate')}
+    {$addClass = ' brand-page'}
+{/if}
+{if $action == 'onestep' && $theme_settings.onestep_custom_css}
+    {$addClass = ' custom-onestep'}
+{/if}
+{if $action == 'checkoutone' && $theme_settings.cartonestep_custom_css}
+    {$addClass = ' custom-cartonestep'}
+{/if}
+
+
+{$cols = 1}
+{$sidebar_left = false}
+{$sidebar_right = false}
+{$is_mobile = ($wa->isMobile() && ($wa->cookie("is_desktop_for_mobile") != 1 || !$theme_settings.switch_version))}
+{$lastBreadcrumbs = ''}
+
+{$isBrandList = false}
+{$isBrandProductList = false}
+{$isBrandStaticPage = false}
+{$isPluginProductbrands = false}
+{$isPluginBrandsPro = false}
+{if $action == 'brand' || $action == 'brandPage' || $action == 'brands'}
+    {$isPluginProductbrands = ($theme_settings.use_brand_plugin == 'productbrands' && class_exists('shopProductbrandsPlugin'))}
+    {$isPluginBrandsPro = ($theme_settings.use_brand_plugin == 'brands_pro' && class_exists('shopBrandViewHelper'))}
+    {if $isPluginProductbrands || $isPluginBrandsPro}
+        {$isBrandProductList = (($action == 'brand') || ($action == 'brandPage' && $wa->globals('isSearchTemplate')))}
+        {$isBrandStaticPage = ($action == 'brandPage' && !$wa->globals('isSearchTemplate'))}
+        {$isBrandList = ($action == 'brands')}
+        {if $action == 'brands'}{$lastBreadcrumbs = ['name' => '[`Brands`]', 'url' => $wa->getUrl('shop/frontend/brands')]}{/if}
+        {if $action == 'brandPage' && $isPluginBrandsPro}
+            {if !isset($breadcrumbs)}{$breadcrumbs = []}{/if}
+            {$brandsUrl = $wa->getUrl('shop/frontend/brands')}
+            {$breadcrumbs[] = ['name' => '[`Brands`]', 'url' => $brandsUrl]}
+            {if isset($brand)}
+                {if $isBrandProductList}
+                    {$currentPageName = $brand.name|escape}
+                {else}
+                    {$breadcrumbs[] = ['name' => $brand.name|escape, 'url' => "`$brandsUrl``$brand.url`"]}
+                {/if}
+            {/if}
+        {else if $action == 'brand' && $isPluginProductbrands}
+            {if !isset($breadcrumbs)}{$breadcrumbs = []}{/if}
+            {$breadcrumbs[] = ['name' => '[`Brands`]', 'url' => $wa->getUrl('shop/frontend/brands')]}
+            {if isset($brand)}{$currentPageName = $brand.name|escape}{/if}
+        {/if}
+    {/if}
+{/if}
+{if $action == 'myAffiliate'}{$lastBreadcrumbs = "[`Affiliate program`]"}{/if}
+{if $action == 'myOrders'}{$lastBreadcrumbs = "[`My orders`]"}{/if}
+{if $action == 'myOrder' && isset($order.id_str)}{$lastBreadcrumbs = "[`Order`] {$order.id_str}"}{/if}
+{if $action == 'myProfile'}{$lastBreadcrumbs = "[s`My profile`]"}{/if}
+
+<div id="page-content"{if $addClass} class="{$addClass}"{/if}>
+    {$excluded_list_actions = ['category', 'product', 'compare', 'cart', 'checkout', 'productReviews', 'brand', 'brands', 'brandPage', 'order', 'page', 'checkoutone']}
+    {if ($wa->currentUrl(false, true) != $wa_app_url && $wa->currentUrl(false, true) != "/") && !in_array($action, $excluded_list_actions) && !$wa->globals('isSearchTemplate') && !$wa->globals('isPageTemplate')}
+        {if !$is_mobile}
+            {if $wa->globals('isMyAccount')}
+                {$sidebar_left = $theme_settings.profile_sidebar_left}
+                {$sidebar_right = $theme_settings.profile_sidebar_right}
+            {else}
+                {$sidebar_left = $theme_settings.catalog_sidebar_left}
+                {$sidebar_right = $theme_settings.catalog_sidebar_right}
+            {/if}
+            {if $sidebar_left}{$cols = $cols + 1}{/if}
+            {if $sidebar_right}{$cols = $cols + 1}{/if}
+        {/if}
+
+        {$content_cols_class_align = ""}
+        {if $sidebar_left}{$content_cols_class_align = " flex-align-r"}{/if}
+        {if $sidebar_right}{$content_cols_class_align = " flex-align-l"}{/if}
+        {if $sidebar_right && $sidebar_left}{$content_cols_class_align = " flex-align-c"}{/if}
+
+        <div data-count="{$cols}" class="js-content-cols content-cols cols-{$cols}{$content_cols_class_align}">
+            <div class="content{if $sidebar_left} with-sidebar-l{/if}{if $sidebar_right} with-sidebar-r{/if}">
+                {include file="`$wa_parent_theme_path`/breadcrumbs.html" last=$lastBreadcrumbs}
+                {$content}
+            </div>
+            {if $wa->globals('isMyAccount')}
+                {if $sidebar_left}{include file="`$wa_parent_theme_path`/sidebar.left.html" blocks=$sidebar_left inline}{/if}
+                {if $sidebar_right}{include file="`$wa_parent_theme_path`/sidebar.right.html" blocks=$sidebar_right inline}{/if}
+            {else}
+                {if $sidebar_left}{include file="./sidebar.left.html" blocks=$sidebar_left inline}{/if}
+                {if $sidebar_right}{include file="./sidebar.right.html" blocks=$sidebar_right inline}{/if}
+            {/if}
+        </div>
+    {else if $wa->globals('isSearchTemplate') || $isPluginProductbrands || $isPluginBrandsPro}
+        {$h1 = $wa->globals('isSearchTemplatetTitle')}
+        {if $isPluginBrandsPro}{$h1 = $h1|escape}{/if}
+        {if $isBrandList}{$h1 = '[`Brands`]'}{/if}
+        {if $isBrandStaticPage && isset($page.name)}{$h1 = $page.name|escape}{/if}
+        {if !$is_mobile}
+            {if $action == "brand" || $action == "brands" || $action == "brandPage"}
+                {$sidebar_left = $theme_settings.brand_sidebar_left}
+                {$sidebar_right = $theme_settings.brand_sidebar_right}
+            {else}
+                {$sidebar_left = $theme_settings.search_sidebar_left}
+                {$sidebar_right = $theme_settings.search_sidebar_right}
+            {/if}
+            {if $sidebar_left}{$cols = $cols + 1}{/if}
+            {if $sidebar_right}{$cols = $cols + 1}{/if}
+        {/if}
+        {$is_main_menu_button_head = false}
+        {if !$wa->isMobile()}
+            {if $action == "brand" || $action == "brands" || $action == "brandPage"}
+                {$is_main_menu_button_head = $theme_settings.brand_main_menu_button_head}
+            {else}
+                {$is_main_menu_button_head = $theme_settings.search_main_menu_button_head}
+            {/if}
+        {/if}
+
+        {$content_cols_class_align = ""}
+        {if $sidebar_left}{$content_cols_class_align = " flex-align-r"}{/if}
+        {if $sidebar_right}{$content_cols_class_align = " flex-align-l"}{/if}
+        {if $sidebar_right && $sidebar_left}{$content_cols_class_align = " flex-align-c"}{/if}
+
+        <div data-count="{$cols}" class="js-content-cols content-cols cols-{$cols}{$content_cols_class_align}">
+            <div class="content{if $sidebar_left} with-sidebar-l{/if}{if $sidebar_right} with-sidebar-r{/if}">
+                {if $is_main_menu_button_head && !$sidebar_left}
+                    <div class="content-head">
+                        {* main menu *}
+                        {include file="`$wa_parent_theme_path`/vertical.main.menu.html" is_close=true}
+                        <div class="content-head__title">
+                            {* breadcrumbs *}
+                            {include file="`$wa_parent_theme_path`/breadcrumbs.html" last=['name' => $h1, 'url' => $wa->currentUrl(false, true)]}
+                            {if $h1}<h1>{$h1}</h1>{/if}
+                        </div>
+                    </div>
+                {else}
+                    {* breadcrumbs *}
+                    {include file="`$wa_parent_theme_path`/breadcrumbs.html" last=['name' => $h1, 'url' => $wa->currentUrl(false, true)]}
+                    {if $h1}<h1>{$h1}</h1>{/if}
+                {/if}
+                {$content}
+            </div>
+            {* sidebars *}
+            {if $sidebar_left}{include file="./sidebar.left.html" blocks=$sidebar_left inline}{/if}
+            {if $sidebar_right}{include file="./sidebar.right.html" blocks=$sidebar_right inline}{/if}
+        </div>
+    {else}
+        {$content}
+    {/if}
+</div>
+{/strip}

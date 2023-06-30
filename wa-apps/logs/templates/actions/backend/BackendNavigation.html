@@ -1,0 +1,202 @@
+{if $is_item_list}
+    <div class="list-update-action">
+        <i class="fas fa-redo-alt" title="[`Reload list`]"></i>
+    </div>
+{/if}
+
+<span class="wide">
+    {if !empty($breadcrumbs)}
+        {strip}
+            {if !empty($back)}
+                <a href="{$back_url}" class="back-link" title="[`back`]"><i class="fas fa-arrow-left"></i></a>
+            {/if}
+
+            <div class="breadcrumbs{if in_array($wa->get('action'), ['file', 'action'])} item{/if}">
+                {foreach $breadcrumbs as $item}
+                    <span class="breadcrumb breadcrumb">
+                        {if !$item@last}
+                            <a href="{if $item@first}{$wa_app_url}{else}?{$item.url}{/if}">{$item.name}</a>
+                        {else}
+                            {$item.name}
+                        {/if}
+                    </span>
+
+                    {if !$item@last}
+                        <span class="breadcrumbs-separator">/</span>
+                    {/if}
+                {/foreach}
+            </div>
+        {/strip}
+    {else}
+        {if $is_item_list}
+            {if !empty($view_modes)}
+                <div class="dropdown" id="view-modes-dropdown">
+                    {foreach $view_modes as $view_mode}
+                        {if $view_mode.selected}
+                            <button class="dropdown-toggle button" type="button">{$view_mode.title}</button>
+                        {/if}
+                    {/foreach}
+
+                    <div class="dropdown-body">
+                        <ul class="menu">
+                            {foreach $view_modes as $view_mode}
+                                {if $view_mode.selected}
+                                    <li class="selected">
+                                        <a><i class="{$view_mode.icon}"></i> <span>{$view_mode.title}</span></a>
+                                    </li>
+                                {else}
+                                    <li>
+                                        <a href="{$wa_app_url}{$view_mode.url}"><i class="{$view_mode.icon}"></i> <span>{$view_mode.title}</span></a>
+                                    </li>
+                                {/if}
+                            {/foreach}
+                        </ul>
+                    </div>
+                </div>
+            {/if}
+        {/if}
+    {/if}
+</span>
+
+<ul class="action-menu">
+    {$common_actions_found = false}
+    {$marker_actions_found = false}
+
+    {foreach $item_actions as $action_id => $action}
+        {$container_class = null}
+
+        {$add_common_actions_class = !$common_actions_found && !empty($action.common)}
+        {if $add_common_actions_class}
+            {$common_actions_found = true}
+        {/if}
+
+        {$add_marker_actions_class = !$marker_actions_found && !empty($action.marker)}
+        {if $add_marker_actions_class}
+            {$marker_actions_found = true}
+        {/if}
+
+        {if $add_common_actions_class || $add_marker_actions_class}{$container_class = 'action-group-container'}{/if}
+
+        <li{if $container_class} class="{$container_class}"{/if}>
+            {if isset($action.url)}<a href="{$action.url}">{/if}
+
+            {$data = ''}
+            {if isset($action.data)}
+                {foreach $action.data as $data_key => $data_value}
+                    {$data = $data|cat:" data-`$data_key`='`$data_value`'"}
+                {/foreach}
+            {/if}
+
+            <span
+                class="logs-action-{$action_id}{if !empty($action.enabled)} enabled-action-container{/if}"
+                title="{$action.title}"
+                {if strlen($action.title_simple|default:'')} data-title-simple="{$action.title_simple}"{/if}
+                {if strlen($action.title_enabled|default:'')} data-title-enabled="{$action.title_enabled}"{/if}
+            >
+                <i class="{$action.icon_class} logs-action-icon"{$data}></i>
+            </span>
+
+            {if isset($action.url)}</a>{/if}
+        </li>
+    {/foreach}
+</ul>
+
+{if isset($total_size)}
+    <span class="{$total_size_class}" title="{$total_size_hint}">{$total_size}</span>
+{/if}
+
+<div class="dialog-template-error">
+    <div class="dialog">
+        <div class="dialog-background"></div>
+        <div class="dialog-body">
+            <header class="dialog-header"><h1>[`Error`]</h1></header>
+            <div class="dialog-content">
+                <span class="state-error bold"></span>
+            </div>
+            <footer class="dialog-footer">
+                <button class="button light-gray js-submit">[`OK`]</button>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<div class="dialog-template-delete">
+    <div class="dialog logs-dialog-delete">
+        <div class="dialog-background"></div>
+        <div class="dialog-body">
+            <header class="dialog-header"></header>
+            <div class="dialog-content"><i class="fas fa-spinner fa-spin"></i></div>
+            <footer class="dialog-footer">
+                <button class="button blue js-submit">[`Delete`]</button>
+                <button class="button light-gray js-close-dialog">[`Close`]</button>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<div class="dialog-template-file-publish">
+    <div class="dialog logs-dialog-file-publish">
+        <div class="dialog-background"></div>
+        <div class="dialog-body">
+            <header class="dialog-header"><h1>[`Public link`]</h1></header>
+            <div class="dialog-content"><i class="fas fa-spinner fa-spin"></i></div>
+            <footer class="dialog-footer">
+                <button class="button light-gray js-close-dialog">[`Close`]</button>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<div class="dialog-template-phpinfo">
+    <div class="dialog">
+        <div class="dialog-background"></div>
+        <div class="dialog-body">
+            <header class="dialog-header"><h1>[`PHP configuration`]</h1></header>
+            <div class="dialog-content"><i class="fas fa-spinner fa-spin"></i></div>
+            <footer class="dialog-footer">
+                <button class="button light-gray js-close-dialog">[`Close`]</button>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<div class="dialog-template-rename">
+    <div class="dialog logs-dialog-rename">
+        <div class="dialog-background"></div>
+        <div class="dialog-body">
+            <header class="dialog-header"><h1>[`Rename`]</h1></header>
+            <div class="dialog-content"><i class="fas fa-spinner fa-spin"></i></div>
+            <footer class="dialog-footer">
+                <button class="button blue js-submit">[`Rename`]</button>
+                <button class="button light-gray js-close-dialog">[`Close`]</button>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<div class="dialog-template-settings">
+    <div class="dialog logs-dialog-settings">
+        <div class="dialog-background"></div>
+        <div class="dialog-body">
+            <header class="dialog-header"><h1>[`Settings`]</h1></header>
+            <div class="dialog-content"><i class="fas fa-spinner fa-spin"></i></div>
+            <footer class="dialog-footer">
+                <button class="button blue js-submit">[`Save`]</button>
+                <button class="button light-gray js-close-dialog">[`Close`]</button>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<div class="dialog-template-tracked-file">
+    <div class="dialog">
+        <div class="dialog-background"></div>
+        <div class="dialog-body">
+            <header class="dialog-header"><h1>[`File updates tracking`]</h1></header>
+            <div class="dialog-content"><i class="fas fa-spinner fa-spin"></i></div>
+            <footer class="dialog-footer">
+                <button class="button light-gray js-close-dialog">[`Close`]</button>
+            </footer>
+        </div>
+    </div>
+</div>

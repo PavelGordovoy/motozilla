@@ -1,0 +1,56 @@
+<li id="bscrm_backend_customers_top_li_transactions" class="bsorder-customers_action-sidebar-link">
+	<a href="#/balanceTransactions/">
+		{*<span class="count">123</span>*}
+		<i class="icon16 medal"></i><span class="s-name">Транзакции</span>
+	</a>
+
+	<script>
+		(function() {
+			$.customers.balanceTransactionsAction = function(id) {
+				var query_params = {
+					list_url: '?action=customers#/balanceTransactions/',
+					order_url: '?action=customers#/balanceTransactions/{literal}{order.id}{/literal}',
+					without_layout: '1'
+				};
+				var callback = function() { };
+
+				if (!Number.isNaN(parseInt(id)))
+				{
+					query_params.action = 'balanceOrder';
+					query_params.order_id = id;
+
+					callback = function() {
+						var $content = $('#s-content');
+
+						$content.append('<div id="bscrm-maincontent"></div>');
+						window.sitemapRenderView();
+					};
+				}
+				else
+				{
+					var $content_template = $({json_encode($content_template)});
+
+					query_params.action = 'balanceOrders';
+					callback = function() {
+						var $content = $('#s-content');
+
+						$content.append($content_template);
+						window.sitemapRenderView();
+					};
+				}
+
+				var params_string = '';
+				for (var key in query_params) {
+					if (params_string != "") {
+						params_string += "&";
+					}
+					params_string += key + "=" + encodeURIComponent(query_params[key]);
+				}
+
+				this.load('/webasyst/bscrm/?' + params_string, { }, callback);
+			};
+
+			$.customers.balanceTransactionsAction.bind($.customers);
+		}) ();
+	</script>
+</li>

@@ -1,0 +1,72 @@
+{strip}
+<!-- sorting -->
+{$sort_fields = [
+    'name' => '[`Name`]',
+    'price' => '[`Price`]',
+    'total_sales' => '[`Bestsellers`]',
+    'rating' => '[`Customer rating`]',
+    'create_datetime'=>'[`Date added`]',
+    'stock' => '[`In stock`]']}
+{if !isset($active_sort)}
+    {$active_sort = $wa->get('sort', 'create_datetime')}
+{/if}
+{$default_sort = false}
+{if isset($category.sort_products) && !empty($category.sort_products)}
+    {$default_sort = " "|explode:$category.sort_products}
+{/if}
+<div class="category-sort">
+    {if !$wa->isMobile()} <span class="category-sort__title">[`Sort by`]:</span>{/if}
+    <div class="js-drop-down-list drop-down-list">
+        <span class="js-drop-down-toggle drop-down-list__toggle">
+            {if !$active_sort || !isset($sort_fields[$active_sort])}
+                [`New & Popular`]
+            {else}
+                {foreach $sort_fields as $sort => $name}
+                    {if $active_sort == $sort}
+                        {if $theme_settings.use_plugin_seo_filter && class_exists('shopSeofilterViewHelper')}
+                            {shopSeofilterViewHelper::sortUrl($sort, $name, $active_sort)}
+                        {else}
+                            {$wa->shop->sortUrl($sort, $name, $active_sort)}
+                        {/if}
+                    {/if}
+                {/foreach}
+            {/if}
+            <span class="drop-down-list__caret"></span>
+        </span>
+
+        <ul class="js-drop-down-items drop-down-list__items{if $theme_settings.sorting_ajax} js-ajax-sorting{/if}">
+            {if !empty($category) && !isset($sort_fields[$default_sort[0]])}
+                {$url_get = ""}
+                {$url = $wa->currentUrl(0, 0)}
+                {$url = "?"|explode:$wa->currentUrl(0, 0)}
+                {if isset($url[1]) && !empty($url[1])}
+                    {$index = 0}
+                    {$url = "&"|explode:$url[1]}
+                    {foreach $url as $param}
+                        {if !empty($param) && $param|strpos:'sort' !== 0 && $param|strpos:'order' !== 0 && $param|strpos:'_=' !== 0}
+                            {if $index == 0}
+                                {$url_get = "`$url_get``$param`"}
+                            {else}
+                                {$url_get = "`$url_get`&`$param`"}
+                            {/if}
+                            {$index = $index+1}
+                        {/if}
+                    {/foreach}
+                    {if !empty($url_get)}{$url_get = "?`$url_get`"}{/if}
+                {/if}
+                <li class="drop-down-list__item{if !$active_sort} selected{/if}" ><a href="{$wa->currentUrl(0, 1)}{$url_get}">[`New & Popular`]</a></li>
+            {/if}
+            {foreach $sort_fields as $sort => $name}
+                <li class="drop-down-list__item{if $active_sort == $sort} selected{/if}">
+                    {if $theme_settings.use_plugin_seo_filter && class_exists('shopSeofilterViewHelper')}
+                        {shopSeofilterViewHelper::sortUrl($sort, $name, $active_sort)}
+                    {else}
+                        {$wa->shop->sortUrl($sort, $name, $active_sort)}
+                    {/if}
+                </li>
+                {if $wa->get('sort') == $sort}{$wa->title( $wa->title()|cat:' — '|cat:$name)}{/if}
+            {/foreach}
+        </ul>
+    </div>
+</div>
+{/strip}

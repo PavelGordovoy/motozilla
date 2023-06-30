@@ -1,0 +1,28 @@
+{strip}
+{if $wa->photos}
+    {$hash = ""}
+    {if isset($album_id) && !empty($album_id)}
+        {$hash = "/album/`$album_id`"}
+    {/if}
+    {$photos = $wa->photos->photos($hash, "128x128", 4)}
+    {if count($photos) > 0}
+        <div class="welcome-photos">
+            <div class="welcome-photos__list">
+                {foreach $photos as $photo}
+                    {if $theme_settings.homepage_photos_images_lazy}
+                        {$image = $wa->photos->getImgHtml($photo, "128x128", ["class" => 'js-image-lazy', "alt" => $photo.name])|replace:"src":"src=`$wa_theme_url`img/lazy-image.png data-src"}
+                    {else}
+                        {$image = $wa->photos->getImgHtml($photo, "128x128", ["alt" => $photo.name])}
+                    {/if}
+                    {if empty($photo.frontend_link)}
+                        <span class="welcome-photos__item">{$image}</span>
+                    {else}
+                        <a class="welcome-photos__item" href="{$photo.frontend_link|default:'#'}">{$image}</a>
+                    {/if}
+                {/foreach}
+            </div>
+            <a href="{$wa->getUrl('photos/frontend')}" class="show-all ac-color">[`Go to the photos`] <i class="button-more fal fa-long-arrow-right"></i></a>
+        </div>
+    {/if}
+{/if}
+{/strip}

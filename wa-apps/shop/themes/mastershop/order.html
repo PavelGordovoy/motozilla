@@ -1,0 +1,169 @@
+{strip}
+{$_cart_count = $wa->shop->cart->count()}
+
+<style>
+    #header-container { display: none; }
+    .s-cart-empty-wrapper { margin: 100px 0; text-align: center; }
+    .s-cart-empty-wrapper .s-image-wrapper { margin: 0 0 20px; }
+    .s-cart-empty-wrapper .s-image-wrapper img { vertical-align: top; width: 100%; max-height: 160px; }
+    .s-cart-empty-wrapper .s-description { margin: 20px 0 0; }
+    .s-cart-empty-wrapper .s-actions-wrapper { margin: 30px 0 0; }
+</style>
+
+
+<div class="content-head">
+    {* main menu *}
+    {if !$wa->isMobile() && $theme_settings.order_main_menu_button_head}
+        {include file="`$wa_parent_theme_path`/vertical.main.menu.html" is_close=true}
+    {/if}
+    <div class="content-head__title">
+        {* breadcrumbs *}
+        {include file="`$wa_parent_theme_path`/breadcrumbs.html" last="[`Оrdering`]" inline}
+
+        <h1>[`Оrdering`]</h1>
+    </div>
+</div>
+
+
+{*EMPTY*}
+{if empty($_cart_count)}
+    <div class="s-cart-empty-wrapper">
+        <div class="s-image-wrapper">
+            <img src="{$wa_theme_url}img/svg/order/cart_empty.svg" alt="[`Your shopping cart is empty.`]">
+        </div>
+        <p class="s-description">{$config.cart.empty_text|default:"[`Your shopping cart is empty.`]"|escape}</p>
+        <p class="s-actions-wrapper ac-color">
+            <a href="{$wa_app_url}">[`Go to home page`]</a>
+        </p>
+    </div>
+
+{*ORDER*}
+{else}
+    {$is_confirm_on = !empty($theme_settings.order_confirm_on)}
+    {$is_comment_open = !empty($theme_settings.order_comment_open)}
+    <div class="s-order-page" id="js-order-page"{if $is_confirm_on} data-confirm-on="1"{/if}{if $is_comment_open} data-comment-open="1"{/if}>
+        <div class="s-order-column">
+            <section class="s-order-section" id="js-order-cart">
+                <div class="s-section-header wa-flex-box full-line middle">
+                    <h2 class="s-header">{$config.cart.block_name|default:"[`Shopping cart`]"|escape}</h2>
+                    <a class="s-delete-button js-clear-cart" href="javascript:void(0);">
+                        {$_svg_icon = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.9 9.9"><path d="M0,8.5l3.5-3.5L0,1.4L1.4,0l3.5,3.5L8.5,0l1.4,1.4L6.4,4.9l3.5,3.5L8.5,9.9L4.9,6.4L1.4,9.9L0,8.5z"/></svg>'}
+                        <span class="s-delete-icon">{$_svg_icon}</span>[`Delete all products`]
+                    </a>
+                </div>
+                <div class="s-section-body">
+                    {$wa->shop->checkout()->cart([
+                        "DEBUG" => true,
+                        "wrapper" => "#js-order-cart"
+                    ])}
+                </div>
+                <div class="s-section-footer">
+                    {if !empty($theme_settings.fastorder)}
+                        {$is_buy1click = class_exists('shopBuy1clickViewHelper') && $theme_settings.fastorder == "buy1click"}
+                        {$is_storequickorder = class_exists('shopStorequickorderPlugin') && $theme_settings.fastorder == "storequickorder"}
+                        {$is_quickorder = class_exists('shopQuickorderPlugin') && $theme_settings.fastorder == "quickorder"}
+                        {$is_skoneclick = class_exists('shopSkoneclickHelper') && $theme_settings.fastorder == "skoneclick" && shopSkoneclickHelper::isActive()}
+                        {if $is_buy1click || $is_storequickorder || $is_quickorder || $is_skoneclick}
+                            <span class="order-page__fastorder button-fastorder button-fastorder--{$theme_settings.fastorder} ac-color">
+                                {if $is_skoneclick}
+                                    <span class="button-fastorder__sk-oneclick js-sk-oneclick-open-cart _show" data-type="cart" data-app-url="/">
+                                        {$theme_settings.plugin_oneclick_button_text}
+                                    </span>
+                                {else if $is_buy1click}
+                                    {shopBuy1clickViewHelper::getCartButton()}
+                                {else if $is_quickorder}
+                                    {shopQuickorderPlugin::cartButton()}
+                                {else if $is_storequickorder}
+                                    {shopStorequickorderPlugin::cart_button()}
+                                {/if}
+                            </span>
+                        {/if}
+                    {/if}
+                    <div class="s-back-link">
+                        {$_url = $wa->getUrl('shop/frontend/')}
+                        {$_refer_url = waRequest::server('HTTP_REFERER')}
+                        {if !empty($_refer_url)}
+                            {$_refer_host = $_refer_url|parse_url:$smarty.const.PHP_URL_HOST}
+                            {$_current_url = $wa->currentUrl(true)}
+                            {$_current_host = $_current_url|parse_url:$smarty.const.PHP_URL_HOST}
+
+                            {if $_refer_host === $_current_host}
+                                {$_url = $_refer_url}
+                            {/if}
+                        {/if}
+                        &larr; <a class="link-action" href="{$_url|escape}">[`Back to shopping`]</a>
+                    </div>
+                </div>
+            </section>
+            {if method_exists("shopCheckoutViewHelper", "crossSelling")}
+                {strip}
+                {capture assign="_cross_selling_html"}
+                    {$wa->shop->checkout()->crossSelling([
+                        "DEBUG" => true,
+                        "wrapper" => "#js-cross-selling-section"
+                    ])}
+                {/capture}
+                {/strip}
+                {if !empty($_cross_selling_html)}
+                    <section class="s-order-section s-cross-selling-section" id="js-cross-selling-section">
+                        <div class="s-section-header">
+                            <h2 class="s-header">{$config.recommendations.block_name|default:"[`Recommended`]"|escape}</h2>
+                        </div>
+                        <div class="s-section-body">
+                            {$_cross_selling_html}
+                        </div>
+                    </section>
+                {/if}
+            {/if}
+        </div>
+        <div class="s-order-column">
+            <section class="s-order-section" id="js-order-form">
+                <div class="s-section-header">
+                    <h2 class="s-header">{$config.order.block_name|default:"[`Data of order`]"|escape}</h2>
+                </div>
+                <div class="s-section-body">
+                    {$wa->shop->checkout()->form([
+                        "DEBUG" => true,
+                        "wrapper" => "#js-order-form"
+                    ])}
+                    {if class_exists('shopWholesalePlugin')}
+                        <div class="s-order-section__wholesale" id="wholesale-cart" style="display: none"></div>
+                    {/if}
+                </div>
+            </section>
+
+        </div>
+
+        <script>
+            ( function($) {
+
+                ( typeof window.ShopOrderPage === "function" ? init() : load().then(init) );
+
+                function load() {
+                    var deferred = $.Deferred();
+
+                    $.getScript("{$wa_theme_url}order.js?v={$wa->version()}", function() {
+                        deferred.resolve();
+                    });
+
+                    return deferred.promise();
+                }
+
+                function init() {
+                    new window.ShopOrderPage({
+                        $wrapper: $("#js-order-page"),
+                        urls: {
+                            "checkbox-icon": "{$wa_app_static_url}img/frontend/order/svg/sprite.svg#checkbox-yes"
+                        }
+                    });
+                }
+
+            })(jQuery);
+        </script>
+    </div>
+{/if}
+
+<!-- plugin hook: 'frontend_order' -->
+{* @event frontend_order.%plugin_id% *}
+{foreach $frontend_order as $_}{$_}{/foreach}
+{/strip}

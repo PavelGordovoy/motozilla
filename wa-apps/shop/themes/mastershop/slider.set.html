@@ -1,0 +1,36 @@
+{strip}
+{if $wa->shop}
+    {if !isset($widthSlider)}{$widthSlider = 1420}{/if}
+    {if !isset($theme_settings.product_addtocart_mini_dialog)}{$theme_settings.product_addtocart_mini_dialog = true}{/if}
+    {if !isset($theme_settings.slider_description)}{$theme_settings.slider_description = 1}{/if}
+    {if !isset($theme_settings.homepage_slider_lazy)}{$theme_settings.homepage_slider_lazy = true}{/if}
+    {if !isset($theme_settings.slider_product_features)}{$theme_settings.slider_product_features = true}{/if}
+    {if !isset($theme_settings.show_product_discount)}{$theme_settings.show_product_discount = "None"}{/if}
+    {if !isset($theme_settings.show_product_badge_saving)}{$theme_settings.show_product_badge_saving = 1}{/if}
+    {if !isset($theme_settings.slider_product_summary)}{$theme_settings.slider_product_summary = 1}{/if}
+    {if !isset($theme_settings.slider_product_features_count)}{$theme_settings.slider_product_features_count = 5}{/if}
+
+    {$current_lang = $wa->locale()}
+    {if !isset($theme_settings.product_button_cart_title)}
+        {$theme_settings.product_button_cart_title = "Buy"}
+        {if $current_lang == 'ru_RU'}
+            {$theme_settings.product_button_cart_title = "Купить"}
+        {/if}
+    {/if}
+
+    {if !isset($theme_settings.product_zero_price_text)}
+        {$theme_settings.product_zero_price_text = "Price on request"}
+        {if $current_lang == 'ru_RU'}
+            {$theme_settings.product_zero_price_text = "Цена по запросу"}
+        {/if}
+    {/if}
+
+    {$all_promocards = []}
+    {if !empty($theme_settings.nums_promos_slider_desktop) || !empty($theme_settings.nums_promos_slider_mobile)}
+        {$all_promocards = $wa->shop->promos('link')|array_values}
+    {/if}
+
+    {if !isset($theme_path) && empty($theme_path)}{$theme_path = $wa->shop->themePath('mastershop')}{/if}
+    {include file="`$themePath`slider.html" promocards=$all_promocards}
+{/if}
+{/strip}

@@ -1,0 +1,82 @@
+{strip}
+
+<footer class="s-footer-wrapper">
+    <div class="container">
+        {if $wa->mailer && $wa->getUrl('mailer/frontend/subscribe')}
+        <div class="mailer-subscribe">
+          <div class="subscribe-call"><i class="icon-envelope-letter default-color"></i><span>[`Subscribe on news and promotions`]</span></div>
+          <div class="subscribe-form">
+            <form action="{$wa->getUrl('mailer/frontend/subscribe')}" id="mailer-subscribe-form" class="form-inline" target="mailer-subscribe-iframe">
+              <div class="input-group">
+                <input class="form-control btn-sm" type="email" name="email" placeholder="your@email.here">
+                <span class="input-group-btn">
+                  <input class="btn btn-sm default-bg" type="submit" value="[s`Subscribe`]">
+                </span>
+              </div>
+            </form>
+            <iframe id="mailer-subscribe-iframe" name="mailer-subscribe-iframe" src="javascript:true" style="width:0;height:0;border:0px solid #666;float:right;background: #666;"></iframe>
+            <p style="display:none" id="mailer-subscribe-thankyou"><i>[s`Thank you! We’ll keep you posted.`]</i></p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        {/if}
+        <div class="row s-footer-menu">
+          <div class="col-md-3 col-sm-6">
+            <span>[`Easyweb:Easysale - best template for implementing a quality online store for Your business!`]</span>
+            <div class="s-icons p-t-1">
+                <a href="http://vk.com/"><i class="s-icon s-icon-vk fa fa-vk" aria-hidden="true"></i></a>
+                <a href="http://facebook.com/"><i class="s-icon s-icon-facebook fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="http://twitter.com/"><i class="s-icon s-icon-twitter fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="http://ok.ru/"><i class="s-icon s-icon-ok fa fa-odnoklassniki" aria-hidden="true"></i></a>
+                <a href="http://instagram.com/"><i class="s-icon s-icon-instagram fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="http://youtube.com/"><i class="s-icon s-icon-youtube fa fa-youtube" aria-hidden="true"></i></a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="col-md-2 col-sm-3">
+            <h4>[`Company`]</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">[`About us`]</a></li>
+              <li><a href="#">[`News`]</a></li>
+              <li><a href="#">[`Employees`]</a></li>
+              <li><a href="#">[`Jobs`]</a></li>
+              <li><a href="#">[`Our shops`]</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-3">
+            <h4>[`Information`]</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">[`Help`]</a></li>
+              <li><a href="#">[`Terms of payment`]</a></li>
+              <li><a href="#">[`Terms of delivery`]</a></li>
+              <li><a href="#">[`Warranty`]</a></li>
+              <li><a href="#">[`Capabilities`]</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-4">
+            <h4>[`Help`]</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">[`Articles`]</a></li>
+              <li><a href="#">[`FAQ`]</a></li>
+              <li><a href="#">[`Manufacturers`]</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-4" itemscope="" itemtype="http://schema.org/Organization">
+            <h4>[`Contacts`]</h4>
+            <ul class="list-unstyled">
+              {if $wa->shop}
+                {$_phone = $wa->shop->settings('phone')}
+                <li class="nav-item" itemprop="name">{$wa->accountName()}</li>
+                <li class="nav-item" itemprop="address">[`Moscow, Prospekt Mira, 12`]</li>
+                {if $wh = $wa->shop->settings('workhours')}<li class="nav-item">{$wh.days_from_to}{if $wh.hours_from && $wh.hours_to} {$wh.hours_from}—{$wh.hours_to}{/if}</li>{/if}
+                {if !empty($_phone)}<li class="s-phone-wrapper nav-item"><a class="nav-link" href="tel:{$_phone|replace:" ":""}" itemprop="telephone">{$_phone}</a></li>{/if}
+                {if !empty($theme_settings.feedback_button_text)}<li class="s-callback-wrapper nav-item"><span class="{if !empty($theme_settings.feedback_link) && $wa->currentUrl(false, true) != $theme_settings.feedback_link}s-callback-dialog {/if}nav-link">{$theme_settings.feedback_button_text}</span></li>{/if}
+              {/if}
+            </ul>
+          </div>
+        </div>
+        {include file="`$wa_active_theme_path`/footer.html" inline}
+    </div>
+</footer>
+
+{/strip}

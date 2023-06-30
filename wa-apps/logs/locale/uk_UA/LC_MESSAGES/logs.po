@@ -1,0 +1,481 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: logs\n"
+"POT-Creation-Date: 2022-08-26 13:46+0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: logs\n"
+"Language-Team: logs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: uk_UA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Published file"
+msgstr ""
+
+msgid "Download"
+msgstr ""
+
+msgid "Rename"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "No logs."
+msgstr ""
+
+msgid "Open"
+msgstr ""
+
+msgid "Updated tracked file"
+msgstr ""
+
+msgid "Tracked file"
+msgstr ""
+
+msgid "Latest update time"
+msgstr ""
+
+msgid "Reload list"
+msgstr ""
+
+msgid "back"
+msgstr ""
+
+msgid "Public link"
+msgstr ""
+
+msgid "link disabled"
+msgstr ""
+
+msgid "link enabled"
+msgstr ""
+
+msgid "Password protection"
+msgstr ""
+
+msgid "This file is not password-protected."
+msgstr ""
+
+msgid "Non-authorized persons may view sensitive information about your server configuration."
+msgstr ""
+
+msgid "set password"
+msgstr ""
+
+msgid "This file is password-protected."
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "change password"
+msgstr ""
+
+msgid "remove password"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "PHP configuration"
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "open"
+msgstr ""
+
+msgid "The link to your PHP configuration is not password-protected."
+msgstr ""
+
+msgid "The link to your PHP configuration is password-protected."
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "OK"
+msgstr ""
+
+msgid "no new records"
+msgstr ""
+
+msgid "Choose a page"
+msgstr ""
+
+msgid "View previous lines"
+msgstr ""
+
+msgid "View next lines"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Enter a password"
+msgstr ""
+
+msgid "Send"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "File updates tracking"
+msgstr ""
+
+msgid "Path"
+msgstr ""
+
+msgid "Tracking"
+msgstr ""
+
+msgid "tracking enabled"
+msgstr ""
+
+msgid "tracking disabled"
+msgstr ""
+
+msgid "Once this file is updated, you will see a %s&nbsp;badge next to the app’s icon in the main menu."
+msgstr ""
+
+msgid "%u entry"
+msgid_plural "%u entries"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Directory"
+msgstr ""
+
+msgid "Log file"
+msgstr ""
+
+msgid "User actions"
+msgstr ""
+
+msgid "User action list"
+msgstr ""
+
+msgid "User action"
+msgstr ""
+
+msgid "File is not accessible."
+msgstr ""
+
+msgid "File is not accessible"
+msgstr ""
+
+msgid "%s app"
+msgstr ""
+
+msgid "Invalid data. Reload this page and try again."
+msgstr ""
+
+msgid "Cannot save changes due to insufficient write permissions for file <tt>%s</tt>."
+msgstr ""
+
+msgid "B,KB,MB,GB"
+msgstr ""
+
+msgid "File access password has changed. Reload this page to enter a correct password."
+msgstr ""
+
+msgid "Incorrect password."
+msgstr ""
+
+msgid "Empty password."
+msgstr ""
+
+msgid "File %s is not published."
+msgstr ""
+
+msgid "File %s does not exist or is not accessible."
+msgstr ""
+
+msgid "PHP configuration page is not published."
+msgstr ""
+
+msgid "Function phpinfo() is not available on your server."
+msgstr ""
+
+msgid "Insufficient access rights to delete log files or directories."
+msgstr ""
+
+msgid "%s is not available for deletion."
+msgstr ""
+
+msgid "Could not delete %s."
+msgstr ""
+
+msgid "Empty name."
+msgstr ""
+
+msgid "Invalid name."
+msgstr ""
+
+msgid "New name matches the old one."
+msgstr ""
+
+msgid "A file with this name exists. Enter another name."
+msgstr ""
+
+msgid "Cannot rename to “%s”. Invalid name or insufficient permissions."
+msgstr ""
+
+msgid "logs"
+msgstr ""
+
+msgid "This file’s size"
+msgstr ""
+
+msgid "All log files‘ total size"
+msgstr ""
+
+msgid "By directory"
+msgstr ""
+
+msgid "By update time"
+msgstr ""
+
+msgid "By file size"
+msgstr ""
+
+msgid "Track changes (enabled)"
+msgstr ""
+
+msgid "Track changes"
+msgstr ""
+
+msgid "Public link (enabled)"
+msgstr ""
+
+msgid "View PHP info (public link enabled)"
+msgstr ""
+
+msgid "View PHP info"
+msgstr ""
+
+msgid "You have no permissions to change settings."
+msgstr ""
+
+msgid "Notify me on large logs size"
+msgstr ""
+
+msgid "Show the %s&nbsp;badge next to the app’s icon in the main menu when the total logs size exceed 1&nbsp;GB."
+msgstr ""
+
+msgid "1 GB+"
+msgstr ""
+
+msgid "Enable PHP error log"
+msgstr ""
+
+msgid "Types of PHP errors"
+msgstr ""
+
+msgid "all"
+msgstr ""
+
+msgid "fatal errors"
+msgstr ""
+
+msgid "warnings"
+msgstr ""
+
+msgid "Show relative file paths instead of absolute paths in error logs"
+msgstr ""
+
+msgid "in published files"
+msgstr ""
+
+msgid "in backend"
+msgstr ""
+
+msgid "Hide IP addresses in error logs"
+msgstr ""
+
+msgid "PHP error messages are saved to file <tt>wa-log/<b>php.log</b></tt>."
+msgstr ""
+
+msgid "PHP errors are being logged without limitations, because <tt>php_logging_admin</tt> parameter is enabled in Logs’ configuration file."
+msgstr ""
+
+msgid "To make PHP errors be logged only during 1 hour, disable <tt>php_logging_admin</tt> parameter in file <tt>%s</tt>."
+msgstr ""
+
+msgid "PHP errors will be logged without limitations, because <tt>php_logging_admin</tt> parameter is enabled in Logs’ configuration file."
+msgstr ""
+
+msgid "PHP errors will be logged during 1 hour only (until %s), to prevent large error logs from occupying server disk space."
+msgstr ""
+
+msgid "PHP errors will be logged during 1 hour only, to prevent large error logs from occupying server disk space."
+msgstr ""
+
+msgid "Re-enable logging after this time expires, if necessary."
+msgstr ""
+
+msgid "PHP errors are being logged without limitations, because “%s” is enabled <a href=\"%s\" target=\"_blank\">in&nbsp;system settings</a>."
+msgstr ""
+
+msgid "To make PHP errors be logged only during 1 hour, disable \"%s\"."
+msgstr ""
+
+msgid "PHP errors will be logged without limitations, because “%s” is enabled <a href=\"%s\" target=\"_blank\">in&nbsp;system settings</a>."
+msgstr ""
+
+msgid "This limitation will not be applied if you enable “%s” setting <a href=\"%s\" target=\"_blank\">in&nbsp;system settings</a>."
+msgstr ""
+
+msgid "You have no permissions to publish or unpublish the PHP configuration page."
+msgstr ""
+
+msgid "Function <tt>phpinfo()</tt> is not available on your server."
+msgstr ""
+
+msgid "PHP configuration page is not published. Reload this page and try again."
+msgstr ""
+
+msgid "This file is not published. Reload this page and publish the file."
+msgstr ""
+
+msgid "You have no permissions to publish or unpublish log files."
+msgstr ""
+
+msgid "No routing rule to create public links to files. Add a <em>hidden</em> rule for Logs app in Site app’s “<a href=\"%s\">Structure</a>” section."
+msgstr ""
+
+msgid "This file is not available any more. Reload this page."
+msgstr ""
+
+msgid "%u published file in this directory will no longer be available via a published link."
+msgid_plural "%u published files in this directory will no longer be available via published links."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "You and other users will no longer be notified on %u file’s updates in this directory."
+msgid_plural "You and other users will no longer be notified on %u files’ updates in this directory."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "You will no longer be notified on %u file’s updates in this directory."
+msgid_plural "You will no longer be notified on %u files’ updates in this directory."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Other users will no longer be notified on %u file’s updates in this directory."
+msgid_plural "Other users will no longer be notified on %u files’ updates in this directory."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "You have no permissions to rename files and directories."
+msgstr ""
+
+msgid "Rename directory"
+msgstr ""
+
+msgid "Rename file"
+msgstr ""
+
+msgid "This file will no longer be available via a published link."
+msgstr ""
+
+msgid "You and other users will be further notified on this file’s updates <em>by its old name</em> until the “%” option is disabled."
+msgstr ""
+
+msgid "You will be further notified on this file’s updates <em>by its old name</em> until the “%” option is disabled."
+msgstr ""
+
+msgid "Other users will be further notified on this file’s updates <em>by its old name</em> until the “%” option is disabled."
+msgstr ""
+
+msgid "This file cannot be tracked because its modification time cannot be read. Check the file’s permissions on the server."
+msgstr ""
+
+msgid "%u file contained in this directory will be deleted."
+msgid_plural "%u files contained in this directory will be deleted."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "%u file will no longer be available via a published link."
+msgid_plural "%u files will no longer be available via published links."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "You and other users will no longer be notified on %u file’s updates."
+msgid_plural "You and other users will no longer be notified on %u files’ updates."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "You will no longer be notified on %u file’s updates."
+msgid_plural "You will no longer be notified on %u files’ updates."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "Other users will no longer be notified on %u file’s updates."
+msgid_plural "Other users will no longer be notified on %u files’ updates."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+msgid "You have no permissions to delete files and directories."
+msgstr ""
+
+msgid "Delete directory"
+msgstr ""
+
+msgid "Delete file"
+msgstr ""
+
+msgid "You and other users will be further notified on this file’s updates until the “%” option is disabled."
+msgstr ""
+
+msgid "You will be further notified on this file’s updates until the “%” option is disabled."
+msgstr ""
+
+msgid "Other users will be further notified on this file’s updates until the “%” option is disabled."
+msgstr ""
+
+msgid "You have no permissions to view PHP configuration."
+msgstr ""
+
+msgid "No routing rule to create a public link to the PHP configuration page. Add a <em>hidden</em> rule for Logs app in Site app’s “<a href=\"%s\">Structure</a>” section."
+msgstr ""
+
+msgid "Renaming of files and directories"
+msgstr ""
+
+msgid "Deletion of files and directories"
+msgstr ""
+
+msgid "Managing of public links to files"
+msgstr ""
+
+msgid "Viewing of PHP configuration"
+msgstr ""
+
+msgid "Managing of public link to PHP configuration page"
+msgstr ""
+
+msgid "Settings management"
+msgstr ""

@@ -1,0 +1,63 @@
+{strip}
+
+{if !isset($blog_id) || empty($blog_id)}
+    {$blog_id = null}
+{/if}
+{$blog_posts = $wa->blog->posts($blog_id,3)}
+{if !empty($blog_posts)}{$count_posts = count($blog_posts)}{/if}
+{if !empty($count_posts)}
+    {if class_exists('blogSkimagePlugin')}
+        {$sk_blog_images = blogSkimageHelper::getImages()}
+    {/if}
+    <div class="home-news">
+        {if $blog_link_title || $blog_title}
+            <div class="items-list__head">
+                <div class="h1 head-decor">
+                    {$blog_title}
+                    {if $blog_link_title}
+                        {$link = $wa->getUrl('blog/frontend')}
+                        {if $blog_id}
+                            {$blog = $wa->blog->blog($blog_id)}
+                            {$link = $blog['link']}
+                        {/if}
+                        <span class="items-list__all">
+                            <a class="show-all ac-color" href="{$link}">
+                                {$blog_link_title} <i class="button-more fal fa-long-arrow-right"></i>
+                            </a>
+                        </span>
+                    {/if}
+                </div>
+            </div>
+        {/if}
+        <div class="home-news__list{if $count_posts / 2 == 1} count-even{/if}">
+            {foreach $blog_posts as $post}
+                <div class="home-news__item">
+                    <a class="home-news__item-inner" href="{$post.link|escape}">
+                        {$is_image = false}
+                        {if isset($sk_blog_images[$post.id]['preview']) && !empty($sk_blog_images[$post.id]['preview'])}
+                            {$is_image = true}
+                            <div class="home-news__img">
+                                {if $theme_settings.homepage_blog_images_lazy}
+                                    <img class="js-image-lazy" src="{$wa_theme_url}img/lazy-image.png" data-src="{$sk_blog_images[$post.id]['preview']}"  alt="{$post.title|escape}">
+                                {else}
+                                    <img src="{$sk_blog_images[$post.id]['preview']}" alt="{$post.title|escape}">
+                                {/if}
+                                <span class="home-news__date">{$post.datetime|wa_datetime:"humandate"}</span>
+                            </div>
+                        {/if}
+                        <div class="home-news__content">
+                            {if !$is_image}<span class="home-news__date">{$post.datetime|wa_datetime:"humandate"}</span>{/if}
+                            <div class="home-news__title">{strip_tags($post.title)|truncate:60}</div>
+                            <div class="home-news__desc">
+                                {strip_tags($post.text)|truncate:140}
+                            </div>
+                            {if empty($blog_link_more_title)}{$blog_link_more_title = "[`Reed new`]"}{/if}
+                            <span class="show-all ac-color">{$blog_link_more_title} <i class="button-more fal fa-long-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+            {/foreach}
+        </div>
+    </div>
+{/if}
+{/strip}

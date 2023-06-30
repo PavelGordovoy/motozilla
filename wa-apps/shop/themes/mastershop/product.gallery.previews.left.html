@@ -1,0 +1,50 @@
+{strip}
+{if $count_images > 1 || $video}
+    {$is_video_last = ($theme_settings.product_gallery_video_sort === 'end')}
+    {$is_dialog = $wa->get('cart')}
+    {$is_popup_video = $theme_settings.product_gallery_video_popup && !$is_dialog}
+    {function video_gallery_previews_item position=null}
+        <div data-id="video" data-video="true" data-position="{$position}" class="{if $is_popup_video} js-gallery-popup-video{else} js-gallery-preview{/if} gallery-previews-l__el gallery-previews-l__el--video{if !$is_video_last && !$is_popup_video} selected{/if}">
+            <a href="{if $is_popup_video}{$video.orig_url}{else}{$video.url}{/if}" class="gallery-previews-l__link gallery-previews-l__link--video">
+                <i class="fas fa-video bs-color"></i>
+            </a>
+        </div>
+    {/function}
+    <div class="gallery-previews-l">
+        {$position = 0}
+        {if $video && !$is_video_last}
+            {video_gallery_previews_item position=$position}
+            {$position = $position + 1}
+        {/if}
+        {if $count_images > 1 || ($count_images > 0 && $video)}
+            {$else_previews = 0}
+            {$max_show_previews = (int) $theme_settings.product_gallery_count_visible_previews_left}
+            {if $max_show_previews > 0}
+                {$max_show_previews = $max_show_previews + 1}
+                {if $max_show_previews > 0 && $count_images > $max_show_previews}
+                    {$else_previews = $count_images - $max_show_previews + 1}
+                {/if}
+            {/if}
+            {$popup_image_size = '970'}
+            {if !empty($theme_settings.product_gallery_popup_size_img)}{$popup_image_size = $theme_settings.product_gallery_popup_size_img}{/if}
+            {foreach $product.images as $image}
+                {if $image@iteration == $max_show_previews && $else_previews}
+                    <div data-id="{$image.id}" data-position="{$position}" class="js-gallery-preview-else gallery-previews-l__else ac-color">
+                        + {$else_previews} [`photo`]
+                    </div>
+                {/if}
+                <div data-id="{$image.id}" data-position="{$position}" class="js-gallery-preview gallery-previews-l__el{if $image.id == $product.image_id && (!$video || $is_video_last || $is_popup_video)} selected{/if}">
+                    <a id="product-image-{$image.id}" href="{$wa->shop->imgUrl($image, $popup_image_size)}" class="gallery-previews-l__link">
+                        {$wa->shop->imgHtml($image, '55x0')}
+                    </a>
+                </div>
+                {$position = $position + 1}
+            {/foreach}
+        {/if}
+        {if $video && $is_video_last}
+            {video_gallery_previews_item position=$position}
+            {$position = $position + 1}
+        {/if}
+    </div>
+{/if}
+{/strip}

@@ -1,0 +1,314 @@
+{strip}
+
+{$wa->globals("hideSidebar", true)}
+{$promocards = $wa->shop->promos()}
+
+<div class="s-home-wrapper">
+
+    {* FEATURES *}
+    {if $theme_settings.homepage_features}
+        <div class="s-home-features">
+            <div class="container">
+              <div class="row">
+                {if $theme_settings.homepage_features_icon_1 && $theme_settings.homepage_features_text_1}
+                  <div class="col-md-15 col-sm-4 col-xs-12"><div class="s-home-features-icon"><i class="{$theme_settings.homepage_features_icon_1} default-color"></i></div><div class="s-home-features-desc">{$theme_settings.homepage_features_text_1}</div></div>
+                {/if}
+                {if $theme_settings.homepage_features_icon_2 && $theme_settings.homepage_features_text_2}
+                  <div class="col-md-15 col-sm-4 col-xs-12"><div class="s-home-features-icon"><i class="{$theme_settings.homepage_features_icon_2} default-color"></i></div><div class="s-home-features-desc">{$theme_settings.homepage_features_text_2}</div></div>
+                {/if}
+                {if $theme_settings.homepage_features_icon_3 && $theme_settings.homepage_features_text_3}
+                  <div class="col-md-15 col-sm-4 col-xs-12"><div class="s-home-features-icon"><i class="{$theme_settings.homepage_features_icon_3} default-color"></i></div><div class="s-home-features-desc">{$theme_settings.homepage_features_text_3}</div></div>
+                {/if}
+                {if $theme_settings.homepage_features_icon_4 && $theme_settings.homepage_features_text_4}
+                  <div class="col-md-15 col-sm-push-2 col-sm-4 col-xs-12"><div class="s-home-features-icon"><i class="{$theme_settings.homepage_features_icon_4} default-color"></i></div><div class="s-home-features-desc">{$theme_settings.homepage_features_text_4}</div></div>
+                {/if}
+                {if $theme_settings.homepage_features_icon_5 && $theme_settings.homepage_features_text_5}
+                  <div class="col-md-15 col-sm-push-2 col-sm-4 col-xs-12"><div class="s-home-features-icon"><i class="{$theme_settings.homepage_features_icon_5} default-color"></i></div><div class="s-home-features-desc">{$theme_settings.homepage_features_text_5}</div></div>
+                {/if}
+              </div>
+            </div>
+        </div>
+    {/if}
+
+    {* TILE *}
+    {if $theme_settings.homepage_tile}
+
+        {$_show_photos_tile = ( $theme_settings.homepage_tile_mode == "photos" )}
+        {$_show_products_tile = ( $theme_settings.homepage_tile_mode == "products" )}
+        {$_show_promocards_tile = ( $theme_settings.homepage_tile_mode == "promos" )}
+
+        {if $_show_photos_tile}
+            {if $theme_settings.homepage_tile_photos_products_id && $wa->photos}
+                {$photos = $wa->photos->photos("/album/{$theme_settings.homepage_tile_photos_products_id}", "512")}
+                {include file="home.tile.html" _photos=$photos inline}
+            {/if}
+        {elseif $_show_products_tile}
+            {if $theme_settings.homepage_tile_photos_products_id}
+                {$_bestsellers = $wa->shop->productSet({$theme_settings.homepage_tile_photos_products_id})}
+                {if !empty($_bestsellers)}
+                    {include file="home.tile.html" _products=$_bestsellers inline}
+                {/if}
+            {/if}
+        {elseif $_show_promocards_tile}
+            {if !empty($promocards)}
+                {include file="home.tile.html" _promocards=$promocards inline}
+            {/if}
+        {/if}
+
+    {/if}
+
+    {* PRODUCTS LISTS *}
+    {if !empty($theme_settings.homepage_product_lists) && !empty($theme_settings.homepage_product_lists_names)}
+    <div class="s-homepage-products"{if !empty($theme_settings.homepage_product_lists_bg)} style="background-color: {$theme_settings.homepage_product_lists_bg};"{/if}>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            {assign var="_sets" value=","|explode:$theme_settings.homepage_product_lists}
+            {assign var="_names" value=","|explode:$theme_settings.homepage_product_lists_names}
+            <div role="tabpanel">
+                <ul id="products-sets" class="nav nav-tabs" role="tablist">
+                    {foreach key=key item=item from=$_sets}
+                        <li class="nav-item">
+                            <a class="nav-link{if $key == 0} active{/if}" id="{$item}-tab" data-toggle="tab" href="#{$item}" role="tab" aria-controls="{$item}" aria-expanded="true">{$_names[$key]}</a>
+                        </li>
+                    {/foreach}
+                </ul>
+                <div class="tab-content">
+                    {foreach key=key item=item from=$_sets}
+                        <div{if $key == 0} role="tabpanel"{/if} class="tab-pane{if $key == 0} active{/if}" id="{$item}" aria-labelledby="{$item}-tab">
+                            {$set = $wa->shop->productSet($item)}
+                            {if !empty($set)}
+                                {include file="list-thumbs-slider.html" products=$set}
+                            {else}
+                                <h4 class="push-top push-bottom even">[`Product list is empty or not exists`]</h4>
+                            {/if}
+                        </div>
+                    {/foreach}
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {/if}
+
+    {if !empty($theme_settings.homepage_offer)}
+    <div class="s-homepage-offer p-y-3"{if !empty($theme_settings.homepage_offer_image)} style="background-image: url('{$wa_parent_theme_url}{$theme_settings.homepage_offer_image}?v{$wa_theme_version}');"{/if}>
+        <div class="container text-center">
+            {if !empty($theme_settings.homepage_offer_header)}<h2>{$theme_settings.homepage_offer_header}</h2>{/if}
+            {if !empty($theme_settings.homepage_offer_text)}<p>{$theme_settings.homepage_offer_text}</p>{/if}
+            {if !empty($theme_settings.homepage_offer_link)}<a href="{$theme_settings.homepage_offer_link}" class="{if $theme_settings.homepage_offer_link == "#callback-dialog"}s-callback-dialog {/if}btn btn-default btn-sm">{if !empty($theme_settings.homepage_offer_btn_text)}{$theme_settings.homepage_offer_btn_text}{else}[`To order`]{/if}</a>{/if}
+        </div>
+    </div>
+    {/if}
+
+    {* BRANDS *}
+    {if class_exists('shopProductbrandsPlugin')}
+    <div class="s-home-brands">
+        <div class="container">
+            <div class="row">
+                <div id="s-home-brands-carousel" class="owl-carousel owl-theme">
+                {foreach shopProductbrandsPlugin::getBrands() as $b}
+                    {if $b.image}
+                        <div class="item">
+                            <a title="{$b.name}" href="{$b.url}">
+                                <img alt="{$b.name}" src="{$wa_static_url}wa-data/public/shop/brands/{$b.id}/{$b.id}{$b.image}">
+                            </a>
+                        </div>
+                    {/if}
+                {/foreach}
+                </div>
+            </div>
+        </div>
+    </div>
+    {/if}
+
+    {* BLOG *}
+    {if $theme_settings.homepage_blog && $theme_settings.homepage_blog_id}
+    <div class="s-homepage-posts"{if !empty($theme_settings.homepage_blog_bg)} style="background-color: {$theme_settings.homepage_blog_bg};"{/if}>
+        <div class="container">
+          <div class="row">
+            {if $wa->blog}
+                {$blog = $wa->blog->blog($theme_settings.homepage_blog_id)}
+            {/if}
+            {if $wa->blog}<div class="col-md-12"><h3>{$blog.name}</h3></div>{/if}
+            <div class="clearfix"></div>
+            {if $wa->blog}
+              {$latest_posts = $wa->blog->posts($theme_settings.homepage_blog_id, 4)}
+              {if $latest_posts|count > 0}
+                {foreach $latest_posts as $post}
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="{$post.link}">
+                      <div class="s-homepage-post-item">
+                        {if isset($post.thumbnail)}
+                            <div class="s-homepage-post-image" style="background-image: url({$post.thumbnail});"></div>
+                        {elseif $post.album_id}
+                            {$photos = $wa->photos->photos("/album/{$post.album_id}", "512")}
+                            {if !empty($photos)}
+                                {foreach $photos as $p}
+                                    {if $p@last}
+                                        <div class="s-homepage-post-image" style="background-image: url({$p.thumb_512.url});"></div>
+                                    {/if}
+                                {/foreach}
+                            {else}
+    					        {if $theme_settings.blog_post_image}
+    					          <div class="s-homepage-post-image" style="background-image: url({$wa_parent_theme_url}{$theme_settings.blog_post_image});"></div>
+    							{else}
+    							  <div class="s-homepage-post-image" style="background-image: url({$wa_parent_theme_url}img/blank_480x360.png);"></div>
+    							{/if}
+                            {/if}
+                        {else}
+    						{if $theme_settings.blog_post_image}
+    					       <div class="s-homepage-post-image" style="background-image: url({$wa_parent_theme_url}{$theme_settings.blog_post_image});"></div>
+    						{else}
+    						   <div class="s-homepage-post-image" style="background-image: url({$wa_parent_theme_url}img/blank_480x360.png);"></div>
+    						{/if}
+                        {/if}
+                        <div class="s-homepage-post-content">
+                            <span class="s-homepage-post-data">{$post.datetime|wa_date:'humandatetime'}</span>
+                            <h3 class="default-color">{$post.title}</h3>
+                            <p>{$post.text|strip_tags|truncate:150}</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                {/foreach}
+              {else}
+                <div class="col-md-12"><p class="red"><a href="{$wa_backend_url|cat:'blog/'}">[`Add first post in Blog app`]</a></p></div>
+              {/if}
+            {else}
+              <div class="col-md-12"><p class="red">[`Install Blog app for display last post on home page`]</p></div>
+            {/if}
+          </div>
+          {if $wa->blog}<div class="col-md-12 text-center push-top push-bottom even"><a href="{$blog.link}" class="btn btn-default btn-default-outline btn-md">[`All posts`]</a></div>{/if}
+        </div>
+    </div>
+    {/if}
+
+    {* VIEWIED PRODUCT LIST *}
+    {if $wa->shop && $wa->app() == 'shop'}
+        {$data = waRequest::cookie('shop_lastview', array(), waRequest::TYPE_ARRAY_INT)}
+        {$lastview = $data|array_reverse}
+        {if $lastview}
+            {$products = null}
+            {foreach $lastview as $p}
+                {append var='products' value=$wa->shop->product($p)}
+            {/foreach}
+            <div class="s-lastview-products"{if !empty($theme_settings.homepage_lastview_bg)} style="background-color: {$theme_settings.homepage_lastview_bg};"{/if}>
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3 class="default-color">[`Earlier you watched`]</h3>
+                    {include file="list-thumbs-slider.html" products=$products}
+                    <div class="clearfix"></div>
+                    <div class="s-buttons-wrapper text-center push-bottom even">
+                        <button id="lastview-clear" class="btn btn-default">[`Clear viewed product list`]</button>
+                    </div>
+                    {literal}
+                    <script>
+                        ( function($) {
+
+                            $("#lastview-clear").on("click", function () {
+                                clearLastview();
+                                $(this).remove();
+                            });
+
+                            function clearLastview() {
+                                var $block = $(".s-lastview-products");
+
+                                $.cookie('shop_lastview', null, {path: '/'});
+                                $block.remove();
+                            }
+                        })(jQuery);
+                    </script>
+                    {/literal}
+                  </div>
+                </div>
+              </div>
+            </div>
+        {/if}
+    {/if}
+
+    {* SHOPS *}
+    {if !empty($theme_settings.homepage_shops)}
+        {include file="home.shops.html"}
+    {/if}
+
+    {* WELCOME NOTE *}
+    {if !empty($theme_settings.homepage_welcome_note)}
+        <div class="container s-welcome-note push-top push-bottom even">
+            {$theme_settings.homepage_welcome_note}
+        </div>
+    {/if}
+
+    {* @event frontend_homepage.%plugin_id% *}
+    {foreach $frontend_homepage as $_}{$_}{/foreach}
+
+    <script>
+        var hrefImages = "{$wa_parent_theme_url}plugins/jquery.waitforimages.min.js?v{$wa_theme_version}",
+            hrefOwl = "{$wa_parent_theme_url}plugins/owlcarousel/owl.carousel.min.js?v{$wa_theme_version}",
+            brands = $('#s-home-brands-carousel'),
+            loaderIntro = '<div class="landing landing-slider"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div>';
+
+        (!$.fn.owlCarousel) ? $.getScript(hrefOwl, initBrands) : initBrands();
+
+        function initBrands() {
+
+            var $this = brands;
+
+            $this.append(loaderIntro);
+
+            $this.waitForImages({
+
+                finished: function () {
+
+                        $this.find('.landing-slider').remove();
+
+                            var autoplay = $this.data('autoplay'),
+                                autoplaySpeed = $this.data('autoplayspeed'),
+                                autoplayHoverPause = $this.data('autoplayhoverpause'),
+                                loop = $this.data('loop'),
+                                navigation = $this.data('navigation'),
+                                pagination = $this.data('pagination'),
+                                animateOut = $this.data('animout');
+
+                            $this.owlCarousel({
+                                margin: 18,
+                                autoplay: autoplay || false,
+                                autoplaySpeed: autoplaySpeed || 0,
+                                autoplayHoverPause: autoplayHoverPause || false,
+                                loop: loop || false,
+                                nav: navigation || false,
+                                dots: pagination || false,
+
+                                navText: [
+                                    "<i class='fa fa-angle-left fa-2x'></i>",
+                                    "<i class='fa fa-angle-right fa-2x'></i>"
+                                ],
+                                responsive:{
+                                    0:{
+                                        items:3
+                                    },
+                                    768:{
+                                        items:5
+                                    },
+                                    1024:{
+                                        items:6
+                                    }
+                                }
+                            });
+
+                        $this.removeClass('preload');
+
+                    },
+
+               waitForAll: true
+            });
+
+        }
+
+    </script>
+
+</div>
+
+{/strip}

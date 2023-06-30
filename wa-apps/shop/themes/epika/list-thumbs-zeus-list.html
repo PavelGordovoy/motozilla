@@ -1,0 +1,222 @@
+<!-- products thumbnail list view -->
+{$epikafavList = waRequest::cookie('epika_shop_favorites')}
+{assign var=epikafavList value=","|explode:$epikafavList}
+
+{$epikacartList = waRequest::cookie('epika_shop_incart')}
+{assign var=epikacartList value=","|explode:$epikacartList}
+
+{if $wa->shop->cart->total() > 0}{$add2cart_label = '[`Add to cart`]'}{else}{$add2cart_label = '[`Buy`]'}{/if}
+
+<div class="thumbs product-list list-type">
+    {if !empty($theme_settings.list_features)}
+    {$features = $wa->shop->features($products)}
+    {/if}
+    {foreach $products as $p }
+
+    {$epikafavClass = ''}
+    {foreach from=$epikafavList item=i}
+    {if $i == $p.id}
+    {$epikafavClass = 'active'}
+    {/if}
+    {/foreach}
+
+    {$epikacartClass = ''}
+    {foreach from=$epikacartList item=i}
+    {if $i == $p.id}
+    {$epikacartClass = 'active'}
+    {/if}
+    {/foreach}
+
+    {$has_divider_list = false}
+    {foreach from=$p.features key=f_code item=f_value name=pro_fea}
+    {if $features[$f_code].type == 'divider'} {$has_divider_list = true} {/if}
+    {/foreach}
+
+    {$available = $wa->shop->settings('ignore_stock_count') || $p.count === null || $p.count > 0}
+    <div itemscope itemtype ="http://schema.org/Product" class="prd zeus catalog-item">
+        <form class="purchase addtocart" {if $p.sku_count > 1}data-url="{$p.frontend_url}{if strpos($p.frontend_url, '?')}&{else}?{/if}cart=1"{/if} method="post" action="{$wa->getUrl('/frontendCart/add')}">
+            <input type="hidden" name="product_id" value="{$p.id}">
+            <div class="prd-wrapper" data-product-id="{$p.id}">
+                <div class="image">
+                    <div class="badge-wrapper">
+
+                    <img itemprop="image" class="product-thumb-96-img" alt="{$p.name}" src="{if $wa->shop->productImgUrl($p, '96')}{$wa->shop->productImgUrl($p, '96')}{else}{$wa_theme_url}assets/img/nophoto.png{/if}" style="display: none;">
+                    <img itemprop="image" class="product-first-img lazy" alt="{$p.name}" data-original="{$wa->shop->productImgUrl($p, '262')}" src="{if $wa->shop->productImgUrl($p, '262')}{if !empty($theme_settings.disable_products_img_lazyload)}{$wa->shop->productImgUrl($p, '262')}{else}{$wa_active_theme_url}img/balls.gif{/if}{else}{$wa_theme_url}assets/img/nophoto.png{/if}">
+                    {$_product = $wa->shop->product($p.id)}
+                    {$product_image_ids = array_keys($_product.images)}
+
+                    {if $product_image_ids|@count > 1}
+                        {$second_image = $_product.images[$product_image_ids[1]]}
+                        {$p.image_id = $second_image.id}
+                        {$p.ext = $second_image.ext}
+                        <img itemprop="image" class="product-second-img lazy" alt="{$p.name}" data-original="{$wa->shop->productImgUrl($p, '262')}" src="{if $wa->shop->productImgUrl($p, '262')}{if !empty($theme_settings.disable_products_img_lazyload)}{$wa->shop->productImgUrl($p, '262')}{else}{$wa_active_theme_url}img/balls.gif{/if}{else}{$wa_theme_url}assets/img/nophoto.png{/if}" style="display: none;">
+
+                        {$_product = $wa->shop->product($p.id)}
+                        {$product_image_ids = array_keys($_product.images)}
+                        {$second_image = $_product.images[$product_image_ids[0]]}
+                        {$p.image_id = $second_image.id}
+                        {$p.ext = $second_image.ext}
+                    {/if}
+                    {$badge_html = $wa->shop->badgeHtml($p.badge)}
+                    {if $badge_html}
+                    <div class="corner">{$badge_html}</div>
+                    {/if}
+                        <div class="controls">
+                            <a href="javascript:void(0);" class="quick_view" data-url="{$p.frontend_url}{if strpos($p.frontend_url, '?')}&{else}?{/if}quick_view=1" data-toggle="tooltip" title="Обзор"><i class="icon-eye"></i></a>
+                            {if isset($theme_settings.cat_prd_image) && $theme_settings.cat_prd_image == "onclick" && $product_image_ids|@count > 1}
+                            <a class="rotate-image" data-toggle="tooltip" title="Повернуть"><i class="icon-arrows-cw"></i></a>
+                            {/if}
+                        </div>
+                    </div>
+                </div>
+                <div class="information">
+                    <a href="{$p.frontend_url}" title="{$p.name}">
+                        <h5 class="title">
+                            <span itemprop="name">{$p.name}</span>
+                        </h5>
+                    </a>
+                    {if $p.summary}<span itemprop="description" class="summary">{strip_tags($p.summary)|truncate:400}</span>{/if}
+                    {if !empty($p.features)}
+                    <div class="features-block">
+                        {if !$has_divider_list}
+                        {$two_columns = false}
+                        {if ($p.features|@count) > 10}
+                        {$two_columns = true}
+                        {$next_table_row = ($p.features|@count / 2)|intval}
+                        {if $next_table_row % 2 == 1}
+                        {$next_table_row = $next_table_row-1}
+                        {/if}
+                        {/if}
+                        {foreach from=$p.features key=f_code item=f_value name=pro_fea}
+                        {if ($smarty.foreach.pro_fea.index == 0 || ($two_columns && $smarty.foreach.pro_fea.index == $next_table_row))}
+                        <table class="features" >
+                            {/if}
+                            <tr{if $features[$f_code].type == 'divider'} class="divider"{/if}>
+                            <td class="name">
+                                <span><strong>{$features[$f_code].name|escape}</strong></span>
+                            </td>
+                            <td class="value" itemprop="{$f_code|escape}">
+                                {if is_array($f_value)}
+                                {if $features[$f_code].type == 'color'}
+                                {foreach $f_value as $v}
+                                {assign var="bar_at" value=$v|mb_strpos:"</i>"}
+                                {assign var="bar_to" value=$v|mb_strpos:"</span>"}
+                                {assign var="col" value=$v|mb_substr:($bar_at+4):($bar_to-$bar_at-4)}
+                                {assign var="va" value=$v|replace:$col:''}
+                                {$va = $va|replace:'<span style="white-space: nowrap;">':'<span style="white-space: nowrap;" data-toggle="tooltip" data-placement="top" title="[col_col]">'}
+                                                {$va|replace:'[col_col]':$col}
+                                        {/foreach}
+                                    {else}
+                                        {implode(', ', $f_value)}
+                                    {/if}
+                                    {else}
+                                        {$f_value}
+                                {/if}
+                            </td>
+                            </tr>
+                            {if ($smarty.foreach.pro_fea.index == ($p.features|@count - 1) || ($two_columns && $smarty.foreach.pro_fea.index == $next_table_row-1))}
+                        </table>
+                        {if ($two_columns && $smarty.foreach.pro_fea.index == $next_table_row-1)}{/if}
+                        {/if}
+                        {/foreach}
+
+                        {else}
+
+                        {foreach from=$p.features key=f_code item=f_value name=pro_fea}
+                        {if $smarty.foreach.pro_fea.index == 0}
+                        <table class="features" >
+                            {/if}
+
+                            {if $features[$f_code].type == 'divider' && $smarty.foreach.pro_fea.index > 0}
+                        </table>
+                        <table class="features">
+                            {/if}
+
+                            <tr{if $features[$f_code].type == 'divider'} class="divider"{/if}>
+                            <td class="name">
+                                <span><strong>{$features[$f_code].name|escape}</strong></span>
+                            </td>
+                            <td class="value" itemprop="{$f_code|escape}">
+                                {if is_array($f_value)}
+                                {if $features[$f_code].type == 'color'}
+                                {foreach $f_value as $v}
+                                {assign var="bar_at" value=$v|mb_strpos:"</i>"}
+                                {assign var="bar_to" value=$v|mb_strpos:"</span>"}
+                                {assign var="col" value=$v|mb_substr:($bar_at+4):($bar_to-$bar_at-4)}
+                                {assign var="va" value=$v|replace:$col:''}
+                                {$va = $va|replace:'<span style="white-space: nowrap;">':'<span style="white-space: nowrap;" data-toggle="tooltip" data-placement="top" title="[col_col]">'}
+                                                {$va|replace:'[col_col]':$col}
+                                        {/foreach}
+                                    {else}
+                                        {implode(', ', $f_value)}
+                                    {/if}
+                                    {else}
+                                        {$f_value}
+                                {/if}
+                            </td>
+                            </tr>
+                            {if $smarty.foreach.pro_fea.index == ($p.features|@count - 1)}
+                        </table>
+                        {/if}
+                        {/foreach}
+                        {/if}
+
+
+                    </div>
+                    {/if}
+                </div>
+                <div class="controllers">
+                    <span class="price nowrap">
+                    <meta itemprop="price" content="{$p.price}">
+                    <meta itemprop="priceCurrency" content="{$wa->shop->primaryCurrency()}">
+                    {shop_currency_html($p.price)}
+                    {if $p.compare_price > 0}
+                    <span class="compare-at-price nowrap">
+                            {shop_currency_html($p.compare_price)}
+                        </span>
+                    {/if}
+                    </span>
+
+                    <div class="comp-add-to">
+                        {if empty($disable_compare)}
+                        <a data-product="{$p.id}" class="compare round-btn {if $wa->shop->inComparison($p.id)} active{/if}" href="javascript:void(0);">
+                            <i class="icon-balance-scale"></i> <span>Сравнить</span>
+                        </a>
+                        {/if}
+                    </div>
+
+                    <div class="add-to-wishlist">
+                        <a data-product="{$p.id}" class="wishlist  add-to-wish round-btn {if !empty($epikafavClass)}{$epikafavClass}{/if}" href="javascript:void(0);">
+                            <i class="icon-heart-1" aria-hidden="true"></i> <span>В избранное</span>
+                        </a>
+                    </div>
+
+
+                    <div class="controls">
+                        <button type="submit" class="add-to-cart-btn button">
+                            <i class="icon-basket-alt scart-ctr-basket"></i>
+                            <i class="icon-spin6 animate-spin scart-ctr-spin" style="display: none"></i>
+                            <i class="icon-ok-2 scart-ctr-suc" style="display: none"></i>
+                            Купить
+                        </button>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </form>
+    </div>
+    {/foreach}
+</div>
+
+{if isset($pages_count) && $pages_count > 1}
+<div class="block {if !empty($theme_settings.pagination) && $theme_settings.pagination == 'lazyloading'}lazyloading-paging{else}paging-nav{/if}"  data-times="2" data-link-text="[`Load more`]" data-loading-str="[`Loading...`]">
+    {wa_pagination total=$pages_count attrs=['class' => "menu-h"]}
+</div>
+{/if}
+
+
+
+

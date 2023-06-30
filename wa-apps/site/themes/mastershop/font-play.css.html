@@ -1,0 +1,22 @@
+{strip}
+<style>
+    @font-face {
+        font-family: 'Play';
+        {if $is_display_swap}font-display:swap;{/if}
+        font-style: normal;
+        font-weight: 400;
+        src: local('Play Regular'), local('Play-Regular'),
+        url('{$wa_real_theme_url}fonts/play/play-v12-latin-ext_latin_cyrillic-ext_cyrillic-regular.woff2') format('woff2'),
+        url('{$wa_real_theme_url}fonts/play/play-v12-latin-ext_latin_cyrillic-ext_cyrillic-regular.woff') format('woff');
+    }
+    @font-face {
+        font-family: 'Play';
+        {if $is_display_swap}font-display:swap;{/if}
+        font-style: normal;
+        font-weight: 700;
+        src: local('Play Bold'), local('Play-Bold'),
+        url('{$wa_real_theme_url}fonts/play/play-v12-latin-ext_latin_cyrillic-ext_cyrillic-700.woff2') format('woff2'),
+        url('{$wa_real_theme_url}fonts/play/play-v12-latin-ext_latin_cyrillic-ext_cyrillic-700.woff') format('woff');
+    }
+</style>
+{/strip}

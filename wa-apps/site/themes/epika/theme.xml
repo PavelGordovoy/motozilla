@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE theme PUBLIC "wa-app-theme" "http://www.webasyst.com/wa-content/xml/wa-app-theme.dtd">
+<theme id="epika" system="0" vendor="1058493" author="BubbleBuddy" app="site" version="100.3.0" edition="30" source_theme_id="epika">
+  <name locale="en_US">Epika</name>
+  <name locale="ru_RU">Epika для Shop-Script</name>
+  <description locale="en_US">Adaptive design theme for all base Webasyst apps</description>
+  <description locale="ru_RU">Семейство адаптивных тем дизайна для всех базовых приложений Webasyst</description>
+  <files>
+    <file path="index.html" custom="0">
+      <description locale="en_US">Core layout of Epika theme family</description>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="epika.js" custom="0">
+    </file>
+    <file path="head.html" custom="0">
+      <description locale="en_US">Site app's &lt;head&gt; instructions</description>
+      <description locale="ru_RU">Блок &lt;head&gt; приложения «Сайт»</description>
+    </file>
+    <file path="header.html" custom="0">
+      <description locale="en_US">App specific header content</description>
+      <description locale="ru_RU"/>
+    </file>
+    <file path="main.html" custom="0">
+      <description locale="en_US">Main layout for Site app content</description>
+      <description locale="ru_RU">Основной вывод приложения «Сайт»</description>
+    </file>
+    <file path="footer.html" custom="0">
+      <description locale="en_US">App specific footer content</description>
+      <description locale="ru_RU">Содержимое футера приложения</description>
+    </file>
+    <file path="page.html" custom="0">
+      <description locale="en_US">Static page content and navigation</description>
+      <description locale="ru_RU">Содержимое открытой страницы и навигация по страницам</description>
+    </file>
+    <file path="login.html" custom="0">
+      <description locale="en_US">Login page</description>
+      <description locale="ru_RU">Страница входа для пользователей</description>
+    </file>
+    <file path="signup.html" custom="0">
+      <description locale="en_US">Sign up page</description>
+      <description locale="ru_RU">Страница регистрации пользователей</description>
+    </file>
+    <file path="forgotpassword.html" custom="0">
+      <description locale="en_US">Forgot password page</description>
+      <description locale="ru_RU">Страница сброса пароля</description>
+    </file>
+    <file path="my.profile.html">
+      <description locale="en_US">My profile: contact info editing form</description>
+      <description locale="ru_RU">Личный кабинет: редактирование контактной информации</description>
+    </file>
+    <file path="my.nav.html">
+      <description locale="en_US">My profile navigation</description>
+      <description locale="ru_RU">Навигационное меню внутри личного кабинета</description>
+    </file>
+    <file path="error.html" custom="0">
+      <description locale="en_US">404 and other errors</description>
+      <description locale="ru_RU">404 и другие ошибки</description>
+    </file>
+    <file path="epika.site.css" custom="0">
+      <description locale="ru_RU"/>
+    </file>
+  </files>
+  <about locale="en_US">
+    &lt;p&gt;&lt;b&gt;Epika&lt;/b&gt; is a universal adaptive design theme family for all basic Webasyst apps: Site, Blog, Photos, Shop-Script, and others. The parent (main) theme of the family, which includes the basic set of CSS rules and the common layout template index.html, is the Epika (i.e. this) theme for the Site application. All Epika design themes used in other applications (e.g., Blog or Photos) link common CSS and index.html layout file from the main (i.e. this) theme.&lt;/p&gt;
+    &lt;p&gt;Epika design themes automatically link CSS depending on a visitor's device. Supported devices and platforms: iOS or Android based mobile devices, tablet computers such as iPad, common desktop computers and laptops.&lt;/p&gt;
+  </about>
+  <about locale="ru_RU">
+    &lt;p&gt;&lt;b&gt;Epika&lt;/b&gt; — это универсальное семейство адаптивных тем дизайна для всех базовых приложений фреймворка Вебасист: Сайт, Блог, Фото, Shop-Script и других. Родительской (основной) темой семейства, включающей в себя базовый набор CSS-стилей и общий макет дизайна index.html, является тема Epika для приложения «Сайт» (данная тема). Все темы дизайна Epika для других приложений (Блог, Фото и других) используют базовый CSS и index.html из родительской (основной) темы.&lt;/p&gt;
+    &lt;p&gt;Темы дизайна семейства Epika оптимизированы для всех современных браузеров, планшетных компьютеров и мобильных устройств на основе iOS и Android. CSS-стили подключаются в зависимости от разрешения и типа устройства, которым пользуется посетитель сайта.&lt;/p&gt;
+  </about>
+  <settings>
+    <setting control_type="image_select" var="blank2">
+      <value>blank.gif</value>
+      <name locale="en_US">
+        &lt;style&gt;
+        #theme-settings &gt; .fields &gt; .field:first-child{
+        display:none;
+        }
+
+        .ep_title{
+        display:block;
+        color:#F44336;
+        font-size:14px;
+        }
+
+        .heading hr + br{
+        display:none;
+        }
+        &lt;/style&gt;
+      </name>
+      <options>
+        <option value="img/themesettings/blank.gif"/>
+      </options>
+    </setting>
+    <setting control_type="group_divider" var="title_common_settings">
+      <value/>
+      <name locale="en_US">&lt;span class="ep_title"&gt;Site general settings&lt;/span&gt;</name>
+      <name locale="ru_RU">&lt;span class="ep_title"&gt;Общие настройки сайта&lt;/span&gt;</name>
+    </setting>
+    <setting var="logo" control_type="image">
+      <value>img/logo.png</value>
+      <filename>img/logo.*</filename>
+      <name locale="en_US">Logo</name>
+      <name locale="ru_RU">Логотип</name>
+    </setting>
+    <setting var="footer_logo" control_type="image">
+      <value>img/footer_logo.png</value>
+      <filename>img/footer_logo.*</filename>
+      <name locale="en_US">Logo in footer</name>
+      <name locale="ru_RU">Логотип в футере</name>
+    </setting>
+    <setting var="fav_icon" control_type="image">
+      <value>img/favicon.png</value>
+      <filename>img/favicon.*</filename>
+      <name locale="en_US">Favicon</name>
+      <name locale="ru_RU">Favicon</name>
+    </setting>
+    <setting var="site_width" control_type="text">
+      <value/>
+      <name locale="en_US">Site width</name>
+      <name locale="ru_RU">Ширина сайта</name>
+      <description locale="en_US">The minimum value for the correct work of the template is 1170px</description>
+      <description locale="ru_RU">Миниальное значение для корректной работы шаблона - 1170px</description>
+    </setting>
+    <setting var="pagination" control_type="select">
+      <value>lazyloading</value>
+      <name locale="en_US">Long lists display</name>
+      <name locale="ru_RU">Длинные списки</name>
+      <options>
+        <option value="lazyloading">
+          <name locale="ru_RU">Lazy loading: автоматическая подгрузка при скролле</name>
+          <name locale="en_US">Lazy loading: auto load on scroll</name>
+        </option>
+        <option value="paging">
+          <name locale="ru_RU">1 2 3 4: Постраничная навигация</name>
+          <name locale="en_US">1 2 3 4: Paginated lists</name>
+        </option>
+      </options>
+    </setting>
+    <!-- Разметка ====================================================================================================-->
+    <setting control_type="group_divider" var="divider_site_layout_settings">
+      <value/>
+      <name locale="en_US">&lt;hr&gt;</name>
+    </setting>
+    <setting var="divider_site_layout" control_type="group_divider">
+      <value/>
+      <name locale="en_US">&lt;span class="ep_title"&gt;Site Layout&lt;/span&gt;</name>
+      <name locale="ru_RU">&lt;span class="ep_title"&gt;Разметка сайта&lt;/span&gt;</name>
+    </setting>
+    <setting var="site_layout_settings" control_type="select">
+      <value>wide_mode</value>
+      <name locale="en_US">Layout mode</name>
+      <name locale="ru_RU">Вид разметки</name>
+      <options>
+        <option value="wide_mode">
+          <name locale="ru_RU">Широкий формат</name>
+          <name locale="en_US">Wide</name>
+        </option>
+        <option value="box_mode">
+          <name locale="ru_RU">Бокс</name>
+          <name locale="en_US">Boxmode</name>
+        </option>
+      </options>
+    </setting>
+    <!-- Цветовая схема ====================================================================================================-->
+    <setting control_type="group_divider" var="divider_color_scheme_settings">
+      <value/>
+      <name locale="en_US">&lt;hr&gt;</name>
+    </setting>
+    <setting var="divider_color_scheme" control_type="group_divider">
+      <value/>
+      <name locale="en_US">&lt;span class="ep_title"&gt;Color scheme&lt;/span&gt;</name>
+      <name locale="ru_RU">&lt;span class="ep_title"&gt;Цветовая схема&lt;/span&gt;</name>
+    </setting>
+    <setting var="main_color_scheme" control_type="color">
+      <value>#e33928</value>
+      <name locale="ru_RU">Основной цвет</name>
+      <name locale="en_US">Main color</name>
+    </setting>
+    <setting var="alt_color_scheme" control_type="color">
+      <value>#2a2a2a</value>
+      <name locale="ru_RU">Дополнительный цвет</name>
+      <name locale="en_US">Additional color</name>
+    </setting>
+    <setting var="bg_color_scheme" control_type="color">
+      <value>#FFFFFF</value>
+      <name locale="ru_RU">Цвет фона</name>
+      <name locale="en_US">Background color</name>
+    </setting>
+    <setting var="body_pattern" control_type="image_select">
+      <value>img/backgrounds/themesettings/pat2.png</value>
+      <name locale="ru_RU">Фоновое изображение</name>
+      <name locale="en_US">Backgroud Image</name>
+      <options>
+        <option value="img/backgrounds/themesettings/nophoto.png"/>
+        <option value="img/backgrounds/themesettings/pat1.png"/>
+        <option value="img/backgrounds/themesettings/pat2.png"/>
+        <option value="img/backgrounds/themesettings/pat3.png"/>
+        <option value="img/backgrounds/themesettings/pat4.png"/>
+        <option value="img/backgrounds/themesettings/pat5.png"/>
+        <option value="img/backgrounds/themesettings/pat6.png"/>
+        <option value="img/backgrounds/themesettings/pat7.png"/>
+        <option value="img/backgrounds/themesettings/pat8.png"/>
+      </options>
+    </setting>
+    <setting var="custom_background" control_type="image">
+      <value/>
+      <filename>img/backgrounds/themesettings/custom_background.*</filename>
+      <name locale="en_US">Custom background</name>
+      <name locale="ru_RU">Загрузить свое изображение</name>
+    </setting>
+    <!-- Виджеты соцсетей ====================================================================================================-->
+    <setting control_type="group_divider" var="divider_common_settings">
+      <value/>
+      <name locale="en_US">&lt;hr&gt;</name>
+    </setting>
+    <setting var="divider_social" control_type="group_divider">
+      <value/>
+      <name locale="en_US">&lt;span class="ep_title"&gt;Socials&lt;/span&gt;</name>
+      <name locale="ru_RU">&lt;span class="ep_title"&gt;Виджеты Соц-сетей&lt;/span&gt;</name>
+    </setting>
+    <setting var="facebook_likebox_code" control_type="text">
+      <value>&lt;div id="fb-root"&gt;&lt;/div&gt; &lt;script&gt;(function(d, s, id) {   var js, fjs = d.getElementsByTagName(s)[0];   if (d.getElementById(id)) return;   js = d.createElement(s); js.id = id;   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.4&amp;appId=167596066655267";   fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));&lt;/script&gt;  &lt;div class="fb-page" data-href="https://www.facebook.com/Webasyst.RU" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"&gt;&lt;div class="fb-xfbml-parse-ignore"&gt;&lt;blockquote cite="https://www.facebook.com/Webasyst.RU"&gt;&lt;a href="https://www.facebook.com/Webasyst.RU"&gt;Webasyst RU&lt;/a&gt;&lt;/blockquote&gt;&lt;/div&gt;&lt;/div&gt;</value>
+      <name locale="en_US">Facebook Page Plugin code</name>
+      <name locale="ru_RU">Виджет Фейсбука</name>
+      <description locale="en_US">Embed your Facebook page badge code here. Code can be obtained on Facebook website: https://developers.facebook.com/docs/plugins/page-plugin</description>
+      <description locale="ru_RU">Поместите в это поле код виджета вашей страницы на Фейсбуке. Код можно получить в Фейсбуке на странице https://developers.facebook.com/docs/plugins/page-plugin</description>
+    </setting>
+    <setting var="twitter_timeline_code" control_type="text">
+      <value/>
+      <name locale="en_US">Twitter Timeline code</name>
+      <name locale="ru_RU">Виджет Твиттера</name>
+      <description locale="en_US">Embed your Twitter Timeline code here. Code can be obtained on Twitter website: https://twitter.com/settings/widgets</description>
+      <description locale="ru_RU">Поместите в это поле код ленты Твиттера. Код можно получить на сайте Твиттера: https://twitter.com/settings/widgets</description>
+    </setting>
+    <setting var="vk_widget_code" control_type="text">
+      <value/>
+      <name locale="en_US">VK Page Widget code</name>
+      <name locale="ru_RU">Виджет Вконтакте</name>
+      <description locale="en_US">Embed your VK community widget code here. Code can be obtained on VK website: http://vk.com/dev/Community</description>
+      <description locale="ru_RU">Поместите в это поле код виджета вашего сообщества во Вконтакте. Код можно получить на сайте соцсети http://vk.com/dev/Community</description>
+    </setting>
+    <!-- Header ====================================================================================================-->
+    <setting control_type="group_divider" var="divider_header_settings">
+      <value/>
+      <name locale="en_US">&lt;hr&gt;</name>
+    </setting>
+    <setting var="divider_header" control_type="group_divider">
+      <value/>
+      <name locale="en_US">&lt;span class="ep_title"&gt;Header&lt;/span&gt;</name>
+      <name locale="ru_RU">&lt;span class="ep_title"&gt;Шапка&lt;/span&gt;</name>
+    </setting>
+    <setting var="location_switch" control_type="checkbox">
+      <value>1</value>
+      <name locale="ru_RU">Переключатель поселений</name>
+      <name locale="en_US">Location switch</name>
+    </setting>
+    <setting var="top_bar_color_scheme" control_type="color">
+      <value/>
+      <name locale="ru_RU">Цвет фона верхней полосы</name>
+      <name locale="en_US">Top line background</name>
+    </setting>
+    <setting var="top_bar_color_links" control_type="color">
+      <value/>
+      <name locale="ru_RU">Цвет ссылок в верхней полосе</name>
+      <name locale="en_US">Top line links color</name>
+    </setting>
+    <setting var="menu_products_catalog" control_type="select">
+      <value>wide_horizontal_menu</value>
+      <name locale="en_US">Menu "Products catalog"</name>
+      <name locale="ru_RU">Меню "Каталог Товаров"</name>
+      <options>
+        <option value="compact_view">
+          <name locale="ru_RU">Компактный вид</name>
+          <name locale="en_US">Compact view</name>
+        </option>
+        <option value="wide_horizontal_menu">
+          <name locale="ru_RU">Широке горизонтальное меню</name>
+          <name locale="en_US">Wide horizontal menu</name>
+        </option>
+      </options>
+    </setting>
+    <setting var="open_compact_menu_by" control_type="select">
+      <value>on_hover_cursor</value>
+      <name locale="ru_RU">Открывать компактное меню</name>
+      <name locale="en_US">Open the compact menu</name>
+      <options>
+        <option value="by_click">
+          <name locale="ru_RU">По клику</name>
+          <name locale="en_US">By click</name>
+        </option>
+        <option value="on_hover_cursor">
+          <name locale="ru_RU">При наведении курсора</name>
+          <name locale="en_US">On hover cursor</name>
+        </option>
+      </options>
+    </setting>
+    <setting var="nav_color_scheme" control_type="color">
+      <value/>
+      <name locale="ru_RU">Фон меню</name>
+      <name locale="en_US">Menu line background</name>
+    </setting>
+    <setting var="nav_links_color_scheme" control_type="color">
+      <value/>
+      <name locale="ru_RU">Цвет ссылок в меню</name>
+      <name locale="en_US">Links color in menu</name>
+    </setting>
+    <setting var="header_links" control_type="select">
+      <value>site-pages</value>
+      <name locale="ru_RU">Ссылки в верхнем меню</name>
+      <name locale="en_US">Header links</name>
+      <description locale="ru_RU">Ссылки верхнего меню навигации могут определяться либо основной структурой сайта (меню {$wa-&gt;apps()} настраивается в приложении «Сайт» в разделе «Настройки»), либо информационным страницами выбранного приложения</description>
+      <description locale="en_US">Top header menu links will be displayed according to the site core structure (as defined in the Site app &gt; Settings &gt; {$wa-&gt;apps()}) or the list of selected app info pages</description>
+      <options>
+        <option value="wa-apps">
+          <name locale="ru_RU">Приложение «Сайт» &gt; Настройки &gt; {$wa-&gt;apps()}</name>
+          <name locale="en_US">Site app &gt; Settings &gt; {$wa-&gt;apps()}</name>
+        </option>
+        <option value="site-pages">
+          <name locale="ru_RU">Страницы приложения «Сайт»</name>
+          <name locale="en_US">Site app pages</name>
+        </option>
+        <option value="shop-pages">
+          <name locale="ru_RU">Страницы приложения «Магазин»</name>
+          <name locale="en_US">Shop app pages</name>
+        </option>
+        <option value="blog-pages">
+          <name locale="ru_RU">Страницы приложения «Блог»</name>
+          <name locale="en_US">Blog app pages</name>
+        </option>
+        <option value="photos-pages">
+          <name locale="ru_RU">Страницы приложения «Фото»</name>
+          <name locale="en_US">Photos app pages</name>
+        </option>
+        <option value="hub-pages">
+          <name locale="ru_RU">Страницы приложения «Хаб»</name>
+          <name locale="en_US">Hub app pages</name>
+        </option>
+        <option value="none">
+          <name locale="ru_RU">Не показывать</name>
+          <name locale="en_US">None</name>
+        </option>
+      </options>
+    </setting>
+    <setting var="main_menu_links" control_type="select">
+      <value>shop-pages</value>
+      <name locale="ru_RU">Ссылки в главном меню</name>
+      <name locale="en_US">Main menu links</name>
+      <options>
+        <option value="wa-apps">
+          <name locale="ru_RU">Приложение «Сайт» &gt; Настройки &gt; {$wa-&gt;apps()}</name>
+          <name locale="en_US">Site app &gt; Settings &gt; {$wa-&gt;apps()}</name>
+        </option>
+        <option value="site-pages">
+          <name locale="ru_RU">Страницы приложения «Сайт»</name>
+          <name locale="en_US">Site app pages</name>
+        </option>
+        <option value="shop-pages">
+          <name locale="ru_RU">Страницы приложения «Магазин»</name>
+          <name locale="en_US">Shop app pages</name>
+        </option>
+        <option value="blog-pages">
+          <name locale="ru_RU">Страницы приложения «Блог»</name>
+          <name locale="en_US">Blog app pages</name>
+        </option>
+        <option value="photos-pages">
+          <name locale="ru_RU">Страницы приложения «Фото»</name>
+          <name locale="en_US">Photos app pages</name>
+        </option>
+        <option value="hub-pages">
+          <name locale="ru_RU">Страницы приложения «Хаб»</name>
+          <name locale="en_US">Hub app pages</name>
+        </option>
+        <option value="none">
+          <name locale="ru_RU">Не показывать</name>
+          <name locale="en_US">None</name>
+        </option>
+      </options>
+    </setting>
+    <setting var="fixed_cart_appearance" control_type="select">
+      <value>style_1</value>
+      <name locale="ru_RU">Внешний вид</name>
+      <name locale="en_US">Fixed cart appearance</name>
+      <options>
+        <option value="style_1">
+          <name locale="ru_RU">Стиль 1</name>
+          <name locale="en_US">Style 1</name>
+        </option>
+        <option value="style_2">
+          <name locale="ru_RU">Стиль 2</name>
+          <name locale="en_US">Style 2</name>
+        </option>
+      </options>
+    </setting>
+    <!-- Footer ====================================================================================================-->
+    <setting control_type="group_divider" var="divider_social_settings">
+      <value/>
+      <name locale="en_US">&lt;hr&gt;</name>
+    </setting>
+    <setting var="divider_footer" control_type="group_divider">
+      <value/>
+      <name locale="en_US">&lt;span class="ep_title"&gt;Footer&lt;/span&gt;</name>
+      <name locale="ru_RU">&lt;span class="ep_title"&gt;Футер&lt;/span&gt;</name>
+    </setting>
+    <setting var="footer_color_scheme" control_type="color">
+      <value/>
+      <name locale="ru_RU">Цвет футера</name>
+      <name locale="en_US">Footer background color</name>
+    </setting>
+    <setting var="footer_color_topline" control_type="color">
+      <value>#FF5722</value>
+      <name locale="ru_RU">Цвет верхней полоски футера</name>
+      <name locale="en_US">Footer top line color</name>
+    </setting>
+    <setting var="footer_color_headers" control_type="color">
+      <value>#FF5722</value>
+      <name locale="ru_RU">Цвет Заголовков в футере</name>
+      <name locale="en_US">Footer headers color</name>
+    </setting>
+    <setting var="footer_color_links" control_type="color">
+      <value/>
+      <name locale="ru_RU">Цвет ссылок в футере</name>
+      <name locale="en_US">Footer links color</name>
+    </setting>
+    <setting var="footer_color_linkshov" control_type="color">
+      <value>#ffab02</value>
+      <name locale="ru_RU">Цвет ссылок при наведении</name>
+      <name locale="en_US">Footer links color hover</name>
+    </setting>
+    <setting var="footer_note" control_type="text">
+      <value><![CDATA[Адаптивная Тема Дизана Webasyst ShopScript 7
+Функциональная, Модная, Удобная]]></value>
+      <name locale="en_US">Footer custom text note</name>
+      <name locale="ru_RU">Дополнительный текст в «подвале» сайта</name>
+      <description locale="ru_RU">Дополнительная подсказка посетителям вашего сайта (и поисковым системам).</description>
+      <description locale="en_US">Add a disclaimer or a hint to your site visitors (and search engines too).</description>
+    </setting>
+    <setting var="footer_apps_links" control_type="select">
+      <value>wa-apps</value>
+      <name locale="ru_RU">Ссылки в разделе «Приложения»</name>
+      <name locale="en_US">Footer Apps links</name>
+      <options>
+        <option value="wa-apps">
+          <name locale="ru_RU">Приложение «Сайт» &gt; Настройки &gt; {$wa-&gt;apps()}</name>
+          <name locale="en_US">Site app &gt; Settings &gt; {$wa-&gt;apps()}</name>
+        </option>
+        <option value="site-pages">
+          <name locale="ru_RU">Страницы приложения «Сайт»</name>
+          <name locale="en_US">Site app pages</name>
+        </option>
+        <option value="shop-pages">
+          <name locale="ru_RU">Страницы приложения «Магазин»</name>
+          <name locale="en_US">Shop app pages</name>
+        </option>
+        <option value="blog-pages">
+          <name locale="ru_RU">Страницы приложения «Блог»</name>
+          <name locale="en_US">Blog app pages</name>
+        </option>
+        <option value="photos-pages">
+          <name locale="ru_RU">Страницы приложения «Фото»</name>
+          <name locale="en_US">Photos app pages</name>
+        </option>
+        <option value="hub-pages">
+          <name locale="ru_RU">Страницы приложения «Хаб»</name>
+          <name locale="en_US">Hub app pages</name>
+        </option>
+        <option value="none">
+          <name locale="ru_RU">Не показывать</name>
+          <name locale="en_US">None</name>
+        </option>
+      </options>
+    </setting>
+    <setting var="footer_links" control_type="checkbox">
+      <value>1</value>
+      <name locale="ru_RU">Ссылки соц-сетей</name>
+      <name locale="en_US">Footer links</name>
+    </setting>
+    <setting var="facebook" control_type="text">
+      <value>#</value>
+      <name locale="en_US">Facebook page URL</name>
+      <name locale="ru_RU">Адрес страницы в Фейсбуке</name>
+    </setting>
+    <setting var="twitter" control_type="text">
+      <value>#</value>
+      <name locale="en_US">Twitter URL</name>
+      <name locale="ru_RU">Адрес в Твиттере</name>
+    </setting>
+    <setting var="vk" control_type="text">
+      <value>#</value>
+      <name locale="en_US">VK.com page URL</name>
+      <name locale="ru_RU">Адрес страницы или группы во Вконтакте</name>
+    </setting>
+    <setting var="instagram" control_type="text">
+      <value>#</value>
+      <name locale="en_US">Instagram feed URL</name>
+      <name locale="ru_RU">Адрес в Инстаграме</name>
+    </setting>
+    <setting var="youtube" control_type="text">
+      <value>#</value>
+      <name locale="en_US">Youtube channel URL</name>
+      <name locale="ru_RU">Адрес канала YouTube</name>
+    </setting>
+  </settings>
+  <locales>
+    <locale>
+      <msgid>Send your message and we'll contact You as soon, as possible</msgid>
+      <msgstr locale="ru_RU">Напишите нам и мы свяжемся с Вами в скором времени!</msgstr>
+    </locale>
+    <locale>
+      <msgid>Follow us</msgid>
+      <msgstr locale="ru_RU">Следите за нами</msgstr>
+    </locale>
+    <locale>
+      <msgid>Subscribe to our email newsletter</msgid>
+      <msgstr locale="ru_RU">Подписаться на рассылку</msgstr>
+    </locale>
+    <locale>
+      <msgid>Or follow us on Facebook and Twitter</msgid>
+      <msgstr locale="ru_RU">Или подписывайтесь в соцсетях</msgstr>
+    </locale>
+    <locale>
+      <msgid>Hello</msgid>
+      <msgstr locale="ru_RU">Здравствуйте</msgstr>
+    </locale>
+    <locale>
+      <msgid>Profile</msgid>
+      <msgstr locale="ru_RU">Профиль</msgstr>
+    </locale>
+    <locale>
+      <msgid>Catalogue</msgid>
+      <msgstr locale="ru_RU">Каталог товаров</msgstr>
+    </locale>
+    <locale>
+      <msgid>Popular products</msgid>
+      <msgstr locale="ru_RU">Популярные товары</msgstr>
+    </locale>
+    <locale>
+      <msgid>Wishlist</msgid>
+      <msgstr locale="ru_RU">Желания</msgstr>
+    </locale>
+    <locale>
+      <msgid>Currency</msgid>
+      <msgstr locale="ru_RU">Валюта</msgstr>
+    </locale>
+    <locale>
+      <msgid>Please, add some product to comparison list</msgid>
+      <msgstr locale="ru_RU">Добавьте для начала несколько товаров в список сравнения</msgstr>
+    </locale>
+    <locale>
+      <msgid>Please, add some products to your wishlist</msgid>
+      <msgstr locale="ru_RU">Добавьте для начала несколько товаров в свое Избранное</msgstr>
+    </locale>
+    <locale>
+      <msgid>www.webasyst.com</msgid>
+      <msgstr locale="ru_RU">www.webasyst.ru</msgstr>
+    </locale>
+    <locale>
+      <msgid>Apps</msgid>
+      <msgstr locale="ru_RU">Приложения</msgstr>
+    </locale>
+    <locale>
+      <msgid>Compare</msgid>
+      <msgstr locale="ru_RU">Сравнить</msgstr>
+    </locale>
+    <locale>
+      <msgid>Latest posts</msgid>
+      <msgstr locale="ru_RU">Последние статьи</msgstr>
+    </locale>
+  </locales>
+</theme>

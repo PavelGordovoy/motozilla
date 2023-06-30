@@ -1,0 +1,15 @@
+{strip}
+{if $wa->isMobile() && $theme_settings.switch_version && !$wa->cookie("is_hide_link_version_site")}
+    <div class="switch-version js-switch-version">
+        <span class="switch-version__link js-switch-version-link">
+            {if $wa->cookie("is_desktop_for_mobile") == 1}
+                [`Mobile version of the site`]
+            {else}
+                [`Full version of site`]
+            {/if}
+            <i class="fal fa-angle-right switch-version__icon" aria-hidden="true"></i>
+        </span>
+        <i class="fal fa-times switch-version__remove js-switch-version-remove" aria-hidden="true"></i>
+    </div>
+{/if}
+{/strip}
